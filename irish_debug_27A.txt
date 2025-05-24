@@ -1,0 +1,2661 @@
+﻿
+--- Running Test Set for 27A ---
+
+--- Transcribing: [fhéach] ---
+After stage PreProcess: [fhéach]
+After stage MarkDigraphsAndVocalisationTriggers: [_FH_INITIAL_LENITED_éa_CH_]
+After stage ConsonantResolution: [hFH_INITIAL_LENITED_éa_CH_]
+After stage Stage4_0_SpecificOrthoToTempMarker: [hFH_INITIAL_LENITED_éa_CH_]
+After stage Stage4_0_1_Resolve_CH_Marker: [hFH_INITIAL_LENITED_éax]
+After stage Stage4_1_VocmarkToTempMarker: [hFH_INITIAL_LENITED_éax]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [hFH_INITIAL_LENITED_&E_ACUTE_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [hFH_INITIAL_LENITED_&E_ACUTE_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [hFH_INITIAL_LENITED_eː]
+  S4.5 START: current_word_phonetic =	hFH_INITIAL_LENITED_eː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	hFH_INITIAL_LENITED_eː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	hFH_INITIAL_LENITED_eː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [hFH_INITIAL_LENITED_eː]
+After stage Stage4_6_UnstressedVowelReduction: [hFH_INITIAL_LENITED_eː]
+After stage StrongSonorantsEpenthesis: [hFH_INITIAL_LENITED_eː]
+After stage Diacritics: [hFH_InˠIAlˠ_nˠID_eː]
+After stage FinalCleanup: [hFH_InˠIAlˠ_nˠID_eː]
+fhéach         -> [hFH_InˠIAlˠ_nˠID_eː]
+
+--- Transcribing: [fhág] ---
+After stage PreProcess: [fhág]
+After stage MarkDigraphsAndVocalisationTriggers: [_FH_INITIAL_LENITED_ág]
+After stage ConsonantResolution: [hFH_INITIAL_LENITED_ág]
+After stage Stage4_0_SpecificOrthoToTempMarker: [hFH_INITIAL_LENITED_ág]
+After stage Stage4_0_1_Resolve_CH_Marker: [hFH_INITIAL_LENITED_ág]
+After stage Stage4_1_VocmarkToTempMarker: [hFH_INITIAL_LENITED_ág]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [hFH_INITIAL_LENITED_&A_ACUTE_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [hFH_INITIAL_LENITED_&A_ACUTE_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [hFH_INITIAL_LENITED_ɑː]
+  S4.5 START: current_word_phonetic =	hFH_INITIAL_LENITED_ɑː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	hFH_INITIAL_LENITED_ɑː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	hFH_INITIAL_LENITED_ɑː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [hFH_INITIAL_LENITED_ɑː]
+After stage Stage4_6_UnstressedVowelReduction: [hFH_INITIAL_LENITED_ɑː]
+After stage StrongSonorantsEpenthesis: [hFH_INITIAL_LENITED_ɑː]
+After stage Diacritics: [hFH_InˠIAlˠ_nˠID_ɑː]
+After stage FinalCleanup: [hFH_InˠIAlˠ_nˠID_ɑː]
+fhág           -> [hFH_InˠIAlˠ_nˠID_ɑː]
+
+--- Transcribing: [fhíor] ---
+After stage PreProcess: [fhíor]
+After stage MarkDigraphsAndVocalisationTriggers: [_FH_INITIAL_LENITED_íor]
+After stage ConsonantResolution: [hFH_INITIAL_LENITED_íor]
+After stage Stage4_0_SpecificOrthoToTempMarker: [hFH_INITIAL_LENITED_íor]
+After stage Stage4_0_1_Resolve_CH_Marker: [hFH_INITIAL_LENITED_íor]
+After stage Stage4_1_VocmarkToTempMarker: [hFH_INITIAL_LENITED_íor]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [hFH_INITIAL_LENITED_&I_ACUTE_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [hFH_INITIAL_LENITED_&I_ACUTE_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [hFH_INITIAL_LENITED_iː]
+  S4.5 START: current_word_phonetic =	hFH_INITIAL_LENITED_iː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	hFH_INITIAL_LENITED_iː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	hFH_INITIAL_LENITED_iː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [hFH_INITIAL_LENITED_iː]
+After stage Stage4_6_UnstressedVowelReduction: [hFH_INITIAL_LENITED_iː]
+After stage StrongSonorantsEpenthesis: [hFH_INITIAL_LENITED_iː]
+After stage Diacritics: [hFH_InˠIAlˠ_nˠID_iː]
+After stage FinalCleanup: [hFH_InˠIAlˠ_nˠID_iː]
+fhíor          -> [hFH_InˠIAlˠ_nˠID_iː]
+
+--- Transcribing: [fhostaigh] ---
+After stage PreProcess: [fhostaigh]
+After stage MarkDigraphsAndVocalisationTriggers: [_FH_INITIAL_LENITED_ost_VOCMARK_AIGH_]
+After stage ConsonantResolution: [hFH_INITIAL_LENITED_ost_VOCMARK_AIGH_]
+After stage Stage4_0_SpecificOrthoToTempMarker: [hFH_INITIAL_LENITED_ost_VOCMARK_AIGH_]
+After stage Stage4_0_1_Resolve_CH_Marker: [hFH_INITIAL_LENITED_ost_VOCMARK_AIGH_]
+After stage Stage4_1_VocmarkToTempMarker: [hFH_INITIAL_LENITED_ost&VOC_AI_OI_GH_DH&]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [hFH_INITIAL_LENITED_ost&VOC_AI_OI_GH_DH&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [hFH_INITIAL_LENITED_ost&VOC_AI_OI_GH_DH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [hFH_INITIAL_LENITED_ostai]
+  S4.5 START: current_word_phonetic =	hFH_INITIAL_LENITED_ostai
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	hFH_INITIAL_LENITED_ostai
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	hFH_INITIAL_LENITED_ostai
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [hFH_INITIAL_LENITED_ostai]
+After stage Stage4_6_UnstressedVowelReduction: [hFH_INITIAL_LENITED_ostai]
+After stage StrongSonorantsEpenthesis: [hFH_INITIAL_LENITED_ostai]
+After stage Diacritics: [hFH_InˠIAlˠ_nˠID_ostai]
+After stage FinalCleanup: [hFH_InˠIAlˠ_nˠID_ostai]
+fhostaigh       -> [hFH_InˠIAlˠ_nˠID_ostai]
+
+--- Transcribing: [fhuair] ---
+After stage PreProcess: [fhuair]
+After stage MarkDigraphsAndVocalisationTriggers: [_FH_INITIAL_LENITED_uair]
+After stage ConsonantResolution: [hFH_INITIAL_LENITED_uair']
+After stage Stage4_0_SpecificOrthoToTempMarker: [hFH_INITIAL_LENITED_uair']
+After stage Stage4_0_1_Resolve_CH_Marker: [hFH_INITIAL_LENITED_uair']
+After stage Stage4_1_VocmarkToTempMarker: [hFH_INITIAL_LENITED_uair']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [hFH_INITIAL_LENITED_uair']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [hFH_INITIAL_LENITED_&UA_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [hFH_INITIAL_LENITED_ua]
+  S4.5 START: current_word_phonetic =	hFH_INITIAL_LENITED_ua
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	hFH_INITIAL_LENITED_ua
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	hFH_INITIAL_LENITED_ua
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [hFH_INITIAL_LENITED_ua]
+After stage Stage4_6_UnstressedVowelReduction: [hFH_INITIAL_LENITED_uə]
+After stage StrongSonorantsEpenthesis: [hFH_INITIAL_LENITED_uə]
+After stage Diacritics: [hFH_InˠIAlˠ_nˠID_uə]
+After stage FinalCleanup: [hFH_InˠIAlˠ_nˠID_uə]
+fhuair          -> [hFH_InˠIAlˠ_nˠID_uə]
+
+--- Transcribing: [scríobh] ---
+After stage PreProcess: [scríobh]
+After stage MarkDigraphsAndVocalisationTriggers: [scrí_BH_h]
+After stage ConsonantResolution: [skrívBH_h]
+After stage Stage4_0_SpecificOrthoToTempMarker: [skrívBH_h]
+After stage Stage4_0_1_Resolve_CH_Marker: [skrívBH_h]
+After stage Stage4_1_VocmarkToTempMarker: [skrívBH_h]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [skr&I_ACUTE_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [skr&I_ACUTE_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [skriː]
+  S4.5 START: current_word_phonetic =	skriː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	skriː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	skriː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [skriː]
+After stage Stage4_6_UnstressedVowelReduction: [skriː]
+After stage StrongSonorantsEpenthesis: [skriː]
+After stage Diacritics: [skriː]
+After stage FinalCleanup: [skriː]
+scríobh        -> [skriː]
+
+--- Transcribing: [teach] ---
+After stage PreProcess: [teach]
+After stage MarkDigraphsAndVocalisationTriggers: [tea_CH_]
+After stage ConsonantResolution: [t'a_CH_]
+After stage Stage4_0_SpecificOrthoToTempMarker: [t'a_CH_]
+S4.0.1 _CH_ for 'teach': o_context_str=	teach	orig_s=	4	orig_e=	5
+DETERMINE_QUALITY_DEBUG for 'teach' (cons seq: ch) in word:	teach
+  ortho_cons_char_start_idx:	4	ortho_cons_char_end_idx:	5
+  preceding_vowel_group (prev_v_group_str_debug):	ea
+  prev_v_type_char (before ea-logic_debug):	a
+  prev_v_type_char (after ea-logic):	e
+  prev_v_quality_implication:	slender
+  next_v_type_char:
+  next_v_quality_implication:
+  Final returned quality will be:	palatal
+S4.0.1 _CH_ for 'teach': determined_quality_for_ch=	palatal
+After stage Stage4_0_1_Resolve_CH_Marker: [t'aç]
+After stage Stage4_1_VocmarkToTempMarker: [t'aç]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [t'aç]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [t'aç]
+After stage Stage4_4_ResolveTempVowelMarkers: [t'aç]
+  S4.5 START: current_word_phonetic =	t'aç
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	t'aç
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	t'aç
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [t'aç]
+After stage Stage4_6_UnstressedVowelReduction: [t'aç]
+After stage StrongSonorantsEpenthesis: [t'aç]
+After stage Diacritics: [t'aç]
+After stage FinalCleanup: [t'aç]
+teach           -> [t'aç]
+
+--- Transcribing: [deartháir] ---
+After stage PreProcess: [deartháir]
+After stage MarkDigraphsAndVocalisationTriggers: [dear_TH_áir]
+After stage ConsonantResolution: [d'ar'TH_áir']
+After stage Stage4_0_SpecificOrthoToTempMarker: [d'ar'TH_áir']
+After stage Stage4_0_1_Resolve_CH_Marker: [d'ar'TH_áir']
+After stage Stage4_1_VocmarkToTempMarker: [d'ar'TH_áir']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [d'ar'TH_&A_ACUTE_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [d'ar'TH_&A_ACUTE_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [d'ar'TH_ɑː]
+  S4.5 START: current_word_phonetic =	d'ar'TH_ɑː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	d'ar'TH_ɑː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	d'ar'TH_ɑː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [d'ar'TH_ɑː]
+After stage Stage4_6_UnstressedVowelReduction: [d'ar'TH_ɑː]
+After stage StrongSonorantsEpenthesis: [d'ar'TH_ɑː]
+After stage Diacritics: [d'ar'TH_ɑː]
+After stage FinalCleanup: [d'ar'TH_ɑː]
+deartháir      -> [d'ar'TH_ɑː]
+
+--- Transcribing: [cat] ---
+After stage PreProcess: [cat]
+After stage MarkDigraphsAndVocalisationTriggers: [cat]
+After stage ConsonantResolution: [kat]
+After stage Stage4_0_SpecificOrthoToTempMarker: [kat]
+After stage Stage4_0_1_Resolve_CH_Marker: [kat]
+After stage Stage4_1_VocmarkToTempMarker: [kat]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [kat]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [kat]
+After stage Stage4_4_ResolveTempVowelMarkers: [kat]
+  S4.5 START: current_word_phonetic =	kat
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	kat
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	kat
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [kat]
+After stage Stage4_6_UnstressedVowelReduction: [kat]
+After stage StrongSonorantsEpenthesis: [kat]
+After stage Diacritics: [kat̪]
+After stage FinalCleanup: [kat̪]
+cat             -> [kat̪]
+
+--- Transcribing: [bord] ---
+After stage PreProcess: [bord]
+After stage MarkDigraphsAndVocalisationTriggers: [bord]
+After stage ConsonantResolution: [bord]
+After stage Stage4_0_SpecificOrthoToTempMarker: [bord]
+After stage Stage4_0_1_Resolve_CH_Marker: [bord]
+After stage Stage4_1_VocmarkToTempMarker: [bord]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [bord]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [bord]
+After stage Stage4_4_ResolveTempVowelMarkers: [bord]
+  S4.5 START: current_word_phonetic =	bord
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	bord
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	bord
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [bord]
+After stage Stage4_6_UnstressedVowelReduction: [bord]
+After stage StrongSonorantsEpenthesis: [bord]
+After stage Diacritics: [bord̪]
+After stage FinalCleanup: [bord̪]
+bord            -> [bord̪]
+
+--- Transcribing: [ceann] ---
+After stage PreProcess: [ceann]
+After stage MarkDigraphsAndVocalisationTriggers: [cea_NN_]
+After stage ConsonantResolution: [k'aN]
+After stage Stage4_0_SpecificOrthoToTempMarker: [k'aN]
+After stage Stage4_0_1_Resolve_CH_Marker: [k'aN]
+After stage Stage4_1_VocmarkToTempMarker: [k'aN]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [k'aN]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [k'aN]
+After stage Stage4_4_ResolveTempVowelMarkers: [k'aN]
+  S4.5 START: current_word_phonetic =	k'aN
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	k'aN
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	k'aN
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [k'aN]
+After stage Stage4_6_UnstressedVowelReduction: [k'aN]
+After stage StrongSonorantsEpenthesis: [k'aN]
+After stage Diacritics: [k'anˠ]
+After stage FinalCleanup: [k'anˠ]
+ceann           -> [k'anˠ]
+
+--- Transcribing: [poll] ---
+After stage PreProcess: [poll]
+After stage MarkDigraphsAndVocalisationTriggers: [po_LL_]
+After stage ConsonantResolution: [poL]
+After stage Stage4_0_SpecificOrthoToTempMarker: [poL]
+After stage Stage4_0_1_Resolve_CH_Marker: [poL]
+After stage Stage4_1_VocmarkToTempMarker: [poL]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [poL]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [poL]
+After stage Stage4_4_ResolveTempVowelMarkers: [poL]
+  S4.5 START: current_word_phonetic =	poL
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	poL
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	poL
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [poL]
+After stage Stage4_6_UnstressedVowelReduction: [poL]
+After stage StrongSonorantsEpenthesis: [poL]
+After stage Diacritics: [polˠ]
+After stage FinalCleanup: [polˠ]
+poll            -> [polˠ]
+
+--- Transcribing: [balla] ---
+After stage PreProcess: [balla]
+After stage MarkDigraphsAndVocalisationTriggers: [ba_LL_a]
+After stage ConsonantResolution: [baLLL_a]
+After stage Stage4_0_SpecificOrthoToTempMarker: [baLLL_a]
+After stage Stage4_0_1_Resolve_CH_Marker: [baLLL_a]
+After stage Stage4_1_VocmarkToTempMarker: [baLLL_a]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [baLLL_a]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [baLLL_a]
+After stage Stage4_4_ResolveTempVowelMarkers: [baLLL_a]
+  S4.5 START: current_word_phonetic =	baLLL_a
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	baLLL_a
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	baLLL_a
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [baLLL_a]
+After stage Stage4_6_UnstressedVowelReduction: [baLLL_ə]
+After stage StrongSonorantsEpenthesis: [baLLL_ə]
+After stage Diacritics: [balˠLə]
+After stage FinalCleanup: [balˠLə]
+balla           -> [balˠLə]
+
+--- Transcribing: [leabhar] ---
+After stage PreProcess: [leabhar]
+After stage MarkDigraphsAndVocalisationTriggers: [l_VOCMARK_EABH_ar]
+After stage ConsonantResolution: [l_VOCMARK_EABH_ar]
+After stage Stage4_0_SpecificOrthoToTempMarker: [l_VOCMARK_EABH_ar]
+After stage Stage4_0_1_Resolve_CH_Marker: [l_VOCMARK_EABH_ar]
+After stage Stage4_1_VocmarkToTempMarker: [l&VOC_EABH_AMH&ar]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [l&VOC_EABH_AMH&ar]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [l&VOC_EABH_AMH&ar]
+After stage Stage4_4_ResolveTempVowelMarkers: [ləuC_EABH_AMH&ar]
+  S4.5 START: current_word_phonetic =	ləuC_EABH_AMH&ar
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ləuC_EABH_AMH&ar
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ləuC_EABH_AMH&ar
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ləuC_EABH_AMH&ar]
+After stage Stage4_6_UnstressedVowelReduction: [ləuC_EABH_AMH&ar]
+After stage StrongSonorantsEpenthesis: [ləuC_EABH_AMH&ar]
+After stage Diacritics: [l̪�C_EABH_AmˠHr]
+After stage FinalCleanup: [l̪�C_EABH_AmˠHr]
+leabhar         -> [l̪�C_EABH_AmˠHr]
+
+--- Transcribing: [samhradh] ---
+After stage PreProcess: [samhradh]
+After stage MarkDigraphsAndVocalisationTriggers: [s_VOCMARK_AMH_ra_DH_]
+After stage ConsonantResolution: [s_VOCMARK_AMH_raɣ]
+After stage Stage4_0_SpecificOrthoToTempMarker: [s_VOCMARK_AMH_raɣ]
+After stage Stage4_0_1_Resolve_CH_Marker: [s_VOCMARK_AMH_raɣ]
+After stage Stage4_1_VocmarkToTempMarker: [s&VOC_ABH_AMH&raɣ]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [s&VOC_ABH_AMH&raɣ]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [s&VOC_ABH_AMH&raɣ]
+After stage Stage4_4_ResolveTempVowelMarkers: [səuC_ABH_AMH&raɣ]
+  S4.5 START: current_word_phonetic =	səuC_ABH_AMH&raɣ
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	səuC_ABH_AMH&raɣ
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	səuC_ABH_AMH&raɣ
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [səuC_ABH_AMH&raɣ]
+After stage Stage4_6_UnstressedVowelReduction: [səuC_ABH_AMH&raɣ]
+After stage StrongSonorantsEpenthesis: [səuC_ABH_AMH&raɣ]
+After stage Diacritics: [səuC_ABH_AmˠHaɣ]
+After stage FinalCleanup: [səuC_ABH_AmˠHaɣ]
+samhradh        -> [səuC_ABH_AmˠHaɣ]
+
+--- Transcribing: [beannacht] ---
+After stage PreProcess: [beannacht]
+After stage MarkDigraphsAndVocalisationTriggers: [bea_NN_a_CH_t]
+After stage ConsonantResolution: [b'aNNN_a_CH_t]
+After stage Stage4_0_SpecificOrthoToTempMarker: [b'aNNN_a_CH_t]
+After stage Stage4_0_1_Resolve_CH_Marker: [b'aNNN_axCH_t]
+After stage Stage4_1_VocmarkToTempMarker: [b'aNNN_axCH_t]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [b'aNNN_axCH_t]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [b'aNNN_axCH_t]
+After stage Stage4_4_ResolveTempVowelMarkers: [b'aNNN_axCH_t]
+  S4.5 START: current_word_phonetic =	b'aNNN_axCH_t
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	b'aNNN_axCH_t
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	b'aNNN_axCH_t
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [b'aNNN_axCH_t]
+After stage Stage4_6_UnstressedVowelReduction: [b'aNNN_axCH_t]
+After stage StrongSonorantsEpenthesis: [b'aNNN_axCH_t]
+After stage Diacritics: [b'anˠNaxCH_t̪]
+After stage FinalCleanup: [b'anˠNaxCH_t̪]
+beannacht       -> [b'anˠNaxCH_t̪]
+
+--- Transcribing: [leagan] ---
+After stage PreProcess: [leagan]
+After stage MarkDigraphsAndVocalisationTriggers: [leagan]
+After stage ConsonantResolution: [leagan]
+After stage Stage4_0_SpecificOrthoToTempMarker: [leagan]
+After stage Stage4_0_1_Resolve_CH_Marker: [leagan]
+After stage Stage4_1_VocmarkToTempMarker: [leagan]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [leagan]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [leagan]
+After stage Stage4_4_ResolveTempVowelMarkers: [leagan]
+  S4.5 START: current_word_phonetic =	leagan
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	leagan
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	leagan
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [leagan]
+After stage Stage4_6_UnstressedVowelReduction: [leagən]
+After stage StrongSonorantsEpenthesis: [leagən]
+After stage Diacritics: [l̪eən̪]
+After stage FinalCleanup: [l̪eən̪]
+leagan          -> [l̪eən̪]
+
+--- Transcribing: [ainm] ---
+After stage PreProcess: [ˈainm]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈainm]
+After stage ConsonantResolution: [ˈainm']
+After stage Stage4_0_SpecificOrthoToTempMarker: [ˈainm']
+After stage Stage4_0_1_Resolve_CH_Marker: [ˈainm']
+After stage Stage4_1_VocmarkToTempMarker: [ˈainm']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [ˈainm']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [ˈ&AI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [ˈai]
+  S4.5 START: current_word_phonetic =	ˈai
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ˈai
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ˈai
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ˈai]
+After stage Stage4_6_UnstressedVowelReduction: [ˈai]
+After stage StrongSonorantsEpenthesis: [ˈai]
+After stage Diacritics: [ˈai]
+After stage FinalCleanup: [ˈai]
+ainm            -> [ˈai]
+
+--- Transcribing: [teanga] ---
+After stage PreProcess: [teanga]
+After stage MarkDigraphsAndVocalisationTriggers: [tea_URUG_a]
+After stage ConsonantResolution: [t'aŋRUG_a]
+After stage Stage4_0_SpecificOrthoToTempMarker: [t'aŋRUG_a]
+After stage Stage4_0_1_Resolve_CH_Marker: [t'aŋRUG_a]
+After stage Stage4_1_VocmarkToTempMarker: [t'aŋRUG_a]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [t'aŋRUG_a]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [t'aŋRUG_a]
+After stage Stage4_4_ResolveTempVowelMarkers: [t'aŋRUG_a]
+  S4.5 START: current_word_phonetic =	t'aŋRUG_a
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	t'aŋRUG_a
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	t'aŋRUG_a
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [t'aŋRUG_a]
+After stage Stage4_6_UnstressedVowelReduction: [t'aŋRUG_ə]
+After stage StrongSonorantsEpenthesis: [t'aŋRUG_ə]
+After stage Diacritics: [t'aŋɾˠU�]
+After stage FinalCleanup: [t'aŋɾˠU�]
+teanga          -> [t'aŋɾˠU�]
+
+--- Transcribing: [seacht] ---
+After stage PreProcess: [seacht]
+After stage MarkDigraphsAndVocalisationTriggers: [sea_CH_t]
+After stage ConsonantResolution: [s'a_CH_t]
+After stage Stage4_0_SpecificOrthoToTempMarker: [s'a_CH_t]
+After stage Stage4_0_1_Resolve_CH_Marker: [s'açH_t]
+After stage Stage4_1_VocmarkToTempMarker: [s'açH_t]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [s'açH_t]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [s'açH_t]
+After stage Stage4_4_ResolveTempVowelMarkers: [s'açH_t]
+  S4.5 START: current_word_phonetic =	s'açH_t
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	s'açH_t
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	s'açH_t
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [s'açH_t]
+After stage Stage4_6_UnstressedVowelReduction: [s'açH_t]
+After stage StrongSonorantsEpenthesis: [s'açH_t]
+After stage Diacritics: [s'açH_t̪]
+After stage FinalCleanup: [s'açH_t̪]
+seacht          -> [s'açH_t̪]
+
+--- Transcribing: [aghaidh] ---
+After stage PreProcess: [ˈaghaidh]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈa_GH__VOCMARK_AIDH_]
+After stage ConsonantResolution: [ˈaɣH__VOCMARK_AIDH_]
+After stage Stage4_0_SpecificOrthoToTempMarker: [ˈaɣH__VOCMARK_AIDH_]
+After stage Stage4_0_1_Resolve_CH_Marker: [ˈaɣH__VOCMARK_AIDH_]
+After stage Stage4_1_VocmarkToTempMarker: [ˈaɣH_&VOC_AI_OI_GH_DH&]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [ˈaɣH_&VOC_AI_OI_GH_DH&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [ˈaɣH_&VOC_AI_OI_GH_DH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [ˈaɣH_ai]
+  S4.5 START: current_word_phonetic =	ˈaɣH_ai
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ˈaɣH_ai
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ˈaɣH_ai
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ˈaɣH_ai]
+After stage Stage4_6_UnstressedVowelReduction: [ˈaɣH_ai]
+After stage StrongSonorantsEpenthesis: [ˈaɣH_ai]
+After stage Diacritics: [ˈaɣH_ai]
+After stage FinalCleanup: [ˈaɣH_ai]
+aghaidh         -> [ˈaɣH_ai]
+
+--- Transcribing: [suidhe] ---
+After stage PreProcess: [suidhe]
+After stage MarkDigraphsAndVocalisationTriggers: [s_VOCMARK_UIDH_e]
+After stage ConsonantResolution: [s_VOCMARK_UIDH_e]
+After stage Stage4_0_SpecificOrthoToTempMarker: [s_VOCMARK_UIDH_e]
+After stage Stage4_0_1_Resolve_CH_Marker: [s_VOCMARK_UIDH_e]
+After stage Stage4_1_VocmarkToTempMarker: [s&VOC_UI_GH_DH&e]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [s&VOC_UI_GH_DH&e]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [s&VOC_UI_GH_DH&e]
+After stage Stage4_4_ResolveTempVowelMarkers: [siːC_UI_GH_DH&e]
+  S4.5 START: current_word_phonetic =	siːC_UI_GH_DH&e
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	siːC_UI_GH_DH&e
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	siːC_UI_GH_DH&e
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [siːC_UI_GH_DH&e]
+After stage Stage4_6_UnstressedVowelReduction: [siːC_UI_GH_DH&ə]
+After stage StrongSonorantsEpenthesis: [siːC_UI_GH_DH&ə]
+After stage Diacritics: [siːC_UI_GH_DH&ə]
+After stage FinalCleanup: [siːC_UI_GH_DH&ə]
+suidhe          -> [siːC_UI_GH_DH&ə]
+
+--- Transcribing: [nimhe] ---
+After stage PreProcess: [nimhe]
+After stage MarkDigraphsAndVocalisationTriggers: [ni_MH_e]
+After stage ConsonantResolution: [niv'H_e]
+After stage Stage4_0_SpecificOrthoToTempMarker: [niv'H_e]
+After stage Stage4_0_1_Resolve_CH_Marker: [niv'H_e]
+After stage Stage4_1_VocmarkToTempMarker: [niv'H_e]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [niv'H_e]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [niv'H_e]
+After stage Stage4_4_ResolveTempVowelMarkers: [niv'H_e]
+  S4.5 START: current_word_phonetic =	niv'H_e
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	niv'H_e
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	niv'H_e
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [niv'H_e]
+After stage Stage4_6_UnstressedVowelReduction: [niv'H_ə]
+After stage StrongSonorantsEpenthesis: [niv'H_ə]
+After stage Diacritics: [n̪iH_ə]
+After stage FinalCleanup: [n̪iH_ə]
+nimhe           -> [n̪iH_ə]
+
+--- Transcribing: [bóthar] ---
+After stage PreProcess: [bóthar]
+After stage MarkDigraphsAndVocalisationTriggers: [bó_TH_ar]
+After stage ConsonantResolution: [b'�hTH_ar]
+After stage Stage4_0_SpecificOrthoToTempMarker: [b'�hTH_ar]
+After stage Stage4_0_1_Resolve_CH_Marker: [b'�hTH_ar]
+After stage Stage4_1_VocmarkToTempMarker: [b'�hTH_ar]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [b'�hTH_ar]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [b'�hTH_ar]
+After stage Stage4_4_ResolveTempVowelMarkers: [b'�hTH_ar]
+  S4.5 START: current_word_phonetic =	b'�hTH_ar
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	b'�hTH_ar
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	b'�hTH_ar
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [b'�hTH_ar]
+After stage Stage4_6_UnstressedVowelReduction: [b'�hTH_ar]
+After stage StrongSonorantsEpenthesis: [b'�hTH_ar]
+After stage Diacritics: [b'�hTH_ar]
+After stage FinalCleanup: [b'�hTH_ar]
+bóthar         -> [b'�hTH_ar]
+
+--- Transcribing: [oíche] ---
+After stage PreProcess: [ˈoíche]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈoí_CH_e]
+After stage ConsonantResolution: [ˈoí_CH_e]
+After stage Stage4_0_SpecificOrthoToTempMarker: [ˈoí_CH_e]
+After stage Stage4_0_1_Resolve_CH_Marker: [ˈoíçH_e]
+After stage Stage4_1_VocmarkToTempMarker: [ˈoíçH_e]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [ˈ&AO_OI_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [ˈ&AO_OI_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [ˈɨː]
+  S4.5 START: current_word_phonetic =	ˈɨː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ˈɨː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ˈɨː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ˈɨː]
+After stage Stage4_6_UnstressedVowelReduction: [ˈɨː]
+After stage StrongSonorantsEpenthesis: [ˈɨː]
+After stage Diacritics: [ˈɨː]
+After stage FinalCleanup: [ˈɨː]
+oíche          -> [ˈɨː]
+
+--- Transcribing: [fear] ---
+After stage PreProcess: [fear]
+After stage MarkDigraphsAndVocalisationTriggers: [fear]
+After stage ConsonantResolution: [f'ar']
+After stage Stage4_0_SpecificOrthoToTempMarker: [f'ar']
+After stage Stage4_0_1_Resolve_CH_Marker: [f'ar']
+After stage Stage4_1_VocmarkToTempMarker: [f'ar']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [f'ar']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [f'ar']
+After stage Stage4_4_ResolveTempVowelMarkers: [f'ar']
+  S4.5 START: current_word_phonetic =	f'ar'
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	f'ar'
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	f'ar'
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [f'ar']
+After stage Stage4_6_UnstressedVowelReduction: [f'ar']
+After stage StrongSonorantsEpenthesis: [f'ar']
+After stage Diacritics: [f'ar']
+After stage FinalCleanup: [f'ar']
+fear            -> [f'ar']
+
+--- Transcribing: [glaic] ---
+After stage PreProcess: [glaic]
+After stage MarkDigraphsAndVocalisationTriggers: [glaic]
+After stage ConsonantResolution: [glaik']
+After stage Stage4_0_SpecificOrthoToTempMarker: [glaik']
+After stage Stage4_0_1_Resolve_CH_Marker: [glaik']
+After stage Stage4_1_VocmarkToTempMarker: [glaik']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [glaik']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [gl&AI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [glai]
+  S4.5 START: current_word_phonetic =	glai
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	glai
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	glai
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [glai]
+After stage Stage4_6_UnstressedVowelReduction: [glai]
+After stage StrongSonorantsEpenthesis: [glai]
+After stage Diacritics: [gl̪a]
+After stage FinalCleanup: [gl̪a]
+glaic           -> [gl̪a]
+
+--- Transcribing: [muc] ---
+After stage PreProcess: [muc]
+After stage MarkDigraphsAndVocalisationTriggers: [muc]
+After stage ConsonantResolution: [muk]
+After stage Stage4_0_SpecificOrthoToTempMarker: [muk]
+After stage Stage4_0_1_Resolve_CH_Marker: [muk]
+After stage Stage4_1_VocmarkToTempMarker: [muk]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [muk]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [muk]
+After stage Stage4_4_ResolveTempVowelMarkers: [muk]
+  S4.5 START: current_word_phonetic =	muk
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	muk
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	muk
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [muk]
+After stage Stage4_6_UnstressedVowelReduction: [muk]
+After stage StrongSonorantsEpenthesis: [muk]
+After stage Diacritics: [muk]
+After stage FinalCleanup: [muk]
+muc             -> [muk]
+
+--- Transcribing: [fliuch] ---
+After stage PreProcess: [fliuch]
+After stage MarkDigraphsAndVocalisationTriggers: [fliu_CH_]
+After stage ConsonantResolution: [f'iu_CH_]
+After stage Stage4_0_SpecificOrthoToTempMarker: [f'iu_CH_]
+After stage Stage4_0_1_Resolve_CH_Marker: [f'iuç]
+After stage Stage4_1_VocmarkToTempMarker: [f'iuç]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [f'iuç]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [f'iuç]
+After stage Stage4_4_ResolveTempVowelMarkers: [f'iuç]
+  S4.5 START: current_word_phonetic =	f'iuç
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	f'iuç
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	f'iuç
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [f'iuç]
+After stage Stage4_6_UnstressedVowelReduction: [f'iuç]
+After stage StrongSonorantsEpenthesis: [f'iuç]
+After stage Diacritics: [f'iuç]
+After stage FinalCleanup: [f'iuç]
+fliuch          -> [f'iuç]
+
+--- Transcribing: [fada] ---
+After stage PreProcess: [fada]
+After stage MarkDigraphsAndVocalisationTriggers: [fada]
+After stage ConsonantResolution: [fada]
+After stage Stage4_0_SpecificOrthoToTempMarker: [fada]
+After stage Stage4_0_1_Resolve_CH_Marker: [fada]
+After stage Stage4_1_VocmarkToTempMarker: [fada]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [fada]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [fada]
+After stage Stage4_4_ResolveTempVowelMarkers: [fada]
+  S4.5 START: current_word_phonetic =	fada
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	fada
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	fada
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [fada]
+After stage Stage4_6_UnstressedVowelReduction: [fadə]
+After stage StrongSonorantsEpenthesis: [fadə]
+After stage Diacritics: [fad̪�]
+After stage FinalCleanup: [fad̪�]
+fada            -> [fad̪�]
+
+--- Transcribing: [beag] ---
+After stage PreProcess: [beag]
+After stage MarkDigraphsAndVocalisationTriggers: [beag]
+After stage ConsonantResolution: [b'ag']
+After stage Stage4_0_SpecificOrthoToTempMarker: [b'ag']
+After stage Stage4_0_1_Resolve_CH_Marker: [b'ag']
+After stage Stage4_1_VocmarkToTempMarker: [b'ag']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [b'ag']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [b'ag']
+After stage Stage4_4_ResolveTempVowelMarkers: [b'ag']
+  S4.5 START: current_word_phonetic =	b'ag'
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	b'ag'
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	b'ag'
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [b'ag']
+After stage Stage4_6_UnstressedVowelReduction: [b'ag']
+After stage StrongSonorantsEpenthesis: [b'ag']
+After stage Diacritics: [b'ag']
+After stage FinalCleanup: [b'ag']
+beag            -> [b'ag']
+
+--- Transcribing: [séimhiú] ---
+After stage PreProcess: [séimhiú]
+After stage MarkDigraphsAndVocalisationTriggers: [séi_MH_iú]
+After stage ConsonantResolution: [s'�iv'H_iú]
+After stage Stage4_0_SpecificOrthoToTempMarker: [s'�iv'H_iú]
+After stage Stage4_0_1_Resolve_CH_Marker: [s'�iv'H_iú]
+After stage Stage4_1_VocmarkToTempMarker: [s'�iv'H_iú]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [s'�iv'H_&I_ACUTE_U_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [s'�iv'H_&I_ACUTE_U_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [s'�iv'H_uː]
+  S4.5 START: current_word_phonetic =	s'�iv'H_uː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	s'�iv'H_uː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	s'�iv'H_uː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [s'�iv'H_uː]
+After stage Stage4_6_UnstressedVowelReduction: [s'�iv'H_uː]
+After stage StrongSonorantsEpenthesis: [s'�iv'H_uː]
+After stage Diacritics: [s'�iv'H_uː]
+After stage FinalCleanup: [s'�iv'H_uː]
+séimhiú       -> [s'�iv'H_uː]
+
+--- Transcribing: [úrú] ---
+After stage PreProcess: [ˈúrú]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈúrú]
+After stage ConsonantResolution: [ˈúr'�]
+After stage Stage4_0_SpecificOrthoToTempMarker: [ˈúr'�]
+After stage Stage4_0_1_Resolve_CH_Marker: [ˈúr'�]
+After stage Stage4_1_VocmarkToTempMarker: [ˈúr'�]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [ˈ&U_ACUTE_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [ˈ&U_ACUTE_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [ˈuː]
+  S4.5 START: current_word_phonetic =	ˈuː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ˈuː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ˈuː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ˈuː]
+After stage Stage4_6_UnstressedVowelReduction: [ˈuː]
+After stage StrongSonorantsEpenthesis: [ˈuː]
+After stage Diacritics: [ˈuː]
+After stage FinalCleanup: [ˈuː]
+úrú           -> [ˈuː]
+
+--- Transcribing: [bacach] ---
+After stage PreProcess: [bacach]
+After stage MarkDigraphsAndVocalisationTriggers: [baca_CH_]
+After stage ConsonantResolution: [baka_CH_]
+After stage Stage4_0_SpecificOrthoToTempMarker: [baka_CH_]
+After stage Stage4_0_1_Resolve_CH_Marker: [bakax]
+After stage Stage4_1_VocmarkToTempMarker: [bakax]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [bakax]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [bakax]
+After stage Stage4_4_ResolveTempVowelMarkers: [bakax]
+  S4.5 START: current_word_phonetic =	bakax
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	bakax
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	bakax
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [bakax]
+After stage Stage4_6_UnstressedVowelReduction: [bakəx]
+After stage StrongSonorantsEpenthesis: [bakəx]
+After stage Diacritics: [bakəx]
+After stage FinalCleanup: [bakəx]
+bacach          -> [bakəx]
+
+--- Transcribing: [isteach] ---
+After stage PreProcess: [ˈisteach]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈistea_CH_]
+After stage ConsonantResolution: [ˈis'ea_CH_]
+After stage Stage4_0_SpecificOrthoToTempMarker: [ˈis'&EA_SLENDER_PRE_CH&_CH_]
+S4.0.1 _CH_ for 'teach': o_context_str=	ˈisteach	orig_s=	25	orig_e=	28
+S4.0.1 _CH_ for 'teach': determined_quality_for_ch=	nonpalatal
+After stage Stage4_0_1_Resolve_CH_Marker: [ˈis'&EA_SLENDER_PRE_CH&x]
+After stage Stage4_1_VocmarkToTempMarker: [ˈis'&EA_SLENDER_PRE_CH&x]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [ˈis'&EA_SLENDER_PRE_CH&x]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [ˈis'&EA_SLENDER_PRE_CH&x]
+After stage Stage4_4_ResolveTempVowelMarkers: [ˈis'æːSLENDER_PRE_CH&x]
+  S4.5 START: current_word_phonetic =	ˈis'æːSLENDER_PRE_CH&x
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ˈis'æːSLENDER_PRE_CH&x
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ˈis'æːSLENDER_PRE_CH&x
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ˈis'æːSLENDER_PRE_CH&x]
+After stage Stage4_6_UnstressedVowelReduction: [ˈis'æːSLENDER_PRE_CH&x]
+After stage StrongSonorantsEpenthesis: [ˈis'æːSLENDER_PRE_CH&x]
+After stage Diacritics: [ˈis'æːSlˠEEɾˠ__CH&x]
+After stage FinalCleanup: [ˈis'æːSlˠEEɾˠ__CH&x]
+isteach         -> [ˈis'æːSlˠEEɾˠ__CH&x]
+
+--- Transcribing: [baile] ---
+After stage PreProcess: [baile]
+After stage MarkDigraphsAndVocalisationTriggers: [baile]
+After stage ConsonantResolution: [baile]
+After stage Stage4_0_SpecificOrthoToTempMarker: [baile]
+After stage Stage4_0_1_Resolve_CH_Marker: [baile]
+After stage Stage4_1_VocmarkToTempMarker: [baile]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [baile]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [b&AI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [bai]
+  S4.5 START: current_word_phonetic =	bai
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	bai
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	bai
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [bai]
+After stage Stage4_6_UnstressedVowelReduction: [bai]
+After stage StrongSonorantsEpenthesis: [bai]
+After stage Diacritics: [bai]
+After stage FinalCleanup: [bai]
+baile           -> [bai]
+
+--- Transcribing: [duine] ---
+After stage PreProcess: [duine]
+After stage MarkDigraphsAndVocalisationTriggers: [duine]
+After stage ConsonantResolution: [duine]
+After stage Stage4_0_SpecificOrthoToTempMarker: [duine]
+After stage Stage4_0_1_Resolve_CH_Marker: [duine]
+After stage Stage4_1_VocmarkToTempMarker: [duine]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [duine]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [d&UI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [di]
+  S4.5 START: current_word_phonetic =	di
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	di
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	di
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [di]
+After stage Stage4_6_UnstressedVowelReduction: [di]
+After stage StrongSonorantsEpenthesis: [di]
+After stage Diacritics: [d̪i]
+After stage FinalCleanup: [d̪i]
+duine           -> [d̪i]
+
+--- Transcribing: [gaeltacht] ---
+After stage PreProcess: [gaeltacht]
+After stage MarkDigraphsAndVocalisationTriggers: [gaelta_CH_t]
+After stage ConsonantResolution: [gaelta_CH_t]
+After stage Stage4_0_SpecificOrthoToTempMarker: [gaelta_CH_t]
+After stage Stage4_0_1_Resolve_CH_Marker: [gaeltaxCH_t]
+After stage Stage4_1_VocmarkToTempMarker: [gaeltaxCH_t]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [gaeltaxCH_t]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [g&AE_SEQ&_t]
+After stage Stage4_4_ResolveTempVowelMarkers: [geː_SEQ&_t]
+  S4.5 START: current_word_phonetic =	geː_SEQ&_t
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	geː_SEQ&_t
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	geː_SEQ&_t
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [geː_SEQ&_t]
+After stage Stage4_6_UnstressedVowelReduction: [geː_SEQ&_t]
+After stage StrongSonorantsEpenthesis: [geː_SEQ&_t]
+After stage Diacritics: [geː_SEQ&_t̪]
+After stage FinalCleanup: [geː_SEQ&_t̪]
+Gaeltacht       -> [geː_SEQ&_t̪]
+
+--- Transcribing: [conamara] ---
+After stage PreProcess: [conamara]
+After stage MarkDigraphsAndVocalisationTriggers: [conamara]
+After stage ConsonantResolution: [konamara]
+After stage Stage4_0_SpecificOrthoToTempMarker: [konamara]
+After stage Stage4_0_1_Resolve_CH_Marker: [konamara]
+After stage Stage4_1_VocmarkToTempMarker: [konamara]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [konamara]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [konamara]
+After stage Stage4_4_ResolveTempVowelMarkers: [konamara]
+  S4.5 START: current_word_phonetic =	konamara
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	konamara
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	konamara
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [konamara]
+After stage Stage4_6_UnstressedVowelReduction: [konamarə]
+After stage StrongSonorantsEpenthesis: [konamarə]
+After stage Diacritics: [kon̪arə]
+After stage FinalCleanup: [kon̪arə]
+Conamara        -> [kon̪arə]
+
+--- Transcribing: [gaeilge] ---
+After stage PreProcess: [gaeilge]
+After stage MarkDigraphsAndVocalisationTriggers: [gaeilge]
+After stage ConsonantResolution: [gaeilg']
+After stage Stage4_0_SpecificOrthoToTempMarker: [gaeilg']
+After stage Stage4_0_1_Resolve_CH_Marker: [gaeilg']
+After stage Stage4_1_VocmarkToTempMarker: [gaeilg']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [gaeilg']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [g&AE_SEQ&]
+After stage Stage4_4_ResolveTempVowelMarkers: [geː]
+  S4.5 START: current_word_phonetic =	geː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	geː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	geː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [geː]
+After stage Stage4_6_UnstressedVowelReduction: [geː]
+After stage StrongSonorantsEpenthesis: [geː]
+After stage Diacritics: [geː]
+After stage FinalCleanup: [geː]
+Gaeilge         -> [geː]
+
+--- Transcribing: [aoibhinn] ---
+After stage PreProcess: [ˈaoibhinn]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈaoi_BH_i_NN_]
+After stage ConsonantResolution: [ˈaoiv'H_iN']
+After stage Stage4_0_SpecificOrthoToTempMarker: [ˈaoiv'H_iN']
+After stage Stage4_0_1_Resolve_CH_Marker: [ˈaoiv'H_iN']
+After stage Stage4_1_VocmarkToTempMarker: [ˈaoiv'H_iN']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [ˈ&AO_OI_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [ˈ&AO_OI_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [ˈɨː]
+  S4.5 START: current_word_phonetic =	ˈɨː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ˈɨː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ˈɨː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ˈɨː]
+After stage Stage4_6_UnstressedVowelReduction: [ˈɨː]
+After stage StrongSonorantsEpenthesis: [ˈɨː]
+After stage Diacritics: [ˈɨː]
+After stage FinalCleanup: [ˈɨː]
+aoibhinn        -> [ˈɨː]
+
+--- Transcribing: [buí] ---
+After stage PreProcess: [buí]
+After stage MarkDigraphsAndVocalisationTriggers: [buí]
+After stage ConsonantResolution: [buí]
+After stage Stage4_0_SpecificOrthoToTempMarker: [buí]
+After stage Stage4_0_1_Resolve_CH_Marker: [buí]
+After stage Stage4_1_VocmarkToTempMarker: [buí]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [bu&I_ACUTE_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [bu&I_ACUTE_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [buiː]
+  S4.5 START: current_word_phonetic =	buiː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	buiː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	buiː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [buiː]
+After stage Stage4_6_UnstressedVowelReduction: [buiː]
+After stage StrongSonorantsEpenthesis: [buiː]
+After stage Diacritics: [buiː]
+After stage FinalCleanup: [buiː]
+buí            -> [buiː]
+
+--- Transcribing: [caol] ---
+After stage PreProcess: [caol]
+After stage MarkDigraphsAndVocalisationTriggers: [caol]
+After stage ConsonantResolution: [kaol]
+After stage Stage4_0_SpecificOrthoToTempMarker: [kaol]
+After stage Stage4_0_1_Resolve_CH_Marker: [kaol]
+After stage Stage4_1_VocmarkToTempMarker: [kaol]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [k&AO_OI_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [k&AO_OI_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [kɨː]
+  S4.5 START: current_word_phonetic =	kɨː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	kɨː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	kɨː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [kɨː]
+After stage Stage4_6_UnstressedVowelReduction: [kɨː]
+After stage StrongSonorantsEpenthesis: [kɨː]
+After stage Diacritics: [kɨː]
+After stage FinalCleanup: [kɨː]
+caol            -> [kɨː]
+
+--- Transcribing: [leathan] ---
+After stage PreProcess: [leathan]
+After stage MarkDigraphsAndVocalisationTriggers: [lea_TH_an]
+After stage ConsonantResolution: [leahTH_an]
+After stage Stage4_0_SpecificOrthoToTempMarker: [leahTH_an]
+After stage Stage4_0_1_Resolve_CH_Marker: [leahTH_an]
+After stage Stage4_1_VocmarkToTempMarker: [leahTH_an]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [leahTH_an]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [leahTH_an]
+After stage Stage4_4_ResolveTempVowelMarkers: [leahTH_an]
+  S4.5 START: current_word_phonetic =	leahTH_an
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	leahTH_an
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	leahTH_an
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [leahTH_an]
+After stage Stage4_6_UnstressedVowelReduction: [leahTH_ən]
+After stage StrongSonorantsEpenthesis: [leahTH_ən]
+After stage Diacritics: [l̪eTH_ən̪]
+After stage FinalCleanup: [l̪eTH_ən̪]
+leathan         -> [l̪eTH_ən̪]
+
+--- Transcribing: [drochbhean] ---
+After stage PreProcess: [drochbhean]
+After stage MarkDigraphsAndVocalisationTriggers: [dro_CH__BH_ean]
+After stage ConsonantResolution: [dro_CH_v'H_ean]
+After stage Stage4_0_SpecificOrthoToTempMarker: [dro_CH_v'H_ean]
+After stage Stage4_0_1_Resolve_CH_Marker: [droçH_v'H_ean]
+After stage Stage4_1_VocmarkToTempMarker: [droçH_v'H_ean]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [droçH_v'H_ean]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [droçH_v'H_ean]
+After stage Stage4_4_ResolveTempVowelMarkers: [droçH_v'H_ean]
+  S4.5 START: current_word_phonetic =	droçH_v'H_ean
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	droçH_v'H_ean
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	droçH_v'H_ean
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [droçH_v'H_ean]
+After stage Stage4_6_UnstressedVowelReduction: [droçH_v'H_eən]
+After stage StrongSonorantsEpenthesis: [droçH_v'H_eən]
+After stage Diacritics: [d̪r�H_v'H_eən̪]
+After stage FinalCleanup: [d̪r�H_v'H_eən̪]
+drochbhean      -> [d̪r�H_v'H_eən̪]
+
+--- Transcribing: [an-mhaith] ---
+After stage PreProcess: [ˈan-mhaith]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈan-_MH_ai_TH_]
+After stage ConsonantResolution: [ˈan-wMH_aih]
+After stage Stage4_0_SpecificOrthoToTempMarker: [ˈan-wMH_aih]
+After stage Stage4_0_1_Resolve_CH_Marker: [ˈan-wMH_aih]
+After stage Stage4_1_VocmarkToTempMarker: [ˈan-wMH_aih]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [ˈan-wMH_aih]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [ˈan-wMH_&AI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [ˈan-wMH_ai]
+  S4.5 START: current_word_phonetic =	ˈan-wMH_ai
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ˈan-wMH_ai
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ˈan-wMH_ai
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ˈan-wMH_ai]
+After stage Stage4_6_UnstressedVowelReduction: [ˈan-wMH_ai]
+After stage StrongSonorantsEpenthesis: [ˈan-wMH_ai]
+After stage Diacritics: [ˈan̪-H_ai]
+After stage FinalCleanup: [ˈan̪-H_ai]
+an-mhaith       -> [ˈan̪-H_ai]
+
+--- Transcribing: [fuinneog] ---
+After stage PreProcess: [fuinneog]
+After stage MarkDigraphsAndVocalisationTriggers: [fui_NN_eog]
+After stage ConsonantResolution: [fuiN'N_eog]
+After stage Stage4_0_SpecificOrthoToTempMarker: [fuiN'N_eog]
+After stage Stage4_0_1_Resolve_CH_Marker: [fuiN'N_eog]
+After stage Stage4_1_VocmarkToTempMarker: [fuiN'N_eog]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [fuiN'N_eog]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [f&UI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [fi]
+  S4.5 START: current_word_phonetic =	fi
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	fi
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	fi
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [fi]
+After stage Stage4_6_UnstressedVowelReduction: [fi]
+After stage StrongSonorantsEpenthesis: [fi]
+After stage Diacritics: [fi]
+After stage FinalCleanup: [fi]
+fuinneog        -> [fi]
+
+--- Transcribing: [oiliúint] ---
+After stage PreProcess: [ˈoiliúint]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈoiliúint]
+After stage ConsonantResolution: [ˈoiliúint']
+After stage Stage4_0_SpecificOrthoToTempMarker: [ˈoiliúint']
+After stage Stage4_0_1_Resolve_CH_Marker: [ˈoiliúint']
+After stage Stage4_1_VocmarkToTempMarker: [ˈoiliúint']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [ˈoil&I_ACUTE_U_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [ˈ&OI_DIPH&TE_U_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [ˈɔI_DIPH&TE_U_LONG&]
+  S4.5 START: current_word_phonetic =	ˈɔI_DIPH&TE_U_LONG&
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ˈɔI_DIPH&TE_U_LONG&
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ˈɔI_DIPH&TE_U_LONG&
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ˈɔI_DIPH&TE_U_LONG&]
+After stage Stage4_6_UnstressedVowelReduction: [ˈɔI_DIPH&TE_U_LONG&]
+After stage StrongSonorantsEpenthesis: [ˈɔI_DIPH&TE_U_LONG&]
+After stage Diacritics: [ˈɔI_DIPH&TE_U_lˠO&]
+After stage FinalCleanup: [ˈɔI_DIPH&TE_U_lˠO&]
+oiliúint       -> [ˈɔI_DIPH&TE_U_lˠO&]
+
+--- Transcribing: [staighre] ---
+After stage PreProcess: [staighre]
+After stage MarkDigraphsAndVocalisationTriggers: [st_VOCMARK_AIGH_re]
+After stage ConsonantResolution: [st_VOCMARK_AIGH_r']
+After stage Stage4_0_SpecificOrthoToTempMarker: [st_VOCMARK_AIGH_r']
+After stage Stage4_0_1_Resolve_CH_Marker: [st_VOCMARK_AIGH_r']
+After stage Stage4_1_VocmarkToTempMarker: [st&VOC_AI_OI_GH_DH&]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [st&VOC_AI_OI_GH_DH&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [st&VOC_AI_OI_GH_DH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [stai]
+  S4.5 START: current_word_phonetic =	stai
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	stai
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	stai
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [stai]
+After stage Stage4_6_UnstressedVowelReduction: [stai]
+After stage StrongSonorantsEpenthesis: [stai]
+After stage Diacritics: [stai]
+After stage FinalCleanup: [stai]
+staighre        -> [stai]
+
+--- Transcribing: [fios] ---
+After stage PreProcess: [fios]
+After stage MarkDigraphsAndVocalisationTriggers: [fios]
+After stage ConsonantResolution: [f'os]
+After stage Stage4_0_SpecificOrthoToTempMarker: [f'os]
+After stage Stage4_0_1_Resolve_CH_Marker: [f'os]
+After stage Stage4_1_VocmarkToTempMarker: [f'os]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [f'os]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [f'os]
+After stage Stage4_4_ResolveTempVowelMarkers: [f'os]
+  S4.5 START: current_word_phonetic =	f'os
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	f'os
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	f'os
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [f'os]
+After stage Stage4_6_UnstressedVowelReduction: [f'os]
+After stage StrongSonorantsEpenthesis: [f'os]
+After stage Diacritics: [f'os]
+After stage FinalCleanup: [f'os]
+fios            -> [f'os]
+
+--- Transcribing: [dearg] ---
+After stage PreProcess: [dearg]
+After stage MarkDigraphsAndVocalisationTriggers: [dearg]
+After stage ConsonantResolution: [d'ar']
+After stage Stage4_0_SpecificOrthoToTempMarker: [d'ar']
+After stage Stage4_0_1_Resolve_CH_Marker: [d'ar']
+After stage Stage4_1_VocmarkToTempMarker: [d'ar']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [d'ar']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [d'ar']
+After stage Stage4_4_ResolveTempVowelMarkers: [d'ar']
+  S4.5 START: current_word_phonetic =	d'ar'
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	d'ar'
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	d'ar'
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [d'ar']
+After stage Stage4_6_UnstressedVowelReduction: [d'ar']
+After stage StrongSonorantsEpenthesis: [d'ar']
+After stage Diacritics: [d'ar']
+After stage FinalCleanup: [d'ar']
+dearg           -> [d'ar']
+
+--- Transcribing: [athbhliain] ---
+After stage PreProcess: [ˈathbhliain]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈa_TH__BH_liain]
+After stage ConsonantResolution: [ˈahTH_v'H_liain]
+After stage Stage4_0_SpecificOrthoToTempMarker: [ˈahTH_v'H_liain]
+After stage Stage4_0_1_Resolve_CH_Marker: [ˈahTH_v'H_liain]
+After stage Stage4_1_VocmarkToTempMarker: [ˈahTH_v'H_liain]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [ˈahTH_v'H_liain]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [ˈahTH_v'H_l&IA_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [ˈahTH_v'H_lia]
+  S4.5 START: current_word_phonetic =	ˈahTH_v'H_lia
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ˈahTH_v'H_lia
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ˈahTH_v'H_lia
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ˈahTH_v'H_lia]
+After stage Stage4_6_UnstressedVowelReduction: [ˈahTH_v'H_liə]
+After stage StrongSonorantsEpenthesis: [ˈahTH_v'H_liə]
+After stage Diacritics: [ˈahTH_v'H_l̪i]
+After stage FinalCleanup: [ˈahTH_v'H_l̪i]
+athbhliain      -> [ˈahTH_v'H_l̪i]
+
+--- Transcribing: [comhrá] ---
+After stage PreProcess: [comhrá]
+After stage MarkDigraphsAndVocalisationTriggers: [c_VOCMARK_OMH_rá]
+After stage ConsonantResolution: [k_VOCMARK_OMH_r'�]
+After stage Stage4_0_SpecificOrthoToTempMarker: [k_VOCMARK_OMH_r'�]
+After stage Stage4_0_1_Resolve_CH_Marker: [k_VOCMARK_OMH_r'�]
+After stage Stage4_1_VocmarkToTempMarker: [k&VOC_OBH_OMH&r'�]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [k&VOC_OBH_OMH&r'�]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [k&VOC_OBH_OMH&r'�]
+After stage Stage4_4_ResolveTempVowelMarkers: [kouOC_OBH_OMH&r'�]
+  S4.5 START: current_word_phonetic =	kouOC_OBH_OMH&r'�
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	kouOC_OBH_OMH&r'�
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	kouOC_OBH_OMH&r'�
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [kouOC_OBH_OMH&r'�]
+After stage Stage4_6_UnstressedVowelReduction: [kouOC_OBH_OMH&r'�]
+After stage StrongSonorantsEpenthesis: [kouOC_OBH_OMH&r'�]
+After stage Diacritics: [kouOC_OBH_OmˠH'�]
+After stage FinalCleanup: [kouOC_OBH_OmˠH'�]
+comhrá         -> [kouOC_OBH_OmˠH'�]
+
+--- Transcribing: [mícheart] ---
+After stage PreProcess: [mícheart]
+After stage MarkDigraphsAndVocalisationTriggers: [mí_CH_eart]
+After stage ConsonantResolution: [m'�_CH_ear']
+After stage Stage4_0_SpecificOrthoToTempMarker: [m'�_CH_&EA_SLENDER_PRE_RPRIME&r']
+After stage Stage4_0_1_Resolve_CH_Marker: [m'�çH_&EA_SLENDER_PRE_RPRIME&r']
+After stage Stage4_1_VocmarkToTempMarker: [m'�çH_&EA_SLENDER_PRE_RPRIME&r']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [m'�çH_&EA_SLENDER_PRE_RPRIME&r']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [m'�çH_&EA_SLENDER_PRE_RPRIME&r']
+After stage Stage4_4_ResolveTempVowelMarkers: [m'�çH_æA_SLENDER_PRE_RPRIME&r']
+  S4.5 START: current_word_phonetic =	m'�çH_æA_SLENDER_PRE_RPRIME&r'
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	m'�çH_æA_SLENDER_PRE_RPRIME&r'
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	m'�çH_æA_SLENDER_PRE_RPRIME&r'
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [m'�çH_æA_SLENDER_PRE_RPRIME&r']
+After stage Stage4_6_UnstressedVowelReduction: [m'�çH_æA_SLENDER_PRE_RPRIME&r']
+After stage StrongSonorantsEpenthesis: [m'�çH_æA_SLENDER_PRE_RPRIME&r']
+After stage Diacritics: [m'�çH_æA_SlˠEEɾˠ__ɾˠPE&r']
+After stage FinalCleanup: [m'�çH_æA_SlˠEEɾˠ__ɾˠPE&r']
+mícheart       -> [m'�çH_æA_SlˠEEɾˠ__ɾˠPE&r']
+
+--- Transcribing: [oícheanta] ---
+After stage PreProcess: [ˈoícheanta]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈoí_CH_eanta]
+After stage ConsonantResolution: [ˈoí_CH_eanta]
+After stage Stage4_0_SpecificOrthoToTempMarker: [ˈoí_CH_eanta]
+After stage Stage4_0_1_Resolve_CH_Marker: [ˈoíçH_eanta]
+After stage Stage4_1_VocmarkToTempMarker: [ˈoíçH_eanta]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [ˈ&AO_OI_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [ˈ&AO_OI_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [ˈɨː]
+  S4.5 START: current_word_phonetic =	ˈɨː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ˈɨː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ˈɨː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ˈɨː]
+After stage Stage4_6_UnstressedVowelReduction: [ˈɨː]
+After stage StrongSonorantsEpenthesis: [ˈɨː]
+After stage Diacritics: [ˈɨː]
+After stage FinalCleanup: [ˈɨː]
+oícheanta      -> [ˈɨː]
+
+--- Transcribing: [codladh] ---
+After stage PreProcess: [codladh]
+After stage MarkDigraphsAndVocalisationTriggers: [codla_DH_]
+After stage ConsonantResolution: [kodlaɣ]
+After stage Stage4_0_SpecificOrthoToTempMarker: [kodlaɣ]
+After stage Stage4_0_1_Resolve_CH_Marker: [kodlaɣ]
+After stage Stage4_1_VocmarkToTempMarker: [kodlaɣ]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [kodlaɣ]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [kodlaɣ]
+After stage Stage4_4_ResolveTempVowelMarkers: [kodlaɣ]
+  S4.5 START: current_word_phonetic =	kodlaɣ
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	kodlaɣ
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	kodlaɣ
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [kodlaɣ]
+After stage Stage4_6_UnstressedVowelReduction: [kodlaɣ]
+After stage StrongSonorantsEpenthesis: [kodlaɣ]
+After stage Diacritics: [kod̪l�]
+After stage FinalCleanup: [kod̪l�]
+codladh         -> [kod̪l�]
+
+--- Transcribing: [luigh] ---
+After stage PreProcess: [luigh]
+After stage MarkDigraphsAndVocalisationTriggers: [l_VOCMARK_UIGH_]
+After stage ConsonantResolution: [l_VOCMARK_UIGH_]
+After stage Stage4_0_SpecificOrthoToTempMarker: [l_VOCMARK_UIGH_]
+After stage Stage4_0_1_Resolve_CH_Marker: [l_VOCMARK_UIGH_]
+After stage Stage4_1_VocmarkToTempMarker: [l&VOC_UI_GH_DH&]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [l&VOC_UI_GH_DH&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [l&VOC_UI_GH_DH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [liː]
+  S4.5 START: current_word_phonetic =	liː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	liː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	liː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [liː]
+After stage Stage4_6_UnstressedVowelReduction: [liː]
+After stage StrongSonorantsEpenthesis: [liː]
+After stage Diacritics: [l̪i]
+After stage FinalCleanup: [l̪i]
+luigh           -> [l̪i]
+
+--- Transcribing: [fiche] ---
+After stage PreProcess: [fiche]
+After stage MarkDigraphsAndVocalisationTriggers: [fi_CH_e]
+After stage ConsonantResolution: [f'_CH_e]
+After stage Stage4_0_SpecificOrthoToTempMarker: [f'_CH_e]
+After stage Stage4_0_1_Resolve_CH_Marker: [f'çH_e]
+After stage Stage4_1_VocmarkToTempMarker: [f'çH_e]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [f'çH_e]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [f'çH_e]
+After stage Stage4_4_ResolveTempVowelMarkers: [f'çH_e]
+  S4.5 START: current_word_phonetic =	f'çH_e
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	f'çH_e
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	f'çH_e
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [f'çH_e]
+After stage Stage4_6_UnstressedVowelReduction: [f'çH_ə]
+After stage StrongSonorantsEpenthesis: [f'çH_ə]
+After stage Diacritics: [f'çH_ə]
+After stage FinalCleanup: [f'çH_ə]
+fiche           -> [f'çH_ə]
+
+--- Transcribing: [duchaise] ---
+After stage PreProcess: [duchaise]
+After stage MarkDigraphsAndVocalisationTriggers: [du_CH_aise]
+After stage ConsonantResolution: [du_CH_ais']
+After stage Stage4_0_SpecificOrthoToTempMarker: [du_CH_ais']
+After stage Stage4_0_1_Resolve_CH_Marker: [duxCH_ais']
+After stage Stage4_1_VocmarkToTempMarker: [duxCH_ais']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [duxCH_ais']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [duxCH_&AI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [duxCH_ai]
+  S4.5 START: current_word_phonetic =	duxCH_ai
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	duxCH_ai
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	duxCH_ai
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [duxCH_ai]
+After stage Stage4_6_UnstressedVowelReduction: [duxCH_ai]
+After stage StrongSonorantsEpenthesis: [duxCH_ai]
+After stage Diacritics: [d̪uH_ai]
+After stage FinalCleanup: [d̪uH_ai]
+duchaise        -> [d̪uH_ai]
+
+--- Transcribing: [saibhir] ---
+After stage PreProcess: [saibhir]
+After stage MarkDigraphsAndVocalisationTriggers: [sai_BH_ir]
+After stage ConsonantResolution: [saiv'H_ir']
+After stage Stage4_0_SpecificOrthoToTempMarker: [saiv'H_ir']
+After stage Stage4_0_1_Resolve_CH_Marker: [saiv'H_ir']
+After stage Stage4_1_VocmarkToTempMarker: [saiv'H_ir']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [saiv'H_ir']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [s&AI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [sai]
+  S4.5 START: current_word_phonetic =	sai
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	sai
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	sai
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [sai]
+After stage Stage4_6_UnstressedVowelReduction: [sai]
+After stage StrongSonorantsEpenthesis: [sai]
+After stage Diacritics: [sai]
+After stage FinalCleanup: [sai]
+saibhir         -> [sai]
+
+--- Transcribing: [deacair] ---
+After stage PreProcess: [deacair]
+After stage MarkDigraphsAndVocalisationTriggers: [deacair]
+After stage ConsonantResolution: [d'akair']
+After stage Stage4_0_SpecificOrthoToTempMarker: [d'akair']
+After stage Stage4_0_1_Resolve_CH_Marker: [d'akair']
+After stage Stage4_1_VocmarkToTempMarker: [d'akair']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [d'akair']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [d'ak&AI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [d'akai]
+  S4.5 START: current_word_phonetic =	d'akai
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	d'akai
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	d'akai
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [d'akai]
+After stage Stage4_6_UnstressedVowelReduction: [d'akai]
+After stage StrongSonorantsEpenthesis: [d'akai]
+After stage Diacritics: [d'akai]
+After stage FinalCleanup: [d'akai]
+deacair         -> [d'akai]
+
+--- Transcribing: [sláinte] ---
+After stage PreProcess: [sláinte]
+After stage MarkDigraphsAndVocalisationTriggers: [sláinte]
+After stage ConsonantResolution: [s'áint']
+After stage Stage4_0_SpecificOrthoToTempMarker: [s'áint']
+After stage Stage4_0_1_Resolve_CH_Marker: [s'áint']
+After stage Stage4_1_VocmarkToTempMarker: [s'áint']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [s'&A_ACUTE_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [s'&A_ACUTE_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [s'ɑː]
+  S4.5 START: current_word_phonetic =	s'ɑː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	s'ɑː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	s'ɑː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [s'ɑː]
+After stage Stage4_6_UnstressedVowelReduction: [s'ɑː]
+After stage StrongSonorantsEpenthesis: [s'ɑː]
+After stage Diacritics: [s'ɑː]
+After stage FinalCleanup: [s'ɑː]
+sláinte        -> [s'ɑː]
+
+--- Transcribing: [ceart] ---
+After stage PreProcess: [ceart]
+After stage MarkDigraphsAndVocalisationTriggers: [ceart]
+After stage ConsonantResolution: [k'ar']
+After stage Stage4_0_SpecificOrthoToTempMarker: [k'ar']
+After stage Stage4_0_1_Resolve_CH_Marker: [k'ar']
+After stage Stage4_1_VocmarkToTempMarker: [k'ar']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [k'ar']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [k'ar']
+After stage Stage4_4_ResolveTempVowelMarkers: [k'ar']
+  S4.5 START: current_word_phonetic =	k'ar'
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	k'ar'
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	k'ar'
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [k'ar']
+After stage Stage4_6_UnstressedVowelReduction: [k'ar']
+After stage StrongSonorantsEpenthesis: [k'ar']
+After stage Diacritics: [k'ar']
+After stage FinalCleanup: [k'ar']
+ceart           -> [k'ar']
+
+--- Transcribing: [lae] ---
+After stage PreProcess: [lae]
+After stage MarkDigraphsAndVocalisationTriggers: [lae]
+After stage ConsonantResolution: [lae]
+After stage Stage4_0_SpecificOrthoToTempMarker: [lae]
+After stage Stage4_0_1_Resolve_CH_Marker: [lae]
+After stage Stage4_1_VocmarkToTempMarker: [lae]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [lae]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [l&AE_SEQ&]
+After stage Stage4_4_ResolveTempVowelMarkers: [leː]
+  S4.5 START: current_word_phonetic =	leː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	leː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	leː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [leː]
+After stage Stage4_6_UnstressedVowelReduction: [leː]
+After stage StrongSonorantsEpenthesis: [leː]
+After stage Diacritics: [l̪e]
+After stage FinalCleanup: [l̪e]
+lae             -> [l̪e]
+
+--- Transcribing: [laoch] ---
+After stage PreProcess: [laoch]
+After stage MarkDigraphsAndVocalisationTriggers: [lao_CH_]
+After stage ConsonantResolution: [lao_CH_]
+After stage Stage4_0_SpecificOrthoToTempMarker: [lao_CH_]
+After stage Stage4_0_1_Resolve_CH_Marker: [laox]
+After stage Stage4_1_VocmarkToTempMarker: [laox]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [l&AO_OI_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [l&AO_OI_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [lɨː]
+  S4.5 START: current_word_phonetic =	lɨː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	lɨː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	lɨː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [lɨː]
+After stage Stage4_6_UnstressedVowelReduction: [lɨː]
+After stage StrongSonorantsEpenthesis: [lɨː]
+After stage Diacritics: [l̪ɐ]
+After stage FinalCleanup: [l̪ɐ]
+laoch           -> [l̪ɐ]
+
+--- Transcribing: [aer] ---
+After stage PreProcess: [ˈaer]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈaer]
+After stage ConsonantResolution: [ˈaer']
+After stage Stage4_0_SpecificOrthoToTempMarker: [ˈaer']
+After stage Stage4_0_1_Resolve_CH_Marker: [ˈaer']
+After stage Stage4_1_VocmarkToTempMarker: [ˈaer']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [ˈaer']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [ˈ&AE_SEQ&]
+After stage Stage4_4_ResolveTempVowelMarkers: [ˈeː]
+  S4.5 START: current_word_phonetic =	ˈeː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ˈeː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ˈeː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ˈeː]
+After stage Stage4_6_UnstressedVowelReduction: [ˈeː]
+After stage StrongSonorantsEpenthesis: [ˈeː]
+After stage Diacritics: [ˈeː]
+After stage FinalCleanup: [ˈeː]
+aer             -> [ˈeː]
+
+--- Transcribing: [ceo] ---
+After stage PreProcess: [ceo]
+After stage MarkDigraphsAndVocalisationTriggers: [ceo]
+After stage ConsonantResolution: [k'o]
+After stage Stage4_0_SpecificOrthoToTempMarker: [k'o]
+After stage Stage4_0_1_Resolve_CH_Marker: [k'o]
+After stage Stage4_1_VocmarkToTempMarker: [k'o]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [k'o]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [k'o]
+After stage Stage4_4_ResolveTempVowelMarkers: [k'o]
+  S4.5 START: current_word_phonetic =	k'o
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	k'o
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	k'o
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [k'o]
+After stage Stage4_6_UnstressedVowelReduction: [k'o]
+After stage StrongSonorantsEpenthesis: [k'o]
+After stage Diacritics: [k'o]
+After stage FinalCleanup: [k'o]
+ceo             -> [k'o]
+
+--- Transcribing: [ceol] ---
+After stage PreProcess: [ceol]
+After stage MarkDigraphsAndVocalisationTriggers: [ceol]
+After stage ConsonantResolution: [k'ol]
+After stage Stage4_0_SpecificOrthoToTempMarker: [k'ol]
+After stage Stage4_0_1_Resolve_CH_Marker: [k'ol]
+After stage Stage4_1_VocmarkToTempMarker: [k'ol]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [k'ol]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [k'ol]
+After stage Stage4_4_ResolveTempVowelMarkers: [k'ol]
+  S4.5 START: current_word_phonetic =	k'ol
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	k'ol
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	k'ol
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [k'ol]
+After stage Stage4_6_UnstressedVowelReduction: [k'ol]
+After stage StrongSonorantsEpenthesis: [k'ol]
+After stage Diacritics: [k'ol̪]
+After stage FinalCleanup: [k'ol̪]
+ceol            -> [k'ol̪]
+
+--- Transcribing: [coir] ---
+After stage PreProcess: [coir]
+After stage MarkDigraphsAndVocalisationTriggers: [coir]
+After stage ConsonantResolution: [koir']
+After stage Stage4_0_SpecificOrthoToTempMarker: [koir']
+After stage Stage4_0_1_Resolve_CH_Marker: [koir']
+After stage Stage4_1_VocmarkToTempMarker: [koir']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [koir']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [k&OI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [kɔ]
+  S4.5 START: current_word_phonetic =	kɔ
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	kɔ
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	kɔ
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [kɔ]
+After stage Stage4_6_UnstressedVowelReduction: [k�ə]
+After stage StrongSonorantsEpenthesis: [k�ə]
+After stage Diacritics: [k�ə]
+After stage FinalCleanup: [k�ə]
+coir            -> [k�ə]
+
+--- Transcribing: [coill] ---
+After stage PreProcess: [coill]
+After stage MarkDigraphsAndVocalisationTriggers: [coi_LL_]
+After stage ConsonantResolution: [koiL']
+After stage Stage4_0_SpecificOrthoToTempMarker: [koiL']
+After stage Stage4_0_1_Resolve_CH_Marker: [koiL']
+After stage Stage4_1_VocmarkToTempMarker: [koiL']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [koiL']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [k&OI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [kɔ]
+  S4.5 START: current_word_phonetic =	kɔ
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	kɔ
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	kɔ
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [kɔ]
+After stage Stage4_6_UnstressedVowelReduction: [k�ə]
+After stage StrongSonorantsEpenthesis: [k�ə]
+After stage Diacritics: [k�ə]
+After stage FinalCleanup: [k�ə]
+coill           -> [k�ə]
+
+--- Transcribing: [faoi] ---
+After stage PreProcess: [faoi]
+After stage MarkDigraphsAndVocalisationTriggers: [faoi]
+After stage ConsonantResolution: [faoi]
+After stage Stage4_0_SpecificOrthoToTempMarker: [faoi]
+After stage Stage4_0_1_Resolve_CH_Marker: [faoi]
+After stage Stage4_1_VocmarkToTempMarker: [faoi]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [f&AO_OI_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [f&AO_OI_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [fɨː]
+  S4.5 START: current_word_phonetic =	fɨː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	fɨː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	fɨː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [fɨː]
+After stage Stage4_6_UnstressedVowelReduction: [fɨː]
+After stage StrongSonorantsEpenthesis: [fɨː]
+After stage Diacritics: [fɨː]
+After stage FinalCleanup: [fɨː]
+faoi            -> [fɨː]
+
+--- Transcribing: [gaoth] ---
+After stage PreProcess: [gaoth]
+After stage MarkDigraphsAndVocalisationTriggers: [gao_TH_]
+After stage ConsonantResolution: [gaoh]
+After stage Stage4_0_SpecificOrthoToTempMarker: [gaoh]
+After stage Stage4_0_1_Resolve_CH_Marker: [gaoh]
+After stage Stage4_1_VocmarkToTempMarker: [gaoh]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [g&AO_OI_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [g&AO_OI_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [gɨː]
+  S4.5 START: current_word_phonetic =	gɨː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	gɨː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	gɨː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [gɨː]
+After stage Stage4_6_UnstressedVowelReduction: [gɨː]
+After stage StrongSonorantsEpenthesis: [gɨː]
+After stage Diacritics: [gɨː]
+After stage FinalCleanup: [gɨː]
+gaoth           -> [gɨː]
+
+--- Transcribing: [bádaí] ---
+After stage PreProcess: [bádaí]
+After stage MarkDigraphsAndVocalisationTriggers: [bádaí]
+After stage ConsonantResolution: [b'�daí]
+After stage Stage4_0_SpecificOrthoToTempMarker: [b'�daí]
+After stage Stage4_0_1_Resolve_CH_Marker: [b'�daí]
+After stage Stage4_1_VocmarkToTempMarker: [b'�daí]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [b'�da&I_ACUTE_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [b'�da&I_ACUTE_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [b'�daiː]
+  S4.5 START: current_word_phonetic =	b'�daiː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	b'�daiː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	b'�daiː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [b'�daiː]
+After stage Stage4_6_UnstressedVowelReduction: [b'�daiː]
+After stage StrongSonorantsEpenthesis: [b'�daiː]
+After stage Diacritics: [b'�d̪a�]
+After stage FinalCleanup: [b'�d̪a�]
+bádaí         -> [b'�d̪a�]
+
+--- Transcribing: [capaillí] ---
+After stage PreProcess: [capaillí]
+After stage MarkDigraphsAndVocalisationTriggers: [capai_LL_í]
+After stage ConsonantResolution: [kapaiL'L_í]
+After stage Stage4_0_SpecificOrthoToTempMarker: [kapaiL'L_í]
+After stage Stage4_0_1_Resolve_CH_Marker: [kapaiL'L_í]
+After stage Stage4_1_VocmarkToTempMarker: [kapaiL'L_í]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [kapaiL'L_&I_ACUTE_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [kap&AI_DIPH&ACUTE_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [kapaiI_DIPH&ACUTE_LONG&]
+  S4.5 START: current_word_phonetic =	kapaiI_DIPH&ACUTE_LONG&
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	kapaiI_DIPH&ACUTE_LONG&
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	kapaiI_DIPH&ACUTE_LONG&
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [kapaiI_DIPH&ACUTE_LONG&]
+After stage Stage4_6_UnstressedVowelReduction: [kapaiI_DIPH&ACUTE_LONG&]
+After stage StrongSonorantsEpenthesis: [kapaiI_DIPH&ACUTE_LONG&]
+After stage Diacritics: [kapaiI_DIPH&ACUTE_lˠO&]
+After stage FinalCleanup: [kapaiI_DIPH&ACUTE_lˠO&]
+capaillí       -> [kapaiI_DIPH&ACUTE_lˠO&]
+
+--- Transcribing: [foclaí] ---
+After stage PreProcess: [foclaí]
+After stage MarkDigraphsAndVocalisationTriggers: [foclaí]
+After stage ConsonantResolution: [foklaí]
+After stage Stage4_0_SpecificOrthoToTempMarker: [foklaí]
+After stage Stage4_0_1_Resolve_CH_Marker: [foklaí]
+After stage Stage4_1_VocmarkToTempMarker: [foklaí]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [fokla&I_ACUTE_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [fokla&I_ACUTE_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [foklaiː]
+  S4.5 START: current_word_phonetic =	foklaiː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	foklaiː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	foklaiː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [foklaiː]
+After stage Stage4_6_UnstressedVowelReduction: [foklaiː]
+After stage StrongSonorantsEpenthesis: [foklaiː]
+After stage Diacritics: [fokl̪a�]
+After stage FinalCleanup: [fokl̪a�]
+foclaí         -> [fokl̪a�]
+
+--- Transcribing: [brógaí] ---
+After stage PreProcess: [brógaí]
+After stage MarkDigraphsAndVocalisationTriggers: [brógaí]
+After stage ConsonantResolution: [b'ógaí]
+After stage Stage4_0_SpecificOrthoToTempMarker: [b'ógaí]
+After stage Stage4_0_1_Resolve_CH_Marker: [b'ógaí]
+After stage Stage4_1_VocmarkToTempMarker: [b'ógaí]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [b'&O_ACUTE_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [b'&O_ACUTE_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [b'oː]
+  S4.5 START: current_word_phonetic =	b'oː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	b'oː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	b'oː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [b'oː]
+After stage Stage4_6_UnstressedVowelReduction: [b'oː]
+After stage StrongSonorantsEpenthesis: [b'oː]
+After stage Diacritics: [b'oː]
+After stage FinalCleanup: [b'oː]
+brógaí        -> [b'oː]
+
+--- Transcribing: [dearmad] ---
+After stage PreProcess: [dearmad]
+After stage MarkDigraphsAndVocalisationTriggers: [dearmad]
+After stage ConsonantResolution: [d'armad]
+After stage Stage4_0_SpecificOrthoToTempMarker: [d'armad]
+After stage Stage4_0_1_Resolve_CH_Marker: [d'armad]
+After stage Stage4_1_VocmarkToTempMarker: [d'armad]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [d'armad]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [d'armad]
+After stage Stage4_4_ResolveTempVowelMarkers: [d'armad]
+  S4.5 START: current_word_phonetic =	d'armad
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	d'armad
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	d'armad
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [d'armad]
+After stage Stage4_6_UnstressedVowelReduction: [d'armad]
+After stage StrongSonorantsEpenthesis: [d'armad]
+After stage Diacritics: [d'armad̪]
+After stage FinalCleanup: [d'armad̪]
+dearmad         -> [d'armad̪]
+
+--- Transcribing: [seomraí] ---
+After stage PreProcess: [seomraí]
+After stage MarkDigraphsAndVocalisationTriggers: [seomraí]
+After stage ConsonantResolution: [s'omraí]
+After stage Stage4_0_SpecificOrthoToTempMarker: [s'omraí]
+After stage Stage4_0_1_Resolve_CH_Marker: [s'omraí]
+After stage Stage4_1_VocmarkToTempMarker: [s'omraí]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [s'omra&I_ACUTE_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [s'omra&I_ACUTE_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [s'omraiː]
+  S4.5 START: current_word_phonetic =	s'omraiː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	s'omraiː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	s'omraiː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [s'omraiː]
+After stage Stage4_6_UnstressedVowelReduction: [s'omraiː]
+After stage StrongSonorantsEpenthesis: [s'omraiː]
+After stage Diacritics: [s'omraiː]
+After stage FinalCleanup: [s'omraiː]
+seomraí        -> [s'omraiː]
+
+--- Transcribing: [doras] ---
+After stage PreProcess: [doras]
+After stage MarkDigraphsAndVocalisationTriggers: [doras]
+After stage ConsonantResolution: [doras]
+After stage Stage4_0_SpecificOrthoToTempMarker: [doras]
+After stage Stage4_0_1_Resolve_CH_Marker: [doras]
+After stage Stage4_1_VocmarkToTempMarker: [doras]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [doras]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [doras]
+After stage Stage4_4_ResolveTempVowelMarkers: [doras]
+  S4.5 START: current_word_phonetic =	doras
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	doras
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	doras
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [doras]
+After stage Stage4_6_UnstressedVowelReduction: [doras]
+After stage StrongSonorantsEpenthesis: [doras]
+After stage Diacritics: [d̪os]
+After stage FinalCleanup: [d̪os]
+doras           -> [d̪os]
+
+--- Transcribing: [amhrán] ---
+After stage PreProcess: [ˈamhrán]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈ_VOCMARK_AMH_rán]
+After stage ConsonantResolution: [ˈ_VOCMARK_AMH_r'�n]
+After stage Stage4_0_SpecificOrthoToTempMarker: [ˈ_VOCMARK_AMH_r'�n]
+After stage Stage4_0_1_Resolve_CH_Marker: [ˈ_VOCMARK_AMH_r'�n]
+After stage Stage4_1_VocmarkToTempMarker: [ˈ&VOC_ABH_AMH&r'�n]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [ˈ&VOC_ABH_AMH&r'�n]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [ˈ&VOC_ABH_AMH&r'�n]
+After stage Stage4_4_ResolveTempVowelMarkers: [ˈəuC_ABH_AMH&r'�n]
+  S4.5 START: current_word_phonetic =	ˈəuC_ABH_AMH&r'�n
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ˈəuC_ABH_AMH&r'�n
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ˈəuC_ABH_AMH&r'�n
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ˈəuC_ABH_AMH&r'�n]
+After stage Stage4_6_UnstressedVowelReduction: [ˈəuC_ABH_AMH&r'�n]
+After stage StrongSonorantsEpenthesis: [ˈəuC_ABH_AMH&r'�n]
+After stage Diacritics: [ˈəuC_ABH_AmˠH'�n̪]
+After stage FinalCleanup: [ˈəuC_ABH_AmˠH'�n̪]
+amhrán         -> [ˈəuC_ABH_AmˠH'�n̪]
+
+--- Transcribing: [banríon] ---
+After stage PreProcess: [banríon]
+After stage MarkDigraphsAndVocalisationTriggers: [banríon]
+After stage ConsonantResolution: [banr'�on]
+After stage Stage4_0_SpecificOrthoToTempMarker: [banr'�on]
+After stage Stage4_0_1_Resolve_CH_Marker: [banr'�on]
+After stage Stage4_1_VocmarkToTempMarker: [banr'�on]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [banr'�on]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [banr'�on]
+After stage Stage4_4_ResolveTempVowelMarkers: [banr'�on]
+  S4.5 START: current_word_phonetic =	banr'�on
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	banr'�on
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	banr'�on
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [banr'�on]
+After stage Stage4_6_UnstressedVowelReduction: [banr'�on]
+After stage StrongSonorantsEpenthesis: [banr'�on]
+After stage Diacritics: [ban̪ron̪]
+After stage FinalCleanup: [ban̪ron̪]
+Banríon        -> [ban̪ron̪]
+
+--- Transcribing: [dearcadh] ---
+After stage PreProcess: [dearcadh]
+After stage MarkDigraphsAndVocalisationTriggers: [dearca_DH_]
+After stage ConsonantResolution: [d'arkaɣ]
+After stage Stage4_0_SpecificOrthoToTempMarker: [d'arkaɣ]
+After stage Stage4_0_1_Resolve_CH_Marker: [d'arkaɣ]
+After stage Stage4_1_VocmarkToTempMarker: [d'arkaɣ]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [d'arkaɣ]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [d'arkaɣ]
+After stage Stage4_4_ResolveTempVowelMarkers: [d'arkaɣ]
+  S4.5 START: current_word_phonetic =	d'arkaɣ
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	d'arkaɣ
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	d'arkaɣ
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [d'arkaɣ]
+After stage Stage4_6_UnstressedVowelReduction: [d'arkaɣ]
+After stage StrongSonorantsEpenthesis: [d'arkaɣ]
+After stage Diacritics: [d'arkaɣ]
+After stage FinalCleanup: [d'arkaɣ]
+dearcadh        -> [d'arkaɣ]
+
+--- Transcribing: [dearfa] ---
+After stage PreProcess: [dearfa]
+After stage MarkDigraphsAndVocalisationTriggers: [dearfa]
+After stage ConsonantResolution: [d'arfa]
+After stage Stage4_0_SpecificOrthoToTempMarker: [d'arfa]
+After stage Stage4_0_1_Resolve_CH_Marker: [d'arfa]
+After stage Stage4_1_VocmarkToTempMarker: [d'arfa]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [d'arfa]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [d'arfa]
+After stage Stage4_4_ResolveTempVowelMarkers: [d'arfa]
+  S4.5 START: current_word_phonetic =	d'arfa
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	d'arfa
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	d'arfa
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [d'arfa]
+After stage Stage4_6_UnstressedVowelReduction: [d'arfə]
+After stage StrongSonorantsEpenthesis: [d'arfə]
+After stage Diacritics: [d'arfə]
+After stage FinalCleanup: [d'arfə]
+dearfa          -> [d'arfə]
+
+--- Transcribing: [mí-ádh] ---
+After stage PreProcess: [mí-ádh]
+After stage MarkDigraphsAndVocalisationTriggers: [mí-á_DH_]
+After stage ConsonantResolution: [m'�-áɣ]
+After stage Stage4_0_SpecificOrthoToTempMarker: [m'�-áɣ]
+After stage Stage4_0_1_Resolve_CH_Marker: [m'�-áɣ]
+After stage Stage4_1_VocmarkToTempMarker: [m'�-áɣ]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [m'�-&A_ACUTE_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [m'�-&A_ACUTE_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [m'�-ɑː]
+  S4.5 START: current_word_phonetic =	m'�-ɑː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	m'�-ɑː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	m'�-ɑː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [m'�-ɑː]
+After stage Stage4_6_UnstressedVowelReduction: [m'�-ɑː]
+After stage StrongSonorantsEpenthesis: [m'�-ɑː]
+After stage Diacritics: [m'�-ɑː]
+After stage FinalCleanup: [m'�-ɑː]
+mí-ádh        -> [m'�-ɑː]
+
+--- Transcribing: [droch-obair] ---
+After stage PreProcess: [droch-obair]
+After stage MarkDigraphsAndVocalisationTriggers: [dro_CH_-obair]
+After stage ConsonantResolution: [dro_CH_-obair']
+After stage Stage4_0_SpecificOrthoToTempMarker: [dro_CH_-obair']
+After stage Stage4_0_1_Resolve_CH_Marker: [droxCH_-obair']
+After stage Stage4_1_VocmarkToTempMarker: [droxCH_-obair']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [droxCH_-obair']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [droxCH_-ob&AI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [droxCH_-obai]
+  S4.5 START: current_word_phonetic =	droxCH_-obai
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	droxCH_-obai
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	droxCH_-obai
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [droxCH_-obai]
+After stage Stage4_6_UnstressedVowelReduction: [droxCH_-obai]
+After stage StrongSonorantsEpenthesis: [droxCH_-obai]
+After stage Diacritics: [d̪rCH_-obai]
+After stage FinalCleanup: [d̪rCH_-obai]
+droch-obair     -> [d̪rCH_-obai]
+
+--- Transcribing: [seanbhean] ---
+After stage PreProcess: [seanbhean]
+After stage MarkDigraphsAndVocalisationTriggers: [sean_BH_ean]
+After stage ConsonantResolution: [s'anv'H_ean]
+After stage Stage4_0_SpecificOrthoToTempMarker: [s'anv'H_ean]
+After stage Stage4_0_1_Resolve_CH_Marker: [s'anv'H_ean]
+After stage Stage4_1_VocmarkToTempMarker: [s'anv'H_ean]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [s'anv'H_ean]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [s'anv'H_ean]
+After stage Stage4_4_ResolveTempVowelMarkers: [s'anv'H_ean]
+  S4.5 START: current_word_phonetic =	s'anv'H_ean
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	s'anv'H_ean
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	s'anv'H_ean
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [s'anv'H_ean]
+After stage Stage4_6_UnstressedVowelReduction: [s'anv'H_eən]
+After stage StrongSonorantsEpenthesis: [s'anv'H_eən]
+After stage Diacritics: [s'an̪v_eən̪]
+After stage FinalCleanup: [s'an̪v_eən̪]
+seanbhean       -> [s'an̪v_eən̪]
+
+--- Transcribing: [fíoruisce] ---
+After stage PreProcess: [fíoruisce]
+After stage MarkDigraphsAndVocalisationTriggers: [fíoruisce]
+After stage ConsonantResolution: [f'�oruis'e]
+After stage Stage4_0_SpecificOrthoToTempMarker: [f'�oruis'e]
+After stage Stage4_0_1_Resolve_CH_Marker: [f'�oruis'e]
+After stage Stage4_1_VocmarkToTempMarker: [f'�oruis'e]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [f'�oruis'e]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [f'�or&UI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [f'�ori]
+  S4.5 START: current_word_phonetic =	f'�ori
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	f'�ori
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	f'�ori
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [f'�ori]
+After stage Stage4_6_UnstressedVowelReduction: [f'�ori]
+After stage StrongSonorantsEpenthesis: [f'�ori]
+After stage Diacritics: [f'�ori]
+After stage FinalCleanup: [f'�ori]
+fíoruisce      -> [f'�ori]
+
+--- Transcribing: [athchúrsáil] ---
+After stage PreProcess: [ˈathchúrsáil]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈa_TH__CH_úrsáil]
+After stage ConsonantResolution: [ˈahTH__CH_úr'áil]
+After stage Stage4_0_SpecificOrthoToTempMarker: [ˈahTH__CH_úr'áil]
+After stage Stage4_0_1_Resolve_CH_Marker: [ˈahTH_çH_úr'áil]
+After stage Stage4_1_VocmarkToTempMarker: [ˈahTH_çH_úr'áil]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [ˈahTH_çH_&U_ACUTE_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [ˈahTH_çH_&U_ACUTE_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [ˈahTH_çH_uː]
+  S4.5 START: current_word_phonetic =	ˈahTH_çH_uː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ˈahTH_çH_uː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ˈahTH_çH_uː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ˈahTH_çH_uː]
+After stage Stage4_6_UnstressedVowelReduction: [ˈahTH_çH_uː]
+After stage StrongSonorantsEpenthesis: [ˈahTH_çH_uː]
+After stage Diacritics: [ˈahTH_çH_uː]
+After stage FinalCleanup: [ˈahTH_çH_uː]
+athchúrsáil   -> [ˈahTH_çH_uː]
+
+--- Transcribing: [an-fear] ---
+After stage PreProcess: [ˈan-fear]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈan-fear]
+After stage ConsonantResolution: [ˈan-f'ar']
+After stage Stage4_0_SpecificOrthoToTempMarker: [ˈan-f'ar']
+After stage Stage4_0_1_Resolve_CH_Marker: [ˈan-f'ar']
+After stage Stage4_1_VocmarkToTempMarker: [ˈan-f'ar']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [ˈan-f'ar']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [ˈan-f'ar']
+After stage Stage4_4_ResolveTempVowelMarkers: [ˈan-f'ar']
+  S4.5 START: current_word_phonetic =	ˈan-f'ar'
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ˈan-f'ar'
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ˈan-f'ar'
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ˈan-f'ar']
+After stage Stage4_6_UnstressedVowelReduction: [ˈan-f'ar']
+After stage StrongSonorantsEpenthesis: [ˈan-f'ar']
+After stage Diacritics: [ˈan̪-ar']
+After stage FinalCleanup: [ˈan̪-ar']
+an-fear         -> [ˈan̪-ar']
+
+--- Transcribing: [an-oíche] ---
+After stage PreProcess: [ˈan-oíche]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈan-oí_CH_e]
+After stage ConsonantResolution: [ˈan-oí_CH_e]
+After stage Stage4_0_SpecificOrthoToTempMarker: [ˈan-oí_CH_e]
+After stage Stage4_0_1_Resolve_CH_Marker: [ˈan-oíçH_e]
+After stage Stage4_1_VocmarkToTempMarker: [ˈan-oíçH_e]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [ˈan-&AO_OI_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [ˈan-&AO_OI_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [ˈan-ɨː]
+  S4.5 START: current_word_phonetic =	ˈan-ɨː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ˈan-ɨː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ˈan-ɨː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ˈan-ɨː]
+After stage Stage4_6_UnstressedVowelReduction: [ˈan-ɨː]
+After stage StrongSonorantsEpenthesis: [ˈan-ɨː]
+After stage Diacritics: [ˈan̪-ː]
+After stage FinalCleanup: [ˈan̪-ː]
+an-oíche       -> [ˈan̪-ː]
+
+--- Transcribing: [fearg] ---
+After stage PreProcess: [fearg]
+After stage MarkDigraphsAndVocalisationTriggers: [fearg]
+After stage ConsonantResolution: [f'ar']
+After stage Stage4_0_SpecificOrthoToTempMarker: [f'ar']
+After stage Stage4_0_1_Resolve_CH_Marker: [f'ar']
+After stage Stage4_1_VocmarkToTempMarker: [f'ar']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [f'ar']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [f'ar']
+After stage Stage4_4_ResolveTempVowelMarkers: [f'ar']
+  S4.5 START: current_word_phonetic =	f'ar'
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	f'ar'
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	f'ar'
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [f'ar']
+After stage Stage4_6_UnstressedVowelReduction: [f'ar']
+After stage StrongSonorantsEpenthesis: [f'ar']
+After stage Diacritics: [f'ar']
+After stage FinalCleanup: [f'ar']
+fearg           -> [f'ar']
+
+--- Transcribing: [beart] ---
+After stage PreProcess: [beart]
+After stage MarkDigraphsAndVocalisationTriggers: [beart]
+After stage ConsonantResolution: [b'ar']
+After stage Stage4_0_SpecificOrthoToTempMarker: [b'ar']
+After stage Stage4_0_1_Resolve_CH_Marker: [b'ar']
+After stage Stage4_1_VocmarkToTempMarker: [b'ar']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [b'ar']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [b'ar']
+After stage Stage4_4_ResolveTempVowelMarkers: [b'ar']
+  S4.5 START: current_word_phonetic =	b'ar'
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	b'ar'
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	b'ar'
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [b'ar']
+After stage Stage4_6_UnstressedVowelReduction: [b'ar']
+After stage StrongSonorantsEpenthesis: [b'ar']
+After stage Diacritics: [b'ar']
+After stage FinalCleanup: [b'ar']
+beart           -> [b'ar']
+
+--- Transcribing: [bean] ---
+After stage PreProcess: [bean]
+After stage MarkDigraphsAndVocalisationTriggers: [bean]
+After stage ConsonantResolution: [b'an]
+After stage Stage4_0_SpecificOrthoToTempMarker: [b'an]
+After stage Stage4_0_1_Resolve_CH_Marker: [b'an]
+After stage Stage4_1_VocmarkToTempMarker: [b'an]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [b'an]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [b'an]
+After stage Stage4_4_ResolveTempVowelMarkers: [b'an]
+  S4.5 START: current_word_phonetic =	b'an
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	b'an
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	b'an
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [b'an]
+After stage Stage4_6_UnstressedVowelReduction: [b'ən]
+After stage StrongSonorantsEpenthesis: [b'ən]
+After stage Diacritics: [b'ən̪]
+After stage FinalCleanup: [b'ən̪]
+bean            -> [b'ən̪]
+
+--- Transcribing: [geal] ---
+After stage PreProcess: [geal]
+After stage MarkDigraphsAndVocalisationTriggers: [geal]
+After stage ConsonantResolution: [g'al]
+After stage Stage4_0_SpecificOrthoToTempMarker: [g'al]
+After stage Stage4_0_1_Resolve_CH_Marker: [g'al]
+After stage Stage4_1_VocmarkToTempMarker: [g'al]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [g'al]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [g'al]
+After stage Stage4_4_ResolveTempVowelMarkers: [g'al]
+  S4.5 START: current_word_phonetic =	g'al
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	g'al
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	g'al
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [g'al]
+After stage Stage4_6_UnstressedVowelReduction: [g'al]
+After stage StrongSonorantsEpenthesis: [g'al]
+After stage Diacritics: [g'al̪]
+After stage FinalCleanup: [g'al̪]
+geal            -> [g'al̪]
+
+--- Transcribing: [eagla] ---
+After stage PreProcess: [ˈeagla]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈeagla]
+After stage ConsonantResolution: [ˈeagla]
+After stage Stage4_0_SpecificOrthoToTempMarker: [ˈeagla]
+After stage Stage4_0_1_Resolve_CH_Marker: [ˈeagla]
+After stage Stage4_1_VocmarkToTempMarker: [ˈeagla]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [ˈeagla]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [ˈeagla]
+After stage Stage4_4_ResolveTempVowelMarkers: [ˈeagla]
+  S4.5 START: current_word_phonetic =	ˈeagla
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ˈeagla
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ˈeagla
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ˈeagla]
+After stage Stage4_6_UnstressedVowelReduction: [ˈeaglə]
+After stage StrongSonorantsEpenthesis: [ˈeaglə]
+After stage Diacritics: [ˈeagl̪�]
+After stage FinalCleanup: [ˈeagl̪�]
+eagla           -> [ˈeagl̪�]
+
+--- Transcribing: [muid] ---
+After stage PreProcess: [muid]
+After stage MarkDigraphsAndVocalisationTriggers: [muid]
+After stage ConsonantResolution: [muid']
+After stage Stage4_0_SpecificOrthoToTempMarker: [muid']
+After stage Stage4_0_1_Resolve_CH_Marker: [muid']
+After stage Stage4_1_VocmarkToTempMarker: [muid']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [muid']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [m&UI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [mi]
+  S4.5 START: current_word_phonetic =	mi
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	mi
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	mi
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [mi]
+After stage Stage4_6_UnstressedVowelReduction: [mi]
+After stage StrongSonorantsEpenthesis: [mi]
+After stage Diacritics: [mi]
+After stage FinalCleanup: [mi]
+muid            -> [mi]
+
+--- Transcribing: [duit] ---
+After stage PreProcess: [duit]
+After stage MarkDigraphsAndVocalisationTriggers: [duit]
+After stage ConsonantResolution: [duit']
+After stage Stage4_0_SpecificOrthoToTempMarker: [duit']
+After stage Stage4_0_1_Resolve_CH_Marker: [duit']
+After stage Stage4_1_VocmarkToTempMarker: [duit']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [duit']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [d&UI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [di]
+  S4.5 START: current_word_phonetic =	di
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	di
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	di
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [di]
+After stage Stage4_6_UnstressedVowelReduction: [di]
+After stage StrongSonorantsEpenthesis: [di]
+After stage Diacritics: [d̪i]
+After stage FinalCleanup: [d̪i]
+duit            -> [d̪i]
+
+--- Transcribing: [fuil] ---
+After stage PreProcess: [fuil]
+After stage MarkDigraphsAndVocalisationTriggers: [fuil]
+After stage ConsonantResolution: [fuil]
+After stage Stage4_0_SpecificOrthoToTempMarker: [fuil]
+After stage Stage4_0_1_Resolve_CH_Marker: [fuil]
+After stage Stage4_1_VocmarkToTempMarker: [fuil]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [fuil]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [f&UI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [fi]
+  S4.5 START: current_word_phonetic =	fi
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	fi
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	fi
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [fi]
+After stage Stage4_6_UnstressedVowelReduction: [fi]
+After stage StrongSonorantsEpenthesis: [fi]
+After stage Diacritics: [fi]
+After stage FinalCleanup: [fi]
+fuil            -> [fi]
+
+--- Transcribing: [goil] ---
+After stage PreProcess: [goil]
+After stage MarkDigraphsAndVocalisationTriggers: [goil]
+After stage ConsonantResolution: [goil]
+After stage Stage4_0_SpecificOrthoToTempMarker: [goil]
+After stage Stage4_0_1_Resolve_CH_Marker: [goil]
+After stage Stage4_1_VocmarkToTempMarker: [goil]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [goil]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [g&OI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [gɔ]
+  S4.5 START: current_word_phonetic =	gɔ
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	gɔ
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	gɔ
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [gɔ]
+After stage Stage4_6_UnstressedVowelReduction: [g�ə]
+After stage StrongSonorantsEpenthesis: [g�ə]
+After stage Diacritics: [g�ə]
+After stage FinalCleanup: [g�ə]
+goil            -> [g�ə]
+
+--- Transcribing: [buil] ---
+After stage PreProcess: [buil]
+After stage MarkDigraphsAndVocalisationTriggers: [buil]
+After stage ConsonantResolution: [buil]
+After stage Stage4_0_SpecificOrthoToTempMarker: [buil]
+After stage Stage4_0_1_Resolve_CH_Marker: [buil]
+After stage Stage4_1_VocmarkToTempMarker: [buil]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [buil]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [b&UI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [bi]
+  S4.5 START: current_word_phonetic =	bi
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	bi
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	bi
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [bi]
+After stage Stage4_6_UnstressedVowelReduction: [bi]
+After stage StrongSonorantsEpenthesis: [bi]
+After stage Diacritics: [bi]
+After stage FinalCleanup: [bi]
+buil            -> [bi]
+
+--- Transcribing: [cuir] ---
+After stage PreProcess: [cuir]
+After stage MarkDigraphsAndVocalisationTriggers: [cuir]
+After stage ConsonantResolution: [kuir']
+After stage Stage4_0_SpecificOrthoToTempMarker: [kuir']
+After stage Stage4_0_1_Resolve_CH_Marker: [kuir']
+After stage Stage4_1_VocmarkToTempMarker: [kuir']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [kuir']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [k&UI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [ki]
+  S4.5 START: current_word_phonetic =	ki
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ki
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ki
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ki]
+After stage Stage4_6_UnstressedVowelReduction: [ki]
+After stage StrongSonorantsEpenthesis: [ki]
+After stage Diacritics: [ki]
+After stage FinalCleanup: [ki]
+cuir            -> [ki]
+
+--- Transcribing: [druid] ---
+After stage PreProcess: [druid]
+After stage MarkDigraphsAndVocalisationTriggers: [druid]
+After stage ConsonantResolution: [druid']
+After stage Stage4_0_SpecificOrthoToTempMarker: [druid']
+After stage Stage4_0_1_Resolve_CH_Marker: [druid']
+After stage Stage4_1_VocmarkToTempMarker: [druid']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [druid']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [dr&UI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [dri]
+  S4.5 START: current_word_phonetic =	dri
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	dri
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	dri
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [dri]
+After stage Stage4_6_UnstressedVowelReduction: [dri]
+After stage StrongSonorantsEpenthesis: [dri]
+After stage Diacritics: [d̪r]
+After stage FinalCleanup: [d̪r]
+druid           -> [d̪r]
+
+--- Transcribing: [luibh] ---
+After stage PreProcess: [luibh]
+After stage MarkDigraphsAndVocalisationTriggers: [lui_BH_]
+After stage ConsonantResolution: [luiv']
+After stage Stage4_0_SpecificOrthoToTempMarker: [luiv']
+After stage Stage4_0_1_Resolve_CH_Marker: [luiv']
+After stage Stage4_1_VocmarkToTempMarker: [luiv']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [luiv']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [l&UI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [li]
+  S4.5 START: current_word_phonetic =	li
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	li
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	li
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [li]
+After stage Stage4_6_UnstressedVowelReduction: [li]
+After stage StrongSonorantsEpenthesis: [li]
+After stage Diacritics: [l̪i]
+After stage FinalCleanup: [l̪i]
+luibh           -> [l̪i]
+
+--- Transcribing: [ceist] ---
+After stage PreProcess: [ceist]
+After stage MarkDigraphsAndVocalisationTriggers: [ceist]
+After stage ConsonantResolution: [k'is']
+After stage Stage4_0_SpecificOrthoToTempMarker: [k'is']
+After stage Stage4_0_1_Resolve_CH_Marker: [k'is']
+After stage Stage4_1_VocmarkToTempMarker: [k'is']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [k'is']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [k'is']
+After stage Stage4_4_ResolveTempVowelMarkers: [k'is']
+  S4.5 START: current_word_phonetic =	k'is'
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	k'is'
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	k'is'
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [k'is']
+After stage Stage4_6_UnstressedVowelReduction: [k'is']
+After stage StrongSonorantsEpenthesis: [k'is']
+After stage Diacritics: [k'is']
+After stage FinalCleanup: [k'is']
+ceist           -> [k'is']
+
+--- Transcribing: [ocht] ---
+After stage PreProcess: [ˈocht]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈo_CH_t]
+After stage ConsonantResolution: [ˈo_CH_t]
+After stage Stage4_0_SpecificOrthoToTempMarker: [ˈo_CH_t]
+After stage Stage4_0_1_Resolve_CH_Marker: [ˈoxCH_t]
+After stage Stage4_1_VocmarkToTempMarker: [ˈoxCH_t]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [ˈoxCH_t]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [ˈoxCH_t]
+After stage Stage4_4_ResolveTempVowelMarkers: [ˈoxCH_t]
+  S4.5 START: current_word_phonetic =	ˈoxCH_t
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ˈoxCH_t
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ˈoxCH_t
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ˈoxCH_t]
+After stage Stage4_6_UnstressedVowelReduction: [ˈoxCH_t]
+After stage StrongSonorantsEpenthesis: [ˈoxCH_t]
+After stage Diacritics: [ˈoxCH_t̪]
+After stage FinalCleanup: [ˈoxCH_t̪]
+ocht            -> [ˈoxCH_t̪]
+
+--- Transcribing: [páiste] ---
+After stage PreProcess: [páiste]
+After stage MarkDigraphsAndVocalisationTriggers: [páiste]
+After stage ConsonantResolution: [p'�is'e]
+After stage Stage4_0_SpecificOrthoToTempMarker: [p'�is'e]
+After stage Stage4_0_1_Resolve_CH_Marker: [p'�is'e]
+After stage Stage4_1_VocmarkToTempMarker: [p'�is'e]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [p'�is'e]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [p'�is'e]
+After stage Stage4_4_ResolveTempVowelMarkers: [p'�is'e]
+  S4.5 START: current_word_phonetic =	p'�is'e
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	p'�is'e
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	p'�is'e
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [p'�is'e]
+After stage Stage4_6_UnstressedVowelReduction: [p'�is'i]
+After stage StrongSonorantsEpenthesis: [p'�is'i]
+After stage Diacritics: [p'�is'i]
+After stage FinalCleanup: [p'�is'i]
+páiste         -> [p'�is'i]
+
+--- Transcribing: [sparán] ---
+After stage PreProcess: [sparán]
+After stage MarkDigraphsAndVocalisationTriggers: [sparán]
+After stage ConsonantResolution: [spar'�n]
+After stage Stage4_0_SpecificOrthoToTempMarker: [spar'�n]
+After stage Stage4_0_1_Resolve_CH_Marker: [spar'�n]
+After stage Stage4_1_VocmarkToTempMarker: [spar'�n]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [spar'�n]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [spar'�n]
+After stage Stage4_4_ResolveTempVowelMarkers: [spar'�n]
+  S4.5 START: current_word_phonetic =	spar'�n
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	spar'�n
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	spar'�n
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [spar'�n]
+After stage Stage4_6_UnstressedVowelReduction: [spar'�n]
+After stage StrongSonorantsEpenthesis: [spar'�n]
+After stage Diacritics: [spar'�n̪]
+After stage FinalCleanup: [spar'�n̪]
+sparán         -> [spar'�n̪]
+
+--- Transcribing: [scéal] ---
+After stage PreProcess: [scéal]
+After stage MarkDigraphsAndVocalisationTriggers: [scéal]
+After stage ConsonantResolution: [s'éal]
+After stage Stage4_0_SpecificOrthoToTempMarker: [s'éal]
+After stage Stage4_0_1_Resolve_CH_Marker: [s'éal]
+After stage Stage4_1_VocmarkToTempMarker: [s'éal]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [s'&E_ACUTE_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [s'&E_ACUTE_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [s'eː]
+  S4.5 START: current_word_phonetic =	s'eː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	s'eː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	s'eː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [s'eː]
+After stage Stage4_6_UnstressedVowelReduction: [s'eː]
+After stage StrongSonorantsEpenthesis: [s'eː]
+After stage Diacritics: [s'eː]
+After stage FinalCleanup: [s'eː]
+scéal          -> [s'eː]
+
+--- Transcribing: [bláth] ---
+After stage PreProcess: [bláth]
+After stage MarkDigraphsAndVocalisationTriggers: [blá_TH_]
+After stage ConsonantResolution: [b'áh]
+After stage Stage4_0_SpecificOrthoToTempMarker: [b'áh]
+After stage Stage4_0_1_Resolve_CH_Marker: [b'áh]
+After stage Stage4_1_VocmarkToTempMarker: [b'áh]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [b'&A_ACUTE_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [b'&A_ACUTE_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [b'ɑː]
+  S4.5 START: current_word_phonetic =	b'ɑː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	b'ɑː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	b'ɑː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [b'ɑː]
+After stage Stage4_6_UnstressedVowelReduction: [b'ɑː]
+After stage StrongSonorantsEpenthesis: [b'ɑː]
+After stage Diacritics: [b'ɑː]
+After stage FinalCleanup: [b'ɑː]
+bláth          -> [b'ɑː]
+
+--- Transcribing: [cnoc] ---
+After stage PreProcess: [cnoc]
+After stage MarkDigraphsAndVocalisationTriggers: [cnoc]
+After stage ConsonantResolution: [knok]
+After stage Stage4_0_SpecificOrthoToTempMarker: [knok]
+After stage Stage4_0_1_Resolve_CH_Marker: [knok]
+After stage Stage4_1_VocmarkToTempMarker: [knok]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [knok]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [knok]
+After stage Stage4_4_ResolveTempVowelMarkers: [knok]
+  S4.5 START: current_word_phonetic =	knok
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	knok
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	knok
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [knok]
+After stage Stage4_6_UnstressedVowelReduction: [knok]
+After stage StrongSonorantsEpenthesis: [knok]
+After stage Diacritics: [kn̪o]
+After stage FinalCleanup: [kn̪o]
+cnoc            -> [kn̪o]
+
+--- Transcribing: [gnó] ---
+After stage PreProcess: [gnó]
+After stage MarkDigraphsAndVocalisationTriggers: [gnó]
+After stage ConsonantResolution: [g'ó]
+After stage Stage4_0_SpecificOrthoToTempMarker: [g'ó]
+After stage Stage4_0_1_Resolve_CH_Marker: [g'ó]
+After stage Stage4_1_VocmarkToTempMarker: [g'ó]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [g'&O_ACUTE_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [g'&O_ACUTE_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [g'oː]
+  S4.5 START: current_word_phonetic =	g'oː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	g'oː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	g'oː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [g'oː]
+After stage Stage4_6_UnstressedVowelReduction: [g'oː]
+After stage StrongSonorantsEpenthesis: [g'oː]
+After stage Diacritics: [g'oː]
+After stage FinalCleanup: [g'oː]
+gnó            -> [g'oː]
+
+--- Transcribing: [dlí] ---
+After stage PreProcess: [dlí]
+After stage MarkDigraphsAndVocalisationTriggers: [dlí]
+After stage ConsonantResolution: [d'í]
+After stage Stage4_0_SpecificOrthoToTempMarker: [d'í]
+After stage Stage4_0_1_Resolve_CH_Marker: [d'í]
+After stage Stage4_1_VocmarkToTempMarker: [d'í]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [d'&I_ACUTE_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [d'&I_ACUTE_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [d'iː]
+  S4.5 START: current_word_phonetic =	d'iː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	d'iː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	d'iː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [d'iː]
+After stage Stage4_6_UnstressedVowelReduction: [d'iː]
+After stage StrongSonorantsEpenthesis: [d'iː]
+After stage Diacritics: [d'iː]
+After stage FinalCleanup: [d'iː]
+dlí            -> [d'iː]
+
+--- Transcribing: [mná] ---
+After stage PreProcess: [mná]
+After stage MarkDigraphsAndVocalisationTriggers: [mná]
+After stage ConsonantResolution: [m'á]
+After stage Stage4_0_SpecificOrthoToTempMarker: [m'á]
+After stage Stage4_0_1_Resolve_CH_Marker: [m'á]
+After stage Stage4_1_VocmarkToTempMarker: [m'á]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [m'&A_ACUTE_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [m'&A_ACUTE_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [m'ɑː]
+  S4.5 START: current_word_phonetic =	m'ɑː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	m'ɑː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	m'ɑː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [m'ɑː]
+After stage Stage4_6_UnstressedVowelReduction: [m'ɑː]
+After stage StrongSonorantsEpenthesis: [m'ɑː]
+After stage Diacritics: [m'ɑː]
+After stage FinalCleanup: [m'ɑː]
+mná            -> [m'ɑː]
+
+--- Transcribing: [trá] ---
+After stage PreProcess: [trá]
+After stage MarkDigraphsAndVocalisationTriggers: [trá]
+After stage ConsonantResolution: [t'á]
+After stage Stage4_0_SpecificOrthoToTempMarker: [t'á]
+After stage Stage4_0_1_Resolve_CH_Marker: [t'á]
+After stage Stage4_1_VocmarkToTempMarker: [t'á]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [t'&A_ACUTE_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [t'&A_ACUTE_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [t'ɑː]
+  S4.5 START: current_word_phonetic =	t'ɑː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	t'ɑː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	t'ɑː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [t'ɑː]
+After stage Stage4_6_UnstressedVowelReduction: [t'ɑː]
+After stage StrongSonorantsEpenthesis: [t'ɑː]
+After stage Diacritics: [t'ɑː]
+After stage FinalCleanup: [t'ɑː]
+trá            -> [t'ɑː]
+
+--- Transcribing: [uisce] ---
+After stage PreProcess: [ˈuisce]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈuisce]
+After stage ConsonantResolution: [ˈuis'e]
+After stage Stage4_0_SpecificOrthoToTempMarker: [ˈuis'e]
+After stage Stage4_0_1_Resolve_CH_Marker: [ˈuis'e]
+After stage Stage4_1_VocmarkToTempMarker: [ˈuis'e]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [ˈuis'e]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [ˈ&UI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [ˈi]
+  S4.5 START: current_word_phonetic =	ˈi
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ˈi
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ˈi
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ˈi]
+After stage Stage4_6_UnstressedVowelReduction: [ˈi]
+After stage StrongSonorantsEpenthesis: [ˈi]
+After stage Diacritics: [ˈi]
+After stage FinalCleanup: [ˈi]
+uisce           -> [ˈi]
+
+--- Transcribing: [obair] ---
+After stage PreProcess: [ˈobair]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈobair]
+After stage ConsonantResolution: [ˈobair']
+After stage Stage4_0_SpecificOrthoToTempMarker: [ˈobair']
+After stage Stage4_0_1_Resolve_CH_Marker: [ˈobair']
+After stage Stage4_1_VocmarkToTempMarker: [ˈobair']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [ˈobair']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [ˈob&AI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [ˈobai]
+  S4.5 START: current_word_phonetic =	ˈobai
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ˈobai
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ˈobai
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ˈobai]
+After stage Stage4_6_UnstressedVowelReduction: [ˈobai]
+After stage StrongSonorantsEpenthesis: [ˈobai]
+After stage Diacritics: [ˈobai]
+After stage FinalCleanup: [ˈobai]
+obair           -> [ˈobai]
+
+--- Transcribing: [imir] ---
+After stage PreProcess: [ˈimir]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈimir]
+After stage ConsonantResolution: [ˈim'r']
+After stage Stage4_0_SpecificOrthoToTempMarker: [ˈim'r']
+After stage Stage4_0_1_Resolve_CH_Marker: [ˈim'r']
+After stage Stage4_1_VocmarkToTempMarker: [ˈim'r']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [ˈim'r']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [ˈim'r']
+After stage Stage4_4_ResolveTempVowelMarkers: [ˈim'r']
+  S4.5 START: current_word_phonetic =	ˈim'r'
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ˈim'r'
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ˈim'r'
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ˈim'r']
+After stage Stage4_6_UnstressedVowelReduction: [ˈim'r']
+After stage StrongSonorantsEpenthesis: [ˈim'r']
+After stage Diacritics: [ˈim'r']
+After stage FinalCleanup: [ˈim'r']
+imir            -> [ˈim'r']
+
+--- Transcribing: [eolas] ---
+After stage PreProcess: [ˈeolas]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈeolas]
+After stage ConsonantResolution: [ˈeolas]
+After stage Stage4_0_SpecificOrthoToTempMarker: [ˈeolas]
+After stage Stage4_0_1_Resolve_CH_Marker: [ˈeolas]
+After stage Stage4_1_VocmarkToTempMarker: [ˈeolas]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [ˈeolas]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [ˈ&EO_SEQ&]
+After stage Stage4_4_ResolveTempVowelMarkers: [ˈoː]
+  S4.5 START: current_word_phonetic =	ˈoː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ˈoː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ˈoː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ˈoː]
+After stage Stage4_6_UnstressedVowelReduction: [ˈoː]
+After stage StrongSonorantsEpenthesis: [ˈoː]
+After stage Diacritics: [ˈoː]
+After stage FinalCleanup: [ˈoː]
+eolas           -> [ˈoː]
+
+--- Transcribing: [athair] ---
+After stage PreProcess: [ˈathair]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈa_TH_air]
+After stage ConsonantResolution: [ˈahTH_air']
+After stage Stage4_0_SpecificOrthoToTempMarker: [ˈahTH_air']
+After stage Stage4_0_1_Resolve_CH_Marker: [ˈahTH_air']
+After stage Stage4_1_VocmarkToTempMarker: [ˈahTH_air']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [ˈahTH_air']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [ˈahTH_&AI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [ˈahTH_ai]
+  S4.5 START: current_word_phonetic =	ˈahTH_ai
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ˈahTH_ai
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ˈahTH_ai
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ˈahTH_ai]
+After stage Stage4_6_UnstressedVowelReduction: [ˈahTH_ai]
+After stage StrongSonorantsEpenthesis: [ˈahTH_ai]
+After stage Diacritics: [ˈahTH_ai]
+After stage FinalCleanup: [ˈahTH_ai]
+athair          -> [ˈahTH_ai]
+
+--- Transcribing: [máthair] ---
+After stage PreProcess: [máthair]
+After stage MarkDigraphsAndVocalisationTriggers: [má_TH_air]
+After stage ConsonantResolution: [m'�hTH_air']
+After stage Stage4_0_SpecificOrthoToTempMarker: [m'�hTH_air']
+After stage Stage4_0_1_Resolve_CH_Marker: [m'�hTH_air']
+After stage Stage4_1_VocmarkToTempMarker: [m'�hTH_air']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [m'�hTH_air']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [m'�hTH_&AI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [m'�hTH_ai]
+  S4.5 START: current_word_phonetic =	m'�hTH_ai
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	m'�hTH_ai
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	m'�hTH_ai
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [m'�hTH_ai]
+After stage Stage4_6_UnstressedVowelReduction: [m'�hTH_ai]
+After stage StrongSonorantsEpenthesis: [m'�hTH_ai]
+After stage Diacritics: [m'�hTH_ai]
+After stage FinalCleanup: [m'�hTH_ai]
+máthair        -> [m'�hTH_ai]
+
+--- Transcribing: [deirfiúr] ---
+After stage PreProcess: [deirfiúr]
+After stage MarkDigraphsAndVocalisationTriggers: [deirfiúr]
+After stage ConsonantResolution: [d'ir'iúr]
+After stage Stage4_0_SpecificOrthoToTempMarker: [d'ir'iúr]
+After stage Stage4_0_1_Resolve_CH_Marker: [d'ir'iúr]
+After stage Stage4_1_VocmarkToTempMarker: [d'ir'iúr]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [d'ir'&I_ACUTE_U_LONG&]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [d'ir'&I_ACUTE_U_LONG&]
+After stage Stage4_4_ResolveTempVowelMarkers: [d'ir'uː]
+  S4.5 START: current_word_phonetic =	d'ir'uː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	d'ir'uː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	d'ir'uː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [d'ir'uː]
+After stage Stage4_6_UnstressedVowelReduction: [d'ir'uː]
+After stage StrongSonorantsEpenthesis: [d'ir'uː]
+After stage Diacritics: [d'ir'uː]
+After stage FinalCleanup: [d'ir'uː]
+deirfiúr       -> [d'ir'uː]
+
+--- Transcribing: [imirt] ---
+After stage PreProcess: [ˈimirt]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈimirt]
+After stage ConsonantResolution: [ˈim'r']
+After stage Stage4_0_SpecificOrthoToTempMarker: [ˈim'r']
+After stage Stage4_0_1_Resolve_CH_Marker: [ˈim'r']
+After stage Stage4_1_VocmarkToTempMarker: [ˈim'r']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [ˈim'r']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [ˈim'r']
+After stage Stage4_4_ResolveTempVowelMarkers: [ˈim'r']
+  S4.5 START: current_word_phonetic =	ˈim'r'
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ˈim'r'
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ˈim'r'
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ˈim'r']
+After stage Stage4_6_UnstressedVowelReduction: [ˈim'r']
+After stage StrongSonorantsEpenthesis: [ˈim'r']
+After stage Diacritics: [ˈim'r']
+After stage FinalCleanup: [ˈim'r']
+imirt           -> [ˈim'r']
+
+--- Transcribing: [oibre] ---
+After stage PreProcess: [ˈoibre]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈoibre]
+After stage ConsonantResolution: [ˈoib'e]
+After stage Stage4_0_SpecificOrthoToTempMarker: [ˈoib'e]
+After stage Stage4_0_1_Resolve_CH_Marker: [ˈoib'e]
+After stage Stage4_1_VocmarkToTempMarker: [ˈoib'e]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [ˈoib'e]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [ˈ&OI_DIPH&]
+After stage Stage4_4_ResolveTempVowelMarkers: [ˈɔ]
+  S4.5 START: current_word_phonetic =	ˈɔ
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	ˈɔ
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	ˈɔ
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [ˈɔ]
+After stage Stage4_6_UnstressedVowelReduction: [ˈ�ə]
+After stage StrongSonorantsEpenthesis: [ˈ�ə]
+After stage Diacritics: [ˈ�ə]
+After stage FinalCleanup: [ˈ�ə]
+oibre           -> [ˈ�ə]
+
+--- Transcribing: [ceacht] ---
+After stage PreProcess: [ceacht]
+After stage MarkDigraphsAndVocalisationTriggers: [cea_CH_t]
+After stage ConsonantResolution: [k'a_CH_t]
+After stage Stage4_0_SpecificOrthoToTempMarker: [k'a_CH_t]
+After stage Stage4_0_1_Resolve_CH_Marker: [k'açH_t]
+After stage Stage4_1_VocmarkToTempMarker: [k'açH_t]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [k'açH_t]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [k'açH_t]
+After stage Stage4_4_ResolveTempVowelMarkers: [k'açH_t]
+  S4.5 START: current_word_phonetic =	k'açH_t
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	k'açH_t
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	k'açH_t
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [k'açH_t]
+After stage Stage4_6_UnstressedVowelReduction: [k'açH_t]
+After stage StrongSonorantsEpenthesis: [k'açH_t]
+After stage Diacritics: [k'açH_t̪]
+After stage FinalCleanup: [k'açH_t̪]
+ceacht          -> [k'açH_t̪]
+
+--- Transcribing: [ceistneoir] ---
+After stage PreProcess: [ceistneoir]
+After stage MarkDigraphsAndVocalisationTriggers: [ceistneoir]
+After stage ConsonantResolution: [k'is'neoir']
+After stage Stage4_0_SpecificOrthoToTempMarker: [k'is'neoir']
+After stage Stage4_0_1_Resolve_CH_Marker: [k'is'neoir']
+After stage Stage4_1_VocmarkToTempMarker: [k'is'neoir']
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [k'is'neoir']
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [k'is'n&EO_SEQ&]
+After stage Stage4_4_ResolveTempVowelMarkers: [k'is'noː]
+  S4.5 START: current_word_phonetic =	k'is'noː
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	k'is'noː
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	k'is'noː
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [k'is'noː]
+After stage Stage4_6_UnstressedVowelReduction: [k'is'noː]
+After stage StrongSonorantsEpenthesis: [k'is'noː]
+After stage Diacritics: [k'is'n̪o]
+After stage FinalCleanup: [k'is'n̪o]
+ceistneoir      -> [k'is'n̪o]
+
+--- Transcribing: [ceistigh] ---
+After stage PreProcess: [ceistigh]
+After stage MarkDigraphsAndVocalisationTriggers: [ceisti_GH_]
+After stage ConsonantResolution: [k'is'ij]
+After stage Stage4_0_SpecificOrthoToTempMarker: [k'is'ij]
+After stage Stage4_0_1_Resolve_CH_Marker: [k'is'ij]
+After stage Stage4_1_VocmarkToTempMarker: [k'is'ij]
+After stage Stage4_2_LongVowelsOrthoToTempMarker: [k'is'ij]
+After stage Stage4_3_DiphthongsOrthoToTempMarker: [k'is'ij]
+After stage Stage4_4_ResolveTempVowelMarkers: [k'is'ij]
+  S4.5 START: current_word_phonetic =	k'is'ij
+    S4.5 Loop: current_pos_in_phonetic_string =	1	Substring from offset:	k'is'ij
+    S4.5 No best_match_s found from current_pos_in_phonetic_string	1	. Appending rest and Breaking loop.
+  S4.5 END: current_word_phonetic after assembly =	k'is'ij
+After stage Stage4_5_ContextualAllophonyOnPhonetic: [k'is'ij]
+After stage Stage4_6_UnstressedVowelReduction: [k'is'ij]
+After stage StrongSonorantsEpenthesis: [k'is'ij]
+After stage Diacritics: [k'is'ij]
+After stage FinalCleanup: [k'is'ij]
+ceistigh        -> [k'is'ij]

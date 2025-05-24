@@ -1,0 +1,27 @@
+﻿CRITICAL: 
+CRITICAL: 
+CRITICAL: 
+CRITICAL: 
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EA_BROAD_PRE_NN&	' matched '	&EA_BROAD_PRE_NN&	' -> '	ɑː	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&VOC_AI_OI_GH_DH&	' matched '	&VOC_AI_OI_GH_DH&	' -> '	ai	'
+CRITICAL: 
+  S4.6PROC DBG (SpecFinal):	ai$	->	iː	Res:	bɑːNiː
+CRITICAL: 
+CRITICAL: 
+  S4.6PROC END: Out=	bɑːNiː
+CRITICAL: 
+CRITICAL: 
+CRITICAL: 
+CRITICAL: 
+CRITICAL: 
+  S4.6PROC END: Out=	baLa
+CRITICAL: 
+CRITICAL: 
+CRITICAL: 
+CRITICAL: 
+CRITICAL: 
+  S4.6PROC END: Out=	leagan
+CRITICAL: 
+CRITICAL: 
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AO_OI_LONG&	' matched '	&AO_OI_LONG&	' -> '	ɨː	'
+CRITICAL: 

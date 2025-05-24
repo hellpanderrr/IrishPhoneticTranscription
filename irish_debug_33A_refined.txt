@@ -1,0 +1,8 @@
+﻿
+--- Running Test Set for Iteration 33A Refined (My Iteration 34A) ---
+
+--- Transcribing: [fhéach] ---
+After stage PreProcess: [fhéach]
+After stage MarkDigraphsAndVocalisationTriggers: [_FH_INITIAL_LENITED_éa_CH_]
+After stage ConsonantResolution: [héa_CH_]
+After stage Stage4_0_SpecificOrthoToTempMarker: [héa_CH_]

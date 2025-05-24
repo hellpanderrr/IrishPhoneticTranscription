@@ -1,0 +1,977 @@
+﻿CRITICAL: S6 DBG: NON_PALATAL_CONSONANT_PATTERN_FOR_DIACRITICS = [kgptdfbmnszrlLNRMçɣŋhwʃɟɾ]
+CRITICAL: 
+--- Running Test Set for Iteration 36U (Corrected Pattern Gen) ---
+CRITICAL: DEBUG: Full PHONETIC_VOWEL_NUCLEUS_STRING_FOR_CAPTURE = ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+CRITICAL: 
+--- Transcribing: [fhéach] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&E_ACUTE_LONG&	' matched '	&E_ACUTE_LONG&	' -> '	eː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	heːax	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	heːax	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	heːax
+CRITICAL: fhéach         -> [heːax]
+CRITICAL: 
+--- Transcribing: [fhág] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&A_ACUTE_LONG&	' matched '	&A_ACUTE_LONG&	' -> '	ɑː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	hɑːg	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	hɑːg	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	hɑːg
+CRITICAL: fhág           -> [hɑːg]
+CRITICAL: 
+--- Transcribing: [fhíor] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&I_ACUTE_LONG&	' matched '	&I_ACUTE_LONG&	' -> '	iː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	hiːor	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	hiːor	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	hiːor
+CRITICAL: fhíor          -> [hiːor]
+CRITICAL: 
+--- Transcribing: [fhostaigh] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&VOC_AI_OI_GH_DH&	' matched '	&VOC_AI_OI_GH_DH&	' -> '	ai	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	hostai	]
+  S4.6PROC DBG (SpecFinal):	ai$	->	iː	Res:	hostiː
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	hostiː	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	hostiː	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	hostiː
+CRITICAL: fhostaigh       -> [hostiː]
+CRITICAL: 
+--- Transcribing: [fhuair] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&UA_DIPH&	' matched '	&UA_DIPH&	' -> '	ua	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	huair	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	huair	]
+  S4.6PROC END: Out=	huair
+CRITICAL: fhuair          -> [huair]
+CRITICAL: 
+--- Transcribing: [scríobh] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&I_ACUTE_LONG&	' matched '	&I_ACUTE_LONG&	' -> '	iː	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&VOC_OBH_OMH&	' matched '	&VOC_OBH_OMH&	' -> '	ou	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	skriːuː	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	2	 but FULL pattern found 0 for [	skriːuː	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	skriːuː
+CRITICAL: scríobh        -> [skriːuː]
+CRITICAL: 
+--- Transcribing: [teach] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EA_BROAD_PRE_CH&	' matched '	&EA_BROAD_PRE_CH&	' -> '	a	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	tax	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	tax	]
+  S4.6PROC END: Out=	tax
+CRITICAL: teach           -> [tax]
+CRITICAL: 
+--- Transcribing: [deartháir] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EA_BROAD_PRE_R&	' matched '	&EA_BROAD_PRE_R&	' -> '	a	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&A_ACUTE_LONG&	' matched '	&A_ACUTE_LONG&	' -> '	ɑː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	dʲarhɑːiɾʲ	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	dʲarhɑːiɾʲ	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	dʲarhɑːiɾʲ
+CRITICAL: deartháir      -> [dʲarhɑːiɾʲ]
+CRITICAL: 
+--- Transcribing: [cat] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	kat	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	kat	]
+  S4.6PROC END: Out=	kat
+CRITICAL: cat             -> [kat]
+CRITICAL: 
+--- Transcribing: [bord] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	bord	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	bord	]
+  S4.6PROC END: Out=	bord
+CRITICAL: bord            -> [bord]
+CRITICAL: 
+--- Transcribing: [ceann] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EA_BROAD_PRE_NN&	' matched '	&EA_BROAD_PRE_NN&	' -> '	ɑː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	kɑːN	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	kɑːN	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	kɑːN
+CRITICAL: ceann           -> [kɑːN]
+CRITICAL: 
+--- Transcribing: [poll] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	poL	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	poL	]
+  S4.6PROC END: Out=	poL
+CRITICAL: poll            -> [poL]
+CRITICAL: 
+--- Transcribing: [balla] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	baLa	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	baLa	]
+  S4.6PROC END: Out=	baLa
+CRITICAL: balla           -> [baLa]
+CRITICAL: 
+--- Transcribing: [leabhar] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&VOC_EABH_AMH&	' matched '	&VOC_EABH_AMH&	' -> '	əu	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ləuar	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	ləuar	]
+  S4.6PROC END: Out=	ləuar
+CRITICAL: leabhar         -> [ləuar]
+CRITICAL: 
+--- Transcribing: [samhradh] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&VOC_ABH_AMH&	' matched '	&VOC_ABH_AMH&	' -> '	əu	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	səuraɣ	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	səuraɣ	]
+  S4.6PROC END: Out=	səuraɣ
+CRITICAL: samhradh        -> [səuraɣ]
+CRITICAL: 
+--- Transcribing: [beannacht] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EA_BROAD_PRE_NN&	' matched '	&EA_BROAD_PRE_NN&	' -> '	ɑː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	bɑːNaxt	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	bɑːNaxt	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	bɑːNaxt
+CRITICAL: beannacht       -> [bɑːNaxt]
+CRITICAL: 
+--- Transcribing: [fonn] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	foN	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	foN	]
+  S4.6PROC END: Out=	foN
+CRITICAL: fonn            -> [foN]
+CRITICAL: 
+--- Transcribing: [leagan] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	leagan	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	leagan	]
+  S4.6PROC END: Out=	leagan
+CRITICAL: leagan          -> [leagan]
+CRITICAL: 
+--- Transcribing: [teanga] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EA_BROAD_PRE_NG&	' matched '	&EA_BROAD_PRE_NG&	' -> '	a	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	taŋa	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	taŋa	]
+  S4.6PROC END: Out=	taŋa
+CRITICAL: teanga          -> [taŋa]
+CRITICAL: 
+--- Transcribing: [seacht] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EA_BROAD_PRE_CH&	' matched '	&EA_BROAD_PRE_CH&	' -> '	a	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	saxt	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	saxt	]
+  S4.6PROC END: Out=	saxt
+CRITICAL: seacht          -> [saxt]
+CRITICAL: 
+--- Transcribing: [aghaidh] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&VOC_AI_OI_GH_DH&	' matched '	&VOC_AI_OI_GH_DH&	' -> '	ai	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈaɣai	]
+  S4.6PROC DBG (SpecFinal):	ai$	->	iː	Res:	ˈaɣiː
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	ˈaɣiː	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	ˈaɣiː	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	ˈaɣiː
+CRITICAL: aghaidh         -> [ˈaɣiː]
+CRITICAL: 
+--- Transcribing: [suidhe] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&VOC_UI_GH_DH&	' matched '	&VOC_UI_GH_DH&	' -> '	iː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	siːe	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	siːe	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	siːe
+CRITICAL: suidhe          -> [siːe]
+CRITICAL: 
+--- Transcribing: [nimhe] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	nʲiv'e	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	nʲiv'e	]
+  S4.6PROC END: Out=	nʲiv'e
+CRITICAL: nimhe           -> [nʲiv'e]
+CRITICAL: 
+--- Transcribing: [bóthar] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&O_ACUTE_LONG&	' matched '	&O_ACUTE_LONG&	' -> '	oː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	boːhar	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	boːhar	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	boːhar
+CRITICAL: bóthar         -> [boːhar]
+CRITICAL: 
+--- Transcribing: [oíche] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AO_OI_LONG&	' matched '	&AO_OI_LONG&	' -> '	ɨː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈiːçe	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	ˈiːçe	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	ˈiːçe
+CRITICAL: oíche          -> [ˈiːçe]
+CRITICAL: 
+--- Transcribing: [fear] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EA_BROAD_PRE_R&	' matched '	&EA_BROAD_PRE_R&	' -> '	a	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	far	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	far	]
+  S4.6PROC END: Out=	far
+CRITICAL: fear            -> [far]
+CRITICAL: 
+--- Transcribing: [glaic] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AI_DIPH&	' matched '	&AI_DIPH&	' -> '	ai	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	glaik	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	glaik	]
+  S4.6PROC END: Out=	glaik
+CRITICAL: glaic           -> [glaik]
+CRITICAL: 
+--- Transcribing: [muc] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	muk	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	muk	]
+  S4.6PROC END: Out=	muk
+CRITICAL: muc             -> [muk]
+CRITICAL: 
+--- Transcribing: [fliuch] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	fliuç	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	fliuç	]
+  S4.6PROC END: Out=	fliuç
+CRITICAL: fliuch          -> [fliuç]
+CRITICAL: 
+--- Transcribing: [fada] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	fada	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	fada	]
+  S4.6PROC END: Out=	fada
+CRITICAL: fada            -> [fada]
+CRITICAL: 
+--- Transcribing: [beag] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	beag	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	beag	]
+  S4.6PROC END: Out=	beag
+CRITICAL: beag            -> [beag]
+CRITICAL: 
+--- Transcribing: [séimhiú] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&E_ACUTE_I_LONG&	' matched '	&E_ACUTE_I_LONG&	' -> '	eː	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&I_ACUTE_U_LONG&	' matched '	&I_ACUTE_U_LONG&	' -> '	uː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	seːv'uː	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	2	 but FULL pattern found 0 for [	seːv'uː	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	seːv'uː
+CRITICAL: séimhiú       -> [seːv'uː]
+CRITICAL: 
+--- Transcribing: [úrú] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&U_ACUTE_LONG&	' matched '	&U_ACUTE_LONG&	' -> '	uː	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&U_ACUTE_LONG&	' matched '	&U_ACUTE_LONG&	' -> '	uː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈuːruː	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	2	 but FULL pattern found 0 for [	ˈuːruː	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	ˈuːruː
+CRITICAL: úrú           -> [ˈuːruː]
+CRITICAL: 
+--- Transcribing: [bacach] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	bakax	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	bakax	]
+  S4.6PROC END: Out=	bakax
+CRITICAL: bacach          -> [bakax]
+CRITICAL: 
+--- Transcribing: [isteach] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EA_BROAD_PRE_CH&	' matched '	&EA_BROAD_PRE_CH&	' -> '	a	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈistax	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	ˈistax	]
+  S4.6PROC END: Out=	ˈistax
+CRITICAL: isteach         -> [ˈistax]
+CRITICAL: 
+--- Transcribing: [baile] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AI_DIPH&	' matched '	&AI_DIPH&	' -> '	ai	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	baile	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	baile	]
+  S4.6PROC END: Out=	baile
+CRITICAL: baile           -> [baile]
+CRITICAL: 
+--- Transcribing: [duine] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&UI_DIPH&	' matched '	&UI_DIPH&	' -> '	i	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	dine	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	dine	]
+  S4.6PROC END: Out=	dine
+CRITICAL: duine           -> [dine]
+CRITICAL: 
+--- Transcribing: [gaeltacht] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AE_SEQ&	' matched '	&AE_SEQ&	' -> '	eː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	geːltaxt	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	geːltaxt	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	geːltaxt
+CRITICAL: Gaeltacht       -> [geːltaxt]
+CRITICAL: 
+--- Transcribing: [conamara] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	konamara	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	konamara	]
+  S4.6PROC END: Out=	konamara
+CRITICAL: Conamara        -> [konamara]
+CRITICAL: 
+--- Transcribing: [gaeilge] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AE_SEQ&	' matched '	&AE_SEQ&	' -> '	eː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	geːilge	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	geːilge	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	geːilge
+CRITICAL: Gaeilge         -> [geːilge]
+CRITICAL: 
+--- Transcribing: [aoibhinn] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AO_OI_LONG&	' matched '	&AO_OI_LONG&	' -> '	ɨː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈɨːiv'iN'	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	ˈɨːiv'iN'	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	ˈɨːiv'iN'
+CRITICAL: aoibhinn        -> [ˈɨːiv'iN']
+CRITICAL: 
+--- Transcribing: [buí] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&I_ACUTE_LONG&	' matched '	&I_ACUTE_LONG&	' -> '	iː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	buiː	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	buiː	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	buiː
+CRITICAL: buí            -> [buiː]
+CRITICAL: 
+--- Transcribing: [caol] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AO_OI_LONG&	' matched '	&AO_OI_LONG&	' -> '	ɨː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	kɨːl	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	kɨːl	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	kɨːl
+CRITICAL: caol            -> [kɨːl]
+CRITICAL: 
+--- Transcribing: [leathan] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	leahan	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	leahan	]
+  S4.6PROC END: Out=	leahan
+CRITICAL: leathan         -> [leahan]
+CRITICAL: 
+--- Transcribing: [drochbhean] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	droçv'ean	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	droçv'ean	]
+  S4.6PROC END: Out=	droçv'ean
+CRITICAL: drochbhean      -> [droçv'ean]
+CRITICAL: 
+--- Transcribing: [an-mhaith] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AI_DIPH&	' matched '	&AI_DIPH&	' -> '	ai	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈan-waih	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	ˈan-waih	]
+  S4.6PROC END: Out=	ˈan-waih
+CRITICAL: an-mhaith       -> [ˈan-waih]
+CRITICAL: 
+--- Transcribing: [fuinneog] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&UI_DIPH&	' matched '	&UI_DIPH&	' -> '	i	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EO_SEQ&	' matched '	&EO_SEQ&	' -> '	oː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	fiN'oːg	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	fiN'oːg	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	fiN'oːg
+CRITICAL: fuinneog        -> [fiN'oːg]
+CRITICAL: 
+--- Transcribing: [oiliúint] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&OI_DIPH&	' matched '	&OI_DIPH&	' -> '	ɔ	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&I_ACUTE_U_LONG&	' matched '	&I_ACUTE_U_LONG&	' -> '	uː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈɔluːint	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	ˈɔluːint	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	ˈɔluːint
+CRITICAL: oiliúint       -> [ˈɔluːint]
+CRITICAL: 
+--- Transcribing: [staighre] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&VOC_AI_OI_GH_DH&	' matched '	&VOC_AI_OI_GH_DH&	' -> '	ai	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	staire	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	staire	]
+  S4.6PROC END: Out=	staire
+CRITICAL: staighre        -> [staire]
+CRITICAL: 
+--- Transcribing: [fios] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	fios	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	fios	]
+  S4.6PROC END: Out=	fios
+CRITICAL: fios            -> [fios]
+CRITICAL: 
+--- Transcribing: [athbhliain] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&IA_DIPH&	' matched '	&IA_DIPH&	' -> '	ia	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈahv'liain	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	ˈahv'liain	]
+  S4.6PROC END: Out=	ˈahv'liain
+CRITICAL: athbhliain      -> [ˈahv'liain]
+CRITICAL: 
+--- Transcribing: [comhrá] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&VOC_OBH_OMH&	' matched '	&VOC_OBH_OMH&	' -> '	ou	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&A_ACUTE_LONG&	' matched '	&A_ACUTE_LONG&	' -> '	ɑː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	kourɑː	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	kourɑː	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	kourɑː
+CRITICAL: comhrá         -> [kourɑː]
+CRITICAL: 
+--- Transcribing: [mícheart] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&I_ACUTE_LONG&	' matched '	&I_ACUTE_LONG&	' -> '	iː	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EA_BROAD_PRE_R&	' matched '	&EA_BROAD_PRE_R&	' -> '	a	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	miːçart	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	miːçart	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	miːçart
+CRITICAL: mícheart       -> [miːçart]
+CRITICAL: 
+--- Transcribing: [oícheanta] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AO_OI_LONG&	' matched '	&AO_OI_LONG&	' -> '	ɨː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈiːçeanta	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	ˈiːçeanta	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	ˈiːçeanta
+CRITICAL: oícheanta      -> [ˈiːçeanta]
+CRITICAL: 
+--- Transcribing: [codladh] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	kodlaɣ	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	kodlaɣ	]
+  S4.6PROC END: Out=	kodlaɣ
+CRITICAL: codladh         -> [kodlaɣ]
+CRITICAL: 
+--- Transcribing: [luigh] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&VOC_UI_GH_DH&	' matched '	&VOC_UI_GH_DH&	' -> '	iː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	lʲiː	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	lʲiː	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	lʲiː
+CRITICAL: luigh           -> [lʲiː]
+CRITICAL: 
+--- Transcribing: [fiche] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	fiçe	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	fiçe	]
+  S4.6PROC END: Out=	fiçe
+CRITICAL: fiche           -> [fiçe]
+CRITICAL: 
+--- Transcribing: [duchaise] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AI_DIPH&	' matched '	&AI_DIPH&	' -> '	ai	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	duxaise	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	duxaise	]
+  S4.6PROC END: Out=	duxaise
+CRITICAL: duchaise        -> [duxaise]
+CRITICAL: 
+--- Transcribing: [saibhir] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AI_DIPH&	' matched '	&AI_DIPH&	' -> '	ai	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	saiv'ir	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	saiv'ir	]
+  S4.6PROC END: Out=	saiv'ir
+CRITICAL: saibhir         -> [saiv'ir]
+CRITICAL: 
+--- Transcribing: [deacair] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AI_DIPH&	' matched '	&AI_DIPH&	' -> '	ai	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	deakair	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	deakair	]
+  S4.6PROC END: Out=	deakair
+CRITICAL: deacair         -> [deakair]
+CRITICAL: 
+--- Transcribing: [sláinte] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&A_ACUTE_LONG&	' matched '	&A_ACUTE_LONG&	' -> '	ɑː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	slɑːinte	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	slɑːinte	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	slɑːinte
+CRITICAL: sláinte        -> [slɑːinte]
+CRITICAL: 
+--- Transcribing: [ceart] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EA_BROAD_PRE_R&	' matched '	&EA_BROAD_PRE_R&	' -> '	a	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	cart	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	cart	]
+  S4.6PROC END: Out=	cart
+CRITICAL: ceart           -> [cart]
+CRITICAL: 
+--- Transcribing: [lae] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AE_SEQ&	' matched '	&AE_SEQ&	' -> '	eː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	leː	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	leː	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	leː
+CRITICAL: lae             -> [leː]
+CRITICAL: 
+--- Transcribing: [laoch] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AO_OI_LONG&	' matched '	&AO_OI_LONG&	' -> '	ɨː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	lɨːx	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	lɨːx	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	lɨːx
+CRITICAL: laoch           -> [lɨːx]
+CRITICAL: 
+--- Transcribing: [aer] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AE_SEQ&	' matched '	&AE_SEQ&	' -> '	eː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈeːr	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	ˈeːr	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	ˈeːr
+CRITICAL: aer             -> [ˈeːr]
+CRITICAL: 
+--- Transcribing: [ceo] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EO_SEQ&	' matched '	&EO_SEQ&	' -> '	oː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	koː	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	koː	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	koː
+CRITICAL: ceo             -> [koː]
+CRITICAL: 
+--- Transcribing: [ceol] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EO_SEQ&	' matched '	&EO_SEQ&	' -> '	oː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	koːl	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	koːl	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	koːl
+CRITICAL: ceol            -> [koːl]
+CRITICAL: 
+--- Transcribing: [coir] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&OI_DIPH&	' matched '	&OI_DIPH&	' -> '	ɔ	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	kɔr	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	kɔr	]
+  S4.6PROC END: Out=	kɔr
+CRITICAL: coir            -> [kɔr]
+CRITICAL: 
+--- Transcribing: [coill] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&OI_DIPH&	' matched '	&OI_DIPH&	' -> '	ɔ	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	kɔL'	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	kɔL'	]
+  S4.6PROC END: Out=	kɔL'
+CRITICAL: coill           -> [kɔL']
+CRITICAL: 
+--- Transcribing: [faoi] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AO_OI_LONG&	' matched '	&AO_OI_LONG&	' -> '	ɨː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	fɨːi	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	fɨːi	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	fɨːi
+CRITICAL: faoi            -> [fɨːi]
+CRITICAL: 
+--- Transcribing: [gaoth] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AO_OI_LONG&	' matched '	&AO_OI_LONG&	' -> '	ɨː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	gɨːh	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	gɨːh	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	gɨːh
+CRITICAL: gaoth           -> [gɨːh]
+CRITICAL: 
+--- Transcribing: [bádaí] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&A_ACUTE_LONG&	' matched '	&A_ACUTE_LONG&	' -> '	ɑː	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&A_I_ACUTE_LONG_RESOLVE&	' matched '	&A_I_ACUTE_LONG_RESOLVE&	' -> '	iː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	bɑːdiː�	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	2	 but FULL pattern found 0 for [	bɑːdiː�	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	bɑːdiː�
+CRITICAL: bádaí         -> [bɑːdiː�]
+CRITICAL: 
+--- Transcribing: [capaillí] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AI_DIPH&	' matched '	&AI_DIPH&	' -> '	ai	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&I_ACUTE_LONG&	' matched '	&I_ACUTE_LONG&	' -> '	iː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	kapaiL'iː	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	kapaiL'iː	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	kapaiL'iː
+CRITICAL: capaillí       -> [kapaiL'iː]
+CRITICAL: 
+--- Transcribing: [foclaí] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&A_I_ACUTE_LONG_RESOLVE&	' matched '	&A_I_ACUTE_LONG_RESOLVE&	' -> '	iː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	foklʲiː�	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	foklʲiː�	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	foklʲiː�
+CRITICAL: foclaí         -> [foklʲiː�]
+CRITICAL: 
+--- Transcribing: [brógaí] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&O_ACUTE_LONG&	' matched '	&O_ACUTE_LONG&	' -> '	oː	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&A_I_ACUTE_LONG_RESOLVE&	' matched '	&A_I_ACUTE_LONG_RESOLVE&	' -> '	iː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	broːgiː�	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	2	 but FULL pattern found 0 for [	broːgiː�	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	broːgiː�
+CRITICAL: brógaí        -> [broːgiː�]
+CRITICAL: 
+--- Transcribing: [dearmad] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EA_BROAD_PRE_R&	' matched '	&EA_BROAD_PRE_R&	' -> '	a	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	dʲarmad	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	dʲarmad	]
+  S4.6PROC END: Out=	dʲarmad
+CRITICAL: dearmad         -> [dʲarmad]
+CRITICAL: 
+--- Transcribing: [seomraí] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EO_SEQ&	' matched '	&EO_SEQ&	' -> '	oː	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&A_I_ACUTE_LONG_RESOLVE&	' matched '	&A_I_ACUTE_LONG_RESOLVE&	' -> '	iː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	soːmriː�	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	2	 but FULL pattern found 0 for [	soːmriː�	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	soːmriː�
+CRITICAL: seomraí        -> [soːmriː�]
+CRITICAL: 
+--- Transcribing: [doras] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	doras	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	doras	]
+  S4.6PROC END: Out=	doras
+CRITICAL: doras           -> [doras]
+CRITICAL: 
+--- Transcribing: [amhrán] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&VOC_ABH_AMH&	' matched '	&VOC_ABH_AMH&	' -> '	əu	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&A_ACUTE_LONG&	' matched '	&A_ACUTE_LONG&	' -> '	ɑː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈəurɑːn	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	ˈəurɑːn	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	ˈəurɑːn
+CRITICAL: amhrán         -> [ˈəurɑːn]
+CRITICAL: 
+--- Transcribing: [banríon] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&I_ACUTE_LONG&	' matched '	&I_ACUTE_LONG&	' -> '	iː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	banriːon	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	banriːon	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	banriːon
+CRITICAL: Banríon        -> [banriːon]
+CRITICAL: 
+--- Transcribing: [dearcadh] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EA_BROAD_PRE_R&	' matched '	&EA_BROAD_PRE_R&	' -> '	a	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	dʲarkaɣ	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	dʲarkaɣ	]
+  S4.6PROC END: Out=	dʲarkaɣ
+CRITICAL: dearcadh        -> [dʲarkaɣ]
+CRITICAL: 
+--- Transcribing: [dearfa] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EA_BROAD_PRE_R&	' matched '	&EA_BROAD_PRE_R&	' -> '	a	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	dʲarfa	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	dʲarfa	]
+  S4.6PROC END: Out=	dʲarfa
+CRITICAL: dearfa          -> [dʲarfa]
+CRITICAL: 
+--- Transcribing: [mí-ádh] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&I_ACUTE_LONG&	' matched '	&I_ACUTE_LONG&	' -> '	iː	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&A_ACUTE_LONG&	' matched '	&A_ACUTE_LONG&	' -> '	ɑː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	miː-ɑːɣ	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	2	 but FULL pattern found 0 for [	miː-ɑːɣ	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	miː-ɑːɣ
+CRITICAL: mí-ádh        -> [miː-ɑːɣ]
+CRITICAL: 
+--- Transcribing: [droch-obair] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AI_DIPH&	' matched '	&AI_DIPH&	' -> '	ai	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	drox-obair	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	drox-obair	]
+  S4.6PROC END: Out=	drox-obair
+CRITICAL: droch-obair     -> [drox-obair]
+CRITICAL: 
+--- Transcribing: [seanbhean] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	seanv'ean	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	seanv'ean	]
+  S4.6PROC END: Out=	seanv'ean
+CRITICAL: seanbhean       -> [seanv'ean]
+CRITICAL: 
+--- Transcribing: [fíoruisce] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&I_ACUTE_LONG&	' matched '	&I_ACUTE_LONG&	' -> '	iː	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&UI_DIPH&	' matched '	&UI_DIPH&	' -> '	i	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	fiːoriske	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	fiːoriske	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	fiːoriske
+CRITICAL: fíoruisce      -> [fiːoriske]
+CRITICAL: 
+--- Transcribing: [athchúrsáil] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&U_ACUTE_LONG&	' matched '	&U_ACUTE_LONG&	' -> '	uː	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&A_ACUTE_LONG&	' matched '	&A_ACUTE_LONG&	' -> '	ɑː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈahçuːrsɑːil	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	2	 but FULL pattern found 0 for [	ˈahçuːrsɑːil	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	ˈahçuːrsɑːil
+CRITICAL: athchúrsáil   -> [ˈahçuːrsɑːil]
+CRITICAL: 
+--- Transcribing: [an-fear] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EA_BROAD_PRE_R&	' matched '	&EA_BROAD_PRE_R&	' -> '	a	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈan-far	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	ˈan-far	]
+  S4.6PROC END: Out=	ˈan-far
+CRITICAL: an-fear         -> [ˈan-far]
+CRITICAL: 
+--- Transcribing: [an-oíche] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AO_OI_LONG&	' matched '	&AO_OI_LONG&	' -> '	ɨː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈan-iːçe	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	ˈan-iːçe	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	ˈan-iːçe
+CRITICAL: an-oíche       -> [ˈan-iːçe]
+CRITICAL: 
+--- Transcribing: [beart] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EA_BROAD_PRE_R&	' matched '	&EA_BROAD_PRE_R&	' -> '	a	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	bart	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	bart	]
+  S4.6PROC END: Out=	bart
+CRITICAL: beart           -> [bart]
+CRITICAL: 
+--- Transcribing: [bean] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	bean	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	bean	]
+  S4.6PROC END: Out=	bean
+CRITICAL: bean            -> [bean]
+CRITICAL: 
+--- Transcribing: [geal] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	geal	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	geal	]
+  S4.6PROC END: Out=	geal
+CRITICAL: geal            -> [geal]
+CRITICAL: 
+--- Transcribing: [eagla] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈeagla	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	ˈeagla	]
+  S4.6PROC END: Out=	ˈeagla
+CRITICAL: eagla           -> [ˈeagla]
+CRITICAL: 
+--- Transcribing: [muid] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&UI_DIPH&	' matched '	&UI_DIPH&	' -> '	i	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	mid	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	mid	]
+  S4.6PROC END: Out=	mid
+CRITICAL: muid            -> [mid]
+CRITICAL: 
+--- Transcribing: [duit] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&UI_DIPH&	' matched '	&UI_DIPH&	' -> '	i	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	dit	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	dit	]
+  S4.6PROC END: Out=	dit
+CRITICAL: duit            -> [dit]
+CRITICAL: 
+--- Transcribing: [fuil] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&UI_DIPH&	' matched '	&UI_DIPH&	' -> '	i	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	fil	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	fil	]
+  S4.6PROC END: Out=	fil
+CRITICAL: fuil            -> [fil]
+CRITICAL: 
+--- Transcribing: [goil] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&OI_DIPH&	' matched '	&OI_DIPH&	' -> '	ɔ	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	gɔl	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	gɔl	]
+  S4.6PROC END: Out=	gɔl
+CRITICAL: goil            -> [gɔl]
+CRITICAL: 
+--- Transcribing: [buil] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&UI_DIPH&	' matched '	&UI_DIPH&	' -> '	i	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	bil	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	bil	]
+  S4.6PROC END: Out=	bil
+CRITICAL: buil            -> [bil]
+CRITICAL: 
+--- Transcribing: [cuir] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&UI_DIPH&	' matched '	&UI_DIPH&	' -> '	i	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	kir	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	kir	]
+  S4.6PROC END: Out=	kir
+CRITICAL: cuir            -> [kir]
+CRITICAL: 
+--- Transcribing: [druid] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&UI_DIPH&	' matched '	&UI_DIPH&	' -> '	i	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	drid	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	drid	]
+  S4.6PROC END: Out=	drid
+CRITICAL: druid           -> [drid]
+CRITICAL: 
+--- Transcribing: [luibh] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&UI_DIPH&	' matched '	&UI_DIPH&	' -> '	i	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	liv'	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	liv'	]
+  S4.6PROC END: Out=	liv'
+CRITICAL: luibh           -> [liv']
+CRITICAL: 
+--- Transcribing: [ceist] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EI_DIPH&	' matched '	&EI_DIPH&	' -> '	e	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	kest	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	kest	]
+  S4.6PROC END: Out=	kest
+CRITICAL: ceist           -> [kest]
+CRITICAL: 
+--- Transcribing: [ocht] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈoxt	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	ˈoxt	]
+  S4.6PROC END: Out=	ˈoxt
+CRITICAL: ocht            -> [ˈoxt]
+CRITICAL: 
+--- Transcribing: [páiste] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&A_ACUTE_LONG&	' matched '	&A_ACUTE_LONG&	' -> '	ɑː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	pɑːiste	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	pɑːiste	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	pɑːiste
+CRITICAL: páiste         -> [pɑːiste]
+CRITICAL: 
+--- Transcribing: [sparán] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&A_ACUTE_LONG&	' matched '	&A_ACUTE_LONG&	' -> '	ɑː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	sparɑːn	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	sparɑːn	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	sparɑːn
+CRITICAL: sparán         -> [sparɑːn]
+CRITICAL: 
+--- Transcribing: [scéal] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&E_ACUTE_LONG&	' matched '	&E_ACUTE_LONG&	' -> '	eː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	skeːal	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	skeːal	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	skeːal
+CRITICAL: scéal          -> [skeːal]
+CRITICAL: 
+--- Transcribing: [bláth] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&A_ACUTE_LONG&	' matched '	&A_ACUTE_LONG&	' -> '	ɑː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	blɑːh	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	blɑːh	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	blɑːh
+CRITICAL: bláth          -> [blɑːh]
+CRITICAL: 
+--- Transcribing: [cnoc] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	knok	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	knok	]
+  S4.6PROC END: Out=	knok
+CRITICAL: cnoc            -> [knok]
+CRITICAL: 
+--- Transcribing: [gnó] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&O_ACUTE_LONG&	' matched '	&O_ACUTE_LONG&	' -> '	oː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	gnoː	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	gnoː	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	gnoː
+CRITICAL: gnó            -> [gnoː]
+CRITICAL: 
+--- Transcribing: [dlí] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&I_ACUTE_LONG&	' matched '	&I_ACUTE_LONG&	' -> '	iː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	dlʲiː	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	dlʲiː	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	dlʲiː
+CRITICAL: dlí            -> [dlʲiː]
+CRITICAL: 
+--- Transcribing: [mná] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&A_ACUTE_LONG&	' matched '	&A_ACUTE_LONG&	' -> '	ɑː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	mnɑː	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	mnɑː	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	mnɑː
+CRITICAL: mná            -> [mnɑː]
+CRITICAL: 
+--- Transcribing: [trá] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&A_ACUTE_LONG&	' matched '	&A_ACUTE_LONG&	' -> '	ɑː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	trɑː	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	trɑː	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	trɑː
+CRITICAL: trá            -> [trɑː]
+CRITICAL: 
+--- Transcribing: [uisce] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&UI_DIPH&	' matched '	&UI_DIPH&	' -> '	i	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈiske	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	ˈiske	]
+  S4.6PROC END: Out=	ˈiske
+CRITICAL: uisce           -> [ˈiske]
+CRITICAL: 
+--- Transcribing: [obair] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AI_DIPH&	' matched '	&AI_DIPH&	' -> '	ai	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈobair	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	ˈobair	]
+  S4.6PROC END: Out=	ˈobair
+CRITICAL: obair           -> [ˈobair]
+CRITICAL: 
+--- Transcribing: [imir] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈimir	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	ˈimir	]
+  S4.6PROC END: Out=	ˈimir
+CRITICAL: imir            -> [ˈimir]
+CRITICAL: 
+--- Transcribing: [eolas] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EO_SEQ&	' matched '	&EO_SEQ&	' -> '	oː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈoːlas	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	ˈoːlas	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	ˈoːlas
+CRITICAL: eolas           -> [ˈoːlas]
+CRITICAL: 
+--- Transcribing: [athair] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AI_DIPH&	' matched '	&AI_DIPH&	' -> '	ai	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈahair	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	ˈahair	]
+  S4.6PROC END: Out=	ˈahair
+CRITICAL: athair          -> [ˈahair]
+CRITICAL: 
+--- Transcribing: [máthair] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&A_ACUTE_LONG&	' matched '	&A_ACUTE_LONG&	' -> '	ɑː	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AI_DIPH&	' matched '	&AI_DIPH&	' -> '	ai	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	mɑːhair	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	mɑːhair	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	mɑːhair
+CRITICAL: máthair        -> [mɑːhair]
+CRITICAL: 
+--- Transcribing: [deirfiúr] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EI_DIPH&	' matched '	&EI_DIPH&	' -> '	e	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&I_ACUTE_U_LONG&	' matched '	&I_ACUTE_U_LONG&	' -> '	uː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	derfuːr	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	derfuːr	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	derfuːr
+CRITICAL: deirfiúr       -> [derfuːr]
+CRITICAL: 
+--- Transcribing: [imirt] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈimirt	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	ˈimirt	]
+  S4.6PROC END: Out=	ˈimirt
+CRITICAL: imirt           -> [ˈimirt]
+CRITICAL: 
+--- Transcribing: [oibre] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&OI_DIPH&	' matched '	&OI_DIPH&	' -> '	ɔ	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈɔbre	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	ˈɔbre	]
+  S4.6PROC END: Out=	ˈɔbre
+CRITICAL: oibre           -> [ˈɔbre]
+CRITICAL: 
+--- Transcribing: [ceacht] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EA_BROAD_PRE_CH&	' matched '	&EA_BROAD_PRE_CH&	' -> '	a	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	kaxt	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	kaxt	]
+  S4.6PROC END: Out=	kaxt
+CRITICAL: ceacht          -> [kaxt]
+CRITICAL: 
+--- Transcribing: [ceistneoir] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EI_DIPH&	' matched '	&EI_DIPH&	' -> '	e	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EO_SEQ&	' matched '	&EO_SEQ&	' -> '	oː	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	kestnoːir	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	1	 but FULL pattern found 0 for [	kestnoːir	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	kestnoːir
+CRITICAL: ceistneoir      -> [kestnoːir]
+CRITICAL: 
+--- Transcribing: [ceistigh] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EI_DIPH&	' matched '	&EI_DIPH&	' -> '	e	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	kestij	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	kestij	]
+  S4.6PROC END: Out=	kestij
+CRITICAL: ceistigh        -> [kestij]
+CRITICAL: 
+--- Transcribing: [arm] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈarm	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	ˈarm	]
+  S4.6PROC END: Out=	ˈarm
+  S5.ARM_SPECIFIC DBG: Matched arm. Stress:	ˈ	Vowel: a	S1:	r	S2:	m
+    EpenthesisThenStrongSonorants DBG: Rule '	^(ˈ?)a(r)(m)$	' matched '	ˈarm	' -> '	ˈarəm	'
+CRITICAL: arm             -> [ˈarəm]
+CRITICAL: 
+--- Transcribing: [borb] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	borb	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	borb	]
+  S4.6PROC END: Out=	borb
+CRITICAL: borb            -> [borb]
+CRITICAL: 
+--- Transcribing: [bolg] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	bolg	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	bolg	]
+  S4.6PROC END: Out=	bolg
+CRITICAL: bolg            -> [bolg]
+CRITICAL: 
+--- Transcribing: [garbh] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	garv	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	garv	]
+  S4.6PROC END: Out=	garv
+CRITICAL: garbh           -> [garv]
+CRITICAL: 
+--- Transcribing: [gorm] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	gorm	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	gorm	]
+  S4.6PROC END: Out=	gorm
+CRITICAL: gorm            -> [gorm]
+CRITICAL: 
+--- Transcribing: [gairm] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AI_DIPH&	' matched '	&AI_DIPH&	' -> '	ai	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	gairm	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	gairm	]
+  S4.6PROC END: Out=	gairm
+CRITICAL: gairm           -> [gairm]
+CRITICAL: 
+--- Transcribing: [balbh] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	balv	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	balv	]
+  S4.6PROC END: Out=	balv
+CRITICAL: balbh           -> [balv]
+CRITICAL: 
+--- Transcribing: [seilbh] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EI_DIPH&	' matched '	&EI_DIPH&	' -> '	e	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	selv'	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	selv'	]
+  S4.6PROC END: Out=	selv'
+CRITICAL: seilbh          -> [selv']
+CRITICAL: 
+--- Transcribing: [dearg] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EA_BROAD_PRE_R&	' matched '	&EA_BROAD_PRE_R&	' -> '	a	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	dʲarg	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	dʲarg	]
+  S4.6PROC END: Out=	dʲarg
+CRITICAL: dearg           -> [dʲarg]
+CRITICAL: 
+--- Transcribing: [fearg] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EA_BROAD_PRE_R&	' matched '	&EA_BROAD_PRE_R&	' -> '	a	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	farg	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	farg	]
+  S4.6PROC END: Out=	farg
+CRITICAL: fearg           -> [farg]
+CRITICAL: 
+--- Transcribing: [colm] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	kolm	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	kolm	]
+  S4.6PROC END: Out=	kolm
+CRITICAL: colm            -> [kolm]
+CRITICAL: 
+--- Transcribing: [ainm] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AI_DIPH&	' matched '	&AI_DIPH&	' -> '	ai	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ˈainm	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST: Found 0 nuclei with pattern '	([aeiou]ː?)	' for word: [	ˈainm	]
+  S4.6PROC END: Out=	ˈainm
+CRITICAL: ainm            -> [ˈainm]
+CRITICAL: 
+--- Transcribing: [scrúdaigh] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&U_ACUTE_LONG&	' matched '	&U_ACUTE_LONG&	' -> '	uː	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&VOC_AI_OI_GH_DH&	' matched '	&VOC_AI_OI_GH_DH&	' -> '	ai	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	skruːdai	]
+  S4.6PROC DBG (SpecFinal):	ai$	->	iː	Res:	skruːdiː
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	2	 but FULL pattern found 0 for [	skruːdiː	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	2	 but FULL pattern found 0 for [	skruːdiː	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	skruːdiː
+CRITICAL: scrúdaigh      -> [skruːdiː]
+CRITICAL: 
+--- Transcribing: [cónaigh] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&O_ACUTE_LONG&	' matched '	&O_ACUTE_LONG&	' -> '	oː	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&VOC_AI_OI_GH_DH&	' matched '	&VOC_AI_OI_GH_DH&	' -> '	ai	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	koːnai	]
+  S4.6PROC DBG (SpecFinal):	ai$	->	iː	Res:	koːniː
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	2	 but FULL pattern found 0 for [	koːniː	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	2	 but FULL pattern found 0 for [	koːniː	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	koːniː
+CRITICAL: cónaigh        -> [koːniː]
+CRITICAL: 
+--- Transcribing: [beannaigh] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EA_BROAD_PRE_NN&	' matched '	&EA_BROAD_PRE_NN&	' -> '	ɑː	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&VOC_AI_OI_GH_DH&	' matched '	&VOC_AI_OI_GH_DH&	' -> '	ai	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	bɑːNai	]
+  S4.6PROC DBG (SpecFinal):	ai$	->	iː	Res:	bɑːNiː
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	2	 but FULL pattern found 0 for [	bɑːNiː	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern found 	2	 but FULL pattern found 0 for [	bɑːNiː	]. Full pattern: 	ia|ua|ai|ei|oi|ui|ɑu|ou|əu|eiə|[aeiou]ː?
+  S4.6PROC END: Out=	bɑːNiː
+CRITICAL: beannaigh       -> [bɑːNiː]

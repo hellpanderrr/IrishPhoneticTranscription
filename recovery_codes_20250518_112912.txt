@@ -1,0 +1,294 @@
+File: C:\\Program Files\Wireshark\radius\dictionary.merit
+Recovery Codes: Merit-Proxy
+
+File: C:\\projects\demo\sysroot-win-64\Qt\mkspecs\linux-clang\qmake.conf
+Recovery Codes: linux-clang
+
+File: C:\\projects\potlatch\node_modules\es5-ext\object\safe-traverse.js
+Recovery Codes: valid-value
+
+File: C:\\projects\potlatch\node_modules\es5-ext\string\#\plain-replace-all.js
+Recovery Codes: valid-value
+
+File: C:\\projects\potlatch\node_modules\gulp-uglify\lib\gulp-uglify-error.js
+Recovery Codes: error-cause
+
+File: C:\\projects\potlatch\node_modules\less\test\less\no-strict-math\no-sm-operations.less
+Recovery Codes: green-black
+
+File: C:\\projects\potlatch\node_modules\less\test\less-bom\no-strict-math\no-sm-operations.less
+Recovery Codes: green-black
+
+File: C:\\projects\potlatch\node_modules\right-align\index.js
+Recovery Codes: right-align, right-align
+
+File: C:\\Users\hellpanderrr\.conda\envs\latin_vowel_classifier\Library\mkspecs\linux-clang\qmake.conf
+Recovery Codes: linux-clang
+
+File: C:\\Users\hellpanderrr\.conda\pkgs\m2w64-gcc-libs-core-5.3.0-7\info\index.json
+Recovery Codes: msys2-conda
+
+File: C:\\Users\hellpanderrr\.conda\pkgs\networkx-3.4.2-pyh267e887_2\info\about.json
+Recovery Codes: conda-forge, conda-forge
+
+File: C:\\Users\hellpanderrr\.conda\pkgs\python-3.13.0-hf5aa216_100_cp313\info\hash_input.json
+Recovery Codes: conda-forge
+
+File: C:\\Users\hellpanderrr\.conda\pkgs\qt-5.9.7-vc14h73c81de_0\Library\mkspecs\linux-clang\qmake.conf
+Recovery Codes: linux-clang
+
+File: C:\\Users\hellpanderrr\.multirust\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\src\rust\library\backtrace\ci\docker\powerpc64-unknown-linux-gnu\Dockerfile
+Recovery Codes: ppc64-cross
+
+File: C:\\Users\hellpanderrr\.pyenv\.github\scripts\build.sh
+Recovery Codes: cache-clear
+
+File: C:\\Users\hellpanderrr\.pyenv\.github\scripts\ps1.sh
+Recovery Codes: cache-clear
+
+File: C:\\Users\hellpanderrr\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\src\rust\library\backtrace\ci\docker\powerpc64-unknown-linux-gnu\Dockerfile
+Recovery Codes: ppc64-cross
+
+File: C:\\Users\hellpanderrr\AppData\Local\GitHubDesktop\app-3.4.19\resources\app\static\gitignore\community\Puppet.gitignore
+Recovery Codes: Third-party
+
+File: C:\\Users\hellpanderrr\AppData\Local\Google\Chrome\User Data\Default\Extensions\alncdjedloppbablonallfbkeiknmkdi\5.2.7_0\css\websites\docs.google.com-presentation.css
+Recovery Codes: title-input, title-input, title-input
+
+File: C:\\Users\hellpanderrr\AppData\Local\Google\Chrome\User Data\Default\Extensions\gfgpkepllngchpmcippidfhmbhlljhoo\4.6.5_0\privacy-policy.md
+Recovery Codes: third-party
+
+File: C:\\Users\hellpanderrr\AppData\Local\Google\Chrome\User Data\Default\Extensions\pachckjkecffpdphbpmfolblodfkgbhl\3.135.0_0\popup.html
+Recovery Codes: vidiq-popup
+
+File: C:\\Users\hellpanderrr\AppData\Local\Microsoft\Edge\User Data\Default\Extensions\cinfaflgbaachkaamaeglolofeahelkd\4.6.3_1\privacy-policy.md
+Recovery Codes: third-party
+
+File: C:\\Users\hellpanderrr\AppData\Local\Microsoft\Edge\User Data\Default\Extensions\pachckjkecffpdphbpmfolblodfkgbhl\3.133.2_0\popup.html
+Recovery Codes: vidiq-popup
+
+File: C:\\Users\hellpanderrr\AppData\Local\Microsoft\Edge SxS\User Data\Default\Extensions\cinfaflgbaachkaamaeglolofeahelkd\4.6.5_0\privacy-policy.md
+Recovery Codes: third-party
+
+File: C:\\Users\hellpanderrr\AppData\Local\Microsoft\Edge SxS\User Data\Default\Extensions\pachckjkecffpdphbpmfolblodfkgbhl\3.132.1_0\popup.html
+Recovery Codes: vidiq-popup
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\antd\node_modules\core-js\library\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\antd\node_modules\core-js\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\appium\node_modules\core-js\library\modules\$.array-species-create.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\appium\node_modules\core-js\modules\$.array-species-create.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\appium\node_modules\jszip\node_modules\core-js\library\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\appium\node_modules\jszip\node_modules\core-js\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\appium-support\node_modules\core-js\library\modules\$.array-species-create.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\appium-support\node_modules\core-js\modules\$.array-species-create.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\babel-core\node_modules\core-js\library\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\babel-core\node_modules\core-js\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\babel-helpers\node_modules\core-js\library\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\babel-helpers\node_modules\core-js\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\babel-messages\node_modules\core-js\library\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\babel-messages\node_modules\core-js\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\create-react-class\node_modules\core-js\library\modules\$.array-species-create.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\create-react-class\node_modules\core-js\modules\$.array-species-create.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\css-animation\node_modules\core-js\library\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\css-animation\node_modules\core-js\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\draft-js\node_modules\core-js\library\modules\$.array-species-create.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\draft-js\node_modules\core-js\modules\$.array-species-create.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\prop-types\node_modules\core-js\library\modules\$.array-species-create.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\prop-types\node_modules\core-js\modules\$.array-species-create.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-cascader\node_modules\core-js\library\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-cascader\node_modules\core-js\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-checkbox\node_modules\core-js\library\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-checkbox\node_modules\core-js\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-dialog\node_modules\core-js\library\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-dialog\node_modules\core-js\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-form\node_modules\core-js\library\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-form\node_modules\core-js\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-hammerjs\node_modules\core-js\library\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-hammerjs\node_modules\core-js\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-input-number\node_modules\core-js\library\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-input-number\node_modules\core-js\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-menu\node_modules\core-js\library\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-menu\node_modules\core-js\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-notification\node_modules\core-js\library\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-notification\node_modules\core-js\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-progress\node_modules\core-js\library\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-progress\node_modules\core-js\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-table\node_modules\core-js\library\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-table\node_modules\core-js\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-tabs\es\ScrollableTabBar.js
+Recovery Codes: react-class
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-tabs\node_modules\core-js\library\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-tabs\node_modules\core-js\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-time-picker\node_modules\core-js\library\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-time-picker\node_modules\core-js\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-tooltip\node_modules\core-js\library\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-tooltip\node_modules\core-js\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-touchable\node_modules\core-js\library\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-touchable\node_modules\core-js\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-tree\node_modules\core-js\library\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-tree\node_modules\core-js\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-trigger\node_modules\core-js\library\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\rc-trigger\node_modules\core-js\modules\_array-species-constructor.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\react\node_modules\core-js\library\modules\$.array-species-create.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\react\node_modules\core-js\modules\$.array-species-create.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\react-dom\node_modules\core-js\library\modules\$.array-species-create.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\react-dom\node_modules\core-js\modules\$.array-species-create.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\teen_process\node_modules\core-js\library\modules\$.array-species-create.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\AppData\Local\Programs\Appium\resources\app\node_modules\teen_process\node_modules\core-js\modules\$.array-species-create.js
+Recovery Codes: cross-realm
+
+File: C:\\Users\hellpanderrr\CLionProjects\untitled\cmake-build-debug\CMakeFiles\CMakeDirectoryInformation.cmake
+Recovery Codes: cmake-build
+
+File: C:\\Users\hellpanderrr\Downloads\github-recovery-codes.txt
+Recovery Codes: 55a57-e989a, 78d98-f5540, f3814-92a78, b003d-ef816, d9ee5-47ece, 34dee-09b16, b61f1-3368f, d97d2-bc4aa, ea8db-93121, 1f381-af00a, d3704-a499a, f3982-6e8fa, 29512-b1a7e, 4707d-c5501, 9a2c5-b1d0f, 5503d-dbcfb
+
+File: C:\\Users\hellpanderrr\Downloads\DiscordFix_6.0.2019\pre-configs\DiscordFix (для МГТС).bat
+Recovery Codes: 50000-65535, 50000-65535
+
+File: C:\\Users\hellpanderrr\Downloads\DiscordFix_6.0.2019\pre-configs\DiscordFix.bat
+Recovery Codes: 50000-65535, 50000-65535
+
+File: C:\\Users\hellpanderrr\Downloads\DiscordFix_6.0.2019\pre-configs\YoutubeFix (для МГТС).bat
+Recovery Codes: 50000-65535, 50000-65535
+
+File: C:\\Users\hellpanderrr\Downloads\DiscordFix_6.0.2019\pre-configs\YoutubeFix (для ТТК).bat
+Recovery Codes: 50000-65535, 50000-65535
+
+File: C:\\Users\hellpanderrr\Downloads\DiscordFix_6.0.2019\pre-configs\YoutubeFix.bat
+Recovery Codes: 50000-65535, 50000-65535
+
+File: C:\\Users\hellpanderrr\Downloads\DiscordFix_6.0.2019\pre-configs\YoutubeFix_ALT (для МГТС).bat
+Recovery Codes: 50000-65535, 50000-65535
+
+File: C:\\Users\hellpanderrr\Downloads\DiscordFix_6.0.2019\pre-configs\YoutubeFix_ALT.bat
+Recovery Codes: 50000-65535, 50000-65535
+
+File: C:\\Users\hellpanderrr\Downloads\pdf-lib-93dd36e85aa659a3bca09867d2d8fac172501fbe\pdf-lib-93dd36e85aa659a3bca09867d2d8fac172501fbe\src\api\StandardFonts.ts
+Recovery Codes: Times-Roman
+
+File: C:\\Users\hellpanderrr\Downloads\winlibs-x86_64-posix-seh-gcc-13.2.0-llvm-17.0.6-mingw-w64msvcrt-11.0.1-r5\share\cmake-3.28\Modules\Platform\Android\abi-armeabi-Clang.cmake
+Recovery Codes: msoft-float
+
+File: C:\\Users\hellpanderrr\Downloads\zapret-discord-youtube-1.6.1\general (ALT5).bat
+Recovery Codes: 50000-50100, 50000-50100
+

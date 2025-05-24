@@ -1,0 +1,1262 @@
+﻿
+--- Running Test Set for 23O ---
+
+--- Transcribing: [fhéach] ---
+After stage PreProcess: [fhéach]
+After stage MarkDigraphsAndVocalisationTriggers: [_FH_SILENT_éa_CH_]
+After stage ConsonantResolution: [éax_unstressed_final]
+After stage VowelsAndDiphthongs: [&E_ACUTE_LONG&ax_ɔnstressed_final]
+After stage StrongSonorantsEpenthesis: [&E_ACUTE_LONG&ax_ɔnstressed_final]
+After stage Diacritics: [&E_ACUTE_lˠOnˠG&ax_ɔn̪st̪ressed̪_fin̪al̪]
+After stage FinalCleanup: [&E_ACUTE_lˠOnˠG&ax_ɔn̪st̪ressed̪_fin̪al̪]
+fhéach         -> [&E_ACUTE_lˠOnˠG&ax_ɔn̪st̪ressed̪_fin̪al̪]
+
+--- Transcribing: [fhág] ---
+After stage PreProcess: [fhág]
+After stage MarkDigraphsAndVocalisationTriggers: [_FH_SILENT_ág]
+After stage ConsonantResolution: [ág]
+After stage VowelsAndDiphthongs: [&A_ACUTE_LONG&g]
+After stage StrongSonorantsEpenthesis: [&A_ACUTE_LONG&g]
+After stage Diacritics: [&A_ACUTE_lˠOnˠG&g]
+After stage FinalCleanup: [&A_ACUTE_lˠOnˠG&g]
+fhág           -> [&A_ACUTE_lˠOnˠG&g]
+
+--- Transcribing: [fhíor] ---
+After stage PreProcess: [fhíor]
+After stage MarkDigraphsAndVocalisationTriggers: [_FH_SILENT_íor]
+After stage ConsonantResolution: [íor]
+After stage VowelsAndDiphthongs: [&I_ACUTE_LONG&ɔr]
+After stage StrongSonorantsEpenthesis: [&I_ACUTE_LONG&ɔr]
+After stage Diacritics: [&I_ACUTE_lˠOnˠG&ɔr]
+After stage FinalCleanup: [&I_ACUTE_lˠOnˠG&ɔr]
+fhíor          -> [&I_ACUTE_lˠOnˠG&ɔr]
+
+--- Transcribing: [fhostaigh] ---
+After stage PreProcess: [fhostaigh]
+After stage MarkDigraphsAndVocalisationTriggers: [_FH_SILENT_ost_VOCMARK_AIGH_]
+After stage ConsonantResolution: [ost_VOCMARK_AIGH_]
+After stage VowelsAndDiphthongs: [ɔst&VOC_AI_OI_GH_DH&]
+After stage StrongSonorantsEpenthesis: [ɔst&VOC_AI_OI_GH_DH&]
+After stage Diacritics: [ɔst&VOC_AI_OI_GH_DH&]
+After stage FinalCleanup: [ɔst&VOC_AI_OI_GH_DH&]
+fhostaigh       -> [ɔst&VOC_AI_OI_GH_DH&]
+
+--- Transcribing: [fhuair] ---
+After stage PreProcess: [fhuair]
+After stage MarkDigraphsAndVocalisationTriggers: [_FH_SILENT_uair]
+After stage ConsonantResolution: [uair']
+After stage VowelsAndDiphthongs: [&UA_DIPH&ir']
+After stage StrongSonorantsEpenthesis: [&UA_DIPH&ir']
+After stage Diacritics: [&UA_DIPH&ir']
+After stage FinalCleanup: [&UA_DIPH&ir']
+fhuair          -> [&UA_DIPH&ir']
+
+--- Transcribing: [scríobh] ---
+After stage PreProcess: [scríobh]
+After stage MarkDigraphsAndVocalisationTriggers: [scrí_VOCMARK_OBH_]
+After stage ConsonantResolution: [s'k'r'í_VOCMARK_OBH_]
+After stage VowelsAndDiphthongs: [s'k'r'&I_ACUTE_LONG&&VOC_OBH_OMH&]
+After stage StrongSonorantsEpenthesis: [s'k'r'&I_ACUTE_LONG&&VOC_OBH_OMH&]
+After stage Diacritics: [s'k'r'&I_ACUTE_lˠOnˠG&&VOC_OBH_OmˠH&]
+After stage FinalCleanup: [s'k'r'&I_ACUTE_lˠOnˠG&&VOC_OBH_OmˠH&]
+scríobh        -> [s'k'r'&I_ACUTE_lˠOnˠG&&VOC_OBH_OmˠH&]
+
+--- Transcribing: [cat] ---
+After stage PreProcess: [cat]
+After stage MarkDigraphsAndVocalisationTriggers: [cat]
+After stage ConsonantResolution: [kat]
+After stage VowelsAndDiphthongs: [kat]
+After stage StrongSonorantsEpenthesis: [kat]
+After stage Diacritics: [kat̪]
+After stage FinalCleanup: [kat̪]
+cat             -> [kat̪]
+
+--- Transcribing: [bord] ---
+After stage PreProcess: [bord]
+After stage MarkDigraphsAndVocalisationTriggers: [bord]
+After stage ConsonantResolution: [bord]
+After stage VowelsAndDiphthongs: [bɔrd]
+After stage StrongSonorantsEpenthesis: [bɔrd]
+After stage Diacritics: [bɔrd̪]
+After stage FinalCleanup: [bɔrd̪]
+bord            -> [bɔrd̪]
+
+--- Transcribing: [ceann] ---
+After stage PreProcess: [ceann]
+After stage MarkDigraphsAndVocalisationTriggers: [cea_NN_]
+After stage ConsonantResolution: [k'eaN]
+After stage VowelsAndDiphthongs: [k'&EA_BROAD&N]
+After stage StrongSonorantsEpenthesis: [k'&EA_BROAD&N]
+After stage Diacritics: [k'&EA_BɾˠOAD&nˠ]
+After stage FinalCleanup: [k'&EA_BɾˠOAD&nˠ]
+ceann           -> [k'&EA_BɾˠOAD&nˠ]
+
+--- Transcribing: [poll] ---
+After stage PreProcess: [poll]
+After stage MarkDigraphsAndVocalisationTriggers: [po_LL_]
+After stage ConsonantResolution: [poL]
+After stage VowelsAndDiphthongs: [pɔL]
+After stage StrongSonorantsEpenthesis: [pɔL]
+After stage Diacritics: [pɔlˠ]
+After stage FinalCleanup: [pɔlˠ]
+poll            -> [pɔlˠ]
+
+--- Transcribing: [balla] ---
+After stage PreProcess: [balla]
+After stage MarkDigraphsAndVocalisationTriggers: [ba_LL_a]
+After stage ConsonantResolution: [baLa]
+After stage VowelsAndDiphthongs: [baLə]
+After stage StrongSonorantsEpenthesis: [baLə]
+After stage Diacritics: [balˠə]
+After stage FinalCleanup: [balˠə]
+balla           -> [balˠə]
+
+--- Transcribing: [leabhar] ---
+After stage PreProcess: [leabhar]
+After stage MarkDigraphsAndVocalisationTriggers: [l_VOCMARK_EABH_ar]
+After stage ConsonantResolution: [l_VOCMARK_EABH_ar]
+After stage VowelsAndDiphthongs: [l&VOC_EABH_AMH&ar]
+After stage StrongSonorantsEpenthesis: [l&VOC_EABH_AMH&ar]
+After stage Diacritics: [l̪&VOC_EABH_AmˠH&ar]
+After stage FinalCleanup: [l̪&VOC_EABH_AmˠH&ar]
+leabhar         -> [l̪&VOC_EABH_AmˠH&ar]
+
+--- Transcribing: [samhradh] ---
+After stage PreProcess: [samhradh]
+After stage MarkDigraphsAndVocalisationTriggers: [s_VOCMARK_AMH_ra_DH_]
+After stage ConsonantResolution: [s_VOCMARK_AMH_raɣ]
+After stage VowelsAndDiphthongs: [s&VOC_ABH_AMH&raɣ]
+After stage StrongSonorantsEpenthesis: [s&VOC_ABH_AMH&raɣ]
+After stage Diacritics: [s&VOC_ABH_AmˠH&raɣ]
+After stage FinalCleanup: [s&VOC_ABH_AmˠH&raɣ]
+samhradh        -> [s&VOC_ABH_AmˠH&raɣ]
+
+--- Transcribing: [teach] ---
+After stage PreProcess: [teach]
+After stage MarkDigraphsAndVocalisationTriggers: [tea_CH_]
+After stage ConsonantResolution: [t'eax_unstressed_final]
+After stage VowelsAndDiphthongs: [t'eax_ɔnstressed_final]
+After stage StrongSonorantsEpenthesis: [t'eax_ɔnstressed_final]
+After stage Diacritics: [t'eax_ɔn̪st̪ressed̪_fin̪al̪]
+After stage FinalCleanup: [t'eax_ɔn̪st̪ressed̪_fin̪al̪]
+teach           -> [t'eax_ɔn̪st̪ressed̪_fin̪al̪]
+
+--- Transcribing: [beannacht] ---
+After stage PreProcess: [beannacht]
+After stage MarkDigraphsAndVocalisationTriggers: [bea_NN_a_CH_t]
+After stage ConsonantResolution: [b'eaNax_unstressed_finalt]
+After stage VowelsAndDiphthongs: [b'&EA_BROAD&Nax_ɔnstressed_finalt]
+After stage StrongSonorantsEpenthesis: [b'&EA_BROAD&Nax_ɔnstressed_finalt]
+After stage Diacritics: [b'&EA_BɾˠOAD&nˠax_ɔn̪st̪ressed̪_fin̪al̪t]
+After stage FinalCleanup: [b'&EA_BɾˠOAD&nˠax_ɔn̪st̪ressed̪_fin̪al̪t]
+beannacht       -> [b'&EA_BɾˠOAD&nˠax_ɔn̪st̪ressed̪_fin̪al̪t]
+
+--- Transcribing: [leagan] ---
+After stage PreProcess: [leagan]
+After stage MarkDigraphsAndVocalisationTriggers: [leagan]
+After stage ConsonantResolution: [leagan]
+After stage VowelsAndDiphthongs: [leagən]
+After stage StrongSonorantsEpenthesis: [leagən]
+After stage Diacritics: [l̪eagən̪]
+After stage FinalCleanup: [l̪eagən̪]
+leagan          -> [l̪eagən̪]
+
+--- Transcribing: [ainm] ---
+After stage PreProcess: [ˈainm]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈainm]
+After stage ConsonantResolution: [ˈainm']
+After stage VowelsAndDiphthongs: [ˈ&AI_DIPH&nm']
+After stage StrongSonorantsEpenthesis: [ˈ&AI_DIPH&nm']
+After stage Diacritics: [ˈ&AI_DIPH&n̪m']
+After stage FinalCleanup: [ˈ&AI_DIPH&n̪m']
+ainm            -> [ˈ&AI_DIPH&n̪m']
+
+--- Transcribing: [teanga] ---
+After stage PreProcess: [teanga]
+After stage MarkDigraphsAndVocalisationTriggers: [tea_URUG_a]
+After stage ConsonantResolution: [t'eaŋa]
+After stage VowelsAndDiphthongs: [t'æŋa]
+After stage StrongSonorantsEpenthesis: [t'æŋa]
+After stage Diacritics: [t'æŋa]
+After stage FinalCleanup: [t'æŋa]
+teanga          -> [t'æŋa]
+
+--- Transcribing: [seacht] ---
+After stage PreProcess: [seacht]
+After stage MarkDigraphsAndVocalisationTriggers: [sea_CH_t]
+After stage ConsonantResolution: [s'eax_unstressed_finalt]
+After stage VowelsAndDiphthongs: [s'eax_ɔnstressed_finalt]
+After stage StrongSonorantsEpenthesis: [s'eax_ɔnstressed_finalt]
+After stage Diacritics: [s'eax_ɔn̪st̪ressed̪_fin̪al̪t]
+After stage FinalCleanup: [s'eax_ɔn̪st̪ressed̪_fin̪al̪t]
+seacht          -> [s'eax_ɔn̪st̪ressed̪_fin̪al̪t]
+
+--- Transcribing: [aghaidh] ---
+After stage PreProcess: [ˈaghaidh]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈa_GH__VOCMARK_AIDH_]
+After stage ConsonantResolution: [ˈaɣ_VOCMARK_AIDH_]
+After stage VowelsAndDiphthongs: [ˈaɣ&VOC_AI_OI_GH_DH&]
+After stage StrongSonorantsEpenthesis: [ˈaɣ&VOC_AI_OI_GH_DH&]
+After stage Diacritics: [ˈaɣ&VOC_AI_OI_GH_DH&]
+After stage FinalCleanup: [ˈaɣ&VOC_AI_OI_GH_DH&]
+aghaidh         -> [ˈaɣ&VOC_AI_OI_GH_DH&]
+
+--- Transcribing: [suidhe] ---
+After stage PreProcess: [suidhe]
+After stage MarkDigraphsAndVocalisationTriggers: [s_VOCMARK_UIDH_e]
+After stage ConsonantResolution: [s_VOCMARK_UIDH_e]
+After stage VowelsAndDiphthongs: [s&VOC_UI_GH_DH&e]
+After stage StrongSonorantsEpenthesis: [s&VOC_UI_GH_DH&e]
+After stage Diacritics: [s&VOC_UI_GH_DH&e]
+After stage FinalCleanup: [s&VOC_UI_GH_DH&e]
+suidhe          -> [s&VOC_UI_GH_DH&e]
+
+--- Transcribing: [nimhe] ---
+After stage PreProcess: [nimhe]
+After stage MarkDigraphsAndVocalisationTriggers: [ni_MH_e]
+After stage ConsonantResolution: [niv'e]
+After stage VowelsAndDiphthongs: [niv'i]
+After stage StrongSonorantsEpenthesis: [niv'i]
+After stage Diacritics: [n̪iv'i]
+After stage FinalCleanup: [n̪iv'i]
+nimhe           -> [n̪iv'i]
+
+--- Transcribing: [bóthar] ---
+After stage PreProcess: [bóthar]
+After stage MarkDigraphsAndVocalisationTriggers: [bó_TH_ar]
+After stage ConsonantResolution: [b'óhar]
+After stage VowelsAndDiphthongs: [b'&O_ACUTE_LONG&har]
+After stage StrongSonorantsEpenthesis: [b'&O_ACUTE_LONG&har]
+After stage Diacritics: [b'&O_ACUTE_lˠOnˠG&har]
+After stage FinalCleanup: [b'&O_ACUTE_lˠOnˠG&har]
+bóthar         -> [b'&O_ACUTE_lˠOnˠG&har]
+
+--- Transcribing: [oíche] ---
+After stage PreProcess: [ˈoíche]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈoí_CH_e]
+After stage ConsonantResolution: [ˈoíçe]
+After stage VowelsAndDiphthongs: [ˈ&AO_OI_LONG&çə]
+After stage StrongSonorantsEpenthesis: [ˈ&AO_OI_LONG&çə]
+After stage Diacritics: [ˈ&AO_OI_lˠOnˠG&çə]
+After stage FinalCleanup: [ˈ&AO_OI_lˠOnˠG&çə]
+oíche          -> [ˈ&AO_OI_lˠOnˠG&çə]
+
+--- Transcribing: [fear] ---
+After stage PreProcess: [fear]
+After stage MarkDigraphsAndVocalisationTriggers: [fear]
+After stage ConsonantResolution: [f'ear']
+After stage VowelsAndDiphthongs: [f'&EA_SLENDER_RPRIME&r']
+After stage StrongSonorantsEpenthesis: [f'&EA_SLENDER_RPRIME&r']
+After stage Diacritics: [f'&EA_SlˠEnˠDEɾˠ_ɾˠPɾˠImˠE&r']
+After stage FinalCleanup: [f'&EA_SlˠEnˠDEɾˠ_ɾˠPɾˠImˠE&r']
+fear            -> [f'&EA_SlˠEnˠDEɾˠ_ɾˠPɾˠImˠE&r']
+
+--- Transcribing: [glaic] ---
+After stage PreProcess: [glaic]
+After stage MarkDigraphsAndVocalisationTriggers: [glaic]
+After stage ConsonantResolution: [glaik']
+After stage VowelsAndDiphthongs: [glaik']
+After stage StrongSonorantsEpenthesis: [glaik']
+After stage Diacritics: [gl̪aik']
+After stage FinalCleanup: [gl̪aik']
+glaic           -> [gl̪aik']
+
+--- Transcribing: [muc] ---
+After stage PreProcess: [muc]
+After stage MarkDigraphsAndVocalisationTriggers: [muc]
+After stage ConsonantResolution: [muk]
+After stage VowelsAndDiphthongs: [m&U_SHORT_PRE_VELAR&k]
+After stage StrongSonorantsEpenthesis: [m&U_SHORT_PRE_VELAR&k]
+After stage Diacritics: [m&U_SHOɾˠT_PɾˠE_VElˠAɾˠ&k]
+After stage FinalCleanup: [m&U_SHOɾˠT_PɾˠE_VElˠAɾˠ&k]
+muc             -> [m&U_SHOɾˠT_PɾˠE_VElˠAɾˠ&k]
+
+--- Transcribing: [fliuch] ---
+After stage PreProcess: [fliuch]
+After stage MarkDigraphsAndVocalisationTriggers: [fliu_CH_]
+After stage ConsonantResolution: [f'liuç]
+After stage VowelsAndDiphthongs: [f'liɔç]
+After stage StrongSonorantsEpenthesis: [f'liɔç]
+After stage Diacritics: [f'l̪iɔç]
+After stage FinalCleanup: [f'l̪iɔç]
+fliuch          -> [f'l̪iɔç]
+
+--- Transcribing: [fada] ---
+After stage PreProcess: [fada]
+After stage MarkDigraphsAndVocalisationTriggers: [fada]
+After stage ConsonantResolution: [fada]
+After stage VowelsAndDiphthongs: [fadə]
+After stage StrongSonorantsEpenthesis: [fadə]
+After stage Diacritics: [fad̪ə]
+After stage FinalCleanup: [fad̪ə]
+fada            -> [fad̪ə]
+
+--- Transcribing: [beag] ---
+After stage PreProcess: [beag]
+After stage MarkDigraphsAndVocalisationTriggers: [beag]
+After stage ConsonantResolution: [b'eag']
+After stage VowelsAndDiphthongs: [b'eag']
+After stage StrongSonorantsEpenthesis: [b'eag']
+After stage Diacritics: [b'eag']
+After stage FinalCleanup: [b'eag']
+beag            -> [b'eag']
+
+--- Transcribing: [séimhiú] ---
+After stage PreProcess: [séimhiú]
+After stage MarkDigraphsAndVocalisationTriggers: [séi_MH_iú]
+After stage ConsonantResolution: [s'éiv'iú]
+After stage VowelsAndDiphthongs: [s'&E_ACUTE_I_LONG&v'&I_ACUTE_U_LONG&]
+After stage StrongSonorantsEpenthesis: [s'&E_ACUTE_I_LONG&v'&I_ACUTE_U_LONG&]
+After stage Diacritics: [s'&E_ACUTE_I_lˠOnˠG&v'&I_ACUTE_U_lˠOnˠG&]
+After stage FinalCleanup: [s'&E_ACUTE_I_lˠOnˠG&v'&I_ACUTE_U_lˠOnˠG&]
+séimhiú       -> [s'&E_ACUTE_I_lˠOnˠG&v'&I_ACUTE_U_lˠOnˠG&]
+
+--- Transcribing: [úrú] ---
+After stage PreProcess: [ˈúrú]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈúrú]
+After stage ConsonantResolution: [ˈúr'ú]
+After stage VowelsAndDiphthongs: [ˈ&U_ACUTE_LONG&r'&U_ACUTE_LONG&]
+After stage StrongSonorantsEpenthesis: [ˈ&U_ACUTE_LONG&r'&U_ACUTE_LONG&]
+After stage Diacritics: [ˈ&U_ACUTE_lˠOnˠG&r'&U_ACUTE_lˠOnˠG&]
+After stage FinalCleanup: [ˈ&U_ACUTE_lˠOnˠG&r'&U_ACUTE_lˠOnˠG&]
+úrú           -> [ˈ&U_ACUTE_lˠOnˠG&r'&U_ACUTE_lˠOnˠG&]
+
+--- Transcribing: [bacach] ---
+After stage PreProcess: [bacach]
+After stage MarkDigraphsAndVocalisationTriggers: [baca_CH_]
+After stage ConsonantResolution: [bakax_unstressed_final]
+After stage VowelsAndDiphthongs: [bakax_ɔnstressed_final]
+After stage StrongSonorantsEpenthesis: [bakax_ɔnstressed_final]
+After stage Diacritics: [bakax_ɔn̪st̪ressed̪_fin̪al̪]
+After stage FinalCleanup: [bakax_ɔn̪st̪ressed̪_fin̪al̪]
+bacach          -> [bakax_ɔn̪st̪ressed̪_fin̪al̪]
+
+--- Transcribing: [isteach] ---
+After stage PreProcess: [ˈisteach]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈistea_CH_]
+After stage ConsonantResolution: [ˈis't'eax_unstressed_final]
+After stage VowelsAndDiphthongs: [ˈis't'eax_ɔnstressed_final]
+After stage StrongSonorantsEpenthesis: [ˈis't'eax_ɔnstressed_final]
+After stage Diacritics: [ˈis't'eax_ɔn̪st̪ressed̪_fin̪al̪]
+After stage FinalCleanup: [ˈis't'eax_ɔn̪st̪ressed̪_fin̪al̪]
+isteach         -> [ˈis't'eax_ɔn̪st̪ressed̪_fin̪al̪]
+
+--- Transcribing: [baile] ---
+After stage PreProcess: [baile]
+After stage MarkDigraphsAndVocalisationTriggers: [baile]
+After stage ConsonantResolution: [baile]
+After stage VowelsAndDiphthongs: [b&AI_DIPH&lə]
+After stage StrongSonorantsEpenthesis: [b&AI_DIPH&lə]
+After stage Diacritics: [b&AI_DIPH&l̪ə]
+After stage FinalCleanup: [b&AI_DIPH&l̪ə]
+baile           -> [b&AI_DIPH&l̪ə]
+
+--- Transcribing: [duine] ---
+After stage PreProcess: [duine]
+After stage MarkDigraphsAndVocalisationTriggers: [duine]
+After stage ConsonantResolution: [duine]
+After stage VowelsAndDiphthongs: [d&UI_DIPH&nə]
+After stage StrongSonorantsEpenthesis: [d&UI_DIPH&nə]
+After stage Diacritics: [d̪&UI_DIPH&n̪ə]
+After stage FinalCleanup: [d̪&UI_DIPH&n̪ə]
+duine           -> [d̪&UI_DIPH&n̪ə]
+
+--- Transcribing: [gaeltacht] ---
+After stage PreProcess: [gaeltacht]
+After stage MarkDigraphsAndVocalisationTriggers: [gaelta_CH_t]
+After stage ConsonantResolution: [gaeltax_unstressed_finalt]
+After stage VowelsAndDiphthongs: [g&AE_SEQ&ltax_ɔnstressed_finalt]
+After stage StrongSonorantsEpenthesis: [g&AE_SEQ&ltax_ɔnstressed_finalt]
+After stage Diacritics: [g&AE_SEQ&l̪tax_ɔn̪st̪ressed̪_fin̪al̪t]
+After stage FinalCleanup: [g&AE_SEQ&l̪tax_ɔn̪st̪ressed̪_fin̪al̪t]
+Gaeltacht       -> [g&AE_SEQ&l̪tax_ɔn̪st̪ressed̪_fin̪al̪t]
+
+--- Transcribing: [conamara] ---
+After stage PreProcess: [conamara]
+After stage MarkDigraphsAndVocalisationTriggers: [conamara]
+After stage ConsonantResolution: [konamara]
+After stage VowelsAndDiphthongs: [kɔnamarə]
+After stage StrongSonorantsEpenthesis: [kɔnamarə]
+After stage Diacritics: [kɔn̪amarə]
+After stage FinalCleanup: [kɔn̪amarə]
+Conamara        -> [kɔn̪amarə]
+
+--- Transcribing: [gaeilge] ---
+After stage PreProcess: [gaeilge]
+After stage MarkDigraphsAndVocalisationTriggers: [gaeilge]
+After stage ConsonantResolution: [gaeilg'e]
+After stage VowelsAndDiphthongs: [g&AE_SEQ&ilg'i]
+After stage StrongSonorantsEpenthesis: [g&AE_SEQ&ilg'i]
+After stage Diacritics: [g&AE_SEQ&il̪g'i]
+After stage FinalCleanup: [g&AE_SEQ&il̪g'i]
+Gaeilge         -> [g&AE_SEQ&il̪g'i]
+
+--- Transcribing: [aoibhinn] ---
+After stage PreProcess: [ˈaoibhinn]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈaoi_BH_i_NN_]
+After stage ConsonantResolution: [ˈaoiv'iN']
+After stage VowelsAndDiphthongs: [ˈ&AO_OI_LONG&iv'iN']
+After stage StrongSonorantsEpenthesis: [ˈ&AO_OI_LONG&iv'iN']
+After stage Diacritics: [ˈ&AO_OI_lˠOnˠG&iv'iN']
+After stage FinalCleanup: [ˈ&AO_OI_lˠOnˠG&iv'iN']
+aoibhinn        -> [ˈ&AO_OI_lˠOnˠG&iv'iN']
+
+--- Transcribing: [buí] ---
+After stage PreProcess: [buí]
+After stage MarkDigraphsAndVocalisationTriggers: [buí]
+After stage ConsonantResolution: [buí]
+After stage VowelsAndDiphthongs: [bɔ&I_ACUTE_LONG&]
+After stage StrongSonorantsEpenthesis: [bɔ&I_ACUTE_LONG&]
+After stage Diacritics: [bɔ&I_ACUTE_lˠOnˠG&]
+After stage FinalCleanup: [bɔ&I_ACUTE_lˠOnˠG&]
+buí            -> [bɔ&I_ACUTE_lˠOnˠG&]
+
+--- Transcribing: [caol] ---
+After stage PreProcess: [caol]
+After stage MarkDigraphsAndVocalisationTriggers: [caol]
+After stage ConsonantResolution: [kaol]
+After stage VowelsAndDiphthongs: [k&AO_OI_LONG&l]
+After stage StrongSonorantsEpenthesis: [k&AO_OI_LONG&l]
+After stage Diacritics: [k&AO_OI_lˠOnˠG&l̪]
+After stage FinalCleanup: [k&AO_OI_lˠOnˠG&l̪]
+caol            -> [k&AO_OI_lˠOnˠG&l̪]
+
+--- Transcribing: [leathan] ---
+After stage PreProcess: [leathan]
+After stage MarkDigraphsAndVocalisationTriggers: [lea_TH_an]
+After stage ConsonantResolution: [leahan]
+After stage VowelsAndDiphthongs: [leahən]
+After stage StrongSonorantsEpenthesis: [leahən]
+After stage Diacritics: [l̪eahən̪]
+After stage FinalCleanup: [l̪eahən̪]
+leathan         -> [l̪eahən̪]
+
+--- Transcribing: [drochbhean] ---
+After stage PreProcess: [drochbhean]
+After stage MarkDigraphsAndVocalisationTriggers: [dro_CH__BH_ean]
+After stage ConsonantResolution: [droçv'ean]
+After stage VowelsAndDiphthongs: [drɔçv'eən]
+After stage StrongSonorantsEpenthesis: [drɔçv'eən]
+After stage Diacritics: [d̪rɔçv'eən̪]
+After stage FinalCleanup: [d̪rɔçv'eən̪]
+drochbhean      -> [d̪rɔçv'eən̪]
+
+--- Transcribing: [an-mhaith] ---
+After stage PreProcess: [ˈan-mhaith]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈan-_MH_ai_TH_]
+After stage ConsonantResolution: [ˈan-waih]
+After stage VowelsAndDiphthongs: [ˈan-w&AI_DIPH&h]
+After stage StrongSonorantsEpenthesis: [ˈan-w&AI_DIPH&h]
+After stage Diacritics: [ˈan̪-w&AI_DIPH&h]
+After stage FinalCleanup: [ˈan̪-w&AI_DIPH&h]
+an-mhaith       -> [ˈan̪-w&AI_DIPH&h]
+
+--- Transcribing: [fuinneog] ---
+After stage PreProcess: [fuinneog]
+After stage MarkDigraphsAndVocalisationTriggers: [fui_NN_eog]
+After stage ConsonantResolution: [fuiN'eog]
+After stage VowelsAndDiphthongs: [fuiN'&EO_SEQ&g]
+After stage StrongSonorantsEpenthesis: [fuiN'&EO_SEQ&g]
+After stage Diacritics: [fuiN'&EO_SEQ&g]
+After stage FinalCleanup: [fuiN'&EO_SEQ&g]
+fuinneog        -> [fuiN'&EO_SEQ&g]
+
+--- Transcribing: [oiliúint] ---
+After stage PreProcess: [ˈoiliúint]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈoiliúint]
+After stage ConsonantResolution: [ˈoiliúint']
+After stage VowelsAndDiphthongs: [ˈ&OI_DIPH&l&I_ACUTE_U_LONG&int']
+After stage StrongSonorantsEpenthesis: [ˈ&OI_DIPH&l&I_ACUTE_U_LONG&int']
+After stage Diacritics: [ˈ&OI_DIPH&l̪&I_ACUTE_U_lˠOnˠG&in̪t']
+After stage FinalCleanup: [ˈ&OI_DIPH&l̪&I_ACUTE_U_lˠOnˠG&in̪t']
+oiliúint       -> [ˈ&OI_DIPH&l̪&I_ACUTE_U_lˠOnˠG&in̪t']
+
+--- Transcribing: [staighre] ---
+After stage PreProcess: [staighre]
+After stage MarkDigraphsAndVocalisationTriggers: [st_VOCMARK_AIGH_re]
+After stage ConsonantResolution: [st_VOCMARK_AIGH_r'e]
+After stage VowelsAndDiphthongs: [st&VOC_AI_OI_GH_DH&r'i]
+After stage StrongSonorantsEpenthesis: [st&VOC_AI_OI_GH_DH&r'i]
+After stage Diacritics: [st&VOC_AI_OI_GH_DH&r'i]
+After stage FinalCleanup: [st&VOC_AI_OI_GH_DH&r'i]
+staighre        -> [st&VOC_AI_OI_GH_DH&r'i]
+
+--- Transcribing: [fios] ---
+After stage PreProcess: [fios]
+After stage MarkDigraphsAndVocalisationTriggers: [fios]
+After stage ConsonantResolution: [f'ios']
+After stage VowelsAndDiphthongs: [f'iɔs']
+After stage StrongSonorantsEpenthesis: [f'iɔs']
+After stage Diacritics: [f'iɔs']
+After stage FinalCleanup: [f'iɔs']
+fios            -> [f'iɔs']
+
+--- Transcribing: [dearg] ---
+After stage PreProcess: [dearg]
+After stage MarkDigraphsAndVocalisationTriggers: [dearg]
+After stage ConsonantResolution: [d'ear'g']
+After stage VowelsAndDiphthongs: [d'&EA_SLENDER_RPRIME&r'g']
+After stage StrongSonorantsEpenthesis: [d'&EA_SLENDER_RPRIME&r'g']
+After stage Diacritics: [d'&EA_SlˠEnˠDEɾˠ_ɾˠPɾˠImˠE&r'g']
+After stage FinalCleanup: [d'&EA_SlˠEnˠDEɾˠ_ɾˠPɾˠImˠE&r'g']
+dearg           -> [d'&EA_SlˠEnˠDEɾˠ_ɾˠPɾˠImˠE&r'g']
+
+--- Transcribing: [athbhliain] ---
+After stage PreProcess: [ˈathbhliain]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈa_TH__BH_liain]
+After stage ConsonantResolution: [ˈahv'liain]
+After stage VowelsAndDiphthongs: [ˈahv'l&IA_DIPH&in]
+After stage StrongSonorantsEpenthesis: [ˈahv'l&IA_DIPH&in]
+After stage Diacritics: [ˈahv'l̪&IA_DIPH&in̪]
+After stage FinalCleanup: [ˈahv'l̪&IA_DIPH&in̪]
+athbhliain      -> [ˈahv'l̪&IA_DIPH&in̪]
+
+--- Transcribing: [comhrá] ---
+After stage PreProcess: [comhrá]
+After stage MarkDigraphsAndVocalisationTriggers: [c_VOCMARK_OMH_rá]
+After stage ConsonantResolution: [k_VOCMARK_OMH_r'á]
+After stage VowelsAndDiphthongs: [k&VOC_OBH_OMH&r'&A_ACUTE_LONG&]
+After stage StrongSonorantsEpenthesis: [k&VOC_OBH_OMH&r'&A_ACUTE_LONG&]
+After stage Diacritics: [k&VOC_OBH_OmˠH&r'&A_ACUTE_lˠOnˠG&]
+After stage FinalCleanup: [k&VOC_OBH_OmˠH&r'&A_ACUTE_lˠOnˠG&]
+comhrá         -> [k&VOC_OBH_OmˠH&r'&A_ACUTE_lˠOnˠG&]
+
+--- Transcribing: [mícheart] ---
+After stage PreProcess: [mícheart]
+After stage MarkDigraphsAndVocalisationTriggers: [mí_CH_eart]
+After stage ConsonantResolution: [m'íçear't]
+After stage VowelsAndDiphthongs: [m'&I_ACUTE_LONG&ç&EA_SLENDER_RPRIME&r't]
+After stage StrongSonorantsEpenthesis: [m'&I_ACUTE_LONG&ç&EA_SLENDER_RPRIME&r't]
+After stage Diacritics: [m'&I_ACUTE_lˠOnˠG&ç&EA_SlˠEnˠDEɾˠ_ɾˠPɾˠImˠE&r't̪]
+After stage FinalCleanup: [m'&I_ACUTE_lˠOnˠG&ç&EA_SlˠEnˠDEɾˠ_ɾˠPɾˠImˠE&r't̪]
+mícheart       -> [m'&I_ACUTE_lˠOnˠG&ç&EA_SlˠEnˠDEɾˠ_ɾˠPɾˠImˠE&r't̪]
+
+--- Transcribing: [oícheanta] ---
+After stage PreProcess: [ˈoícheanta]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈoí_CH_eanta]
+After stage ConsonantResolution: [ˈoíçeanta]
+After stage VowelsAndDiphthongs: [ˈ&AO_OI_LONG&çeantə]
+After stage StrongSonorantsEpenthesis: [ˈ&AO_OI_LONG&çeantə]
+After stage Diacritics: [ˈ&AO_OI_lˠOnˠG&çean̪tə]
+After stage FinalCleanup: [ˈ&AO_OI_lˠOnˠG&çean̪tə]
+oícheanta      -> [ˈ&AO_OI_lˠOnˠG&çean̪tə]
+
+--- Transcribing: [codladh] ---
+After stage PreProcess: [codladh]
+After stage MarkDigraphsAndVocalisationTriggers: [codla_DH_]
+After stage ConsonantResolution: [kodlaɣ]
+After stage VowelsAndDiphthongs: [kɔdlaɣ]
+After stage StrongSonorantsEpenthesis: [kɔdlaɣ]
+After stage Diacritics: [kɔd̪laɣ]
+After stage FinalCleanup: [kɔd̪laɣ]
+codladh         -> [kɔd̪laɣ]
+
+--- Transcribing: [luigh] ---
+After stage PreProcess: [luigh]
+After stage MarkDigraphsAndVocalisationTriggers: [l_VOCMARK_UIGH_]
+After stage ConsonantResolution: [l_VOCMARK_UIGH_]
+After stage VowelsAndDiphthongs: [l&VOC_UI_GH_DH&]
+After stage StrongSonorantsEpenthesis: [l&VOC_UI_GH_DH&]
+After stage Diacritics: [l̪&VOC_UI_GH_DH&]
+After stage FinalCleanup: [l̪&VOC_UI_GH_DH&]
+luigh           -> [l̪&VOC_UI_GH_DH&]
+
+--- Transcribing: [fiche] ---
+After stage PreProcess: [fiche]
+After stage MarkDigraphsAndVocalisationTriggers: [fi_CH_e]
+After stage ConsonantResolution: [f'içe]
+After stage VowelsAndDiphthongs: [f'içe]
+After stage StrongSonorantsEpenthesis: [f'içe]
+After stage Diacritics: [f'içe]
+After stage FinalCleanup: [f'içe]
+fiche           -> [f'içe]
+
+--- Transcribing: [duchaise] ---
+After stage PreProcess: [duchaise]
+After stage MarkDigraphsAndVocalisationTriggers: [du_CH_aise]
+After stage ConsonantResolution: [duxais'e]
+After stage VowelsAndDiphthongs: [d&U_SHORT_PRE_VELAR&x&AI_DIPH&s'i]
+After stage StrongSonorantsEpenthesis: [d&U_SHORT_PRE_VELAR&x&AI_DIPH&s'i]
+After stage Diacritics: [d̪&U_SHOɾˠT_PɾˠE_VElˠAɾˠ&x&AI_DIPH&s'i]
+After stage FinalCleanup: [d̪&U_SHOɾˠT_PɾˠE_VElˠAɾˠ&x&AI_DIPH&s'i]
+duchaise        -> [d̪&U_SHOɾˠT_PɾˠE_VElˠAɾˠ&x&AI_DIPH&s'i]
+
+--- Transcribing: [saibhir] ---
+After stage PreProcess: [saibhir]
+After stage MarkDigraphsAndVocalisationTriggers: [sai_BH_ir]
+After stage ConsonantResolution: [saiv'ir']
+After stage VowelsAndDiphthongs: [s&AI_DIPH&v'ir']
+After stage StrongSonorantsEpenthesis: [s&AI_DIPH&v'ir']
+After stage Diacritics: [s&AI_DIPH&v'ir']
+After stage FinalCleanup: [s&AI_DIPH&v'ir']
+saibhir         -> [s&AI_DIPH&v'ir']
+
+--- Transcribing: [deacair] ---
+After stage PreProcess: [deacair]
+After stage MarkDigraphsAndVocalisationTriggers: [deacair]
+After stage ConsonantResolution: [d'eakair']
+After stage VowelsAndDiphthongs: [d'eakair']
+After stage StrongSonorantsEpenthesis: [d'eakair']
+After stage Diacritics: [d'eakair']
+After stage FinalCleanup: [d'eakair']
+deacair         -> [d'eakair']
+
+--- Transcribing: [sláinte] ---
+After stage PreProcess: [sláinte]
+After stage MarkDigraphsAndVocalisationTriggers: [sláinte]
+After stage ConsonantResolution: [s'láint'e]
+After stage VowelsAndDiphthongs: [s'l&A_ACUTE_LONG&int'i]
+After stage StrongSonorantsEpenthesis: [s'l&A_ACUTE_LONG&int'i]
+After stage Diacritics: [s'l̪&A_ACUTE_lˠOnˠG&in̪t'i]
+After stage FinalCleanup: [s'l̪&A_ACUTE_lˠOnˠG&in̪t'i]
+sláinte        -> [s'l̪&A_ACUTE_lˠOnˠG&in̪t'i]
+
+--- Transcribing: [ceart] ---
+After stage PreProcess: [ceart]
+After stage MarkDigraphsAndVocalisationTriggers: [ceart]
+After stage ConsonantResolution: [k'ear't]
+After stage VowelsAndDiphthongs: [k'&EA_SLENDER_RPRIME&r't]
+After stage StrongSonorantsEpenthesis: [k'&EA_SLENDER_RPRIME&r't]
+After stage Diacritics: [k'&EA_SlˠEnˠDEɾˠ_ɾˠPɾˠImˠE&r't̪]
+After stage FinalCleanup: [k'&EA_SlˠEnˠDEɾˠ_ɾˠPɾˠImˠE&r't̪]
+ceart           -> [k'&EA_SlˠEnˠDEɾˠ_ɾˠPɾˠImˠE&r't̪]
+
+--- Transcribing: [lae] ---
+After stage PreProcess: [lae]
+After stage MarkDigraphsAndVocalisationTriggers: [lae]
+After stage ConsonantResolution: [lae]
+After stage VowelsAndDiphthongs: [l&AE_SEQ&]
+After stage StrongSonorantsEpenthesis: [l&AE_SEQ&]
+After stage Diacritics: [l̪&AE_SEQ&]
+After stage FinalCleanup: [l̪&AE_SEQ&]
+lae             -> [l̪&AE_SEQ&]
+
+--- Transcribing: [laoch] ---
+After stage PreProcess: [laoch]
+After stage MarkDigraphsAndVocalisationTriggers: [lao_CH_]
+After stage ConsonantResolution: [laox]
+After stage VowelsAndDiphthongs: [l&AO_OI_LONG&x]
+After stage StrongSonorantsEpenthesis: [l&AO_OI_LONG&x]
+After stage Diacritics: [l̪&AO_OI_lˠOnˠG&x]
+After stage FinalCleanup: [l̪&AO_OI_lˠOnˠG&x]
+laoch           -> [l̪&AO_OI_lˠOnˠG&x]
+
+--- Transcribing: [aer] ---
+After stage PreProcess: [ˈaer]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈaer]
+After stage ConsonantResolution: [ˈaer']
+After stage VowelsAndDiphthongs: [ˈ&AE_SEQ&r']
+After stage StrongSonorantsEpenthesis: [ˈ&AE_SEQ&r']
+After stage Diacritics: [ˈ&AE_SEQ&r']
+After stage FinalCleanup: [ˈ&AE_SEQ&r']
+aer             -> [ˈ&AE_SEQ&r']
+
+--- Transcribing: [ceo] ---
+After stage PreProcess: [ceo]
+After stage MarkDigraphsAndVocalisationTriggers: [ceo]
+After stage ConsonantResolution: [k'eo]
+After stage VowelsAndDiphthongs: [k'&EO_SEQ&]
+After stage StrongSonorantsEpenthesis: [k'&EO_SEQ&]
+After stage Diacritics: [k'&EO_SEQ&]
+After stage FinalCleanup: [k'&EO_SEQ&]
+ceo             -> [k'&EO_SEQ&]
+
+--- Transcribing: [ceol] ---
+After stage PreProcess: [ceol]
+After stage MarkDigraphsAndVocalisationTriggers: [ceol]
+After stage ConsonantResolution: [k'eol]
+After stage VowelsAndDiphthongs: [k'&EO_SEQ&l]
+After stage StrongSonorantsEpenthesis: [k'&EO_SEQ&l]
+After stage Diacritics: [k'&EO_SEQ&l̪]
+After stage FinalCleanup: [k'&EO_SEQ&l̪]
+ceol            -> [k'&EO_SEQ&l̪]
+
+--- Transcribing: [coir] ---
+After stage PreProcess: [coir]
+After stage MarkDigraphsAndVocalisationTriggers: [coir]
+After stage ConsonantResolution: [koir']
+After stage VowelsAndDiphthongs: [koir']
+After stage StrongSonorantsEpenthesis: [koir']
+After stage Diacritics: [koir']
+After stage FinalCleanup: [koir']
+coir            -> [koir']
+
+--- Transcribing: [coill] ---
+After stage PreProcess: [coill]
+After stage MarkDigraphsAndVocalisationTriggers: [coi_LL_]
+After stage ConsonantResolution: [koiL']
+After stage VowelsAndDiphthongs: [koiL']
+After stage StrongSonorantsEpenthesis: [koiL']
+After stage Diacritics: [koiL']
+After stage FinalCleanup: [koiL']
+coill           -> [koiL']
+
+--- Transcribing: [faoi] ---
+After stage PreProcess: [faoi]
+After stage MarkDigraphsAndVocalisationTriggers: [faoi]
+After stage ConsonantResolution: [faoi]
+After stage VowelsAndDiphthongs: [f&AO_OI_LONG&i]
+After stage StrongSonorantsEpenthesis: [f&AO_OI_LONG&i]
+After stage Diacritics: [f&AO_OI_lˠOnˠG&i]
+After stage FinalCleanup: [f&AO_OI_lˠOnˠG&i]
+faoi            -> [f&AO_OI_lˠOnˠG&i]
+
+--- Transcribing: [gaoth] ---
+After stage PreProcess: [gaoth]
+After stage MarkDigraphsAndVocalisationTriggers: [gao_TH_]
+After stage ConsonantResolution: [gaoh]
+After stage VowelsAndDiphthongs: [g&AO_OI_LONG&h]
+After stage StrongSonorantsEpenthesis: [g&AO_OI_LONG&h]
+After stage Diacritics: [g&AO_OI_lˠOnˠG&h]
+After stage FinalCleanup: [g&AO_OI_lˠOnˠG&h]
+gaoth           -> [g&AO_OI_lˠOnˠG&h]
+
+--- Transcribing: [bádaí] ---
+After stage PreProcess: [bádaí]
+After stage MarkDigraphsAndVocalisationTriggers: [bádaí]
+After stage ConsonantResolution: [b'ádaí]
+After stage VowelsAndDiphthongs: [b'&A_ACUTE_LONG&diː]
+After stage StrongSonorantsEpenthesis: [b'&A_ACUTE_LONG&diː]
+After stage Diacritics: [b'&A_ACUTE_lˠOnˠG&d̪iː]
+After stage FinalCleanup: [b'&A_ACUTE_lˠOnˠG&d̪iː]
+bádaí         -> [b'&A_ACUTE_lˠOnˠG&d̪iː]
+
+--- Transcribing: [capaillí] ---
+After stage PreProcess: [capaillí]
+After stage MarkDigraphsAndVocalisationTriggers: [capai_LL_í]
+After stage ConsonantResolution: [kapaiL'í]
+After stage VowelsAndDiphthongs: [kapaiL'&I_ACUTE_LONG&]
+After stage StrongSonorantsEpenthesis: [kapaiL'&I_ACUTE_LONG&]
+After stage Diacritics: [kapaiL'&I_ACUTE_lˠOnˠG&]
+After stage FinalCleanup: [kapaiL'&I_ACUTE_lˠOnˠG&]
+capaillí       -> [kapaiL'&I_ACUTE_lˠOnˠG&]
+
+--- Transcribing: [foclaí] ---
+After stage PreProcess: [foclaí]
+After stage MarkDigraphsAndVocalisationTriggers: [foclaí]
+After stage ConsonantResolution: [foklaí]
+After stage VowelsAndDiphthongs: [fɔkliː]
+After stage StrongSonorantsEpenthesis: [fɔkliː]
+After stage Diacritics: [fɔkl̪iː]
+After stage FinalCleanup: [fɔkl̪iː]
+foclaí         -> [fɔkl̪iː]
+
+--- Transcribing: [brógaí] ---
+After stage PreProcess: [brógaí]
+After stage MarkDigraphsAndVocalisationTriggers: [brógaí]
+After stage ConsonantResolution: [b'r'ógaí]
+After stage VowelsAndDiphthongs: [b'r'&O_ACUTE_LONG&giː]
+After stage StrongSonorantsEpenthesis: [b'r'&O_ACUTE_LONG&giː]
+After stage Diacritics: [b'r'&O_ACUTE_lˠOnˠG&giː]
+After stage FinalCleanup: [b'r'&O_ACUTE_lˠOnˠG&giː]
+brógaí        -> [b'r'&O_ACUTE_lˠOnˠG&giː]
+
+--- Transcribing: [dearmad] ---
+After stage PreProcess: [dearmad]
+After stage MarkDigraphsAndVocalisationTriggers: [dearmad]
+After stage ConsonantResolution: [d'earmad]
+After stage VowelsAndDiphthongs: [d'earmad]
+After stage StrongSonorantsEpenthesis: [d'earmad]
+After stage Diacritics: [d'earmad̪]
+After stage FinalCleanup: [d'earmad̪]
+dearmad         -> [d'earmad̪]
+
+--- Transcribing: [seomraí] ---
+After stage PreProcess: [seomraí]
+After stage MarkDigraphsAndVocalisationTriggers: [seomraí]
+After stage ConsonantResolution: [s'eomraí]
+After stage VowelsAndDiphthongs: [s'&EO_SEQ&mriː]
+After stage StrongSonorantsEpenthesis: [s'&EO_SEQ&mriː]
+After stage Diacritics: [s'&EO_SEQ&mriː]
+After stage FinalCleanup: [s'&EO_SEQ&mriː]
+seomraí        -> [s'&EO_SEQ&mriː]
+
+--- Transcribing: [doras] ---
+After stage PreProcess: [doras]
+After stage MarkDigraphsAndVocalisationTriggers: [doras]
+After stage ConsonantResolution: [doras]
+After stage VowelsAndDiphthongs: [dɔras]
+After stage StrongSonorantsEpenthesis: [dɔras]
+After stage Diacritics: [d̪ɔras]
+After stage FinalCleanup: [d̪ɔras]
+doras           -> [d̪ɔras]
+
+--- Transcribing: [amhrán] ---
+After stage PreProcess: [ˈamhrán]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈ_VOCMARK_AMH_rán]
+After stage ConsonantResolution: [ˈ_VOCMARK_AMH_r'án]
+After stage VowelsAndDiphthongs: [ˈ&VOC_ABH_AMH&r'&A_ACUTE_LONG&n]
+After stage StrongSonorantsEpenthesis: [ˈ&VOC_ABH_AMH&r'&A_ACUTE_LONG&n]
+After stage Diacritics: [ˈ&VOC_ABH_AmˠH&r'&A_ACUTE_lˠOnˠG&n̪]
+After stage FinalCleanup: [ˈ&VOC_ABH_AmˠH&r'&A_ACUTE_lˠOnˠG&n̪]
+amhrán         -> [ˈ&VOC_ABH_AmˠH&r'&A_ACUTE_lˠOnˠG&n̪]
+
+--- Transcribing: [banríon] ---
+After stage PreProcess: [banríon]
+After stage MarkDigraphsAndVocalisationTriggers: [banríon]
+After stage ConsonantResolution: [banr'íon]
+After stage VowelsAndDiphthongs: [banr'&I_ACUTE_LONG&ɔn]
+After stage StrongSonorantsEpenthesis: [banr'&I_ACUTE_LONG&ɔn]
+After stage Diacritics: [ban̪r'&I_ACUTE_lˠOnˠG&ɔn̪]
+After stage FinalCleanup: [ban̪r'&I_ACUTE_lˠOnˠG&ɔn̪]
+Banríon        -> [ban̪r'&I_ACUTE_lˠOnˠG&ɔn̪]
+
+--- Transcribing: [dearcadh] ---
+After stage PreProcess: [dearcadh]
+After stage MarkDigraphsAndVocalisationTriggers: [dearca_DH_]
+After stage ConsonantResolution: [d'earkaɣ]
+After stage VowelsAndDiphthongs: [d'earkaɣ]
+After stage StrongSonorantsEpenthesis: [d'earkaɣ]
+After stage Diacritics: [d'earkaɣ]
+After stage FinalCleanup: [d'earkaɣ]
+dearcadh        -> [d'earkaɣ]
+
+--- Transcribing: [dearfa] ---
+After stage PreProcess: [dearfa]
+After stage MarkDigraphsAndVocalisationTriggers: [dearfa]
+After stage ConsonantResolution: [d'earfa]
+After stage VowelsAndDiphthongs: [d'earfə]
+After stage StrongSonorantsEpenthesis: [d'earfə]
+After stage Diacritics: [d'earfə]
+After stage FinalCleanup: [d'earfə]
+dearfa          -> [d'earfə]
+
+--- Transcribing: [mí-ádh] ---
+After stage PreProcess: [mí-ádh]
+After stage MarkDigraphsAndVocalisationTriggers: [mí-á_DH_]
+After stage ConsonantResolution: [m'í-áɣ]
+After stage VowelsAndDiphthongs: [m'&I_ACUTE_LONG&-&A_ACUTE_LONG&ɣ]
+After stage StrongSonorantsEpenthesis: [m'&I_ACUTE_LONG&-&A_ACUTE_LONG&ɣ]
+After stage Diacritics: [m'&I_ACUTE_lˠOnˠG&-&A_ACUTE_lˠOnˠG&ɣ]
+After stage FinalCleanup: [m'&I_ACUTE_lˠOnˠG&-&A_ACUTE_lˠOnˠG&ɣ]
+mí-ádh        -> [m'&I_ACUTE_lˠOnˠG&-&A_ACUTE_lˠOnˠG&ɣ]
+
+--- Transcribing: [droch-obair] ---
+After stage PreProcess: [droch-obair]
+After stage MarkDigraphsAndVocalisationTriggers: [dro_CH_-obair]
+After stage ConsonantResolution: [drox-obair']
+After stage VowelsAndDiphthongs: [drɔx-ɔbair']
+After stage StrongSonorantsEpenthesis: [drɔx-ɔbair']
+After stage Diacritics: [d̪rɔx-ɔbair']
+After stage FinalCleanup: [d̪rɔx-ɔbair']
+droch-obair     -> [d̪rɔx-ɔbair']
+
+--- Transcribing: [seanbhean] ---
+After stage PreProcess: [seanbhean]
+After stage MarkDigraphsAndVocalisationTriggers: [sean_BH_ean]
+After stage ConsonantResolution: [s'eanv'ean]
+After stage VowelsAndDiphthongs: [s'eanv'eən]
+After stage StrongSonorantsEpenthesis: [s'eanv'eən]
+After stage Diacritics: [s'ean̪v'eən̪]
+After stage FinalCleanup: [s'ean̪v'eən̪]
+seanbhean       -> [s'ean̪v'eən̪]
+
+--- Transcribing: [fíoruisce] ---
+After stage PreProcess: [fíoruisce]
+After stage MarkDigraphsAndVocalisationTriggers: [fíoruisce]
+After stage ConsonantResolution: [f'íoruis'k'e]
+After stage VowelsAndDiphthongs: [f'&I_ACUTE_LONG&ɔruis'k'i]
+After stage StrongSonorantsEpenthesis: [f'&I_ACUTE_LONG&ɔruis'k'i]
+After stage Diacritics: [f'&I_ACUTE_lˠOnˠG&ɔruis'k'i]
+After stage FinalCleanup: [f'&I_ACUTE_lˠOnˠG&ɔruis'k'i]
+fíoruisce      -> [f'&I_ACUTE_lˠOnˠG&ɔruis'k'i]
+
+--- Transcribing: [athchúrsáil] ---
+After stage PreProcess: [ˈathchúrsáil]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈa_TH__CH_úrsáil]
+After stage ConsonantResolution: [ˈahçúr's'áil]
+After stage VowelsAndDiphthongs: [ˈahç&U_ACUTE_LONG&r's'&A_ACUTE_LONG&il]
+After stage StrongSonorantsEpenthesis: [ˈahç&U_ACUTE_LONG&r's'&A_ACUTE_LONG&il]
+After stage Diacritics: [ˈahç&U_ACUTE_lˠOnˠG&r's'&A_ACUTE_lˠOnˠG&il̪]
+After stage FinalCleanup: [ˈahç&U_ACUTE_lˠOnˠG&r's'&A_ACUTE_lˠOnˠG&il̪]
+athchúrsáil   -> [ˈahç&U_ACUTE_lˠOnˠG&r's'&A_ACUTE_lˠOnˠG&il̪]
+
+--- Transcribing: [an-fear] ---
+After stage PreProcess: [ˈan-fear]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈan-fear]
+After stage ConsonantResolution: [ˈan-f'ear']
+After stage VowelsAndDiphthongs: [ˈan-f'&EA_SLENDER_RPRIME&r']
+After stage StrongSonorantsEpenthesis: [ˈan-f'&EA_SLENDER_RPRIME&r']
+After stage Diacritics: [ˈan̪-f'&EA_SlˠEnˠDEɾˠ_ɾˠPɾˠImˠE&r']
+After stage FinalCleanup: [ˈan̪-f'&EA_SlˠEnˠDEɾˠ_ɾˠPɾˠImˠE&r']
+an-fear         -> [ˈan̪-f'&EA_SlˠEnˠDEɾˠ_ɾˠPɾˠImˠE&r']
+
+--- Transcribing: [an-oíche] ---
+After stage PreProcess: [ˈan-oíche]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈan-oí_CH_e]
+After stage ConsonantResolution: [ˈan-oíçe]
+After stage VowelsAndDiphthongs: [ˈan-&AO_OI_LONG&çə]
+After stage StrongSonorantsEpenthesis: [ˈan-&AO_OI_LONG&çə]
+After stage Diacritics: [ˈan̪-&AO_OI_lˠOnˠG&çə]
+After stage FinalCleanup: [ˈan̪-&AO_OI_lˠOnˠG&çə]
+an-oíche       -> [ˈan̪-&AO_OI_lˠOnˠG&çə]
+
+--- Transcribing: [fearg] ---
+After stage PreProcess: [fearg]
+After stage MarkDigraphsAndVocalisationTriggers: [fearg]
+After stage ConsonantResolution: [f'ear'g']
+After stage VowelsAndDiphthongs: [f'&EA_SLENDER_RPRIME&r'g']
+After stage StrongSonorantsEpenthesis: [f'&EA_SLENDER_RPRIME&r'g']
+After stage Diacritics: [f'&EA_SlˠEnˠDEɾˠ_ɾˠPɾˠImˠE&r'g']
+After stage FinalCleanup: [f'&EA_SlˠEnˠDEɾˠ_ɾˠPɾˠImˠE&r'g']
+fearg           -> [f'&EA_SlˠEnˠDEɾˠ_ɾˠPɾˠImˠE&r'g']
+
+--- Transcribing: [beart] ---
+After stage PreProcess: [beart]
+After stage MarkDigraphsAndVocalisationTriggers: [beart]
+After stage ConsonantResolution: [b'ear't]
+After stage VowelsAndDiphthongs: [b'&EA_SLENDER_RPRIME&r't]
+After stage StrongSonorantsEpenthesis: [b'&EA_SLENDER_RPRIME&r't]
+After stage Diacritics: [b'&EA_SlˠEnˠDEɾˠ_ɾˠPɾˠImˠE&r't̪]
+After stage FinalCleanup: [b'&EA_SlˠEnˠDEɾˠ_ɾˠPɾˠImˠE&r't̪]
+beart           -> [b'&EA_SlˠEnˠDEɾˠ_ɾˠPɾˠImˠE&r't̪]
+
+--- Transcribing: [bean] ---
+After stage PreProcess: [bean]
+After stage MarkDigraphsAndVocalisationTriggers: [bean]
+After stage ConsonantResolution: [b'ean]
+After stage VowelsAndDiphthongs: [b'eən]
+After stage StrongSonorantsEpenthesis: [b'eən]
+After stage Diacritics: [b'eən̪]
+After stage FinalCleanup: [b'eən̪]
+bean            -> [b'eən̪]
+
+--- Transcribing: [geal] ---
+After stage PreProcess: [geal]
+After stage MarkDigraphsAndVocalisationTriggers: [geal]
+After stage ConsonantResolution: [g'eal]
+After stage VowelsAndDiphthongs: [g'eal]
+After stage StrongSonorantsEpenthesis: [g'eal]
+After stage Diacritics: [g'eal̪]
+After stage FinalCleanup: [g'eal̪]
+geal            -> [g'eal̪]
+
+--- Transcribing: [eagla] ---
+After stage PreProcess: [ˈeagla]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈeagla]
+After stage ConsonantResolution: [ˈeagla]
+After stage VowelsAndDiphthongs: [ˈeaglə]
+After stage StrongSonorantsEpenthesis: [ˈeaglə]
+After stage Diacritics: [ˈeagl̪ə]
+After stage FinalCleanup: [ˈeagl̪ə]
+eagla           -> [ˈeagl̪ə]
+
+--- Transcribing: [muid] ---
+After stage PreProcess: [muid]
+After stage MarkDigraphsAndVocalisationTriggers: [muid]
+After stage ConsonantResolution: [muid']
+After stage VowelsAndDiphthongs: [muid']
+After stage StrongSonorantsEpenthesis: [muid']
+After stage Diacritics: [muid']
+After stage FinalCleanup: [muid']
+muid            -> [muid']
+
+--- Transcribing: [duit] ---
+After stage PreProcess: [duit]
+After stage MarkDigraphsAndVocalisationTriggers: [duit]
+After stage ConsonantResolution: [duit']
+After stage VowelsAndDiphthongs: [duit']
+After stage StrongSonorantsEpenthesis: [duit']
+After stage Diacritics: [d̪uit']
+After stage FinalCleanup: [d̪uit']
+duit            -> [d̪uit']
+
+--- Transcribing: [fuil] ---
+After stage PreProcess: [fuil]
+After stage MarkDigraphsAndVocalisationTriggers: [fuil]
+After stage ConsonantResolution: [fuil]
+After stage VowelsAndDiphthongs: [f&UI_DIPH&l]
+After stage StrongSonorantsEpenthesis: [f&UI_DIPH&l]
+After stage Diacritics: [f&UI_DIPH&l̪]
+After stage FinalCleanup: [f&UI_DIPH&l̪]
+fuil            -> [f&UI_DIPH&l̪]
+
+--- Transcribing: [goil] ---
+After stage PreProcess: [goil]
+After stage MarkDigraphsAndVocalisationTriggers: [goil]
+After stage ConsonantResolution: [goil]
+After stage VowelsAndDiphthongs: [g&OI_DIPH&l]
+After stage StrongSonorantsEpenthesis: [g&OI_DIPH&l]
+After stage Diacritics: [g&OI_DIPH&l̪]
+After stage FinalCleanup: [g&OI_DIPH&l̪]
+goil            -> [g&OI_DIPH&l̪]
+
+--- Transcribing: [buil] ---
+After stage PreProcess: [buil]
+After stage MarkDigraphsAndVocalisationTriggers: [buil]
+After stage ConsonantResolution: [buil]
+After stage VowelsAndDiphthongs: [b&UI_DIPH&l]
+After stage StrongSonorantsEpenthesis: [b&UI_DIPH&l]
+After stage Diacritics: [b&UI_DIPH&l̪]
+After stage FinalCleanup: [b&UI_DIPH&l̪]
+buil            -> [b&UI_DIPH&l̪]
+
+--- Transcribing: [cuir] ---
+After stage PreProcess: [cuir]
+After stage MarkDigraphsAndVocalisationTriggers: [cuir]
+After stage ConsonantResolution: [kuir']
+After stage VowelsAndDiphthongs: [kuir']
+After stage StrongSonorantsEpenthesis: [kuir']
+After stage Diacritics: [kuir']
+After stage FinalCleanup: [kuir']
+cuir            -> [kuir']
+
+--- Transcribing: [druid] ---
+After stage PreProcess: [druid]
+After stage MarkDigraphsAndVocalisationTriggers: [druid]
+After stage ConsonantResolution: [druid']
+After stage VowelsAndDiphthongs: [druid']
+After stage StrongSonorantsEpenthesis: [druid']
+After stage Diacritics: [d̪ruid']
+After stage FinalCleanup: [d̪ruid']
+druid           -> [d̪ruid']
+
+--- Transcribing: [luibh] ---
+After stage PreProcess: [luibh]
+After stage MarkDigraphsAndVocalisationTriggers: [lui_BH_]
+After stage ConsonantResolution: [luiv']
+After stage VowelsAndDiphthongs: [l&UI_DIPH&v']
+After stage StrongSonorantsEpenthesis: [l&UI_DIPH&v']
+After stage Diacritics: [l̪&UI_DIPH&v']
+After stage FinalCleanup: [l̪&UI_DIPH&v']
+luibh           -> [l̪&UI_DIPH&v']
+
+--- Transcribing: [ceist] ---
+After stage PreProcess: [ceist]
+After stage MarkDigraphsAndVocalisationTriggers: [ceist]
+After stage ConsonantResolution: [k'eis't']
+After stage VowelsAndDiphthongs: [k'&EI_DIPH&s't']
+After stage StrongSonorantsEpenthesis: [k'&EI_DIPH&s't']
+After stage Diacritics: [k'&EI_DIPH&s't']
+After stage FinalCleanup: [k'&EI_DIPH&s't']
+ceist           -> [k'&EI_DIPH&s't']
+
+--- Transcribing: [ocht] ---
+After stage PreProcess: [ˈocht]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈo_CH_t]
+After stage ConsonantResolution: [ˈoxt]
+After stage VowelsAndDiphthongs: [ˈɔxt]
+After stage StrongSonorantsEpenthesis: [ˈɔxt]
+After stage Diacritics: [ˈɔxt̪]
+After stage FinalCleanup: [ˈɔxt̪]
+ocht            -> [ˈɔxt̪]
+
+--- Transcribing: [páiste] ---
+After stage PreProcess: [páiste]
+After stage MarkDigraphsAndVocalisationTriggers: [páiste]
+After stage ConsonantResolution: [p'áis't'e]
+After stage VowelsAndDiphthongs: [p'áis't'i]
+After stage StrongSonorantsEpenthesis: [p'áis't'i]
+After stage Diacritics: [p'áis't'i]
+After stage FinalCleanup: [p'áis't'i]
+páiste         -> [p'áis't'i]
+
+--- Transcribing: [sparán] ---
+After stage PreProcess: [sparán]
+After stage MarkDigraphsAndVocalisationTriggers: [sparán]
+After stage ConsonantResolution: [spar'án]
+After stage VowelsAndDiphthongs: [sper'&A_ACUTE_LONG&n]
+After stage StrongSonorantsEpenthesis: [sper'&A_ACUTE_LONG&n]
+After stage Diacritics: [sper'&A_ACUTE_lˠOnˠG&n̪]
+After stage FinalCleanup: [sper'&A_ACUTE_lˠOnˠG&n̪]
+sparán         -> [sper'&A_ACUTE_lˠOnˠG&n̪]
+
+--- Transcribing: [scéal] ---
+After stage PreProcess: [scéal]
+After stage MarkDigraphsAndVocalisationTriggers: [scéal]
+After stage ConsonantResolution: [s'k'éal]
+After stage VowelsAndDiphthongs: [s'k'&E_ACUTE_LONG&al]
+After stage StrongSonorantsEpenthesis: [s'k'&E_ACUTE_LONG&al]
+After stage Diacritics: [s'k'&E_ACUTE_lˠOnˠG&al̪]
+After stage FinalCleanup: [s'k'&E_ACUTE_lˠOnˠG&al̪]
+scéal          -> [s'k'&E_ACUTE_lˠOnˠG&al̪]
+
+--- Transcribing: [bláth] ---
+After stage PreProcess: [bláth]
+After stage MarkDigraphsAndVocalisationTriggers: [blá_TH_]
+After stage ConsonantResolution: [b'láh]
+After stage VowelsAndDiphthongs: [b'l&A_ACUTE_LONG&h]
+After stage StrongSonorantsEpenthesis: [b'l&A_ACUTE_LONG&h]
+After stage Diacritics: [b'l̪&A_ACUTE_lˠOnˠG&h]
+After stage FinalCleanup: [b'l̪&A_ACUTE_lˠOnˠG&h]
+bláth          -> [b'l̪&A_ACUTE_lˠOnˠG&h]
+
+--- Transcribing: [cnoc] ---
+After stage PreProcess: [cnoc]
+After stage MarkDigraphsAndVocalisationTriggers: [cnoc]
+After stage ConsonantResolution: [knok]
+After stage VowelsAndDiphthongs: [knɔk]
+After stage StrongSonorantsEpenthesis: [knɔk]
+After stage Diacritics: [kn̪ɔk]
+After stage FinalCleanup: [kn̪ɔk]
+cnoc            -> [kn̪ɔk]
+
+--- Transcribing: [gnó] ---
+After stage PreProcess: [gnó]
+After stage MarkDigraphsAndVocalisationTriggers: [gnó]
+After stage ConsonantResolution: [g'nó]
+After stage VowelsAndDiphthongs: [g'n&O_ACUTE_LONG&]
+After stage StrongSonorantsEpenthesis: [g'n&O_ACUTE_LONG&]
+After stage Diacritics: [g'n̪&O_ACUTE_lˠOnˠG&]
+After stage FinalCleanup: [g'n̪&O_ACUTE_lˠOnˠG&]
+gnó            -> [g'n̪&O_ACUTE_lˠOnˠG&]
+
+--- Transcribing: [dlí] ---
+After stage PreProcess: [dlí]
+After stage MarkDigraphsAndVocalisationTriggers: [dlí]
+After stage ConsonantResolution: [d'lí]
+After stage VowelsAndDiphthongs: [d'l&I_ACUTE_LONG&]
+After stage StrongSonorantsEpenthesis: [d'l&I_ACUTE_LONG&]
+After stage Diacritics: [d'l̪&I_ACUTE_lˠOnˠG&]
+After stage FinalCleanup: [d'l̪&I_ACUTE_lˠOnˠG&]
+dlí            -> [d'l̪&I_ACUTE_lˠOnˠG&]
+
+--- Transcribing: [mná] ---
+After stage PreProcess: [mná]
+After stage MarkDigraphsAndVocalisationTriggers: [mná]
+After stage ConsonantResolution: [m'ná]
+After stage VowelsAndDiphthongs: [m'n&A_ACUTE_LONG&]
+After stage StrongSonorantsEpenthesis: [m'n&A_ACUTE_LONG&]
+After stage Diacritics: [m'n̪&A_ACUTE_lˠOnˠG&]
+After stage FinalCleanup: [m'n̪&A_ACUTE_lˠOnˠG&]
+mná            -> [m'n̪&A_ACUTE_lˠOnˠG&]
+
+--- Transcribing: [trá] ---
+After stage PreProcess: [trá]
+After stage MarkDigraphsAndVocalisationTriggers: [trá]
+After stage ConsonantResolution: [t'r'á]
+After stage VowelsAndDiphthongs: [t'r'&A_ACUTE_LONG&]
+After stage StrongSonorantsEpenthesis: [t'r'&A_ACUTE_LONG&]
+After stage Diacritics: [t'r'&A_ACUTE_lˠOnˠG&]
+After stage FinalCleanup: [t'r'&A_ACUTE_lˠOnˠG&]
+trá            -> [t'r'&A_ACUTE_lˠOnˠG&]
+
+--- Transcribing: [uisce] ---
+After stage PreProcess: [ˈuisce]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈuisce]
+After stage ConsonantResolution: [ˈuis'k'e]
+After stage VowelsAndDiphthongs: [ˈ&UI_DIPH&s'k'i]
+After stage StrongSonorantsEpenthesis: [ˈ&UI_DIPH&s'k'i]
+After stage Diacritics: [ˈ&UI_DIPH&s'k'i]
+After stage FinalCleanup: [ˈ&UI_DIPH&s'k'i]
+uisce           -> [ˈ&UI_DIPH&s'k'i]
+
+--- Transcribing: [obair] ---
+After stage PreProcess: [ˈobair]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈobair]
+After stage ConsonantResolution: [ˈobair']
+After stage VowelsAndDiphthongs: [ˈɔbair']
+After stage StrongSonorantsEpenthesis: [ˈɔbair']
+After stage Diacritics: [ˈɔbair']
+After stage FinalCleanup: [ˈɔbair']
+obair           -> [ˈɔbair']
+
+--- Transcribing: [imir] ---
+After stage PreProcess: [ˈimir]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈimir]
+After stage ConsonantResolution: [ˈim'ir']
+After stage VowelsAndDiphthongs: [ˈim'ir']
+After stage StrongSonorantsEpenthesis: [ˈim'ir']
+After stage Diacritics: [ˈim'ir']
+After stage FinalCleanup: [ˈim'ir']
+imir            -> [ˈim'ir']
+
+--- Transcribing: [eolas] ---
+After stage PreProcess: [ˈeolas]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈeolas]
+After stage ConsonantResolution: [ˈeolas]
+After stage VowelsAndDiphthongs: [ˈ&EO_SEQ&las]
+After stage StrongSonorantsEpenthesis: [ˈ&EO_SEQ&las]
+After stage Diacritics: [ˈ&EO_SEQ&l̪as]
+After stage FinalCleanup: [ˈ&EO_SEQ&l̪as]
+eolas           -> [ˈ&EO_SEQ&l̪as]
+
+--- Transcribing: [athair] ---
+After stage PreProcess: [ˈathair]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈa_TH_air]
+After stage ConsonantResolution: [ˈahair']
+After stage VowelsAndDiphthongs: [ˈahair']
+After stage StrongSonorantsEpenthesis: [ˈahair']
+After stage Diacritics: [ˈahair']
+After stage FinalCleanup: [ˈahair']
+athair          -> [ˈahair']
+
+--- Transcribing: [máthair] ---
+After stage PreProcess: [máthair]
+After stage MarkDigraphsAndVocalisationTriggers: [má_TH_air]
+After stage ConsonantResolution: [m'áhair']
+After stage VowelsAndDiphthongs: [m'&A_ACUTE_LONG&hair']
+After stage StrongSonorantsEpenthesis: [m'&A_ACUTE_LONG&hair']
+After stage Diacritics: [m'&A_ACUTE_lˠOnˠG&hair']
+After stage FinalCleanup: [m'&A_ACUTE_lˠOnˠG&hair']
+máthair        -> [m'&A_ACUTE_lˠOnˠG&hair']
+
+--- Transcribing: [deirfiúr] ---
+After stage PreProcess: [deirfiúr]
+After stage MarkDigraphsAndVocalisationTriggers: [deirfiúr]
+After stage ConsonantResolution: [d'eir'f'iúr]
+After stage VowelsAndDiphthongs: [d'&EI_DIPH&r'f'iúr]
+After stage StrongSonorantsEpenthesis: [d'&EI_DIPH&r'f'iúr]
+After stage Diacritics: [d'&EI_DIPH&r'f'iúr]
+After stage FinalCleanup: [d'&EI_DIPH&r'f'iúr]
+deirfiúr       -> [d'&EI_DIPH&r'f'iúr]
+
+--- Transcribing: [deartháir] ---
+After stage PreProcess: [deartháir]
+After stage MarkDigraphsAndVocalisationTriggers: [dear_TH_áir]
+After stage ConsonantResolution: [d'ear'háir']
+After stage VowelsAndDiphthongs: [d'&EA_SLENDER_RPRIME&r'háir']
+After stage StrongSonorantsEpenthesis: [d'&EA_SLENDER_RPRIME&r'háir']
+After stage Diacritics: [d'&EA_SlˠEnˠDEɾˠ_ɾˠPɾˠImˠE&r'háir']
+After stage FinalCleanup: [d'&EA_SlˠEnˠDEɾˠ_ɾˠPɾˠImˠE&r'háir']
+deartháir      -> [d'&EA_SlˠEnˠDEɾˠ_ɾˠPɾˠImˠE&r'háir']
+
+--- Transcribing: [imirt] ---
+After stage PreProcess: [ˈimirt]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈimirt]
+After stage ConsonantResolution: [ˈim'ir't']
+After stage VowelsAndDiphthongs: [ˈim'ir't']
+After stage StrongSonorantsEpenthesis: [ˈim'ir't']
+After stage Diacritics: [ˈim'ir't']
+After stage FinalCleanup: [ˈim'ir't']
+imirt           -> [ˈim'ir't']
+
+--- Transcribing: [oibre] ---
+After stage PreProcess: [ˈoibre]
+After stage MarkDigraphsAndVocalisationTriggers: [ˈoibre]
+After stage ConsonantResolution: [ˈoib'r'e]
+After stage VowelsAndDiphthongs: [ˈ&OI_DIPH&b'r'i]
+After stage StrongSonorantsEpenthesis: [ˈ&OI_DIPH&b'r'i]
+After stage Diacritics: [ˈ&OI_DIPH&b'r'i]
+After stage FinalCleanup: [ˈ&OI_DIPH&b'r'i]
+oibre           -> [ˈ&OI_DIPH&b'r'i]
+
+--- Transcribing: [ceacht] ---
+After stage PreProcess: [ceacht]
+After stage MarkDigraphsAndVocalisationTriggers: [cea_CH_t]
+After stage ConsonantResolution: [k'eax_unstressed_finalt]
+After stage VowelsAndDiphthongs: [k'eax_ɔnstressed_finalt]
+After stage StrongSonorantsEpenthesis: [k'eax_ɔnstressed_finalt]
+After stage Diacritics: [k'eax_ɔn̪st̪ressed̪_fin̪al̪t]
+After stage FinalCleanup: [k'eax_ɔn̪st̪ressed̪_fin̪al̪t]
+ceacht          -> [k'eax_ɔn̪st̪ressed̪_fin̪al̪t]
+
+--- Transcribing: [ceistneoir] ---
+After stage PreProcess: [ceistneoir]
+After stage MarkDigraphsAndVocalisationTriggers: [ceistneoir]
+After stage ConsonantResolution: [k'eis't'neoir']
+After stage VowelsAndDiphthongs: [k'&EI_DIPH&s't'n&EO_SEQ&ir']
+After stage StrongSonorantsEpenthesis: [k'&EI_DIPH&s't'n&EO_SEQ&ir']
+After stage Diacritics: [k'&EI_DIPH&s't'n̪&EO_SEQ&ir']
+After stage FinalCleanup: [k'&EI_DIPH&s't'n̪&EO_SEQ&ir']
+ceistneoir      -> [k'&EI_DIPH&s't'n̪&EO_SEQ&ir']
+
+--- Transcribing: [ceistigh] ---
+After stage PreProcess: [ceistigh]
+After stage MarkDigraphsAndVocalisationTriggers: [ceisti_GH_]
+After stage ConsonantResolution: [k'eis't'ij]
+After stage VowelsAndDiphthongs: [k'&EI_DIPH&s't'ij]
+After stage StrongSonorantsEpenthesis: [k'&EI_DIPH&s't'ij]
+After stage Diacritics: [k'&EI_DIPH&s't'ij]
+After stage FinalCleanup: [k'&EI_DIPH&s't'ij]
+ceistigh        -> [k'&EI_DIPH&s't'ij]

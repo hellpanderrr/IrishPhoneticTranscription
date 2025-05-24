@@ -1,0 +1,64 @@
+ï»¿CRITICAL: S6 DBG: NON_PALATAL_CONSONANT_PATTERN_FOR_DIACRITICS = [kgptdfbmnszrlLNRMÃ§É£Å‹hwÊƒÉŸÉ¾]
+CRITICAL: 
+--- Running Test Set for Iteration 36V ---
+CRITICAL: DEBUG: Full PHONETIC_VOWEL_NUCLEUS_STRING_FOR_CAPTURE = ia|ua|ai|ei|oi|ui|É‘u|ou|É™u|eiÉ™|[aeiouŠŒ‘”™¦¨ªÃÉÊ]Ë?
+CRITICAL: 
+--- Transcribing: [beannaigh] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&EA_BROAD_PRE_NN&	' matched '	&EA_BROAD_PRE_NN&	' -> '	É‘Ë	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&VOC_AI_OI_GH_DH&	' matched '	&VOC_AI_OI_GH_DH&	' -> '	ai	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	bÉ‘ËNai	]
+  S4.6PROC DBG (SpecFinal):	ai$	->	iË	Res:	bÉ‘ËNiË
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern (char class) found 	2	 but FULL pattern (with diphthongs) found 0 for [	bÉ‘ËNiË	]. Full pattern: 	ia|ua|ai|ei|oi|ui|É‘u|ou|É™u|eiÉ™|[aeiouŠŒ‘”™¦¨ªÃÉÊ]Ë?
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern (char class) found 	2	 but FULL pattern (with diphthongs) found 0 for [	bÉ‘ËNiË	]. Full pattern: 	ia|ua|ai|ei|oi|ui|É‘u|ou|É™u|eiÉ™|[aeiouŠŒ‘”™¦¨ªÃÉÊ]Ë?
+  S4.6PROC END: Out=	bÉ‘ËNiË
+CRITICAL: beannaigh       -> [bÉ‘ËNiË]
+CRITICAL: 
+--- Transcribing: [balla] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	baLa	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST (CharClass Only): Found 0 nuclei with pattern '(([aeiouŠŒ‘”™¦¨ªÃÉÊ]Ë?))' for word: [	baLa	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: BOTH Simple pattern (char class) AND FULL pattern found 0 for [	baLa	].
+  S4.6PROC END: Out=	baLa
+CRITICAL: balla           -> [baLa]
+CRITICAL: 
+--- Transcribing: [leagan] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	leagan	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST (CharClass Only): Found 0 nuclei with pattern '(([aeiouŠŒ‘”™¦¨ªÃÉÊ]Ë?))' for word: [	leagan	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: BOTH Simple pattern (char class) AND FULL pattern found 0 for [	leagan	].
+  S4.6PROC END: Out=	leagan
+CRITICAL: leagan          -> [leagan]
+CRITICAL: 
+--- Transcribing: [oÃ­che] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&AO_OI_LONG&	' matched '	&AO_OI_LONG&	' -> '	É¨Ë	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	ËˆiËÃ§e	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern (char class) found 	1	 but FULL pattern (with diphthongs) found 0 for [	ËˆiËÃ§e	]. Full pattern: 	ia|ua|ai|ei|oi|ui|É‘u|ou|É™u|eiÉ™|[aeiouŠŒ‘”™¦¨ªÃÉÊ]Ë?
+  S4.6PROC END: Out=	ËˆiËÃ§e
+CRITICAL: oÃ­che          -> [ËˆiËÃ§e]
+CRITICAL: 
+--- Transcribing: [scrÃºdaigh] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&U_ACUTE_LONG&	' matched '	&U_ACUTE_LONG&	' -> '	uË	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&VOC_AI_OI_GH_DH&	' matched '	&VOC_AI_OI_GH_DH&	' -> '	ai	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	skruËdai	]
+  S4.6PROC DBG (SpecFinal):	ai$	->	iË	Res:	skruËdiË
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern (char class) found 	2	 but FULL pattern (with diphthongs) found 0 for [	skruËdiË	]. Full pattern: 	ia|ua|ai|ei|oi|ui|É‘u|ou|É™u|eiÉ™|[aeiouŠŒ‘”™¦¨ªÃÉÊ]Ë?
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern (char class) found 	2	 but FULL pattern (with diphthongs) found 0 for [	skruËdiË	]. Full pattern: 	ia|ua|ai|ei|oi|ui|É‘u|ou|É™u|eiÉ™|[aeiouŠŒ‘”™¦¨ªÃÉÊ]Ë?
+  S4.6PROC END: Out=	skruËdiË
+CRITICAL: scrÃºdaigh      -> [skruËdiË]
+CRITICAL: 
+--- Transcribing: [cÃ³naigh] ---
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&O_ACUTE_LONG&	' matched '	&O_ACUTE_LONG&	' -> '	oË	'
+    Stage4_4_ResolveTempVowelMarkers DBG: Rule '	&VOC_AI_OI_GH_DH&	' matched '	&VOC_AI_OI_GH_DH&	' -> '	ai	'
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	koËnai	]
+  S4.6PROC DBG (SpecFinal):	ai$	->	iË	Res:	koËniË
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern (char class) found 	2	 but FULL pattern (with diphthongs) found 0 for [	koËniË	]. Full pattern: 	ia|ua|ai|ei|oi|ui|É‘u|ou|É™u|eiÉ™|[aeiouŠŒ‘”™¦¨ªÃÉÊ]Ë?
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: Simple pattern (char class) found 	2	 but FULL pattern (with diphthongs) found 0 for [	koËniË	]. Full pattern: 	ia|ua|ai|ei|oi|ui|É‘u|ou|É™u|eiÉ™|[aeiouŠŒ‘”™¦¨ªÃÉÊ]Ë?
+  S4.6PROC END: Out=	koËniË
+CRITICAL: cÃ³naigh        -> [koËniË]
+CRITICAL: 
+--- Transcribing: [arm] ---
+CRITICAL:   S4.6PROC ENTER: Received phon_word = [	Ëˆarm	]
+CRITICAL:     S4.6PROC GMATCH_SIMPLE_TEST (CharClass Only): Found 0 nuclei with pattern '(([aeiouŠŒ‘”™¦¨ªÃÉÊ]Ë?))' for word: [	Ëˆarm	]
+CRITICAL:   S4.6PROC CRITICAL_GMATCH_FAIL: BOTH Simple pattern (char class) AND FULL pattern found 0 for [	Ëˆarm	].
+  S4.6PROC END: Out=	Ëˆarm
+  S5.ARM_SPECIFIC DBG: Matched arm. Stress:	Ëˆ	Vowel: a	S1:	r	S2:	m
+    EpenthesisThenStrongSonorants DBG: Rule '	^(Ëˆ?)a(r)(m)$	' matched '	Ëˆarm	' -> '	ËˆarÉ™m	'
+CRITICAL: arm             -> [ËˆarÉ™m]
