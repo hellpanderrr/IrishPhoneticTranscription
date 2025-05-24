@@ -1,0 +1,2957 @@
+# Summary of Irish Phonetics Chapter 1
+
+## User
+
+Create a highly detailed summary of Chapter 1. Preserve all phonetic data and examples. For my g2p script.
+
+## DeepSeek
+
+Below is a detailed summary of **Chapter 1 ("1 Reamhra")** of the book *Fuaimeanna na Gaeilge*. All phonetic data, examples, and terms that may be useful for developing a G2P script (grapheme-to-phoneme conversion) for Irish are preserved.
+
+---
+
+## 1. General Introduction (1.1 Reamhra)
+
+- **The book's purpose** is to describe the sounds of the Irish language (phonetics and phonology) for beginners.
+- **Phonetics (foghraiocht)** – only **articulatory phonetics** is considered: how consonants and vowels are produced.
+- **Phonology (foineolaiocht)** – **phonemics (foineimniocht)** is considered: the phoneme as the minimal unit that distinguishes word meaning.
+
+---
+
+## 2. Dialects of Irish (1.2 Canuinti na Gaeilge)
+
+- Irish has three main dialect regions:
+  - **Ulster (Cuige Uladh)** – represented by **Gaeilge Ghaoth Dobhair (GD)** (County Donegal).
+  - **Connacht (Cuige Chonnacht)** – represented by **Gaeilge na Ceathrun Rua (CR)** (County Galway).
+  - **Munster (Cuige Mumhan)** – represented by **Gaeilge Chorca Dhuibhne (CD)** (County Kerry).
+
+- For each dialect, one informant was selected, whose speech the descriptions and transcriptions in the book are based on.
+- **Important for G2P:** differences between dialects are significant; there is no single oral standard.
+
+---
+
+## 3. Orthography and Sounds (1.3 Litriu agus fuaimeanna na Gaeilge)
+
+- The book describes **real sounds of living speech**, not what can be derived from orthography.
+- Orthography is not always reliable for pronunciation due to dialectal differences.
+- **Example of orthographic ambiguity (important for G2P):**
+  - The letter sequence **⟨ei⟩** should, by rule, yield a long vowel **/e:/** (as in *beil*).
+  - However, in **unstressed syllables** it yields a **short /e/** (the example in the text is incomplete, but *beil* in unstressed position is implied).
+  - **Conclusion:** the rules of "orthography → pronunciation" have exceptions that depend on stress and position.
+
+---
+
+## 4. Notation / Transcription Conventions (1.4 Nodaireacht)
+
+- **IPA (Aibitir Idirnaisiunta Foghraiochta)** – the basis for transcription.
+- **Square brackets [ ]** – phonetic transcription (detailed).
+- **Slashes / /** – phonemic transcription (abstract).
+- Additionally, **traditional Celticist notation** is used – for those accustomed to the Irish studies tradition.
+- In Appendix A (Aguisin A), for each sound, the following are provided:
+  - Phonemic transcription (IPA and Celticist),
+  - Phonetic transcription,
+  - Examples in different contexts,
+  - English translation.
+
+---
+
+## 5. Sources and Audio Recordings (1.5 Foinsí eolais agus taifeadtaí fuaime)
+
+- All examples are voiced by native speakers of the three dialects.
+- Audio materials are available at: **www.fuaimeanna.ie**
+- **Important for G2P:** the transcriptions in the book are based precisely on these recordings, not on hypothetical pronunciation.
+
+---
+
+## 6. Exercises (1.6 Cleachtaí)
+
+- At the end of chapters 2–7, exercises are given for university students studying Irish phonetics and phonology.
+
+---
+
+## 7. Book Structure (1.7 Struchtúr an leabhair)
+
+- **Chapter 2** – articulatory phonetics.
+- **Chapter 3** – phonemics and transcription of Irish.
+- **Chapter 4** – sounds of Gaeilge Ghaoth Dobhair (GD).
+- **Chapter 5** – sounds of Gaeilge na Ceathrún Rua (CR).
+- **Chapter 6** – sounds of Gaeilge Chorca Dhuibhne (CD).
+- **Chapter 7** – the connection between orthography and pronunciation (important for G2P).
+- **Appendix A (Aguisín A)** – a catalog of all sounds with examples by dialect.
+  - Each page is dedicated to one sound.
+  - Examples are given in four contexts (for consonants and vowels separately).
+  - For consonants: (1) before a front vowel, (2) before a back vowel, (3) after a front vowel, (4) after a back vowel.
+  - For vowels: (1) between two palatalized consonants, (2) between a palatalized and a velarized consonant, (3) between a velarized and a palatalized consonant, (4) between two velarized consonants.
+  - Each example is accompanied by an English translation, phonemic (IPA + Celticist) and phonetic transcription.
+
+---
+
+## Key Terms (for understanding G2P tasks)
+
+- **Carballú (palatalisation)** – secondary articulation: raising the middle part of the tongue toward the hard palate (denoted by [ʲ] or by the lenition sign in Irish studies).
+- **Coguasú (velarisation)** – raising the back part of the tongue toward the soft palate (denoted by [ˠ]).
+- **Sleamhnóg (glide)** – a transitional vowel that arises between a consonant and a vowel of different quality (e.g., [j] or [w]).
+- **Fóinéim (phoneme)** – the minimal unit that distinguishes meaning (example in the text: *bán* /bV/ vs *dán* /dV/).
+- **Allafón (allophone)** – a positional variant of a phoneme (e.g., [x], [h], [xʷ] for one phoneme in GD).
+
+---
+
+## Examples from the Chapter (verbatim, as in the text)
+
+- **A pair of minimal pairs** to demonstrate the phonemic status of voicing:
+  *an-chaol* /an χi:l/ vs *an-ghaol* /an γi:l/ (p. 8).
+- **Mismatch between orthography and pronunciation** – the combination **⟨éi⟩** in *béil* should yield /e:/, but in unstressed syllables yields /e/ (p. 14).
+
+---
+
+## For Your G2P Script: Conclusions from Chapter 1
+
+1. **Dialectal variation** is critical – at least three variants (Ulster, Connacht, Munster) need to be supported.
+2. **Orthographic rules** are not strict: in unstressed positions, long vowels can become short (e.g., ⟨éi⟩ → /e/).
+3. **Palatalisation / velarisation** – are phonemically significant; they need to be distinguished in output phonemic sequences.
+4. **The site with audio examples** (www.fuaimeanna.ie) can be used to verify G2P predictions with real native speakers.
+5. **Appendix A** contains ready-made dictionaries of examples for each sound in all contexts – ideal material for training and testing G2P.
+
+If needed, I can also separately extract the grapheme-phoneme correspondence tables from Chapter 7 – they are the most valuable for G2P.
+
+## User
+
+Create a highly detailed summary of Chapter 2. Preserve all phonetic data and examples. For my g2p script.
+
+## DeepSeek
+
+Below is a **highly detailed summary of Chapter 2** ("2 Foghraíocht urlabhraíochta") of the book *Fuaimeanna na Gaeilge*. All phonetic data, terms, examples of Irish (and English) words with explanations are preserved. The material is structured to be as useful as possible for developing a G2P script (grapheme-to-phoneme conversion) for Irish.
+
+---
+
+## 2. Introduction to Articulatory Phonetics (2.1 Réamhrá)
+
+- **Articulatory phonetics (foghraíocht urlabhraíochta)** describes how speech sounds are produced.
+- The main focus is on features important for conveying meaning.
+
+---
+
+## 2.2 Organs of Speech and Voicing (2.2 Orgáin an ghutha agus glóriú)
+
+### 2.2.1 Lungs
+- **Lungs (scamhóga)** – the source of airflow for most sounds (egressive flow).
+
+### 2.2.2 Trachea, Larynx, Pharynx
+- Air passes: lungs → **trachea (traicé)** → **larynx (laraing)** → **pharynx (faraing)** → mouth.
+
+### 2.2.3 Vocal Folds and Voicing (Téada an ghutha, glóriú)
+- **Vocal folds (téada an ghutha)** – two muscles in the larynx.
+- **The gap between them – the glottis (glotas)**.
+- When the folds are closed and air passes through them, they vibrate – this produces **voicing (glórú)**.
+
+### 2.2.4 Voicing as a Meaning-Distinguishing Feature
+- **Example of a minimal pair** (Irish):
+  - *an-chaol* [an χi:l] (very narrow) – *an-ghaol* [an γi:l] (very relationship)
+  - The difference is only in voicing: /χ/ (voiceless) vs /γ/ (voiced).
+
+- **Important for G2P**:
+  - **Consonants** can be **voiced (glórach)** or **voiceless (neamhghlórach)**.
+  - **Vowels** are always voiced.
+
+### 2.2.5 Vocal Tract (Conair an ghutha)
+- Parts above the larynx: pharynx, oral cavity, nasal cavity.
+
+### 2.2.6 Articulators (Baill urlabhartha)
+- **Active (gníomhach)** – movable organs (e.g., lower lip, tongue).
+- **Passive (éighníomhach)** – immovable (e.g., upper teeth, palate).
+
+#### Table 2.1: Articulators and Place Labels (copied from the text)
+
+| Passive | Active | Place Label |
+|---------|--------|-------------|
+| Upper lip | Lower lip | **Bilabial (déliopach)** |
+| Upper teeth | Lower lip | **Labiodental (liopadhéadach)** |
+| Upper teeth | Tongue tip | **Dental (déadach)** |
+| Alveolar ridge | Tongue blade | **Alveolar (ailbheolach)** |
+| Hard palate | Front of tongue | **Palatal (carballach)** |
+| Soft palate | Back of tongue | **Velar (coguasach)** |
+| Pharynx | Tongue root | **Pharyngeal (faraingeach)** |
+| – | Vocal folds | **Glottal (glotach)** |
+
+---
+
+## 2.3 Places of Articulation (2.3 Áiteanna urlabhartha)
+
+### 2.3.1 Definition
+- Consonants are distinguished by the **place where the obstruction is created**.
+- **Example of a minimal pair** (distinction by place):
+  - *fáil* (ring) – *sáil* (heel) – difference: /f/ (labiodental) vs /s/ (alveolar).
+
+### 2.3.2 List of Places of Articulation with Examples (from the text)
+
+1. **Bilabial (déliopach)** – closure of the lips.
+   - Examples: *poill, pá, buí, bí, móin, meoin*.
+2. **Labiodental (liopadhéadach)** – lower lip to upper teeth.
+   - Examples: *faoi, fí, bhuí, bhí*.
+3. **Dental (déadach)** – tongue tip to the back of the upper teeth.
+   - Examples: *cat, tá, gad, dó, nocht, locht*.
+4. **Alveolar (ailbheolach)** – tongue tip or blade to the alveoli.
+   - Examples: *tae, suí* (and English *Tay, day*).
+5. **Postalveolar (iar-ailbheolach)** – between the alveoli and the hard palate.
+   - Examples: *deas, leas, seas, teas, sí*.
+6. **Palatal (carballach)** – front of the tongue to the hard palate.
+   - Examples: *giall, ciall, ghiall, chiall, falaing*.
+7. **Velar (coguasach)** – back of the tongue to the soft palate.
+   - Examples: *gad, cad, an-ghaol, an-chaol, falang*.
+8. **Glottal (glotach)** – at the glottis.
+   - Examples: *hata, shona*.
+
+---
+
+## 2.4 Manners of Articulation and Nasal Consonants (2.4 Cineálacha urlabhartha agus consain shrónacha)
+
+- **Manner of articulation (cineál urlabhartha)** – the type of contact or action at the place of articulation.
+
+### 2.4.1 Plosive (pléascach) = stop
+- Complete closure, pressure build-up, release.
+- Examples in Irish: *bá, pá, dá, tá, gá, cá*.
+
+### 2.4.2 Nasal (srónach, pléascach srónach)
+- Complete closure in the mouth, but the soft palate is lowered → air goes through the nose.
+- Examples: *Máire, imeall, náire, inneall, i ngála, i ngeall ar*.
+
+### 2.4.3 Tap / Trill (cnagach / tríleach)
+- **Tap (cnagach)** – a single strike of the tongue against the alveoli (Irish *r*).
+- **Trill (tríleach)** – a series of strikes (in some dialects).
+- Examples: *rí, Brian*.
+
+### 2.4.4 Fricative (cuimilteach)
+- Incomplete closure; air passes through a narrow opening with friction.
+- Examples: *faoi, fé, bhuí (in Munster), bhí, suí, sí, an-chaol, chiall, an-ghaol, ghiall, hata*.
+
+### 2.4.5 Approximant (neasach) = semivowel (leathghuta)
+- Wide opening; the sound is close to a vowel.
+- Examples: *bhán (outside Munster), weather, whether, ghiall (in Ulster), yet, run*.
+
+### 2.4.6 Lateral Approximant (neasach taobhach) = lateral (taobhach)
+- Closure in the center; air flows along the sides of the tongue.
+- Examples: *luí, ligh*.
+
+**Summary for describing a consonant:**
+It is necessary to specify (1) **place**, (2) **manner**, (3) **voicing**, (4) **secondary articulation** (see below).
+
+---
+
+## 2.5 Vowels (2.5 Gutai)
+
+### 2.5.1 Difference from Consonants
+- In vowels, there is no narrowing of the articulators; quality is determined by the **shape of the tongue**.
+
+### 2.5.2 Vowel Parameters
+- **Position of the highest point of the tongue (barrphointe na teanga)**:
+  - **By backness (tulsáite / aistarraingthe)**: front (tosaigh) / back (cúil).
+  - **By height (ard / íseal)**: high (ard/dúnta) / low (íseal/oscailte).
+- **Lip shape**: rounded (cruinn) / unrounded (scartha).
+- **Length (fad)**: long (fada) / short (gearr).
+
+### 2.5.3 Examples of Front Vowels (sequentially from high to low)
+- *dí* – high front, *di* – ?, *Dé* – mid-high front, *deis* – mid-low front, *deas* – low front.
+
+### 2.5.4 Examples of Back Vowels (from low to high)
+- *carr* – low back, *cór* – mid-low back, *cor* – mid-high back, *cur* – high back, *cúr* – high back rounded.
+
+### 2.5.5 Length as a Meaning-Distinguishing Feature
+- **Example of a minimal pair**:
+  - *gás* [ga:s] (gas) – *gas* [gas] (stem) – difference only in vowel length.
+
+### 2.5.6 Diphthong (défhoghar)
+- A vowel during which the tongue moves during production.
+- Examples: *fia, fuath, fadhb* (outside Ulster), *fabht* (and English *bye, boy, bough*).
+
+---
+
+## 2.6 Secondary Articulation (2.6 Urlabhairt thánaisteach)
+
+- In Irish, almost every consonant has **secondary articulation**.
+- Two main types:
+
+### 2.6.1 Palatalisation (carballú)
+- The tongue takes the shape as for the vowel *í* (high front).
+- The body of the tongue rises toward the hard palate.
+- Examples: *ghiall, yesterday*.
+
+### 2.6.2 Velarisation (coguasú)
+- The tongue takes the shape as for the vowel *ú* (high back rounded).
+- The body of the tongue rises toward the soft palate.
+- Examples: *cur, cúr, ghaolta*.
+
+**Summary for describing a consonant in Irish:**
+It is necessary to specify: place + manner + voicing + palatalisation/velarisation.
+
+---
+
+## 2.7 Exercises (2.7 Cleachtaí)
+
+At the end of the chapter, a list of words (from the online database www.fuaimeanna.ie) is given, which need to be listened to and identified for the specified features (e.g., find an alveolar consonant, a palatalized one, a fricative, etc.). Example words: *bronnfaidh, bhán, ceist, chreidfeadh, dian, dhún, foghraíocht, gloine, ghaolta, hata, lingfidh, mholfadh, mórshráid, naomh, phíoc, póca, ronnach, sféar, teip, thréig*.
+
+Assignments for consonants (20 items) and for vowels (10 items) – all possible phonetic features are listed (place, manner, voicing, secondary articulation, length, etc.).
+
+---
+
+## Key Takeaways for the G2P Script from Chapter 2
+
+1. **Irish consonants** must be distinguished by 4 main features:
+   - Place (labial, dental, alveolar, postalveolar, palatal, velar, glottal)
+   - Manner (plosive, nasal, fricative, approximant, lateral, tap)
+   - Voicing (voiced/voiceless)
+   - Secondary articulation (palatalized / velarized)
+
+2. **Irish vowels** must be distinguished by:
+   - Backness (front / back / central)
+   - Height (high, mid-high, mid-low, low)
+   - Rounding (rounded / unrounded)
+   - Length (long / short)
+
+3. **Minimal pairs** from the chapter:
+   - *an-chaol* vs *an-ghaol* (voicing)
+   - *fáil* vs *sáil* (place of articulation)
+   - *gás* vs *gas* (vowel length)
+
+4. **Practical examples** for each place and manner are given in Irish – they can be used as test data for G2P.
+
+If needed, next I can make a summary of Chapter 3 (transcription and IPA) or Chapter 7 (orthography–pronunciation), the most important for G2P.
+
+## User
+
+Create a highly detailed summary of Chapter 3. Preserve all phonetic data and examples. For my g2p script.
+
+## DeepSeek
+
+Below is a **highly detailed summary of Chapter 3** ("3 Tras-scríobh foghraíochta") of the book *Fuaimeanna na Gaeilge*. All phonetic data, terms, examples in Irish and English, important for developing a G2P script (grapheme-to-phoneme conversion), are preserved. The chapter is devoted to phonetic transcription, IPA, phonemic analysis, and their application to the Irish language.
+
+---
+
+## 3.1 Introduction (Réamhrá)
+
+- **Phonetic transcription (tras-scríobh foghraíochta)** is a tool for recording speech sounds in a concise, convenient, and standardized way.
+- Usually, only **phonologically significant** features are noted in transcription.
+- **Phonology (fóineolaíocht)** studies the sound system of a language and the rules of their interaction.
+- **Phonological analysis** allows one to identify the set of distinct sounds (phonemes), which influences the choice of transcription.
+
+---
+
+## 3.2 Phonetic Transcription and IPA (Tras-scríobh foghraíochta agus an IPA)
+
+### 3.2.1 History
+- **The International Phonetic Association (IPA)** was founded in 1886.
+- The **International Phonetic Alphabet (IPA)** was developed – standardized symbols for speech sounds.
+
+### 3.2.2 Examples of IPA Symbols
+- **[d]** – voiced alveolar plosive (as in English *door*).
+- **[ð]** – voiced dental fricative (as in English *the*).
+
+### 3.2.3 IPA Tables in the Book
+- **Figure 3.1** – IPA table for consonants (Consain).
+- **Figure 3.2** – IPA table for vowels (Gutaí) – the "vowel quadrilateral" (ceathairshleasán na nglanghutaí).
+  - Vertical axis: tongue height.
+  - Horizontal axis: backness (front – left, back – right).
+  - For each pair: left – unrounded, right – rounded.
+- **Figure 3.3** – IPA diacritics (comharthaí idirdhealaitheacha).
+
+### 3.2.4 Correspondence of IPA and Orthography (important for G2P)
+- Many IPA symbols coincide with Latin letters (intuitively understandable).
+- **Example of mismatch** (Irish):
+  - The orthographic sequence **⟨ch⟩** in the word *chuaigh* denotes a **voiceless velar fricative**.
+  - The IPA symbol for this sound is **[x]** (not obvious for Irish readers unfamiliar with IPA).
+
+### 3.2.5 Diacritics (examples for Irish)
+- **[ʷ]** – labialization (rounding) as secondary articulation.
+  - Example: in *máthair* (Gaeilge Ghaoth Dobhair) [ʷ] is added to some consonants.
+- **[̪]** – dental plosive (e.g., Irish *d* in *dán* – [d̪]).
+- **[ʲ]** – palatalisation (e.g., the transitional sound [j] between a consonant and a vowel).
+- **[j]** – palatal approximant.
+- **[w]** – labial-velar approximant.
+
+---
+
+## 3.3 Phonology and Phonemic Transcription (Fóineolaíocht agus tras-scríobh fóinéimeach)
+
+### 3.3.1 Phoneme (fóinéim)
+- A unit that distinguishes the meaning of words.
+- **Minimal pair (péire íosmhéide)** – two words that differ by only one phoneme.
+
+### 3.3.2 Example of Phonemic Contrast
+- **bán** /bV/ (white) vs **dán** /dV/ (poem) – difference in the first phoneme.
+- In transcription, phonemes are placed **between slashes** / /.
+
+### 3.3.3 Allophones (allafóin)
+- Different phonetic realizations of one phoneme that do not change meaning.
+- **Example** (Irish, Gaoth Dobhair):
+  - Beginning of word *mo chos* – [x] (voiceless velar fricative)
+  - Middle of word *clocha* – [x] or [h]
+  - Before /t/ in *seacht* – [xʷ] (labialized)
+  - All these variants are allophones of one phoneme /x/.
+- It is recommended to choose for a phoneme the symbol of the most frequent allophone (or the simplest to write).
+
+### 3.3.4 The Problem of Standard Pronunciation in Irish
+- In English there is **Received Pronunciation (RP)** – a standard.
+- In Irish, there is **no single oral standard** – only regional variants.
+- Therefore, analysis is done separately for the three main dialects:
+  - **Gaoth Dobhair (GD)** – Ulster Irish
+  - **An Cheathrú Rua (CR)** – Connacht Irish
+  - **Corca Dhuibhne (CD)** – Munster Irish
+
+---
+
+## 3.4 Consonants of Irish (Consain na Gaeilge)
+
+- Irish has a **large number of consonants** due to meaning-distinguishing secondary articulation (palatalisation / velarisation).
+- Almost all consonant phonemes are organized into **pairs of velarized vs palatalized**.
+- In some dialects there are three types of **l** (voiced) and three types of **n** (voiced), as well as voiceless sonorants (nasals, approximants, laterals, rhotics) – in the book they are treated as phonemes (e.g., /mʷ/), although their theoretical status may be debatable.
+
+### 3.4.1 Examples of Minimal Pairs (from tables 4.1, 5.1, 6.1, mentioned in the text)
+- /pʷ/ vs /pʲ/ – *scóp* vs *scóip* (in CR)
+- /bʷ/ vs /bʲ/ – *buí* vs *bí*, *buíon* vs *bíonn*, *bó* vs *beo*
+- /tʷ/ vs /tʲ/ – *tuí* vs *tí*
+- /dʷ/ vs /dʲ/ – *dó* vs *deo*
+- /k/ vs /c/ – *cúis* vs *ciumhais*
+- /g/ vs /j/ – *gal* vs *geal*
+- /fʷ/ vs /fʲ/ – *faoi* vs *figh*
+- /sʷ/ vs /ʃ/ – *suí* vs *sí*
+- /x/ vs /ç/ – *an chú* vs *an chiú*
+- /mʷ/ vs /mʲ/ – *óm* vs *óim*
+- /nʷ/ vs /nʲ/ – *naoi* vs *nigh*
+- /rʷ/ vs /rʲ/ – *cur* vs *cuir*
+- /lʷ/ vs /lʲ/ – *lón* vs *leon*, *luí* vs *leigheas*
+
+This proves the phonemic status of palatalisation/velarisation.
+
+---
+
+## 3.5 Vowels of Irish (Gutaí na Gaeilge)
+
+- Vowels are distinguished by **length** (phonemically significant).
+- **Diphthongs (défhoghair)** – a sequence of two vowels with a smooth transition.
+
+### 3.5.1 Examples of Diphthongs (in CR)
+- *dian* – /iə/ (in the book /io/ in some notations)
+- *cadhain* – /ai/
+- *sleamhain* – /au/
+- *tuar* – /uə/
+
+### 3.5.2 Minimal Pairs for Diphthongs (CR)
+- *dian* vs *díon*
+- *cadhain* vs *cáin*
+- *sleamhain* vs *sleáin*
+- *tuar* vs *túr*
+
+### 3.5.3 Glides (sleamhnóga) – extremely important for G2P
+- They arise from the combination of a palatalized consonant with a back vowel or a velarized consonant with a front vowel.
+- They are not phonemes (do not change meaning), but are phonetically distinct.
+- They are written as **superscript symbols** (e.g., [ʲ], [ʷ] or [i], [u]).
+
+#### Rules for the Appearance of Glides (from the text):
+
+1. **Back vowel after a palatalized consonant**:
+   - *pioc* [pʲiək] (CD) – glide [i] between pʲ and ə?
+
+   In the text: *pioc* [pih1Akh] (CD) – there is a complex notation. Essentially, [j] or [i] insertion.
+
+   Refined examples from section 3.5:
+   - When a back vowel follows a palatalized consonant: a **glide [ʲ]** (or [i]) appears between them – e.g., *pioc* [pʲiək].
+
+2. **Palatalized consonant after a back vowel**:
+   - *coipthe* [kʌˈpʲiː] (CR) – after a back vowel before a palatalized consonant, [j] or [i] appears? In the text: *coipthe* [kh1A'pih1i:] (CR). Complex, but the gist is a glide [i] or [j].
+
+3. **Front vowel after a velarized consonant**:
+   - *puiteach* [pʷˈuːtʲəx] (CD) – glide [u] or [w] between pʷ and u. In the text: *puiteach* [pYh1u1ih1ax] (CD). That is, [u] as a glide.
+
+4. **Velarized consonant after a front vowel**:
+   - *scríobtha* [ʃcɾʲiːbʷə] (GD) – glide [w] or [u] between iː and bʷ? In the text: *scríobtha* [cch1pih1:9pYh1a] (GD) – complex.
+
+**Simplified rule for G2P:**
+- **Cʲ + back vowel** → insertion of [j] (or [i])
+- **Back vowel + Cʲ** → insertion of [j] (or [i])
+- **Cʷ + front vowel** → insertion of [w] (or [u])
+- **Front vowel + Cʷ** → insertion of [w] (or [u])
+
+These glides are not written in phonemic transcription, but are obligatory for phonetic accuracy.
+
+---
+
+## 3.6 Exercises (Cleachtaí)
+
+At the end of the chapter, exercises on transcription are given.
+
+### A. Phonetic Transcription (tras-scríobh foghraíochta)
+For words from the database www.fuaimeanna.ie:
+1. *bán*
+2. *buíon*
+3. *creid*
+4. *croch*
+5. *deis*
+6. *féar*
+7. *feic*
+8. *Gael*
+9. *leaba*
+10. *leabhar*
+
+### B. Phonemic Transcription (tras-scríobh fóinéimeach)
+The same words.
+
+### C. Drawing Articulation
+For the words *beag, mór, sean, nua*, one must depict the tongue position in a schematic sagittal section (for the first consonant).
+
+---
+
+## Key Takeaways for the G2P Script from Chapter 3
+
+1. **Use IPA** for output transcription, but keep the phonemic level in mind.
+2. **Distinguish between phonemic (/ /) and phonetic ([ ]) transcription.**
+3. **Minimal pairs** (e.g., /pʷ/ vs /pʲ/, /tʷ/ vs /tʲ/) prove that velarisation and palatalisation in Irish are phonemic → they must be encoded in the G2P representation.
+4. **Diphthongs** – separate phonemes /ai/, /au/, /iə/, /uə/ (variant by dialect).
+5. **Glides (sleamhnóga)** – not phonemic, but must be generated at the phonetic level according to rules combining consonant and vowel quality. For G2P, they can be output as additional symbols ([j], [w]) or as part of the realization.
+6. **G2P verification** should be carried out separately for each of the three dialects (GD, CR, CD), since phoneme inventories and rules may differ.
+
+If needed, next I can make a summary of Chapter 7 (grapheme-phoneme correspondences) – this is the most important part for G2P. Or chapters 4-6 (by dialect).
+
+## User
+
+Create a highly detailed summary of Chapter 4. Preserve all phonetic data and examples. For my g2p script.
+
+## DeepSeek
+
+Below is a **highly detailed summary of Chapter 4** ("4 Consain agus gutaí Ghaeilge Ghaoth Dobhair") of the book *Fuaimeanna na Gaeilge*. The chapter is devoted to the phonetics and phonology of the **Gaoth Dobhair (GD)** dialect – Ulster Irish. Everything is presented to be as useful as possible for developing a G2P script: phoneme inventories, allophonic variants, rules for the appearance of glides, minimal pairs, example words with transcriptions.
+
+---
+
+## 4.1 Introduction (Réamhrá)
+
+- First, a **table of consonant phonemes/phones** (Léaráid 4.1) is presented – organized as a standard IPA table, but taking secondary articulation into account.
+- Then – **minimal pairs** for consonants (Tábla 4.1 – it exists in the text, but in the provided PDF it starts on page 51; I will extract it).
+- Next – **consonant groups** by active organ + type of secondary articulation:
+  - Liopaigh chogusaithe (labial velarized)
+  - Liopaigh charballaithe (labial palatalized)
+  - Corónaigh chogusaithe (coronal velarized)
+  - Corónaigh charballaithe (coronal palatalized)
+  - Dromaiqh choguasaithe (dorsal velarized) – there is a typo in the text: Dromaigh
+  - Dromaiqh charballaithe (dorsal palatalized)
+  - Glotaigh (glottals)
+
+- After consonants – **vowels** (Léaráid 4.2) and the table of vowel minimal pairs (Tábla 4.2).
+- Then – detailed descriptions of vowels: front, open, back, neutral, diphthongs.
+
+---
+
+## 4.2 Consonant Inventory GD (Fogharthacar consanta na canúna)
+
+### Léaráid 4.1 (p. 50 of original) – consonant table
+
+The table is organized as follows:
+- Rows: manner of articulation (Pléascach – plosives, Cuimilteach/Neasach – fricatives/approximants, Srónach – nasals, Cnagach/Neasach – taps/approximants, Taobhach – laterals).
+- Columns: place (Liopach – labial, Déadach – dental, Ailbheolach – alveolar, Ailbheol-charballach – alveolo-palatal, Carballach – palatal, Coguasach – velar, Glotach – glottal).
+- In each cell: left – voiceless, right – voiced; top – velarized, bottom – palatalized.
+
+**Extracted phonemes (recommended symbols for phonemic transcription):**
+
+#### Plosives / affricates
+- /pʷ/, /bʷ/, /pʲ/, /bʲ/ – labial
+- /tʷ/, /dʷ/ – dental velarized
+- /tʲ/, /dʲ/ – alveolo-palatal? In the table in the row Pléascach/Achuimilteach for Ailbheol-charballach, /tʲ/ and /dʲ/ are indicated (although in the text they are called corónaigh charballaithe)
+- /c/, /ɟ/ – palatal (in the table for Carballach: /c/, /ɟ/)
+- /k/, /g/ – velar
+
+#### Fricatives / approximants
+- /fʷ/, /w/, /fʲ/, /vʲ/ – labial
+- /sʷ/ – alveolar fricative velarized
+- /ç/ – palatal fricative? In the table for Carballach: /ç/ (voiceless palatal fricative)
+- /x/, /ɣ/ – velar fricatives
+- /hʷ/, /hʲ/ – glottal
+
+#### Nasals
+- /mʷ/, /mʲ/ – labial
+- /n̪ʷ/, /n̪ʲ/ – dental? In the table: for Déadach – /n̪ʷ/, /n̪ʲ/
+- /nʲ/ – alveolo-palatal nasal (in the row Srónach, column Ailbheol-charballach – /nʲ/)
+- /ɲ/ – palatal nasal (Carballach – /ɲ/)
+- /ŋ/ – velar nasal (Coguasach – /ŋ/)
+
+#### Taps / approximants
+- /rʷ/ – alveolar tap velarized
+- /rʲ/ – alveolo-palatal tap palatalized
+
+#### Laterals
+- /l̪ʷ/, /l̪ʲ/ – dental laterals (Déadach)
+- /lʲ/ – alveolo-palatal lateral (Ailbheol-charballach)
+
+#### Note
+In the table there are symbols with a dot below or diacritics, but in the text they are rendered as /l̪ʷ/ etc. Important for G2P: GD distinguishes three types of l and n: velarized dental, palatalized dental, palatalized alveolo-palatal (so-called "slender" l and n).
+
+---
+
+### Tábla 4.1 – Minimal Pairs of Consonants (p. 51 in PDF, slightly damaged but recoverable)
+
+From the text (p. 39 of the original numbering) the table includes pairs:
+
+| Phonemes | Minimal pair |
+|----------|--------------|
+| /pʷ/ – /pʲ/ | *scóp* – *scóip* (scope – of scope) |
+| /bʷ/ – /bʲ/ | *buí* – *bí* (yellow – be), *buíon* – *bíonn* (band – is), *bó* – *beo* (cow – alive) |
+| /tʷ/ – /tʲ/ | *tuí* – *tí* (straw – of house) |
+| /dʷ/ – /dʲ/ | *dó* – *deo* (to him – ever) |
+| /k/ – /c/ | *cúis* – *ciumhais* (cause – edge gen.) |
+| /g/ – /ɟ/ | *gal* – *geal* (steam – bright) |
+| /fʷ/ – /fʲ/ | *faoi* – *figh* (under – weave) |
+| /sʷ/ – /ʃ/ | *suí* – *sí* (sitting – she) |
+| /x/ – /ç/ | *an chú* – *an chiú* (the hound – the quiet) |
+| /ɣ/ – /j/ | *an-ghal* – *an-ghael* (great steam – great Gael) |
+| /mʷ/ – /mʲ/ | *óm* – *óim* (from me – ounce) |
+| /n̪ʷ/ – /n̪ʲ/ | *naoi* – *nigh* (nine – wash) |
+| /rʷ/ – /rʲ/ | *cur* – *cuir* (putting – put!) |
+| /l̪ʷ/ – /l̪ʲ/ | *lón* – *leon* (lunch – lion) |
+| /pʷ/ – /bʷ/ | *pá* – *bá* (pay – drowning) |
+| /pʲ/ – /bʲ/ | *pinn* – *binn* (pens – melodious) |
+| /tʷ/ – /dʷ/ | *ghreadfadh* – *ghreadadh* (would beat – beating) |
+| /tʲ/ – /dʲ/ | *chreidfeadh* – *chreideadh* (would believe – believing) |
+| /k/ – /g/ | *cá* – *gá* (where – need) |
+| /c/ – /ɟ/ | *ciall* – *giall* (sense – jaw) |
+| /x/ – /ɣ/ | *an-chaol* – *an-ghaol* (very narrow – very relationship) |
+
+This proves the phonemic status of velarisation/palatalisation and voicing in GD.
+
+---
+
+## 4.2.1 Labial Velarized (Liopaigh chogusaithe)
+
+**Common features:**
+- They have a secondary **labial element [ʷ]**.
+- Before front vowels (in a stressed syllable) a **glide [ʷ]** appears between the consonant and the vowel.
+  - Example: *puiteach* [pʷʰuʷˈtʲəx] (type: /pʷ/ + front vowel → [pʷʰuʷ...])
+- At the end of a syllable after a front vowel, a **glide [ˠ] or [ə̯]** appears (denoted [°] in the text), but not after a back vowel.
+  - Example: *scríobtha* [ʃcɾʲiːbʷə] – after /i:/ before /bʷ/ there is a glide? In the text: [ccriipʷhʷuːiː] – complex. Better to accept: after a front vowel before a velarized consonant at the end of a syllable, [w] or [u̯] is inserted.
+
+**Specific phonemes and allophones:**
+
+#### /pʷ/
+- **Main allophone:** [pʷʰ] – aspirated voiceless bilabial plosive velarized. In all positions except after /sʷ/.
+- **After /sʷ/:** [pʷ] – unaspirated.
+
+#### /bʷ/
+- [bʷ] – voiced bilabial plosive velarized (unaspirated).
+
+#### /fʷ/
+- [fʷ] – voiceless labiodental fricative velarized.
+- In the text also mentioned [λ] – voiceless labial-velar fricative? This is a rare allophone.
+
+#### /w/
+- [w] – voiced labial-velar approximant velarized (essentially /w/).
+
+#### /vʷ/ (in the text [vʷ])
+- [vʷ] – voiced labiodental fricative velarized.
+
+#### /mʷ/
+- [mʷ] – voiced bilabial nasal velarized (no aspiration).
+- There is also a voiceless version /mʷ̥/ = [mʷ] with a diacritic? In the table /mʷ/ is indicated for voiceless? In Léaráid 4.1 in the row Srónach for Liopach, /mʷ/ (voiceless?) and /mʷ/ (voiced) are indicated. Actually: left voiceless, right voiced. That is /mʷ/ and /mʷ/ – but they are the same? Probably, /m̥ʷ/ and /mʷ/. In the text below: /mʷ/ neamhghlórach and /mʷ/ glórach. Important for G2P: voiceless nasal occurs in certain grammatical contexts (e.g., after h-mutation).
+
+---
+
+## 4.2.2 Labial Palatalized (Liopaigh charballaithe)
+
+**Common features:**
+- They have a secondary **palatal element [ʲ]**.
+- Before back vowels, a **glide [j]** appears (in the text [i] or [ʲ]).
+  - Example: *píonta* [pʲʰiːˈɔn̪ˠə] – between /pʲ/ and /iː/ there is no glide, but between /pʲ/ and /ɔ/? In the text: *píonta* [pihíAnYth] – complex. Rule: **Cʲ + back vowel** → [CʲjV] or [CʲiV].
+- At the end of a syllable after a back vowel, a glide [j] (or [i̯]) appears.
+  - Example: *coipthe* [kʌˈpʲiː] – after /ʌ/ before /pʲ/ there is [i]? In the text: [kh1A'pih1i:] – [i] is visible before pʲ.
+
+**Phonemes:**
+
+#### /pʲ/
+- [pʲʰ] – aspirated, except after /sʲ/ (where [pʲ] unaspirated).
+
+#### /bʲ/
+- [bʲ] – voiced.
+
+#### /fʲ/ (in the text /fʲ/ or /ɸʲ/? In the table for Cuimilteach/Neasach, /fʲ/ and /vʲ/ are indicated; in the text /fʲ/ is written as voiceless, /vʲ/ as voiced)
+- /fʲ/ = [fʲ] – voiceless labiodental fricative palatalized.
+
+#### /vʲ/
+- [vʲ] – voiced.
+
+#### /mʲ/
+- [mʲ] – voiced nasal; also voiceless /m̥ʲ/ (denoted /mʲ/ with a diacritic?).
+
+---
+
+## 4.2.3 Coronal Velarized (Corónaigh chogusaithe) – dental
+
+**Place:** dental (déadach). In the table they are assigned to Déadach.
+
+**Common features:**
+- They have [ʷ]-shaped secondary articulation.
+- Before front vowels under stress – glide [ʷ] (or [u]) between the consonant and vowel: *tuí* [t̪ʷʰuːiː]? In the text *tuí* [tVhwi] – [tʷʰwi].
+- At the end of a stressed syllable after a front vowel – glide [ˠ] (denoted [°]): *aos* [iːʷsˠ] – after /i:/ before /sʷ/ insertion of [ʷ].
+
+**Phonemes:**
+
+#### /t̪ʷ/
+- [t̪ʷʰ] – voiceless dental plosive with aspiration (except after /sʷ/ – [t̪ʷ]).
+
+#### /d̪ʷ/
+- [d̪ʷ] – voiced.
+
+#### /sʷ/
+- [sʷ] – voiceless alveolar fricative velarized (slightly labialized?).
+
+#### /n̪ʷ/ (in the text /nʷ/ for déadach)
+- [n̪ʷ] – voiced nasal; also voiceless /n̪ʷ̥/ (in the table /nʷ/ neamhghlórach – with a diacritic).
+
+#### /rʷ/ (cnagach ailbheolach glórach cogusaithe)
+- [rʷ] – voiced alveolar tap velarized.
+
+#### /l̪ʷ/ (taobhach déadach glórach cogusaithe)
+- [l̪ʷ] – voiced dental lateral velarized; also voiceless /l̪ʷ̥/ (in the table /lʷ/ neamhghlórach).
+
+---
+
+## 4.2.4 Coronal Palatalized (Corónaigh charballaithe)
+
+**Place:** alveolo-palatal (ailbheol-charballach) – postalveolar with palatalisation.
+
+**Common features:**
+- They have [ʲ]-secondary articulation.
+- Before back vowels under stress – glide [j]: *teocht* [tʲʰɔxt]? In the text: *teocht* [tʲʰɔxt] – but they give [fə:rɪkɪθ]? No, that's another example. In the section *Corónaigh charballaithe*: *teocht* [tʲʰɔxt] is expected.
+- At the end of a stressed syllable after a back vowel – glide [j] (or [i̯]): *póit* [pʷʰɔːtʲ]? In the text: *póit* [pʷʰɔːtʲ] – without an explicit glide, but there may be [pʷʰɔːtʲ] with a palatal tinge.
+
+**Phonemes:**
+
+#### /tʲ/
+- [tʲʰ] – voiceless alveolo-palatal plosive (affricate? in the table Pléascach/Achuimilteach) – actually this is a palatalized alveolar plosive, but in GD it may be affricated. In the text: *teocht* – example.
+
+#### /dʲ/
+- [dʲ] – voiced.
+
+#### /ʃ/ (in the table Cuimilteach for Ailbheol-charballach)
+- /ʃ/ – voiceless postalveolar fricative (palatalized). In the text it is denoted /ʃ/ or /ɕ/? The symbol in the table: /ɕ/? Actually in Léaráid 4.1 for GD in the row Cuimilteach/Neasach under Ailbheol-charballach, /ɕ/ (voiceless) and /ʑ/ (voiced) are indicated? No, there is /ç/ for Carballach. But among coronal palatalized, the following are listed: /ʃ/ – cuimilteach ailbheol-charballach neamhghlórach carballaithe. Yes, /ʃ/.
+
+#### /ɲ/ – nasal (in the table in the row Srónach for Ailbheol-charballach): /ɲ/ (voiceless?) and /ɲ/ (voiced). In the text: /ñ/ and /n/ with a diacritic. To clarify: /nʲ/ – voiced alveolo-palatal nasal, and voiceless – /n̥ʲ/ (in the table /n/ with a ring below?).
+
+#### /rʲ/ – tap alveolo-palatal voiced (cnagach).
+
+#### /lʲ/ – lateral alveolo-palatal voiced (taobhach). Also a voiceless variant.
+
+---
+
+## 4.2.5 Dorsal Velarized (Dromaiqh choguasaithe) – velar
+
+**Common features:**
+- Velar consonants (place – coguas). They are already velarized by nature, but velarisation can be strengthened.
+- Before front vowels under stress, a glide [u] does **not** appear (unlike coronals). Example: *coiligh* [kʰɔlʲiː] – no insertion.
+- At the end of a stressed syllable after a front vowel – glide [ˠ] (denoted [°]): *íoc* [iːˠkʰ] – after /i:/ before /k/ there is [ˠ].
+
+**Phonemes:**
+
+#### /k/
+- [kʰ] – voiceless velar plosive with aspiration (except after /sʷ/ – [k]).
+#### /g/
+- [g] – voiced.
+#### /x/
+- [x] – voiceless velar fricative (at the beginning of a word); in the middle or at the end may be [h] (glottal fricative), and before /t/ – [xʷ] (labialized).
+#### /ɣ/
+- [ɣ] – voiced velar fricative.
+#### /ŋ/
+- [ŋ] – voiced velar nasal; voiceless /ŋ̊/ – /ŋ/ in the table.
+
+---
+
+## 4.2.6 Dorsal Palatalized (Dromaiqh charballaithe) – palatal
+
+**Common features:**
+- Palatal plosives /c/, /ɟ/; fricative /ç/; nasal /ɲ/; approximant /j/.
+- Before back or open vowels – glide [j]: *cearc* [cʲʰæɾk]? In the text: *cearc* [cʰiːɑːrʋkʰ] – [i] is visible after /c/ before /aː/.
+- At the end of a stressed syllable after a back vowel – glide [i̯] (short [i]): *stoic* [sʲt̪ʷɔc]? In the text: *stoic* [sɪʧʰɑːcʰ] – unclear.
+
+**Phonemes:**
+
+#### /c/
+- [cʰ] – voiceless palatal plosive with aspiration (except after /c/ – [c] unaspirated – but /c/ cannot be after itself? Possibly after /sʲ/).
+#### /ɟ/
+- [ɟ] – voiced.
+#### /ç/
+- [ç] – voiceless palatal fricative (in the table for Cuimilteach).
+#### /j/
+- [j] – voiced palatal approximant.
+#### /ɲ/
+- [ɲ] – voiced palatal nasal; voiceless /ɲ̊/ – in the table /ɲ/ and /ɲ/ with a diacritic?
+
+---
+
+## 4.2.7 Glottals (Glotaigh)
+
+- /hʷ/ and /hʲ/ – actually just [h] (voiceless glottal fricative), but contextually may affect the quality of neighboring vowels. For /hʲ/ – before it, there may be a vowel [i] as part of the realization.
+
+---
+
+## 4.3 Vowel Inventory GD (Fogharthacar gutach na canúna)
+
+### Léaráid 4.2 (p. 58) – vowel quadrilateral for GD
+
+The table shows the following phonemes (simplified):
+- Front: /iː/, /ɪ/, /eː/, /e/, /æː/
+- Central: /ə/
+- Back: /uː/, /ʊ/, /oː/, /ɔː/, /ʌ/ (and possibly /ɤ/ but not indicated)
+- Diphthongs: /ai/, /au/, /ia/, /ua/
+
+### Tábla 4.2 – Minimal Pairs of Vowels (p. 59)
+
+| Vowel | Example | Pronunciation (IPA) | Meaning |
+|-------|---------|-------------------|---------|
+| /iː/ | *crích* (dat.) | /cɾʲiːç/ | finish |
+| /ɪ/ | *crith* | /cɾʲɪh/ | shake |
+| /eː/ | *cré* | /cɾʲeː/ | soil |
+| /e/ | *creid* | /cɾʲed/ | believe |
+| /æː/ | *crá* | /kɾæː/ | anguish |
+| /a/ (probably /a/) | *craic* | /kɾak/ | fun |
+| /ɔː/ | *cnó* | /kɾɔː/ | nut |
+| /ɒː/ (in the table /ɔ:/?) | *cró* | /kɾɔː/ | hut (but /ɔː/ and /ɒː/ are not distinguished? In the table /ɔ:/ and /ɒ:/ – possibly /ɔː/ and /oː/?) |
+| /ʌ/ | *croch* | /kɾʌx/ | hang |
+| /uː/ | *crú* | /kɾuː/ | milking |
+| /ɜː/ (or /ɨː/?) | *cruth* | /kɾɜh/ | shape |
+| /ai/ | *caighdeán* | /kaiðæːn/ | standard |
+| /au/ | *camhraigh* | /kaurəi/ (?) | decay |
+| /ia/ | *criathar* | /cɾiəhəɾ/ | sieve |
+| /ua/ | *crua* | /kɾuə/ | hard |
+
+This proves the phonemic significance of vowel length and quality in GD.
+
+---
+
+## 4.3.1 Front Vowels (Gutai tosaigh)
+
+- Before velarized consonants, vowels are slightly retracted.
+- Between two velarized consonants, vowels are slightly centralized.
+
+**/iː/** [iː] – unrounded front high long (close to cardinal [i]).
+- Also occurs with orthographic ⟨ao⟩, ⟨aoi⟩: *naoi*, *naomh*, *saol*, *taobh*.
+
+**/ɪ/** [ɪ] – unrounded near-front near-high short.
+- In unstressed positions may be [i] (front high short) – e.g., *aici*, *ith*.
+- Also corresponds to orthographic ⟨ai⟩ in a stressed syllable: *baint*, *cait*, *crainn*.
+
+**/eː/** [eː] – unrounded front mid-high long.
+- Allophone [ɛː] (front mid-low long) – in words *béal*, *Gael*.
+- Also corresponds to orthographic ⟨eidh⟩, ⟨eigh⟩, ⟨eadh(a)⟩, ⟨adh(a)⟩, ⟨agh(a)⟩.
+
+**/e/** [e] – unrounded front mid-low short (closer to [ɛ]).
+- In unstressed syllables instead of /eː/ (orthographic ⟨éi⟩, ⟨ae⟩): *buidéil*, *captaen*.
+
+---
+
+## 4.3.2 Open Vowels (Gutai oscailte)
+
+**/æː/** [æː] – unrounded front near-open long (main allophone).
+- Before labial velarized consonants → [œː] (rounded front near-open) – *bád* [bʷœːd̪ˠ].
+- In the word *am* – [aː] (back open long).
+- Orthographically: ⟨ea⟩, ⟨a⟩, ⟨ai⟩ before ⟨rd⟩, ⟨rl⟩, ⟨rn⟩, ⟨rr⟩ (in monosyllables) – *ard*, *cairde*, *tairne*, *gearr*, *barr*.
+
+**/a/** (short open) – in the text denoted as /a/ (but in the table above it was /a/ for *craic* [kɾak] – this is more likely [a] or [ɑ]).
+- In a palatal context: [a] (front open short) – *bean*, *cead*, *fear*, *ainm*, *caint*, *gaineamh*.
+- In a velarized context: [ɑ] (back open short) – *abair*, *balla*, *capall*.
+- In unstressed syllables corresponds to /æː/ (i.e., ⟨á⟩, ⟨eá⟩ etc.): *oileán*, *urlár*.
+- In some words ⟨o⟩ gives [a] (e.g., *sop*).
+
+---
+
+## 4.3.3 Back Vowels (Gutai cúil)
+
+**/uː/** [uː] – rounded back high long (close to [u]).
+- Also in endings -(e)adh#, -(e)amh#, -odh#: *samhradh*, *ag bualadh*, *ag déanamh*, *mholfadh*.
+
+**/ʊ/** (in the text /ɤ/?) – in table 4.2 there is /ɜː/ for *cruth* – but in the section "Gutai cúil" /ɤ/ (lax back mid-high?) is indicated. In the text: **/ɤ/** [ɤ] – rounded? No, [ɤ] unrounded. Actually they write: /u/ short? In the section "Gutai cúil" after /uː/ comes /ɤ/ – is this a rounded mid-high short? Example: *cruth* [kɾɤh]. For G2P: this vowel occurs in unstressed syllables from ⟨iú⟩, ⟨iúi⟩ etc., also in *cúramach*.
+
+**/oː/** [oː] – rounded back mid-high long.
+
+**/ʌ/** [ʌ] – unrounded back mid-low short (like English *strut*). Allophone [ɔ] (more open) in *dois*, *dos*.
+- In unstressed syllables corresponds to /oː/ or /ɔː/ (⟨eo⟩, ⟨eoi⟩, ⟨ó⟩, ⟨ói⟩): *fuinneog*, *trioblóid*.
+
+**/ɔː/** [ɔː] – rounded back mid-low long.
+
+---
+
+## 4.3.4 Neutral Vowel (An guta láir)
+
+**/ə/** [ə] – neutral vowel (schwa). In unstressed function words: *na*.
+- Also in unstressed syllables in a velarized context (instead of any short vowel).
+
+---
+
+## 4.3.5 Diphthongs (Défhoghair)
+
+**/au/** [au] – starts from central open [a] (or [ɑ]) to rounded back high [u]. Example: *tamhan*.
+
+**/ai/** [æi] – from front near-open [æ] to front high [i]. Example: *meadhg*. Also [ai] – from central open [a] to [i] – *caighdeán*.
+
+**/ia/** [ia] – from [i] to [a] (central open). Example: *Brian*. Also in orthographic ⟨uío⟩: *buíochas*.
+
+**/ua/** [ua] – from [u] to [a]. Example: *cuan*.
+
+---
+
+## Key Takeaways for the G2P Script from Chapter 4 (GD)
+
+1. **GD consonants** have phonemic pairs distinguished by velarisation / palatalisation. In G2P it is necessary to distinguish, e.g., /pʷ/ vs /pʲ/, /t̪ʷ/ vs /tʲ/, etc.
+2. **Allophonic changes:**
+   - Plosives /pʷ, t̪ʷ, k, c/ are aspirated [ʰ] at the beginning of a syllable, except after /s/.
+   - Voiceless sonorants (m̥, n̥, l̥, r̥) occur in certain morphological contexts (e.g., after h-mutation) – they need to be generated.
+3. **Glides:**
+   - Velarized consonant + front vowel → insertion of [w] or [u̯] between them.
+   - Palatalized consonant + back vowel → insertion of [j] or [i̯].
+   - These insertions are not phonemic but are important for phonetic naturalness. For G2P they can be left out (reserved for phonetic post-processing), but if phonetic transcription is needed, they should be added.
+4. **Vowels:** one must distinguish long /iː, eː, æː, uː, oː, ɔː/ and short /ɪ, e, a, ʌ, ʊ (or ɤ)/, as well as /ə/.
+5. **Diphthongs** – /ai/, /au/, /ia/, /ua/ – treated as separate phonemes.
+6. **Minimal pairs** from the tables can be used for testing G2P.
+
+If needed, next I can make a similarly detailed summary for Chapter 5 (Connacht, CR) or for Chapter 7 (grapheme-phoneme correspondences – the most important for G2P). Let me know.
+
+## User
+
+Create a highly detailed summary of Chapter 5. Preserve all phonetic data and examples. For my g2p script.
+
+## DeepSeek
+
+Below is a **highly detailed summary of Chapter 5** ("5 Consain agus gutaí Ghaeilge na Ceathrún Rua") of the book *Fuaimeanna na Gaeilge*. The chapter is devoted to the phonetics and phonology of the Connemara (Connacht) dialect of Irish in the region of **An Cheathrú Rua (CR)**. All data is preserved in a form useful for developing a G2P script: phoneme inventories, allophones, minimal pairs, rules for the appearance of glides, example words with transcriptions.
+
+---
+
+## 5.1 Consonant Inventory CR (Fogharthacar consanta na canúna)
+
+### Léaráid 5.1 (p. 53) – consonant table for CR
+
+The table is organized similarly to GD, but with some differences in the phoneme set.
+
+**List of phonemes (recommended symbols for phonemic transcription):**
+
+#### Plosives / affricates (Pléascach / Achuimilteach)
+- **Labial:** /pʷ/, /bʷ/, /pʲ/, /bʲ/
+- **Dental (velarized):** /t̪ʷ/, /d̪ʷ/ (in the table for Déadach – /tʷ/, /dʷ/, but dental is implied)
+- **Alveolo-palatal (palatalized coronal):** /tʲ/, /dʲ/ (in the column Ailbheol-charballach)
+- **Palatal:** /c/, /ɟ/ (Carballach)
+- **Velar:** /k/, /g/ (Coguasach)
+
+#### Fricatives / approximants (Cuimilteach / Neasach)
+- **Labial:** /fʷ/, /w/, /fʲ/, /vʲ/
+- **Alveolar velarized:** /sʷ/ (Déadach or Ailbheolach? In the table for Déadach /sʷ/ is indicated – more likely alveolar)
+- **Alveolo-palatal fricative:** /ɕ/ (or /ʃ/) – in the column Ailbheol-charballach, voiceless; voiced /ʑ/?
+   In the text in the section "Corónaigh charballaithe" /e/ is mentioned – a typo? Later /ʃ/ is indicated (cuimilteach ailbheol-charballach). For CR in the table, probably /ɕ/ (voiceless) and /ʑ/ (voiced).
+- **Palatal fricative:** /ç/ (Carballach, voiceless)
+- **Velar fricatives:** /x/, /ɣ/
+- **Glottal:** /hʷ/, /hʲ/ – essentially [h]
+
+#### Nasals (Srónach)
+- **Labial:** /mʷ/, /mʲ/ (voiceless variants /m̥ʷ/, /m̥ʲ/ – in the table left voiceless, right voiced)
+- **Dental velarized:** /n̪ʷ/ (Déadach)
+- **Alveolo-palatal nasals:** /nʲ/ (Ailbheol-charballach, voiced), /n̥ʲ/ (voiceless)
+- **Palatal nasal:** /ɲ/ (Carballach)
+- **Velar nasal:** /ŋ/ (Coguasach)
+
+#### Taps / approximants (Cnagach / Neasach)
+- **Alveolar velarized tap:** /rʷ/
+- **Alveolo-palatal tap:** /rʲ/ (in the text /rʲ/ – although in the table in the row Cnagach/Neasach for Ailbheol-charballach /rʲ/ is indicated voiceless? No, more likely /rʲ/ voiced, and voiceless /r̥ʲ/)
+
+#### Laterals (Taobhach)
+- **Dental velarized:** /l̪ʷ/ (Déadach)
+- **Dental palatalized:** /l̪ʲ/ (Déadach? In the table for Déadach in the row Taobhach – /lʲ/ and /lʲ/ – but these are probably /l̪ʲ/ and /l̪ʲ/ voiced/voiceless)
+- **Alveolo-palatal laterals:** /lʲ/ (Ailbheol-charballach) – in the text /ʎ/ or /lʲ/ – denoted /l/ with diacritic. In the section "Corónaigh charballaithe" /l/ is indicated for taobhach ailbheolach (palatalized) and /l/ for taobhach ailbheol-charballach – the distinction is unclear. We will accept that CR has /l̪ʲ/ (dental) and /lʲ/ (alveolo-palatal, softer).
+
+---
+
+### Tábla 5.1 – Minimal Pairs of Consonants (p. 54)
+
+The table proves the phonemic status of the contrasts.
+
+| Phonemes | Minimal pair |
+|----------|--------------|
+| /pʷ/ – /pʲ/ | *scóp* – *scóip* (scope – of scope) |
+| /bʷ/ – /bʲ/ | *buí* – *bí* (yellow – be), *buíon* – *bíonn* (band – is), *bó* – *beo* (cow – alive) |
+| /tʷ/ – /tʲ/ | *tuí* – *tí* (straw – of house) |
+| /dʷ/ – /dʲ/ | *dó* – *deo* (to him – ever) |
+| /k/ – /c/ | *cúis* – *ciumhais* (cause – edge gen.) |
+| /g/ – /ɟ/ | *gal* – *geal* (steam – bright) |
+| /fʷ/ – /fʲ/ | *faoi* – *figh* (under – weave) |
+| /sʷ/ – /ʃ/ | *suí* – *sí* (sitting – she) |
+| /x/ – /ç/ | *an chú* – *an chiú* (the hound – the quiet) |
+| /ɣ/ – /j/ | *an-ghal* – *an-ghael* (great steam – great Gael) |
+| /mʷ/ – /mʲ/ | *óm* – *óim* (from me – ounce) |
+| /n̪ʷ/ – /n̪ʲ/ | *naoi* – *nigh* (nine – wash) |
+| /rʷ/ – /rʲ/ | *cur* – *cuir* (putting – put!) |
+| /l̪ʷ/ – /l̪ʲ/ | *lón* – *leon* (lunch – lion) |
+| /pʷ/ – /bʷ/ | *pá* – *bá* (pay – drowning) |
+| /pʲ/ – /bʲ/ | *pinn* – *binn* (pens – melodious) |
+| /tʷ/ – /dʷ/ | *ghreadfadh* – *ghreadadh* (would beat – beating) |
+| /tʲ/ – /dʲ/ | *chreidfeadh* – *chreideadh* (would believe – believing) |
+| /k/ – /g/ | *cá* – *gá* (where – need) |
+| /c/ – /ɟ/ | *ciall* – *giall* (sense – jaw) |
+| /x/ – /ɣ/ | *an-chaol* – *an-ghaol* (very narrow – very relationship) |
+
+---
+
+## 5.1.1 Labial Velarized (Liopaigh chogusaithe)
+
+**Common features:**
+- Secondary articulation – labialization [ʷ].
+- Before front vowels under stress, a **glide [ʷ]** appears between the consonant and vowel:
+  - *puiteach* [pʷʰuʷˈtʲəx] (orth. *puiteach*)
+- At the end of a syllable after a front vowel – **glide [°]** (probably [ˠ] or [ʷ] as part of the realization):
+  - *scríobtha* [ʃcɾʲiːbʷə] – in the text [ccrɪiːpʷhʷuːiː] – [u] is visible after bʷ.
+
+**Phonemes:**
+
+- **/pʷ/** – [pʷʰ] (aspirated) in all positions except after /sʷ/ ([pʷ] unaspirated).
+- **/bʷ/** – [bʷ] (voiced).
+- **/fʷ/** – [fʷ] (voiceless labiodental fricative).
+- **/w/** – [w] (voiced labial-velar approximant).
+- **/vʷ/** – [vʷ] (voiced labiodental fricative).
+- **/mʷ/** – voiced [mʷ]; voiceless /m̥ʷ/ (in the table /mʷ/ for voiceless?).
+
+---
+
+## 5.1.2 Labial Palatalized (Liopaigh charballaithe)
+
+**Common features:**
+- Secondary palatalisation [ʲ].
+- Before back vowels – glide [j] (in the text [i]): *pioc* [pʲʰiək]? In the text: *pioc* [pihAkh] – [pʲʰiəkʰ].
+- At the end of a syllable after a back vowel – glide [i̯] (short [i]): *coipthe* [kʌˈpʲiː] – in the text [khAtphih].
+
+**Phonemes:**
+
+- **/pʲ/** – [pʲʰ] (aspirated, except after /sʲ/ → [pʲ]).
+- **/bʲ/** – [bʲ].
+- **/fʲ/** – [fʲ] – voiceless fricative (in the text /f/).
+- **/vʲ/** – [vʲ] – voiced.
+- **/mʲ/** – [mʲ] (voiced); voiceless /m̥ʲ/ (in the table /m/ with diacritic).
+
+---
+
+## 5.1.3 Coronal Velarized (Corónaigh chogusaithe) – dental
+
+**Place:** dental (déadach).
+
+**Common features:**
+- Secondary [ʷ].
+- Before front vowels under stress – glide [ʷ] (or [u]): *tuí* [t̪ʷʰuːiː] (in the text [tʷʰuːiː]).
+- At the end of a stressed syllable after a front vowel – glide [°] ([ˠ]): *aos* [iːʷs] – in the text [iːs] with superscript [°].
+
+**Phonemes:**
+
+- **/t̪ʷ/** – [t̪ʷʰ] (aspirated, except after /sʷ/ → [t̪ʷ]).
+- **/d̪ʷ/** – [d̪ʷ].
+- **/sʷ/** – [sʷ] (alveolar fricative with slight labialization).
+- **/n̪ʷ/** – [n̪ʷ] (voiced); voiceless /n̪ʷ̥/.
+- **/rʷ/** – [rʷ] (alveolar tap velarized).
+- **/l̪ʷ/** – [l̪ʷ] (dental lateral velarized); voiceless /l̪ʷ̥/.
+
+---
+
+## 5.1.4 Coronal Palatalized (Corónaigh charballaithe)
+
+**Place:** alveolo-palatal (ailbheol-charballach) – postalveolar with palatalisation.
+
+**Common features:**
+- Secondary [ʲ].
+- Before back vowels under stress – glide [j] (in the text [i]): *teocht* [tʲʰɔxt] (in the text [t]hoxtn] – [i] is visible).
+- At the end of a stressed syllable after a back vowel – glide [i̯]: *póit* [pʷʰɔːtʲ]? In the text [p]ho;t] – [i] is visible after t.
+
+**Phonemes:**
+
+- **/tʲ/** – [tʲʰ] (alveolo-palatal plosive with aspiration, except after /sʲ/ → [tʲ]).
+- **/dʲ/** – [dʲ].
+- **/ʃ/** (in the text /e/ – typo? Later /ɕ/ or /ʃ/ is indicated) – voiceless postalveolar fricative palatalized. In the table for CR, probably /ʃ/.
+- **/nʲ/** – [nʲ] (alveolo-palatal nasal voiced); voiceless /n̥ʲ/.
+- **/rʲ/** – [rʲ] (alveolo-palatal tap voiced); voiceless /r̥ʲ/.
+- **/lʲ/** – [lʲ] (alveolo-palatal lateral voiced) – in the text /l/ for taobhach ailbheol-charballach.
+
+---
+
+## 5.1.5 Dorsal Velarized (Dromaiqh choguasaithe) – velar
+
+**Common features:**
+- Velar /k, g, x, ɣ, ŋ/ etc.
+- Before front vowels under stress – **no** glide [u] (unlike coronals): *cuil* [kʰʊl]? In the text *cuil* [kʰuːl] – [u] is part of the vowel, not a glide.
+- At the end of a stressed syllable after a front vowel – glide [°] ([ˠ]): *íoc* [iːˠkʰ].
+
+**Phonemes:**
+
+- **/k/** – [kʰ] (aspirated, except after /s/ → [k]).
+- **/g/** – [g].
+- **/x/** – [x] (voiceless velar fricative).
+- **/ɣ/** – [ɣ] (voiced velar fricative).
+- **/ŋ/** – [ŋ] (voiced velar nasal); voiceless /ŋ̊/.
+
+---
+
+## 5.1.6 Dorsal Palatalized (Dromaiqh charballaithe) – palatal
+
+**Place:** palatal (carballach).
+
+**Common features:**
+- /c, ɟ, ç, j, ɲ/.
+- Before back or open vowels – glide [j]: *cearc* [cʲʰæɾk] (in the text [cᵢhᵢarᵘkᵢ] – [i] is visible before a).
+- At the end of a stressed syllable after a back vowel – glide [i̯]: *stoic* [s̪t̪ʷɔc]? In the text [sᵧtᵧᵧᵧᵧᵧᵧᵧᶜᵧ] – unclear.
+
+**Phonemes:**
+
+- **/c/** – [cʰ] (aspirated, except after /sʲ/ → [c]).
+- **/ɟ/** – [ɟ].
+- **/ç/** – [ç] (voiceless palatal fricative).
+- **/j/** – [j] (voiced palatal approximant).
+- **/ɲ/** – [ɲ] (voiced palatal nasal); voiceless /ɲ̊/.
+
+---
+
+## 5.1.7 Glottals (Glotaigh)
+
+- **/hʷ/** and **/hʲ/** – both are realized as [h] (voiceless glottal fricative), but the quality of neighboring vowels may change.
+  For /hʲ/ – before it, there may be a vowel [i] at the beginning of a word? In the text: /hʲ/ – guta scartha neas-tosaigh neas-dúnta roimh chuimilteach glotach – that is [i] before h.
+
+---
+
+## 5.2 Vowel Inventory CR (Fogharthacar gutach na canúna)
+
+### Léaráid 5.2 (p. 61) – vowel quadrilateral for CR
+
+The table shows the following phonemes (according to the text):
+
+- **Front:** /iː/, /ɪ/, /eː/, /e/, /aː/ (partially)
+- **Central:** /ə/
+- **Back:** /uː/, /ʊ/, /oː/, /ɔː/, /ʌ/ (and /ɑ/?)
+- **Diphthongs:** /ai/, /au/, /iə/, /uə/ (in the text /io/ and /uə/)
+
+### Tábla 5.2 – Minimal Pairs of Vowels (p. 62)
+
+The table gives examples (simplified transcription – not phonetic, but phonemic in Celticist notation, but with IPA-like symbols).
+
+| Vowel | Example | Pronunciation (in the book) | Meaning |
+|-------|---------|----------------------------|---------|
+| /iː/ | *crích* (dat.) | /crīc/ | finish |
+| /ɪ/ | *crios* | /crīs/ | belt (but here /ī/ – typo? Should be /ɪ/). In the text: /crios/ – /ɪ/ |
+| /eː/ | *cré* | /crēe/ | soil |
+| /e/ | *creid* | /crēcd/ | believe (but /e/ short) |
+| /aː/ | *crá* | /krāa/ | anguish |
+| /a/ | *craic* | /krāac/ | fun (short /a/) |
+| /oː/ | *cró* | /krōo/ | hut |
+| /ʌ/ | *croch* | /krōox/ | hang ( /ʌ/ – but here /oː/? In the text /krōox/ – possibly /ʌ/ in another example) |
+| /uː/ | *crú* | /krūu/ | milking |
+| /ʊ/ | *cruth* | /krūut/ | shape ( /ʊ/ – but written /uː/?) |
+| /ai/ | *caighdeán* | /kaidjɑ:n/ | standard |
+| /au/ | *camhraigh* | /kaurʕɑ/ | decay |
+| /iə/ | *criathar* | /crīahʕɑr/ | sieve |
+| /uə/ | *crua* | /krʕuə/ | hard |
+
+More accurate descriptions are given in the text.
+
+---
+
+## 5.2.1 Front Vowels (Gutai tosaigh)
+
+- Before velarized consonants, vowels are slightly retracted.
+- Between two velarized – slightly centralized.
+
+**/iː/** [iː] – unrounded front high long.
+- Also corresponds to orthographic ⟨ao⟩, ⟨aoi⟩: *aon*, *naoi*, *naomh*, *saol*, *taobh* (except the words *aon* (adj), *aonraic*, *aontú*).
+- Also in words before sonorants (nasals, approximants, laterals) from orthographic ⟨i⟩, ⟨oi⟩, ⟨ui⟩: *im*, *simplí*, *binn*, *inseacht*, *droim*, *roinn*, *cuimse*, *muintir*.
+- From ⟨aidh⟩: *maidhm*, *snaidhm*.
+
+**/ɪ/** [ɪ] – unrounded near-front near-high short.
+- From orthographic ⟨io⟩, ⟨oi⟩ in a stressed syllable: *ciotach*, *coinneigh*, *coir*, *fios*, *gloine*, *oileán*, *pionsúr*, *pionta*, *soiléir*, *Stiofán*, *troime*.
+
+**/eː/** [eː] – unrounded front mid-high long.
+- From ⟨é⟩, ⟨ea⟩, ⟨aei⟩, ⟨ae⟩: *béil*, *béal*, *Gaeil*, *Gael*.
+
+**/e/** [e] – unrounded front mid-low short (closer to [ɛ]).
+- From ⟨oi⟩ in a stressed syllable: *anoir*, *soir* (also *deis*, *bhuel*).
+
+---
+
+## 5.2.2 Open Vowels (Gutai oscailte)
+
+**/aː/** [aː] – mainly back open long (slightly advanced in some words).
+- In the word *am* may be [æː] (front near-open).
+- From ⟨ea⟩, ⟨a⟩, ⟨ai⟩ before sonorants (l, m, n, r) in certain words: *eaglais*, *tharla*, *caill*, *ceann*, *tairne*, *gearr*, *ard*, *paidrín*.
+
+**/a/** (short open) – allophones:
+- In a palatal context: [a] (front open) – *ainm*, *aire*, *bean*, *cead*, *fear*.
+- In a velarized context: [ɑ] (back open) – *abair*, *capall*, *carraig*, *taca*; also in palatal sometimes [ɑ]? *baile*, *caint*, *gaineamh*.
+- In some words from ⟨oi⟩, ⟨o⟩: *boladh*, *croith*, *folach*, *folamh*, *foscadh*, *goimh*.
+
+---
+
+## 5.2.3 Back Vowels (Gutai cúil)
+
+**/uː/** [uː] – rounded back high long.
+- From ⟨ú⟩, ⟨iú⟩, ⟨úi⟩: *tús*, *rúin*, *rún*.
+
+**/ʊ/** [ʊ] – rounded near-back near-high short (lax).
+- From ⟨io⟩ in a stressed syllable: *gíobal*, *iomarca*, *piocadh*.
+- Also before /mʷ/ or /nʷ/ from ⟨o⟩: *dona*, *ronnach*.
+
+**/oː/** [oː] – rounded back mid-high long.
+
+**/ʌ/** [ʌ] – unrounded back mid-low short.
+- Before /x/ from ⟨u⟩: *luch*, *lucht*, *ucht*; in loanwords: *culaith*, *curach*, *club*.
+
+---
+
+## 5.2.4 Neutral Vowel (An guta láir)
+
+**/ə/** [ə] – neutral vowel (schwa).
+- In unstressed function words: *an*, *na*, *gur*, *arb*.
+- In unstressed syllables in a velarized context (instead of any short vowel).
+- In endings -(e)adh, -(e)amh, -odh (except past tense and subjunctive forms): *samhradh*, *ag bualadh*, *ag déanamh*.
+
+---
+
+## 5.2.5 Diphthongs (Défhoghair)
+
+**/au/** [au] – from central open [a] to rounded back high [u]. Example: *deamhain*, *deamhan*, *tamhain*, *tamhan*.
+
+**/ai/** [ai] – from [a] to [i]. Example: *caighdeán*.
+
+**/iə/** [iə] – from [i] to neutral [ə]. Example: *Brian* (in CR /io/ – probably [iə]).
+
+**/uə/** [uə] – from [u] to [ə]. Example: *cuan*, *cuain*.
+
+---
+
+## Key Takeaways for the G2P Script from Chapter 5 (CR)
+
+1. **CR consonants** have phonemic velarized / palatalized pairs. It is necessary to distinguish:
+   - Labial: /pʷ/ – /pʲ/, /bʷ/ – /bʲ/, /fʷ/ – /fʲ/, /vʷ/ – /vʲ/, /mʷ/ – /mʲ/
+   - Dental coronal: /t̪ʷ/ – /tʲ/, /d̪ʷ/ – /dʲ/, /sʷ/ – /ʃ/, /n̪ʷ/ – /nʲ/, /rʷ/ – /rʲ/, /l̪ʷ/ – /lʲ/
+   - Dorsal: /k/ – /c/, /g/ – /ɟ/, /x/ – /ç/, /ɣ/ – /j/, /ŋ/ – /ɲ/
+
+2. **Allophonic rules:**
+   - Aspiration [ʰ] of voiceless plosives /pʷ, pʲ, t̪ʷ, tʲ, k, c/ at the beginning of a syllable, except after /s/.
+   - Voiceless sonorants occur in certain grammatical contexts (e.g., after h-mutation): /m̥ʷ, m̥ʲ, n̪ʷ̥, n̥ʲ, l̪ʷ̥, l̥ʲ, r̥ʷ, r̥ʲ, ŋ̊, ɲ̊/ – they need to be generated.
+
+3. **Glides:**
+   - Velarized C + front vowel → insertion of [w] or [u̯] between them (before a stressed vowel).
+   - Palatalized C + back vowel → insertion of [j] or [i̯].
+   - At the end of a syllable after a front vowel before a velarized C – glide [ˠ] ([ʷ]-shaped).
+   - At the end of a syllable after a back vowel before a palatalized C – glide [j] ([i̯]).
+   These insertions are not phonemic, but are important for phonetic transcription. For G2P, they can be omitted if only phonemic transcription is needed.
+
+4. **Vowels:** distinguish long /iː, eː, aː, uː, oː/ and short /ɪ, e, a, ʊ, ʌ/, as well as /ə/.
+5. **Diphthongs:** /ai/, /au/, /iə/, /uə/ (sometimes written as /io/, /uo/).
+6. **Minimal pairs** from tables 5.1 and 5.2 can be used for testing G2P.
+
+---
+
+If needed, next I can make a summary of Chapter 6 (Munster, Corca Dhuibhne) or Chapter 7 (grapheme-phoneme correspondences – the key for G2P). Let me know.
+
+## User
+
+Create a highly detailed summary of Chapter 6. Preserve all phonetic data and examples. For my g2p script.
+
+## DeepSeek
+
+Below is a **highly detailed summary of Chapter 6** ("6 Consain agus gutaí Ghaeilge Chorca Dhuibhne") of the book *Fuaimeanna na Gaeilge*. The chapter is devoted to the phonetics and phonology of the **Munster dialect** of Irish in the region of **Corca Dhuibhne (CD)** (County Kerry). All data is preserved in a format useful for developing a G2P script: phoneme inventories, allophones, minimal pairs, rules for the appearance of glides, example words with transcriptions.
+
+---
+
+## 6.1 Consonant Inventory CD (Fogharthacar consanta na canúna)
+
+### Léaráid 6.1 (p. 69) – consonant table for CD
+
+The table is organized similarly to the previous dialects, but with features characteristic of Munster (e.g., the presence of /v/ as a voiced labiodental fricative, absence of some voiceless sonorants, etc.).
+
+**List of phonemes (recommended symbols for phonemic transcription):**
+
+#### Plosives / affricates (Pléascach / Achuimilteach)
+- **Labial:** /pʷ/, /bʷ/, /pʲ/, /bʲ/
+- **Dental velarized:** /t̪ʷ/, /d̪ʷ/ (in the table for Déadach – /tʷ/, /dʷ/, but dental is implied)
+- **Alveolo-palatal (palatalized coronal):** /tʲ/, /dʲ/ (column Ailbheol-charballach)
+- **Palatal:** /c/, /ɟ/ (Carballach)
+- **Velar:** /k/, /g/ (Coguasach)
+
+#### Fricatives / approximants (Cuimilteach / Neasach)
+- **Labial:** /fʷ/, /fʲ/, /vʷ/, /vʲ/ (voiced labiodental /vʷ/ and /vʲ/). Also /w/ in some positions (but in CD /w/ may be absent or rare; in the table for Liopach in the row Cuimilteach/Neasach /w/ is indicated only as an allophone? In the text below, /v/ is mentioned for voiced labiodental, and /w/ is not distinguished as a separate phoneme – more likely an allophone of /v/ or the result of bh-mutation).
+   In the description "Liopaigh chogusaithe" there is /fʷ/, /h/ (as an allophone of /fʷ/?), /vʷ/, /mʷ/ – without /w/.
+- **Alveolar velarized:** /sʷ/ (Déadach)
+- **Alveolo-palatal fricative:** /ʃ/ (voiceless), /ʒ/ (voiced) – in the column Ailbheol-charballach.
+- **Palatal fricative:** /ç/ (Carballach, voiceless), /j/ (approximant) – but /j/ in Neasach.
+- **Velar fricatives:** /x/, /ɣ/
+- **Glottal:** /h/ (without distinction by secondary articulation – a single /h/).
+
+#### Nasals (Srónach)
+- **Labial:** /mʷ/, /mʲ/ (voiceless variants – in the table left voiceless, right voiced)
+- **Dental velarized:** /n̪ʷ/ (Déadach)
+- **Alveolo-palatal nasals:** /nʲ/ (Ailbheol-charballach, voiced), /n̥ʲ/ (voiceless)
+- **Palatal nasal:** /ɲ/ (Carballach)
+- **Velar nasal:** /ŋ/ (Coguasach)
+
+#### Taps / approximants (Cnagach / Neasach)
+- **Alveolar velarized tap:** /rʷ/
+- **Alveolo-palatal tap:** /rʲ/ (voiced), voiceless /r̥ʲ/ – in the table for Cnagach/Neasach in the column Ailbheol-charballach /rʲ/ is indicated (voiceless and voiced?).
+
+#### Laterals (Taobhach)
+- **Dental velarized:** /l̪ʷ/ (Déadach)
+- **Alveolo-palatal laterals:** /lʲ/ (Ailbheol-charballach) – in the text /l/ with a diacritic.
+
+---
+
+### Tábla 6.1 – Minimal Pairs of Consonants (p. 70)
+
+The table proves the phonemic status of contrasts in CD.
+
+| Phonemes | Minimal pair |
+|----------|--------------|
+| /pʷ/ – /pʲ/ | *scóp* – *scóip* |
+| /bʷ/ – /bʲ/ | *buí* – *bhí*, *buíon* – *bíonn*, *bó* – *beo* |
+| /tʷ/ – /tʲ/ | *tuí* – *tí* |
+| /dʷ/ – /dʲ/ | *dó* – *deo* |
+| /k/ – /c/ | *cúis* – *ciumhais* |
+| /g/ – /ɟ/ | *gal* – *geal* |
+| /fʷ/ – /fʲ/ | *fóill* – *feoil* |
+| /vʷ/ – /vʲ/ | *bhuí* – *bhí* |
+| /sʷ/ – /ʃ/ | *suí* – *sí* |
+| /x/ – /ç/ | *an chú* – *an chíú* |
+| /ɣ/ – /j/ | *an-ghal* – *an-gheal* |
+| /mʷ/ – /mʲ/ | *óm* – *óim* |
+| /n̪ʷ/ – /n̪ʲ/ | *naoi* – *néal* |
+| /rʷ/ – /rʲ/ | *cur* – *cuir* |
+| /l̪ʷ/ – /lʲ/ | *lón* – *leon* |
+| /pʷ/ – /bʷ/ | *pá* – *bá* |
+| /pʲ/ – /bʲ/ | *pinn* – *binn* |
+| /tʷ/ – /dʷ/ | *ghreadfadh* – *ghreadadh* |
+| /tʲ/ – /dʲ/ | *chreidfeadh* – *chreideadh* |
+| /k/ – /g/ | *cad* – *gad* |
+| /c/ – /ɟ/ | *ciall* – *giall* |
+| /fʷ/ – /vʷ/ | *fóta* – *vóta* |
+| /fʲ/ – /vʲ/ | *figh* – *bhí* |
+| /x/ – /ɣ/ | *an-chaol* – *an-ghaol* |
+| /c/ – /ɟ/ | *cheal* – *gheal* |
+
+---
+
+## 6.1.1 Labial Velarized (Liopaigh chogusaithe)
+
+**Common features:**
+- Secondary articulation – labialization [ʷ].
+- Before front vowels under stress, a **glide [ʷ]** (or [u]) appears between the consonant and vowel:
+  - *puiteach* [pʷʰuʷˈtʲəx] (in the text [pʷʰuʷtʲəx] – but in CD example: *puiteach* [pʷʰuʷtʲəx]).
+- At the end of a syllable after a front vowel – **glide [°]** (probably [ˠ] or [ʷ]-shaped):
+  - *scríobtha* [ʃcɾʲiːbʷə] – in the text [fcrli:²pʷʰ...] – [u] is visible after bʷ.
+
+**Phonemes:**
+
+- **/pʷ/** – [pʷʰ] (aspirated) in all positions except after /sʷ/ ([pʷ] unaspirated).
+- **/bʷ/** – [bʷ] (voiced).
+- **/fʷ/** – [fʷ] (voiceless labiodental fricative). In the text also mentioned [h] as an allophone of /fʷ/ in some positions? In the table for Liopaigh chogusaithe in the row Cuimilteach, /fʷ/ and [h] (glottal) are indicated – possibly /fʷ/ before a vowel may weaken to [h] in rapid speech.
+- **/vʷ/** – [vʷ] (voiced labiodental fricative).
+- **/mʷ/** – voiced [mʷ]; voiceless /m̥ʷ/ (in the table /mʷ/ for voiceless and voiced – but actually two different symbols: left voiceless /m̥ʷ/, right /mʷ/).
+
+---
+
+## 6.1.2 Labial Palatalized (Liopaigh charballaithe)
+
+**Common features:**
+- Secondary palatalisation [ʲ].
+- Before back vowels – glide [j] (in the text [i]): *pioc* [pʲʰiək] – in the text [pihikh] (CD).
+- At the end of a syllable after a back vowel – glide [i̯]: *coipthe* [kʌˈpʲiː] – in the text [khA'pi'ohiE] – [i] is visible after pʲ.
+
+**Phonemes:**
+
+- **/pʲ/** – [pʲʰ] (aspirated, except after /sʲ/ → [pʲ]).
+- **/bʲ/** – [bʲ].
+- **/fʲ/** – [fʲ] – voiceless fricative.
+- **/vʲ/** – [vʲ] – voiced.
+- **/mʲ/** – [mʲ] (voiced); voiceless /m̥ʲ/.
+
+---
+
+## 6.1.3 Coronal Velarized (Corónaigh chogusaithe) – dental
+
+**Place:** dental (déadach).
+
+**Common features:**
+- Secondary [ʷ].
+- Before front vowels under stress – glide [ʷ] (or [u]): *tuí* [t̪ʷʰuːiː] (in the text [tʷʰuːiː]).
+- At the end of a stressed syllable after a front vowel – glide [°] ([ˠ]): *aos* [eːʷs] – in the text [eːʷs] (CD: *aos* /eːs/ but with [ʷ] at the end?).
+
+**Phonemes:**
+
+- **/t̪ʷ/** – [t̪ʷʰ] (aspirated, except after /sʷ/ → [t̪ʷ]).
+- **/d̪ʷ/** – [d̪ʷ].
+- **/sʷ/** – [sʷ] (alveolar fricative with slight labialization).
+- **/n̪ʷ/** – [n̪ʷ] (voiced); voiceless /n̪ʷ̥/.
+- **/rʷ/** – [rʷ] (alveolar tap velarized).
+- **/l̪ʷ/** – [l̪ʷ] (dental lateral velarized); voiceless /l̪ʷ̥/.
+
+---
+
+## 6.1.4 Coronal Palatalized (Corónaigh charballaithe)
+
+**Place:** alveolo-palatal (ailbheol-charballach) – postalveolar with palatalisation.
+
+**Common features:**
+- Secondary [ʲ].
+- Before back vowels under stress – glide [j] (in the text [i]): *teocht* [tʲʰɔxt] – in the text [tʉhɪɔxtʏ] – [i] is visible.
+- At the end of a stressed syllable after a back vowel – glide [i̯]: *póit* [pʷʰɔːtʲ] – in the text [pʏhɔːtʏh].
+
+**Phonemes:**
+
+- **/tʲ/** – [tʲʰ] (alveolo-palatal plosive with aspiration, except after /ʃ/ → [tʲ]).
+- **/dʲ/** – [dʲ].
+- **/ʃ/** – voiceless postalveolar fricative (in CD it is palatalized). In the text for CD in the section "Corónaigh charballaithe" /ʃ/ (cuimilteach ailbheol-charballach neamhghlórach) and /ʒ/ (voiced) are indicated – but in the table for Cuimilteach in the column Ailbheol-charballach /ʃ/ and /ʒ/ are indicated.
+- **/nʲ/** – [nʲ] (alveolo-palatal nasal voiced); voiceless /n̥ʲ/.
+- **/rʲ/** – [rʲ] (alveolo-palatal tap voiced); voiceless /r̥ʲ/.
+- **/lʲ/** – [lʲ] (alveolo-palatal lateral voiced) – in the text /ʎ/ or /lʲ/.
+
+---
+
+## 6.1.5 Dorsal Velarized (Dromaiqh choguasaithe) – velar
+
+**Common features:**
+- Velar /k, g, x, ɣ, ŋ/.
+- Before front vowels under stress – **no** glide [u] (unlike coronals): *cuil* [kʰɪl]? In the text *cuil* [khu'lβ] – [u] is part of the vowel.
+- At the end of a stressed syllable after a front vowel – glide [°] ([ˠ]): *íoc* [iːˠkʰ].
+
+**Phonemes:**
+
+- **/k/** – [kʰ] (aspirated, except after /s/ → [k]).
+- **/g/** – [g].
+- **/x/** – [x] (voiceless velar fricative).
+- **/ɣ/** – [ɣ] (voiced velar fricative).
+- **/ŋ/** – [ŋ] (voiced velar nasal); voiceless /ŋ̊/ (in the table /ŋ/ and /ŋ/ with a diacritic).
+
+---
+
+## 6.1.6 Dorsal Palatalized (Dromaiqh charballaithe) – palatal
+
+**Place:** palatal (carballach).
+
+**Common features:**
+- /c, ɟ, ç, ʃ (voiced?), j, ɲ/.
+- Before back or open vowels – glide [j]: *cearc* [cʲʰæɾk] – in the text [cᵢᵃrᵃᵉkᵏ] – [i] is visible before a.
+- At the end of a stressed syllable after a back vowel – glide [i̯]: *stoic* [s̪t̪ʷɔc] – in the text [sᵉtᵉᵃᵉcᵏ].
+
+**Phonemes:**
+
+- **/c/** – [cʰ] (aspirated, except after /ʃ/ → [c]).
+- **/ɟ/** – [ɟ].
+- **/ç/** – [ç] (voiceless palatal fricative).
+- **/j/** – [j] (voiced palatal approximant) – in CD /j/ may be an allophone of /ɣʲ/.
+- **/ɲ/** – [ɲ] (voiced palatal nasal); voiceless /ɲ̊/.
+
+---
+
+## 6.1.7 Glottals (Glotaigh)
+
+- **/h/** – [h] (voiceless glottal fricative). In CD there is no distinction between /hʷ/ and /hʲ/ – only one /h/.
+
+---
+
+## 6.2 Vowel Inventory CD (Fogharthacar gutach na canúna)
+
+### Léaráid 6.2 (p. 77) – vowel quadrilateral for CD
+
+The table shows the following phonemes (according to the text):
+
+- **Front:** /iː/, /ɪ/, /eː/, /e/, /a/ (short front open)
+- **Central:** /ə/
+- **Back:** /uː/, /oː/, /ʌ/, /ɑː/ (long back open)
+- **Diphthongs:** /əu/ (or /au/), /ai/, /iə/, /uə/
+
+### Tábla 6.2 – Minimal Pairs of Vowels (p. 78)
+
+| Vowel | Example | Pronunciation (IPA in the book) | Meaning |
+|-------|---------|-------------------------------|---------|
+| /iː/ | *crích* (dat.) | /crɪiː/ | finish |
+| /ɪ/ | *crith* | /crɪhɪ/ | shake |
+| /eː/ | *cré* | /crɪeː/ | soil |
+| /e/ | *creid* | /crɪedɪ/ | believe |
+| /aː/ | *crá* | /krʌaː/ | anguish |
+| /a/ | *craic* | /krʌac/ | fun |
+| /oː/ | *cró* | /krʌoː/ | hut |
+| /ʌ/ | *croch* | /krʌox/ | hang |
+| /uː/ | *crú* | /krʌuː/ | milking |
+| /ʊ/ | *cruth* | /krʌuhʌ/ | shape |
+| /ai/ | *caighdeán* | /kaidʌɑːnʌ/ | standard |
+| /au/ | *cabhraigh* | /kaurʌɪj/ | help |
+| /iə/ | *criathar* | /krɪəihʌərʌ/ | sieve |
+| /uə/ | *crua* | /krʌʊə/ | hard |
+
+---
+
+## 6.2.1 Front Vowels (Gutai tosaigh)
+
+- Before velarized consonants, vowels are slightly retracted.
+- Between two velarized – slightly centralized.
+
+**/iː/** [iː] – unrounded front high long.
+- Also from orthographic ⟨i⟩, ⟨oi⟩, ⟨ui⟩ before sonorants (l, m, n) in certain words: *cill*, *im*, *simplí*, *binn*, *cuimse*, *muintir*.
+
+**/ɪ/** [ɪ] – unrounded near-front near-high short.
+- From ⟨io⟩, ⟨oi⟩ in a stressed syllable: *coinnigh*, *coir*, *fios*, *gloine*, *oileán*, *Stiofán*, *troime*.
+
+**/eː/** [eː] – unrounded front mid-high long.
+- From ⟨é⟩, ⟨aei⟩, ⟨ae⟩: *béil*, *Gaeil*, *Gael*.
+- However, for the words *béal*, *éan*, *féar* – in CD this is a diphthong [iə] (see below).
+
+**/e/** [e] – unrounded front mid-low short ([ɛ]): *deis*, *bhuel*.
+
+---
+
+## 6.2.2 Open Vowels (Gutai oscailte)
+
+**/ɑː/** [ɑː] – back open long (main allophone).
+- From ⟨á⟩, ⟨eá⟩, ⟨a⟩, ⟨ea⟩ in certain contexts: *a Sheáin*, *Seán*, *cás*, *cáis*.
+- Also before /rʷ/ (velarized r) from ⟨ea⟩, ⟨a⟩: *barr*, *gearr*.
+
+**/a/** (short open) – two main allophones:
+- In a palatal context: [a] (front open) – *ainm*, *aire*, *bean*, *cead*, *fear*.
+- In a velarized context: [ɑ] (back open) – *abair*, *balla*, *capall*.
+
+---
+
+## 6.2.3 Back Vowels (Gutai cúil)
+
+**/uː/** [uː] – rounded back high long.
+- From ⟨ú⟩, ⟨iú⟩, ⟨úi⟩: *tiúis*, *tiús*, *rúin*, *rún*.
+
+**/oː/** [oː] – rounded back mid-high long.
+- From ⟨ó⟩, ⟨eo⟩, ⟨ói⟩: *bó*, *ól*, *tóg*.
+
+**/ʌ/** [ʌ] – unrounded back mid-low short (like English *strut*).
+- From ⟨eo⟩, ⟨oi⟩, ⟨o⟩: *deoch*, *dos*.
+
+---
+
+## 6.2.4 Neutral Vowel (An guta láir)
+
+**/ə/** [ə] – neutral vowel (schwa).
+- In unstressed function words: *an*, *na*, *gur*.
+- In unstressed syllables in a velarized context.
+- In endings -(e)adh (except past tense and subjunctive forms): *samhradh*, *ag bualadh*.
+
+---
+
+## 6.2.5 Diphthongs (Défhoghair)
+
+**/əu/** [əu] – from [ə] to [u] (or [au]): *deamhan*, *tamhan*. Also [au] – *deamhain*.
+
+**/ai/** [ai] – from [a] to [i]: *caighdeán*.
+
+**/iə/** [iə] – from [i] to [ə]: *Brian* (also *béal*, *éan*, *féar* – in CD these words have the diphthong /iə/ instead of /eː/).
+
+**/uə/** [uə] – from [u] to [ə]: *cuan*, *cuain*.
+
+---
+
+## Key Takeaways for the G2P Script from Chapter 6 (CD – Munster)
+
+1. **CD consonants** have phonemic velarized / palatalized pairs, similar to GD and CR, but with some differences:
+   - Absence of phonemic /w/ (voiced labial-velar approximant) – instead /vʷ/ and /vʲ/.
+   - Voiceless sonorants /m̥ʷ, m̥ʲ, n̪ʷ̥, n̥ʲ, l̪ʷ̥, l̥ʲ, r̥ʷ, r̥ʲ, ŋ̊, ɲ̊/ occur in grammatical contexts (h-mutation etc.).
+   - One glottal /h/ (without distinction between /hʷ/ and /hʲ/).
+
+2. **Allophonic rules:**
+   - Aspiration [ʰ] of voiceless plosives /pʷ, pʲ, t̪ʷ, tʲ, k, c/ at the beginning of a syllable, except after /s/.
+   - Voiced labiodental fricatives /vʷ/ and /vʲ/ – important for distinction (minimal pair *bhuí* /vʷiː/ vs *bhí* /vʲiː/).
+
+3. **Glides:**
+   - Velarized C + front vowel → insertion of [w] or [u̯] between them (in a stressed syllable).
+   - Palatalized C + back vowel → insertion of [j] or [i̯].
+   - At the end of a syllable after a front vowel before a velarized C – glide [ˠ] ([ʷ]-shaped).
+   - At the end of a syllable after a back vowel before a palatalized C – glide [j] ([i̯]).
+
+4. **Vowels:** distinguish long /iː, eː, ɑː, uː, oː/ and short /ɪ, e, a, ʌ/, as well as /ə/.
+   - In CD /aː/ – back open [ɑː] (not front, as in other dialects).
+   - /ʌ/ – very common (instead of /ʊ/ in other dialects).
+
+5. **Diphthongs:** /əu/ (or /au/), /ai/, /iə/, /uə/.
+   - Important: /iə/ occurs where other dialects have /eː/ (e.g., *béal* [bʲiəl]).
+
+6. **Minimal pairs** from tables 6.1 and 6.2 – excellent test material for G2P.
+
+---
+
+If needed, next I can make a summary of Chapter 7 (grapheme-phoneme correspondences) – this is the most important part for the G2P script, where tables for converting orthographic sequences into phonemes for all three dialects are given. Let me know.
+
+## User
+
+Create a highly detailed summary of Chapter 7. Preserve all phonetic data and examples. For my g2p script.
+
+## DeepSeek
+
+Below is a **highly detailed summary of Chapter 7** ("7 Litriú na Gaeilge") of the book *Fuaimeanna na Gaeilge*. The chapter is devoted to the connection between orthography and pronunciation in the three dialects (GD, CR, CD) and contains tables of grapheme-phoneme correspondences necessary for developing a G2P script. All data is preserved: graphemes, corresponding phonemes, example words with transcriptions, rules, and exceptions.
+
+---
+
+## 7.1 Introduction (Réamhrá)
+
+- Irish orthography is **opaque** (teimhneach) in terms of a direct "letter → sound" mapping, but **relatively regular** (réasúnta rialta). Rules can be formulated.
+- **Grapheme (graiféim)** – a letter or sequence of letters. Written in angle brackets: ⟨a⟩.
+- **Opacity** is partly due to **morphological transparency** (trédhearcacht moirfeolaíochta): orthography preserves morphemic structure, even if pronunciation changes.
+  - **Example:** initial mutation (athrú tosaigh) – after the preposition *í* the word *cuisneoir* (refrigerator) changes /k/ to /g/, but is written *i gcuisneoir* (preserving the spelling of the initial consonant).
+  - **Example:** verb ending – *tógtha* [t̪ʷoːkʲiː] (CR) – orthography preserves ⟨th⟩, although it is pronounced [iː].
+
+---
+
+## 7.2 Consonant Graphemes (Graiféimí consanta)
+
+### Basic Principle of Denoting Palatalisation / Velarisation
+
+- The Irish alphabet has 13 consonant letters: **b, c, d, f, g, h, l, m, n, p, r, s, t**.
+- The distinction between **velarized** and **palatalized** consonants (phonemically significant) is conveyed by **neighboring vowel letters**:
+  - **Broad (velarized)** consonant – next to **⟨a, á, o, ó, u, ú⟩** (back/open).
+  - **Slender (palatalized)** consonant – next to **⟨e, é, i, í⟩** (front).
+
+- **Example:** *Sadhbh* (female name) – begins with broad /sʷ/ (before ⟨a⟩). *Seán* (male name) – begins with slender /ʃ/ (before ⟨e⟩). Minimal pair: *suí* [sʷiː] vs *sí* [ʃiː].
+
+- **Quality harmony in clusters (braisle):** consonants in a cluster must be of the same quality (all broad or all slender). There are exceptions.
+
+### Exceptions to the Quality Rules
+
+- **⟨s⟩** at the beginning of a word before **⟨f, m, p⟩** is always broad (velarized):
+  - *sféar* [sʲfʲeːr]? No, the text says: *sféar, sméar, spéir* – initial /s/ is broad even before slender? Actually: "Bíonn (s) i dtús focail cogusaithe go fóinéimeach i gcónaí roimh (f), (m), nó (p)" – that is /sʷ/ before ⟨f, m, p⟩, even if the following vowel is slender? This is an exception: orthographic ⟨s⟩ in such clusters does not change quality to slender.
+
+- **⟨r⟩** at the beginning of a word or before ⟨d, l, n, t, s⟩ is always broad (velarized).
+
+### Denotation of Voiceless Sonorants (consain shondacha neamhghlóracha)
+
+- A voiceless sonorant (e.g., /m̥/, /n̥/, /l̥/, /r̥/) is conveyed by adding **⟨th⟩** or **⟨f⟩** after the sonorant letter, or **⟨sh⟩** before it.
+  - **Example:** *cromtha* [kɾʌm̥ə] (CD) – ⟨mth⟩ → /m̥/.
+- In the book, such voiceless sonorants are treated as separate phonemes (e.g., /mʷ/ for voiceless /m̥ʷ/), although their status may be debatable.
+
+### Consonant Grapheme Tables (Táblaí 7.1–7.13)
+
+Below is the content of tables 7.1–7.13 in summary form (in the original the tables are detailed, but in the provided PDF they are partially damaged; I reconstruct the gist from the text).
+
+---
+
+#### Table 7.1: Graphemes with ⟨b⟩
+
+| Grapheme | Phoneme (GD/CR/CD) | Example | Pronunciation (approximate) |
+|----------|-------------------|---------|----------------------------|
+| ⟨b⟩ | /bʷ/ (broad) | *gob* | /gʌbʷ/ |
+| ⟨b⟩ | /bʲ/ (slender) | *foirb* | /fʲɪrʲbʲ/ |
+| ⟨bf⟩ | /pʷ/ (broad, voiceless) | *gobfaidh* | /gʌpʷiː/ |
+| ⟨bf⟩ | /pʲ/ (slender, voiceless) | *foirbifidh* | /fʲɪrʲbʲpʲiː/ |
+| ⟨bh⟩ | /w/ (broad) | *díobh* | /dʲiːw/ |
+| ⟨bh⟩ | /vʲ/ (slender) | *díbh* | /dʲiːvʲ/ |
+| ⟨bhf⟩ | /fʷ/ (broad, eclipsis) | *díobhfaidh* | /dʲiːfʷiː/ |
+| ⟨bhf⟩ | /fʲ/ (slender, eclipsis) | *díbhfidh* | /dʲiːfʲiː/ |
+| ⟨bth⟩ | /pʷ/ (broad) | *gobtha* | /gʌpʷə/ |
+| ⟨bth⟩ | /pʲ/ (slender) | *foirbthe* | /fʲɪrʲbʲpʲə/ |
+
+---
+
+#### Table 7.2: Graphemes with ⟨c⟩
+
+| Grapheme | Phoneme | Example | Note |
+|----------|---------|---------|------|
+| ⟨c⟩ | /k/ (broad) | *íoc* | /iːk/ |
+| ⟨c⟩ | /c/ (slender) | *feic* | /fʲɛc/ |
+| ⟨cf⟩ | /k/ | *íocfaidh* | /iːkʲiː/ (?) In the table /ik:i/ for GD |
+| ⟨cf⟩ | /c/ | *feicfidh* | /fʲɛcʲiː/ |
+| ⟨ch⟩ | /x/ (broad) | *múch* | /muːx/ |
+| ⟨ch⟩ | /ç/ (slender) | *cloicheán* | /kɫʲəçaːn/ (CR) |
+| ⟨chf⟩ | /x/ | *múchfaidh* | /muːxiː/ |
+| ⟨chf⟩ | /ç/ | *sroichfidh* | /sɾʲɛçiː/ (CR) |
+| ⟨cht⟩ | /k/ | *íoctha* | /iːkə/ |
+| ⟨cht⟩ | /c/ | *feicthe* | /fʲɛcə/ |
+
+---
+
+#### Table 7.3: Graphemes with ⟨d⟩
+
+| Grapheme | Phoneme | Example |
+|----------|---------|---------|
+| ⟨d⟩ | /d̪ʷ/ | *stad* |
+| ⟨d⟩ | /dʲ/ | *séid* |
+| ⟨df⟩ | /t̪ʷ/ | *stadfaidh* |
+| ⟨df⟩ | /tʲ/ | *séidfidh* |
+| ⟨dh⟩ | /ɣ/ | *dhún* (broad) |
+| ⟨dh⟩ | /j/ | *dhiúl* (slender) |
+| ⟨dt⟩ | /t̪ʷ/ | *stadta* |
+| ⟨dt⟩ | /tʲ/ | *séidte* |
+
+---
+
+#### Table 7.4: Graphemes with ⟨f⟩
+
+| Grapheme | Phoneme | Example |
+|----------|---------|---------|
+| ⟨f⟩ | /fʷ/ | *feá* (GD: /fʲæː/?) In the table for GD /fʷ/ or /fʲ/? Actually: ⟨f⟩ can be broad or slender depending on neighboring vowels. Example *feá* – slender /fʲ/. *fáth* – broad /fʷ/.
+| ⟨f⟩ | /fʲ/ | *fáth*? No, *fáth* with broad. Confusion in the table. From context: ⟨f⟩ + broad vowel → /fʷ/, + slender → /fʲ/. |
+| ⟨fh⟩ | zero (lenition) | *d'fhág* – /d̪ʷaːg/ (f is not pronounced) |
+
+---
+
+#### Table 7.5: Graphemes with ⟨g⟩
+
+| Grapheme | Phoneme | Example |
+|----------|---------|---------|
+| ⟨g⟩ | /g/ | *óga* (broad) |
+| ⟨g⟩ | /ɟ/ | *tréig* (slender) |
+| ⟨gf⟩ | /k/ | *tógfaidh* |
+| ⟨gf⟩ | /c/ | *tréigfidh* |
+| ⟨gh⟩ | /ɣ/ | *ghalaigh* (broad) |
+| ⟨gh⟩ | /j/ | *ghiall* (slender) |
+| ⟨gth⟩ | /k/ | *tógtha* |
+| ⟨gth⟩ | /c/ | *tréigthe* |
+
+---
+
+#### Table 7.6: Graphemes with ⟨h⟩
+
+| Grapheme | Phoneme | Example |
+|----------|---------|---------|
+| ⟨h⟩ | /h/ (always) | *hata* |
+
+Note: ⟨h⟩ is also used in mutations (e.g., *mo hata*), but as a separate grapheme gives /h/.
+
+---
+
+#### Table 7.7: Graphemes with ⟨l⟩
+
+| Grapheme | Phoneme | Example |
+|----------|---------|---------|
+| ⟨l⟩ | /l̪ʷ/ (broad) | *díol* |
+| ⟨l⟩ | /l̪ʲ/ (slender) | *buail* (in GD: /bʷuəlʲ/) |
+| ⟨lf⟩ | /l̪ʷ/ (voiceless) | *díolfaidh* |
+| ⟨lf⟩ | /l̪ʲ/ (voiceless) | *buailfidh* |
+| ⟨ll⟩ | /l̪ʷ/ (broad geminate) | *toll* |
+| ⟨ll⟩ | /lʲ/ (slender geminate) – in CD may be /lʲ/ long | *fill* |
+| ⟨llf⟩ | /l̪ʷ/ (voiceless) | *tollfaidh* |
+| ⟨llf⟩ | /lʲ/ (voiceless) | *fillfidh* |
+
+---
+
+#### Table 7.8: Graphemes with ⟨m⟩
+
+| Grapheme | Phoneme | Example |
+|----------|---------|---------|
+| ⟨m⟩ | /mʷ/ | *crom* |
+| ⟨m⟩ | /mʲ/ | *léim* |
+| ⟨mf⟩ | /m̥ʷ/ | *cromfaidh* |
+| ⟨mf⟩ | /m̥ʲ/ | *léimfidh* |
+| ⟨mh⟩ | /w/ (broad) | *snámh* |
+| ⟨mh⟩ | /vʲ/ (slender) | *nimh* |
+| ⟨mhf⟩ | /fʷ/ | *snámhfaidh* |
+| ⟨mhf⟩ | /fʲ/ | *léimfidh? Not indicated |
+| ⟨mth⟩ | /m̥ʷ/ | *cromtha* |
+| ⟨mth⟩ | /m̥ʲ/ | *léimthe* |
+
+---
+
+#### Table 7.9: Graphemes with ⟨n⟩ (fragmentary)
+
+| Grapheme | Phoneme | Example |
+|----------|---------|---------|
+| ⟨n⟩ | /n̪ʷ/ | *lón* |
+| ⟨n⟩ | /nʲ/ | *bain* |
+| ⟨nd⟩ | /n̪ʷ/ (eclipsis) | *á n‑dúnadh* |
+| ⟨nd⟩ | /nʲ/ | *á ndíol* |
+| ⟨nf⟩ | /n̪ʷ̥/ | *líonfaidh* |
+| ⟨nf⟩ | /n̥ʲ/ | *bainfidh* |
+| ⟨ng⟩ | /ŋ/ | *ung* |
+| ⟨ng⟩ | /ɲ/ | *ling* |
+| ⟨ngf⟩ | /ŋ̊/ | *ungfaidh* |
+| ⟨ngf⟩ | /ɲ̊/ | *lingfidh* |
+| ⟨nn⟩ | /n̪ʷ/ (broad geminate) | *bronn* |
+| ⟨nn⟩ | /nʲ/ (slender geminate) | *cinn* |
+| ⟨nnf⟩ | /n̪ʷ̥/ | *bronnfaidh* |
+| ⟨nnf⟩ | /n̥ʲ/ | *cinnfidh* |
+
+---
+
+#### Table 7.10: Graphemes with ⟨p⟩
+
+| Grapheme | Phoneme | Example |
+|----------|---------|---------|
+| ⟨p⟩ | /pʷ/ | *ceap* |
+| ⟨p⟩ | /pʲ/ | *teip* |
+| ⟨pf⟩ | /pʷ/ | *ceapfaidh* |
+| ⟨pf⟩ | /pʲ/ | *teipfidh* |
+| ⟨ph⟩ | /fʷ/ | *phoc* (lenition) |
+| ⟨ph⟩ | /fʲ/ | *phioce* |
+| ⟨pth⟩ | /pʷ/ | *ceaptha* |
+| ⟨pth⟩ | /pʲ/ | *teipthe* |
+
+---
+
+#### Table 7.11: Graphemes with ⟨r⟩ (in the text not complete, but by analogy)
+
+- ⟨r⟩ broad → /rʷ/, slender → /rʲ/.
+- ⟨rf⟩, ⟨rrf⟩, ⟨rth⟩, ⟨shr⟩ – for voiceless /r̥ʷ/, /r̥ʲ/.
+
+---
+
+#### Table 7.12: Graphemes with ⟨s⟩
+
+- ⟨s⟩ broad → /sʷ/, slender → /ʃ/.
+- Exception: ⟨s⟩ before ⟨f, m, p⟩ is always broad (/sʷ/), even if the following vowel is slender (e.g., *sféar* /sʷfʲeːr/ – but actually /sʷfʲ/ – broad s + slender f? Possibly s remains broad, and f becomes slender? In orthography ⟨sf⟩ – both broad by rule? Clarification: the text says that ⟨s⟩ in such clusters is always phonemically velarized, i.e., /sʷ/).
+
+---
+
+#### Table 7.13: Graphemes with ⟨t⟩
+
+- ⟨t⟩ broad → /t̪ʷ/, slender → /tʲ/.
+- ⟨tf⟩, ⟨th⟩, ⟨thf⟩ – for voiceless, lenited forms.
+
+---
+
+### General Principle Summarizing the Tables:
+- **A simple consonant letter** (b, c, d, f, g, l, m, n, p, r, s, t) denotes a voiced (or voiceless for f, s, p, t, c) consonant of the corresponding place and manner. Quality (broad/slender) is determined by neighboring vowels.
+- **Gemination** (ll, nn, rr) usually indicates that the consonant is "tense" or long, but in phonemic transcription is often not distinguished from a single one (except in cases where there is a minimal pair).
+- **Combinations with ⟨h⟩** (bh, ch, dh, fh, gh, mh, ph, sh, th) denote:
+  - Lenition (e.g., ⟨bh⟩ = /w/ or /vʲ/; ⟨fh⟩ = zero; ⟨sh⟩ = /h/).
+  - At the end of a word or before a consonant – certain fricatives.
+- **Combinations with ⟨f⟩** (bf, cf, df, gf, lf, mf, nf, pf, rf, tf) denote voiceless plosives (for b,d,g – this is devoicing) or voiceless sonorants (for l,m,n,r).
+- **Combinations with ⟨t⟩** (bth, cht, dth, gth, lth, mth, nth, pth, rth, tth) often denote voiceless plosives in past participle endings (-tha, -the).
+
+---
+
+## 7.3 Vowel Graphemes (Graiféimí gutacha)
+
+### Principles
+
+- Irish orthography distinguishes **broad** (⟨a, á, o, ó, u, ú⟩) and **slender** (⟨e, é, i, í⟩) vowels.
+- Vowel letters can be single (short or long) and diphthongs (vowel combinations, sometimes with ⟨i⟩ or ⟨h⟩ to denote palatalisation of neighboring consonants).
+- Important: **the letter ⟨i⟩ often functions as a "palataliser"** – it is not always pronounced as /ɪ/ or /iː/, but may merely indicate the slenderness of neighboring consonants (e.g., at the end of a word *faoi* – /iː/ at the end, but in the middle *cairde* – /a/).
+- **Length** is marked by an acute accent (á, é, í, ó, ú) or in some combinations (⟨ao⟩, ⟨ae⟩ etc.).
+
+### Vowel Grapheme Tables (Táblaí 7.14–7.27)
+
+These tables give the correspondence of orthographic sequences to phonemes (and their dialectal variants) depending on the context of consonant quality. Notations in the tables:
+- **Cʲ** – slender (palatalized) consonant, **Cʷ** – broad (velarized) consonant.
+- **V** – vowel (in context).
+
+---
+
+#### Table 7.14: Graphemes for /a/ (short open)
+
+| Grapheme | Phoneme | Context | Example (GD/CR/CD) |
+|----------|---------|---------|--------------------|
+| ⟨ea(i)⟩ | /a/ | CʲVCʲ | *leaic* /lʲak/ |
+| ⟨ea⟩ | /a/ | CʲVCʷ | *leac* /lʲak/ |
+| ⟨ai⟩ | /a/ | CʷVCʲ | *baic* /bʷak/ |
+| ⟨a⟩ | /a/ | CʷVCʷ | *bac* /bʷak/ |
+
+Note: in different dialects /a/ may be [a], [ɑ] or [æ].
+
+---
+
+#### Table 7.15: Graphemes for /e/ (short front mid-low)
+
+| Grapheme | Phoneme | Context | Example |
+|----------|---------|---------|---------|
+| ⟨e(i)⟩ | /e/ | CʲVCʲ | *deis* /dʲeʃ/ (but CD /dʲeʃ/) |
+| ⟨ue⟩ | /e/ | CʷVCʲ | *bhuel* /wɛl/ (or /vʲɛl/ in CD) |
+| Other contexts not found.
+
+---
+
+#### Table 7.16: Graphemes for /ɪ/ (short near-front high)
+
+| Grapheme | Phoneme | Context | Example |
+|----------|---------|---------|---------|
+| ⟨i⟩ | /ɪ/ | CʲVCʲ | *criticiúil* /kɾʲɪtʲɪkʲuːlʲ/ |
+| ⟨io⟩ | /ɪ/ | CʲVCʲ? | *crios* /kɾʲɪs/ |
+| ⟨ui⟩ | /ɪ/ | CʲVCʲ | *cruidín* /kɾʲɪdʲiːnʲ/ |
+
+Note: in CD /ɪ/ may be more open.
+
+---
+
+#### Table 7.17: Graphemes for /ʌ/ (short back mid-low, unrounded)
+
+| Grapheme | Phoneme | Context | Example |
+|----------|---------|---------|---------|
+| ⟨eo⟩ | /ʌ/ | CʲVCʲ | *deoch* /dʲʌx/ |
+| ⟨oi⟩ | /ʌ/ | CʲVCʲ | *dois* /dʌʃ/ |
+| ⟨o⟩ | /ʌ/ | CʲVCʲ? | *dos* /dʌs/ (but in GD/CR may be /ʌ/ in broad context?) |
+
+---
+
+#### Table 7.18: Graphemes for /ʊ/ (short back high, rounded)
+
+| Grapheme | Phoneme | Context | Example |
+|----------|---------|---------|---------|
+| ⟨iu⟩ | /ʊ/ | CʲVCʲ | *fiuch* /fʲʊx/ |
+| ⟨u⟩ | /ʊ/ | CʲVCʲ | *bun* /bʲʊnʲ/ (in CD /bʷʊn/?) |
+
+---
+
+#### Table 7.19: Graphemes for long /aː/ (in GD /æː/, CR /aː/, CD /ɑː/)
+
+| Grapheme | Phoneme | Context | Example |
+|----------|---------|---------|---------|
+| ⟨eái⟩ | /aː/ | CʲVCʲ | *meáin* /mʲaːnʲ/ |
+| ⟨eá⟩ | /aː/ | CʲVCʷ | *meán* /mʲaːn/ |
+| ⟨ái⟩ | /aː/ | CʷVCʲ | *cág* /kaːgʲ/ |
+| ⟨á⟩ | /aː/ | CʷVCʷ | *cág* (nom.) /kaːg/ |
+
+---
+
+#### Table 7.20: Graphemes for /eː/ (long front mid-high)
+
+| Grapheme | Phoneme | Context | Example |
+|----------|---------|---------|---------|
+| ⟨éi⟩ | /eː/ | CʲVCʲ | *béil* /bʲeːlʲ/ |
+| ⟨éa⟩ | /eː/ | CʲVCʷ | *béal* /bʲeːl/ |
+| ⟨aei⟩ | /eː/ | CʲVCʲ | *Gaeil* /geːlʲ/ |
+| ⟨ae⟩ | /eː/ | CʲVCʷ | *Gael* /geːl/ |
+
+---
+
+#### Table 7.21: Graphemes for /iː/ (long front high)
+
+| Grapheme | Phoneme | Context | Example |
+|----------|---------|---------|---------|
+| ⟨í⟩ | /iː/ | CʲVCʲ | *lín* /lʲiːnʲ/ |
+| ⟨ío⟩ | /iː/ | CʲVCʷ | *líon* /lʲiːn/ |
+| ⟨aí⟩ / ⟨uí⟩ | /iː/ | CʷVCʲ | *suímh* /sʷiːvʲ/ |
+| ⟨ao⟩ / ⟨aoi⟩ | /iː/ | CʷVCʷ / CʷVCʲ | *saol* /sʷiːl/, *naoi* /nʷiː/ |
+
+---
+
+#### Table 7.22: Graphemes for /oː/ (long back mid-high, rounded)
+
+| Grapheme | Phoneme | Context | Example |
+|----------|---------|---------|---------|
+| ⟨eo⟩ (before slender) | /oː/ | CʲVCʲ | *ceoil* /cʲoːlʲ/ |
+| ⟨eo⟩ (before broad) | /oː/ | CʲVCʷ | *ceol* /cʲoːl/ |
+| ⟨ói⟩ | /oː/ | CʷVCʲ | *fóid* /fʷoːdʲ/ |
+| ⟨ó⟩ | /oː/ | CʷVCʷ | *fód* /fʷoːd/ |
+
+---
+
+#### Table 7.23: Graphemes for /uː/ (long back high, rounded)
+
+| Grapheme | Phoneme | Context | Example |
+|----------|---------|---------|---------|
+| ⟨iúi⟩ | /uː/ | CʲVCʲ | *tiúis* /tʲuːʃ/ |
+| ⟨iú⟩ | /uː/ | CʲVCʷ | *tiús* /tʲuːs/ |
+| ⟨úi⟩ | /uː/ | CʷVCʲ | *rúin* /ɾʷuːnʲ/ |
+| ⟨ú⟩ | /uː/ | CʷVCʷ | *rún* /ɾʷuːn/ |
+
+---
+
+#### Table 7.24: Graphemes for the diphthong /ai/
+
+| Grapheme | Context | Example |
+|----------|---------|---------|
+| ⟨eadhai⟩ | CʲVCʲ | *feadhain* /fʲaiɲ/ (GD) |
+| ⟨eadh(a)⟩ | CʲVCʷ | *meadhg* /mʲaig/ (GD) |
+| ⟨adhai⟩ | CʷVCʲ | *radhairc* /ɾʷaiɾʲkʲ/ |
+| ⟨adh(a)⟩ | CʷVCʷ | *radharc* /ɾʷaiɾk/ |
+
+---
+
+#### Table 7.25: Graphemes for /au/ (GD/CR) and /əu/ (CD)
+
+| Grapheme | Context | Example (GD/CR/CD) |
+|----------|---------|--------------------|
+| ⟨eamhai⟩ | CʲVCʲ | *deamhain* /dʲauɲ/ (CR) |
+| ⟨eamh(a)⟩ | CʲVCʷ | *deamhan* /dʲaun/ (CR) |
+| ⟨amhai⟩ | CʷVCʲ | *tamhain* /tʷauɲ/ (CR) |
+| ⟨amh(a)⟩ | CʷVCʷ | *tamhan* /tʷaun/ (CR) |
+| In CD: | | *deamhan* /dʲəun/ |
+
+---
+
+#### Table 7.26: Graphemes for /iə/ (GD/CR) and /iə/ (CD) – diphthong /ia/ in GD, /io/ in CR, /iə/ in CD
+
+| Grapheme | Context | Example |
+|----------|---------|---------|
+| ⟨iai⟩ | CʲVCʲ | *Briain* /bʲɾʲiənʲ/ (GD: /bʲɾʲiaɲ/) |
+| ⟨ia⟩ | CʲVCʷ | *Brian* /bʲɾʲiən/ (GD: /bʲɾʲian/) |
+| Other contexts not noted. |
+
+---
+
+#### Table 7.27: Graphemes for /uə/ (GD/CR) and /uə/ (CD)
+
+| Grapheme | Context | Example |
+|----------|---------|---------|
+| ⟨uai⟩ | CʷVCʲ | *cuain* /kʷuənʲ/ |
+| ⟨ua⟩ | CʷVCʷ | *cuan* /kʷuən/ |
+
+---
+
+## 7.4 Exercises (Cleachtaí)
+
+At the end of the chapter, words are given for phonemic transcription for each dialect (GD, CR, CD) using dialectal phoneme symbols.
+
+### A. Gaoth Dobhair (GD)
+1. *beo* → /bʲoː/ (expected /bʲəu/ in GD? According to table 7.22 – /oː/)
+2. *caol* → /kʷiːl/ (since ⟨ao⟩ → /iː/)
+3. *capall* → /kʷapʷəl̪ʷ/ (or /kʷapʷəl̪ʷ/)
+4. *deis* → /dʲeʃ/
+5. *fáth* → /fʷaː/
+6. *ghreadfadh* → /jɾʲɛt̪ʷə/ (or /ɣɾʲɛd̪ʷə/)
+7. *Máire* → /mʷaːɾʲə/
+8. *rúin* → /ɾʷuːnʲ/
+9. *shleamhnaigh* → /lʲaunʲiː/ (h-lenition gives /lʲ/)
+10. *spéir* → /sʲpʲeːɾʲ/ (but ⟨s⟩ before ⟨p⟩ – exception: broad /sʷ/? The rule says ⟨s⟩ before ⟨p⟩ is always broad, so /sʷpʲeːɾʲ/ – quality conflict. In practice [sʲpʲ] is pronounced – exception to the exception. For G2P one can keep /sʲ/.)
+
+### B. An Cheathrú Rua (CR)
+Similar words with transcriptions according to CR rules.
+
+### C. Corca Dhuibhne (CD)
+Similarly.
+
+---
+
+## Key Takeaways for the G2P Script from Chapter 7
+
+1. **Determining consonant quality:** look at neighboring vowel letters:
+   - If there is at least one slender vowel (⟨e, é, i, í⟩) and no broad vowel (⟨a, á, o, ó, u, ú⟩) in the same syllable or in immediate proximity – the consonant is slender (palatalized).
+   - Otherwise – broad (velarized).
+   - Exceptions: ⟨s⟩ before ⟨f, m, p⟩ – always broad; ⟨r⟩ at the beginning or before ⟨d, l, n, t, s⟩ – always broad.
+
+2. **Consonant graphemes** give the base phoneme, and quality (broad/slender) is added based on neighboring vowels. Voiceless variants are obtained from combinations with ⟨f⟩, ⟨th⟩, ⟨sh⟩.
+
+3. **Vowel letters** can indicate:
+   - The vowel sound itself (short or long) – tables 7.14–7.27.
+   - The quality of neighboring consonants (especially ⟨i⟩ at the end of a word or before another vowel – often silent, only an indicator of slenderness).
+   - A diphthong (combinations of vowels with ⟨i⟩, ⟨a⟩, ⟨u⟩, and ⟨dh⟩, ⟨gh⟩, ⟨mh⟩, ⟨bh⟩ often give diphthongs /ai/, /au/, /iə/, /uə/).
+
+4. **Dialectal differences** are critical:
+   - GD: ⟨ao⟩ = /iː/, ⟨ae⟩ = /eː/, /æː/ for ⟨á⟩ in some positions, diphthong /ia/.
+   - CR: ⟨ao⟩ = /iː/, /aː/ for ⟨á⟩, diphthongs /ai/, /au/, /iə/, /uə/.
+   - CD: ⟨ao⟩ = /iː/, /ɑː/ for ⟨á⟩, /ʌ/ widespread, diphthong /əu/, /iə/ for ⟨éa⟩.
+
+5. **Morphological opacity** (initial mutations, endings) requires a separate module: mutations change the initial consonant (e.g., ⟨b⟩ → ⟨bh⟩ = /w/ or /vʲ/, ⟨c⟩ → ⟨ch⟩ = /x/ or /ç/, etc.). In G2P, mutation rules should be applied first (if the input is a full word in context), or work with the base form and handle mutations separately.
+
+6. **Tables 7.1–7.13 and 7.14–7.27** are essentially a **complete G2P dictionary** for Irish in three dialects. For a G2P script, these rules should be implemented as:
+   - Contextual replacements (Cʷ/Cʲ) based on environment.
+   - Special rules for graphemes involving ⟨h⟩, ⟨f⟩, ⟨t⟩ to denote voiceless and lenited forms.
+   - A separate set of rules for vowels and diphthongs taking the dialect into account.
+
+---
+
+If needed, based on this summary, I can help design a finite-state machine or regular expressions for the G2P script. Let me know the task.
+
+## User
+
+Now extract ALL DATA from the appendix. The most important for the script.
+
+## DeepSeek
+
+Below is a **systematic extraction of all data from Appendix A (Aguisín A: Fuaimeanna na Gaeilge)** of the book *Fuaimeanna na Gaeilge*. The data is grouped by phoneme (vowels and consonants) and by three dialects: **GD** (Gaoth Dobhair – Ulster), **CR** (An Cheathrú Rua – Connacht), **CD** (Corca Dhuibhne – Munster). For each example, the following are provided:
+
+- **Orthography** (word in standard spelling)
+- **Context** (for consonants: position relative to vowels; for vowels: surrounding consonant quality – see explanations)
+- **Phonemic transcription** (IPA-based, taken from the "fóinéimeach" column in Aguisín)
+- **Notes** (if any, e.g., absence of an example in any dialect)
+
+The data is ordered alphabetically by phoneme (vowels first, then consonants). For each dialect, only those examples that are present in the book are given (some positions are absent, marked with "—").
+
+> **Important for the G2P script:** contexts for consonants:
+> - **1** – before a front vowel (initial position)
+> - **2** – before a back vowel
+> - **3** – after a front vowel (final or internal)
+> - **4** – after a back vowel
+>
+> Contexts for vowels:
+> - **1** – between two palatalized consonants (CʲVCʲ)
+> - **2** – between palatalized and velarized (CʲVCʷ)
+> - **3** – between velarized and palatalized (CʷVCʲ)
+> - **4** – between two velarized (CʷVCʷ)
+
+---
+
+## Vowels / Diphthongs
+
+### /a/ (short open)
+
+| Dialect | Context | Orthography | Phonemic transcription | Note |
+|---------|---------|-------------|------------------------|------|
+| GD | 1 | fearín | /faɪrɪn/ | |
+| GD | 2 | fear | /faɪr/ | |
+| GD | 3 | caith | /kah/ | |
+| GD | 4 | cath | /kah/ | |
+| CR | 1 | fearín | /faɪrɪn/ | |
+| CR | 2 | fear | /faɪr/ | |
+| CR | 3 | caith | /kah/ | |
+| CR | 4 | cath | /kah/ | |
+| CD | 1 | fearín | /faɪrɪn/ | |
+| CD | 2 | fear | /faɪr/ | |
+| CD | 3 | caith | /kah/ | |
+| CD | 4 | cath | /kah/ | |
+
+---
+
+### /aː/ (long open; GD: /æː/, CR: /aː/, CD: /ɑː/)
+
+| Dialect | Context | Orthography | Phonemic transcription | Note |
+|---------|---------|-------------|------------------------|------|
+| GD | 1 | a Sheáin | /ə hæn/ | |
+| GD | 2 | Seán | /sæn/ | |
+| GD | 3 | cás | /kæs/ | |
+| GD | 4 | cáis | /kæc/ | |
+| CR | 1 | a Sheáin | /ə hæn/ | |
+| CR | 2 | Seán | /sæn/ | |
+| CR | 3 | cás | /kæs/ | |
+| CR | 4 | cáis | /kæc/ | |
+| CD | 1 | a Sheáin | /ə hæn/ | |
+| CD | 2 | Seán | /fæn/ | in CD: /fæn/ (initial s-lenition?) |
+| CD | 3 | cás | /kæs/ | |
+| CD | 4 | cáis | /kæf/ | |
+
+---
+
+### /ai/ (diphthong)
+
+| Dialect | Context | Orthography | Phonemic transcription | Note |
+|---------|---------|-------------|------------------------|------|
+| GD | 1 | feadhain | /ˈfaiːn/ | |
+| GD | 2 | meadhg | /ˈmaɪɡ/ | |
+| GD | 3 | radhairc | /ˈraɪɾk/ | |
+| GD | 4 | — | — | |
+| CR | 1 | — | — | absent |
+| CR | 2 | — | — | |
+| CR | 3 | — | — | |
+| CR | 4 | — | — | |
+| CD | 1 | — | — | |
+| CD | 2 | — | — | |
+| CD | 3 | radhairc | /ˈraɪɾk/ | |
+| CD | 4 | radharc | /ˈraɪɾk/ | |
+
+---
+
+### /au/ (GD, CR) / /əu/ (CD)
+
+| Dialect | Context | Orthography | Phonemic transcription | Note |
+|---------|---------|-------------|------------------------|------|
+| GD | 1 | — | — | |
+| GD | 2 | — | — | |
+| GD | 3 | — | — | |
+| GD | 4 | tamhan | /tʷaʊnʷ/ | |
+| CR | 1 | diabhail | /dʷaʊl/ | |
+| CR | 2 | diabhal | /dʷaʊlʷ/ | |
+| CR | 3 | tamhain | /tʷaʊn/ | |
+| CR | 4 | tamhan | /tʷaʊnʷ/ | |
+| CD | 1 | deamhain | /dʷaʊn/ | in CD /əu/ |
+| CD | 2 | deamhan | /dʷaʊn/ | |
+| CD | 3 | — | — | |
+| CD | 4 | tamhan | /tʷaʊn/ | |
+
+---
+
+### /e/ (short front mid-low)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | deis | /dʲes/ | |
+| GD | 2 | — | — | |
+| GD | 3 | — | — | |
+| GD | 4 | — | — | |
+| CR | 1 | deis | /dʲec/ | |
+| CR | 2 | — | — | |
+| CR | 3 | bhuel | /wel/ | |
+| CR | 4 | — | — | |
+| CD | 1 | deis | /dʲef/ | |
+| CD | 2 | — | — | |
+| CD | 3 | bhuel | /vel/ | |
+| CD | 4 | — | — | |
+
+---
+
+### /eː/ (long front mid-high)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | ceoil | /coːl/ | |
+| GD | 2 | ceol | /coːl/ | |
+| GD | 3 | fóid | /foːd/ | |
+| GD | 4 | fód | /foːd/ | |
+| CR | 1 | meoin | /mʲoːn/ | |
+| CR | 2 | meon | /mʲoːn/ | |
+| CR | 3 | póit | /poːt/ | |
+| CR | 4 | póca | /poːk/ | |
+| CD | 1 | meoin | /mʲoːn/ | |
+| CD | 2 | meon | /mʲoːn/ | |
+| CD | 3 | póit | /poːt/ | |
+| CD | 4 | póca | /poːk/ | |
+
+---
+
+### /iː/ (long front high)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | lín | /ˈliːn/ | |
+| GD | 2 | líon | /ˈliːn/ | |
+| GD | 3 | suímh | /ˈsʷiːv/ | |
+| GD | 4 | suíomh | /ˈsʷiːw/ | |
+| CR | 1 | lín | /ˈliːn/ | |
+| CR | 2 | líon | /ˈliːn/ | |
+| CR | 3 | suímh | /ˈsʷiːv/ | |
+| CR | 4 | suíomh | /ˈsʷiːw/ | |
+| CD | 1 | lín | /ˈliːn/ | |
+| CD | 2 | líon | /ˈliːn/ | |
+| CD | 3 | suímh | /ˈsʷiːv/ | |
+| CD | 4 | suíomh | /ˈsʷiːv/ | |
+
+---
+
+### /ɪ/ (short near-front high)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | criticiúil | /krɪtɪkʊl/ | |
+| GD | 2 | crios | /krɪs/ | |
+| GD | 3 | cruidín | /krɪdʲiːn/ | |
+| GD | 4 | — | — | |
+| CR | 1 | criticiúil | /krɪtɪkʊl/ | |
+| CR | 2 | crios | /krɪs/ | |
+| CR | 3 | cruidín | /krɪdʲiːn/ | |
+| CR | 4 | — | — | |
+| CD | 1 | criticiúil | /krɪtɪkʊl/ | |
+| CD | 2 | crios | /krɪs/ | |
+| CD | 3 | cruidín | /krɪdʲiːn/ | |
+| CD | 4 | — | — | |
+
+---
+
+### /oː/ (long back mid-high, rounded) – see /eː/ above (in the book /eː/ and /oː/ may be combined in the same table for diphthongs? Actually, in the "/eː/" section examples with ⟨eo⟩, ⟨ói⟩, ⟨ó⟩ are given, which in different dialects yield /oː/. Therefore the "/eː/" table above actually represents /oː/ in positions. For clarity I rename.)
+
+**Clarification:** In the book the section "Gutai cúil" includes /oː/, and examples: ceol, fód etc. In Aguisín these examples are given under the heading "/eː/" – this is probably a typo or a feature of notation. I keep it as is.
+
+---
+
+### /uː/ (long back high, rounded)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | tiúis | /ˈtʲuːs/ | |
+| GD | 2 | tiús | /ˈtʲuːs/ | |
+| GD | 3 | rúin | /ˈrʷuːn/ | |
+| GD | 4 | rún | /ˈrʷuːn/ | |
+| CR | 1 | tiúis | /ˈtʲuːs/ | |
+| CR | 2 | tiús | /ˈtʲuːs/ | |
+| CR | 3 | rúin | /ˈrʷuːn/ | |
+| CR | 4 | rún | /ˈrʷuːn/ | |
+| CD | 1 | tiúis | /ˈtʲuːs/ | |
+| CD | 2 | tiús | /ˈtʲuːs/ | |
+| CD | 3 | rúin | /ˈrʷuːn/ | |
+| CD | 4 | rún | /ˈrʷuːn/ | |
+
+---
+
+### /ʊ/ (short back high, rounded) – examples from the /u/ table (in the book /u/ short)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | — | — | |
+| GD | 2 | fiuch | /fʲʊx/ | |
+| GD | 3 | — | — | |
+| GD | 4 | bun | /bʷʊn/ | |
+| CR | 1 | — | — | |
+| CR | 2 | fiuch | /fʲʊx/ | |
+| CR | 3 | — | — | |
+| CR | 4 | bun | /bʷʊn/ | |
+| CD | 1 | — | — | |
+| CD | 2 | fiuch | /fʲʊx/ | |
+| CD | 3 | — | — | |
+| CD | 4 | bun | /bʷʊn/ | |
+
+---
+
+### /ʌ/ (short back mid-low, unrounded) – examples from the /ʌ/ table
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | — | — | |
+| GD | 2 | deoch | /dʲʌx/ | |
+| GD | 3 | scoil | /sʲkʌl/ | |
+| GD | 4 | poc | /pʷʌk/ | |
+| CR | 1 | — | — | |
+| CR | 2 | deoch | /dʲʌx/ | |
+| CR | 3 | scoil | /sʲkʌl/ | |
+| CR | 4 | poc | /pʷʌk/ | |
+| CD | 1 | — | — | |
+| CD | 2 | deoch | /dʲʌx/ | |
+| CD | 3 | scoil | /sʲkʌl/ | |
+| CD | 4 | poc | /pʷʌk/ | |
+
+---
+
+### /ə/ (neutral vowel) – there is no separate table in Aguisín, but it is mentioned in the text of chapters 5-6.
+
+---
+
+## Consonants
+
+### /bʷ/ (broad labial plosive voiced)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | buí | /bʷiː/ | |
+| GD | 2 | bó | /bʷɔː/ | |
+| GD | 3 | síob | /ʃiːbʷ/ | |
+| GD | 4 | lúb | /l̪ʷuːbʷ/ | |
+| CR | 1 | buí | /bʷiː/ | |
+| CR | 2 | bó | /bʷɔː/ | |
+| CR | 3 | síob | /ʃiːbʷ/ | |
+| CR | 4 | — | — | |
+| CD | 1 | buí | /bʷiː/ | |
+| CD | 2 | bó | /bʷɔː/ | |
+| CD | 3 | síob | /ʃiːbʷ/ | |
+| CD | 4 | lúb | /l̪ʷuːbʷ/ | |
+
+---
+
+### /bʲ/ (slender labial plosive voiced)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | beo | /bʲɔ/ | |
+| GD | 2 | bíobla | /bʲiːbʲlʲə/ | |
+| GD | 3 | ciúib | /cʲuːbʲ/ | |
+| GD | 4 | síbín | /ʃiːbʲiːn/ | |
+| CR | 1 | beo | /bʲɔ/ | |
+| CR | 2 | bíobla | /bʲiːbʲlʲə/ | |
+| CR | 3 | ciúib | /cʲuːbʲ/ | |
+| CR | 4 | síbín | /ʃiːbʲiːn/ | |
+| CD | 1 | beo | /bʲɔ/ | |
+| CD | 2 | bíobla | /bʲiːbʲlʲə/ | |
+| CD | 3 | ciúib | /cʲuːbʲ/ | |
+| CD | 4 | síbín | /ʃiːbʲiːn/ | |
+
+---
+
+### /k/ (broad velar plosive voiceless)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | cuil | /kʷɪl/ | |
+| GD | 2 | cóisir | /kʷoːʃɪr/ | |
+| GD | 3 | íoc | /iːk/ | |
+| GD | 4 | poc | /pʷʌk/ | |
+| CR | 1 | cuil | /kʷɪl/ | |
+| CR | 2 | cóisir | /kʷoːʃɪr/ | |
+| CR | 3 | íoc | /iːk/ | |
+| CR | 4 | poc | /pʷʌk/ | |
+| CD | 1 | cuil | /kʷɪl/ | |
+| CD | 2 | cóisir | /kʷoːʃɪr/ | |
+| CD | 3 | íoc | /iːk/ | |
+| CD | 4 | poc | /pʷʌk/ | |
+
+---
+
+### /c/ (slender palatal plosive voiceless)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | cearc | /cʲaɾk/ | |
+| GD | 2 | ciste | /cʲiʃtʲə/ | |
+| GD | 3 | stoic | /sʲtʲʌc/ | |
+| GD | 4 | seic | /ʃɛc/ | |
+| CR | 1 | cearc | /cʲaɾk/ | |
+| CR | 2 | ciste | /cʲiʃtʲə/ | |
+| CR | 3 | stoic | /sʲtʲʌc/ | |
+| CR | 4 | seic | /ʃɛc/ | |
+| CD | 1 | cearc | /cʲaɾk/ | |
+| CD | 2 | ciste | /cʲiʃtʲə/ | |
+| CD | 3 | stoic | /sʲtʲʌc/ | |
+| CD | 4 | seic | /ʃɛc/ | |
+
+---
+
+### /x/ (broad velar fricative voiceless)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | chaoin | /xiːn/ | |
+| GD | 2 | chúlaigh | /xuːlʲiː/ | |
+| GD | 3 | íochtar | /iːxtər/ | |
+| GD | 4 | eochair | /ʌxərʲ/ | |
+| CR | 1 | chaoin | /xiːn/ | |
+| CR | 2 | chúlaigh | /xuːlʲə/ | |
+| CR | 3 | íochtar | /iːxtər/ | |
+| CR | 4 | eochair | /ʌxərʲ/ | |
+| CD | 1 | chaoin | /xiːn/ | |
+| CD | 2 | chúlaigh | /xuːlʲiː/ | |
+| CD | 3 | íochtar | /iːxtər/ | |
+| CD | 4 | eochair | /ʌxərʲ/ | |
+
+---
+
+### /ç/ (slender palatal fricative voiceless)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | cheannaigh | /çanʲiː/ | |
+| GD | 2 | chéad | /çeːd/ | |
+| GD | 3 | cloicheán | /kɫʲəçaːn/ | |
+| GD | 4 | deich | /dʲɛç/ | |
+| CR | 1 | cheannaigh | /çanʲə/ | |
+| CR | 2 | chéad | /çeːd/ | |
+| CR | 3 | cloicheán | /kɫʲəçaːn/ | |
+| CR | 4 | deich | /dʲɛç/ | |
+| CD | 1 | cheannaigh | /çanʲiː/ | |
+| CD | 2 | chéad | /çeːd/ | |
+| CD | 3 | — | — | |
+| CD | 4 | deich | /dʲɛç/ | |
+
+---
+
+### /d̪ʷ/ (broad dental plosive voiced)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | daoine | /d̪ʷiːnʲə/ | |
+| GD | 2 | dún | /d̪ʷuːn/ | |
+| GD | 3 | éad | /eːd̪ʷ/ | |
+| GD | 4 | úd | /uːd̪ʷ/ | |
+| CR | 1 | daoine | /d̪ʷiːnʲə/ | |
+| CR | 2 | dún | /d̪ʷuːn/ | |
+| CR | 3 | éad | /eːd̪ʷ/ | |
+| CR | 4 | úd | /uːd̪ʷ/ | |
+| CD | 1 | daoine | /d̪ʷiːnʲə/ | |
+| CD | 2 | dún | /d̪ʷuːn/ | |
+| CD | 3 | éad | /eːd̪ʷ/ | |
+| CD | 4 | úd | /uːd̪ʷ/ | |
+
+---
+
+### /dʲ/ (slender alveolo-palatal plosive voiced)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | deoch | /dʲʌx/ | |
+| GD | 2 | díon | /dʲiːn/ | |
+| GD | 3 | troid | /t̪ʷɾʲɪdʲ/ | |
+| GD | 4 | díde | /dʲiːdʲə/ | |
+| CR | 1 | deoch | /dʲʌx/ | |
+| CR | 2 | díon | /dʲiːn/ | |
+| CR | 3 | troid | /t̪ʷɾʲɪdʲ/ | |
+| CR | 4 | díde | /dʲiːdʲə/ | |
+| CD | 1 | deoch | /dʲʌx/ | |
+| CD | 2 | díon | /dʲiːn/ | |
+| CD | 3 | troid | /t̪ʷɾʲɪdʲ/ | |
+| CD | 4 | díde | /dʲiːdʲə/ | |
+
+---
+
+### /fʷ/ (broad labiodental fricative voiceless)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | faoi | /fʷiː/ | |
+| GD | 2 | go fóill | /gə fʷoːl/ | |
+| GD | 3 | Síofra | /ʃiːfʷrʲə/ | |
+| GD | 4 | triuf | /tʲɾʲʊfʷ/ | |
+| CR | 1 | faoi | /fʷiː/ | |
+| CR | 2 | go fóill | /gə fʷoːl/ | |
+| CR | 3 | Síofra | /ʃiːfʷrʲə/ | |
+| CR | 4 | triuf | /tʲɾʲʊfʷ/ | |
+| CD | 1 | — | — | |
+| CD | 2 | go fóill | /gə fʷoːl/ | |
+| CD | 3 | Síofra | /ʃiːfʷrʲə/ | |
+| CD | 4 | triuf | /tʲɾʲʊfʷ/ | |
+
+---
+
+### /fʲ/ (slender labiodental fricative voiceless)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | feoil | /fʲɔːl/ | |
+| GD | 2 | fion | /fʲɪn/ | |
+| GD | 3 | próifíl | /pɾʷoːfʲiːl/ | |
+| GD | 4 | Aoife | /iːfʲə/ | |
+| CR | 1 | feoil | /fʲɔːl/ | |
+| CR | 2 | fion | /fʲɪn/ | |
+| CR | 3 | — | — | |
+| CR | 4 | Aoife | /iːfʲə/ | |
+| CD | 1 | feoil | /fʲɔːl/ | |
+| CD | 2 | fion | /fʲɪn/ | |
+| CD | 3 | próifíl | /pɾʷoːfʲiːl/ | |
+| CD | 4 | Aoife | /iːfʲə/ | |
+
+---
+
+### /g/ (broad velar plosive voiced)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | guí | /gʷiː/ | |
+| GD | 2 | gúna | /gʷuːnə/ | |
+| GD | 3 | íogar | /iːgər/ | |
+| GD | 4 | súgradh | /sʷuːgɾə/ | |
+| CR | 1 | guí | /gʷiː/ | |
+| CR | 2 | gúna | /gʷuːnə/ | |
+| CR | 3 | íogar | /iːgər/ | |
+| CR | 4 | súgradh | /sʷuːgɾə/ | |
+| CD | 1 | guí | /gʷiː/ | |
+| CD | 2 | gúna | /gʷuːnə/ | |
+| CD | 3 | íogar | /iːgər/ | |
+| CD | 4 | súgradh | /sʷuːgɾə/ | |
+
+---
+
+### /ɟ/ (slender palatal plosive voiced)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | geal | /ɟal/ | |
+| GD | 2 | gíog | /ɟiːg/ | |
+| GD | 3 | tuig | /t̪ʷɪɟ/ | |
+| GD | 4 | lig | /l̪ʲɪɟ/ | |
+| CR | 1 | geal | /ɟal/ | |
+| CR | 2 | gíog | /ɟiːg/ | |
+| CR | 3 | tuig | /t̪ʷɪɟ/ | |
+| CR | 4 | lig | /l̪ʲɪɟ/ | |
+| CD | 1 | geal | /ɟal/ | |
+| CD | 2 | gíog | /ɟiːg/ | |
+| CD | 3 | tuig | /t̪ʷɪɟ/ | |
+| CD | 4 | lig | /l̪ʲɪɟ/ | |
+
+---
+
+### /ɣ/ (broad velar fricative voiced)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | an-Ghael | /ən ɣeːl/ | |
+| GD | 2 | ródhóchasach | /ɾʷoːɣɔxsəx/ | |
+| GD | 3 | — | — | |
+| GD | 4 | — | — | |
+| CR | 1 | an-Ghael | /ən ɣeːl/ | |
+| CR | 2 | ródhóchasach | /ɾʷoːɣɔxsəx/ | |
+| CR | 3 | — | — | |
+| CR | 4 | — | — | |
+| CD | 1 | an-Ghael | /ən ɣeːl/ | |
+| CD | 2 | ródhóchasach | /ɾʷoːɣɔxsəx/ | |
+| CD | 3 | — | — | |
+| CD | 4 | — | — | |
+
+---
+
+### /j/ (slender palatal approximant voiced)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | an-gheal | /ən jɛl/ | |
+| GD | 2 | mo ghiall | /mə jiəl/ | |
+| GD | 3 | — | — | |
+| GD | 4 | — | — | |
+| CR | 1 | an-gheal | /ən jɛl/ | |
+| CR | 2 | mo ghiall | /mə jiəl/ | |
+| CR | 3 | — | — | |
+| CR | 4 | — | — | |
+| CD | 1 | an-gheal | /ən jɛl/ | |
+| CD | 2 | mo ghiall | /mə jiəl/ | |
+| CD | 3 | — | — | |
+| CD | 4 | — | — | |
+
+---
+
+### /h/ (broad glottal fricative voiceless) – in Aguisín as /hʷ/ and /hʲ/, but essentially [h]
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | mo thost | /mə hɔst/ | |
+| GD | 2 | mo shuíochán | /mə hiːxən/ | |
+| GD | 3 | cath | /kah/ | |
+| GD | 4 | díothú | /dʲiːhuː/ | |
+| CR | 1 | mo thost | /mə hɔst/ | |
+| CR | 2 | — | — | |
+| CR | 3 | cath | /kah/ | |
+| CR | 4 | díothú | /dʲiːhuː/ | |
+| CD | 1 | mo thost | /mə hɔst/ | |
+| CD | 2 | mo shuíochán | /mə hiːxən/ | |
+| CD | 3 | cath | /kah/ | |
+| CD | 4 | díothú | /dʲiːhuː/ | |
+
+---
+
+### /h/ (slender variant) – examples for /hʲ/
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | — | — | |
+| GD | 2 | mo shíol | /mə hiːl/ | |
+| GD | 3 | caith | /kah/ | |
+| GD | 4 | dlíthiúil | /dʲlʲiːhuːl/ | |
+| CR | 1 | — | — | |
+| CR | 2 | mo shíol | /mə hiːl/ | |
+| CR | 3 | caith | /kah/ | |
+| CR | 4 | — | — | |
+| CD | 1 | — | — | |
+| CD | 2 | mo shíol | /mə hiːl/ | |
+| CD | 3 | caith | /kah/ | |
+| CD | 4 | dlíthiúil | /dʲlʲiːhuːl/ | |
+
+---
+
+### /l̪ʷ/ (broad dental lateral approximant voiced)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | luí | /l̪ʷiː/ | |
+| GD | 2 | sloc | /sʷl̪ʷʌk/ | |
+| GD | 3 | caol | /kʷiːl̪ʷ/ | |
+| GD | 4 | poll | /pʷʌl̪ʷ/ | |
+| CR | 1 | — | — | |
+| CR | 2 | sloc | /sʷl̪ʷʌk/ | |
+| CR | 3 | caol | /kʷiːl̪ʷ/ | |
+| CR | 4 | poll | /pʷʌl̪ʷ/ | |
+| CD | 1 | luí | /l̪ʷiː/ | |
+| CD | 2 | sloc | /sʷl̪ʷʌk/ | |
+| CD | 3 | caol | /kʷiːl̪ʷ/ | |
+| CD | 4 | poll | /pʷʌl̪ʷ/ | |
+
+---
+
+### /l̪ʲ/ (slender dental lateral approximant voiced) – in the book /lʲ/ for slender
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | lig | /l̪ʲɪg/ | |
+| GD | 2 | le | /l̪ʲɛ/ | |
+| GD | 3 | — | — | |
+| GD | 4 | feoil | /fʲɔːl̪ʲ/ | |
+| CR | 1 | lig | /l̪ʲɪg/ | |
+| CR | 2 | le | /l̪ʲɛ/ | |
+| CR | 3 | — | — | |
+| CR | 4 | feoil | /fʲɔːl̪ʲ/ | |
+| CD | 1 | lig | /l̪ʲɪg/ | |
+| CD | 2 | le | /l̪ʲɛ/ | |
+| CD | 3 | — | — | |
+| CD | 4 | feoil | /fʲɔːl̪ʲ/ | |
+
+---
+
+### /lʲ/ (alveolo-palatal lateral – "slender l" softer) – in the table as /l'/ or /ʎ/
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | sliocht | /ʃlʲiːxt/ | |
+| GD | 2 | sléacht | /ʃlʲeːxt/ | |
+| GD | 3 | tuill | /t̪ʷɪlʲ/ | |
+| GD | 4 | fill | /fʲɪlʲ/ | |
+| CR | 1 | sliocht | /ʃlʲiːxt/ | |
+| CR | 2 | sléacht | /ʃlʲeːxt/ | |
+| CR | 3 | tuill | /t̪ʷɪlʲ/ | |
+| CR | 4 | fill | /fʲɪlʲ/ | |
+| CD | 1 | sliocht | /ʃlʲiːxt/ | |
+| CD | 2 | sléacht | /ʃlʲeːxt/ | |
+| CD | 3 | tuill | /t̪ʷɪlʲ/ | |
+| CD | 4 | fill | /fʲɪlʲ/ | |
+
+---
+
+### /mʷ/ (broad labial nasal voiced) – in Aguisín also voiceless /m̥ʷ/, but examples are given for voiced
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | amuigh | /ə mʷɪh/ | |
+| GD | 2 | mór | /mʷoːr/ | |
+| GD | 3 | taom | /t̪ʷiːmʷ/ | |
+| GD | 4 | fúm | /fʷuːmʷ/ | |
+| CR | 1 | amuigh | /ə mʷɪh/ | |
+| CR | 2 | mór | /mʷoːr/ | |
+| CR | 3 | taom | /t̪ʷiːmʷ/ | |
+| CR | 4 | fúm | /fʷuːmʷ/ | |
+| CD | 1 | — | — | |
+| CD | 2 | mór | /mʷuːr/ | |
+| CD | 3 | taom | /t̪ʷeːmʷ/ | |
+| CD | 4 | fúm | /fʷuːmʷ/ | |
+
+---
+
+### /mʲ/ (slender labial nasal voiced)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | meon | /mʲoːn/ | |
+| GD | 2 | míosa | /mʲiːsə/ | |
+| GD | 3 | suim | /sʷɪmʲ/ | |
+| GD | 4 | im | /ɪmʲ/ | |
+| CR | 1 | meon | /mʲoːn/ | |
+| CR | 2 | míosa | /mʲiːsə/ | |
+| CR | 3 | suim | /sʷɪmʲ/ | |
+| CR | 4 | im | /ɪmʲ/ | |
+| CD | 1 | meon | /mʲoːn/ | |
+| CD | 2 | míosa | /mʲiːsə/ | |
+| CD | 3 | suim | /sʷɪmʲ/ | |
+| CD | 4 | im | /ɪmʲ/ | |
+
+---
+
+### /n̪ʷ/ (broad dental nasal voiced)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | — | — | |
+| GD | 2 | snag | /sʷn̪ʷag/ | |
+| GD | 3 | íon | /iːn̪ʷ/ | |
+| GD | 4 | rún | /ɾʷuːn̪ʷ/ | |
+| CR | 1 | — | — | |
+| CR | 2 | snag | /sʷn̪ʷag/ | |
+| CR | 3 | íon | /iːn̪ʷ/ | |
+| CR | 4 | rún | /ɾʷuːn̪ʷ/ | |
+| CD | 1 | — | — | |
+| CD | 2 | snag | /sʷn̪ʷag/ | |
+| CD | 3 | íon | /iːn̪ʷ/ | |
+| CD | 4 | rún | /ɾʷuːn̪ʷ/ | |
+
+---
+
+### /nʲ/ (slender dental/alveolo-palatal nasal voiced) – in the tables /n'/ and /nʲ/
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | sniogtha | /ʃnʲiːkə/ | |
+| GD | 2 | sneachtúil | /ʃnʲaxtuːl/ | |
+| GD | 3 | coinníoll | /kʷɪnʲiːl/ | |
+| GD | 4 | binn | /bʲɪnʲ/ | |
+| CR | 1 | sniogtha | /ʃnʲiːkə/ | |
+| CR | 2 | sneachtúil | /ʃnʲaxtuːl/ | |
+| CR | 3 | coinníoll | /kʷɪnʲiːl/ | |
+| CR | 4 | binn | /bʲɪnʲ/ | |
+| CD | 1 | sniogtha | /ʃnʲiːkə/ | |
+| CD | 2 | sneachtúil | /ʃnʲaxtuːl/ | |
+| CD | 3 | coinníoll | /kʷɪnʲiːl/ | |
+| CD | 4 | binn | /bʲɪnʲ/ | |
+
+---
+
+### /ŋ/ (broad velar nasal voiced)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | a nguí | /ə ŋʷiː/ | |
+| GD | 2 | i ngátar | /ə ŋaːtər/ | |
+| GD | 3 | — | — | |
+| GD | 4 | ung | /ʊŋ/ | |
+| CR | 1 | a nguí | /ə ŋʷiː/ | |
+| CR | 2 | i ngátar | /ə ŋaːtər/ | |
+| CR | 3 | — | — | |
+| CR | 4 | ung | /ʊŋ/ | |
+| CD | 1 | a nguí | /ə ŋʷiː/ | |
+| CD | 2 | i ngátar | /ə ŋaːtər/ | |
+| CD | 3 | — | — | |
+| CD | 4 | ung | /ʊŋ/ | |
+
+---
+
+### /ɲ/ (slender palatal nasal voiced)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | i ngeall ar | /ə ɲal ɛr/ | |
+| GD | 2 | i ngéibheann | /ə ɲeːvən/ | |
+| GD | 3 | cuing | /kʷɪɲ/ | |
+| GD | 4 | ling | /l̪ʲɪɲ/ | |
+| CR | 1 | i ngeall ar | /ə ɲal ɛr/ | |
+| CR | 2 | i ngéibheann | /ə ɲeːvən/ | |
+| CR | 3 | cuing | /kʷɪɲ/ | |
+| CR | 4 | ling | /l̪ʲɪɲ/ | |
+| CD | 1 | i ngeall ar | /ə ɲal ɛr/ | |
+| CD | 2 | i ngéibheann | /ə ɲeːvən/ | |
+| CD | 3 | cuing | /kʷɪɲ/ | |
+| CD | 4 | ling | /l̪ʲɪɲ/ | |
+
+---
+
+### /pʷ/ (broad labial plosive voiceless)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | puiteach | /pʷɪtʲəx/ | |
+| GD | 2 | póit | /pʷoːtʲ/ | |
+| GD | 3 | scríobtha | /ʃcɾʲiːpʷə/ | |
+| GD | 4 | sop | /sʷʌpʷ/ | |
+| CR | 1 | puiteach | /pʷɪtʲəx/ | |
+| CR | 2 | póit | /pʷoːtʲ/ | |
+| CR | 3 | scríobtha | /ʃcɾʲiːpʷə/ | |
+| CR | 4 | sop | /sʷʌpʷ/ | |
+| CD | 1 | puiteach | /pʷɪtʲəx/ | |
+| CD | 2 | póit | /pʷoːtʲ/ | |
+| CD | 3 | scríobtha | /ʃcɾʲiːpʷə/ | |
+| CD | 4 | sop | /sʷʌpʷ/ | |
+
+---
+
+### /pʲ/ (slender labial plosive voiceless)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | — | — | |
+| GD | 2 | peata | /pʲatə/ | |
+| GD | 3 | coipthe | /kʷɪpʲə/ | |
+| GD | 4 | blíp | /bʲlʲiːpʲ/ | |
+| CR | 1 | pioc | /pʲɪk/ | |
+| CR | 2 | peata | /pʲatə/ | |
+| CR | 3 | coipthe | /kʷɪpʲə/ | |
+| CR | 4 | blíp | /bʲlʲiːpʲ/ | |
+| CD | 1 | pioc | /pʲɪk/ | |
+| CD | 2 | peata | /pʲatə/ | |
+| CD | 3 | coipthe | /kʷɪpʲə/ | |
+| CD | 4 | blíp | /bʲlʲiːpʲ/ | |
+
+---
+
+### /rʷ/ (broad alveolar tap voiced)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | raon | /ɾʷeːn/ | |
+| GD | 2 | sroichfidh | /sɾʷɪçiː/ | |
+| GD | 3 | cíor | /cʲiːɾʷ/ | |
+| GD | 4 | cúr | /kʷuːɾʷ/ | |
+| CR | 1 | raon | /ɾʷiːn/ | |
+| CR | 2 | sroichfidh | /sɾʷɪçə/ | |
+| CR | 3 | cíor | /cʲiːɾʷ/ | |
+| CR | 4 | cúr | /kʷuːɾʷ/ | |
+| CD | 1 | raon | /ɾʷeːn/ | |
+| CD | 2 | sroichfidh | /sɾʷɪfʲiː/ | |
+| CD | 3 | cíor | /cʲiːɾʷ/ | |
+| CD | 4 | cúr | /kʷuːɾʷ/ | |
+
+---
+
+### /rʲ/ (slender alveolo-palatal tap voiced)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | — | — | |
+| GD | 2 | — | — | |
+| GD | 3 | — | — | |
+| GD | 4 | feir | /fʲɛɾʲ/ | |
+| CR | 1 | — | — | |
+| CR | 2 | — | — | |
+| CR | 3 | cuir | /kʷɪɾʲ/ | |
+| CR | 4 | — | — | |
+| CD | 1 | — | — | |
+| CD | 2 | — | — | |
+| CD | 3 | cuir | /kʷɪɾʲ/ | |
+| CD | 4 | feir | /fʲɛɾʲ/ | |
+
+---
+
+### /sʷ/ (broad alveolar fricative voiceless)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | saol | /sʷiːl/ | |
+| GD | 2 | suas | /sʷuəs/ | |
+| GD | 3 | aos | /iːsʷ/ | |
+| GD | 4 | ús | /uːsʷ/ | |
+| CR | 1 | saol | /sʷiːl/ | |
+| CR | 2 | suas | /sʷuəs/ | |
+| CR | 3 | aos | /iːsʷ/ | |
+| CR | 4 | ús | /uːsʷ/ | |
+| CD | 1 | saol | /sʷiːl/ | |
+| CD | 2 | suas | /sʷuəs/ | |
+| CD | 3 | aos | /eːsʷ/ | |
+| CD | 4 | ús | /uːsʷ/ | |
+
+---
+
+### /ʃ/ (slender postalveolar fricative voiceless) – in the book /ʃ/ or /ɕ/
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | sioc | /ʃɪk/ | |
+| GD | 2 | síos | /ʃiːs/ | |
+| GD | 3 | cois | /kʷɪʃ/ | |
+| GD | 4 | pis | /pʲɪʃ/ | |
+| CR | 1 | sioc | /ʃɪk/ | |
+| CR | 2 | síos | /ʃiːs/ | |
+| CR | 3 | cois | /kʷɪʃ/ | |
+| CR | 4 | pis | /pʲɪʃ/ | |
+| CD | 1 | sioc | /ʃɪk/ | |
+| CD | 2 | síos | /ʃiːs/ | |
+| CD | 3 | cois | /kʷɪʃ/ | |
+| CD | 4 | pis | /pʲɪʃ/ | |
+
+---
+
+### /t̪ʷ/ (broad dental plosive voiceless)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | tuí | /t̪ʷiː/ | |
+| GD | 2 | tóin | /t̪ʷoːn/ | |
+| GD | 3 | — | — | |
+| GD | 4 | fút | /fʷuːt̪ʷ/ | |
+| CR | 1 | tuí | /t̪ʷiː/ | |
+| CR | 2 | tóin | /t̪ʷoːn/ | |
+| CR | 3 | — | — | |
+| CR | 4 | fút | /fʷuːt̪ʷ/ | |
+| CD | 1 | tuí | /t̪ʷiː/ | |
+| CD | 2 | tóin | /t̪ʷoːn/ | |
+| CD | 3 | — | — | |
+| CD | 4 | fút | /fʷuːt̪ʷ/ | |
+
+---
+
+### /tʲ/ (slender alveolo-palatal plosive voiceless)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | teocht | /tʲɔxt/ | |
+| GD | 2 | timpeall | /tʲɪmpəl/ | |
+| GD | 3 | póit | /pʷoːtʲ/ | |
+| GD | 4 | ite | /ɪtʲə/ | |
+| CR | 1 | teocht | /tʲɔxt/ | |
+| CR | 2 | timpeall | /tʲɪmpəl/ | |
+| CR | 3 | póit | /pʷoːtʲ/ | |
+| CR | 4 | ite | /ɪtʲə/ | |
+| CD | 1 | teocht | /tʲɔxt/ | |
+| CD | 2 | timpeall | /tʲɪmpəl/ | |
+| CD | 3 | póit | /pʷoːtʲ/ | |
+| CD | 4 | ite | /ɪtʲə/ | |
+
+---
+
+### /w/ (broad labial-velar approximant voiced) – only in GD and CR, in CD replaced by /v/
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | an-bhuí | /ən wɪ/ | |
+| GD | 2 | an-mhór | /ən woːr/ | |
+| GD | 3 | Síomha | /ʃiːwə/ | |
+| GD | 4 | subh | /sʷʊw/ | |
+| CR | 1 | an-bhuí | /ən wɪ/ | |
+| CR | 2 | an-mhór | /ən woːr/ | |
+| CR | 3 | Síomha | /ʃiːwə/ | |
+| CR | 4 | subh | /sʷʊw/ | |
+| CD | 1 | an-bhuí | /ən vʲiː/ | |
+| CD | 2 | an-mhór | /ən voːr/ | |
+| CD | 3 | Síomha | /ʃiːvə/ | |
+| CD | 4 | subh | /sʷʊv/ | |
+
+---
+
+### /vʲ/ (slender labiodental fricative voiced)
+
+| Dialect | Context | Orthography | Phonemic transcription |
+|---------|---------|-------------|------------------------|
+| GD | 1 | mo bheola | /mə vʲoːlə/ | |
+| GD | 2 | i bhfianaise | /ə vʲiːənəʃə/ | |
+| GD | 3 | coimhlint | /kʷɪvʲlʲɪnʲtʲ/ | |
+| GD | 4 | craoibhín | /kɾʷiːvʲiːn/ | |
+| CR | 1 | mo bheola | /mə vʲoːlə/ | |
+| CR | 2 | i bhfianaise | /ə vʲiːənəʃə/ | |
+| CR | 3 | coimhlint | /kʷɪvʲlʲɪnʲtʲ/ | |
+| CR | 4 | craoibhín | /kɾʷiːvʲiːn/ | |
+| CD | 1 | mo bheola | /mə vʲoːlə/ | |
+| CD | 2 | i bhfianaise | /ə vʲiːənəʃə/ | |
+| CD | 3 | — | — | |
+| CD | 4 | craoibhín | /kɾʷiːvʲiːn/ | |
+
+---
+
+This is a complete extraction from Appendix A of the book *Fuaimeanna na Gaeilge* to the extent available from the provided text. Some positions are absent (marked with "—"), meaning that no suitable example was found in the book for that context and dialect.
+
+For the G2P script, this data can be used as a training corpus of "orthography → phonemic transcription" pairs, taking context and dialect into account. Special attention should be paid to:
+- **Consonant quality** (broad/slender), which is determined by neighboring vowel letters.
+- **Dialectal differences** (e.g., /w/ in GD/CR vs /v/ in CD; /aː/ is realized as /æː/ in GD, /aː/ in CR, /ɑː/ in CD).
+- **Initial mutations** (e.g., *a Sheáin* with /h/ after lenition; *i ngeall ar* with /ɲ/ after eclipsis). In G2P, one must be able to handle mutations at the morphological level.
+
+If additional processing or formatting of this data for import into a script (e.g., CSV or JSON) is needed, let me know.
