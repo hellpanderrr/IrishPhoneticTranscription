@@ -1,0 +1,288 @@
+﻿    DBG (Diacriti): S6 DBG: NON_PALATAL_CONSONANT_CHARS_FOR_DIACRITICS = ghkrswz�������
+    DBG (Diacriti): S6 DBG: NON_PALATAL_CONSONANT_PATTERN_FOR_DIACRITICS = [ghkrswz�������]
+
+--- Running Test Set for Iteration 37D (Focused) ---
+
+--- Transcribing: [bord] ---
+Af. MarkDigraphsAndVocalisationTriggers: [bord]
+  ConsonantResolution START: In=	bord
+  ConsonantResolution END: Out=	bord
+Af. ConsonantResolution: [bord]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	bord
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	bord
+Af. Stage4_0_SpecificOrthoToTempMarker: [bord]
+  Stage4_0_1_Resolve_CH_Marker START: In=	bord
+  Stage4_0_1_Resolve_CH_Marker END: Out=	bord
+Af. Stage4_0_1_Resolve_CH_Marker: [bord]
+  Stage4_1_VocmarkToTempMarker START: In=	bord
+  Stage4_1_VocmarkToTempMarker END: Out=	bord
+Af. Stage4_1_VocmarkToTempMarker: [bord]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	bord
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	bord
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [bord]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	bord
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	bord
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [bord]
+  Stage4_4_ResolveTempVowelMarkers START: In=	bord
+  Stage4_4_ResolveTempVowelMarkers END: Out=	bord
+Af. Stage4_4_ResolveTempVowelMarkers: [bord]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	bord
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	bord
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [bord]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	bord
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [bord]
+  EpenthesisThenStrongSonorants START: In=	bord
+  EpenthesisThenStrongSonorants END: Out=	bord
+Af. EpenthesisThenStrongSonorants: [bord]
+  Diacritics START: In=	bord
+  Diacritics END: Out=	bord
+Af. Diacritics: [bord]
+  FinalCleanup START: In=	bord
+  FinalCleanup END: Out=	bord
+Af. FinalCleanup: [bord]
+bord            -> [bord]
+
+--- Transcribing: [poll] ---
+Af. MarkDigraphsAndVocalisationTriggers: [po_LL_]
+  ConsonantResolution START: In=	po_LL_
+  ConsonantResolution END: Out=	poL
+Af. ConsonantResolution: [poL]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	poL
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	poL
+Af. Stage4_0_SpecificOrthoToTempMarker: [poL]
+  Stage4_0_1_Resolve_CH_Marker START: In=	poL
+  Stage4_0_1_Resolve_CH_Marker END: Out=	poL
+Af. Stage4_0_1_Resolve_CH_Marker: [poL]
+  Stage4_1_VocmarkToTempMarker START: In=	poL
+  Stage4_1_VocmarkToTempMarker END: Out=	poL
+Af. Stage4_1_VocmarkToTempMarker: [poL]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	poL
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	poL
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [poL]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	poL
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	poL
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [poL]
+  Stage4_4_ResolveTempVowelMarkers START: In=	poL
+  Stage4_4_ResolveTempVowelMarkers END: Out=	poL
+Af. Stage4_4_ResolveTempVowelMarkers: [poL]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	poL
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	poL
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [poL]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	poL
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [poL]
+  EpenthesisThenStrongSonorants START: In=	poL
+  EpenthesisThenStrongSonorants END: Out=	poL
+Af. EpenthesisThenStrongSonorants: [poL]
+  Diacritics START: In=	poL
+  Diacritics END: Out=	poL
+Af. Diacritics: [poL]
+  FinalCleanup START: In=	poL
+  FinalCleanup END: Out=	poL
+Af. FinalCleanup: [poL]
+poll            -> [poL]
+
+--- Transcribing: [fonn] ---
+Af. MarkDigraphsAndVocalisationTriggers: [fo_NN_]
+  ConsonantResolution START: In=	fo_NN_
+  ConsonantResolution END: Out=	foN
+Af. ConsonantResolution: [foN]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	foN
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	foN
+Af. Stage4_0_SpecificOrthoToTempMarker: [foN]
+  Stage4_0_1_Resolve_CH_Marker START: In=	foN
+  Stage4_0_1_Resolve_CH_Marker END: Out=	foN
+Af. Stage4_0_1_Resolve_CH_Marker: [foN]
+  Stage4_1_VocmarkToTempMarker START: In=	foN
+  Stage4_1_VocmarkToTempMarker END: Out=	foN
+Af. Stage4_1_VocmarkToTempMarker: [foN]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	foN
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	foN
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [foN]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	foN
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	foN
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [foN]
+  Stage4_4_ResolveTempVowelMarkers START: In=	foN
+  Stage4_4_ResolveTempVowelMarkers END: Out=	foN
+Af. Stage4_4_ResolveTempVowelMarkers: [foN]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	foN
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	foN
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [foN]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	foN
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [foN]
+  EpenthesisThenStrongSonorants START: In=	foN
+  EpenthesisThenStrongSonorants END: Out=	foN
+Af. EpenthesisThenStrongSonorants: [foN]
+  Diacritics START: In=	foN
+  Diacritics END: Out=	foN
+Af. Diacritics: [foN]
+  FinalCleanup START: In=	foN
+  FinalCleanup END: Out=	foN
+Af. FinalCleanup: [foN]
+fonn            -> [foN]
+
+--- Transcribing: [drochbhean] ---
+Af. MarkDigraphsAndVocalisationTriggers: [dro_CH__BH_ean]
+  ConsonantResolution START: In=	dro_CH__BH_ean
+  ConsonantResolution END: Out=	dro_CH_vean
+Af. ConsonantResolution: [dro_CH_vean]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	dro_CH_vean
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	dro_CH_v&EA_SLENDER_PRE_N&n
+Af. Stage4_0_SpecificOrthoToTempMarker: [dro_CH_v&EA_SLENDER_PRE_N&n]
+  Stage4_0_1_Resolve_CH_Marker START: In=	dro_CH_v&EA_SLENDER_PRE_N&n
+  Stage4_0_1_Resolve_CH_Marker END: Out=	droçv&EA_SLENDER_PRE_N&n
+Af. Stage4_0_1_Resolve_CH_Marker: [droçv&EA_SLENDER_PRE_N&n]
+  Stage4_1_VocmarkToTempMarker START: In=	droçv&EA_SLENDER_PRE_N&n
+  Stage4_1_VocmarkToTempMarker END: Out=	droçv&EA_SLENDER_PRE_N&n
+Af. Stage4_1_VocmarkToTempMarker: [droçv&EA_SLENDER_PRE_N&n]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	droçv&EA_SLENDER_PRE_N&n
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	droçv&EA_SLENDER_PRE_N&n
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [droçv&EA_SLENDER_PRE_N&n]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	droçv&EA_SLENDER_PRE_N&n
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	droçv&EA_SLENDER_PRE_N&n
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [droçv&EA_SLENDER_PRE_N&n]
+  Stage4_4_ResolveTempVowelMarkers START: In=	droçv&EA_SLENDER_PRE_N&n
+    DBG (Stage4_4): Rule '	&EA_SLENDER_PRE_N&	' matched '	&EA_SLENDER_PRE_N&	' -> '	æ	'
+    DBG (Stage4_4): IntLoop Pass 1: out='	droçvæn	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	droçvæn
+Af. Stage4_4_ResolveTempVowelMarkers: [droçvæn]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	droçvæn
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	droçvæn
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [droçvæn]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	droçvæn
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [droçvæn]
+  EpenthesisThenStrongSonorants START: In=	droçvæn
+  EpenthesisThenStrongSonorants END: Out=	droçvæn
+Af. EpenthesisThenStrongSonorants: [droçvæn]
+  Diacritics START: In=	droçvæn
+  Diacritics END: Out=	droçvæn
+Af. Diacritics: [droçvæn]
+  FinalCleanup START: In=	droçvæn
+  FinalCleanup END: Out=	droçvæn
+Af. FinalCleanup: [droçvæn]
+drochbhean      -> [droçvæn]
+
+--- Transcribing: [seanbhean] ---
+Af. MarkDigraphsAndVocalisationTriggers: [sean_BH_ean]
+  ConsonantResolution START: In=	sean_BH_ean
+  ConsonantResolution END: Out=	seanvean
+Af. ConsonantResolution: [seanvean]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	seanvean
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	s&EA_BROAD_PRE_N&nv&EA_SLENDER_PRE_N&n
+Af. Stage4_0_SpecificOrthoToTempMarker: [s&EA_BROAD_PRE_N&nv&EA_SLENDER_PRE_N&n]
+  Stage4_0_1_Resolve_CH_Marker START: In=	s&EA_BROAD_PRE_N&nv&EA_SLENDER_PRE_N&n
+  Stage4_0_1_Resolve_CH_Marker END: Out=	s&EA_BROAD_PRE_N&nv&EA_SLENDER_PRE_N&n
+Af. Stage4_0_1_Resolve_CH_Marker: [s&EA_BROAD_PRE_N&nv&EA_SLENDER_PRE_N&n]
+  Stage4_1_VocmarkToTempMarker START: In=	s&EA_BROAD_PRE_N&nv&EA_SLENDER_PRE_N&n
+  Stage4_1_VocmarkToTempMarker END: Out=	s&EA_BROAD_PRE_N&nv&EA_SLENDER_PRE_N&n
+Af. Stage4_1_VocmarkToTempMarker: [s&EA_BROAD_PRE_N&nv&EA_SLENDER_PRE_N&n]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	s&EA_BROAD_PRE_N&nv&EA_SLENDER_PRE_N&n
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	s&EA_BROAD_PRE_N&nv&EA_SLENDER_PRE_N&n
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [s&EA_BROAD_PRE_N&nv&EA_SLENDER_PRE_N&n]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	s&EA_BROAD_PRE_N&nv&EA_SLENDER_PRE_N&n
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	s&EA_BROAD_PRE_N&nv&EA_SLENDER_PRE_N&n
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [s&EA_BROAD_PRE_N&nv&EA_SLENDER_PRE_N&n]
+  Stage4_4_ResolveTempVowelMarkers START: In=	s&EA_BROAD_PRE_N&nv&EA_SLENDER_PRE_N&n
+    DBG (Stage4_4): Rule '	&EA_BROAD_PRE_N&	' matched '	&EA_BROAD_PRE_N&	' -> '	a	'
+    DBG (Stage4_4): Rule '	&EA_SLENDER_PRE_N&	' matched '	&EA_SLENDER_PRE_N&	' -> '	æ	'
+    DBG (Stage4_4): IntLoop Pass 1: out='	sanvæn	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	sanvæn
+Af. Stage4_4_ResolveTempVowelMarkers: [sanvæn]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	sanvæn
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	sanvæn
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [sanvæn]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	sanvæn
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [sanvæn]
+  EpenthesisThenStrongSonorants START: In=	sanvæn
+  EpenthesisThenStrongSonorants END: Out=	sanvæn
+Af. EpenthesisThenStrongSonorants: [sanvæn]
+  Diacritics START: In=	sanvæn
+  Diacritics END: Out=	sanvæn
+Af. Diacritics: [sanvæn]
+  FinalCleanup START: In=	sanvæn
+  FinalCleanup END: Out=	sanvæn
+Af. FinalCleanup: [sanvæn]
+seanbhean       -> [sanvæn]
+
+--- Transcribing: [deartháir] ---
+Af. MarkDigraphsAndVocalisationTriggers: [dear_TH_áir]
+  ConsonantResolution START: In=	dear_TH_áir
+  ConsonantResolution END: Out=	dearháir
+Af. ConsonantResolution: [dearháir]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	dearháir
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	d&EA_BROAD_PRE_R&rháir
+Af. Stage4_0_SpecificOrthoToTempMarker: [d&EA_BROAD_PRE_R&rháir]
+  Stage4_0_1_Resolve_CH_Marker START: In=	d&EA_BROAD_PRE_R&rháir
+  Stage4_0_1_Resolve_CH_Marker END: Out=	d&EA_BROAD_PRE_R&rháir
+Af. Stage4_0_1_Resolve_CH_Marker: [d&EA_BROAD_PRE_R&rháir]
+  Stage4_1_VocmarkToTempMarker START: In=	d&EA_BROAD_PRE_R&rháir
+  Stage4_1_VocmarkToTempMarker END: Out=	d&EA_BROAD_PRE_R&rháir
+Af. Stage4_1_VocmarkToTempMarker: [d&EA_BROAD_PRE_R&rháir]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	d&EA_BROAD_PRE_R&rháir
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	d&EA_BROAD_PRE_R&rh&A_ACUTE_LONG&ir
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [d&EA_BROAD_PRE_R&rh&A_ACUTE_LONG&ir]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	d&EA_BROAD_PRE_R&rh&A_ACUTE_LONG&ir
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	d&EA_BROAD_PRE_R&rh&A_ACUTE_LONG&ir
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [d&EA_BROAD_PRE_R&rh&A_ACUTE_LONG&ir]
+  Stage4_4_ResolveTempVowelMarkers START: In=	d&EA_BROAD_PRE_R&rh&A_ACUTE_LONG&ir
+    DBG (Stage4_4): Rule '	&EA_BROAD_PRE_R&	' matched '	&EA_BROAD_PRE_R&	' -> '	a	'
+    DBG (Stage4_4): Rule '	&A_ACUTE_LONG&	' matched '	&A_ACUTE_LONG&	' -> '	ɑː	'
+    DBG (Stage4_4): IntLoop Pass 1: out='	darhɑːir	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	darhɑːir
+Af. Stage4_4_ResolveTempVowelMarkers: [darhɑːir]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	darhɑːir
+    DBG (Stage4_5): Rule '	d(a)(r)	' matched '	dar	' -> '	dʲar	'
+    DBG (Stage4_5): Rule '	(ɑː)i(r)$	' matched '	ɑːir	' -> '	ɑːiɾʲ	'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	dʲarhɑːiɾʲ
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [dʲarhɑːiɾʲ]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	dʲarhɑːiɾʲ
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [dʲarhɑːiɾʲ]
+  EpenthesisThenStrongSonorants START: In=	dʲarhɑːiɾʲ
+  EpenthesisThenStrongSonorants END: Out=	dʲarhɑːiɾʲ
+Af. EpenthesisThenStrongSonorants: [dʲarhɑːiɾʲ]
+  Diacritics START: In=	dʲarhɑːiɾʲ
+  Diacritics END: Out=	dʲarhɑːiɾʲ
+Af. Diacritics: [dʲarhɑːiɾʲ]
+  FinalCleanup START: In=	dʲarhɑːiɾʲ
+  FinalCleanup END: Out=	dʲarhɑːiɾʲ
+Af. FinalCleanup: [dʲarhɑːiɾʲ]
+deartháir      -> [dʲarhɑːiɾʲ]
+
+--- Transcribing: [arm] ---
+Af. MarkDigraphsAndVocalisationTriggers: [ˈarm]
+  ConsonantResolution START: In=	ˈarm
+  ConsonantResolution END: Out=	ˈarm
+Af. ConsonantResolution: [ˈarm]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	ˈarm
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	ˈarm
+Af. Stage4_0_SpecificOrthoToTempMarker: [ˈarm]
+  Stage4_0_1_Resolve_CH_Marker START: In=	ˈarm
+  Stage4_0_1_Resolve_CH_Marker END: Out=	ˈarm
+Af. Stage4_0_1_Resolve_CH_Marker: [ˈarm]
+  Stage4_1_VocmarkToTempMarker START: In=	ˈarm
+  Stage4_1_VocmarkToTempMarker END: Out=	ˈarm
+Af. Stage4_1_VocmarkToTempMarker: [ˈarm]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	ˈarm
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	ˈarm
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [ˈarm]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	ˈarm
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	ˈarm
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [ˈarm]
+  Stage4_4_ResolveTempVowelMarkers START: In=	ˈarm
+  Stage4_4_ResolveTempVowelMarkers END: Out=	ˈarm
+Af. Stage4_4_ResolveTempVowelMarkers: [ˈarm]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	ˈarm
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	ˈarm
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [ˈarm]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	ˈarm
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [ˈarm]
+  EpenthesisThenStrongSonorants START: In=	ˈarm
+    DBG (Epenthes): Rule '	^(ˈ?)(a)(r)(m)$	' SKIPPED for '	ˈarm	' due to condition_func on '	ˈarm	'
+  EpenthesisThenStrongSonorants END: Out=	ˈarm
+Af. EpenthesisThenStrongSonorants: [ˈarm]
+  Diacritics START: In=	ˈarm
+  Diacritics END: Out=	ˈarm
+Af. Diacritics: [ˈarm]
+  FinalCleanup START: In=	ˈarm
+  FinalCleanup END: Out=	ˈarm
+Af. FinalCleanup: [ˈarm]
+arm             -> [ˈarm]

@@ -1,0 +1,393 @@
+﻿    DBG (Setup): PHONETIC_VOWEL_NUCLEUS_PATTERN:	((?:ia)|(?:ua)|(?:ai)|(?:ei)|(?:oi)|(?:ui)|(?:ɑu)|(?:ou)|(?:əu)|(?:eiə)|(?:[aæɔeəiɪuʊʌɑeioɨuæ]ː?))
+
+--- Running Test Set for Iteration 37M (Focused) ---
+
+--- Transcribing: [bord] ---
+Af. MarkDigraphsAndVocalisationTriggers: [bord]
+  ConsonantResolution START: In=	bord
+  ConsonantResolution END: Out=	bord
+Af. ConsonantResolution: [bord]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	bord
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	bord
+Af. Stage4_0_SpecificOrthoToTempMarker: [bord]
+  Stage4_0_1_Resolve_CH_Marker START: In=	bord
+  Stage4_0_1_Resolve_CH_Marker END: Out=	bord
+Af. Stage4_0_1_Resolve_CH_Marker: [bord]
+  Stage4_1_VocmarkToTempMarker START: In=	bord
+  Stage4_1_VocmarkToTempMarker END: Out=	bord
+Af. Stage4_1_VocmarkToTempMarker: [bord]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	bord
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	bord
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [bord]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	bord
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	bord
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [bord]
+  Stage4_4_ResolveTempVowelMarkers START: In=	bord
+  Stage4_4_ResolveTempVowelMarkers END: Out=	bord
+Af. Stage4_4_ResolveTempVowelMarkers: [bord]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	bord
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	bord
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [bord]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	bord
+    DBG (Stage4_6): PROC START: In=	bord
+    DBG (Epenthes): is_likely_monosyllable_phonetic: Word='	bord	', NoStress='	bord	', NucleiCount=	1	, Result=	true
+    DBG (Stage4_6): SKIP (StressMono after SpecFinal):	bord
+    DBG (Stage4_6): PROC END: Out=	bord
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [bord]
+  EpenthesisThenStrongSonorants START: In=	bord
+  EpenthesisThenStrongSonorants END: Out=	bord
+Af. EpenthesisThenStrongSonorants: [bord]
+  Diacritics START: In=	bord
+  Diacritics END: Out=	bord
+Af. Diacritics: [bord]
+  FinalCleanup START: In=	bord
+  FinalCleanup END: Out=	bord
+Af. FinalCleanup: [bord]
+bord            -> [bord]
+
+--- Transcribing: [poll] ---
+Af. MarkDigraphsAndVocalisationTriggers: [po_LL_]
+  ConsonantResolution START: In=	po_LL_
+    DBG (Consonan):   ENTER resolve_lenited_consonant for marker: 	_LL_	 palatal_opt: 	L'	 nonpal_opt: 	L
+    DBG (Consonan):   determine_consonant_quality_ortho: word='	poll	', s_idx=	3	, e_idx=	4
+    DBG (Consonan):   determine_consonant_quality_ortho: current_ortho_cons_seq='	ll	'
+    DBG (Consonan):   determine_consonant_quality_ortho: next_v_type_char='	nil	', next_v_quality_implication='	nil	'
+    DBG (Consonan):   determine_consonant_quality_ortho: prev_v_type_char='	o	', prev_v_quality_implication='	broad	'
+    DBG (Consonan):   determine_consonant_quality_ortho: FINAL DECISION for '	ll	' in '	poll	' is: 	nonpalatal
+    DBG (Consonan):     resolve_lenited_consonant: Quality determined as: 	nonpalatal
+    DBG (Consonan):     resolve_lenited_consonant for marker: 	_LL_	 determined quality: 	nonpalatal	. base_pal: '	L'	', base_nonpal: '	L	'. Returning: '	L	'
+    DBG (Consonan): Rule '	_LL_	' APPLIED to '	_LL_	' -> '	L	'
+  ConsonantResolution END: Out=	poL
+Af. ConsonantResolution: [poL]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	poL
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	poL
+Af. Stage4_0_SpecificOrthoToTempMarker: [poL]
+  Stage4_0_1_Resolve_CH_Marker START: In=	poL
+  Stage4_0_1_Resolve_CH_Marker END: Out=	poL
+Af. Stage4_0_1_Resolve_CH_Marker: [poL]
+  Stage4_1_VocmarkToTempMarker START: In=	poL
+  Stage4_1_VocmarkToTempMarker END: Out=	poL
+Af. Stage4_1_VocmarkToTempMarker: [poL]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	poL
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	poL
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [poL]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	poL
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	poL
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [poL]
+  Stage4_4_ResolveTempVowelMarkers START: In=	poL
+  Stage4_4_ResolveTempVowelMarkers END: Out=	poL
+Af. Stage4_4_ResolveTempVowelMarkers: [poL]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	poL
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	poL
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [poL]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	poL
+    DBG (Stage4_6): PROC START: In=	poL
+    DBG (Epenthes): is_likely_monosyllable_phonetic: Word='	poL	', NoStress='	poL	', NucleiCount=	1	, Result=	true
+    DBG (Stage4_6): SKIP (StressMono after SpecFinal):	poL
+    DBG (Stage4_6): PROC END: Out=	poL
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [poL]
+  EpenthesisThenStrongSonorants START: In=	poL
+  EpenthesisThenStrongSonorants END: Out=	poL
+Af. EpenthesisThenStrongSonorants: [poL]
+  Diacritics START: In=	poL
+  Diacritics END: Out=	poL
+Af. Diacritics: [poL]
+  FinalCleanup START: In=	poL
+  FinalCleanup END: Out=	poL
+Af. FinalCleanup: [poL]
+poll            -> [poL]
+
+--- Transcribing: [fonn] ---
+Af. MarkDigraphsAndVocalisationTriggers: [fo_NN_]
+  ConsonantResolution START: In=	fo_NN_
+    DBG (Consonan):   ENTER resolve_lenited_consonant for marker: 	_NN_	 palatal_opt: 	N'	 nonpal_opt: 	N
+    DBG (Consonan):   determine_consonant_quality_ortho: word='	fonn	', s_idx=	3	, e_idx=	4
+    DBG (Consonan):   determine_consonant_quality_ortho: current_ortho_cons_seq='	nn	'
+    DBG (Consonan):   determine_consonant_quality_ortho: next_v_type_char='	nil	', next_v_quality_implication='	nil	'
+    DBG (Consonan):   determine_consonant_quality_ortho: prev_v_type_char='	o	', prev_v_quality_implication='	broad	'
+    DBG (Consonan):   determine_consonant_quality_ortho: FINAL DECISION for '	nn	' in '	fonn	' is: 	nonpalatal
+    DBG (Consonan):     resolve_lenited_consonant: Quality determined as: 	nonpalatal
+    DBG (Consonan):     resolve_lenited_consonant for marker: 	_NN_	 determined quality: 	nonpalatal	. base_pal: '	N'	', base_nonpal: '	N	'. Returning: '	N	'
+    DBG (Consonan): Rule '	_NN_	' APPLIED to '	_NN_	' -> '	N	'
+  ConsonantResolution END: Out=	foN
+Af. ConsonantResolution: [foN]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	foN
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	foN
+Af. Stage4_0_SpecificOrthoToTempMarker: [foN]
+  Stage4_0_1_Resolve_CH_Marker START: In=	foN
+  Stage4_0_1_Resolve_CH_Marker END: Out=	foN
+Af. Stage4_0_1_Resolve_CH_Marker: [foN]
+  Stage4_1_VocmarkToTempMarker START: In=	foN
+  Stage4_1_VocmarkToTempMarker END: Out=	foN
+Af. Stage4_1_VocmarkToTempMarker: [foN]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	foN
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	foN
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [foN]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	foN
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	foN
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [foN]
+  Stage4_4_ResolveTempVowelMarkers START: In=	foN
+  Stage4_4_ResolveTempVowelMarkers END: Out=	foN
+Af. Stage4_4_ResolveTempVowelMarkers: [foN]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	foN
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	foN
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [foN]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	foN
+    DBG (Stage4_6): PROC START: In=	foN
+    DBG (Epenthes): is_likely_monosyllable_phonetic: Word='	foN	', NoStress='	foN	', NucleiCount=	1	, Result=	true
+    DBG (Stage4_6): SKIP (StressMono after SpecFinal):	foN
+    DBG (Stage4_6): PROC END: Out=	foN
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [foN]
+  EpenthesisThenStrongSonorants START: In=	foN
+  EpenthesisThenStrongSonorants END: Out=	foN
+Af. EpenthesisThenStrongSonorants: [foN]
+  Diacritics START: In=	foN
+  Diacritics END: Out=	foN
+Af. Diacritics: [foN]
+  FinalCleanup START: In=	foN
+  FinalCleanup END: Out=	foN
+Af. FinalCleanup: [foN]
+fonn            -> [foN]
+
+--- Transcribing: [drochbhean] ---
+Af. MarkDigraphsAndVocalisationTriggers: [dro_CH__BH_ean]
+  ConsonantResolution START: In=	dro_CH__BH_ean
+    DBG (Consonan):   ENTER resolve_lenited_consonant for marker: 	_BH_	 palatal_opt: 	v'	 nonpal_opt: 	v
+    DBG (Consonan):   determine_consonant_quality_ortho: word='	drochbhean	', s_idx=	6	, e_idx=	7
+    DBG (Consonan):   determine_consonant_quality_ortho: current_ortho_cons_seq='	bh	'
+    DBG (Consonan):   determine_consonant_quality_ortho: next_v_type_char='	e	', next_v_quality_implication='	slender	'
+    DBG (Consonan):   determine_consonant_quality_ortho: prev_v_type_char='	o	', prev_v_quality_implication='	broad	'
+    DBG (Consonan):   determine_consonant_quality_ortho: FINAL DECISION for '	bh	' in '	drochbhean	' is: 	palatal
+    DBG (Consonan):     resolve_lenited_consonant: Quality determined as: 	palatal
+    DBG (Consonan):     resolve_lenited_consonant for marker: 	_BH_	 determined quality: 	palatal	. base_pal: '	v'	', base_nonpal: '	v	'. Returning: '	v'	'
+    DBG (Consonan): Rule '	_BH_	' APPLIED to '	_BH_	' -> '	v'	'
+  ConsonantResolution END: Out=	dro_CH_v'ean
+Af. ConsonantResolution: [dro_CH_v'ean]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	dro_CH_v'ean
+    DBG (Consonan):   determine_consonant_quality_ortho: word='	drochbhean	', s_idx=	8	, e_idx=	8
+    DBG (Consonan):   determine_consonant_quality_ortho: current_ortho_cons_seq='	e	'
+    DBG (Consonan):   determine_consonant_quality_ortho: next_v_type_char='	a	', next_v_quality_implication='	broad	'
+    DBG (Consonan):   determine_consonant_quality_ortho: prev_v_type_char='	o	', prev_v_quality_implication='	broad	'
+    DBG (Consonan):   determine_consonant_quality_ortho: FINAL DECISION for '	e	' in '	drochbhean	' is: 	nonpalatal
+    DBG (Stage4_0): ean$ rule: ortho_word='	drochbhean	', n_ortho_idx=	8	, quality_of_n JUST DETERMINED AS: '	nonpalatal	' for match: 	'ean
+    DBG (Stage4_0): Rule '	([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾ]*'?)ea(n)$	' APPLIED to '	'ean	' -> '	'&EA_BROAD_PRE_N&n	'
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	dro_CH_v'&EA_BROAD_PRE_N&n
+Af. Stage4_0_SpecificOrthoToTempMarker: [dro_CH_v'&EA_BROAD_PRE_N&n]
+  Stage4_0_1_Resolve_CH_Marker START: In=	dro_CH_v'&EA_BROAD_PRE_N&n
+    DBG (Consonan):   determine_consonant_quality_ortho: word='	drochbhean	', s_idx=	4	, e_idx=	5
+    DBG (Consonan):   determine_consonant_quality_ortho: current_ortho_cons_seq='	ch	'
+    DBG (Consonan):   determine_consonant_quality_ortho: next_v_type_char='	e	', next_v_quality_implication='	slender	'
+    DBG (Consonan):   determine_consonant_quality_ortho: prev_v_type_char='	o	', prev_v_quality_implication='	broad	'
+    DBG (Consonan):   determine_consonant_quality_ortho: FINAL DECISION for '	ch	' in '	drochbhean	' is: 	palatal
+    DBG (Stage4_0): Rule '	_CH_	' APPLIED to '	_CH_	' -> '	ç	'
+  Stage4_0_1_Resolve_CH_Marker END: Out=	droçv'&EA_BROAD_PRE_N&n
+Af. Stage4_0_1_Resolve_CH_Marker: [droçv'&EA_BROAD_PRE_N&n]
+  Stage4_1_VocmarkToTempMarker START: In=	droçv'&EA_BROAD_PRE_N&n
+  Stage4_1_VocmarkToTempMarker END: Out=	droçv'&EA_BROAD_PRE_N&n
+Af. Stage4_1_VocmarkToTempMarker: [droçv'&EA_BROAD_PRE_N&n]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	droçv'&EA_BROAD_PRE_N&n
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	droçv'&EA_BROAD_PRE_N&n
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [droçv'&EA_BROAD_PRE_N&n]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	droçv'&EA_BROAD_PRE_N&n
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	droçv'&EA_BROAD_PRE_N&n
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [droçv'&EA_BROAD_PRE_N&n]
+  Stage4_4_ResolveTempVowelMarkers START: In=	droçv'&EA_BROAD_PRE_N&n
+    DBG (Stage4_4): Iter.gsub: Rule '	&EA_BROAD_PRE_N&	' APPLIED to '	droçv'&EA_BROAD_PRE_N&n	' -> '	droçv'an	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1: out='	droçv'an	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	droçv'an
+Af. Stage4_4_ResolveTempVowelMarkers: [droçv'an]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	droçv'an
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	droçv'an
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [droçv'an]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	droçv'an
+    DBG (Stage4_6): PROC START: In=	droçv'an
+    DBG (Epenthes): is_likely_monosyllable_phonetic: Word='	droçv'an	', NoStress='	droçv'an	', NucleiCount=	3	, Result=	false
+    DBG (Stage4_6): Found	0	vowel nuclei for:	droçv'an
+    DBG (Stage4_6): PROC END: Out=	droçv'an
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [droçv'an]
+  EpenthesisThenStrongSonorants START: In=	droçv'an
+  EpenthesisThenStrongSonorants END: Out=	droçv'an
+Af. EpenthesisThenStrongSonorants: [droçv'an]
+  Diacritics START: In=	droçv'an
+  Diacritics END: Out=	droçv'an
+Af. Diacritics: [droçv'an]
+  FinalCleanup START: In=	droçv'an
+  FinalCleanup END: Out=	droçv'an
+Af. FinalCleanup: [droçv'an]
+drochbhean      -> [droçv'an]
+
+--- Transcribing: [seanbhean] ---
+Af. MarkDigraphsAndVocalisationTriggers: [sean_BH_ean]
+  ConsonantResolution START: In=	sean_BH_ean
+    DBG (Consonan):   ENTER resolve_lenited_consonant for marker: 	_BH_	 palatal_opt: 	v'	 nonpal_opt: 	v
+    DBG (Consonan):   determine_consonant_quality_ortho: word='	seanbhean	', s_idx=	5	, e_idx=	6
+    DBG (Consonan):   determine_consonant_quality_ortho: current_ortho_cons_seq='	bh	'
+    DBG (Consonan):   determine_consonant_quality_ortho: next_v_type_char='	e	', next_v_quality_implication='	slender	'
+    DBG (Consonan):   determine_consonant_quality_ortho: prev_v_type_char='	a	', prev_v_quality_implication='	broad	'
+    DBG (Consonan):   determine_consonant_quality_ortho: FINAL DECISION for '	bh	' in '	seanbhean	' is: 	palatal
+    DBG (Consonan):     resolve_lenited_consonant: Quality determined as: 	palatal
+    DBG (Consonan):     resolve_lenited_consonant for marker: 	_BH_	 determined quality: 	palatal	. base_pal: '	v'	', base_nonpal: '	v	'. Returning: '	v'	'
+    DBG (Consonan): Rule '	_BH_	' APPLIED to '	_BH_	' -> '	v'	'
+  ConsonantResolution END: Out=	seanv'ean
+Af. ConsonantResolution: [seanv'ean]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	seanv'ean
+    DBG (Consonan):   determine_consonant_quality_ortho: word='	seanbhean	', s_idx=	2	, e_idx=	2
+    DBG (Consonan):   determine_consonant_quality_ortho: current_ortho_cons_seq='	e	'
+    DBG (Consonan):   determine_consonant_quality_ortho: next_v_type_char='	a	', next_v_quality_implication='	broad	'
+    DBG (Consonan):   determine_consonant_quality_ortho: prev_v_type_char='	nil	', prev_v_quality_implication='	nil	'
+    DBG (Consonan):   determine_consonant_quality_ortho: FINAL DECISION for '	e	' in '	seanbhean	' is: 	nonpalatal
+    DBG (Stage4_0): eanC rule: ortho_word='	seanbhean	', n_ortho_idx=	2	, quality_of_n JUST DETERMINED AS: '	nonpalatal	' for match: 	seanv
+    DBG (Stage4_0): Rule '	([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾ]*'?)ea(n)([^eéiíaáoóuú°%-bhfpgcdtmlskgptdfbmnszrlLNRMçjɣŋhwcʃɟɾ'])	' APPLIED to '	seanv	' -> '	s&EA_BROAD_PRE_N&nv	'
+    DBG (Consonan):   determine_consonant_quality_ortho: word='	seanbhean	', s_idx=	7	, e_idx=	7
+    DBG (Consonan):   determine_consonant_quality_ortho: current_ortho_cons_seq='	e	'
+    DBG (Consonan):   determine_consonant_quality_ortho: next_v_type_char='	a	', next_v_quality_implication='	broad	'
+    DBG (Consonan):   determine_consonant_quality_ortho: prev_v_type_char='	a	', prev_v_quality_implication='	broad	'
+    DBG (Consonan):   determine_consonant_quality_ortho: FINAL DECISION for '	e	' in '	seanbhean	' is: 	nonpalatal
+    DBG (Stage4_0): ean$ rule: ortho_word='	seanbhean	', n_ortho_idx=	7	, quality_of_n JUST DETERMINED AS: '	nonpalatal	' for match: 	'ean
+    DBG (Stage4_0): Rule '	([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾ]*'?)ea(n)$	' APPLIED to '	'ean	' -> '	'&EA_BROAD_PRE_N&n	'
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	s&EA_BROAD_PRE_N&nv'&EA_BROAD_PRE_N&n
+Af. Stage4_0_SpecificOrthoToTempMarker: [s&EA_BROAD_PRE_N&nv'&EA_BROAD_PRE_N&n]
+  Stage4_0_1_Resolve_CH_Marker START: In=	s&EA_BROAD_PRE_N&nv'&EA_BROAD_PRE_N&n
+  Stage4_0_1_Resolve_CH_Marker END: Out=	s&EA_BROAD_PRE_N&nv'&EA_BROAD_PRE_N&n
+Af. Stage4_0_1_Resolve_CH_Marker: [s&EA_BROAD_PRE_N&nv'&EA_BROAD_PRE_N&n]
+  Stage4_1_VocmarkToTempMarker START: In=	s&EA_BROAD_PRE_N&nv'&EA_BROAD_PRE_N&n
+  Stage4_1_VocmarkToTempMarker END: Out=	s&EA_BROAD_PRE_N&nv'&EA_BROAD_PRE_N&n
+Af. Stage4_1_VocmarkToTempMarker: [s&EA_BROAD_PRE_N&nv'&EA_BROAD_PRE_N&n]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	s&EA_BROAD_PRE_N&nv'&EA_BROAD_PRE_N&n
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	s&EA_BROAD_PRE_N&nv'&EA_BROAD_PRE_N&n
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [s&EA_BROAD_PRE_N&nv'&EA_BROAD_PRE_N&n]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	s&EA_BROAD_PRE_N&nv'&EA_BROAD_PRE_N&n
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	s&EA_BROAD_PRE_N&nv'&EA_BROAD_PRE_N&n
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [s&EA_BROAD_PRE_N&nv'&EA_BROAD_PRE_N&n]
+  Stage4_4_ResolveTempVowelMarkers START: In=	s&EA_BROAD_PRE_N&nv'&EA_BROAD_PRE_N&n
+    DBG (Stage4_4): Iter.gsub: Rule '	&EA_BROAD_PRE_N&	' APPLIED to '	s&EA_BROAD_PRE_N&nv'&EA_BROAD_PRE_N&n	' -> '	sanv'an	' (	2	x)
+    DBG (Stage4_4): Iter.gsub Pass 1: out='	sanv'an	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	sanv'an
+Af. Stage4_4_ResolveTempVowelMarkers: [sanv'an]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	sanv'an
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	sanv'an
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [sanv'an]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	sanv'an
+    DBG (Stage4_6): PROC START: In=	sanv'an
+    DBG (Epenthes): is_likely_monosyllable_phonetic: Word='	sanv'an	', NoStress='	sanv'an	', NucleiCount=	2	, Result=	false
+    DBG (Stage4_6): Found	0	vowel nuclei for:	sanv'an
+    DBG (Stage4_6): PROC END: Out=	sanv'an
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [sanv'an]
+  EpenthesisThenStrongSonorants START: In=	sanv'an
+  EpenthesisThenStrongSonorants END: Out=	sanv'an
+Af. EpenthesisThenStrongSonorants: [sanv'an]
+  Diacritics START: In=	sanv'an
+  Diacritics END: Out=	sanv'an
+Af. Diacritics: [sanv'an]
+  FinalCleanup START: In=	sanv'an
+  FinalCleanup END: Out=	sanv'an
+Af. FinalCleanup: [sanv'an]
+seanbhean       -> [sanv'an]
+
+--- Transcribing: [bhean] ---
+Af. MarkDigraphsAndVocalisationTriggers: [_BH_ean]
+  ConsonantResolution START: In=	_BH_ean
+    DBG (Consonan):   ENTER resolve_lenited_consonant for marker: 	_BH_	 palatal_opt: 	v'	 nonpal_opt: 	v
+    DBG (Consonan):   determine_consonant_quality_ortho: word='	bhean	', s_idx=	1	, e_idx=	2
+    DBG (Consonan):   determine_consonant_quality_ortho: current_ortho_cons_seq='	bh	'
+    DBG (Consonan):   determine_consonant_quality_ortho: next_v_type_char='	e	', next_v_quality_implication='	slender	'
+    DBG (Consonan):   determine_consonant_quality_ortho: prev_v_type_char='	nil	', prev_v_quality_implication='	nil	'
+    DBG (Consonan):   determine_consonant_quality_ortho: FINAL DECISION for '	bh	' in '	bhean	' is: 	palatal
+    DBG (Consonan):     resolve_lenited_consonant: Quality determined as: 	palatal
+    DBG (Consonan):     resolve_lenited_consonant for marker: 	_BH_	 determined quality: 	palatal	. base_pal: '	v'	', base_nonpal: '	v	'. Returning: '	v'	'
+    DBG (Consonan): Rule '	_BH_	' APPLIED to '	_BH_	' -> '	v'	'
+  ConsonantResolution END: Out=	v'ean
+Af. ConsonantResolution: [v'ean]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	v'ean
+    DBG (Consonan):   determine_consonant_quality_ortho: word='	bhean	', s_idx=	3	, e_idx=	3
+    DBG (Consonan):   determine_consonant_quality_ortho: current_ortho_cons_seq='	e	'
+    DBG (Consonan):   determine_consonant_quality_ortho: next_v_type_char='	a	', next_v_quality_implication='	broad	'
+    DBG (Consonan):   determine_consonant_quality_ortho: prev_v_type_char='	nil	', prev_v_quality_implication='	nil	'
+    DBG (Consonan):   determine_consonant_quality_ortho: FINAL DECISION for '	e	' in '	bhean	' is: 	nonpalatal
+    DBG (Stage4_0): ean$ rule: ortho_word='	bhean	', n_ortho_idx=	3	, quality_of_n JUST DETERMINED AS: '	nonpalatal	' for match: 	'ean
+    DBG (Stage4_0): Rule '	([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾ]*'?)ea(n)$	' APPLIED to '	'ean	' -> '	'&EA_BROAD_PRE_N&n	'
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	v'&EA_BROAD_PRE_N&n
+Af. Stage4_0_SpecificOrthoToTempMarker: [v'&EA_BROAD_PRE_N&n]
+  Stage4_0_1_Resolve_CH_Marker START: In=	v'&EA_BROAD_PRE_N&n
+  Stage4_0_1_Resolve_CH_Marker END: Out=	v'&EA_BROAD_PRE_N&n
+Af. Stage4_0_1_Resolve_CH_Marker: [v'&EA_BROAD_PRE_N&n]
+  Stage4_1_VocmarkToTempMarker START: In=	v'&EA_BROAD_PRE_N&n
+  Stage4_1_VocmarkToTempMarker END: Out=	v'&EA_BROAD_PRE_N&n
+Af. Stage4_1_VocmarkToTempMarker: [v'&EA_BROAD_PRE_N&n]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	v'&EA_BROAD_PRE_N&n
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	v'&EA_BROAD_PRE_N&n
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [v'&EA_BROAD_PRE_N&n]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	v'&EA_BROAD_PRE_N&n
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	v'&EA_BROAD_PRE_N&n
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [v'&EA_BROAD_PRE_N&n]
+  Stage4_4_ResolveTempVowelMarkers START: In=	v'&EA_BROAD_PRE_N&n
+    DBG (Stage4_4): Iter.gsub: Rule '	&EA_BROAD_PRE_N&	' APPLIED to '	v'&EA_BROAD_PRE_N&n	' -> '	v'an	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1: out='	v'an	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	v'an
+Af. Stage4_4_ResolveTempVowelMarkers: [v'an]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	v'an
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	v'an
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [v'an]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	v'an
+    DBG (Stage4_6): PROC START: In=	v'an
+    DBG (Epenthes): is_likely_monosyllable_phonetic: Word='	v'an	', NoStress='	v'an	', NucleiCount=	1	, Result=	true
+    DBG (Stage4_6): SKIP (StressMono after SpecFinal):	v'an
+    DBG (Stage4_6): PROC END: Out=	v'an
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [v'an]
+  EpenthesisThenStrongSonorants START: In=	v'an
+  EpenthesisThenStrongSonorants END: Out=	v'an
+Af. EpenthesisThenStrongSonorants: [v'an]
+  Diacritics START: In=	v'an
+  Diacritics END: Out=	v'an
+Af. Diacritics: [v'an]
+  FinalCleanup START: In=	v'an
+  FinalCleanup END: Out=	v'an
+Af. FinalCleanup: [v'an]
+bhean           -> [v'an]
+
+--- Transcribing: [arm] ---
+Af. MarkDigraphsAndVocalisationTriggers: [ˈarm]
+  ConsonantResolution START: In=	ˈarm
+  ConsonantResolution END: Out=	ˈarm
+Af. ConsonantResolution: [ˈarm]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	ˈarm
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	ˈarm
+Af. Stage4_0_SpecificOrthoToTempMarker: [ˈarm]
+  Stage4_0_1_Resolve_CH_Marker START: In=	ˈarm
+  Stage4_0_1_Resolve_CH_Marker END: Out=	ˈarm
+Af. Stage4_0_1_Resolve_CH_Marker: [ˈarm]
+  Stage4_1_VocmarkToTempMarker START: In=	ˈarm
+  Stage4_1_VocmarkToTempMarker END: Out=	ˈarm
+Af. Stage4_1_VocmarkToTempMarker: [ˈarm]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	ˈarm
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	ˈarm
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [ˈarm]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	ˈarm
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	ˈarm
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [ˈarm]
+  Stage4_4_ResolveTempVowelMarkers START: In=	ˈarm
+  Stage4_4_ResolveTempVowelMarkers END: Out=	ˈarm
+Af. Stage4_4_ResolveTempVowelMarkers: [ˈarm]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	ˈarm
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	ˈarm
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [ˈarm]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	ˈarm
+    DBG (Stage4_6): PROC START: In=	ˈarm
+    DBG (Epenthes): is_likely_monosyllable_phonetic: Word='	ˈarm	', NoStress='	arm	', NucleiCount=	1	, Result=	true
+    DBG (Stage4_6): SKIP (StressMono after SpecFinal):	ˈarm
+    DBG (Stage4_6): PROC END: Out=	ˈarm
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [ˈarm]
+  EpenthesisThenStrongSonorants START: In=	ˈarm
+    DBG (Epenthes): is_likely_monosyllable_phonetic: Word='	ˈarm	', NoStress='	arm	', NucleiCount=	1	, Result=	true
+    DBG (Epenthes): Rule '	^(ˈ?)(a)(r)(m)$	' CONDITION MET for '	ˈarm	' (orig str for cond: '	ˈarm	'). Proceeding.
+    DBG (Epenthes): arm-like rule FIRING for mono: 	ˈarm
+    DBG (Epenthes): Rule '	^(ˈ?)(a)(r)(m)$	' APPLIED to '	ˈarm	' -> '	ˈarəm	'
+  EpenthesisThenStrongSonorants END: Out=	ˈarəm
+Af. EpenthesisThenStrongSonorants: [ˈarəm]
+  Diacritics START: In=	ˈarəm
+  Diacritics END: Out=	ˈarəm
+Af. Diacritics: [ˈarəm]
+  FinalCleanup START: In=	ˈarəm
+  FinalCleanup END: Out=	ˈarəm
+Af. FinalCleanup: [ˈarəm]
+arm             -> [ˈarəm]
