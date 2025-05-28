@@ -1,0 +1,19 @@
+﻿
+--- Running Test Set for Iteration 37Q (Focused) ---
+
+--- Transcribing: [bord] ---
+Initial Phonetic: [	bord	] (Ortho Context: 	bord	)
+Af. MarkDigraphsAndVocalisationTriggers: [bord]
+  ConsonantResolution START: In=	bord
+  ConsonantResolution END: Out=	bord
+Af. ConsonantResolution: [bord]
+  Stage4_4_ResolveTempVowelMarkers START: In=	bord
+  Stage4_4_ResolveTempVowelMarkers END: Out=	bord
+Af. Stage4_4_ResolveTempVowelMarkers: [bord]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	bord
+    DBG (Stage4_5_ContextualAllophonyOnPhonetic): Iter.gsub Pass 	1	, Rule #	8	: Pattern '	o	' APPLIED to '	bord	' -> '	bɔrd	' (	1	x)
+    DBG (Stage4_5_ContextualAllophonyOnPhonetic): Iter.gsub Pass 1 ended. String NET changed from '	bord	' to '	bɔrd	'
+    DBG (Stage4_5_ContextualAllophonyOnPhonetic): Iter.gsub Pass 2 ended. NO NET change in this pass. String remains: '	bɔrd	'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	bɔrd
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [bɔrd]
+  EpenthesisThenStrongSonorants START: In=	bɔrd

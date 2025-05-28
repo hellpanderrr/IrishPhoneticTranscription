@@ -9,7 +9,9 @@ import pandas as pd
 import json
 import csv, json
 
-path = r'C:\Users\hellpanderrr\Downloads\kaikki.org-dictionary-Irish.jsonl'
+
+
+path = r'F:\projects\transcription\wiktionary_ipa_phoneme_lexicons\kaikki.org-dictionary-Irish.jsonl'
 jsons = []
 with open(path, encoding='utf-8') as f:
     for n,line in enumerate(f):
@@ -64,7 +66,7 @@ fixed = ['pos','pos_2','word','exp','head','glosses','tags_','form_of','sounds']
 # 3) Combine into a single list:
 fieldnames = list(all_keys) + fixed
 
-with open('irish_ss.csv','w', newline='', encoding='utf-8') as out:
+with open('irish_ss2.csv','w', newline='', encoding='utf-8') as out:
     writer = csv.DictWriter(
         out,
         fieldnames=fieldnames,
@@ -89,52 +91,105 @@ with open('irish_ss.csv','w', newline='', encoding='utf-8') as out:
         for f in entry.get('forms', []):
             row = {**f, **base}
             writer.writerow(row)
+        if not entry.get('forms', []):
+            writer.writerow(base)
 
-
-df = pd.read_csv('irish_ss.csv')
+df = pd.read_csv('irish_ss2.csv')
 df = df[['word','sounds','tags_']].drop_duplicates()
 from numpy import nan
 
 df['sounds'] = df.sounds.apply(lambda x:nan if not eval(x) else x)
 df = df.dropna(subset='sounds')
-df['tags_']=df.tags_.apply(eval).apply(lambda x:[i for i in x if i[0].isupper()])
+df['tags_'] = df.tags_.apply(eval).apply(lambda x:[i for i in x if i[0].isupper()])
 
 df.to_csv('irish.csv')
 
+base = df
+base = pd.read_csv('irish.csv')
 
-final = pd.concat(df.apply(lambda x:  pd.DataFrame(eval(x.sounds)).assign(word=x.word,tags_=str(x.tags_)) ,axis=1).values)
+final = pd.concat(base.drop_duplicates(['word','sounds']).apply(lambda x:  pd.DataFrame(eval(x.sounds)).assign(word=x.word,tags_=str(x.tags_)) ,axis=1).values)
+final.ipa[final.ipa.isna() & ~final.other.isna() ] = final.other[final.ipa.isna() & ~final.other.isna() ]
 
-final.tags = final.tags.apply(lambda x:'; '.join([dialect_mapping.get(i,'') for i in x]) if hasattr(x,'__iter__') else '')
-final.tags_ = final.tags_.apply(eval).apply(lambda x:'; '.join([dialect_mapping.get(i,'') for i in x]) if hasattr(x,'__iter__') else '')
+
+final['region'] = final.tags.apply(lambda x:'; '.join([dialect_mapping.get(i,i) for i in x]) if hasattr(x,'__iter__') else '')
+
+#final.tags_ = final.tags_.apply(eval).apply(lambda x:'; '.join([dialect_mapping.get(i,'') for i in x]) if hasattr(x,'__iter__') else '')
+
+final = final[['tags', 'ipa', 'word', 'region']]
+
+final.tags = final.tags.apply(lambda x:'; '.join(x) if type(x)==list else x)
+
+g = final.fillna('').groupby(['ipa','word']).agg(list).reset_index()
+
+g.tags = g.tags.apply(lambda x:'; '.join(filter(bool,x)) if type(x)==list  else '')
+
+
+
+g = g.groupby(['word','tags']).agg(list).reset_index()
+
+g.region = g.region.apply(lambda x:sum(x,[])).apply(lambda x:'; '.join(filter(bool,x)) if type(x)==list  else '')
+g.ipa = g.ipa.apply(lambda x:', '.join(filter(bool,x)))
+g.ipa = g.ipa.str.replace('/','').str.replace('[','').str.replace(']','')
+
+g.tags = g.tags.apply(lambda x: '; '.join(set(x.split('; '))))
+
+
+g.drop('region',axis=1).to_csv('group.csv',index=False)
+
+
 
 final.to_csv('final.csv')
 
 
 
 dialect_mapping = {
-    'Aran': 'Connacht Irish',
-    'Cois-Fharraige': 'Connacht Irish',
-    'Connacht': 'Connacht Irish',
-    'Connemara': 'Connacht Irish',
-    'Galway': 'Connacht Irish',
-    'Mayo': 'Connacht Irish',
-    'West': 'Connacht Irish',
-    'Cork': 'Munster Irish',
-    'Kerry': 'Munster Irish',
-    'Munster': 'Munster Irish',
-    'South': 'Munster Irish',
-    'Waterford': 'Munster Irish',
-    'West-Cork': 'Munster Irish',
-    'West-Kerry': 'Munster Irish',
-    'Ulster': 'Ulster Irish',
+    'Aran': 'Connacht',
+    'Cois-Fharraige': 'Connacht',
+    'Connacht': 'Connacht',
+    'Connemara': 'Connacht',
+    'Galway': 'Connacht',
+    'Mayo': 'Connacht',
+    'West': 'Connacht',
+    'Cork': 'Munster',
+    'Kerry': 'Munster',
+    'Munster': 'Munster',
+    'South': 'Munster',
+    'Waterford': 'Munster',
+    'West-Cork': 'Munster',
+    'West-Kerry': 'Munster',
+    'Ulster': 'Ulster',
     'East': 'Unknown/Not Mapped',
-    'General-American': 'Not Irish',
-    'Standard': 'Standard Irish',
-    'Greek': 'Not Irish',
-    'Hinduism': 'Not Irish',
-    'Internet': 'Not Irish',
-    'Irish': 'General Irish',
-    'Judaism': 'Not Irish',
-    'Roman': 'Not Irish',
-    'UK': 'Not Irish'
+    'General-American': 'Not',
+    'Standard': 'Standard',
+    'Greek': 'Not',
+    'Hinduism': 'Not',
+    'Internet': 'Not',
+    'Irish': 'General',
+    'Judaism': 'Not',
+    'Roman': 'Not',
+    'UK': 'Not'
 }
+
+
+words_to_test_focused_37AA = [
+    "dubh", "samhradh", "cnámh", "nimhe", "aghaidh", "suidhe", "leabhar", "bóthar", 
+    "cat", "fios", "coill", "gort", 
+    "caol", "gaoth", "aoibhinn", "móin", 
+    "bord", "poll", "fonn", "drochbhean", "ceann",
+    "beannaigh" 
+]
+
+
+words_to_test_full_37AA = [
+"fhéach", "fhág", "fhíor", "fhostaigh", "fhuair", "scríobh", "teach", "deartháir", "cat", "bord", "ceann", "poll", "balla", "leabhar", "samhradh", "beannacht", "fonn",
+"leagan", "teanga", "seacht", "aghaidh", "suidhe", "nimhe", "bóthar", "oíche", "fear", "glaic", "muc", "fliuch", "fada", "beag", "séimhiú", "úrú", "bacach", 
+"isteach", "baile", "duine", "Gaeltacht", "Conamara", "Gaeilge", "aoibhinn", "buí", "caol", "leathan", "drochbhean", "an-mhaith", "fuinneog", "oiliúint", 
+"staighre", "fios", "athbhliain", "comhrá", "mícheart", "oícheanta", "codladh", "luigh", "fiche", "duchaise", "saibhir", "deacair", "sláinte", "ceart", "lae", 
+"laoch", "aer", "ceo", "ceol", "coir", "coill", "faoi", "gaoth", "bádaí", "capaillí", "foclaí", "brógaí", "dearmad", "seomraí", "doras", "amhrán", "Banríon", 
+"dearcadh", "dearfa", "mí-ádh", "droch-obair", "seanbhean", "bhean", "fíoruisce", "athchúrsáil", "an-fear", "an-oíche", "beart", "bean", "geal", "eagla", "muid", "duit", 
+"fuil", "goil", "buil", "cuir", "druid", "luibh", "ceist", "ocht", "páiste", "sparán", "scéal", "bláth", "cnoc", "gnó", "dlí", "mná", "trá", "uisce", "obair", 
+"imir", "eolas", "athair", "máthair", "deirfiúr", "imirt", "oibre", "ceacht", "ceistneoir", "ceistigh", "arm", "borb", "bolg", "garbh", "gorm", "gairm", "balbh", 
+"seilbh", "dearg", "fearg", "colm", "ainm", "scrúdaigh", "cónaigh", "beannaigh",
+"teann", "trom", "am", "cam", "gall", "tall", "dún", "dubh", "móin"
+]
+

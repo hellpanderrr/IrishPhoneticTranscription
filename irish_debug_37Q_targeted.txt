@@ -1,0 +1,510 @@
+﻿
+--- Running Test Set for Iteration 37Q (Focused) ---
+
+--- Transcribing: [bord] ---
+  Stage4_4_ResolveTempVowelMarkers START: In=	bord
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	bord	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	bord
+Af. Stage4_4_ResolveTempVowelMarkers: [bord]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	bord
+    DBG (Stage4_5): Applying placeholder creation rules...
+    DBG (Stage4_5): After placeholder creation: 	bord
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	o	' APPLIED to '	bord	' -> '	bɔrd	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	bord	' to '	bɔrd	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	bɔrd	'
+    DBG (Stage4_5): After core allophony rules: 	bɔrd
+    DBG (Stage4_5): Applying placeholder restoration rules...
+    DBG (Stage4_5): After placeholder restoration: 	bɔrd
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	bɔrd
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [bɔrd]
+  EpenthesisThenStrongSonorants START: In=	bɔrd
+  EpenthesisThenStrongSonorants END: Out=	bɔrd
+Af. EpenthesisThenStrongSonorants: [bɔrd]
+  Diacritics START: In=	bɔrd
+  Diacritics END: Out=	bɔrd
+Af. Diacritics: [bɔrd]
+  FinalCleanup START: In=	bɔrd
+  FinalCleanup END: Out=	bɔrd
+Af. FinalCleanup: [bɔrd]
+bord            -> [bɔrd]
+
+--- Transcribing: [poll] ---
+  Stage4_4_ResolveTempVowelMarkers START: In=	poL
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	poL	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	poL
+Af. Stage4_4_ResolveTempVowelMarkers: [poL]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	poL
+    DBG (Stage4_5): Applying placeholder creation rules...
+    DBG (Stage4_5): After placeholder creation: 	poL
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	o	' APPLIED to '	poL	' -> '	pɔL	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	poL	' to '	pɔL	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	pɔL	'
+    DBG (Stage4_5): After core allophony rules: 	pɔL
+    DBG (Stage4_5): Applying placeholder restoration rules...
+    DBG (Stage4_5): After placeholder restoration: 	pɔL
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	pɔL
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [pɔL]
+  EpenthesisThenStrongSonorants START: In=	pɔL
+  EpenthesisThenStrongSonorants END: Out=	pɔL
+Af. EpenthesisThenStrongSonorants: [pɔL]
+  Diacritics START: In=	pɔL
+  Diacritics END: Out=	pɔL
+Af. Diacritics: [pɔL]
+  FinalCleanup START: In=	pɔL
+  FinalCleanup END: Out=	pɔL
+Af. FinalCleanup: [pɔL]
+poll            -> [pɔL]
+
+--- Transcribing: [fonn] ---
+  Stage4_4_ResolveTempVowelMarkers START: In=	foN
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	foN	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	foN
+Af. Stage4_4_ResolveTempVowelMarkers: [foN]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	foN
+    DBG (Stage4_5): Applying placeholder creation rules...
+    DBG (Stage4_5): After placeholder creation: 	foN
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	o	' APPLIED to '	foN	' -> '	fɔN	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	foN	' to '	fɔN	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	fɔN	'
+    DBG (Stage4_5): After core allophony rules: 	fɔN
+    DBG (Stage4_5): Applying placeholder restoration rules...
+    DBG (Stage4_5): After placeholder restoration: 	fɔN
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	fɔN
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [fɔN]
+  EpenthesisThenStrongSonorants START: In=	fɔN
+  EpenthesisThenStrongSonorants END: Out=	fɔN
+Af. EpenthesisThenStrongSonorants: [fɔN]
+  Diacritics START: In=	fɔN
+  Diacritics END: Out=	fɔN
+Af. Diacritics: [fɔN]
+  FinalCleanup START: In=	fɔN
+  FinalCleanup END: Out=	fɔN
+Af. FinalCleanup: [fɔN]
+fonn            -> [fɔN]
+
+--- Transcribing: [drochbhean] ---
+  Stage4_4_ResolveTempVowelMarkers START: In=	droçv'&EA_SLENDER_PRE_N&n
+    DBG (Stage4_4): Iter.gsub: Rule '	&EA_SLENDER_PRE_N&	' APPLIED to '	droçv'&EA_SLENDER_PRE_N&n	' -> '	droçv'æn	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	droçv'&EA_SLENDER_PRE_N&n	' to '	droçv'æn	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	droçv'æn	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	droçv'æn
+Af. Stage4_4_ResolveTempVowelMarkers: [droçv'æn]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	droçv'æn
+    DBG (Stage4_5): Applying placeholder creation rules...
+    DBG (Stage4_5): After placeholder creation: 	droçv'æn
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	o	' APPLIED to '	droçv'æn	' -> '	drɔçv'æn	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub: Rule '	(v')(æ)	' APPLIED to '	drɔçv'æn	' -> '	drɔçv'ʲæn	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub: Rule '	([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾ]*'?)([ɔʊʌ])([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾ]['ʃçjɟc])	' APPLIED to '	drɔçv'ʲæn	' -> '	dr�eçv'ʲæn	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	droçv'æn	' to '	dr�eçv'ʲæn	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	dr�eçv'ʲæn	'
+    DBG (Stage4_5): After core allophony rules: 	dr�eçv'ʲæn
+    DBG (Stage4_5): Applying placeholder restoration rules...
+    DBG (Stage4_5): After placeholder restoration: 	dr�eçv'ʲæn
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	dr�eçv'ʲæn
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [dr�eçv'ʲæn]
+  EpenthesisThenStrongSonorants START: In=	dr�eçv'ʲæn
+  EpenthesisThenStrongSonorants END: Out=	dr�eçv'ʲæn
+Af. EpenthesisThenStrongSonorants: [dr�eçv'ʲæn]
+  Diacritics START: In=	dr�eçv'ʲæn
+  Diacritics END: Out=	dr�eçv'ʲæn
+Af. Diacritics: [dr�eçv'ʲæn]
+  FinalCleanup START: In=	dr�eçv'ʲæn
+  FinalCleanup END: Out=	dr�eçv'ʲæn
+Af. FinalCleanup: [dr�eçv'ʲæn]
+drochbhean      -> [dr�eçv'ʲæn]
+
+--- Transcribing: [seanbhean] ---
+  Stage4_4_ResolveTempVowelMarkers START: In=	s&EA_SLENDER_PRE_N&nv'&EA_SLENDER_PRE_N&n
+    DBG (Stage4_4): Iter.gsub: Rule '	&EA_SLENDER_PRE_N&	' APPLIED to '	s&EA_SLENDER_PRE_N&nv'&EA_SLENDER_PRE_N&n	' -> '	sænv'æn	' (	2	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	s&EA_SLENDER_PRE_N&nv'&EA_SLENDER_PRE_N&n	' to '	sænv'æn	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	sænv'æn	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	sænv'æn
+Af. Stage4_4_ResolveTempVowelMarkers: [sænv'æn]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	sænv'æn
+    DBG (Stage4_5): Applying placeholder creation rules...
+    DBG (Stage4_5): After placeholder creation: 	sænv'æn
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	(v')(æ)	' APPLIED to '	sænv'æn	' -> '	sænv'ʲæn	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	sænv'æn	' to '	sænv'ʲæn	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	sænv'ʲæn	'
+    DBG (Stage4_5): After core allophony rules: 	sænv'ʲæn
+    DBG (Stage4_5): Applying placeholder restoration rules...
+    DBG (Stage4_5): After placeholder restoration: 	sænv'ʲæn
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	sænv'ʲæn
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [sænv'ʲæn]
+  EpenthesisThenStrongSonorants START: In=	sænv'ʲæn
+  EpenthesisThenStrongSonorants END: Out=	sænv'ʲæn
+Af. EpenthesisThenStrongSonorants: [sænv'ʲæn]
+  Diacritics START: In=	sænv'ʲæn
+  Diacritics END: Out=	sænv'ʲæn
+Af. Diacritics: [sænv'ʲæn]
+  FinalCleanup START: In=	sænv'ʲæn
+  FinalCleanup END: Out=	sænv'ʲæn
+Af. FinalCleanup: [sænv'ʲæn]
+seanbhean       -> [sænv'ʲæn]
+
+--- Transcribing: [bhean] ---
+  Stage4_4_ResolveTempVowelMarkers START: In=	v'&EA_SLENDER_PRE_N&n
+    DBG (Stage4_4): Iter.gsub: Rule '	&EA_SLENDER_PRE_N&	' APPLIED to '	v'&EA_SLENDER_PRE_N&n	' -> '	v'æn	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	v'&EA_SLENDER_PRE_N&n	' to '	v'æn	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	v'æn	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	v'æn
+Af. Stage4_4_ResolveTempVowelMarkers: [v'æn]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	v'æn
+    DBG (Stage4_5): Applying placeholder creation rules...
+    DBG (Stage4_5): After placeholder creation: 	v'æn
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	(v')(æ)	' APPLIED to '	v'æn	' -> '	v'ʲæn	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	v'æn	' to '	v'ʲæn	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	v'ʲæn	'
+    DBG (Stage4_5): After core allophony rules: 	v'ʲæn
+    DBG (Stage4_5): Applying placeholder restoration rules...
+    DBG (Stage4_5): After placeholder restoration: 	v'ʲæn
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	v'ʲæn
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [v'ʲæn]
+  EpenthesisThenStrongSonorants START: In=	v'ʲæn
+  EpenthesisThenStrongSonorants END: Out=	v'ʲæn
+Af. EpenthesisThenStrongSonorants: [v'ʲæn]
+  Diacritics START: In=	v'ʲæn
+  Diacritics END: Out=	v'ʲæn
+Af. Diacritics: [v'ʲæn]
+  FinalCleanup START: In=	v'ʲæn
+  FinalCleanup END: Out=	v'ʲæn
+Af. FinalCleanup: [v'ʲæn]
+bhean           -> [v'ʲæn]
+
+--- Transcribing: [arm] ---
+  Stage4_4_ResolveTempVowelMarkers START: In=	ˈarm
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	ˈarm	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	ˈarm
+Af. Stage4_4_ResolveTempVowelMarkers: [ˈarm]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	ˈarm
+    DBG (Stage4_5): Applying placeholder creation rules...
+    DBG (Stage4_5): After placeholder creation: 	ˈarm
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	ˈarm	'
+    DBG (Stage4_5): After core allophony rules: 	ˈarm
+    DBG (Stage4_5): Applying placeholder restoration rules...
+    DBG (Stage4_5): After placeholder restoration: 	ˈarm
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	ˈarm
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [ˈarm]
+  EpenthesisThenStrongSonorants START: In=	ˈarm
+  EpenthesisThenStrongSonorants END: Out=	ˈarəm
+Af. EpenthesisThenStrongSonorants: [ˈarəm]
+  Diacritics START: In=	ˈarəm
+  Diacritics END: Out=	ˈarəm
+Af. Diacritics: [ˈarəm]
+  FinalCleanup START: In=	ˈarəm
+  FinalCleanup END: Out=	ˈarəm
+Af. FinalCleanup: [ˈarəm]
+arm             -> [ˈarəm]
+
+--- Transcribing: [ceann] ---
+  Stage4_4_ResolveTempVowelMarkers START: In=	k&EA_BROAD_PRE_NN&N
+    DBG (Stage4_4): Iter.gsub: Rule '	&EA_BROAD_PRE_NN&	' APPLIED to '	k&EA_BROAD_PRE_NN&N	' -> '	kɑːN	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	k&EA_BROAD_PRE_NN&N	' to '	kɑːN	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	kɑːN	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	kɑːN
+Af. Stage4_4_ResolveTempVowelMarkers: [kɑːN]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	kɑːN
+    DBG (Stage4_5): Applying placeholder creation rules...
+    DBG (Stage4_5): Placeholder created: '	ɑː	' -> '	&PHON_A_LONG&	'. Result: '	k&PHON_A_LONG&N	'
+    DBG (Stage4_5): After placeholder creation: 	k&PHON_A_LONG&N
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	k&PHON_A_LONG&N	'
+    DBG (Stage4_5): After core allophony rules: 	k&PHON_A_LONG&N
+    DBG (Stage4_5): Applying placeholder restoration rules...
+    DBG (Stage4_5): Placeholder restored: '	&PHON_A_LONG&	' -> '	ɑː	'. Result: '	kɑːN	'
+    DBG (Stage4_5): After placeholder restoration: 	kɑːN
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	kɑːN
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [kɑːN]
+  EpenthesisThenStrongSonorants START: In=	kɑːN
+  EpenthesisThenStrongSonorants END: Out=	kɑːN
+Af. EpenthesisThenStrongSonorants: [kɑːN]
+  Diacritics START: In=	kɑːN
+  Diacritics END: Out=	kɑːN
+Af. Diacritics: [kɑːN]
+  FinalCleanup START: In=	kɑːN
+  FinalCleanup END: Out=	kɑːN
+Af. FinalCleanup: [kɑːN]
+ceann           -> [kɑːN]
+
+--- Transcribing: [binn] ---
+  Stage4_4_ResolveTempVowelMarkers START: In=	biN'
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	biN'	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	biN'
+Af. Stage4_4_ResolveTempVowelMarkers: [biN']
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	biN'
+    DBG (Stage4_5): Applying placeholder creation rules...
+    DBG (Stage4_5): After placeholder creation: 	biN'
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	biN'	'
+    DBG (Stage4_5): After core allophony rules: 	biN'
+    DBG (Stage4_5): Applying placeholder restoration rules...
+    DBG (Stage4_5): After placeholder restoration: 	biN'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	biN'
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [biN']
+  EpenthesisThenStrongSonorants START: In=	biN'
+  EpenthesisThenStrongSonorants END: Out=	biN'
+Af. EpenthesisThenStrongSonorants: [biN']
+  Diacritics START: In=	biN'
+  Diacritics END: Out=	biN'
+Af. Diacritics: [biN']
+  FinalCleanup START: In=	biN'
+  FinalCleanup END: Out=	biN'
+Af. FinalCleanup: [biN']
+binn            -> [biN']
+
+--- Transcribing: [teann] ---
+  Stage4_4_ResolveTempVowelMarkers START: In=	t&EA_BROAD_PRE_NN&N
+    DBG (Stage4_4): Iter.gsub: Rule '	&EA_BROAD_PRE_NN&	' APPLIED to '	t&EA_BROAD_PRE_NN&N	' -> '	tɑːN	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	t&EA_BROAD_PRE_NN&N	' to '	tɑːN	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	tɑːN	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	tɑːN
+Af. Stage4_4_ResolveTempVowelMarkers: [tɑːN]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	tɑːN
+    DBG (Stage4_5): Applying placeholder creation rules...
+    DBG (Stage4_5): Placeholder created: '	ɑː	' -> '	&PHON_A_LONG&	'. Result: '	t&PHON_A_LONG&N	'
+    DBG (Stage4_5): After placeholder creation: 	t&PHON_A_LONG&N
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	t&PHON_A_LONG&N	'
+    DBG (Stage4_5): After core allophony rules: 	t&PHON_A_LONG&N
+    DBG (Stage4_5): Applying placeholder restoration rules...
+    DBG (Stage4_5): Placeholder restored: '	&PHON_A_LONG&	' -> '	ɑː	'. Result: '	tɑːN	'
+    DBG (Stage4_5): After placeholder restoration: 	tɑːN
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	tɑːN
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [tɑːN]
+  EpenthesisThenStrongSonorants START: In=	tɑːN
+  EpenthesisThenStrongSonorants END: Out=	tɑːN
+Af. EpenthesisThenStrongSonorants: [tɑːN]
+  Diacritics START: In=	tɑːN
+  Diacritics END: Out=	tɑːN
+Af. Diacritics: [tɑːN]
+  FinalCleanup START: In=	tɑːN
+  FinalCleanup END: Out=	tɑːN
+Af. FinalCleanup: [tɑːN]
+teann           -> [tɑːN]
+
+--- Transcribing: [trom] ---
+  Stage4_4_ResolveTempVowelMarkers START: In=	trom
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	trom	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	trom
+Af. Stage4_4_ResolveTempVowelMarkers: [trom]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	trom
+    DBG (Stage4_5): Applying placeholder creation rules...
+    DBG (Stage4_5): After placeholder creation: 	trom
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	o	' APPLIED to '	trom	' -> '	trɔm	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	trom	' to '	trɔm	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	trɔm	'
+    DBG (Stage4_5): After core allophony rules: 	trɔm
+    DBG (Stage4_5): Applying placeholder restoration rules...
+    DBG (Stage4_5): After placeholder restoration: 	trɔm
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	trɔm
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [trɔm]
+  EpenthesisThenStrongSonorants START: In=	trɔm
+  EpenthesisThenStrongSonorants END: Out=	trɔm
+Af. EpenthesisThenStrongSonorants: [trɔm]
+  Diacritics START: In=	trɔm
+  Diacritics END: Out=	trɔm
+Af. Diacritics: [trɔm]
+  FinalCleanup START: In=	trɔm
+  FinalCleanup END: Out=	trɔm
+Af. FinalCleanup: [trɔm]
+trom            -> [trɔm]
+
+--- Transcribing: [am] ---
+  Stage4_4_ResolveTempVowelMarkers START: In=	ˈam
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	ˈam	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	ˈam
+Af. Stage4_4_ResolveTempVowelMarkers: [ˈam]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	ˈam
+    DBG (Stage4_5): Applying placeholder creation rules...
+    DBG (Stage4_5): After placeholder creation: 	ˈam
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	ˈam	'
+    DBG (Stage4_5): After core allophony rules: 	ˈam
+    DBG (Stage4_5): Applying placeholder restoration rules...
+    DBG (Stage4_5): After placeholder restoration: 	ˈam
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	ˈam
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [ˈam]
+  EpenthesisThenStrongSonorants START: In=	ˈam
+  EpenthesisThenStrongSonorants END: Out=	ˈam
+Af. EpenthesisThenStrongSonorants: [ˈam]
+  Diacritics START: In=	ˈam
+  Diacritics END: Out=	ˈam
+Af. Diacritics: [ˈam]
+  FinalCleanup START: In=	ˈam
+  FinalCleanup END: Out=	ˈam
+Af. FinalCleanup: [ˈam]
+am              -> [ˈam]
+
+--- Transcribing: [cam] ---
+  Stage4_4_ResolveTempVowelMarkers START: In=	kam
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	kam	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	kam
+Af. Stage4_4_ResolveTempVowelMarkers: [kam]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	kam
+    DBG (Stage4_5): Applying placeholder creation rules...
+    DBG (Stage4_5): After placeholder creation: 	kam
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	kam	'
+    DBG (Stage4_5): After core allophony rules: 	kam
+    DBG (Stage4_5): Applying placeholder restoration rules...
+    DBG (Stage4_5): After placeholder restoration: 	kam
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	kam
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [kam]
+  EpenthesisThenStrongSonorants START: In=	kam
+  EpenthesisThenStrongSonorants END: Out=	kam
+Af. EpenthesisThenStrongSonorants: [kam]
+  Diacritics START: In=	kam
+  Diacritics END: Out=	kam
+Af. Diacritics: [kam]
+  FinalCleanup START: In=	kam
+  FinalCleanup END: Out=	kam
+Af. FinalCleanup: [kam]
+cam             -> [kam]
+
+--- Transcribing: [gall] ---
+  Stage4_4_ResolveTempVowelMarkers START: In=	gaL
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	gaL	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	gaL
+Af. Stage4_4_ResolveTempVowelMarkers: [gaL]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	gaL
+    DBG (Stage4_5): Applying placeholder creation rules...
+    DBG (Stage4_5): After placeholder creation: 	gaL
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	gaL	'
+    DBG (Stage4_5): After core allophony rules: 	gaL
+    DBG (Stage4_5): Applying placeholder restoration rules...
+    DBG (Stage4_5): After placeholder restoration: 	gaL
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	gaL
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [gaL]
+  EpenthesisThenStrongSonorants START: In=	gaL
+  EpenthesisThenStrongSonorants END: Out=	gaL
+Af. EpenthesisThenStrongSonorants: [gaL]
+  Diacritics START: In=	gaL
+  Diacritics END: Out=	gaL
+Af. Diacritics: [gaL]
+  FinalCleanup START: In=	gaL
+  FinalCleanup END: Out=	gaL
+Af. FinalCleanup: [gaL]
+gall            -> [gaL]
+
+--- Transcribing: [tall] ---
+  Stage4_4_ResolveTempVowelMarkers START: In=	taL
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	taL	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	taL
+Af. Stage4_4_ResolveTempVowelMarkers: [taL]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	taL
+    DBG (Stage4_5): Applying placeholder creation rules...
+    DBG (Stage4_5): After placeholder creation: 	taL
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	taL	'
+    DBG (Stage4_5): After core allophony rules: 	taL
+    DBG (Stage4_5): Applying placeholder restoration rules...
+    DBG (Stage4_5): After placeholder restoration: 	taL
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	taL
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [taL]
+  EpenthesisThenStrongSonorants START: In=	taL
+  EpenthesisThenStrongSonorants END: Out=	taL
+Af. EpenthesisThenStrongSonorants: [taL]
+  Diacritics START: In=	taL
+  Diacritics END: Out=	taL
+Af. Diacritics: [taL]
+  FinalCleanup START: In=	taL
+  FinalCleanup END: Out=	taL
+Af. FinalCleanup: [taL]
+tall            -> [taL]
+
+--- Transcribing: [bóthar] ---
+  Stage4_4_ResolveTempVowelMarkers START: In=	b&O_ACUTE_LONG&har
+    DBG (Stage4_4): Iter.gsub: Rule '	&O_ACUTE_LONG&	' APPLIED to '	b&O_ACUTE_LONG&har	' -> '	boːhar	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	b&O_ACUTE_LONG&har	' to '	boːhar	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	boːhar	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	boːhar
+Af. Stage4_4_ResolveTempVowelMarkers: [boːhar]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	boːhar
+    DBG (Stage4_5): Applying placeholder creation rules...
+    DBG (Stage4_5): Placeholder created: '	oː	' -> '	&PHON_O_LONG&	'. Result: '	b&PHON_O_LONG&har	'
+    DBG (Stage4_5): After placeholder creation: 	b&PHON_O_LONG&har
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	b&PHON_O_LONG&har	'
+    DBG (Stage4_5): After core allophony rules: 	b&PHON_O_LONG&har
+    DBG (Stage4_5): Applying placeholder restoration rules...
+    DBG (Stage4_5): Placeholder restored: '	&PHON_O_LONG&	' -> '	oː	'. Result: '	boːhar	'
+    DBG (Stage4_5): After placeholder restoration: 	boːhar
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	boːhar
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [boːhar]
+  EpenthesisThenStrongSonorants START: In=	boːhar
+  EpenthesisThenStrongSonorants END: Out=	boːhar
+Af. EpenthesisThenStrongSonorants: [boːhar]
+  Diacritics START: In=	boːhar
+  Diacritics END: Out=	boːhar
+Af. Diacritics: [boːhar]
+  FinalCleanup START: In=	boːhar
+  FinalCleanup END: Out=	boːhar
+Af. FinalCleanup: [boːhar]
+bóthar         -> [boːhar]
+
+--- Transcribing: [dún] ---
+  Stage4_4_ResolveTempVowelMarkers START: In=	d&U_ACUTE_LONG&n
+    DBG (Stage4_4): Iter.gsub: Rule '	&U_ACUTE_LONG&	' APPLIED to '	d&U_ACUTE_LONG&n	' -> '	duːn	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	d&U_ACUTE_LONG&n	' to '	duːn	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	duːn	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	duːn
+Af. Stage4_4_ResolveTempVowelMarkers: [duːn]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	duːn
+    DBG (Stage4_5): Applying placeholder creation rules...
+    DBG (Stage4_5): Placeholder created: '	uː	' -> '	&PHON_U_LONG&	'. Result: '	d&PHON_U_LONG&n	'
+    DBG (Stage4_5): After placeholder creation: 	d&PHON_U_LONG&n
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	d&PHON_U_LONG&n	'
+    DBG (Stage4_5): After core allophony rules: 	d&PHON_U_LONG&n
+    DBG (Stage4_5): Applying placeholder restoration rules...
+    DBG (Stage4_5): Placeholder restored: '	&PHON_U_LONG&	' -> '	uː	'. Result: '	duːn	'
+    DBG (Stage4_5): After placeholder restoration: 	duːn
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	duːn
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [duːn]
+  EpenthesisThenStrongSonorants START: In=	duːn
+  EpenthesisThenStrongSonorants END: Out=	duːn
+Af. EpenthesisThenStrongSonorants: [duːn]
+  Diacritics START: In=	duːn
+  Diacritics END: Out=	duːn
+Af. Diacritics: [duːn]
+  FinalCleanup START: In=	duːn
+  FinalCleanup END: Out=	duːn
+Af. FinalCleanup: [duːn]
+dún            -> [duːn]
+
+--- Transcribing: [dubh] ---
+  Stage4_4_ResolveTempVowelMarkers START: In=	duv
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	duv	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	duv
+Af. Stage4_4_ResolveTempVowelMarkers: [duv]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	duv
+    DBG (Stage4_5): Applying placeholder creation rules...
+    DBG (Stage4_5): After placeholder creation: 	duv
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	u	' APPLIED to '	duv	' -> '	dɔv	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	duv	' to '	dɔv	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	dɔv	'
+    DBG (Stage4_5): After core allophony rules: 	dɔv
+    DBG (Stage4_5): Applying placeholder restoration rules...
+    DBG (Stage4_5): After placeholder restoration: 	dɔv
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	dɔv
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [dɔv]
+  EpenthesisThenStrongSonorants START: In=	dɔv
+  EpenthesisThenStrongSonorants END: Out=	dɔv
+Af. EpenthesisThenStrongSonorants: [dɔv]
+  Diacritics START: In=	dɔv
+  Diacritics END: Out=	dɔv
+Af. Diacritics: [dɔv]
+  FinalCleanup START: In=	dɔv
+  FinalCleanup END: Out=	dɔv
+Af. FinalCleanup: [dɔv]
+dubh            -> [dɔv]

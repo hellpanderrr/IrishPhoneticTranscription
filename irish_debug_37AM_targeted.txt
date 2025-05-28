@@ -1,0 +1,2937 @@
+﻿
+--- Running Test Set for Iteration 37AL (Focused) ---
+
+--- Transcribing: [dubh] ---
+Af. MarkDigraphsAndVocalisationTriggers: [d&U_VOC_B_FINAL&]
+  ConsonantResolution START (Proc): In=	d&U_VOC_B_FINAL&
+  ConsonantResolution START (Proc): In=	d&U_VOC_B_FINAL&
+    DBG (Consonan): Metathesis Sub-Stage START: 	d&U_VOC_B_FINAL&
+    DBG (Consonan): Metathesis Check: c_base=	d	c_pal=	false	n_base=	&	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	&	c_pal=	false	n_base=	U	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	U	c_pal=	false	n_base=	_	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	V	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	V	c_pal=	false	n_base=	O	n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Check: c_base=	O	c_pal=	false	n_base=	C	n_pal=	false	at offset	6
+    DBG (Consonan): Metathesis Check: c_base=	C	c_pal=	false	n_base=	_	n_pal=	false	at offset	7
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	B	n_pal=	false	at offset	8
+    DBG (Consonan): Metathesis Check: c_base=	B	c_pal=	false	n_base=	_	n_pal=	false	at offset	9
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	F	n_pal=	false	at offset	10
+    DBG (Consonan): Metathesis Check: c_base=	F	c_pal=	false	n_base=	I	n_pal=	false	at offset	11
+    DBG (Consonan): Metathesis Check: c_base=	I	c_pal=	false	n_base=	N	n_pal=	false	at offset	12
+    DBG (Consonan): Metathesis Check: c_base=	N	c_pal=	false	n_base=	A	n_pal=	false	at offset	13
+    DBG (Consonan): Metathesis Check: c_base=	A	c_pal=	false	n_base=	L	n_pal=	false	at offset	14
+    DBG (Consonan): Metathesis Check: c_base=	L	c_pal=	false	n_base=	&	n_pal=	false	at offset	15
+    DBG (Consonan): Metathesis Check: c_base=	&	c_pal=	false	n_base=		n_pal=	false	at offset	16
+    DBG (Consonan): Metathesis Sub-Stage END: 	d&U_VOC_B_FINAL&
+    DBG (Consonan): After Pass 1 (markers): 	d&U_VOC_B_FINAL&
+    DBG (Consonan): Pass 2: Checking '	d	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	d	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	dubh	Cons seq:	d	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	u	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	d	' with '	d	'
+    DBG (Consonan): After Pass 2 (single chars): 	d&U_VOC_B_FINAL&
+  ConsonantResolution END (Proc): Out=	d&U_VOC_B_FINAL&
+Af. ConsonantResolution: [d&U_VOC_B_FINAL&]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	d&U_VOC_B_FINAL&
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	d&U_VOC_B_FINAL&
+Af. Stage4_0_SpecificOrthoToTempMarker: [d&U_VOC_B_FINAL&]
+  Stage4_0_1_Resolve_CH_Marker START: In=	d&U_VOC_B_FINAL&
+  Stage4_0_1_Resolve_CH_Marker END: Out=	d&U_VOC_B_FINAL&
+Af. Stage4_0_1_Resolve_CH_Marker: [d&U_VOC_B_FINAL&]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	d&U_VOC_B_FINAL&
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	d&U_VOC_B_FINAL&
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [d&U_VOC_B_FINAL&]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	d&U_VOC_B_FINAL&
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	d&U_VOC_B_FINAL&
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [d&U_VOC_B_FINAL&]
+  Stage4_4_ResolveTempVowelMarkers START: In=	d&U_VOC_B_FINAL&
+    DBG (Stage4_4): Iter.gsub: Rule '	&U_VOC_B_FINAL&(#?)	' APPLIED to '	d&U_VOC_B_FINAL&	' -> '	duː	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	d&U_VOC_B_FINAL&	' to '	duː	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	duː	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	duː
+Af. Stage4_4_ResolveTempVowelMarkers: [duː]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	duː
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	duː
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): Placeholder created: '	uː	' -> '	&PHON_U_LONG&	'. Result: '	d&PHON_U_LONG&	'
+    DBG (Stage4_5): After placeholder creation: 	d&PHON_U_LONG&
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	d&PHON_U_LONG&	'
+    DBG (Stage4_5): After core allophony rules: 	d&PHON_U_LONG&
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): Placeholder restored: '	&PHON_U_LONG&	' -> '	uː	'. Result: '	duː	'
+    DBG (Stage4_5): After placeholder restoration: 	duː
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	duː
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	duː
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	duː
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [duː]
+  EpenthesisThenStrongSonorants START: In=	duː
+  EpenthesisThenStrongSonorants END: Out=	duː
+Af. EpenthesisThenStrongSonorants: [duː]
+  Diacritics START: In=	duː
+  Diacritics END: Out=	duː
+Af. Diacritics: [duː]
+  FinalCleanup START: In=	duː
+  FinalCleanup END: Out=	duː
+Af. FinalCleanup: [duː]
+dubh            -> [duː]
+
+--- Transcribing: [samhradh] ---
+Af. MarkDigraphsAndVocalisationTriggers: [s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&]
+  ConsonantResolution START (Proc): In=	s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&
+  ConsonantResolution START (Proc): In=	s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&
+    DBG (Consonan): Metathesis Sub-Stage START: 	s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&
+    DBG (Consonan): Metathesis Check: c_base=	s	c_pal=	false	n_base=	&	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	&	c_pal=	false	n_base=	A	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	A	c_pal=	false	n_base=	_	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	V	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	V	c_pal=	false	n_base=	O	n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Check: c_base=	O	c_pal=	false	n_base=	C	n_pal=	false	at offset	6
+    DBG (Consonan): Metathesis Check: c_base=	C	c_pal=	false	n_base=	_	n_pal=	false	at offset	7
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	M	n_pal=	false	at offset	8
+    DBG (Consonan): Metathesis Check: c_base=	M	c_pal=	false	n_base=	_	n_pal=	false	at offset	9
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	M	n_pal=	false	at offset	10
+    DBG (Consonan): Metathesis Check: c_base=	M	c_pal=	false	n_base=	E	n_pal=	false	at offset	11
+    DBG (Consonan): Metathesis Check: c_base=	E	c_pal=	false	n_base=	D	n_pal=	false	at offset	12
+    DBG (Consonan): Metathesis Check: c_base=	D	c_pal=	false	n_base=	I	n_pal=	false	at offset	13
+    DBG (Consonan): Metathesis Check: c_base=	I	c_pal=	false	n_base=	A	n_pal=	false	at offset	14
+    DBG (Consonan): Metathesis Check: c_base=	A	c_pal=	false	n_base=	L	n_pal=	false	at offset	15
+    DBG (Consonan): Metathesis Check: c_base=	L	c_pal=	false	n_base=	_	n_pal=	false	at offset	16
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	R	n_pal=	false	at offset	17
+    DBG (Consonan): Metathesis Check: c_base=	R	c_pal=	false	n_base=	&	n_pal=	false	at offset	18
+    DBG (Consonan): Metathesis Check: c_base=	&	c_pal=	false	n_base=	r	n_pal=	false	at offset	19
+    DBG (Consonan): Metathesis Check: c_base=	r	c_pal=	false	n_base=	r	n_pal=	false	at offset	20
+    DBG (Consonan): Metathesis Check: c_base=	r	c_pal=	false	n_base=	&	n_pal=	false	at offset	21
+    DBG (Consonan): Metathesis Check: c_base=	&	c_pal=	false	n_base=	A	n_pal=	false	at offset	22
+    DBG (Consonan): Metathesis Check: c_base=	A	c_pal=	false	n_base=	_	n_pal=	false	at offset	23
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	V	n_pal=	false	at offset	24
+    DBG (Consonan): Metathesis Check: c_base=	V	c_pal=	false	n_base=	O	n_pal=	false	at offset	25
+    DBG (Consonan): Metathesis Check: c_base=	O	c_pal=	false	n_base=	C	n_pal=	false	at offset	26
+    DBG (Consonan): Metathesis Check: c_base=	C	c_pal=	false	n_base=	_	n_pal=	false	at offset	27
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	D	n_pal=	false	at offset	28
+    DBG (Consonan): Metathesis Check: c_base=	D	c_pal=	false	n_base=	_	n_pal=	false	at offset	29
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	F	n_pal=	false	at offset	30
+    DBG (Consonan): Metathesis Check: c_base=	F	c_pal=	false	n_base=	I	n_pal=	false	at offset	31
+    DBG (Consonan): Metathesis Check: c_base=	I	c_pal=	false	n_base=	N	n_pal=	false	at offset	32
+    DBG (Consonan): Metathesis Check: c_base=	N	c_pal=	false	n_base=	A	n_pal=	false	at offset	33
+    DBG (Consonan): Metathesis Check: c_base=	A	c_pal=	false	n_base=	L	n_pal=	false	at offset	34
+    DBG (Consonan): Metathesis Check: c_base=	L	c_pal=	false	n_base=	&	n_pal=	false	at offset	35
+    DBG (Consonan): Metathesis Check: c_base=	&	c_pal=	false	n_base=		n_pal=	false	at offset	36
+    DBG (Consonan): Metathesis Sub-Stage END: 	s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&
+    DBG (Consonan): After Pass 1 (markers): 	s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&
+    DBG (Consonan): Pass 2: Checking '	s	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	s	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	samhradh	Cons seq:	s	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	a	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	s	' with '	s	'
+    DBG (Consonan): Pass 2: Checking '	r	' at phon_idx 	20	 -> ortho_s:	2	ortho_e:	2
+    DBG (Consonan): Single cons rule: c_capture=	r	o_s=	2	o_e=	2
+    DBG (DetQual): Word:	samhradh	Cons seq:	a	s:	2	e:	2
+    DBG (DetQual): Next vowel char:	a	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	r	' with '	r	'
+    DBG (Consonan): Pass 2: Checking '	r	' at phon_idx 	21	 -> ortho_s:	5	ortho_e:	5
+    DBG (Consonan): Single cons rule: c_capture=	r	o_s=	5	o_e=	5
+    DBG (DetQual): Word:	samhradh	Cons seq:	r	s:	5	e:	5
+    DBG (DetQual): Next vowel char:	a	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:	a	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	r	' with '	r	'
+    DBG (Consonan): After Pass 2 (single chars): 	s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&
+  ConsonantResolution END (Proc): Out=	s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&
+Af. ConsonantResolution: [s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&
+Af. Stage4_0_SpecificOrthoToTempMarker: [s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&]
+  Stage4_0_1_Resolve_CH_Marker START: In=	s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&
+  Stage4_0_1_Resolve_CH_Marker END: Out=	s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&
+Af. Stage4_0_1_Resolve_CH_Marker: [s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&]
+  Stage4_4_ResolveTempVowelMarkers START: In=	s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&
+    DBG (Stage4_4): Iter.gsub: Rule '	&A_VOC_M_MEDIAL_R&(r)	' APPLIED to '	s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&	' -> '	s&TEMP_CONN_AU&rr&A_VOC_D_FINAL&	' (	1	x)
+    DBG (Stage4_4): Iter.gsub: Rule '	&A_VOC_D_FINAL&(#?)	' APPLIED to '	s&TEMP_CONN_AU&rr&A_VOC_D_FINAL&	' -> '	s&TEMP_CONN_AU&rrə	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&	' to '	s&TEMP_CONN_AU&rrə	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	s&TEMP_CONN_AU&rrə	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	s&TEMP_CONN_AU&rrə
+Af. Stage4_4_ResolveTempVowelMarkers: [s&TEMP_CONN_AU&rrə]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	s&TEMP_CONN_AU&rrə
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	s&TEMP_CONN_AU&rrə
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	s&TEMP_CONN_AU&rrə
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	s&TEMP_CONN_AU&rrə	'
+    DBG (Stage4_5): After core allophony rules: 	s&TEMP_CONN_AU&rrə
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	s&TEMP_CONN_AU&rrə
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	s&TEMP_CONN_AU&rrə
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): &TEMP_CONN_AU&->əu shift: '	&TEMP_CONN_AU&	'. Result: '	səurrə	'
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	səurrə
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	səurrə
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [səurrə]
+  EpenthesisThenStrongSonorants START: In=	səurrə
+  EpenthesisThenStrongSonorants END: Out=	səurrə
+Af. EpenthesisThenStrongSonorants: [səurrə]
+  Diacritics START: In=	səurrə
+  Diacritics END: Out=	səurrə
+Af. Diacritics: [səurrə]
+  FinalCleanup START: In=	səurrə
+  FinalCleanup END: Out=	səurrə
+Af. FinalCleanup: [səurrə]
+samhradh        -> [səurrə]
+
+--- Transcribing: [nimhe] ---
+Af. MarkDigraphsAndVocalisationTriggers: [ni_MH_e]
+  ConsonantResolution START (Proc): In=	ni_MH_e
+  ConsonantResolution START (Proc): In=	ni_MH_e
+    DBG (Consonan): Metathesis Sub-Stage START: 	ni_MH_e
+    DBG (Consonan): Metathesis Check: c_base=	n	c_pal=	false	n_base=	i	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	i	c_pal=	false	n_base=	_	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	M	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	M	c_pal=	false	n_base=	H	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	H	c_pal=	false	n_base=	_	n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	e	n_pal=	false	at offset	6
+    DBG (Consonan): Metathesis Check: c_base=	e	c_pal=	false	n_base=		n_pal=	false	at offset	7
+    DBG (Consonan): Metathesis Sub-Stage END: 	ni_MH_e
+    DBG (DetQual): Word:	nimhe	Cons seq:	mh	s:	3	e:	4
+    DBG (DetQual): Next vowel char:	e	Next quality implication:	slender
+    DBG (DetQual): Prev vowel char:	i	Prev quality implication:	slender
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): After Pass 1 (markers): 	niv'e
+    DBG (Consonan): After Pass 2 (single chars): 	niv'e
+  ConsonantResolution END (Proc): Out=	niv'e
+Af. ConsonantResolution: [niv'e]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	niv'e
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	niv'e
+Af. Stage4_0_SpecificOrthoToTempMarker: [niv'e]
+  Stage4_0_1_Resolve_CH_Marker START: In=	niv'e
+  Stage4_0_1_Resolve_CH_Marker END: Out=	niv'e
+Af. Stage4_0_1_Resolve_CH_Marker: [niv'e]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	niv'e
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	niv'e
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [niv'e]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	niv'e
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	niv'e
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [niv'e]
+  Stage4_4_ResolveTempVowelMarkers START: In=	niv'e
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	niv'e	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	niv'e
+Af. Stage4_4_ResolveTempVowelMarkers: [niv'e]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	niv'e
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	niv'e
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	niv'e
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	n(iv')	' APPLIED to '	niv'e	' -> '	nʲiv'e	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	niv'e	' to '	nʲiv'e	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	nʲiv'e	'
+    DBG (Stage4_5): After core allophony rules: 	nʲiv'e
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	nʲiv'e
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	nʲiv'e
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	nʲiv'e
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	nʲiv'e
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [nʲiv'e]
+  EpenthesisThenStrongSonorants START: In=	nʲiv'e
+  EpenthesisThenStrongSonorants END: Out=	nʲiv'e
+Af. EpenthesisThenStrongSonorants: [nʲiv'e]
+  Diacritics START: In=	nʲiv'e
+  Diacritics END: Out=	nʲiv'e
+Af. Diacritics: [nʲiv'e]
+  FinalCleanup START: In=	nʲiv'e
+  FinalCleanup END: Out=	nʲiv'e
+Af. FinalCleanup: [nʲiv'e]
+nimhe           -> [nʲiv'e]
+
+--- Transcribing: [aghaidh] ---
+Af. MarkDigraphsAndVocalisationTriggers: [ˈ&AGHAIDH_VOC_TARGET&]
+  ConsonantResolution START (Proc): In=	ˈ&AGHAIDH_VOC_TARGET&
+  ConsonantResolution START (Proc): In=	ˈ&AGHAIDH_VOC_TARGET&
+    DBG (Consonan): Metathesis Sub-Stage START: 	ˈ&AGHAIDH_VOC_TARGET&
+    DBG (Consonan): Metathesis Check: c_base=	�	c_pal=	false	n_base=	�	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	�	c_pal=	false	n_base=	&	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	&	c_pal=	false	n_base=	A	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	A	c_pal=	false	n_base=	G	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	G	c_pal=	false	n_base=	H	n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Check: c_base=	H	c_pal=	false	n_base=	A	n_pal=	false	at offset	6
+    DBG (Consonan): Metathesis Check: c_base=	A	c_pal=	false	n_base=	I	n_pal=	false	at offset	7
+    DBG (Consonan): Metathesis Check: c_base=	I	c_pal=	false	n_base=	D	n_pal=	false	at offset	8
+    DBG (Consonan): Metathesis Check: c_base=	D	c_pal=	false	n_base=	H	n_pal=	false	at offset	9
+    DBG (Consonan): Metathesis Check: c_base=	H	c_pal=	false	n_base=	_	n_pal=	false	at offset	10
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	V	n_pal=	false	at offset	11
+    DBG (Consonan): Metathesis Check: c_base=	V	c_pal=	false	n_base=	O	n_pal=	false	at offset	12
+    DBG (Consonan): Metathesis Check: c_base=	O	c_pal=	false	n_base=	C	n_pal=	false	at offset	13
+    DBG (Consonan): Metathesis Check: c_base=	C	c_pal=	false	n_base=	_	n_pal=	false	at offset	14
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	T	n_pal=	false	at offset	15
+    DBG (Consonan): Metathesis Check: c_base=	T	c_pal=	false	n_base=	A	n_pal=	false	at offset	16
+    DBG (Consonan): Metathesis Check: c_base=	A	c_pal=	false	n_base=	R	n_pal=	false	at offset	17
+    DBG (Consonan): Metathesis Check: c_base=	R	c_pal=	false	n_base=	G	n_pal=	false	at offset	18
+    DBG (Consonan): Metathesis Check: c_base=	G	c_pal=	false	n_base=	E	n_pal=	false	at offset	19
+    DBG (Consonan): Metathesis Check: c_base=	E	c_pal=	false	n_base=	T	n_pal=	false	at offset	20
+    DBG (Consonan): Metathesis Check: c_base=	T	c_pal=	false	n_base=	&	n_pal=	false	at offset	21
+    DBG (Consonan): Metathesis Check: c_base=	&	c_pal=	false	n_base=		n_pal=	false	at offset	22
+    DBG (Consonan): Metathesis Sub-Stage END: 	ˈ&AGHAIDH_VOC_TARGET&
+    DBG (Consonan): After Pass 1 (markers): 	ˈ&AGHAIDH_VOC_TARGET&
+    DBG (Consonan): After Pass 2 (single chars): 	ˈ&AGHAIDH_VOC_TARGET&
+  ConsonantResolution END (Proc): Out=	ˈ&AGHAIDH_VOC_TARGET&
+Af. ConsonantResolution: [ˈ&AGHAIDH_VOC_TARGET&]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	ˈ&AGHAIDH_VOC_TARGET&
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	ˈ&AGHAIDH_VOC_TARGET&
+Af. Stage4_0_SpecificOrthoToTempMarker: [ˈ&AGHAIDH_VOC_TARGET&]
+  Stage4_0_1_Resolve_CH_Marker START: In=	ˈ&AGHAIDH_VOC_TARGET&
+  Stage4_0_1_Resolve_CH_Marker END: Out=	ˈ&AGHAIDH_VOC_TARGET&
+Af. Stage4_0_1_Resolve_CH_Marker: [ˈ&AGHAIDH_VOC_TARGET&]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	ˈ&AGHAIDH_VOC_TARGET&
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	ˈ&AGHAIDH_VOC_TARGET&
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [ˈ&AGHAIDH_VOC_TARGET&]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	ˈ&AGHAIDH_VOC_TARGET&
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	ˈ&AGHAIDH_VOC_TARGET&
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [ˈ&AGHAIDH_VOC_TARGET&]
+  Stage4_4_ResolveTempVowelMarkers START: In=	ˈ&AGHAIDH_VOC_TARGET&
+    DBG (Stage4_4): Iter.gsub: Rule '	&AGHAIDH_VOC_TARGET&(#?)	' APPLIED to '	ˈ&AGHAIDH_VOC_TARGET&	' -> '	ˈəi	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	ˈ&AGHAIDH_VOC_TARGET&	' to '	ˈəi	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	ˈəi	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	ˈəi
+Af. Stage4_4_ResolveTempVowelMarkers: [ˈəi]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	ˈəi
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	ˈəi
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): Placeholder created: '	əi	' -> '	&PHON_SCHWA_I_DIPH&	'. Result: '	ˈ&PHON_SCHWA_I_DIPH&	'
+    DBG (Stage4_5): After placeholder creation: 	ˈ&PHON_SCHWA_I_DIPH&
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	ˈ&PHON_SCHWA_I_DIPH&	'
+    DBG (Stage4_5): After core allophony rules: 	ˈ&PHON_SCHWA_I_DIPH&
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): Placeholder restored: '	&PHON_SCHWA_I_DIPH&	' -> '	əi	'. Result: '	ˈəi	'
+    DBG (Stage4_5): After placeholder restoration: 	ˈəi
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	ˈəi
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	ˈəi
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	ˈəi
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [ˈəi]
+  EpenthesisThenStrongSonorants START: In=	ˈəi
+  EpenthesisThenStrongSonorants END: Out=	ˈəi
+Af. EpenthesisThenStrongSonorants: [ˈəi]
+  Diacritics START: In=	ˈəi
+  Diacritics END: Out=	ˈəi
+Af. Diacritics: [ˈəi]
+  FinalCleanup START: In=	ˈəi
+  FinalCleanup END: Out=	ˈəi
+Af. FinalCleanup: [ˈəi]
+aghaidh         -> [ˈəi]
+
+--- Transcribing: [suidhe] ---
+Af. MarkDigraphsAndVocalisationTriggers: [sui_DH_e]
+  ConsonantResolution START (Proc): In=	sui_DH_e
+  ConsonantResolution START (Proc): In=	sui_DH_e
+    DBG (Consonan): Metathesis Sub-Stage START: 	sui_DH_e
+    DBG (Consonan): Metathesis Check: c_base=	s	c_pal=	false	n_base=	u	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	u	c_pal=	false	n_base=	i	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	i	c_pal=	false	n_base=	_	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	D	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	D	c_pal=	false	n_base=	H	n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Check: c_base=	H	c_pal=	false	n_base=	_	n_pal=	false	at offset	6
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	e	n_pal=	false	at offset	7
+    DBG (Consonan): Metathesis Check: c_base=	e	c_pal=	false	n_base=		n_pal=	false	at offset	8
+    DBG (Consonan): Metathesis Sub-Stage END: 	sui_DH_e
+    DBG (DetQual): Word:	suidhe	Cons seq:	dh	s:	4	e:	5
+    DBG (DetQual): Next vowel char:	e	Next quality implication:	slender
+    DBG (DetQual): Prev vowel char:	i	Prev quality implication:	slender
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): After Pass 1 (markers): 	suije
+    DBG (Consonan): Pass 2: Checking '	s	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	s	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	suidhe	Cons seq:	s	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	u	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	s	' with '	s	'
+    DBG (Consonan): After Pass 2 (single chars): 	suije
+  ConsonantResolution END (Proc): Out=	suije
+Af. ConsonantResolution: [suije]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	suije
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	suije
+Af. Stage4_0_SpecificOrthoToTempMarker: [suije]
+  Stage4_0_1_Resolve_CH_Marker START: In=	suije
+  Stage4_0_1_Resolve_CH_Marker END: Out=	suije
+Af. Stage4_0_1_Resolve_CH_Marker: [suije]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	suije
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	suije
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [suije]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	suije
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	s&UI_DIPH&je
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [s&UI_DIPH&je]
+  Stage4_4_ResolveTempVowelMarkers START: In=	s&UI_DIPH&je
+    DBG (Stage4_4): Iter.gsub: Rule '	&UI_DIPH&	' APPLIED to '	s&UI_DIPH&je	' -> '	sɪje	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	s&UI_DIPH&je	' to '	sɪje	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	sɪje	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	sɪje
+Af. Stage4_4_ResolveTempVowelMarkers: [sɪje]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	sɪje
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	sɪje
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	sɪje
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	sɪje	'
+    DBG (Stage4_5): After core allophony rules: 	sɪje
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	sɪje
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	sɪje
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	sɪje
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	sɪje
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [sɪje]
+  EpenthesisThenStrongSonorants START: In=	sɪje
+  EpenthesisThenStrongSonorants END: Out=	sɪje
+Af. EpenthesisThenStrongSonorants: [sɪje]
+  Diacritics START: In=	sɪje
+  Diacritics END: Out=	sɪje
+Af. Diacritics: [sɪje]
+  FinalCleanup START: In=	sɪje
+  FinalCleanup END: Out=	sɪje
+Af. FinalCleanup: [sɪje]
+suidhe          -> [sɪje]
+
+--- Transcribing: [leabhar] ---
+Af. MarkDigraphsAndVocalisationTriggers: [lea_BH_ar]
+  ConsonantResolution START (Proc): In=	lea_BH_ar
+  ConsonantResolution START (Proc): In=	lea_BH_ar
+    DBG (Consonan): Metathesis Sub-Stage START: 	lea_BH_ar
+    DBG (Consonan): Metathesis Check: c_base=	l	c_pal=	false	n_base=	e	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	e	c_pal=	false	n_base=	a	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	a	c_pal=	false	n_base=	_	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	B	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	B	c_pal=	false	n_base=	H	n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Check: c_base=	H	c_pal=	false	n_base=	_	n_pal=	false	at offset	6
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	a	n_pal=	false	at offset	7
+    DBG (Consonan): Metathesis Check: c_base=	a	c_pal=	false	n_base=	r	n_pal=	false	at offset	8
+    DBG (Consonan): Metathesis Check: c_base=	r	c_pal=	false	n_base=		n_pal=	false	at offset	9
+    DBG (Consonan): Metathesis Sub-Stage END: 	lea_BH_ar
+    DBG (DetQual): Word:	leabhar	Cons seq:	bh	s:	4	e:	5
+    DBG (DetQual): Next vowel char:	a	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:	a	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): After Pass 1 (markers): 	leawar
+    DBG (Consonan): Pass 2: Checking '	r	' at phon_idx 	6	 -> ortho_s:	4	ortho_e:	4
+    DBG (Consonan): Single cons rule: c_capture=	r	o_s=	4	o_e=	4
+    DBG (DetQual): Word:	leabhar	Cons seq:	b	s:	4	e:	4
+    DBG (DetQual): Next vowel char:	a	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:	a	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	r	' with '	r	'
+    DBG (Consonan): After Pass 2 (single chars): 	leawar
+  ConsonantResolution END (Proc): Out=	leawar
+Af. ConsonantResolution: [leawar]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	leawar
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	leawar
+Af. Stage4_0_SpecificOrthoToTempMarker: [leawar]
+  Stage4_0_1_Resolve_CH_Marker START: In=	leawar
+  Stage4_0_1_Resolve_CH_Marker END: Out=	leawar
+Af. Stage4_0_1_Resolve_CH_Marker: [leawar]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	leawar
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	leawar
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [leawar]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	leawar
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	leawar
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [leawar]
+  Stage4_4_ResolveTempVowelMarkers START: In=	leawar
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	leawar	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	leawar
+Af. Stage4_4_ResolveTempVowelMarkers: [leawar]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	leawar
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	leawar
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): Placeholder created: '	aw	' -> '	&PHON_AW_SEQ&	'. Result: '	le&PHON_AW_SEQ&ar	'
+    DBG (Stage4_5): After placeholder creation: 	le&PHON_AW_SEQ&ar
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	a	' APPLIED to '	le&PHON_AW_SEQ&ar	' -> '	le&PHON_AW_SEQ&ɑr	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	le&PHON_AW_SEQ&ar	' to '	le&PHON_AW_SEQ&ɑr	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	le&PHON_AW_SEQ&ɑr	'
+    DBG (Stage4_5): After core allophony rules: 	le&PHON_AW_SEQ&ɑr
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): Placeholder restored: '	&PHON_AW_SEQ&	' -> '	ɑu	'. Result: '	leɑuɑr	'
+    DBG (Stage4_5): After placeholder restoration: 	leɑuɑr
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	leɑuɑr
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	leɑuɑr
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	leɑuɑr
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [leɑuɑr]
+  EpenthesisThenStrongSonorants START: In=	leɑuɑr
+  EpenthesisThenStrongSonorants END: Out=	leɑuɑr
+Af. EpenthesisThenStrongSonorants: [leɑuɑr]
+  Diacritics START: In=	leɑuɑr
+  Diacritics END: Out=	leɑuɑr
+Af. Diacritics: [leɑuɑr]
+  FinalCleanup START: In=	leɑuɑr
+  FinalCleanup END: Out=	leɑuɑr
+Af. FinalCleanup: [leɑuɑr]
+leabhar         -> [leɑuɑr]
+
+--- Transcribing: [bóthar] ---
+Af. MarkDigraphsAndVocalisationTriggers: [bó_TH_ar]
+  ConsonantResolution START (Proc): In=	bó_TH_ar
+  ConsonantResolution START (Proc): In=	bó_TH_ar
+    DBG (Consonan): Metathesis Sub-Stage START: 	bó_TH_ar
+    DBG (Consonan): Metathesis Check: c_base=	b	c_pal=	false	n_base=	�	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	�	c_pal=	false	n_base=	�	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	�	c_pal=	false	n_base=	_	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	T	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	T	c_pal=	false	n_base=	H	n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Check: c_base=	H	c_pal=	false	n_base=	_	n_pal=	false	at offset	6
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	a	n_pal=	false	at offset	7
+    DBG (Consonan): Metathesis Check: c_base=	a	c_pal=	false	n_base=	r	n_pal=	false	at offset	8
+    DBG (Consonan): Metathesis Check: c_base=	r	c_pal=	false	n_base=		n_pal=	false	at offset	9
+    DBG (Consonan): Metathesis Sub-Stage END: 	bó_TH_ar
+    DBG (Consonan): After Pass 1 (markers): 	bóhar
+    DBG (Consonan): Pass 2: Checking '	b	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	b	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	bóthar	Cons seq:	b	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	�	Next quality implication:	slender
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Pass 2: Replaced '	b	' with '	b'	'
+    DBG (Consonan): Pass 2: Checking '	h	' at phon_idx 	4	 -> ortho_s:	4	ortho_e:	4
+    DBG (Consonan): Single cons rule: c_capture=	h	o_s=	4	o_e=	4
+    DBG (DetQual): Word:	bóthar	Cons seq:	t	s:	4	e:	4
+    DBG (DetQual): Next vowel char:	a	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:	�	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	h	' with '	h	'
+    DBG (Consonan): Pass 2: Checking '	r	' at phon_idx 	6	 -> ortho_s:	4	ortho_e:	4
+    DBG (Consonan): Single cons rule: c_capture=	r	o_s=	4	o_e=	4
+    DBG (DetQual): Word:	bóthar	Cons seq:	t	s:	4	e:	4
+    DBG (DetQual): Next vowel char:	a	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:	�	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	r	' with '	r	'
+    DBG (Consonan): After Pass 2 (single chars): 	b'óhar
+  ConsonantResolution END (Proc): Out=	b'óhar
+Af. ConsonantResolution: [b'óhar]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	b'óhar
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	b'óhar
+Af. Stage4_0_SpecificOrthoToTempMarker: [b'óhar]
+  Stage4_0_1_Resolve_CH_Marker START: In=	b'óhar
+  Stage4_0_1_Resolve_CH_Marker END: Out=	b'óhar
+Af. Stage4_0_1_Resolve_CH_Marker: [b'óhar]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	b'óhar
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	b'&O_ACUTE_LONG&har
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [b'&O_ACUTE_LONG&har]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	b'&O_ACUTE_LONG&har
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	b'&O_ACUTE_LONG&har
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [b'&O_ACUTE_LONG&har]
+  Stage4_4_ResolveTempVowelMarkers START: In=	b'&O_ACUTE_LONG&har
+    DBG (Stage4_4): Iter.gsub: Rule '	&O_ACUTE_LONG&	' APPLIED to '	b'&O_ACUTE_LONG&har	' -> '	b'oːhar	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	b'&O_ACUTE_LONG&har	' to '	b'oːhar	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	b'oːhar	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	b'oːhar
+Af. Stage4_4_ResolveTempVowelMarkers: [b'oːhar]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	b'oːhar
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	b'oːhar
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): Placeholder created: '	oː	' -> '	&PHON_O_LONG&	'. Result: '	b'&PHON_O_LONG&har	'
+    DBG (Stage4_5): After placeholder creation: 	b'&PHON_O_LONG&har
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	a	' APPLIED to '	b'&PHON_O_LONG&har	' -> '	b'&PHON_O_LONG&hɑr	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	b'&PHON_O_LONG&har	' to '	b'&PHON_O_LONG&hɑr	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	b'&PHON_O_LONG&hɑr	'
+    DBG (Stage4_5): After core allophony rules: 	b'&PHON_O_LONG&hɑr
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): Placeholder restored: '	&PHON_O_LONG&	' -> '	oː	'. Result: '	b'oːhɑr	'
+    DBG (Stage4_5): After placeholder restoration: 	b'oːhɑr
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	b'oːhɑr
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	b'oːhɑr
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	b'oːhɑr
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [b'oːhɑr]
+  EpenthesisThenStrongSonorants START: In=	b'oːhɑr
+  EpenthesisThenStrongSonorants END: Out=	b'oːhɑr
+Af. EpenthesisThenStrongSonorants: [b'oːhɑr]
+  Diacritics START: In=	b'oːhɑr
+  Diacritics END: Out=	b'oːhɑr
+Af. Diacritics: [b'oːhɑr]
+  FinalCleanup START: In=	b'oːhɑr
+  FinalCleanup END: Out=	b'oːhɑr
+Af. FinalCleanup: [b'oːhɑr]
+bóthar         -> [b'oːhɑr]
+
+--- Transcribing: [cat] ---
+Af. MarkDigraphsAndVocalisationTriggers: [cat]
+  ConsonantResolution START (Proc): In=	cat
+  ConsonantResolution START (Proc): In=	cat
+    DBG (Consonan): Metathesis Sub-Stage START: 	cat
+    DBG (Consonan): Metathesis Check: c_base=	c	c_pal=	false	n_base=	a	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	a	c_pal=	false	n_base=	t	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	t	c_pal=	false	n_base=		n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Sub-Stage END: 	cat
+    DBG (Consonan): After Pass 1 (markers): 	cat
+    DBG (Consonan): Pass 2: Checking '	c	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	c	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	cat	Cons seq:	c	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	a	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	c	' with '	k	'
+    DBG (Consonan): Pass 2: Checking '	t	' at phon_idx 	3	 -> ortho_s:	3	ortho_e:	3
+    DBG (Consonan): Single cons rule: c_capture=	t	o_s=	3	o_e=	3
+    DBG (DetQual): Word:	cat	Cons seq:	t	s:	3	e:	3
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	a	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	t	' with '	t	'
+    DBG (Consonan): After Pass 2 (single chars): 	kat
+  ConsonantResolution END (Proc): Out=	kat
+Af. ConsonantResolution: [kat]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	kat
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	kat
+Af. Stage4_0_SpecificOrthoToTempMarker: [kat]
+  Stage4_0_1_Resolve_CH_Marker START: In=	kat
+  Stage4_0_1_Resolve_CH_Marker END: Out=	kat
+Af. Stage4_0_1_Resolve_CH_Marker: [kat]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	kat
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	kat
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [kat]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	kat
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	kat
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [kat]
+  Stage4_4_ResolveTempVowelMarkers START: In=	kat
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	kat	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	kat
+Af. Stage4_4_ResolveTempVowelMarkers: [kat]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	kat
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	kat
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	kat
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	a	' APPLIED to '	kat	' -> '	kɑt	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	kat	' to '	kɑt	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	kɑt	'
+    DBG (Stage4_5): After core allophony rules: 	kɑt
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	kɑt
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	kɑt
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	kɑt
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	kɑt
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [kɑt]
+  EpenthesisThenStrongSonorants START: In=	kɑt
+  EpenthesisThenStrongSonorants END: Out=	kɑt
+Af. EpenthesisThenStrongSonorants: [kɑt]
+  Diacritics START: In=	kɑt
+  Diacritics END: Out=	kɑt
+Af. Diacritics: [kɑt]
+  FinalCleanup START: In=	kɑt
+  FinalCleanup END: Out=	kɑt
+Af. FinalCleanup: [kɑt]
+cat             -> [kɑt]
+
+--- Transcribing: [fios] ---
+Af. MarkDigraphsAndVocalisationTriggers: [fios]
+  ConsonantResolution START (Proc): In=	fios
+  ConsonantResolution START (Proc): In=	fios
+    DBG (Consonan): Metathesis Sub-Stage START: 	fios
+    DBG (Consonan): Metathesis Check: c_base=	f	c_pal=	false	n_base=	i	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	i	c_pal=	false	n_base=	o	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	o	c_pal=	false	n_base=	s	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	s	c_pal=	false	n_base=		n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Sub-Stage END: 	fios
+    DBG (Consonan): After Pass 1 (markers): 	fios
+    DBG (Consonan): Pass 2: Checking '	f	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	f	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	fios	Cons seq:	f	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	i	Next quality implication:	slender
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Pass 2: Replaced '	f	' with '	f'	'
+    DBG (Consonan): Pass 2: Checking '	s	' at phon_idx 	4	 -> ortho_s:	4	ortho_e:	4
+    DBG (Consonan): Single cons rule: c_capture=	s	o_s=	4	o_e=	4
+    DBG (DetQual): Word:	fios	Cons seq:	s	s:	4	e:	4
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	o	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	s	' with '	s	'
+    DBG (Consonan): After Pass 2 (single chars): 	f'ios
+  ConsonantResolution END (Proc): Out=	f'ios
+Af. ConsonantResolution: [f'ios]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	f'ios
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	f'&IO_SHORT_TARGET&s
+Af. Stage4_0_SpecificOrthoToTempMarker: [f'&IO_SHORT_TARGET&s]
+  Stage4_0_1_Resolve_CH_Marker START: In=	f'&IO_SHORT_TARGET&s
+  Stage4_0_1_Resolve_CH_Marker END: Out=	f'&IO_SHORT_TARGET&s
+Af. Stage4_0_1_Resolve_CH_Marker: [f'&IO_SHORT_TARGET&s]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	f'&IO_SHORT_TARGET&s
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	f'&IO_SHORT_TARGET&s
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [f'&IO_SHORT_TARGET&s]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	f'&IO_SHORT_TARGET&s
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	f'&IO_SHORT_TARGET&s
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [f'&IO_SHORT_TARGET&s]
+  Stage4_4_ResolveTempVowelMarkers START: In=	f'&IO_SHORT_TARGET&s
+    DBG (Stage4_4): Iter.gsub: Rule '	&IO_SHORT_TARGET&	' APPLIED to '	f'&IO_SHORT_TARGET&s	' -> '	f'ɪs	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	f'&IO_SHORT_TARGET&s	' to '	f'ɪs	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	f'ɪs	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	f'ɪs
+Af. Stage4_4_ResolveTempVowelMarkers: [f'ɪs]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	f'ɪs
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	f'ɪs
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	f'ɪs
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	f'ɪs	'
+    DBG (Stage4_5): After core allophony rules: 	f'ɪs
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	f'ɪs
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	f'ɪs
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	f'ɪs
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	f'ɪs
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [f'ɪs]
+  EpenthesisThenStrongSonorants START: In=	f'ɪs
+  EpenthesisThenStrongSonorants END: Out=	f'ɪs
+Af. EpenthesisThenStrongSonorants: [f'ɪs]
+  Diacritics START: In=	f'ɪs
+  Diacritics END: Out=	f'ɪs
+Af. Diacritics: [f'ɪs]
+  FinalCleanup START: In=	f'ɪs
+  FinalCleanup END: Out=	f'ɪs
+Af. FinalCleanup: [f'ɪs]
+fios            -> [f'ɪs]
+
+--- Transcribing: [coill] ---
+Af. MarkDigraphsAndVocalisationTriggers: [coi_LL_]
+  ConsonantResolution START (Proc): In=	coi_LL_
+  ConsonantResolution START (Proc): In=	coi_LL_
+    DBG (Consonan): Metathesis Sub-Stage START: 	coi_LL_
+    DBG (Consonan): Metathesis Check: c_base=	c	c_pal=	false	n_base=	o	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	o	c_pal=	false	n_base=	i	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	i	c_pal=	false	n_base=	_	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	L	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	L	c_pal=	false	n_base=	L	n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Check: c_base=	L	c_pal=	false	n_base=	_	n_pal=	false	at offset	6
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=		n_pal=	false	at offset	7
+    DBG (Consonan): Metathesis Sub-Stage END: 	coi_LL_
+    DBG (DetQual): Word:	coill	Cons seq:	ll	s:	4	e:	5
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	i	Prev quality implication:	slender
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): After Pass 1 (markers): 	coiL'
+    DBG (Consonan): Pass 2: Checking '	c	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	c	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	coill	Cons seq:	c	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	o	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	c	' with '	k	'
+    DBG (Consonan): After Pass 2 (single chars): 	koiL'
+  ConsonantResolution END (Proc): Out=	koiL'
+Af. ConsonantResolution: [koiL']
+  Stage4_0_SpecificOrthoToTempMarker START: In=	koiL'
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	koiL'
+Af. Stage4_0_SpecificOrthoToTempMarker: [koiL']
+  Stage4_0_1_Resolve_CH_Marker START: In=	koiL'
+  Stage4_0_1_Resolve_CH_Marker END: Out=	koiL'
+Af. Stage4_0_1_Resolve_CH_Marker: [koiL']
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	koiL'
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	koiL'
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [koiL']
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	koiL'
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	k&OI_DIPH&L'
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [k&OI_DIPH&L']
+  Stage4_4_ResolveTempVowelMarkers START: In=	k&OI_DIPH&L'
+    DBG (Stage4_4): Iter.gsub: Rule '	&OI_DIPH&([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾ]*')	' APPLIED to '	k&OI_DIPH&L'	' -> '	kɛL'	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	k&OI_DIPH&L'	' to '	kɛL'	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	kɛL'	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	kɛL'
+Af. Stage4_4_ResolveTempVowelMarkers: [kɛL']
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	kɛL'
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	kɛL'
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	kɛL'
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	kɛL'	'
+    DBG (Stage4_5): After core allophony rules: 	kɛL'
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	kɛL'
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	kɛL'
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	kɛL'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	kɛL'
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [kɛL']
+  EpenthesisThenStrongSonorants START: In=	kɛL'
+  EpenthesisThenStrongSonorants END: Out=	kɛL'
+Af. EpenthesisThenStrongSonorants: [kɛL']
+  Diacritics START: In=	kɛL'
+  Diacritics END: Out=	kɛL'
+Af. Diacritics: [kɛL']
+  FinalCleanup START: In=	kɛL'
+  FinalCleanup END: Out=	kɛL'
+Af. FinalCleanup: [kɛL']
+coill           -> [kɛL']
+
+--- Transcribing: [gort] ---
+Af. MarkDigraphsAndVocalisationTriggers: [gort]
+  ConsonantResolution START (Proc): In=	gort
+  ConsonantResolution START (Proc): In=	gort
+    DBG (Consonan): Metathesis Sub-Stage START: 	gort
+    DBG (Consonan): Metathesis Check: c_base=	g	c_pal=	false	n_base=	o	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	o	c_pal=	false	n_base=	r	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	r	c_pal=	false	n_base=	t	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	t	c_pal=	false	n_base=		n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Sub-Stage END: 	gort
+    DBG (Consonan): After Pass 1 (markers): 	gort
+    DBG (Consonan): Pass 2: Checking '	g	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	g	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	gort	Cons seq:	g	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	o	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	g	' with '	g	'
+    DBG (Consonan): Pass 2: Checking '	r	' at phon_idx 	3	 -> ortho_s:	3	ortho_e:	3
+    DBG (Consonan): Single cons rule: c_capture=	r	o_s=	3	o_e=	3
+    DBG (DetQual): Word:	gort	Cons seq:	r	s:	3	e:	3
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	o	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	r	' with '	r	'
+    DBG (Consonan): Pass 2: Checking '	t	' at phon_idx 	4	 -> ortho_s:	4	ortho_e:	4
+    DBG (Consonan): Single cons rule: c_capture=	t	o_s=	4	o_e=	4
+    DBG (DetQual): Word:	gort	Cons seq:	t	s:	4	e:	4
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	o	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	t	' with '	t	'
+    DBG (Consonan): After Pass 2 (single chars): 	gort
+  ConsonantResolution END (Proc): Out=	gort
+Af. ConsonantResolution: [gort]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	gort
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	gort
+Af. Stage4_0_SpecificOrthoToTempMarker: [gort]
+  Stage4_0_1_Resolve_CH_Marker START: In=	gort
+  Stage4_0_1_Resolve_CH_Marker END: Out=	gort
+Af. Stage4_0_1_Resolve_CH_Marker: [gort]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	gort
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	gort
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [gort]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	gort
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	gort
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [gort]
+  Stage4_4_ResolveTempVowelMarkers START: In=	gort
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	gort	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	gort
+Af. Stage4_4_ResolveTempVowelMarkers: [gort]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	gort
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	gort
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	gort
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	o	' APPLIED to '	gort	' -> '	gɔrt	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	gort	' to '	gɔrt	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	gɔrt	'
+    DBG (Stage4_5): After core allophony rules: 	gɔrt
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	gɔrt
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	gɔrt
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	gɔrt
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	gɔrt
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [gɔrt]
+  EpenthesisThenStrongSonorants START: In=	gɔrt
+  EpenthesisThenStrongSonorants END: Out=	gɔrt
+Af. EpenthesisThenStrongSonorants: [gɔrt]
+  Diacritics START: In=	gɔrt
+  Diacritics END: Out=	gɔrt
+Af. Diacritics: [gɔrt]
+  FinalCleanup START: In=	gɔrt
+  FinalCleanup END: Out=	gɔrt
+Af. FinalCleanup: [gɔrt]
+gort            -> [gɔrt]
+
+--- Transcribing: [caol] ---
+Af. MarkDigraphsAndVocalisationTriggers: [c&AO_LONG&l]
+  ConsonantResolution START (Proc): In=	c&AO_LONG&l
+  ConsonantResolution START (Proc): In=	c&AO_LONG&l
+    DBG (Consonan): Metathesis Sub-Stage START: 	c&AO_LONG&l
+    DBG (Consonan): Metathesis Check: c_base=	c	c_pal=	false	n_base=	&	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	&	c_pal=	false	n_base=	A	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	A	c_pal=	false	n_base=	O	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	O	c_pal=	false	n_base=	_	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	L	n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Check: c_base=	L	c_pal=	false	n_base=	O	n_pal=	false	at offset	6
+    DBG (Consonan): Metathesis Check: c_base=	O	c_pal=	false	n_base=	N	n_pal=	false	at offset	7
+    DBG (Consonan): Metathesis Check: c_base=	N	c_pal=	false	n_base=	G	n_pal=	false	at offset	8
+    DBG (Consonan): Metathesis Check: c_base=	G	c_pal=	false	n_base=	&	n_pal=	false	at offset	9
+    DBG (Consonan): Metathesis Check: c_base=	&	c_pal=	false	n_base=	l	n_pal=	false	at offset	10
+    DBG (Consonan): Metathesis Check: c_base=	l	c_pal=	false	n_base=		n_pal=	false	at offset	11
+    DBG (Consonan): Metathesis Sub-Stage END: 	c&AO_LONG&l
+    DBG (Consonan): After Pass 1 (markers): 	c&AO_LONG&l
+    DBG (Consonan): Pass 2: Checking '	c	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	c	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	caol	Cons seq:	c	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	a	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	c	' with '	k	'
+    DBG (Consonan): After Pass 2 (single chars): 	k&AO_LONG&l
+  ConsonantResolution END (Proc): Out=	k&AO_LONG&l
+Af. ConsonantResolution: [k&AO_LONG&l]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	k&AO_LONG&l
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	k&AO_LONG&l
+Af. Stage4_0_SpecificOrthoToTempMarker: [k&AO_LONG&l]
+  Stage4_0_1_Resolve_CH_Marker START: In=	k&AO_LONG&l
+  Stage4_0_1_Resolve_CH_Marker END: Out=	k&AO_LONG&l
+Af. Stage4_0_1_Resolve_CH_Marker: [k&AO_LONG&l]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	k&AO_LONG&l
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	k&AO_LONG&l
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [k&AO_LONG&l]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	k&AO_LONG&l
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	k&AO_LONG&l
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [k&AO_LONG&l]
+  Stage4_4_ResolveTempVowelMarkers START: In=	k&AO_LONG&l
+    DBG (Stage4_4): Iter.gsub: Rule '	&AO_LONG&	' APPLIED to '	k&AO_LONG&l	' -> '	kɨːl	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	k&AO_LONG&l	' to '	kɨːl	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	kɨːl	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	kɨːl
+Af. Stage4_4_ResolveTempVowelMarkers: [kɨːl]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	kɨːl
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	kɨːl
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): Placeholder created: '	ɨː	' -> '	&PHON_Y_LONG&	'. Result: '	k&PHON_Y_LONG&l	'
+    DBG (Stage4_5): After placeholder creation: 	k&PHON_Y_LONG&l
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	k&PHON_Y_LONG&l	'
+    DBG (Stage4_5): After core allophony rules: 	k&PHON_Y_LONG&l
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): Placeholder restored: '	&PHON_Y_LONG&	' -> '	ɨː	'. Result: '	kɨːl	'
+    DBG (Stage4_5): After placeholder restoration: 	kɨːl
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	kɨːl
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	kɨːl
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	kɨːl
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [kɨːl]
+  EpenthesisThenStrongSonorants START: In=	kɨːl
+  EpenthesisThenStrongSonorants END: Out=	kɨːl
+Af. EpenthesisThenStrongSonorants: [kɨːl]
+  Diacritics START: In=	kɨːl
+  Diacritics END: Out=	kɨːl
+Af. Diacritics: [kɨːl]
+  FinalCleanup START: In=	kɨːl
+  FinalCleanup END: Out=	kɨːl
+Af. FinalCleanup: [kɨːl]
+caol            -> [kɨːl]
+
+--- Transcribing: [gaoth] ---
+Af. MarkDigraphsAndVocalisationTriggers: [g&AO_LONG&_TH_]
+  ConsonantResolution START (Proc): In=	g&AO_LONG&_TH_
+  ConsonantResolution START (Proc): In=	g&AO_LONG&_TH_
+    DBG (Consonan): Metathesis Sub-Stage START: 	g&AO_LONG&_TH_
+    DBG (Consonan): Metathesis Check: c_base=	g	c_pal=	false	n_base=	&	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	&	c_pal=	false	n_base=	A	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	A	c_pal=	false	n_base=	O	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	O	c_pal=	false	n_base=	_	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	L	n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Check: c_base=	L	c_pal=	false	n_base=	O	n_pal=	false	at offset	6
+    DBG (Consonan): Metathesis Check: c_base=	O	c_pal=	false	n_base=	N	n_pal=	false	at offset	7
+    DBG (Consonan): Metathesis Check: c_base=	N	c_pal=	false	n_base=	G	n_pal=	false	at offset	8
+    DBG (Consonan): Metathesis Check: c_base=	G	c_pal=	false	n_base=	&	n_pal=	false	at offset	9
+    DBG (Consonan): Metathesis Check: c_base=	&	c_pal=	false	n_base=	_	n_pal=	false	at offset	10
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	T	n_pal=	false	at offset	11
+    DBG (Consonan): Metathesis Check: c_base=	T	c_pal=	false	n_base=	H	n_pal=	false	at offset	12
+    DBG (Consonan): Metathesis Check: c_base=	H	c_pal=	false	n_base=	_	n_pal=	false	at offset	13
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=		n_pal=	false	at offset	14
+    DBG (Consonan): Metathesis Sub-Stage END: 	g&AO_LONG&_TH_
+    DBG (Consonan): After Pass 1 (markers): 	g&AO_LONG&h
+    DBG (Consonan): Pass 2: Checking '	g	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	g	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	gaoth	Cons seq:	g	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	a	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	g	' with '	g	'
+    DBG (Consonan): Pass 2: Checking '	h	' at phon_idx 	11	 -> ortho_s:	4	ortho_e:	4
+    DBG (Consonan): Single cons rule: c_capture=	h	o_s=	4	o_e=	4
+    DBG (DetQual): Word:	gaoth	Cons seq:	t	s:	4	e:	4
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	o	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	h	' with '	h	'
+    DBG (Consonan): After Pass 2 (single chars): 	g&AO_LONG&h
+  ConsonantResolution END (Proc): Out=	g&AO_LONG&h
+Af. ConsonantResolution: [g&AO_LONG&h]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	g&AO_LONG&h
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	g&AO_LONG&h
+Af. Stage4_0_SpecificOrthoToTempMarker: [g&AO_LONG&h]
+  Stage4_0_1_Resolve_CH_Marker START: In=	g&AO_LONG&h
+  Stage4_0_1_Resolve_CH_Marker END: Out=	g&AO_LONG&h
+Af. Stage4_0_1_Resolve_CH_Marker: [g&AO_LONG&h]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	g&AO_LONG&h
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	g&AO_LONG&h
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [g&AO_LONG&h]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	g&AO_LONG&h
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	g&AO_LONG&h
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [g&AO_LONG&h]
+  Stage4_4_ResolveTempVowelMarkers START: In=	g&AO_LONG&h
+    DBG (Stage4_4): Iter.gsub: Rule '	&AO_LONG&	' APPLIED to '	g&AO_LONG&h	' -> '	gɨːh	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	g&AO_LONG&h	' to '	gɨːh	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	gɨːh	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	gɨːh
+Af. Stage4_4_ResolveTempVowelMarkers: [gɨːh]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	gɨːh
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	gɨːh
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): Placeholder created: '	ɨː	' -> '	&PHON_Y_LONG&	'. Result: '	g&PHON_Y_LONG&h	'
+    DBG (Stage4_5): After placeholder creation: 	g&PHON_Y_LONG&h
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	g&PHON_Y_LONG&h	'
+    DBG (Stage4_5): After core allophony rules: 	g&PHON_Y_LONG&h
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): Placeholder restored: '	&PHON_Y_LONG&	' -> '	ɨː	'. Result: '	gɨːh	'
+    DBG (Stage4_5): After placeholder restoration: 	gɨːh
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	gɨːh
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	gɨːh
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	gɨːh
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [gɨːh]
+  EpenthesisThenStrongSonorants START: In=	gɨːh
+  EpenthesisThenStrongSonorants END: Out=	gɨːh
+Af. EpenthesisThenStrongSonorants: [gɨːh]
+  Diacritics START: In=	gɨːh
+  Diacritics END: Out=	gɨːh
+Af. Diacritics: [gɨːh]
+  FinalCleanup START: In=	gɨːh
+  FinalCleanup END: Out=	gɨːh
+Af. FinalCleanup: [gɨːh]
+gaoth           -> [gɨːh]
+
+--- Transcribing: [aoibhinn] ---
+Af. MarkDigraphsAndVocalisationTriggers: [ˈ&AOI_LONG&_BH_i_NN_]
+  ConsonantResolution START (Proc): In=	ˈ&AOI_LONG&_BH_i_NN_
+  ConsonantResolution START (Proc): In=	ˈ&AOI_LONG&_BH_i_NN_
+    DBG (Consonan): Metathesis Sub-Stage START: 	ˈ&AOI_LONG&_BH_i_NN_
+    DBG (Consonan): Metathesis Check: c_base=	�	c_pal=	false	n_base=	�	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	�	c_pal=	false	n_base=	&	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	&	c_pal=	false	n_base=	A	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	A	c_pal=	false	n_base=	O	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	O	c_pal=	false	n_base=	I	n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Check: c_base=	I	c_pal=	false	n_base=	_	n_pal=	false	at offset	6
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	L	n_pal=	false	at offset	7
+    DBG (Consonan): Metathesis Check: c_base=	L	c_pal=	false	n_base=	O	n_pal=	false	at offset	8
+    DBG (Consonan): Metathesis Check: c_base=	O	c_pal=	false	n_base=	N	n_pal=	false	at offset	9
+    DBG (Consonan): Metathesis Check: c_base=	N	c_pal=	false	n_base=	G	n_pal=	false	at offset	10
+    DBG (Consonan): Metathesis Check: c_base=	G	c_pal=	false	n_base=	&	n_pal=	false	at offset	11
+    DBG (Consonan): Metathesis Check: c_base=	&	c_pal=	false	n_base=	_	n_pal=	false	at offset	12
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	B	n_pal=	false	at offset	13
+    DBG (Consonan): Metathesis Check: c_base=	B	c_pal=	false	n_base=	H	n_pal=	false	at offset	14
+    DBG (Consonan): Metathesis Check: c_base=	H	c_pal=	false	n_base=	_	n_pal=	false	at offset	15
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	i	n_pal=	false	at offset	16
+    DBG (Consonan): Metathesis Check: c_base=	i	c_pal=	false	n_base=	_	n_pal=	false	at offset	17
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	N	n_pal=	false	at offset	18
+    DBG (Consonan): Metathesis Check: c_base=	N	c_pal=	false	n_base=	N	n_pal=	false	at offset	19
+    DBG (Consonan): Metathesis Check: c_base=	N	c_pal=	false	n_base=	_	n_pal=	false	at offset	20
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=		n_pal=	false	at offset	21
+    DBG (Consonan): Metathesis Sub-Stage END: 	ˈ&AOI_LONG&_BH_i_NN_
+    DBG (DetQual): Word:	ˈaoibhinn	Cons seq:	bh	s:	6	e:	7
+    DBG (DetQual): Next vowel char:	i	Next quality implication:	slender
+    DBG (DetQual): Prev vowel char:	i	Prev quality implication:	slender
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (DetQual): Word:	ˈaoibhinn	Cons seq:	nn	s:	9	e:	10
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	i	Prev quality implication:	slender
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): After Pass 1 (markers): 	ˈ&AOI_LONG&v'iN'
+    DBG (Consonan): After Pass 2 (single chars): 	ˈ&AOI_LONG&v'iN'
+  ConsonantResolution END (Proc): Out=	ˈ&AOI_LONG&v'iN'
+Af. ConsonantResolution: [ˈ&AOI_LONG&v'iN']
+  Stage4_0_SpecificOrthoToTempMarker START: In=	ˈ&AOI_LONG&v'iN'
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	ˈ&AOI_LONG&v'iN'
+Af. Stage4_0_SpecificOrthoToTempMarker: [ˈ&AOI_LONG&v'iN']
+  Stage4_0_1_Resolve_CH_Marker START: In=	ˈ&AOI_LONG&v'iN'
+  Stage4_0_1_Resolve_CH_Marker END: Out=	ˈ&AOI_LONG&v'iN'
+Af. Stage4_0_1_Resolve_CH_Marker: [ˈ&AOI_LONG&v'iN']
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	ˈ&AOI_LONG&v'iN'
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	ˈ&AOI_LONG&v'iN'
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [ˈ&AOI_LONG&v'iN']
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	ˈ&AOI_LONG&v'iN'
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	ˈ&AOI_LONG&v'iN'
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [ˈ&AOI_LONG&v'iN']
+  Stage4_4_ResolveTempVowelMarkers START: In=	ˈ&AOI_LONG&v'iN'
+    DBG (Stage4_4): Iter.gsub: Rule '	&AOI_LONG&	' APPLIED to '	ˈ&AOI_LONG&v'iN'	' -> '	ˈiːv'iN'	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	ˈ&AOI_LONG&v'iN'	' to '	ˈiːv'iN'	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	ˈiːv'iN'	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	ˈiːv'iN'
+Af. Stage4_4_ResolveTempVowelMarkers: [ˈiːv'iN']
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	ˈiːv'iN'
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	ˈiːv'iN'
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): Placeholder created: '	iː	' -> '	&PHON_I_LONG&	'. Result: '	ˈ&PHON_I_LONG&v'iN'	'
+    DBG (Stage4_5): After placeholder creation: 	ˈ&PHON_I_LONG&v'iN'
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	ˈ&PHON_I_LONG&v'iN'	'
+    DBG (Stage4_5): After core allophony rules: 	ˈ&PHON_I_LONG&v'iN'
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): Placeholder restored: '	&PHON_I_LONG&	' -> '	iː	'. Result: '	ˈiːv'iN'	'
+    DBG (Stage4_5): After placeholder restoration: 	ˈiːv'iN'
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	ˈiːv'iN'
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	ˈiːv'iN'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	ˈiːv'iN'
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [ˈiːv'iN']
+  EpenthesisThenStrongSonorants START: In=	ˈiːv'iN'
+  EpenthesisThenStrongSonorants END: Out=	ˈiːv'iN'
+Af. EpenthesisThenStrongSonorants: [ˈiːv'iN']
+  Diacritics START: In=	ˈiːv'iN'
+  Diacritics END: Out=	ˈiːv'iN'
+Af. Diacritics: [ˈiːv'iN']
+  FinalCleanup START: In=	ˈiːv'iN'
+  FinalCleanup END: Out=	ˈiːv'iN'
+Af. FinalCleanup: [ˈiːv'iN']
+aoibhinn        -> [ˈiːv'iN']
+
+--- Transcribing: [móin] ---
+Af. MarkDigraphsAndVocalisationTriggers: [m&OI_ACUTE_LONG&in]
+  ConsonantResolution START (Proc): In=	m&OI_ACUTE_LONG&in
+  ConsonantResolution START (Proc): In=	m&OI_ACUTE_LONG&in
+    DBG (Consonan): Metathesis Sub-Stage START: 	m&OI_ACUTE_LONG&in
+    DBG (Consonan): Metathesis Check: c_base=	m	c_pal=	false	n_base=	&	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	&	c_pal=	false	n_base=	O	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	O	c_pal=	false	n_base=	I	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	I	c_pal=	false	n_base=	_	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	A	n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Check: c_base=	A	c_pal=	false	n_base=	C	n_pal=	false	at offset	6
+    DBG (Consonan): Metathesis Check: c_base=	C	c_pal=	false	n_base=	U	n_pal=	false	at offset	7
+    DBG (Consonan): Metathesis Check: c_base=	U	c_pal=	false	n_base=	T	n_pal=	false	at offset	8
+    DBG (Consonan): Metathesis Check: c_base=	T	c_pal=	false	n_base=	E	n_pal=	false	at offset	9
+    DBG (Consonan): Metathesis Check: c_base=	E	c_pal=	false	n_base=	_	n_pal=	false	at offset	10
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	L	n_pal=	false	at offset	11
+    DBG (Consonan): Metathesis Check: c_base=	L	c_pal=	false	n_base=	O	n_pal=	false	at offset	12
+    DBG (Consonan): Metathesis Check: c_base=	O	c_pal=	false	n_base=	N	n_pal=	false	at offset	13
+    DBG (Consonan): Metathesis Check: c_base=	N	c_pal=	false	n_base=	G	n_pal=	false	at offset	14
+    DBG (Consonan): Metathesis Check: c_base=	G	c_pal=	false	n_base=	&	n_pal=	false	at offset	15
+    DBG (Consonan): Metathesis Check: c_base=	&	c_pal=	false	n_base=	i	n_pal=	false	at offset	16
+    DBG (Consonan): Metathesis Check: c_base=	i	c_pal=	false	n_base=	n	n_pal=	false	at offset	17
+    DBG (Consonan): Metathesis Check: c_base=	n	c_pal=	false	n_base=		n_pal=	false	at offset	18
+    DBG (Consonan): Metathesis Sub-Stage END: 	m&OI_ACUTE_LONG&in
+    DBG (Consonan): After Pass 1 (markers): 	m&OI_ACUTE_LONG&in
+    DBG (Consonan): Pass 2: Checking '	m	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	m	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	móin	Cons seq:	m	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	�	Next quality implication:	slender
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Pass 2: Replaced '	m	' with '	m'	'
+    DBG (Consonan): After Pass 2 (single chars): 	m'&OI_ACUTE_LONG&in
+  ConsonantResolution END (Proc): Out=	m'&OI_ACUTE_LONG&in
+Af. ConsonantResolution: [m'&OI_ACUTE_LONG&in]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	m'&OI_ACUTE_LONG&in
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	m'&OI_ACUTE_LONG&in
+Af. Stage4_0_SpecificOrthoToTempMarker: [m'&OI_ACUTE_LONG&in]
+  Stage4_0_1_Resolve_CH_Marker START: In=	m'&OI_ACUTE_LONG&in
+  Stage4_0_1_Resolve_CH_Marker END: Out=	m'&OI_ACUTE_LONG&in
+Af. Stage4_0_1_Resolve_CH_Marker: [m'&OI_ACUTE_LONG&in]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	m'&OI_ACUTE_LONG&in
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	m'&OI_ACUTE_LONG&in
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [m'&OI_ACUTE_LONG&in]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	m'&OI_ACUTE_LONG&in
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	m'&OI_ACUTE_LONG&in
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [m'&OI_ACUTE_LONG&in]
+  Stage4_4_ResolveTempVowelMarkers START: In=	m'&OI_ACUTE_LONG&in
+    DBG (Stage4_4): Iter.gsub: Rule '	&OI_ACUTE_LONG&	' APPLIED to '	m'&OI_ACUTE_LONG&in	' -> '	m'oːin	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	m'&OI_ACUTE_LONG&in	' to '	m'oːin	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	m'oːin	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	m'oːin
+Af. Stage4_4_ResolveTempVowelMarkers: [m'oːin]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	m'oːin
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	m'oːin
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): Placeholder created: '	oː	' -> '	&PHON_O_LONG&	'. Result: '	m'&PHON_O_LONG&in	'
+    DBG (Stage4_5): After placeholder creation: 	m'&PHON_O_LONG&in
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	m'&PHON_O_LONG&in	'
+    DBG (Stage4_5): After core allophony rules: 	m'&PHON_O_LONG&in
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): Placeholder restored: '	&PHON_O_LONG&	' -> '	oː	'. Result: '	m'oːin	'
+    DBG (Stage4_5): After placeholder restoration: 	m'oːin
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	m'oːin
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	m'oːin
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	m'oːin
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [m'oːin]
+  EpenthesisThenStrongSonorants START: In=	m'oːin
+  EpenthesisThenStrongSonorants END: Out=	m'oːin
+Af. EpenthesisThenStrongSonorants: [m'oːin]
+  Diacritics START: In=	m'oːin
+  Diacritics END: Out=	m'oːin
+Af. Diacritics: [m'oːin]
+  FinalCleanup START: In=	m'oːin
+  FinalCleanup END: Out=	m'oːin
+Af. FinalCleanup: [m'oːin]
+móin           -> [m'oːin]
+
+--- Transcribing: [bord] ---
+Af. MarkDigraphsAndVocalisationTriggers: [bord]
+  ConsonantResolution START (Proc): In=	bord
+  ConsonantResolution START (Proc): In=	bord
+    DBG (Consonan): Metathesis Sub-Stage START: 	bord
+    DBG (Consonan): Metathesis Check: c_base=	b	c_pal=	false	n_base=	o	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	o	c_pal=	false	n_base=	r	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	r	c_pal=	false	n_base=	d	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	d	c_pal=	false	n_base=		n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Sub-Stage END: 	bord
+    DBG (Consonan): After Pass 1 (markers): 	bord
+    DBG (Consonan): Pass 2: Checking '	b	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	b	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	bord	Cons seq:	b	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	o	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	b	' with '	b	'
+    DBG (Consonan): Pass 2: Checking '	r	' at phon_idx 	3	 -> ortho_s:	3	ortho_e:	3
+    DBG (Consonan): Single cons rule: c_capture=	r	o_s=	3	o_e=	3
+    DBG (DetQual): Word:	bord	Cons seq:	r	s:	3	e:	3
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	o	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	r	' with '	r	'
+    DBG (Consonan): Pass 2: Checking '	d	' at phon_idx 	4	 -> ortho_s:	4	ortho_e:	4
+    DBG (Consonan): Single cons rule: c_capture=	d	o_s=	4	o_e=	4
+    DBG (DetQual): Word:	bord	Cons seq:	d	s:	4	e:	4
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	o	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	d	' with '	d	'
+    DBG (Consonan): After Pass 2 (single chars): 	bord
+  ConsonantResolution END (Proc): Out=	bord
+Af. ConsonantResolution: [bord]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	bord
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	bord
+Af. Stage4_0_SpecificOrthoToTempMarker: [bord]
+  Stage4_0_1_Resolve_CH_Marker START: In=	bord
+  Stage4_0_1_Resolve_CH_Marker END: Out=	bord
+Af. Stage4_0_1_Resolve_CH_Marker: [bord]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	bord
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	bord
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [bord]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	bord
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	bord
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [bord]
+  Stage4_4_ResolveTempVowelMarkers START: In=	bord
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	bord	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	bord
+Af. Stage4_4_ResolveTempVowelMarkers: [bord]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	bord
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	bord
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	bord
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	o	' APPLIED to '	bord	' -> '	bɔrd	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	bord	' to '	bɔrd	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	bɔrd	'
+    DBG (Stage4_5): After core allophony rules: 	bɔrd
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	bɔrd
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	bɔrd
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	bɔrd
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	bɔrd
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [bɔrd]
+  EpenthesisThenStrongSonorants START: In=	bɔrd
+  EpenthesisThenStrongSonorants END: Out=	bɔrd
+Af. EpenthesisThenStrongSonorants: [bɔrd]
+  Diacritics START: In=	bɔrd
+  Diacritics END: Out=	bɔrd
+Af. Diacritics: [bɔrd]
+  FinalCleanup START: In=	bɔrd
+  FinalCleanup END: Out=	bɔrd
+Af. FinalCleanup: [bɔrd]
+bord            -> [bɔrd]
+
+--- Transcribing: [poll] ---
+Af. MarkDigraphsAndVocalisationTriggers: [po_LL_]
+  ConsonantResolution START (Proc): In=	po_LL_
+  ConsonantResolution START (Proc): In=	po_LL_
+    DBG (Consonan): Metathesis Sub-Stage START: 	po_LL_
+    DBG (Consonan): Metathesis Check: c_base=	p	c_pal=	false	n_base=	o	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	o	c_pal=	false	n_base=	_	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	L	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	L	c_pal=	false	n_base=	L	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	L	c_pal=	false	n_base=	_	n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=		n_pal=	false	at offset	6
+    DBG (Consonan): Metathesis Sub-Stage END: 	po_LL_
+    DBG (DetQual): Word:	poll	Cons seq:	ll	s:	3	e:	4
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	o	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): After Pass 1 (markers): 	poL
+    DBG (Consonan): Pass 2: Checking '	p	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	p	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	poll	Cons seq:	p	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	o	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	p	' with '	p	'
+    DBG (Consonan): After Pass 2 (single chars): 	poL
+  ConsonantResolution END (Proc): Out=	poL
+Af. ConsonantResolution: [poL]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	poL
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	poL
+Af. Stage4_0_SpecificOrthoToTempMarker: [poL]
+  Stage4_0_1_Resolve_CH_Marker START: In=	poL
+  Stage4_0_1_Resolve_CH_Marker END: Out=	poL
+Af. Stage4_0_1_Resolve_CH_Marker: [poL]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	poL
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	poL
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [poL]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	poL
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	poL
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [poL]
+  Stage4_4_ResolveTempVowelMarkers START: In=	poL
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	poL	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	poL
+Af. Stage4_4_ResolveTempVowelMarkers: [poL]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	poL
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	poL
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	poL
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	o	' APPLIED to '	poL	' -> '	pɔL	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	poL	' to '	pɔL	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	pɔL	'
+    DBG (Stage4_5): After core allophony rules: 	pɔL
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	pɔL
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	pɔL
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	pɔL
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	pɔL
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [pɔL]
+  EpenthesisThenStrongSonorants START: In=	pɔL
+  EpenthesisThenStrongSonorants END: Out=	pɔL
+Af. EpenthesisThenStrongSonorants: [pɔL]
+  Diacritics START: In=	pɔL
+  Diacritics END: Out=	pɔL
+Af. Diacritics: [pɔL]
+  FinalCleanup START: In=	pɔL
+  FinalCleanup END: Out=	pɔL
+Af. FinalCleanup: [pɔL]
+poll            -> [pɔL]
+
+--- Transcribing: [fonn] ---
+Af. MarkDigraphsAndVocalisationTriggers: [fo_NN_]
+  ConsonantResolution START (Proc): In=	fo_NN_
+  ConsonantResolution START (Proc): In=	fo_NN_
+    DBG (Consonan): Metathesis Sub-Stage START: 	fo_NN_
+    DBG (Consonan): Metathesis Check: c_base=	f	c_pal=	false	n_base=	o	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	o	c_pal=	false	n_base=	_	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	N	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	N	c_pal=	false	n_base=	N	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	N	c_pal=	false	n_base=	_	n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=		n_pal=	false	at offset	6
+    DBG (Consonan): Metathesis Sub-Stage END: 	fo_NN_
+    DBG (DetQual): Word:	fonn	Cons seq:	nn	s:	3	e:	4
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	o	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): After Pass 1 (markers): 	foN
+    DBG (Consonan): Pass 2: Checking '	f	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	f	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	fonn	Cons seq:	f	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	o	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	f	' with '	f	'
+    DBG (Consonan): After Pass 2 (single chars): 	foN
+  ConsonantResolution END (Proc): Out=	foN
+Af. ConsonantResolution: [foN]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	foN
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	foN
+Af. Stage4_0_SpecificOrthoToTempMarker: [foN]
+  Stage4_0_1_Resolve_CH_Marker START: In=	foN
+  Stage4_0_1_Resolve_CH_Marker END: Out=	foN
+Af. Stage4_0_1_Resolve_CH_Marker: [foN]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	foN
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	foN
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [foN]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	foN
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	foN
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [foN]
+  Stage4_4_ResolveTempVowelMarkers START: In=	foN
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	foN	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	foN
+Af. Stage4_4_ResolveTempVowelMarkers: [foN]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	foN
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	foN
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	foN
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	o	' APPLIED to '	foN	' -> '	fɔN	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	foN	' to '	fɔN	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	fɔN	'
+    DBG (Stage4_5): After core allophony rules: 	fɔN
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	fɔN
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	fɔN
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	fɔN
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	fɔN
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [fɔN]
+  EpenthesisThenStrongSonorants START: In=	fɔN
+  EpenthesisThenStrongSonorants END: Out=	fɔN
+Af. EpenthesisThenStrongSonorants: [fɔN]
+  Diacritics START: In=	fɔN
+  Diacritics END: Out=	fɔN
+Af. Diacritics: [fɔN]
+  FinalCleanup START: In=	fɔN
+  FinalCleanup END: Out=	fɔN
+Af. FinalCleanup: [fɔN]
+fonn            -> [fɔN]
+
+--- Transcribing: [drochbhean] ---
+Af. MarkDigraphsAndVocalisationTriggers: [dro_CH__BH_ean]
+  ConsonantResolution START (Proc): In=	dro_CH__BH_ean
+  ConsonantResolution START (Proc): In=	dro_CH__BH_ean
+    DBG (Consonan): Metathesis Sub-Stage START: 	dro_CH__BH_ean
+    DBG (Consonan): Metathesis Check: c_base=	d	c_pal=	false	n_base=	r	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	r	c_pal=	false	n_base=	o	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	o	c_pal=	false	n_base=	_	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	C	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	C	c_pal=	false	n_base=	H	n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Check: c_base=	H	c_pal=	false	n_base=	_	n_pal=	false	at offset	6
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	_	n_pal=	false	at offset	7
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	B	n_pal=	false	at offset	8
+    DBG (Consonan): Metathesis Check: c_base=	B	c_pal=	false	n_base=	H	n_pal=	false	at offset	9
+    DBG (Consonan): Metathesis Check: c_base=	H	c_pal=	false	n_base=	_	n_pal=	false	at offset	10
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	e	n_pal=	false	at offset	11
+    DBG (Consonan): Metathesis Check: c_base=	e	c_pal=	false	n_base=	a	n_pal=	false	at offset	12
+    DBG (Consonan): Metathesis Check: c_base=	a	c_pal=	false	n_base=	n	n_pal=	false	at offset	13
+    DBG (Consonan): Metathesis Check: c_base=	n	c_pal=	false	n_base=		n_pal=	false	at offset	14
+    DBG (Consonan): Metathesis Sub-Stage END: 	dro_CH__BH_ean
+    DBG (DetQual): Word:	drochbhean	Cons seq:	bh	s:	6	e:	7
+    DBG (DetQual): Next vowel char:	e	Next quality implication:	slender
+    DBG (DetQual): Prev vowel char:	o	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): After Pass 1 (markers): 	dro_CH_v'ean
+    DBG (Consonan): Pass 2: Checking '	d	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	d	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	drochbhean	Cons seq:	d	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	o	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	d	' with '	d	'
+    DBG (Consonan): Pass 2: Checking '	r	' at phon_idx 	2	 -> ortho_s:	2	ortho_e:	2
+    DBG (Consonan): Single cons rule: c_capture=	r	o_s=	2	o_e=	2
+    DBG (DetQual): Word:	drochbhean	Cons seq:	r	s:	2	e:	2
+    DBG (DetQual): Next vowel char:	o	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	r	' with '	r	'
+    DBG (Consonan): After Pass 2 (single chars): 	dro_CH_v'ean
+  ConsonantResolution END (Proc): Out=	dro_CH_v'ean
+Af. ConsonantResolution: [dro_CH_v'ean]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	dro_CH_v'ean
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	dro_CH_v'&EA_SLENDER_PRE_N&n
+Af. Stage4_0_SpecificOrthoToTempMarker: [dro_CH_v'&EA_SLENDER_PRE_N&n]
+  Stage4_0_1_Resolve_CH_Marker START: In=	dro_CH_v'&EA_SLENDER_PRE_N&n
+    DBG (DetQual): Word:	drochbhean	Cons seq:	ch	s:	4	e:	5
+    DBG (DetQual): Next vowel char:	e	Next quality implication:	slender
+    DBG (DetQual): Prev vowel char:	o	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	palatal
+  Stage4_0_1_Resolve_CH_Marker END: Out=	droçv'&EA_SLENDER_PRE_N&n
+Af. Stage4_0_1_Resolve_CH_Marker: [droçv'&EA_SLENDER_PRE_N&n]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	droçv'&EA_SLENDER_PRE_N&n
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	droçv'&EA_SLENDER_PRE_N&n
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [droçv'&EA_SLENDER_PRE_N&n]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	droçv'&EA_SLENDER_PRE_N&n
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	droçv'&EA_SLENDER_PRE_N&n
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [droçv'&EA_SLENDER_PRE_N&n]
+  Stage4_4_ResolveTempVowelMarkers START: In=	droçv'&EA_SLENDER_PRE_N&n
+    DBG (Stage4_4): Iter.gsub: Rule '	&EA_SLENDER_PRE_N&	' APPLIED to '	droçv'&EA_SLENDER_PRE_N&n	' -> '	droçv'æn	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	droçv'&EA_SLENDER_PRE_N&n	' to '	droçv'æn	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	droçv'æn	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	droçv'æn
+Af. Stage4_4_ResolveTempVowelMarkers: [droçv'æn]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	droçv'æn
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	droçv'æn
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	droçv'æn
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	o	' APPLIED to '	droçv'æn	' -> '	drɔçv'æn	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub: Rule '	([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾ]*'?)([ɔʊʌ])([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾ]['ʃçjɟc])	' APPLIED to '	drɔçv'æn	' -> '	dr�eçv'æn	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	droçv'æn	' to '	dr�eçv'æn	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	dr�eçv'æn	'
+    DBG (Stage4_5): After core allophony rules: 	dr�eçv'æn
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	dr�eçv'æn
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	dr�eçv'æn
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	dr�eçv'æn
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	dr�eçv'æn
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [dr�eçv'æn]
+  EpenthesisThenStrongSonorants START: In=	dr�eçv'æn
+  EpenthesisThenStrongSonorants END: Out=	dr�eçv'æn
+Af. EpenthesisThenStrongSonorants: [dr�eçv'æn]
+  Diacritics START: In=	dr�eçv'æn
+  Diacritics END: Out=	dr�eçv'æn
+Af. Diacritics: [dr�eçv'æn]
+  FinalCleanup START: In=	dr�eçv'æn
+  FinalCleanup END: Out=	dr�eçv'æn
+Af. FinalCleanup: [dr�eçv'æn]
+drochbhean      -> [dr�eçv'æn]
+
+--- Transcribing: [beannaigh] ---
+Af. MarkDigraphsAndVocalisationTriggers: [bea_NN_&AIGH_FINAL_SCHWA&]
+  ConsonantResolution START (Proc): In=	bea_NN_&AIGH_FINAL_SCHWA&
+  ConsonantResolution START (Proc): In=	bea_NN_&AIGH_FINAL_SCHWA&
+    DBG (Consonan): Metathesis Sub-Stage START: 	bea_NN_&AIGH_FINAL_SCHWA&
+    DBG (Consonan): Metathesis Check: c_base=	b	c_pal=	false	n_base=	e	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	e	c_pal=	false	n_base=	a	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	a	c_pal=	false	n_base=	_	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	N	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	N	c_pal=	false	n_base=	N	n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Check: c_base=	N	c_pal=	false	n_base=	_	n_pal=	false	at offset	6
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	&	n_pal=	false	at offset	7
+    DBG (Consonan): Metathesis Check: c_base=	&	c_pal=	false	n_base=	A	n_pal=	false	at offset	8
+    DBG (Consonan): Metathesis Check: c_base=	A	c_pal=	false	n_base=	I	n_pal=	false	at offset	9
+    DBG (Consonan): Metathesis Check: c_base=	I	c_pal=	false	n_base=	G	n_pal=	false	at offset	10
+    DBG (Consonan): Metathesis Check: c_base=	G	c_pal=	false	n_base=	H	n_pal=	false	at offset	11
+    DBG (Consonan): Metathesis Check: c_base=	H	c_pal=	false	n_base=	_	n_pal=	false	at offset	12
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	F	n_pal=	false	at offset	13
+    DBG (Consonan): Metathesis Check: c_base=	F	c_pal=	false	n_base=	I	n_pal=	false	at offset	14
+    DBG (Consonan): Metathesis Check: c_base=	I	c_pal=	false	n_base=	N	n_pal=	false	at offset	15
+    DBG (Consonan): Metathesis Check: c_base=	N	c_pal=	false	n_base=	A	n_pal=	false	at offset	16
+    DBG (Consonan): Metathesis Check: c_base=	A	c_pal=	false	n_base=	L	n_pal=	false	at offset	17
+    DBG (Consonan): Metathesis Check: c_base=	L	c_pal=	false	n_base=	_	n_pal=	false	at offset	18
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	S	n_pal=	false	at offset	19
+    DBG (Consonan): Metathesis Check: c_base=	S	c_pal=	false	n_base=	C	n_pal=	false	at offset	20
+    DBG (Consonan): Metathesis Check: c_base=	C	c_pal=	false	n_base=	H	n_pal=	false	at offset	21
+    DBG (Consonan): Metathesis Check: c_base=	H	c_pal=	false	n_base=	W	n_pal=	false	at offset	22
+    DBG (Consonan): Metathesis Check: c_base=	W	c_pal=	false	n_base=	A	n_pal=	false	at offset	23
+    DBG (Consonan): Metathesis Check: c_base=	A	c_pal=	false	n_base=	&	n_pal=	false	at offset	24
+    DBG (Consonan): Metathesis Check: c_base=	&	c_pal=	false	n_base=		n_pal=	false	at offset	25
+    DBG (Consonan): Metathesis Sub-Stage END: 	bea_NN_&AIGH_FINAL_SCHWA&
+    DBG (DetQual): Word:	beannaigh	Cons seq:	nn	s:	4	e:	5
+    DBG (DetQual): Next vowel char:	a	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:	a	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): After Pass 1 (markers): 	beaN&AIGH_FINAL_SCHWA&
+    DBG (Consonan): Pass 2: Checking '	b	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	b	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	beannaigh	Cons seq:	b	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	e	Next quality implication:	slender
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Pass 2: Replaced '	b	' with '	b'	'
+    DBG (Consonan): After Pass 2 (single chars): 	b'eaN&AIGH_FINAL_SCHWA&
+  ConsonantResolution END (Proc): Out=	b'eaN&AIGH_FINAL_SCHWA&
+Af. ConsonantResolution: [b'eaN&AIGH_FINAL_SCHWA&]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	b'eaN&AIGH_FINAL_SCHWA&
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	b'&EA_BROAD_PRE_NN&N&AIGH_FINAL_SCHWA&
+Af. Stage4_0_SpecificOrthoToTempMarker: [b'&EA_BROAD_PRE_NN&N&AIGH_FINAL_SCHWA&]
+  Stage4_0_1_Resolve_CH_Marker START: In=	b'&EA_BROAD_PRE_NN&N&AIGH_FINAL_SCHWA&
+  Stage4_0_1_Resolve_CH_Marker END: Out=	b'&EA_BROAD_PRE_NN&N&AIGH_FINAL_SCHWA&
+Af. Stage4_0_1_Resolve_CH_Marker: [b'&EA_BROAD_PRE_NN&N&AIGH_FINAL_SCHWA&]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	b'&EA_BROAD_PRE_NN&N&AIGH_FINAL_SCHWA&
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	b'&EA_BROAD_PRE_NN&N&AIGH_FINAL_SCHWA&
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [b'&EA_BROAD_PRE_NN&N&AIGH_FINAL_SCHWA&]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	b'&EA_BROAD_PRE_NN&N&AIGH_FINAL_SCHWA&
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	b'&EA_BROAD_PRE_NN&N&AIGH_FINAL_SCHWA&
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [b'&EA_BROAD_PRE_NN&N&AIGH_FINAL_SCHWA&]
+  Stage4_4_ResolveTempVowelMarkers START: In=	b'&EA_BROAD_PRE_NN&N&AIGH_FINAL_SCHWA&
+    DBG (Stage4_4): Iter.gsub: Rule '	&AIGH_FINAL_SCHWA&(#?)	' APPLIED to '	b'&EA_BROAD_PRE_NN&N&AIGH_FINAL_SCHWA&	' -> '	b'&EA_BROAD_PRE_NN&Nə	' (	1	x)
+    DBG (Stage4_4): Iter.gsub: Rule '	&EA_BROAD_PRE_NN&	' APPLIED to '	b'&EA_BROAD_PRE_NN&Nə	' -> '	b'aNə	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	b'&EA_BROAD_PRE_NN&N&AIGH_FINAL_SCHWA&	' to '	b'aNə	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	b'aNə	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	b'aNə
+Af. Stage4_4_ResolveTempVowelMarkers: [b'aNə]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	b'aNə
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	b'aNə
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	b'aNə
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾ]['ʲ])(a)	' APPLIED to '	b'aNə	' -> '	b'æNə	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	b'aNə	' to '	b'æNə	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	b'æNə	'
+    DBG (Stage4_5): After core allophony rules: 	b'æNə
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	b'æNə
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	b'æNə
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	b'æNə
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	b'æNə
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [b'æNə]
+  EpenthesisThenStrongSonorants START: In=	b'æNə
+  EpenthesisThenStrongSonorants END: Out=	b'æNə
+Af. EpenthesisThenStrongSonorants: [b'æNə]
+  Diacritics START: In=	b'æNə
+  Diacritics END: Out=	b'æNə
+Af. Diacritics: [b'æNə]
+  FinalCleanup START: In=	b'æNə
+  FinalCleanup END: Out=	b'æNə
+Af. FinalCleanup: [b'æNə]
+beannaigh       -> [b'æNə]
+
+--- Transcribing: [garbh] ---
+Af. MarkDigraphsAndVocalisationTriggers: [gar_BH_]
+  ConsonantResolution START (Proc): In=	gar_BH_
+  ConsonantResolution START (Proc): In=	gar_BH_
+    DBG (Consonan): Metathesis Sub-Stage START: 	gar_BH_
+    DBG (Consonan): Metathesis Check: c_base=	g	c_pal=	false	n_base=	a	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	a	c_pal=	false	n_base=	r	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	r	c_pal=	false	n_base=	_	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	B	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	B	c_pal=	false	n_base=	H	n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Check: c_base=	H	c_pal=	false	n_base=	_	n_pal=	false	at offset	6
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=		n_pal=	false	at offset	7
+    DBG (Consonan): Metathesis Sub-Stage END: 	gar_BH_
+    DBG (DetQual): Word:	garbh	Cons seq:	bh	s:	4	e:	5
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	a	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): After Pass 1 (markers): 	garv
+    DBG (Consonan): Pass 2: Checking '	g	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	g	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	garbh	Cons seq:	g	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	a	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	g	' with '	g	'
+    DBG (Consonan): Pass 2: Checking '	r	' at phon_idx 	3	 -> ortho_s:	3	ortho_e:	3
+    DBG (Consonan): Single cons rule: c_capture=	r	o_s=	3	o_e=	3
+    DBG (DetQual): Word:	garbh	Cons seq:	r	s:	3	e:	3
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	a	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	r	' with '	r	'
+    DBG (Consonan): After Pass 2 (single chars): 	garv
+  ConsonantResolution END (Proc): Out=	garv
+Af. ConsonantResolution: [garv]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	garv
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	garv
+Af. Stage4_0_SpecificOrthoToTempMarker: [garv]
+  Stage4_0_1_Resolve_CH_Marker START: In=	garv
+  Stage4_0_1_Resolve_CH_Marker END: Out=	garv
+Af. Stage4_0_1_Resolve_CH_Marker: [garv]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	garv
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	garv
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [garv]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	garv
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	garv
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [garv]
+  Stage4_4_ResolveTempVowelMarkers START: In=	garv
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	garv	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	garv
+Af. Stage4_4_ResolveTempVowelMarkers: [garv]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	garv
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	garv
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	garv
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	a	' APPLIED to '	garv	' -> '	gɑrv	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	garv	' to '	gɑrv	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	gɑrv	'
+    DBG (Stage4_5): After core allophony rules: 	gɑrv
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	gɑrv
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	gɑrv
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	gɑrv
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	gɑrv
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [gɑrv]
+  EpenthesisThenStrongSonorants START: In=	gɑrv
+  EpenthesisThenStrongSonorants END: Out=	gɑrv
+Af. EpenthesisThenStrongSonorants: [gɑrv]
+  Diacritics START: In=	gɑrv
+  Diacritics END: Out=	gɑrv
+Af. Diacritics: [gɑrv]
+  FinalCleanup START: In=	gɑrv
+  FinalCleanup END: Out=	gɑrv
+Af. FinalCleanup: [gɑrv]
+garbh           -> [gɑrv]
+
+--- Transcribing: [dearg] ---
+Af. MarkDigraphsAndVocalisationTriggers: [dearg]
+  ConsonantResolution START (Proc): In=	dearg
+  ConsonantResolution START (Proc): In=	dearg
+    DBG (Consonan): Metathesis Sub-Stage START: 	dearg
+    DBG (Consonan): Metathesis Check: c_base=	d	c_pal=	false	n_base=	e	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	e	c_pal=	false	n_base=	a	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	a	c_pal=	false	n_base=	r	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	r	c_pal=	false	n_base=	g	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	g	c_pal=	false	n_base=		n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Sub-Stage END: 	dearg
+    DBG (Consonan): After Pass 1 (markers): 	dearg
+    DBG (Consonan): Pass 2: Checking '	d	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	d	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	dearg	Cons seq:	d	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	e	Next quality implication:	slender
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Pass 2: Replaced '	d	' with '	d'	'
+    DBG (Consonan): Pass 2: Checking '	r	' at phon_idx 	4	 -> ortho_s:	4	ortho_e:	4
+    DBG (Consonan): Single cons rule: c_capture=	r	o_s=	4	o_e=	4
+    DBG (DetQual): Word:	dearg	Cons seq:	r	s:	4	e:	4
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	e	Prev quality implication:	slender
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Pass 2: Replaced '	r	' with '	r'	'
+    DBG (Consonan): Pass 2: Checking '	g	' at phon_idx 	5	 -> ortho_s:	5	ortho_e:	5
+    DBG (Consonan): Single cons rule: c_capture=	g	o_s=	5	o_e=	5
+    DBG (DetQual): Word:	dearg	Cons seq:	g	s:	5	e:	5
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	e	Prev quality implication:	slender
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Pass 2: Replaced '	g	' with '	g'	'
+    DBG (Consonan): After Pass 2 (single chars): 	d'ear'g'
+  ConsonantResolution END (Proc): Out=	d'ear'g'
+Af. ConsonantResolution: [d'ear'g']
+  Stage4_0_SpecificOrthoToTempMarker START: In=	d'ear'g'
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	d'&EA_SLENDER_PRE_RPRIME&r'g'
+Af. Stage4_0_SpecificOrthoToTempMarker: [d'&EA_SLENDER_PRE_RPRIME&r'g']
+  Stage4_0_1_Resolve_CH_Marker START: In=	d'&EA_SLENDER_PRE_RPRIME&r'g'
+  Stage4_0_1_Resolve_CH_Marker END: Out=	d'&EA_SLENDER_PRE_RPRIME&r'g'
+Af. Stage4_0_1_Resolve_CH_Marker: [d'&EA_SLENDER_PRE_RPRIME&r'g']
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	d'&EA_SLENDER_PRE_RPRIME&r'g'
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	d'&EA_SLENDER_PRE_RPRIME&r'g'
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [d'&EA_SLENDER_PRE_RPRIME&r'g']
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	d'&EA_SLENDER_PRE_RPRIME&r'g'
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	d'&EA_SLENDER_PRE_RPRIME&r'g'
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [d'&EA_SLENDER_PRE_RPRIME&r'g']
+  Stage4_4_ResolveTempVowelMarkers START: In=	d'&EA_SLENDER_PRE_RPRIME&r'g'
+    DBG (Stage4_4): Iter.gsub: Rule '	&EA_SLENDER_PRE_RPRIME&	' APPLIED to '	d'&EA_SLENDER_PRE_RPRIME&r'g'	' -> '	d'ær'g'	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	d'&EA_SLENDER_PRE_RPRIME&r'g'	' to '	d'ær'g'	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	d'ær'g'	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	d'ær'g'
+Af. Stage4_4_ResolveTempVowelMarkers: [d'ær'g']
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	d'ær'g'
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	d'ær'g'
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	d'ær'g'
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	d'ær'g'	'
+    DBG (Stage4_5): After core allophony rules: 	d'ær'g'
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	d'ær'g'
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	d'ær'g'
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	d'ær'g'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	d'ær'g'
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [d'ær'g']
+  EpenthesisThenStrongSonorants START: In=	d'ær'g'
+  EpenthesisThenStrongSonorants END: Out=	d'ær'g'
+Af. EpenthesisThenStrongSonorants: [d'ær'g']
+  Diacritics START: In=	d'ær'g'
+  Diacritics END: Out=	d'ær'g'
+Af. Diacritics: [d'ær'g']
+  FinalCleanup START: In=	d'ær'g'
+  FinalCleanup END: Out=	d'ær'g'
+Af. FinalCleanup: [d'ær'g']
+dearg           -> [d'ær'g']
+
+--- Transcribing: [balbh] ---
+Af. MarkDigraphsAndVocalisationTriggers: [bal_BH_]
+  ConsonantResolution START (Proc): In=	bal_BH_
+  ConsonantResolution START (Proc): In=	bal_BH_
+    DBG (Consonan): Metathesis Sub-Stage START: 	bal_BH_
+    DBG (Consonan): Metathesis Check: c_base=	b	c_pal=	false	n_base=	a	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	a	c_pal=	false	n_base=	l	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	l	c_pal=	false	n_base=	_	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	B	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	B	c_pal=	false	n_base=	H	n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Check: c_base=	H	c_pal=	false	n_base=	_	n_pal=	false	at offset	6
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=		n_pal=	false	at offset	7
+    DBG (Consonan): Metathesis Sub-Stage END: 	bal_BH_
+    DBG (DetQual): Word:	balbh	Cons seq:	bh	s:	4	e:	5
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	a	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): After Pass 1 (markers): 	balv
+    DBG (Consonan): Pass 2: Checking '	b	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	b	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	balbh	Cons seq:	b	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	a	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	b	' with '	b	'
+    DBG (Consonan): After Pass 2 (single chars): 	balv
+  ConsonantResolution END (Proc): Out=	balv
+Af. ConsonantResolution: [balv]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	balv
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	balv
+Af. Stage4_0_SpecificOrthoToTempMarker: [balv]
+  Stage4_0_1_Resolve_CH_Marker START: In=	balv
+  Stage4_0_1_Resolve_CH_Marker END: Out=	balv
+Af. Stage4_0_1_Resolve_CH_Marker: [balv]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	balv
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	balv
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [balv]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	balv
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	balv
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [balv]
+  Stage4_4_ResolveTempVowelMarkers START: In=	balv
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	balv	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	balv
+Af. Stage4_4_ResolveTempVowelMarkers: [balv]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	balv
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	balv
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	balv
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	a	' APPLIED to '	balv	' -> '	bɑlv	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	balv	' to '	bɑlv	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	bɑlv	'
+    DBG (Stage4_5): After core allophony rules: 	bɑlv
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	bɑlv
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	bɑlv
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	bɑlv
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	bɑlv
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [bɑlv]
+  EpenthesisThenStrongSonorants START: In=	bɑlv
+  EpenthesisThenStrongSonorants END: Out=	bɑlv
+Af. EpenthesisThenStrongSonorants: [bɑlv]
+  Diacritics START: In=	bɑlv
+  Diacritics END: Out=	bɑlv
+Af. Diacritics: [bɑlv]
+  FinalCleanup START: In=	bɑlv
+  FinalCleanup END: Out=	bɑlv
+Af. FinalCleanup: [bɑlv]
+balbh           -> [bɑlv]
+
+--- Transcribing: [bolg] ---
+Af. MarkDigraphsAndVocalisationTriggers: [bolg]
+  ConsonantResolution START (Proc): In=	bolg
+  ConsonantResolution START (Proc): In=	bolg
+    DBG (Consonan): Metathesis Sub-Stage START: 	bolg
+    DBG (Consonan): Metathesis Check: c_base=	b	c_pal=	false	n_base=	o	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	o	c_pal=	false	n_base=	l	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	l	c_pal=	false	n_base=	g	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	g	c_pal=	false	n_base=		n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Sub-Stage END: 	bolg
+    DBG (Consonan): After Pass 1 (markers): 	bolg
+    DBG (Consonan): Pass 2: Checking '	b	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	b	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	bolg	Cons seq:	b	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	o	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	b	' with '	b	'
+    DBG (Consonan): Pass 2: Checking '	g	' at phon_idx 	4	 -> ortho_s:	4	ortho_e:	4
+    DBG (Consonan): Single cons rule: c_capture=	g	o_s=	4	o_e=	4
+    DBG (DetQual): Word:	bolg	Cons seq:	g	s:	4	e:	4
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	o	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	g	' with '	g	'
+    DBG (Consonan): After Pass 2 (single chars): 	bolg
+  ConsonantResolution END (Proc): Out=	bolg
+Af. ConsonantResolution: [bolg]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	bolg
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	bolg
+Af. Stage4_0_SpecificOrthoToTempMarker: [bolg]
+  Stage4_0_1_Resolve_CH_Marker START: In=	bolg
+  Stage4_0_1_Resolve_CH_Marker END: Out=	bolg
+Af. Stage4_0_1_Resolve_CH_Marker: [bolg]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	bolg
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	bolg
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [bolg]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	bolg
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	bolg
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [bolg]
+  Stage4_4_ResolveTempVowelMarkers START: In=	bolg
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	bolg	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	bolg
+Af. Stage4_4_ResolveTempVowelMarkers: [bolg]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	bolg
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	bolg
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	bolg
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	o	' APPLIED to '	bolg	' -> '	bɔlg	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	bolg	' to '	bɔlg	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	bɔlg	'
+    DBG (Stage4_5): After core allophony rules: 	bɔlg
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	bɔlg
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	bɔlg
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	bɔlg
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	bɔlg
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [bɔlg]
+  EpenthesisThenStrongSonorants START: In=	bɔlg
+  EpenthesisThenStrongSonorants END: Out=	bɔlg
+Af. EpenthesisThenStrongSonorants: [bɔlg]
+  Diacritics START: In=	bɔlg
+  Diacritics END: Out=	bɔlg
+Af. Diacritics: [bɔlg]
+  FinalCleanup START: In=	bɔlg
+  FinalCleanup END: Out=	bɔlg
+Af. FinalCleanup: [bɔlg]
+bolg            -> [bɔlg]
+
+--- Transcribing: [ainm] ---
+Af. MarkDigraphsAndVocalisationTriggers: [ˈainm]
+  ConsonantResolution START (Proc): In=	ˈainm
+  ConsonantResolution START (Proc): In=	ˈainm
+    DBG (Consonan): Metathesis Sub-Stage START: 	ˈainm
+    DBG (Consonan): Metathesis Check: c_base=	�	c_pal=	false	n_base=	�	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	�	c_pal=	false	n_base=	a	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	a	c_pal=	false	n_base=	i	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	i	c_pal=	false	n_base=	n	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	n	c_pal=	false	n_base=	m	n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Check: c_base=	m	c_pal=	false	n_base=		n_pal=	false	at offset	6
+    DBG (Consonan): Metathesis Sub-Stage END: 	ˈainm
+    DBG (Consonan): After Pass 1 (markers): 	ˈainm
+    DBG (Consonan): Pass 2: Checking '	m	' at phon_idx 	6	 -> ortho_s:	6	ortho_e:	6
+    DBG (Consonan): Single cons rule: c_capture=	m	o_s=	6	o_e=	6
+    DBG (DetQual): Word:	ˈainm	Cons seq:	m	s:	6	e:	6
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	i	Prev quality implication:	slender
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Pass 2: Replaced '	m	' with '	m'	'
+    DBG (Consonan): After Pass 2 (single chars): 	ˈainm'
+  ConsonantResolution END (Proc): Out=	ˈainm'
+Af. ConsonantResolution: [ˈainm']
+  Stage4_0_SpecificOrthoToTempMarker START: In=	ˈainm'
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	ˈainm'
+Af. Stage4_0_SpecificOrthoToTempMarker: [ˈainm']
+  Stage4_0_1_Resolve_CH_Marker START: In=	ˈainm'
+  Stage4_0_1_Resolve_CH_Marker END: Out=	ˈainm'
+Af. Stage4_0_1_Resolve_CH_Marker: [ˈainm']
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	ˈainm'
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	ˈainm'
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [ˈainm']
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	ˈainm'
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	ˈ&AI_DIPH&nm'
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [ˈ&AI_DIPH&nm']
+  Stage4_4_ResolveTempVowelMarkers START: In=	ˈ&AI_DIPH&nm'
+    DBG (Stage4_4): Iter.gsub: Rule '	&AI_DIPH&(nm')	' APPLIED to '	ˈ&AI_DIPH&nm'	' -> '	ˈanm'	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	ˈ&AI_DIPH&nm'	' to '	ˈanm'	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	ˈanm'	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	ˈanm'
+Af. Stage4_4_ResolveTempVowelMarkers: [ˈanm']
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	ˈanm'
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	ˈanm'
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	ˈanm'
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	a	' APPLIED to '	ˈanm'	' -> '	ˈɑnm'	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	ˈanm'	' to '	ˈɑnm'	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	ˈɑnm'	'
+    DBG (Stage4_5): After core allophony rules: 	ˈɑnm'
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	ˈɑnm'
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	ˈɑnm'
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	ˈɑnm'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	ˈɑnm'
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [ˈɑnm']
+  EpenthesisThenStrongSonorants START: In=	ˈɑnm'
+  EpenthesisThenStrongSonorants END: Out=	ˈɑnm'
+Af. EpenthesisThenStrongSonorants: [ˈɑnm']
+  Diacritics START: In=	ˈɑnm'
+  Diacritics END: Out=	ˈɑnm'
+Af. Diacritics: [ˈɑnm']
+  FinalCleanup START: In=	ˈɑnm'
+  FinalCleanup END: Out=	ˈɑnm'
+Af. FinalCleanup: [ˈɑnm']
+ainm            -> [ˈɑnm']
+
+--- Transcribing: [gorm] ---
+Af. MarkDigraphsAndVocalisationTriggers: [gorm]
+  ConsonantResolution START (Proc): In=	gorm
+  ConsonantResolution START (Proc): In=	gorm
+    DBG (Consonan): Metathesis Sub-Stage START: 	gorm
+    DBG (Consonan): Metathesis Check: c_base=	g	c_pal=	false	n_base=	o	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	o	c_pal=	false	n_base=	r	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	r	c_pal=	false	n_base=	m	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	m	c_pal=	false	n_base=		n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Sub-Stage END: 	gorm
+    DBG (Consonan): After Pass 1 (markers): 	gorm
+    DBG (Consonan): Pass 2: Checking '	g	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	g	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	gorm	Cons seq:	g	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	o	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	g	' with '	g	'
+    DBG (Consonan): Pass 2: Checking '	r	' at phon_idx 	3	 -> ortho_s:	3	ortho_e:	3
+    DBG (Consonan): Single cons rule: c_capture=	r	o_s=	3	o_e=	3
+    DBG (DetQual): Word:	gorm	Cons seq:	r	s:	3	e:	3
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	o	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	r	' with '	r	'
+    DBG (Consonan): Pass 2: Checking '	m	' at phon_idx 	4	 -> ortho_s:	4	ortho_e:	4
+    DBG (Consonan): Single cons rule: c_capture=	m	o_s=	4	o_e=	4
+    DBG (DetQual): Word:	gorm	Cons seq:	m	s:	4	e:	4
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	o	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	m	' with '	m	'
+    DBG (Consonan): After Pass 2 (single chars): 	gorm
+  ConsonantResolution END (Proc): Out=	gorm
+Af. ConsonantResolution: [gorm]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	gorm
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	gorm
+Af. Stage4_0_SpecificOrthoToTempMarker: [gorm]
+  Stage4_0_1_Resolve_CH_Marker START: In=	gorm
+  Stage4_0_1_Resolve_CH_Marker END: Out=	gorm
+Af. Stage4_0_1_Resolve_CH_Marker: [gorm]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	gorm
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	gorm
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [gorm]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	gorm
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	gorm
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [gorm]
+  Stage4_4_ResolveTempVowelMarkers START: In=	gorm
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	gorm	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	gorm
+Af. Stage4_4_ResolveTempVowelMarkers: [gorm]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	gorm
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	gorm
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	gorm
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	o	' APPLIED to '	gorm	' -> '	gɔrm	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	gorm	' to '	gɔrm	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	gɔrm	'
+    DBG (Stage4_5): After core allophony rules: 	gɔrm
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	gɔrm
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	gɔrm
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	gɔrm
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	gɔrm
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [gɔrm]
+  EpenthesisThenStrongSonorants START: In=	gɔrm
+  EpenthesisThenStrongSonorants END: Out=	gɔrm
+Af. EpenthesisThenStrongSonorants: [gɔrm]
+  Diacritics START: In=	gɔrm
+  Diacritics END: Out=	gɔrm
+Af. Diacritics: [gɔrm]
+  FinalCleanup START: In=	gɔrm
+  FinalCleanup END: Out=	gɔrm
+Af. FinalCleanup: [gɔrm]
+gorm            -> [gɔrm]
+
+--- Transcribing: [seilf] ---
+Af. MarkDigraphsAndVocalisationTriggers: [seilf]
+  ConsonantResolution START (Proc): In=	seilf
+  ConsonantResolution START (Proc): In=	seilf
+    DBG (Consonan): Metathesis Sub-Stage START: 	seilf
+    DBG (Consonan): Metathesis Check: c_base=	s	c_pal=	false	n_base=	e	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	e	c_pal=	false	n_base=	i	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	i	c_pal=	false	n_base=	l	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	l	c_pal=	false	n_base=	f	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	f	c_pal=	false	n_base=		n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Sub-Stage END: 	seilf
+    DBG (Consonan): After Pass 1 (markers): 	seilf
+    DBG (Consonan): Pass 2: Checking '	s	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	s	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	seilf	Cons seq:	s	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	e	Next quality implication:	slender
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Pass 2: Replaced '	s	' with '	s'	'
+    DBG (Consonan): Pass 2: Checking '	f	' at phon_idx 	5	 -> ortho_s:	5	ortho_e:	5
+    DBG (Consonan): Single cons rule: c_capture=	f	o_s=	5	o_e=	5
+    DBG (DetQual): Word:	seilf	Cons seq:	f	s:	5	e:	5
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	i	Prev quality implication:	slender
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Pass 2: Replaced '	f	' with '	f'	'
+    DBG (Consonan): After Pass 2 (single chars): 	s'eilf'
+  ConsonantResolution END (Proc): Out=	s'eilf'
+Af. ConsonantResolution: [s'eilf']
+  Stage4_0_SpecificOrthoToTempMarker START: In=	s'eilf'
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	s'eilf'
+Af. Stage4_0_SpecificOrthoToTempMarker: [s'eilf']
+  Stage4_0_1_Resolve_CH_Marker START: In=	s'eilf'
+  Stage4_0_1_Resolve_CH_Marker END: Out=	s'eilf'
+Af. Stage4_0_1_Resolve_CH_Marker: [s'eilf']
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	s'eilf'
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	s'eilf'
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [s'eilf']
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	s'eilf'
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	s'&EI_DIPH&lf'
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [s'&EI_DIPH&lf']
+  Stage4_4_ResolveTempVowelMarkers START: In=	s'&EI_DIPH&lf'
+    DBG (Stage4_4): Iter.gsub: Rule '	&EI_DIPH&	' APPLIED to '	s'&EI_DIPH&lf'	' -> '	s'elf'	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	s'&EI_DIPH&lf'	' to '	s'elf'	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	s'elf'	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	s'elf'
+Af. Stage4_4_ResolveTempVowelMarkers: [s'elf']
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	s'elf'
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	s'elf'
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	s'elf'
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	s'elf'	'
+    DBG (Stage4_5): After core allophony rules: 	s'elf'
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	s'elf'
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	s'elf'
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	s'elf'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	s'elf'
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [s'elf']
+  EpenthesisThenStrongSonorants START: In=	s'elf'
+  EpenthesisThenStrongSonorants END: Out=	s'elf'
+Af. EpenthesisThenStrongSonorants: [s'elf']
+  Diacritics START: In=	s'elf'
+  Diacritics END: Out=	s'elf'
+Af. Diacritics: [s'elf']
+  FinalCleanup START: In=	s'elf'
+  FinalCleanup END: Out=	s'elf'
+Af. FinalCleanup: [s'elf']
+seilf           -> [s'elf']
+
+--- Transcribing: [dorcha] ---
+Af. MarkDigraphsAndVocalisationTriggers: [dor_CH_a]
+  ConsonantResolution START (Proc): In=	dor_CH_a
+  ConsonantResolution START (Proc): In=	dor_CH_a
+    DBG (Consonan): Metathesis Sub-Stage START: 	dor_CH_a
+    DBG (Consonan): Metathesis Check: c_base=	d	c_pal=	false	n_base=	o	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	o	c_pal=	false	n_base=	r	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	r	c_pal=	false	n_base=	_	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	C	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	C	c_pal=	false	n_base=	H	n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Check: c_base=	H	c_pal=	false	n_base=	_	n_pal=	false	at offset	6
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	a	n_pal=	false	at offset	7
+    DBG (Consonan): Metathesis Check: c_base=	a	c_pal=	false	n_base=		n_pal=	false	at offset	8
+    DBG (Consonan): Metathesis Sub-Stage END: 	dor_CH_a
+    DBG (Consonan): After Pass 1 (markers): 	dor_CH_a
+    DBG (Consonan): Pass 2: Checking '	d	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	d	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	dorcha	Cons seq:	d	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	o	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	d	' with '	d	'
+    DBG (Consonan): Pass 2: Checking '	r	' at phon_idx 	3	 -> ortho_s:	3	ortho_e:	3
+    DBG (Consonan): Single cons rule: c_capture=	r	o_s=	3	o_e=	3
+    DBG (DetQual): Word:	dorcha	Cons seq:	r	s:	3	e:	3
+    DBG (DetQual): Next vowel char:	a	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:	o	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	r	' with '	r	'
+    DBG (Consonan): After Pass 2 (single chars): 	dor_CH_a
+  ConsonantResolution END (Proc): Out=	dor_CH_a
+Af. ConsonantResolution: [dor_CH_a]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	dor_CH_a
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	dor_CH_a
+Af. Stage4_0_SpecificOrthoToTempMarker: [dor_CH_a]
+  Stage4_0_1_Resolve_CH_Marker START: In=	dor_CH_a
+    DBG (DetQual): Word:	dorcha	Cons seq:	ch	s:	4	e:	5
+    DBG (DetQual): Next vowel char:	a	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:	o	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+  Stage4_0_1_Resolve_CH_Marker END: Out=	dorxa
+Af. Stage4_0_1_Resolve_CH_Marker: [dorxa]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	dorxa
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	dorxa
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [dorxa]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	dorxa
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	dorxa
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [dorxa]
+  Stage4_4_ResolveTempVowelMarkers START: In=	dorxa
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	dorxa	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	dorxa
+Af. Stage4_4_ResolveTempVowelMarkers: [dorxa]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	dorxa
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	dorxa
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	dorxa
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	a	' APPLIED to '	dorxa	' -> '	dorxɑ	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub: Rule '	o	' APPLIED to '	dorxɑ	' -> '	dɔrxɑ	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	dorxa	' to '	dɔrxɑ	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	dɔrxɑ	'
+    DBG (Stage4_5): After core allophony rules: 	dɔrxɑ
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	dɔrxɑ
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	dɔrxɑ
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	dɔrxɑ
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	dɔrxɑ
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [dɔrxɑ]
+  EpenthesisThenStrongSonorants START: In=	dɔrxɑ
+  EpenthesisThenStrongSonorants END: Out=	dɔrxɑ
+Af. EpenthesisThenStrongSonorants: [dɔrxɑ]
+  Diacritics START: In=	dɔrxɑ
+  Diacritics END: Out=	dɔrxɑ
+Af. Diacritics: [dɔrxɑ]
+  FinalCleanup START: In=	dɔrxɑ
+  FinalCleanup END: Out=	dɔrxɑ
+Af. FinalCleanup: [dɔrxɑ]
+dorcha          -> [dɔrxɑ]
+
+--- Transcribing: [olc] ---
+Af. MarkDigraphsAndVocalisationTriggers: [ˈolc]
+  ConsonantResolution START (Proc): In=	ˈolc
+  ConsonantResolution START (Proc): In=	ˈolc
+    DBG (Consonan): Metathesis Sub-Stage START: 	ˈolc
+    DBG (Consonan): Metathesis Check: c_base=	�	c_pal=	false	n_base=	�	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	�	c_pal=	false	n_base=	o	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	o	c_pal=	false	n_base=	l	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	l	c_pal=	false	n_base=	c	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	c	c_pal=	false	n_base=		n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Sub-Stage END: 	ˈolc
+    DBG (Consonan): After Pass 1 (markers): 	ˈolc
+    DBG (Consonan): Pass 2: Checking '	c	' at phon_idx 	5	 -> ortho_s:	5	ortho_e:	5
+    DBG (Consonan): Single cons rule: c_capture=	c	o_s=	5	o_e=	5
+    DBG (DetQual): Word:	ˈolc	Cons seq:	c	s:	5	e:	5
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	o	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	c	' with '	k	'
+    DBG (Consonan): After Pass 2 (single chars): 	ˈolk
+  ConsonantResolution END (Proc): Out=	ˈolk
+Af. ConsonantResolution: [ˈolk]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	ˈolk
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	ˈolk
+Af. Stage4_0_SpecificOrthoToTempMarker: [ˈolk]
+  Stage4_0_1_Resolve_CH_Marker START: In=	ˈolk
+  Stage4_0_1_Resolve_CH_Marker END: Out=	ˈolk
+Af. Stage4_0_1_Resolve_CH_Marker: [ˈolk]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	ˈolk
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	ˈolk
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [ˈolk]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	ˈolk
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	ˈolk
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [ˈolk]
+  Stage4_4_ResolveTempVowelMarkers START: In=	ˈolk
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	ˈolk	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	ˈolk
+Af. Stage4_4_ResolveTempVowelMarkers: [ˈolk]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	ˈolk
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	ˈolk
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	ˈolk
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	o	' APPLIED to '	ˈolk	' -> '	ˈɔlk	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	ˈolk	' to '	ˈɔlk	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	ˈɔlk	'
+    DBG (Stage4_5): After core allophony rules: 	ˈɔlk
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	ˈɔlk
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	ˈɔlk
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	ˈɔlk
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	ˈɔlk
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [ˈɔlk]
+  EpenthesisThenStrongSonorants START: In=	ˈɔlk
+  EpenthesisThenStrongSonorants END: Out=	ˈɔlk
+Af. EpenthesisThenStrongSonorants: [ˈɔlk]
+  Diacritics START: In=	ˈɔlk
+  Diacritics END: Out=	ˈɔlk
+Af. Diacritics: [ˈɔlk]
+  FinalCleanup START: In=	ˈɔlk
+  FinalCleanup END: Out=	ˈɔlk
+Af. FinalCleanup: [ˈɔlk]
+olc             -> [ˈɔlk]
+
+--- Transcribing: [oilc] ---
+Af. MarkDigraphsAndVocalisationTriggers: [ˈoilc]
+  ConsonantResolution START (Proc): In=	ˈoilc
+  ConsonantResolution START (Proc): In=	ˈoilc
+    DBG (Consonan): Metathesis Sub-Stage START: 	ˈoilc
+    DBG (Consonan): Metathesis Check: c_base=	�	c_pal=	false	n_base=	�	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	�	c_pal=	false	n_base=	o	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	o	c_pal=	false	n_base=	i	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	i	c_pal=	false	n_base=	l	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	l	c_pal=	false	n_base=	c	n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Check: c_base=	c	c_pal=	false	n_base=		n_pal=	false	at offset	6
+    DBG (Consonan): Metathesis Sub-Stage END: 	ˈoilc
+    DBG (Consonan): After Pass 1 (markers): 	ˈoilc
+    DBG (Consonan): Pass 2: Checking '	c	' at phon_idx 	6	 -> ortho_s:	6	ortho_e:	6
+    DBG (Consonan): Single cons rule: c_capture=	c	o_s=	6	o_e=	6
+    DBG (DetQual): Word:	ˈoilc	Cons seq:	c	s:	6	e:	6
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	i	Prev quality implication:	slender
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Pass 2: Replaced '	c	' with '	k'	'
+    DBG (Consonan): After Pass 2 (single chars): 	ˈoilk'
+  ConsonantResolution END (Proc): Out=	ˈoilk'
+Af. ConsonantResolution: [ˈoilk']
+  Stage4_0_SpecificOrthoToTempMarker START: In=	ˈoilk'
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	ˈoilk'
+Af. Stage4_0_SpecificOrthoToTempMarker: [ˈoilk']
+  Stage4_0_1_Resolve_CH_Marker START: In=	ˈoilk'
+  Stage4_0_1_Resolve_CH_Marker END: Out=	ˈoilk'
+Af. Stage4_0_1_Resolve_CH_Marker: [ˈoilk']
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	ˈoilk'
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	ˈoilk'
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [ˈoilk']
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	ˈoilk'
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	ˈ&OI_DIPH&lk'
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [ˈ&OI_DIPH&lk']
+  Stage4_4_ResolveTempVowelMarkers START: In=	ˈ&OI_DIPH&lk'
+    DBG (Stage4_4): Iter.gsub: Rule '	&OI_DIPH&([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾ]*')	' APPLIED to '	ˈ&OI_DIPH&lk'	' -> '	ˈɛlk'	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	ˈ&OI_DIPH&lk'	' to '	ˈɛlk'	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	ˈɛlk'	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	ˈɛlk'
+Af. Stage4_4_ResolveTempVowelMarkers: [ˈɛlk']
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	ˈɛlk'
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	ˈɛlk'
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	ˈɛlk'
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	ˈɛlk'	'
+    DBG (Stage4_5): After core allophony rules: 	ˈɛlk'
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	ˈɛlk'
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	ˈɛlk'
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	ˈɛlk'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	ˈɛlk'
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [ˈɛlk']
+  EpenthesisThenStrongSonorants START: In=	ˈɛlk'
+  EpenthesisThenStrongSonorants END: Out=	ˈɛlk'
+Af. EpenthesisThenStrongSonorants: [ˈɛlk']
+  Diacritics START: In=	ˈɛlk'
+  Diacritics END: Out=	ˈɛlk'
+Af. Diacritics: [ˈɛlk']
+  FinalCleanup START: In=	ˈɛlk'
+  FinalCleanup END: Out=	ˈɛlk'
+Af. FinalCleanup: [ˈɛlk']
+oilc            -> [ˈɛlk']
+
+--- Transcribing: [dearc] ---
+Af. MarkDigraphsAndVocalisationTriggers: [dearc]
+  ConsonantResolution START (Proc): In=	dearc
+  ConsonantResolution START (Proc): In=	dearc
+    DBG (Consonan): Metathesis Sub-Stage START: 	dearc
+    DBG (Consonan): Metathesis Check: c_base=	d	c_pal=	false	n_base=	e	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	e	c_pal=	false	n_base=	a	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	a	c_pal=	false	n_base=	r	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	r	c_pal=	false	n_base=	c	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	c	c_pal=	false	n_base=		n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Sub-Stage END: 	dearc
+    DBG (Consonan): After Pass 1 (markers): 	dearc
+    DBG (Consonan): Pass 2: Checking '	d	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	d	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	dearc	Cons seq:	d	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	e	Next quality implication:	slender
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Pass 2: Replaced '	d	' with '	d'	'
+    DBG (Consonan): Pass 2: Checking '	r	' at phon_idx 	4	 -> ortho_s:	4	ortho_e:	4
+    DBG (Consonan): Single cons rule: c_capture=	r	o_s=	4	o_e=	4
+    DBG (DetQual): Word:	dearc	Cons seq:	r	s:	4	e:	4
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	e	Prev quality implication:	slender
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Pass 2: Replaced '	r	' with '	r'	'
+    DBG (Consonan): Pass 2: Checking '	c	' at phon_idx 	5	 -> ortho_s:	5	ortho_e:	5
+    DBG (Consonan): Single cons rule: c_capture=	c	o_s=	5	o_e=	5
+    DBG (DetQual): Word:	dearc	Cons seq:	c	s:	5	e:	5
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	a	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	c	' with '	k	'
+    DBG (Consonan): After Pass 2 (single chars): 	d'ear'k
+  ConsonantResolution END (Proc): Out=	d'ear'k
+Af. ConsonantResolution: [d'ear'k]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	d'ear'k
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	d'&EA_SLENDER_PRE_RPRIME&r'k
+Af. Stage4_0_SpecificOrthoToTempMarker: [d'&EA_SLENDER_PRE_RPRIME&r'k]
+  Stage4_0_1_Resolve_CH_Marker START: In=	d'&EA_SLENDER_PRE_RPRIME&r'k
+  Stage4_0_1_Resolve_CH_Marker END: Out=	d'&EA_SLENDER_PRE_RPRIME&r'k
+Af. Stage4_0_1_Resolve_CH_Marker: [d'&EA_SLENDER_PRE_RPRIME&r'k]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	d'&EA_SLENDER_PRE_RPRIME&r'k
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	d'&EA_SLENDER_PRE_RPRIME&r'k
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [d'&EA_SLENDER_PRE_RPRIME&r'k]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	d'&EA_SLENDER_PRE_RPRIME&r'k
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	d'&EA_SLENDER_PRE_RPRIME&r'k
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [d'&EA_SLENDER_PRE_RPRIME&r'k]
+  Stage4_4_ResolveTempVowelMarkers START: In=	d'&EA_SLENDER_PRE_RPRIME&r'k
+    DBG (Stage4_4): Iter.gsub: Rule '	&EA_SLENDER_PRE_RPRIME&	' APPLIED to '	d'&EA_SLENDER_PRE_RPRIME&r'k	' -> '	d'ær'k	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	d'&EA_SLENDER_PRE_RPRIME&r'k	' to '	d'ær'k	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	d'ær'k	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	d'ær'k
+Af. Stage4_4_ResolveTempVowelMarkers: [d'ær'k]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	d'ær'k
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	d'ær'k
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	d'ær'k
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	d'ær'k	'
+    DBG (Stage4_5): After core allophony rules: 	d'ær'k
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	d'ær'k
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	d'ær'k
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	d'ær'k
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	d'ær'k
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [d'ær'k]
+  EpenthesisThenStrongSonorants START: In=	d'ær'k
+  EpenthesisThenStrongSonorants END: Out=	d'ær'k
+Af. EpenthesisThenStrongSonorants: [d'ær'k]
+  Diacritics START: In=	d'ær'k
+  Diacritics END: Out=	d'ær'k
+Af. Diacritics: [d'ær'k]
+  FinalCleanup START: In=	d'ær'k
+  FinalCleanup END: Out=	d'ær'k
+Af. FinalCleanup: [d'ær'k]
+dearc           -> [d'ær'k]
+
+--- Transcribing: [feirc] ---
+Af. MarkDigraphsAndVocalisationTriggers: [feirc]
+  ConsonantResolution START (Proc): In=	feirc
+  ConsonantResolution START (Proc): In=	feirc
+    DBG (Consonan): Metathesis Sub-Stage START: 	feirc
+    DBG (Consonan): Metathesis Check: c_base=	f	c_pal=	false	n_base=	e	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis Check: c_base=	e	c_pal=	false	n_base=	i	n_pal=	false	at offset	2
+    DBG (Consonan): Metathesis Check: c_base=	i	c_pal=	false	n_base=	r	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	r	c_pal=	false	n_base=	c	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	c	c_pal=	false	n_base=		n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Sub-Stage END: 	feirc
+    DBG (Consonan): After Pass 1 (markers): 	feirc
+    DBG (Consonan): Pass 2: Checking '	f	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	f	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	feirc	Cons seq:	f	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	e	Next quality implication:	slender
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Pass 2: Replaced '	f	' with '	f'	'
+    DBG (Consonan): Pass 2: Checking '	r	' at phon_idx 	4	 -> ortho_s:	4	ortho_e:	4
+    DBG (Consonan): Single cons rule: c_capture=	r	o_s=	4	o_e=	4
+    DBG (DetQual): Word:	feirc	Cons seq:	r	s:	4	e:	4
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	i	Prev quality implication:	slender
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Pass 2: Replaced '	r	' with '	r'	'
+    DBG (Consonan): Pass 2: Checking '	c	' at phon_idx 	5	 -> ortho_s:	5	ortho_e:	5
+    DBG (Consonan): Single cons rule: c_capture=	c	o_s=	5	o_e=	5
+    DBG (DetQual): Word:	feirc	Cons seq:	c	s:	5	e:	5
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	i	Prev quality implication:	slender
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Pass 2: Replaced '	c	' with '	k'	'
+    DBG (Consonan): After Pass 2 (single chars): 	f'eir'k'
+  ConsonantResolution END (Proc): Out=	f'eir'k'
+Af. ConsonantResolution: [f'eir'k']
+  Stage4_0_SpecificOrthoToTempMarker START: In=	f'eir'k'
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	f'eir'k'
+Af. Stage4_0_SpecificOrthoToTempMarker: [f'eir'k']
+  Stage4_0_1_Resolve_CH_Marker START: In=	f'eir'k'
+  Stage4_0_1_Resolve_CH_Marker END: Out=	f'eir'k'
+Af. Stage4_0_1_Resolve_CH_Marker: [f'eir'k']
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	f'eir'k'
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	f'eir'k'
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [f'eir'k']
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	f'eir'k'
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	f'&EI_DIPH&r'k'
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [f'&EI_DIPH&r'k']
+  Stage4_4_ResolveTempVowelMarkers START: In=	f'&EI_DIPH&r'k'
+    DBG (Stage4_4): Iter.gsub: Rule '	&EI_DIPH&	' APPLIED to '	f'&EI_DIPH&r'k'	' -> '	f'er'k'	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	f'&EI_DIPH&r'k'	' to '	f'er'k'	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	f'er'k'	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	f'er'k'
+Af. Stage4_4_ResolveTempVowelMarkers: [f'er'k']
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	f'er'k'
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	f'er'k'
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	f'er'k'
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	f'er'k'	'
+    DBG (Stage4_5): After core allophony rules: 	f'er'k'
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	f'er'k'
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	f'er'k'
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	f'er'k'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	f'er'k'
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [f'er'k']
+  EpenthesisThenStrongSonorants START: In=	f'er'k'
+  EpenthesisThenStrongSonorants END: Out=	f'er'k'
+Af. EpenthesisThenStrongSonorants: [f'er'k']
+  Diacritics START: In=	f'er'k'
+  Diacritics END: Out=	f'er'k'
+Af. Diacritics: [f'er'k']
+  FinalCleanup START: In=	f'er'k'
+  FinalCleanup END: Out=	f'er'k'
+Af. FinalCleanup: [f'er'k']
+feirc           -> [f'er'k']
+
+--- Transcribing: [cnámh] ---
+Af. MarkDigraphsAndVocalisationTriggers: [cn&A_ACUTE_LONG_VOC_M_FINAL&h]
+  ConsonantResolution START (Proc): In=	cn&A_ACUTE_LONG_VOC_M_FINAL&h
+  ConsonantResolution START (Proc): In=	cn&A_ACUTE_LONG_VOC_M_FINAL&h
+    DBG (Consonan): Metathesis Sub-Stage START: 	cn&A_ACUTE_LONG_VOC_M_FINAL&h
+    DBG (Consonan): Metathesis Check: c_base=	c	c_pal=	false	n_base=	n	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis candidate found: 	cn
+    DBG (DetQual): Word:	cnámh	Cons seq:	n	s:	2	e:	2
+    DBG (DetQual): Next vowel char:	�	Next quality implication:	slender
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Original ortho 'n' (at ortho idx 2) quality was: 	palatal	. Thus, quality for metathesized 'r': 	palatal
+    DBG (Consonan): Metathesis Check: c_base=	&	c_pal=	false	n_base=	A	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	A	c_pal=	false	n_base=	_	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	A	n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Check: c_base=	A	c_pal=	false	n_base=	C	n_pal=	false	at offset	6
+    DBG (Consonan): Metathesis Check: c_base=	C	c_pal=	false	n_base=	U	n_pal=	false	at offset	7
+    DBG (Consonan): Metathesis Check: c_base=	U	c_pal=	false	n_base=	T	n_pal=	false	at offset	8
+    DBG (Consonan): Metathesis Check: c_base=	T	c_pal=	false	n_base=	E	n_pal=	false	at offset	9
+    DBG (Consonan): Metathesis Check: c_base=	E	c_pal=	false	n_base=	_	n_pal=	false	at offset	10
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	L	n_pal=	false	at offset	11
+    DBG (Consonan): Metathesis Check: c_base=	L	c_pal=	false	n_base=	O	n_pal=	false	at offset	12
+    DBG (Consonan): Metathesis Check: c_base=	O	c_pal=	false	n_base=	N	n_pal=	false	at offset	13
+    DBG (Consonan): Metathesis Check: c_base=	N	c_pal=	false	n_base=	G	n_pal=	false	at offset	14
+    DBG (Consonan): Metathesis Check: c_base=	G	c_pal=	false	n_base=	_	n_pal=	false	at offset	15
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	V	n_pal=	false	at offset	16
+    DBG (Consonan): Metathesis Check: c_base=	V	c_pal=	false	n_base=	O	n_pal=	false	at offset	17
+    DBG (Consonan): Metathesis Check: c_base=	O	c_pal=	false	n_base=	C	n_pal=	false	at offset	18
+    DBG (Consonan): Metathesis Check: c_base=	C	c_pal=	false	n_base=	_	n_pal=	false	at offset	19
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	M	n_pal=	false	at offset	20
+    DBG (Consonan): Metathesis Check: c_base=	M	c_pal=	false	n_base=	_	n_pal=	false	at offset	21
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	F	n_pal=	false	at offset	22
+    DBG (Consonan): Metathesis Check: c_base=	F	c_pal=	false	n_base=	I	n_pal=	false	at offset	23
+    DBG (Consonan): Metathesis Check: c_base=	I	c_pal=	false	n_base=	N	n_pal=	false	at offset	24
+    DBG (Consonan): Metathesis Check: c_base=	N	c_pal=	false	n_base=	A	n_pal=	false	at offset	25
+    DBG (Consonan): Metathesis Check: c_base=	A	c_pal=	false	n_base=	L	n_pal=	false	at offset	26
+    DBG (Consonan): Metathesis Check: c_base=	L	c_pal=	false	n_base=	&	n_pal=	false	at offset	27
+    DBG (Consonan): Metathesis Check: c_base=	&	c_pal=	false	n_base=	h	n_pal=	false	at offset	28
+    DBG (Consonan): Metathesis Check: c_base=	h	c_pal=	false	n_base=		n_pal=	false	at offset	29
+    DBG (Consonan): Metathesis Sub-Stage END: 	cr'&A_ACUTE_LONG_VOC_M_FINAL&h
+    DBG (Consonan): After Pass 1 (markers): 	cr'&A_ACUTE_LONG_VOC_M_FINAL&h
+    DBG (Consonan): Pass 2: Checking '	c	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	c	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	cnámh	Cons seq:	c	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	�	Next quality implication:	slender
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Pass 2: Replaced '	c	' with '	k'	'
+    DBG (Consonan): Pass 2: Checking '	r	' at phon_idx 	2	 -> ortho_s:	2	ortho_e:	2
+    DBG (Consonan): Single cons rule: c_capture=	r	o_s=	2	o_e=	2
+    DBG (DetQual): Word:	cnámh	Cons seq:	n	s:	2	e:	2
+    DBG (DetQual): Next vowel char:	�	Next quality implication:	slender
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Pass 2: Replaced '	r	' with '	r'	'
+    DBG (Consonan): Pass 2: Checking '	h	' at phon_idx 	30	 -> ortho_s:	30	ortho_e:	30
+    DBG (Consonan): Single cons rule: c_capture=	h	o_s=	30	o_e=	30
+    DBG (DetQual): Bailing: Invalid indices or word for: 	cnámh	30	30
+    DBG (Consonan): Pass 2: Replaced '	h	' with '	h	'
+    DBG (Consonan): After Pass 2 (single chars): 	k'r''&A_ACUTE_LONG_VOC_M_FINAL&h
+  ConsonantResolution END (Proc): Out=	k'r''&A_ACUTE_LONG_VOC_M_FINAL&h
+Af. ConsonantResolution: [k'r''&A_ACUTE_LONG_VOC_M_FINAL&h]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	k'r''&A_ACUTE_LONG_VOC_M_FINAL&h
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	k'r''&A_ACUTE_LONG_VOC_M_FINAL&h
+Af. Stage4_0_SpecificOrthoToTempMarker: [k'r''&A_ACUTE_LONG_VOC_M_FINAL&h]
+  Stage4_0_1_Resolve_CH_Marker START: In=	k'r''&A_ACUTE_LONG_VOC_M_FINAL&h
+  Stage4_0_1_Resolve_CH_Marker END: Out=	k'r''&A_ACUTE_LONG_VOC_M_FINAL&h
+Af. Stage4_0_1_Resolve_CH_Marker: [k'r''&A_ACUTE_LONG_VOC_M_FINAL&h]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	k'r''&A_ACUTE_LONG_VOC_M_FINAL&h
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	k'r''&A_ACUTE_LONG_VOC_M_FINAL&h
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [k'r''&A_ACUTE_LONG_VOC_M_FINAL&h]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	k'r''&A_ACUTE_LONG_VOC_M_FINAL&h
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	k'r''&A_ACUTE_LONG_VOC_M_FINAL&h
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [k'r''&A_ACUTE_LONG_VOC_M_FINAL&h]
+  Stage4_4_ResolveTempVowelMarkers START: In=	k'r''&A_ACUTE_LONG_VOC_M_FINAL&h
+    DBG (Stage4_4): Iter.gsub: Rule '	&A_ACUTE_LONG_VOC_M_FINAL&(#?)	' APPLIED to '	k'r''&A_ACUTE_LONG_VOC_M_FINAL&h	' -> '	k'r''ɑːvh	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	k'r''&A_ACUTE_LONG_VOC_M_FINAL&h	' to '	k'r''ɑːvh	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	k'r''ɑːvh	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	k'r''ɑːvh
+Af. Stage4_4_ResolveTempVowelMarkers: [k'r''ɑːvh]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	k'r''ɑːvh
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	k'r''ɑːvh
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): Placeholder created: '	ɑː	' -> '	&PHON_A_LONG&	'. Result: '	k'r''&PHON_A_LONG&vh	'
+    DBG (Stage4_5): After placeholder creation: 	k'r''&PHON_A_LONG&vh
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	k'r''&PHON_A_LONG&vh	'
+    DBG (Stage4_5): After core allophony rules: 	k'r''&PHON_A_LONG&vh
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): Placeholder restored: '	&PHON_A_LONG&	' -> '	ɑː	'. Result: '	k'r''ɑːvh	'
+    DBG (Stage4_5): After placeholder restoration: 	k'r''ɑːvh
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	k'r''ɑːvh
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	k'r''ɑːvh
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	k'r''ɑːvh
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [k'r''ɑːvh]
+  EpenthesisThenStrongSonorants START: In=	k'r''ɑːvh
+  EpenthesisThenStrongSonorants END: Out=	k'r''ɑːvh
+Af. EpenthesisThenStrongSonorants: [k'r''ɑːvh]
+  Diacritics START: In=	k'r''ɑːvh
+  Diacritics END: Out=	k'r''ɑːvh
+Af. Diacritics: [k'r''ɑːvh]
+  FinalCleanup START: In=	k'r''ɑːvh
+  FinalCleanup END: Out=	k'r''ɑːvh
+Af. FinalCleanup: [k'r''ɑːvh]
+cnámh          -> [k'r''ɑːvh]
+
+--- Transcribing: [cnead] ---
+Af. MarkDigraphsAndVocalisationTriggers: [cnead]
+  ConsonantResolution START (Proc): In=	cnead
+  ConsonantResolution START (Proc): In=	cnead
+    DBG (Consonan): Metathesis Sub-Stage START: 	cnead
+    DBG (Consonan): Metathesis Check: c_base=	c	c_pal=	false	n_base=	n	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis candidate found: 	cn
+    DBG (DetQual): Word:	cnead	Cons seq:	n	s:	2	e:	2
+    DBG (DetQual): Next vowel char:	e	Next quality implication:	slender
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Original ortho 'n' (at ortho idx 2) quality was: 	palatal	. Thus, quality for metathesized 'r': 	palatal
+    DBG (Consonan): Metathesis Check: c_base=	e	c_pal=	false	n_base=	a	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	a	c_pal=	false	n_base=	d	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	d	c_pal=	false	n_base=		n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Sub-Stage END: 	cr'ead
+    DBG (Consonan): After Pass 1 (markers): 	cr'ead
+    DBG (Consonan): Pass 2: Checking '	c	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	c	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	cnead	Cons seq:	c	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	e	Next quality implication:	slender
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Pass 2: Replaced '	c	' with '	k'	'
+    DBG (Consonan): Pass 2: Checking '	r	' at phon_idx 	2	 -> ortho_s:	2	ortho_e:	2
+    DBG (Consonan): Single cons rule: c_capture=	r	o_s=	2	o_e=	2
+    DBG (DetQual): Word:	cnead	Cons seq:	n	s:	2	e:	2
+    DBG (DetQual): Next vowel char:	e	Next quality implication:	slender
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Pass 2: Replaced '	r	' with '	r'	'
+    DBG (Consonan): Pass 2: Checking '	d	' at phon_idx 	6	 -> ortho_s:	6	ortho_e:	6
+    DBG (Consonan): Single cons rule: c_capture=	d	o_s=	6	o_e=	6
+    DBG (DetQual): Bailing: Invalid indices or word for: 	cnead	6	6
+    DBG (Consonan): Pass 2: Replaced '	d	' with '	d	'
+    DBG (Consonan): After Pass 2 (single chars): 	k'r''ead
+  ConsonantResolution END (Proc): Out=	k'r''ead
+Af. ConsonantResolution: [k'r''ead]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	k'r''ead
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	k'r''ead
+Af. Stage4_0_SpecificOrthoToTempMarker: [k'r''ead]
+  Stage4_0_1_Resolve_CH_Marker START: In=	k'r''ead
+  Stage4_0_1_Resolve_CH_Marker END: Out=	k'r''ead
+Af. Stage4_0_1_Resolve_CH_Marker: [k'r''ead]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	k'r''ead
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	k'r''ead
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [k'r''ead]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	k'r''ead
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	k'r''ead
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [k'r''ead]
+  Stage4_4_ResolveTempVowelMarkers START: In=	k'r''ead
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	k'r''ead	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	k'r''ead
+Af. Stage4_4_ResolveTempVowelMarkers: [k'r''ead]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	k'r''ead
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	k'r''ead
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	k'r''ead
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	a	' APPLIED to '	k'r''ead	' -> '	k'r''eɑd	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	k'r''ead	' to '	k'r''eɑd	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	k'r''eɑd	'
+    DBG (Stage4_5): After core allophony rules: 	k'r''eɑd
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	k'r''eɑd
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	k'r''eɑd
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	k'r''eɑd
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	k'r''eɑd
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [k'r''eɑd]
+  EpenthesisThenStrongSonorants START: In=	k'r''eɑd
+  EpenthesisThenStrongSonorants END: Out=	k'r''eɑd
+Af. EpenthesisThenStrongSonorants: [k'r''eɑd]
+  Diacritics START: In=	k'r''eɑd
+  Diacritics END: Out=	k'r''eɑd
+Af. Diacritics: [k'r''eɑd]
+  FinalCleanup START: In=	k'r''eɑd
+  FinalCleanup END: Out=	k'r''eɑd
+Af. FinalCleanup: [k'r''eɑd]
+cnead           -> [k'r''eɑd]
+
+--- Transcribing: [cnoc] ---
+Af. MarkDigraphsAndVocalisationTriggers: [cnoc]
+  ConsonantResolution START (Proc): In=	cnoc
+  ConsonantResolution START (Proc): In=	cnoc
+    DBG (Consonan): Metathesis Sub-Stage START: 	cnoc
+    DBG (Consonan): Metathesis Check: c_base=	c	c_pal=	false	n_base=	n	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis candidate found: 	cn
+    DBG (DetQual): Word:	cnoc	Cons seq:	n	s:	2	e:	2
+    DBG (DetQual): Next vowel char:	o	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Original ortho 'n' (at ortho idx 2) quality was: 	nonpalatal	. Thus, quality for metathesized 'r': 	nonpalatal
+    DBG (Consonan): Metathesis Check: c_base=	o	c_pal=	false	n_base=	c	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	c	c_pal=	false	n_base=		n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Sub-Stage END: 	croc
+    DBG (Consonan): After Pass 1 (markers): 	croc
+    DBG (Consonan): Pass 2: Checking '	c	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	c	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	cnoc	Cons seq:	c	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	o	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	c	' with '	k	'
+    DBG (Consonan): Pass 2: Checking '	r	' at phon_idx 	2	 -> ortho_s:	2	ortho_e:	2
+    DBG (Consonan): Single cons rule: c_capture=	r	o_s=	2	o_e=	2
+    DBG (DetQual): Word:	cnoc	Cons seq:	n	s:	2	e:	2
+    DBG (DetQual): Next vowel char:	o	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	r	' with '	r	'
+    DBG (Consonan): Pass 2: Checking '	c	' at phon_idx 	4	 -> ortho_s:	4	ortho_e:	4
+    DBG (Consonan): Single cons rule: c_capture=	c	o_s=	4	o_e=	4
+    DBG (DetQual): Word:	cnoc	Cons seq:	c	s:	4	e:	4
+    DBG (DetQual): Next vowel char:
+    DBG (DetQual): Prev vowel char:	o	Prev quality implication:	broad
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	c	' with '	k	'
+    DBG (Consonan): After Pass 2 (single chars): 	krok
+  ConsonantResolution END (Proc): Out=	krok
+Af. ConsonantResolution: [krok]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	krok
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	krok
+Af. Stage4_0_SpecificOrthoToTempMarker: [krok]
+  Stage4_0_1_Resolve_CH_Marker START: In=	krok
+  Stage4_0_1_Resolve_CH_Marker END: Out=	krok
+Af. Stage4_0_1_Resolve_CH_Marker: [krok]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	krok
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	krok
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [krok]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	krok
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	krok
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [krok]
+  Stage4_4_ResolveTempVowelMarkers START: In=	krok
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	krok	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	krok
+Af. Stage4_4_ResolveTempVowelMarkers: [krok]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	krok
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	krok
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): After placeholder creation: 	krok
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub: Rule '	o	' APPLIED to '	krok	' -> '	krɔk	' (	1	x)
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. String changed from '	krok	' to '	krɔk	'
+    DBG (Stage4_5): Core Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	krɔk	'
+    DBG (Stage4_5): After core allophony rules: 	krɔk
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): After placeholder restoration: 	krɔk
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	krɔk
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	krɔk
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	krɔk
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [krɔk]
+  EpenthesisThenStrongSonorants START: In=	krɔk
+  EpenthesisThenStrongSonorants END: Out=	krɔk
+Af. EpenthesisThenStrongSonorants: [krɔk]
+  Diacritics START: In=	krɔk
+  Diacritics END: Out=	krɔk
+Af. Diacritics: [krɔk]
+  FinalCleanup START: In=	krɔk
+  FinalCleanup END: Out=	krɔk
+Af. FinalCleanup: [krɔk]
+cnoc            -> [krɔk]
+
+--- Transcribing: [gnaoi] ---
+Af. MarkDigraphsAndVocalisationTriggers: [gn&AOI_LONG&]
+  ConsonantResolution START (Proc): In=	gn&AOI_LONG&
+  ConsonantResolution START (Proc): In=	gn&AOI_LONG&
+    DBG (Consonan): Metathesis Sub-Stage START: 	gn&AOI_LONG&
+    DBG (Consonan): Metathesis Check: c_base=	g	c_pal=	false	n_base=	n	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis candidate found: 	gn
+    DBG (DetQual): Word:	gnaoi	Cons seq:	n	s:	2	e:	2
+    DBG (DetQual): Next vowel char:	a	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Original ortho 'n' (at ortho idx 2) quality was: 	nonpalatal	. Thus, quality for metathesized 'r': 	nonpalatal
+    DBG (Consonan): Metathesis Check: c_base=	&	c_pal=	false	n_base=	A	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	A	c_pal=	false	n_base=	O	n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Check: c_base=	O	c_pal=	false	n_base=	I	n_pal=	false	at offset	5
+    DBG (Consonan): Metathesis Check: c_base=	I	c_pal=	false	n_base=	_	n_pal=	false	at offset	6
+    DBG (Consonan): Metathesis Check: c_base=	_	c_pal=	false	n_base=	L	n_pal=	false	at offset	7
+    DBG (Consonan): Metathesis Check: c_base=	L	c_pal=	false	n_base=	O	n_pal=	false	at offset	8
+    DBG (Consonan): Metathesis Check: c_base=	O	c_pal=	false	n_base=	N	n_pal=	false	at offset	9
+    DBG (Consonan): Metathesis Check: c_base=	N	c_pal=	false	n_base=	G	n_pal=	false	at offset	10
+    DBG (Consonan): Metathesis Check: c_base=	G	c_pal=	false	n_base=	&	n_pal=	false	at offset	11
+    DBG (Consonan): Metathesis Check: c_base=	&	c_pal=	false	n_base=		n_pal=	false	at offset	12
+    DBG (Consonan): Metathesis Sub-Stage END: 	gr&AOI_LONG&
+    DBG (Consonan): After Pass 1 (markers): 	gr&AOI_LONG&
+    DBG (Consonan): Pass 2: Checking '	g	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	g	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	gnaoi	Cons seq:	g	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	a	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	g	' with '	g	'
+    DBG (Consonan): Pass 2: Checking '	r	' at phon_idx 	2	 -> ortho_s:	2	ortho_e:	2
+    DBG (Consonan): Single cons rule: c_capture=	r	o_s=	2	o_e=	2
+    DBG (DetQual): Word:	gnaoi	Cons seq:	n	s:	2	e:	2
+    DBG (DetQual): Next vowel char:	a	Next quality implication:	broad
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	nonpalatal
+    DBG (Consonan): Pass 2: Replaced '	r	' with '	r	'
+    DBG (Consonan): After Pass 2 (single chars): 	gr&AOI_LONG&
+  ConsonantResolution END (Proc): Out=	gr&AOI_LONG&
+Af. ConsonantResolution: [gr&AOI_LONG&]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	gr&AOI_LONG&
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	gr&AOI_LONG&
+Af. Stage4_0_SpecificOrthoToTempMarker: [gr&AOI_LONG&]
+  Stage4_0_1_Resolve_CH_Marker START: In=	gr&AOI_LONG&
+  Stage4_0_1_Resolve_CH_Marker END: Out=	gr&AOI_LONG&
+Af. Stage4_0_1_Resolve_CH_Marker: [gr&AOI_LONG&]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	gr&AOI_LONG&
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	gr&AOI_LONG&
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [gr&AOI_LONG&]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	gr&AOI_LONG&
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	gr&AOI_LONG&
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [gr&AOI_LONG&]
+  Stage4_4_ResolveTempVowelMarkers START: In=	gr&AOI_LONG&
+    DBG (Stage4_4): Iter.gsub: Rule '	&AOI_LONG&	' APPLIED to '	gr&AOI_LONG&	' -> '	griː	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	gr&AOI_LONG&	' to '	griː	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	griː	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	griː
+Af. Stage4_4_ResolveTempVowelMarkers: [griː]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	griː
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	griː
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): Placeholder created: '	iː	' -> '	&PHON_I_LONG&	'. Result: '	gr&PHON_I_LONG&	'
+    DBG (Stage4_5): After placeholder creation: 	gr&PHON_I_LONG&
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	gr&PHON_I_LONG&	'
+    DBG (Stage4_5): After core allophony rules: 	gr&PHON_I_LONG&
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): Placeholder restored: '	&PHON_I_LONG&	' -> '	iː	'. Result: '	griː	'
+    DBG (Stage4_5): After placeholder restoration: 	griː
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	griː
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	griː
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	griː
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [griː]
+  EpenthesisThenStrongSonorants START: In=	griː
+  EpenthesisThenStrongSonorants END: Out=	griː
+Af. EpenthesisThenStrongSonorants: [griː]
+  Diacritics START: In=	griː
+  Diacritics END: Out=	griː
+Af. Diacritics: [griː]
+  FinalCleanup START: In=	griː
+  FinalCleanup END: Out=	griː
+Af. FinalCleanup: [griː]
+gnaoi           -> [griː]
+
+--- Transcribing: [gnó] ---
+Af. MarkDigraphsAndVocalisationTriggers: [gnó]
+  ConsonantResolution START (Proc): In=	gnó
+  ConsonantResolution START (Proc): In=	gnó
+    DBG (Consonan): Metathesis Sub-Stage START: 	gnó
+    DBG (Consonan): Metathesis Check: c_base=	g	c_pal=	false	n_base=	n	n_pal=	false	at offset	1
+    DBG (Consonan): Metathesis candidate found: 	gn
+    DBG (DetQual): Word:	gnó	Cons seq:	n	s:	2	e:	2
+    DBG (DetQual): Next vowel char:	�	Next quality implication:	slender
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Original ortho 'n' (at ortho idx 2) quality was: 	palatal	. Thus, quality for metathesized 'r': 	palatal
+    DBG (Consonan): Metathesis Check: c_base=	�	c_pal=	false	n_base=	�	n_pal=	false	at offset	3
+    DBG (Consonan): Metathesis Check: c_base=	�	c_pal=	false	n_base=		n_pal=	false	at offset	4
+    DBG (Consonan): Metathesis Sub-Stage END: 	gr'ó
+    DBG (Consonan): After Pass 1 (markers): 	gr'ó
+    DBG (Consonan): Pass 2: Checking '	g	' at phon_idx 	1	 -> ortho_s:	1	ortho_e:	1
+    DBG (Consonan): Single cons rule: c_capture=	g	o_s=	1	o_e=	1
+    DBG (DetQual): Word:	gnó	Cons seq:	g	s:	1	e:	1
+    DBG (DetQual): Next vowel char:	�	Next quality implication:	slender
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Pass 2: Replaced '	g	' with '	g'	'
+    DBG (Consonan): Pass 2: Checking '	r	' at phon_idx 	2	 -> ortho_s:	2	ortho_e:	2
+    DBG (Consonan): Single cons rule: c_capture=	r	o_s=	2	o_e=	2
+    DBG (DetQual): Word:	gnó	Cons seq:	n	s:	2	e:	2
+    DBG (DetQual): Next vowel char:	�	Next quality implication:	slender
+    DBG (DetQual): Prev vowel char:
+    DBG (DetQual): Final determined quality:	palatal
+    DBG (Consonan): Pass 2: Replaced '	r	' with '	r'	'
+    DBG (Consonan): After Pass 2 (single chars): 	g'r''ó
+  ConsonantResolution END (Proc): Out=	g'r''ó
+Af. ConsonantResolution: [g'r''ó]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	g'r''ó
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	g'r''ó
+Af. Stage4_0_SpecificOrthoToTempMarker: [g'r''ó]
+  Stage4_0_1_Resolve_CH_Marker START: In=	g'r''ó
+  Stage4_0_1_Resolve_CH_Marker END: Out=	g'r''ó
+Af. Stage4_0_1_Resolve_CH_Marker: [g'r''ó]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	g'r''ó
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	g'r''&O_ACUTE_LONG&
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [g'r''&O_ACUTE_LONG&]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	g'r''&O_ACUTE_LONG&
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	g'r''&O_ACUTE_LONG&
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [g'r''&O_ACUTE_LONG&]
+  Stage4_4_ResolveTempVowelMarkers START: In=	g'r''&O_ACUTE_LONG&
+    DBG (Stage4_4): Iter.gsub: Rule '	&O_ACUTE_LONG&	' APPLIED to '	g'r''&O_ACUTE_LONG&	' -> '	g'r''oː	' (	1	x)
+    DBG (Stage4_4): Iter.gsub Pass 1 ended. String changed from '	g'r''&O_ACUTE_LONG&	' to '	g'r''oː	'
+    DBG (Stage4_4): Iter.gsub Pass 2 ended. No changes in this pass. String remains: '	g'r''oː	'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	g'r''oː
+Af. Stage4_4_ResolveTempVowelMarkers: [g'r''oː]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	g'r''oː
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	g'r''oː
+    DBG (Stage4_5): Applying placeholder creation rules (ONCE)...
+    DBG (Stage4_5): Placeholder created: '	oː	' -> '	&PHON_O_LONG&	'. Result: '	g'r''&PHON_O_LONG&	'
+    DBG (Stage4_5): After placeholder creation: 	g'r''&PHON_O_LONG&
+    DBG (Stage4_5): Applying core allophony rules (iteratively)...
+    DBG (Stage4_5): Core Iter.gsub Pass 1 ended. No changes in this pass. String remains: '	g'r''&PHON_O_LONG&	'
+    DBG (Stage4_5): After core allophony rules: 	g'r''&PHON_O_LONG&
+    DBG (Stage4_5): Applying placeholder restoration rules (ONCE)...
+    DBG (Stage4_5): Placeholder restored: '	&PHON_O_LONG&	' -> '	oː	'. Result: '	g'r''oː	'
+    DBG (Stage4_5): After placeholder restoration: 	g'r''oː
+    DBG (Stage4_5): Applying Connacht ɑu -> əu shift (ONCE)...
+    DBG (Stage4_5): After Connacht ɑu->əu shift: 	g'r''oː
+    DBG (Stage4_5): Applying &TEMP_CONN_AU& -> əu shift (ONCE)...
+    DBG (Stage4_5): After &TEMP_CONN_AU&->əu shift: 	g'r''oː
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	g'r''oː
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [g'r''oː]
+  EpenthesisThenStrongSonorants START: In=	g'r''oː
+  EpenthesisThenStrongSonorants END: Out=	g'r''oː
+Af. EpenthesisThenStrongSonorants: [g'r''oː]
+  Diacritics START: In=	g'r''oː
+  Diacritics END: Out=	g'r''oː
+Af. Diacritics: [g'r''oː]
+  FinalCleanup START: In=	g'r''oː
+  FinalCleanup END: Out=	g'r''oː
+Af. FinalCleanup: [g'r''oː]
+gnó            -> [g'r''oː]
