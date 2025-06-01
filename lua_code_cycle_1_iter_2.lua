@@ -1,7 +1,6 @@
+-- irish_phonetics_37AU.lua
 
--- irish_phonetics_37BG_Parser_Fix_Full_Context.lua
-
-local ustring_module_path = "ustring.ustring"
+local ustring_module_path = "ustring.ustring" -- Adjust if your path is different
 local status, ustring_lib = pcall(require, ustring_module_path)
 
 if not status then
@@ -16,12 +15,12 @@ local ulen = ustring_lib.len
 local ufind = ustring_lib.find
 local umatch = ustring_lib.match
 local ugsub = ustring_lib.gsub
-local ugmatch = ustring_lib.gmatch -- Used in CSV reader
-local toNFC = ustring_lib.toNFC -- CRITICAL FOR THIS ITERATION
+local ugmatch = ustring_lib.gmatch
+local utoNFD = ustring_lib.toNFD
 
 
 -- Debug output file setup
-local debug_file_path = "irish_debug_37BG_Parser_Fix_Full_Context.txt" -- Changed
+local debug_file_path = "irish_debug_37AU_nasalization_rerun.txt" -- Changed for this iteration to indicate re-run
 local debug_file = io.open(debug_file_path, "w")
 if debug_file then
     debug_file:write("\239\187\191") -- UTF-8 BOM
@@ -32,26 +31,23 @@ end
 local original_print_func = print
 
 -- Debug Flags
-local MINIMAL_DEBUG_ENABLED = true -- Set to true for cleaner CSV output, false for detailed focused word debug
+local DETAILED_DEBUG_ENABLED = true
 local STAGE_DEBUG_ENABLED = {
     PreProcess = false,
-    MarkDigraphsAndVocalisationTriggers = false,
+    MarkDigraphsAndVocalisationTriggers = true,
     ConsonantResolution = true,
-    Stage4_0_SpecificOrthoToTempMarker = false,
-    Stage4_0_1_Resolve_CH_Marker = false,
+    Stage4_0_SpecificOrthoToTempMarker = true,
+    Stage4_0_1_Resolve_CH_Marker = true,
     Stage4_1_VocmarkToTempMarker = false,
-    Stage4_2_LongVowelsOrthoToTempMarker = false,
-    Stage4_3_DiphthongsOrthoToTempMarker = false,
+    Stage4_2_LongVowelsOrthoToTempMarker = true,
+    Stage4_3_DiphthongsOrthoToTempMarker = true,
     Stage4_4_ResolveTempVowelMarkers = true,
-    Stage4_4_1_VocalizeLenitedFricatives = true,
     Stage4_5_ContextualAllophonyOnPhonetic = true,
-    Nasalization = true,
-    Stage4_6_UnstressedVowelReduction_Procedural = true,
-    EpenthesisAndStrongSonorants = true, -- FOCUS on parser called by this
-    Diacritics = true, -- Keep on for final output check
-    FinalCleanup = true, -- Keep on
-    Parser = true, -- Enable parser specific debug (will be verbose if MINIMAL_DEBUG_ENABLED is false)
-    ParserSetup = true,
+    Nasalization = true, -- New Stage Flag
+    Stage4_6_UnstressedVowelReduction_Procedural = false,
+    EpenthesisAndStrongSonorants = true,
+    Diacritics = true,
+    FinalCleanup = true,
 }
 
 print = function(...)
@@ -63,43 +59,16 @@ print = function(...)
     if debug_file then debug_file:write(msg .. "\n"); debug_file:flush() end
 end
 
-local function debug_print_minimal(stage_name_for_flag_check, ...)
-    if STAGE_DEBUG_ENABLED[stage_name_for_flag_check] and (not MINIMAL_DEBUG_ENABLED or stage_name_for_flag_check == "Parser") then
+local function debug_print_detailed(stage_name_for_flag_check, ...)
+    if DETAILED_DEBUG_ENABLED or (STAGE_DEBUG_ENABLED[stage_name_for_flag_check]) then
         local args = {...}
         local str_args = {}
         for i, v in ipairs(args) do str_args[i] = tostring(v) end
-        local msg = "    MIN_DBG (" .. stage_name_for_flag_check:sub(1,10) .. "): " .. table.concat(str_args, "\t")
+        local msg = "    DBG (" .. stage_name_for_flag_check:sub(1,8) .. "): " .. table.concat(str_args, "\t")
         original_print_func(msg)
         if debug_file then debug_file:write(msg .. "\n"); debug_file:flush() end
     end
 end
-
-local function debug_print_parser(stage_name_for_flag_check, ...)
-    -- Parser debug is critical for this iteration, controlled by MINIMAL_DEBUG_ENABLED
-    if STAGE_DEBUG_ENABLED[stage_name_for_flag_check] and not MINIMAL_DEBUG_ENABLED then
-        local args = {...}
-        local str_args = {}
-        for i, v in ipairs(args) do str_args[i] = tostring(v) end
-        local msg = "    PARSER_DBG (" .. stage_name_for_flag_check:sub(1,8) .. "): " .. table.concat(str_args, "\t")
-        original_print_func(msg)
-        if debug_file then debug_file:write(msg .. "\n"); debug_file:flush() end
-    end
-end
-
--- Helper for byte-level debugging
-local function get_bytes(str)
-    local bytes = {}
-    for k = 1, #str do
-        table.insert(bytes, string.byte(str, k))
-    end
-    return bytes
-end
-local function byte_table_to_string(byte_tbl)
-    local parts = {}
-    for _,b_val in ipairs(byte_tbl) do table.insert(parts, string.format("%02X", b_val)) end
-    return table.concat(parts, " ")
-end
-
 
 local irishPhonetics = {}
 
@@ -113,32 +82,23 @@ local ALL_VOWELS_ORTHO_PATTERN = "[" .. ALL_VOWELS_ORTHO_CHARS_STR .. "]"
 local SHORT_VOWELS_ORTHO_SINGLE_STR = "aeiou"
 local CONSONANTS_ORTHO_CHARS_STR = "bcdfghlmnprst"
 
--- Phonetic Patterns (same as 37BD)
+-- Phonetic Patterns (same as before)
 local ANY_CONSONANT_PHONETIC_RAW_CHARS_STR = "kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾ"
 local ANY_CONSONANT_PHONETIC_PATTERN = "[" .. ANY_CONSONANT_PHONETIC_RAW_CHARS_STR .. "]"
 local ANY_SHORT_VOWEL_PHONETIC_CHARS_STR = "aæɔeəiɪuʊʌ"
 local ANY_LONG_VOWEL_PHONETIC_CHARS_STR = "ɑeioɨuæ"
 local ALL_SINGLE_PHONETIC_VOWEL_CHARS_STR = ANY_SHORT_VOWEL_PHONETIC_CHARS_STR .. ANY_LONG_VOWEL_PHONETIC_CHARS_STR
 local ANY_DIPHTHONG_PHONETIC_STR_NO_CAPTURE = "(?:iə)|(?:ua)|(?:ai)|(?:ei)|(?:oi)|(?:ui)|(?:ɑu)|(?:ou)|(?:əu)|(?:eiə)"
-local SINGLE_VOWEL_WITH_OPT_LONG_STR_NO_CAPTURE = "(?:[" .. ALL_SINGLE_PHONETIC_VOWEL_CHARS_STR .. "]~?ː?)"
-local ANY_DIPHTHONG_WITH_OPT_NASAL_STR_NO_CAPTURE = "(?:iə~?)|(?:ua~?)|(?:ai~?)|(?:ei~?)|(?:oi~?)|(?:ui~?)|(?:ɑu~?)|(?:ou~?)|(?:əu~?)|(?:eiə~?)"
-
-local PHONETIC_VOWEL_NUCLEUS_STRING_FOR_CAPTURE = ANY_DIPHTHONG_WITH_OPT_NASAL_STR_NO_CAPTURE .. "|" .. SINGLE_VOWEL_WITH_OPT_LONG_STR_NO_CAPTURE
+local SINGLE_VOWEL_WITH_OPT_LONG_STR_NO_CAPTURE = "(?:[" .. ALL_SINGLE_PHONETIC_VOWEL_CHARS_STR .. "]ː?)"
+local PHONETIC_VOWEL_NUCLEUS_STRING_FOR_CAPTURE = ANY_DIPHTHONG_PHONETIC_STR_NO_CAPTURE .. "|" .. SINGLE_VOWEL_WITH_OPT_LONG_STR_NO_CAPTURE
 local PHONETIC_VOWEL_NUCLEUS_PATTERN = "(" .. PHONETIC_VOWEL_NUCLEUS_STRING_FOR_CAPTURE .. ")"
-
-local SHORT_VOWEL_ELIGIBLE_FOR_REDUCTION_CHARS = "aæɔeouʊʌ"
-local SHORT_VOWEL_ELIGIBLE_FOR_REDUCTION_PATTERN = "[" .. SHORT_VOWEL_ELIGIBLE_FOR_REDUCTION_CHARS .. "]~?"
-
-local SHORT_VOWEL_CAPTURE_FOR_EPENTHESIS = "([" .. ANY_SHORT_VOWEL_PHONETIC_CHARS_STR .. "]~?)"
+local SHORT_VOWEL_PHONETIC_PATTERN_FOR_REDUCTION_INPUT = "["..ANY_SHORT_VOWEL_PHONETIC_CHARS_STR:gsub("[əɪi]", "").."]"
+local SHORT_VOWEL_CAPTURE_FOR_EPENTHESIS = "([" .. ANY_SHORT_VOWEL_PHONETIC_CHARS_STR .. "])"
 local L_VARIANTS_PHONETIC = "[lL]"; local N_VARIANTS_PHONETIC = "[nNmM]"; local R_VARIANTS_PHONETIC = "[rR]";
 
 local ALL_PHONETIC_NUCLEI_PRIORITY = {
-    "eiə~", "eiə",
-    "ɑ~ː", "e~ː", "i~ː", "o~ː", "u~ː", "ɨ~ː", "æ~ː",
+    "iə", "ua", "ai", "ei", "oi", "ui", "ɑu", "ou", "əu", "eiə", "aw", "əi",
     "ɑː", "eː", "iː", "oː", "uː", "ɨː", "æː",
-    "iə~", "ua~", "ai~", "ei~", "oi~", "ui~", "ɑu~", "ou~", "əu~", "aw~", "əi~",
-    "iə", "ua", "ai", "ei", "oi", "ui", "ɑu", "ou", "əu", "aw", "əi",
-    "a~", "æ~", "ɔ~", "e~", "ə~", "i~", "ɪ~", "u~", "ʊ~", "ʌ~",
     "a", "æ", "ɔ", "e", "ə", "i", "ɪ", "u", "ʊ", "ʌ"
 }
 local ALL_PHONETIC_CONSONANTS_PRIORITY = {
@@ -147,34 +107,16 @@ local ALL_PHONETIC_CONSONANTS_PRIORITY = {
     "c", "ɟ", "ʃ", "ç", "j",
     "k", "g", "t", "d", "p", "b", "m", "n", "l", "r", "s", "f", "v", "L", "N", "R", "M", "x", "ɣ", "ŋ", "h", "w"
 }
-local COMBINED_PHONETIC_UNITS_PRIORITY = {}
-do
-    local temp_combined = {}
-    for _, p_entry_ortho in ipairs(ALL_PHONETIC_NUCLEI_PRIORITY) do
-        table.insert(temp_combined, {phon=toNFC(p_entry_ortho), type="vowel"}) -- NORMALIZED
-    end
-    for _, p_entry_ortho in ipairs(ALL_PHONETIC_CONSONANTS_PRIORITY) do
-        table.insert(temp_combined, {phon=toNFC(p_entry_ortho), type="consonant"}) -- NORMALIZED
-    end
-    table.sort(temp_combined, function(a,b) return ulen(a.phon) > ulen(b.phon) end)
-    COMBINED_PHONETIC_UNITS_PRIORITY = temp_combined
-
-    if STAGE_DEBUG_ENABLED["ParserSetup"] and not MINIMAL_DEBUG_ENABLED then
-        debug_print_parser("ParserSetup", "--- COMBINED_PHONETIC_UNITS_PRIORITY (Normalized & Sorted) ---")
-        for idx, entry in ipairs(COMBINED_PHONETIC_UNITS_PRIORITY) do
-            debug_print_parser("ParserSetup", idx, string.format("'%s' (len: %d, type: %s, bytes: %s)", entry.phon, ulen(entry.phon), entry.type, byte_table_to_string(get_bytes(entry.phon))))
-        end
-        debug_print_parser("ParserSetup", "-------------------------------------------------------------")
-    end
-end
 
 
 local function determine_consonant_quality_ortho(original_ortho_word, ortho_cons_char_start_idx, ortho_cons_char_end_idx)
-    -- (Same as 37BB)
+    -- (Same as provided in the prompt)
     if not original_ortho_word or not ortho_cons_char_start_idx or not ortho_cons_char_end_idx or ortho_cons_char_start_idx <= 0 or ortho_cons_char_end_idx > ulen(original_ortho_word) or ortho_cons_char_start_idx > ortho_cons_char_end_idx then
+        debug_print_detailed("DetQual", "Bailing: Invalid indices or word for: ", original_ortho_word, ortho_cons_char_start_idx, ortho_cons_char_end_idx)
         return "nonpalatal"
     end
     local current_ortho_cons_seq = usub(original_ortho_word, ortho_cons_char_start_idx, ortho_cons_char_end_idx)
+    debug_print_detailed("DetQual", "Word:", original_ortho_word, "Cons seq:", current_ortho_cons_seq, "s:", ortho_cons_char_start_idx, "e:", ortho_cons_char_end_idx)
 
     if current_ortho_cons_seq == "l°" or current_ortho_cons_seq == "n°" then return "nonpalatal" end
 
@@ -222,6 +164,7 @@ local function determine_consonant_quality_ortho(original_ortho_word, ortho_cons
         elseif umatch(next_v_type_char, BROAD_VOWELS_ORTHO_PATTERN) then next_v_quality_implication = "broad"
         end
     end
+    debug_print_detailed("DetQual", "Next relevant vowel char for quality:", next_v_type_char or "nil", "Next quality implication:", next_v_quality_implication or "nil")
 
     temp_idx = ortho_cons_char_start_idx - 1
     while temp_idx >= 1 do
@@ -244,6 +187,7 @@ local function determine_consonant_quality_ortho(original_ortho_word, ortho_cons
         elseif umatch(prev_v_type_char, BROAD_VOWELS_ORTHO_PATTERN) then prev_v_quality_implication = "broad"
         end
     end
+    debug_print_detailed("DetQual", "Prev relevant vowel char for quality:", prev_v_type_char or "nil", "Prev quality implication:", prev_v_quality_implication or "nil")
 
     local final_quality
     if next_v_quality_implication == "slender" then final_quality = "palatal"
@@ -251,134 +195,47 @@ local function determine_consonant_quality_ortho(original_ortho_word, ortho_cons
     elseif prev_v_quality_implication == "slender" then final_quality = "palatal"
     elseif prev_v_quality_implication == "broad" then final_quality = "nonpalatal"
     else final_quality = "nonpalatal" end
+    debug_print_detailed("DetQual", "Final determined quality for '", current_ortho_cons_seq, "': ", final_quality)
     return final_quality
 end
 
--- CRITICALLY REFINED PARSER (Iteration 37BF - Parser Fix Attempt 3)
-local function parse_phonetic_string_to_units_for_epenthesis(phon_str_raw)
-    local phon_str = toNFC(phon_str_raw)
-
-    local units = {}
-    local i = 1
-    debug_print_parser("Parser", "--- Parsing phonetic string START (NFC): '", phon_str, "' (Raw: '", phon_str_raw, "') ---")
-    while i <= ulen(phon_str) do
-        local stress_at_current_pos = ""
-        if usub(phon_str, i, i) == toNFC("ˈ") then
-            stress_at_current_pos = toNFC("ˈ")
-            i = i + 1
-            debug_print_parser("Parser", "Found stress mark at pos ", i-1, ". Remaining: '", usub(phon_str, i) or "", "'")
-        end
-
-        if i > ulen(phon_str) then
-            if stress_at_current_pos ~= "" then
-                 table.insert(units, { phon = stress_at_current_pos, stress = "", quality = "stress_mark"})
-                 debug_print_parser("Parser", "  Added unit: '", stress_at_current_pos, "' (stress_mark) (end of string)")
-            end
-            break
-        end
-
-        local best_overall_match_phon = nil
-        local best_overall_match_len = 0
-        local best_overall_match_type = nil
-
-        debug_print_parser("Parser", "Pos:", i, "Char:'", usub(phon_str, i, i), "' Rem:'", usub(phon_str, i), "' Bytes:", byte_table_to_string(get_bytes(usub(phon_str, i, i))))
-
-        for _, unit_entry in ipairs(COMBINED_PHONETIC_UNITS_PRIORITY) do
-            local unit_pattern_str = unit_entry.phon -- Already NFC normalized
-            local pattern_len_val = ulen(unit_pattern_str)
-            if i + pattern_len_val - 1 <= ulen(phon_str) then
-                local sub_to_test = usub(phon_str, i, i + pattern_len_val - 1)
-                
-                -- Only print byte check for potentially problematic single chars or C'
-                if (pattern_len_val == 1 and umatch(unit_pattern_str, "["..ALL_SINGLE_PHONETIC_VOWEL_CHARS_STR.."]")) or
-                   (pattern_len_val == 2 and umatch(unit_pattern_str, "'$")) or
-                   (pattern_len_val == 1 and unit_pattern_str == toNFC("ɑ")) or -- specific check for ɑ
-                   (pattern_len_val == 1 and unit_pattern_str == toNFC("ɛ")) then -- specific check for ɛ
-                    debug_print_parser("ParserByteCheck", "  Trying pattern '", unit_pattern_str, "' (", byte_table_to_string(get_bytes(unit_pattern_str)), ") vs Sub: '", sub_to_test, "' (", byte_table_to_string(get_bytes(sub_to_test)), ") Match: ", tostring(sub_to_test == unit_pattern_str))
-                end
-
-                if sub_to_test == unit_pattern_str then
-                    best_overall_match_phon = unit_pattern_str
-                    best_overall_match_len = pattern_len_val
-                    best_overall_match_type = unit_entry.type
-                    debug_print_parser("Parser", "  >>> MATCHED (and taking): '", unit_pattern_str, "' (len:", pattern_len_val, ", type:", best_overall_match_type, ")")
-                    goto found_longest_match_for_pos_37bf 
-                end
-            end
-        end
-        ::found_longest_match_for_pos_37bf::
-
-        local quality = "unknown"
-        if best_overall_match_phon then
-            if best_overall_match_type == "vowel" then
-                quality = "vowel"
-            elseif best_overall_match_type == "consonant" then
-                if umatch(best_overall_match_phon, "'$") or umatch(best_overall_match_phon, "ʲ$") or
-                   umatch(best_overall_match_phon, "^[ʃçjɟc]$") then
-                    quality = "palatal"
-                elseif umatch(best_overall_match_phon, "ˠ$") or umatch(best_overall_match_phon, "[̪]$") then
-                    quality = "nonpalatal"
-                else
-                    quality = "nonpalatal"
-                end
-            end
-            debug_print_parser("Parser", "  Adding unit: '", best_overall_match_phon, "' (stress: '", stress_at_current_pos, "') with quality: '", quality, "'")
-            table.insert(units, { phon = best_overall_match_phon, stress = stress_at_current_pos, quality = quality })
-            i = i + best_overall_match_len
-        elseif stress_at_current_pos ~= "" then
-            debug_print_parser("Parser", "  Adding unit: '", stress_at_current_pos, "' (stress_mark) (no other unit matched after it at this pos)")
-            table.insert(units, { phon = stress_at_current_pos, stress = "", quality = "stress_mark"})
-            -- i was already incremented
-        else
-            local unknown_char = usub(phon_str, i, i)
-            local unknown_quality = "unknown_fallback"
-            debug_print_parser("Parser", "  FALLBACK: No match from priority list for char '", unknown_char, "' at pos ", i, ". Bytes: ", byte_table_to_string(get_bytes(unknown_char)))
-            
-            -- Try to assign quality in fallback
-            for _, unit_entry in ipairs(COMBINED_PHONETIC_UNITS_PRIORITY) do -- Check against NFC list
-                if unit_entry.phon == unknown_char then 
-                    if unit_entry.type == "vowel" then unknown_quality = "vowel"
-                    elseif unit_entry.type == "consonant" then
-                        if umatch(unknown_char, "'$") or umatch(unknown_char, "ʲ$") or umatch(unknown_char, "^[ʃçjɟc]$") then unknown_quality = "palatal"
-                        else unknown_quality = "nonpalatal" end
-                    end
-                    debug_print_parser("Parser", "    Fallback quality assigned: '", unknown_quality, "' for '", unknown_char, "' based on COMBINED list.")
-                    goto add_fallback_unit_37bf
-                end
-            end
-            ::add_fallback_unit_37bf::
-            table.insert(units, { phon = unknown_char, stress = stress_at_current_pos, quality = unknown_quality })
-            i = i + 1
-        end
-    end
-    debug_print_parser("Parser", "--- Parsing phonetic string END. Units found: ", #units, " ---")
-    return units
-end
-
--- REVISED MONOSYLLABLE CHECKER from 37AW
-local function is_likely_monosyllable_phonetic_revised(phon_word_local, pre_parsed_units_input)
+local function is_likely_monosyllable_phonetic_revised(phon_word_local)
+    -- (Same as provided in the prompt)
     if not phon_word_local then return false end
-
-    local units_to_check
-    if pre_parsed_units_input then
-        units_to_check = {}
-        for _, u_data in ipairs(pre_parsed_units_input) do
-            if u_data.quality ~= "stress_mark" then
-                table.insert(units_to_check, u_data)
-            end
-        end
-    else
-        local no_stress_local = ugsub(phon_word_local, "ˈ", "")
-        units_to_check = parse_phonetic_string_to_units_for_epenthesis(no_stress_local)
-    end
+    local no_stress_local = ugsub(phon_word_local, "ˈ", "")
 
     local count_local = 0
-    for _, unit_data in ipairs(units_to_check) do
-        if unit_data.quality == "vowel" then
-            count_local = count_local + 1
+    local current_pos_local = 1
+    while current_pos_local <= ulen(no_stress_local) do
+        local matched_nucleus_this_iter = false
+        for _, nucleus_pattern in ipairs(ALL_PHONETIC_NUCLEI_PRIORITY) do
+            if usub(no_stress_local, current_pos_local, current_pos_local + ulen(nucleus_pattern) - 1) == nucleus_pattern then
+                count_local = count_local + 1
+                current_pos_local = current_pos_local + ulen(nucleus_pattern)
+                matched_nucleus_this_iter = true
+                goto continue_outer_loop_monosyllable_check
+            end
         end
+        if not matched_nucleus_this_iter then
+            local matched_other_unit_this_iter = false
+            for _, cons_pattern in ipairs(ALL_PHONETIC_CONSONANTS_PRIORITY) do
+                 if usub(no_stress_local, current_pos_local, current_pos_local + ulen(cons_pattern) - 1) == cons_pattern then
+                    current_pos_local = current_pos_local + ulen(cons_pattern)
+                    matched_other_unit_this_iter = true
+                    goto continue_outer_loop_monosyllable_check
+                end
+            end
+            if not matched_other_unit_this_iter then
+                if usub(no_stress_local, current_pos_local, current_pos_local) == "'" then
+                    current_pos_local = current_pos_local + 1
+                    goto continue_outer_loop_monosyllable_check
+                end
+                current_pos_local = current_pos_local + 1
+            end
+        end
+        ::continue_outer_loop_monosyllable_check::
     end
-    debug_print_minimal("EpenthesisAndStrongSonorants", "is_likely_monosyllable_revised for '", phon_word_local, "' (using ", #units_to_check, " non-stress units) count: ", count_local, " result: ", tostring(count_local == 1))
+    debug_print_detailed("EpenthesisAndStrongSonorants", "is_likely_monosyllable_revised for '", no_stress_local, "' (orig: '", phon_word_local, "') count: ", count_local, " result: ", tostring(count_local == 1))
     return count_local == 1
 end
 
@@ -471,50 +328,37 @@ irishPhonetics.rules_stage2_mark_digraphs_and_vocalisation_triggers = { -- (Same
     { pattern = "(ˈ"..SHORT_VOWELS_ORTHO_SINGLE_STR..")l("..ALL_VOWELS_ORTHO_PATTERN..")", replacement = "%1l°%2", ortho_len_func = function(m,c1,c2) return ulen(c1) + 1 + ulen(c2) end},
     { pattern = "(ˈ"..SHORT_VOWELS_ORTHO_SINGLE_STR..")n("..ALL_VOWELS_ORTHO_PATTERN..")", replacement = "%1n°%2", ortho_len_func = function(m,c1,c2) return ulen(c1) + 1 + ulen(c2) end},
 }
--- REFINED Consonant Resolution for Vocalization Interaction & initial 'd' (from 37BD)
-irishPhonetics.rules_stage3_consonant_resolution = {
+irishPhonetics.rules_stage3_consonant_resolution = { -- (Same as provided)
     { pattern = "_FH_INITIAL_LENITED_", replacement = "h" }, { pattern = "_FH_SILENT_", replacement = "" }, { pattern = "_TH_", replacement = "h" },
     { pattern = "_URUF_", replacement = "v" }, { pattern = "_URUP_", replacement = "b" }, { pattern = "_URUT_", replacement = "d" },
     { pattern = "_URUC_", replacement = "g" }, { pattern = "_URUM_", replacement = "m" }, { pattern = "_URUN_", replacement = "n" }, { pattern = "_URUG_", replacement = "ŋ" },
-    { pattern = "_PH_", replacement = function(fm, ocs, omi) return resolve_lenited_consonant("f'", "f", fm, ocs, omi) end },
-    { pattern = "_SH_", replacement = function(fm, ocs, omi)
-        if not omi or not omi.ortho_s or not omi.ortho_e then return "h" end
-        local next_v_start_ortho = omi.ortho_e + 1; local next_v_is_slender_flag = false
-        if next_v_start_ortho <= ulen(ocs) then if umatch(usub(ocs, next_v_start_ortho, next_v_start_ortho), SLENDER_VOWELS_ORTHO_PATTERN) then next_v_is_slender_flag = true end end
-        if umatch(ocs, "^[sS][eé][áa]n", omi.ortho_s -1 ) then return "h'" end
+    { pattern = "_PH_", replacement = function(full_match_marker, o_context_str, original_match_info_tbl) return resolve_lenited_consonant("f'", "f", full_match_marker, o_context_str, original_match_info_tbl) end },
+    { pattern = "_SH_", replacement = function(full_match_marker, o_context_str, original_match_info_tbl)
+        if not original_match_info_tbl or not original_match_info_tbl.ortho_s or not original_match_info_tbl.ortho_e then return "h" end
+        local next_v_start_ortho = original_match_info_tbl.ortho_e + 1; local next_v_is_slender_flag = false
+        if next_v_start_ortho <= ulen(o_context_str) then if umatch(usub(o_context_str, next_v_start_ortho, next_v_start_ortho), SLENDER_VOWELS_ORTHO_PATTERN) then next_v_is_slender_flag = true end end
+        if umatch(o_context_str, "^[sS][eé][áa]n", original_match_info_tbl.ortho_s -1 ) then return "h'" end
         return next_v_is_slender_flag and "h'" or "h"
     end },
     { pattern = "_FH_INTERNAL_", replacement = "" },
-
-    -- Stage 3 now resolves lenited fricative markers directly to their phonetic fricative forms.
-    -- Stage 4.4.1 will then target these phonetic fricatives if they are in a vocalizing context.
-    { pattern = "_BH_", replacement = function(fm, ocs, omi) return resolve_lenited_consonant("v'", "v", fm, ocs, omi, {can_be_w = true}) end },
-    { pattern = "_MH_", replacement = function(fm, ocs, omi) return resolve_lenited_consonant("v'", "v", fm, ocs, omi, {can_be_w = true}) end },
-    { pattern = "_DH_", replacement = function(fm, ocs, omi) return resolve_lenited_consonant("j", "ɣ", fm, ocs, omi) end },
-    { pattern = "_GH_", replacement = function(fm, ocs, omi) return resolve_lenited_consonant("j", "ɣ", fm, ocs, omi) end },
-
-
-    { pattern = "_LL_", replacement = function(fm, ocs, omi) return resolve_lenited_consonant("L'", "L", fm, ocs, omi) end },
-    { pattern = "_NN_", replacement = function(fm, ocs, omi)
-        local quality = determine_consonant_quality_ortho(ocs, omi.ortho_s, omi.ortho_e)
+    { pattern = "_BH_", replacement = function(full_match_marker, o_context_str, original_match_info_tbl) return resolve_lenited_consonant("v'", "v", full_match_marker, o_context_str, original_match_info_tbl, {can_be_w = true}) end },
+    { pattern = "_DH_", replacement = function(full_match_marker, o_context_str, original_match_info_tbl) return resolve_lenited_consonant("j", "ɣ", full_match_marker, o_context_str, original_match_info_tbl) end },
+    { pattern = "_GH_", replacement = function(full_match_marker, o_context_str, original_match_info_tbl) return resolve_lenited_consonant("j", "ɣ", full_match_marker, o_context_str, original_match_info_tbl) end },
+    { pattern = "_MH_", replacement = function(full_match_marker, o_context_str, original_match_info_tbl) return resolve_lenited_consonant("v'", "v", full_match_marker, o_context_str, original_match_info_tbl, {can_be_w = true}) end },
+    { pattern = "_LL_", replacement = function(full_match_marker, o_context_str, original_match_info_tbl) return resolve_lenited_consonant("L'", "L", full_match_marker, o_context_str, original_match_info_tbl) end },
+    { pattern = "_NN_", replacement = function(full_match_marker, o_context_str, original_match_info_tbl)
+        local quality = determine_consonant_quality_ortho(o_context_str, original_match_info_tbl.ortho_s, original_match_info_tbl.ortho_e)
         return quality == "palatal" and "N'" or "N"
     end },
-    { pattern = "_RR_", replacement = function(fm, ocs, omi) return resolve_lenited_consonant("R'", "R", fm, ocs, omi) end },
-    { pattern = "_MM_", replacement = function(fm, ocs, omi) return resolve_lenited_consonant("M'", "M", fm, ocs, omi) end },
+    { pattern = "_RR_", replacement = function(full_match_marker, o_context_str, original_match_info_tbl) return resolve_lenited_consonant("R'", "R", full_match_marker, o_context_str, original_match_info_tbl) end },
+    { pattern = "_MM_", replacement = function(full_match_marker, o_context_str, original_match_info_tbl) return resolve_lenited_consonant("M'", "M", full_match_marker, o_context_str, original_match_info_tbl) end },
     { pattern = "l°", replacement = "l_neutral_" }, { pattern = "n°", replacement = "n_neutral_" },
-    { pattern = "([bcdfghkmprst])", replacement = function(c_capture, ocs, omi)
+    { pattern = "([bcdfghkmprst])", replacement = function(c_capture, o_context_str, original_match_info_tbl)
         if not c_capture then return "" end; if c_capture == "l_neutral_" or c_capture == "n_neutral_" then return c_capture end
         local base = c_capture; if c_capture == "c" then base = "k" end
-        if not omi or not omi.ortho_s or not omi.ortho_e or not ocs then return base == "s" and "s" or base end
-        local quality = determine_consonant_quality_ortho(ocs, omi.ortho_s, omi.ortho_e)
-
-        local is_truly_initial_in_ortho = (omi.ortho_s == 1)
-        if omi.ortho_s == 2 and usub(ocs, 1, 1) == "ˈ" then is_truly_initial_in_ortho = true end
-
-        if is_truly_initial_in_ortho and quality == "nonpalatal" and not umatch(base, "^[srl]$") then
-             debug_print_minimal("ConsonantResolution", "Initial non-palatal '", base, "' for '", c_capture, "' in '", ocs, "' -> returning base")
-            return base
-        end
+        if not original_match_info_tbl or not original_match_info_tbl.ortho_s or not original_match_info_tbl.ortho_e or not o_context_str then return base == "s" and "s" or base end
+        debug_print_detailed("ConsonantResolution", "Single cons rule: c_capture=", c_capture, "o_s=", original_match_info_tbl.ortho_s, "o_e=", original_match_info_tbl.ortho_e)
+        local quality = determine_consonant_quality_ortho(o_context_str, original_match_info_tbl.ortho_s, original_match_info_tbl.ortho_e)
         if base == "s" then return quality == "palatal" and "s'" or "s" else return quality == "palatal" and base .. "'" or base end
     end},
 }
@@ -615,7 +459,7 @@ irishPhonetics.rules_stage4_4_resolve_temp_vowel_markers = { -- (Same as provide
     { pattern = "&EO_SEQ&", replacement = "oː" },
     { pattern = "&IA_DIPH&", replacement = "iə" },
     { pattern = "&UA_DIPH&", replacement = "ua" },
-    { pattern = "&AI_DIPH&(nm')", replacement = "a%1"},
+    { pattern = "&AI_DIPH&(nm')", replacement = "a%1"}, -- Potential refinement needed for 'a' vs 'æ' here
     { pattern = "&AI_DIPH&", replacement = "ai" },
     { pattern = "&EI_DIPH&", replacement = "e" },
     { pattern = "&OI_DIPH&("..ANY_CONSONANT_PHONETIC_PATTERN.."*')", replacement = "ɛ%1" },
@@ -641,42 +485,6 @@ irishPhonetics.rules_stage4_4_resolve_temp_vowel_markers = { -- (Same as provide
     { pattern = "&EA_SLENDER_PRE_N&", replacement = "æ"},
     { pattern = "&EA_BROAD_PRE_N&", replacement = "a" },
 }
--- REFINED VOCALIZATION RULES (Stage 4.4.1 - 37BD)
-irishPhonetics.rules_stage4_4_1_vocalize_lenited_fricatives = {
-    -- These rules now target the phonetic fricatives (v, v', w, ɣ, j) that are output by Stage 3.
-    -- The patterns capture (Preceding Phonetic Vowel)(Phonetic Fricative).
-    -- Order matters: more specific vowel contexts first.
-    -- Using temporary markers for diphthongs to allow Stage 4.5 to apply allophony to the *resulting* diphthong.
-
-    -- BH/MH (phonetic v, v', w)
-    -- Slender fricative v'
-    { pattern = "([eɛ])(v')", replacement = "&TEMP_E_LONG_VOC&" },
-    { pattern = "([iɪ])(v')", replacement = "&TEMP_I_LONG_VOC&" },
-    -- Broad fricative v/w
-    { pattern = "([aɑ])([wv])", replacement = "%1&TEMP_AU_DIPH_VOC&" },
-    { pattern = "([æ])([wv])", replacement = "&TEMP_SCHWA_U_DIPH_VOC&" },
-    { pattern = "([ɔʌʊ])([wv])", replacement = "%1&TEMP_AU_DIPH_VOC&" },
-
-    -- DH/GH (phonetic ɣ, j)
-    -- Slender fricative j
-    { pattern = "([eɛ])([j])", replacement = "&TEMP_E_LONG_VOC&" },
-    { pattern = "([iɪ])([j])", replacement = "&TEMP_I_LONG_VOC&" },
-    -- Broad fricative ɣ
-    { pattern = "([aɑ])([ɣ])", replacement = "%1&TEMP_AI_DIPH_VOC&" },
-    { pattern = "([æ])([ɣ])", replacement = "%1&TEMP_AI_DIPH_VOC&" },
-    { pattern = "([ɔʌʊ])([ɣ])", replacement = "%1&TEMP_AI_DIPH_VOC&" },
-
-
-    -- Resolve temporary vocalization markers
-    { pattern = "&TEMP_AU_DIPH_VOC&", replacement = "u" },
-    { pattern = "&TEMP_AI_DIPH_VOC&", replacement = "i" },
-    { pattern = "&TEMP_SCHWA_U_DIPH_VOC&", replacement = "əu" },
-    { pattern = "&TEMP_SCHWA_I_DIPH_VOC&", replacement = "əi" },
-    { pattern = "&TEMP_E_LONG_VOC&", replacement = "eː" },
-    { pattern = "&TEMP_I_LONG_VOC&", replacement = "iː" },
-    { pattern = "&TEMP_U_LONG_VOC&", replacement = "uː" },
-}
-
 local placeholder_creation_rules_stage4_5 = { -- (Same as provided)
     { pattern = "au", replacement = "&PHON_AU_DIPH&" },
     { pattern = "ai", replacement = "&PHON_AI_DIPH&" },
@@ -756,155 +564,141 @@ local temp_conn_au_to_final_au_rule_stage4_5 = { -- (Same as provided)
     pattern = "&TEMP_CONN_AU&", replacement = "əu"
 }
 irishPhonetics.rules_stage4_5_contextual_allophony_on_phonetic = {} -- (Same as provided, will be populated in transcribe function)
-
--- ENHANCED UNSTRESSED VOWEL REDUCTION (from 37AY plan, with corrected eligibility)
-local function apply_unstressed_vowel_reduction_procedural(phon_word)
-    if STAGE_DEBUG_ENABLED["Stage4_6_UnstressedVowelReduction_Procedural"] then print("  Stage4_6_UnstressedVowelReduction_Procedural START: In=", phon_word) end
-    if not phon_word or phon_word == "" then return phon_word end
-
-    local initial_phon_word_for_loop_check = phon_word
+local function apply_unstressed_vowel_reduction_procedural(phon_word) -- (Same as provided)
     local string_changed_this_major_pass
     repeat
-        string_changed_this_major_pass = false
-        local phon_word_at_pass_start = phon_word
-
+        string_changed_this_major_pass = false; local phon_word_at_pass_start = phon_word
         for _, rule in ipairs(irishPhonetics.rules_stage4_6_unstressed_vowel_reduction_specific_finals) do
             local new_word, count = ugsub(phon_word, rule.pattern, rule.replacement)
             if count > 0 then phon_word = new_word; string_changed_this_major_pass = true end
         end
-
-        local parsed_units_for_reduction_check = parse_phonetic_string_to_units_for_epenthesis(phon_word)
-        if is_likely_monosyllable_phonetic_revised(phon_word, parsed_units_for_reduction_check) then
-            debug_print_minimal("Stage4_6_UnstressedVowelReduction_Procedural", "Word '", phon_word, "' is monosyllabic, skipping general reduction.")
-            goto end_reduction_loop_main
+        if is_likely_monosyllable_phonetic_revised(phon_word) then goto end_reduction_loop_main end
+        local num_vowel_nuclei = 0; local vowel_nuclei_positions = {}
+        local temp_for_counting_reduction = ugsub(phon_word, "ˈ","")
+        local current_phon_pos_for_nuc_finding = 1
+        while current_phon_pos_for_nuc_finding <= ulen(temp_for_counting_reduction) do
+            local s_nuc, e_nuc, nuc_match = ufind(temp_for_counting_reduction, PHONETIC_VOWEL_NUCLEUS_PATTERN, current_phon_pos_for_nuc_finding)
+            if s_nuc then num_vowel_nuclei = num_vowel_nuclei + 1; table.insert(vowel_nuclei_positions, {s=s_nuc, e=e_nuc, nuc=nuc_match}); current_phon_pos_for_nuc_finding = e_nuc + 1 else break end
         end
-
-        local parsed_units = parse_phonetic_string_to_units_for_epenthesis(phon_word)
-        if not parsed_units or #parsed_units == 0 then goto end_reduction_loop_main
-        end
-
-        -- debug_print_minimal("Stage4_6_UnstressedVowelReduction_Procedural", "Parsed units for reduction: ", #parsed_units)
-
-        local new_phon_units = {}
-        local primary_stress_found = false
-        local primary_stress_vowel_index = -1
-
-        local current_unit_idx_for_stress_check = 1
-        for k, unit_data in ipairs(parsed_units) do
-            if unit_data.stress == "ˈ" then
-                if k + 1 <= #parsed_units and parsed_units[k+1].quality == "vowel" then
-                    primary_stress_found = true
-                    primary_stress_vowel_index = k + 1
-                    break
-                elseif unit_data.quality == "vowel" then -- Stress mark on vowel itself
-                     primary_stress_found = true
-                     primary_stress_vowel_index = k
-                     break
-                end
-            end
-        end
-        if not primary_stress_found then
-            for k, unit_data in ipairs(parsed_units) do
-                if unit_data.quality == "vowel" then
-                    primary_stress_vowel_index = k
-                    primary_stress_found = true
-                    debug_print_minimal("Stage4_6_UnstressedVowelReduction_Procedural", "No explicit stress, assuming first vowel '", unit_data.phon, "' at unit index ", k, " is stressed.")
-                    break
-                end
-            end
-        end
-
-
-        for k, unit_data in ipairs(parsed_units) do
-            if unit_data.quality == "vowel" then
-                local is_this_vowel_stressed = (k == primary_stress_vowel_index)
-                local vowel_phon = unit_data.phon
-                
-                local is_eligible_for_reduction = not is_this_vowel_stressed and
-                                                  not umatch(vowel_phon, "ː$") and 
-                                                  vowel_phon ~= "ə" and vowel_phon ~= "i" 
-
-                if not is_eligible_for_reduction then
-                    table.insert(new_phon_units, unit_data)
+        if num_vowel_nuclei > 1 then
+            local parts = {}; local stress_char_idx = ufind(phon_word, "ˈ"); local primary_stressed_vowel_s, primary_stressed_vowel_e
+            if stress_char_idx then for _, pos_data in ipairs(vowel_nuclei_positions) do if pos_data.s == stress_char_idx + 1 or (pos_data.s == stress_char_idx + 2 and usub(phon_word,stress_char_idx+1,stress_char_idx+1):match(ANY_CONSONANT_PHONETIC_PATTERN)) then primary_stressed_vowel_s = pos_data.s; primary_stressed_vowel_e = pos_data.e; break end end end
+            if not primary_stressed_vowel_s and #vowel_nuclei_positions > 0 then primary_stressed_vowel_s = vowel_nuclei_positions[1].s; primary_stressed_vowel_e = vowel_nuclei_positions[1].e end
+            local current_build_pos = 1
+            for _, pos_data in ipairs(vowel_nuclei_positions) do
+                local s_vowel, e_vowel, vowel_nuc = pos_data.s, pos_data.e, pos_data.nuc
+                if s_vowel > current_build_pos then table.insert(parts, usub(phon_word, current_build_pos, s_vowel - 1)) end
+                local is_this_vowel_stressed = (primary_stressed_vowel_s and s_vowel == primary_stressed_vowel_s and e_vowel == primary_stressed_vowel_e)
+                if is_this_vowel_stressed or vowel_nuc:match("ː") or not vowel_nuc:match(SHORT_VOWEL_PHONETIC_PATTERN_FOR_REDUCTION_INPUT) then table.insert(parts, vowel_nuc)
                 else
-                    local preceding_cons_quality = "neutral"
-                    if k > 1 then
-                        local prev_actual_cons_idx = k - 1
-                        while prev_actual_cons_idx > 0 and parsed_units[prev_actual_cons_idx].quality == "stress_mark" do
-                            prev_actual_cons_idx = prev_actual_cons_idx - 1
-                        end
-                        if prev_actual_cons_idx > 0 and (parsed_units[prev_actual_cons_idx].quality == "palatal" or parsed_units[prev_actual_cons_idx].quality == "nonpalatal") then
-                            preceding_cons_quality = parsed_units[prev_actual_cons_idx].quality
-                        end
-                    end
-
-                    local following_cons_quality = "neutral"
-                    if k < #parsed_units then
-                        local next_actual_cons_idx = k + 1
-                        if next_actual_cons_idx <= #parsed_units and parsed_units[next_actual_cons_idx].quality ~= "stress_mark" then
-                            if parsed_units[next_actual_cons_idx].quality == "palatal" or parsed_units[next_actual_cons_idx].quality == "nonpalatal" then
-                                following_cons_quality = parsed_units[next_actual_cons_idx].quality
-                            end
-                        end
-                    end
-                    
-                    local reduced_vowel_phon
-                    if following_cons_quality == "palatal" then
-                        reduced_vowel_phon = "i"
-                    elseif following_cons_quality == "nonpalatal" then
-                        reduced_vowel_phon = "ə"
-                    elseif preceding_cons_quality == "palatal" then
-                        reduced_vowel_phon = "i"
-                    else 
-                        reduced_vowel_phon = "ə"
-                    end
-                    debug_print_minimal("Stage4_6_UnstressedVowelReduction_Procedural", "Reducing '", unit_data.phon, "' to '", reduced_vowel_phon, "'. Prec: ", preceding_cons_quality, " Foll: ", following_cons_quality)
-                    table.insert(new_phon_units, { phon = reduced_vowel_phon, stress = unit_data.stress, quality = "vowel" })
-                    if reduced_vowel_phon ~= unit_data.phon then string_changed_this_major_pass = true end
-                end
-            else
-                table.insert(new_phon_units, unit_data)
+                    local preceding_cons_text = ""; if s_vowel > 1 then local prev_cons_end = s_vowel -1; local prev_cons_start = prev_cons_end; while prev_cons_start > 0 do local char_at_prev_start = usub(phon_word, prev_cons_start, prev_cons_start); if char_at_prev_start:match(ANY_CONSONANT_PHONETIC_PATTERN) or char_at_prev_start == "'" then prev_cons_start = prev_cons_start - 1 else break end end; preceding_cons_text = usub(phon_word, prev_cons_start + 1, prev_cons_end); preceding_cons_text = ugsub(preceding_cons_text, "ˈ","") end
+                    local reduced_vowel; if preceding_cons_text:match("'") or preceding_cons_text:match("['ʃçjɟc]$") then reduced_vowel = "i" else reduced_vowel = "ə" end
+                    table.insert(parts, reduced_vowel)
+                end; current_build_pos = e_vowel + 1
             end
+            if current_build_pos <= ulen(phon_word) then table.insert(parts, usub(phon_word, current_build_pos)) end; phon_word = table.concat(parts)
         end
-        
-        local temp_build_parts = {}
-        for _, ud in ipairs(new_phon_units) do table.insert(temp_build_parts, (ud.stress or "") .. ud.phon) end
-        phon_word = table.concat(temp_build_parts)
-
-        if phon_word == phon_word_at_pass_start then
-            string_changed_this_major_pass = false
-        end
+        local temp_phon_word = phon_word
+        temp_phon_word = ugsub(temp_phon_word, "ə("..ANY_CONSONANT_PHONETIC_PATTERN.."['ʃçjɟc])$", "i%1"); temp_phon_word = ugsub(temp_phon_word, "ə("..ANY_CONSONANT_PHONETIC_PATTERN..ANY_CONSONANT_PHONETIC_PATTERN.."?')$", "i%1")
+        temp_phon_word = ugsub(temp_phon_word, "("..ANY_CONSONANT_PHONETIC_PATTERN.."['ʃçjɟc])ə$", "%1i"); temp_phon_word = ugsub(temp_phon_word, "("..ANY_CONSONANT_PHONETIC_PATTERN..ANY_CONSONANT_PHONETIC_PATTERN.."?'?)ə$", function(consonants) if consonants:match("'$") or consonants:match("['ʃçjɟc]$") then return consonants .. "i" end return consonants .. "ə" end)
+        if temp_phon_word ~= phon_word then phon_word = temp_phon_word; string_changed_this_major_pass = true end
+        if phon_word == phon_word_at_pass_start then string_changed_this_major_pass = false else string_changed_this_major_pass = true end
     until not string_changed_this_major_pass
     ::end_reduction_loop_main::
-
-    if STAGE_DEBUG_ENABLED["Stage4_6_UnstressedVowelReduction_Procedural"] then print("  Stage4_6_UnstressedVowelReduction_Procedural END: Out=", phon_word) end
     return phon_word
 end
-
 irishPhonetics.rules_stage4_6_unstressed_vowel_reduction_specific_finals = { -- (Same as provided)
     { pattern = "aí$", replacement = "iː" }, { pattern = "ai$", replacement = "iː" }, { pattern = "eiə$", replacement = "iː"}, { pattern = "iːə$", replacement = "iː"},
 }
 irishPhonetics.EPENTHESIS_TARGET_CLUSTERS_BROAD = { -- (Same as provided)
     ["lk"]=true, ["lg"]=true, ["lb"]=true, ["lv"]=true, ["rm"]=true, ["rx"]=true,
     ["rb"]=true, ["rg"]=true,
+    ["ln"]=true, ["lr"]=true, ["lm"]=true, -- Added from analysis
 }
 irishPhonetics.EPENTHESIS_TARGET_CLUSTERS_SLENDER = { -- (Same as provided)
     ["lk"]=true, ["lf"]=true, ["rg"]=true, ["rk"]=true, ["nm"]=true,
+    ["ln"]=true, ["lr"]=true, ["lm"]=true, -- Added from analysis
 }
-function irishPhonetics.apply_procedural_epenthesis(phon_word_input, original_ortho_word_for_context, current_ortho_map_for_context)
-    -- (Same as 37BB - relies on improved parser)
+local PHONETIC_UNITS_PRIORITY_FOR_EPENTHESIS_PARSER = { -- (Same as provided)
+    "iə", "ua", "ai", "ei", "oi", "ui", "ɑu", "ou", "əu", "eiə", "aw", "əi",
+    "ɑː", "eː", "iː", "oː", "uː", "ɨː", "æː",
+    "c", "ɟ", "tʲ", "dʲ", "ʃ", "ç", "j", "ɾˠ", "lˠ", "nˠ", "mˠ", "t̪", "d̪", "n̪", "l̪",
+    "k'", "g'", "t'", "d'", "p'", "b'", "m'", "n'", "l'", "r'", "s'", "f'", "v'", "L'", "N'", "R'", "M'",
+    "k", "g", "t", "d", "p", "b", "m", "n", "l", "r", "s", "f", "v", "L", "N", "R", "M", "x", "ɣ", "ŋ", "h", "w",
+    "a", "æ", "ɔ", "e", "ə", "i", "ɪ", "u", "ʊ", "ʌ"
+}
+local function parse_phonetic_string_to_units_for_epenthesis(phon_str) -- (Same as provided, with critical fix)
+    local units = {}
+    local i = 1
+    while i <= ulen(phon_str) do
+        local stress = ""
+        if usub(phon_str, i, i) == "ˈ" then
+            stress = "ˈ"
+            i = i + 1
+        end
+
+        local matched_unit_phon = nil
+        local matched_unit_len = 0
+
+        for _, unit_pattern_str in ipairs(PHONETIC_UNITS_PRIORITY_FOR_EPENTHESIS_PARSER) do
+            if usub(phon_str, i, i + ulen(unit_pattern_str) - 1) == unit_pattern_str then
+                matched_unit_phon = unit_pattern_str
+                matched_unit_len = ulen(unit_pattern_str)
+                break
+            end
+        end
+
+        local quality = "unknown"
+        if matched_unit_phon then
+            if umatch(matched_unit_phon, "'$") or
+               umatch(matched_unit_phon, "['ʃçjɟctʲdʲ]$") or
+               umatch(matched_unit_phon, "ʲ$") then
+                quality = "palatal"
+            elseif umatch(matched_unit_phon, "ˠ$") or umatch(matched_unit_phon, "[̪]$") then
+                quality = "nonpalatal"
+            elseif umatch(matched_unit_phon, "^[" .. ALL_SINGLE_PHONETIC_VOWEL_CHARS_STR .. "]ː?$") then -- Corrected pattern for vowels
+                quality = "vowel"
+            elseif umatch(matched_unit_phon, "^[" .. ANY_CONSONANT_PHONETIC_RAW_CHARS_STR .. "]$") and not umatch(matched_unit_phon, "['ʲˠ̪]") then
+                local is_inherently_palatal_char = umatch(matched_unit_phon, "^[jç]$") or umatch(matched_unit_phon, "^[ʃ]$")
+                if is_inherently_palatal_char then quality = "palatal" else quality = "nonpalatal" end
+            elseif matched_unit_phon == "iə" or matched_unit_phon == "ei" or matched_unit_phon == "ui" or matched_unit_phon == "oi" or matched_unit_phon == "əi" then quality = "palatal"
+            elseif matched_unit_phon == "ua" or matched_unit_phon == "ɑu" or matched_unit_phon == "ou" or matched_unit_phon == "əu" or matched_unit_phon == "aw" then quality = "nonpalatal"
+            end
+
+            if quality == "unknown" and (umatch(matched_unit_phon, "^[" .. ALL_SINGLE_PHONETIC_VOWEL_CHARS_STR .. "]ː?$")) then -- Fallback for vowels
+                quality = "vowel"
+            end
+
+
+            table.insert(units, { phon = matched_unit_phon, stress = stress, quality = quality, original_start = i - ulen(stress), original_end = i + matched_unit_len - 1 - ulen(stress) })
+            i = i + matched_unit_len
+        elseif stress ~= "" then
+            table.insert(units, { phon = stress, stress = "", quality = "stress_mark", original_start = i - 1, original_end = i - 1})
+        else
+            local unknown_char = usub(phon_str,i,i)
+            local unknown_quality = "unknown_fallback"
+            if umatch(unknown_char, "^[" .. ALL_SINGLE_PHONETIC_VOWEL_CHARS_STR .. "]") then -- Catch single vowels missed by priority list
+                unknown_quality = "vowel"
+            end
+            table.insert(units, { phon = unknown_char, stress = stress, quality = unknown_quality, original_start = i - ulen(stress), original_end = i - ulen(stress) })
+            i = i + 1
+        end
+    end
+    return units
+end
+function irishPhonetics.apply_procedural_epenthesis(phon_word_input, original_ortho_word_for_context, current_ortho_map_for_context) -- (Same as provided, with C2 condition refined)
     if STAGE_DEBUG_ENABLED["EpenthesisAndStrongSonorants"] then print("  apply_procedural_epenthesis START: In=", phon_word_input) end
 
     local parsed_units = parse_phonetic_string_to_units_for_epenthesis(phon_word_input)
     if not parsed_units or #parsed_units == 0 then return phon_word_input end
 
-    if not MINIMAL_DEBUG_ENABLED and (DETAILED_DEBUG_ENABLED or STAGE_DEBUG_ENABLED["EpenthesisAndStrongSonorants"]) then
+    if DETAILED_DEBUG_ENABLED or STAGE_DEBUG_ENABLED["EpenthesisAndStrongSonorants"] then
         local unit_str_parts = {}
         for _, u_data in ipairs(parsed_units) do table.insert(unit_str_parts, (u_data.stress or "") .. u_data.phon .. "("..u_data.quality..")") end
-        debug_print_minimal("EpenthesisAndStrongSonorants", "Parsed units for epenthesis: ", table.concat(unit_str_parts, " | "))
+        debug_print_detailed("EpenthesisAndStrongSonorants", "Parsed units for epenthesis: ", table.concat(unit_str_parts, " | "))
     end
 
-    local is_overall_monosyllable = is_likely_monosyllable_phonetic_revised(phon_word_input, parsed_units)
+    local is_overall_monosyllable = is_likely_monosyllable_phonetic_revised(phon_word_input)
 
     if not is_overall_monosyllable then
         if STAGE_DEBUG_ENABLED["EpenthesisAndStrongSonorants"] then print("  apply_procedural_epenthesis END (not monosyllable): Out=", phon_word_input) end
@@ -930,41 +724,43 @@ function irishPhonetics.apply_procedural_epenthesis(phon_word_input, original_or
             local c1_base_phon = ugsub(unit_c1.phon, "['ˠʲ̪]", "")
             local is_c1_sonorant_type = umatch(c1_base_phon, "^[rlnm]$")
             local c2_base_phon = ugsub(unit_c2.phon, "['ˠʲ̪]", "")
+            -- Refined C2 condition:
             local is_c2_valid_for_epenthesis = umatch(c2_base_phon, "^[kgptdfbxs]$") or (is_c1_sonorant_type and umatch(c2_base_phon, "^[rlnm]$"))
+
 
             local c1_quality = unit_c1.quality
             local c2_quality = unit_c2.quality
-            local cluster_key_for_check = c1_base_phon .. c2_base_phon
 
-            if cluster_key_for_check == "nm" and c2_quality == "palatal" then
-                if c1_quality ~= "palatal" then
+            if is_c1_sonorant_type and (c1_quality == "unknown" or (c1_quality == "nonpalatal" and unit_c1.phon == c1_base_phon)) then
+                if (unit_v.quality == "palatal" or (unit_v.quality == "vowel" and umatch(unit_v.phon, "^[eiɛɪ]$"))) and c2_quality == "palatal" then
+                    c1_quality = "palatal"
                     unit_c1.phon = c1_base_phon .. "'"
                     unit_c1.quality = "palatal"
-                    c1_quality = "palatal"
-                    debug_print_minimal("EpenthesisAndStrongSonorants", "Heuristic: Forcing C1 (", c1_base_phon, ") to palatal for 'nm' cluster before palatal C2 (", unit_c2.phon, ") -> C1 becomes ", unit_c1.phon)
-                end
-            elseif is_c1_sonorant_type and (c1_quality == "unknown" or (c1_quality == "nonpalatal" and unit_c1.phon == c1_base_phon)) then
-                 local v_phon_no_diacritics = ugsub(unit_v.phon, "[~ː]", "")
-                if (unit_v.quality == "palatal" or (unit_v.quality == "vowel" and umatch(v_phon_no_diacritics, "^[eiɛɪ]$"))) and c2_quality == "palatal" then
-                    unit_c1.phon = c1_base_phon .. "'"
-                    unit_c1.quality = "palatal"
-                    c1_quality = "palatal"
-                    debug_print_minimal("EpenthesisAndStrongSonorants", "Inferred C1 quality to palatal for: ", c1_base_phon, " -> ", unit_c1.phon, " based on V=", unit_v.phon, " and C2=", unit_c2.phon)
+                    debug_print_detailed("EpenthesisAndStrongSonorants", "Inferred C1 quality to palatal for: ", c1_base_phon, " -> ", unit_c1.phon, " based on V=", unit_v.phon, " and C2=", unit_c2.phon)
                 end
             end
 
+
             local ep_vowel_to_insert = nil
-            if is_vowel_short and is_c1_sonorant_type and is_c2_valid_for_epenthesis then
-                debug_print_minimal("EpenthesisAndStrongSonorants", "Checking V-C1-C2: ", unit_v.stress..unit_v.phon, unit_c1.phon, unit_c2.phon, " | Cluster key: ", cluster_key_for_check, " | C1 Qual: ", c1_quality, " | C2 Qual: ", c2_quality)
+            if is_vowel_short and is_c1_sonorant_type and is_c2_valid_for_epenthesis then -- Use refined C2 condition
+                local cluster_key_for_check = c1_base_phon .. c2_base_phon
+                debug_print_detailed("EpenthesisAndStrongSonorants", "Checking V-C1-C2: ", unit_v.stress..unit_v.phon, unit_c1.phon, unit_c2.phon, " | Cluster key: ", cluster_key_for_check, " | C1 Qual: ", c1_quality, " | C2 Qual: ", c2_quality)
                 if c1_quality == "palatal" and c2_quality == "palatal" then
                     if irishPhonetics.EPENTHESIS_TARGET_CLUSTERS_SLENDER[cluster_key_for_check] then ep_vowel_to_insert = "i" end
                 elseif c1_quality == "nonpalatal" and c2_quality == "nonpalatal" then
                     if irishPhonetics.EPENTHESIS_TARGET_CLUSTERS_BROAD[cluster_key_for_check] then ep_vowel_to_insert = "ə" end
+                elseif cluster_key_for_check == "nm" and c2_quality == "palatal" and irishPhonetics.EPENTHESIS_TARGET_CLUSTERS_SLENDER[cluster_key_for_check] then
+                    if c1_quality ~= "palatal" then
+                        unit_c1.phon = c1_base_phon .. "'"
+                        unit_c1.quality = "palatal"
+                        debug_print_detailed("EpenthesisAndStrongSonorants", "Heuristic: Forcing C1 (", c1_base_phon, ") to palatal for 'nm' cluster before palatal C2 (", unit_c2.phon, ") -> C1 becomes ", unit_c1.phon)
+                    end
+                    ep_vowel_to_insert = "i"
                 end
             end
 
             if ep_vowel_to_insert then
-                debug_print_minimal("EpenthesisAndStrongSonorants", "PROCEDURAL Epenthesis Triggered for: ", unit_v.stress..unit_v.phon, unit_c1.phon, unit_c2.phon, " -> inserting ", ep_vowel_to_insert)
+                debug_print_detailed("EpenthesisAndStrongSonorants", "PROCEDURAL Epenthesis Triggered for: ", unit_v.stress..unit_v.phon, unit_c1.phon, unit_c2.phon, " -> inserting ", ep_vowel_to_insert)
                 table.insert(new_units_build, unit_v)
                 table.insert(new_units_build, unit_c1)
                 table.insert(new_units_build, { phon = ep_vowel_to_insert, stress = "", quality = (ep_vowel_to_insert == "i" and "palatal" or "nonpalatal") })
@@ -992,32 +788,32 @@ function irishPhonetics.apply_procedural_epenthesis(phon_word_input, original_or
         return phon_word_input
     end
 end
-irishPhonetics.rules_stage5_strong_sonorants_only = { -- (Same as 37AW, condition_func updated to pass parsed units)
+irishPhonetics.rules_stage5_strong_sonorants_only = { -- (Same as provided)
     { pattern = "^(ˈ?)((?:"..ANY_CONSONANT_PHONETIC_PATTERN.."*'?))ɪ([NMnrlLNR]'?)(#?)$",
       replacement = function(full_match, stress, c_part, sonorant, boundary_marker)
         return (stress or "") .. (c_part or "") .. "iː" .. sonorant .. (boundary_marker or "")
-      end, use_current_phonetic_for_condition = true, condition_func = function(fm, pu) return is_likely_monosyllable_phonetic_revised(fm, pu) end},
+      end, use_current_phonetic_for_condition = true, condition_func = is_likely_monosyllable_phonetic_revised},
     { pattern = "^(ˈ?)((?:"..ANY_CONSONANT_PHONETIC_PATTERN.."*'?))ɑ([NMnrlLNR]'?)(#?)$",
       replacement = function(full_match, stress, c_part, sonorant, boundary_marker)
         return (stress or "") .. (c_part or "") .. "ɑː" .. sonorant .. (boundary_marker or "")
-      end, use_current_phonetic_for_condition = true, condition_func = function(fm, pu) return is_likely_monosyllable_phonetic_revised(fm, pu) end},
+      end, use_current_phonetic_for_condition = true, condition_func = is_likely_monosyllable_phonetic_revised},
     { pattern = "^(ˈ?)((?:"..ANY_CONSONANT_PHONETIC_PATTERN.."*'?))(ɔ)("..L_VARIANTS_PHONETIC.."'?)(#?)$",
       replacement = function(full_match, stress, c_part, vowel, sonorant, boundary_marker)
         return (stress or "") .. (c_part or "") .. "&TEMP_CONN_AU&" .. sonorant .. (boundary_marker or "")
-      end, use_current_phonetic_for_condition = true, condition_func = function(fm, pu) return is_likely_monosyllable_phonetic_revised(fm, pu) end},
+      end, use_current_phonetic_for_condition = true, condition_func = is_likely_monosyllable_phonetic_revised},
     { pattern = "^(ˈ?)((?:"..ANY_CONSONANT_PHONETIC_PATTERN.."*'?))(ɔ)("..N_VARIANTS_PHONETIC.."'?)(#?)$",
       replacement = function(full_match, stress, c_part, vowel, sonorant, boundary_marker)
         return (stress or "") .. (c_part or "") .. "uː" .. sonorant .. (boundary_marker or "")
-      end, use_current_phonetic_for_condition = true, condition_func = function(fm, pu) return is_likely_monosyllable_phonetic_revised(fm, pu) end},
+      end, use_current_phonetic_for_condition = true, condition_func = is_likely_monosyllable_phonetic_revised},
     { pattern = "^(ˈ?)((?:"..ANY_CONSONANT_PHONETIC_PATTERN.."*'?))(ɔ)("..R_VARIANTS_PHONETIC.."'?)("..ANY_CONSONANT_PHONETIC_PATTERN.."(?!'))$",
       replacement = function(full_match, stress, c_part, vowel, sonorant, following_cons)
-        debug_print_minimal("EpenthesisAndStrongSonorants", "Strong Sonorant ɔR+BroadC rule fired for: ", full_match, " -> ", (stress or "") .. (c_part or "") .. "&TEMP_CONN_AU&" .. sonorant .. (following_cons or ""))
+        debug_print_detailed("EpenthesisAndStrongSonorants", "Strong Sonorant ɔR+BroadC rule fired for: ", full_match, " -> ", (stress or "") .. (c_part or "") .. "&TEMP_CONN_AU&" .. sonorant .. (following_cons or ""))
         return (stress or "") .. (c_part or "") .. "&TEMP_CONN_AU&" .. sonorant .. (following_cons or "")
-      end, use_current_phonetic_for_condition = true, condition_func = function(fm, pu) return is_likely_monosyllable_phonetic_revised(fm, pu) end},
+      end, use_current_phonetic_for_condition = true, condition_func = is_likely_monosyllable_phonetic_revised},
     { pattern = "^(ˈ?)((?:"..ANY_CONSONANT_PHONETIC_PATTERN.."*'?))(ɔ)("..R_VARIANTS_PHONETIC.."'?)(#?)$",
       replacement = function(full_match, stress, c_part, vowel, sonorant, boundary_marker)
         return (stress or "") .. (c_part or "") .. "oː" .. sonorant .. (boundary_marker or "")
-      end, use_current_phonetic_for_condition = true, condition_func = function(fm, pu) return is_likely_monosyllable_phonetic_revised(fm, pu) end},
+      end, use_current_phonetic_for_condition = true, condition_func = is_likely_monosyllable_phonetic_revised},
 }
 local NON_PALATAL_CONSONANT_CHARS_FOR_DIACRITICS = "tdnlsLNRM" -- (Same as provided)
 local NON_PALATAL_CONSONANT_PATTERN_FOR_DIACRITICS = "[" .. NON_PALATAL_CONSONANT_CHARS_FOR_DIACRITICS .. "]"
@@ -1049,15 +845,98 @@ irishPhonetics.rules_stage7_final_cleanup = { -- (Same as provided)
     { pattern = "ˈə", replacement = "ə" },
     { pattern = " ", replacement = " "}, { pattern = "%-", replacement = ""}, { pattern = "&", replacement = ""},
 }
--- (Nasalization function from 37AU is already included above)
 
--- ====== MAIN TRANSCRIBE FUNCTION (Updated Pipeline - same as 37AU) ====== --
+-- ====== NEW NASALIZATION STAGE FUNCTION ====== --
+function irishPhonetics.apply_vowel_nasalization(phon_word, original_ortho_word_for_context)
+    if STAGE_DEBUG_ENABLED["Nasalization"] then print("  Nasalization START: In=", phon_word) end
+    if not phon_word or phon_word == "" then return "" end
+
+    local parsed_units = parse_phonetic_string_to_units_for_epenthesis(phon_word)
+    if not parsed_units or #parsed_units == 0 then
+        if STAGE_DEBUG_ENABLED["Nasalization"] then print("  Nasalization END (no units): Out=", phon_word) end
+        return phon_word
+    end
+
+    -- Phonetic representations of nasal consonants (after Stage 4.5, before Stage 7 cleanup)
+    local NASAL_CONSONANTS_PHONETIC = {
+        ["m"]=true, ["n"]=true, ["ŋ"]=true, ["N"]=true, ["M"]=true,
+        ["m'"]=true, ["n'"]=true, ["N'"]=true, ["M'"]=true, -- Prime notation from earlier stages
+        ["mʲ"]=true, ["nʲ"]=true, ["Nʲ"]=true, ["Mʲ"]=true, -- Fully resolved palatal nasals
+        ["n̪"]=true, ["mˠ"]=true, ["nˠ"]=true, ["Mˠ"]=true, ["Nˠ"]=true, -- Diacritic-marked nasals
+    }
+
+    local words_exempt_from_nasalization_in_connacht_csv_for_now = {
+        ["am"]=true, ["cam"]=true, ["ainm"]=true, ["rámh"]=true, ["lámh"]=true,
+        ["mná"]=true, ["snámh"]=true, -- Mn and Sn are often not nasalized
+    }
+    -- Use original_ortho_word_for_context for exemption check
+    local ortho_for_exempt_check = ulower(original_ortho_word_for_context)
+    if words_exempt_from_nasalization_in_connacht_csv_for_now[ortho_for_exempt_check] then
+         debug_print_detailed("Nasalization", "Word '", original_ortho_word_for_context, "' is explicitly exempt from nasalization per CSV/Hickey Connacht data.")
+         return phon_word
+    end
+
+
+    local new_phon_units = {}
+    for i, unit_data in ipairs(parsed_units) do
+        local current_phon = unit_data.phon
+        local current_stress = unit_data.stress or ""
+        local current_quality = unit_data.quality
+        local original_phon_for_debug = current_phon
+
+        if current_quality == "vowel" and not umatch(current_phon, "̃") then -- Only nasalize if not already nasalized
+            local nasalize_this_vowel = false
+            local reason_for_nasalization = ""
+
+            -- Check regressive nasalization (Vowel *before* Nasal)
+            if i < #parsed_units then
+                local next_unit = parsed_units[i+1]
+                if NASAL_CONSONANTS_PHONETIC[next_unit.phon] then
+                    nasalize_this_vowel = true
+                    reason_for_nasalization = "Regressive: Vowel '" .. current_phon .. "' before nasal '" .. next_unit.phon .. "'"
+                end
+            end
+
+            -- Check progressive nasalization (Vowel *after* Nasal)
+            -- Only if not already marked for regressive, to avoid double processing logic here
+            if not nasalize_this_vowel and i > 1 then
+                local prev_unit = parsed_units[i-1]
+                if NASAL_CONSONANTS_PHONETIC[prev_unit.phon] then
+                    nasalize_this_vowel = true
+                    reason_for_nasalization = "Progressive: Vowel '" .. current_phon .. "' after nasal '" .. prev_unit.phon .. "'"
+                end
+            end
+
+            if nasalize_this_vowel then
+                debug_print_detailed("Nasalization", reason_for_nasalization)
+                if umatch(current_phon, "ː$") then -- Ends with length mark
+                    -- Place tilde before the length mark
+                    current_phon = ugsub(current_phon, "(.)(ː)$", "%1̃%2") -- IPA combining tilde above (U+0303)
+                else
+                    current_phon = current_phon .. "̃" -- IPA combining tilde above (U+0303)
+                end
+                debug_print_detailed("Nasalization", "Nasalized '", original_phon_for_debug, "' to '", current_phon, "'")
+            end
+        end
+        table.insert(new_phon_units, { phon = current_phon, stress = current_stress, quality = current_quality})
+    end
+
+    local result_phon_parts = {}
+    for _, unit_data in ipairs(new_phon_units) do
+        table.insert(result_phon_parts, (unit_data.stress or "") .. unit_data.phon)
+    end
+    local final_phon_word = table.concat(result_phon_parts)
+
+    if STAGE_DEBUG_ENABLED["Nasalization"] then print("  Nasalization END: Out=", final_phon_word) end
+    return final_phon_word
+end
+
+
+-- ====== MAIN TRANSCRIBE FUNCTION (Updated Pipeline) ====== --
 function irishPhonetics.transcribe(orthographic_word)
-    -- (This main transcribe function remains the same as in 37AU,
-    --  as the changes are within the procedural functions and rule definitions called by it)
     local current_word_phonetic = orthographic_word
     if not current_word_phonetic or current_word_phonetic == "" then return "" end
-    local original_ortho_for_context = ""
+    local original_ortho_for_context = orthographic_word -- Store original for context
     local ortho_map = {}
 
     local function build_initial_ortho_map(word_str) local new_map = {}; for k=1, ulen(word_str) do table.insert(new_map, {phon_s=k, phon_e=k, ortho_s=k, ortho_e=k}) end; return new_map end
@@ -1077,8 +956,9 @@ function irishPhonetics.transcribe(orthographic_word)
         {name = "PreProcess", rules = irishPhonetics.rules_stage1_preprocess, updates_map_from_current = true},
         {name = "MarkDigraphsAndVocalisationTriggers", rules = irishPhonetics.rules_stage2_mark_digraphs_and_vocalisation_triggers, updates_map_from_original_with_priority = true},
         {name = "ConsonantResolution", rules = irishPhonetics.rules_stage3_consonant_resolution, use_original_context_for_rules = true, is_procedural_stage = true, func = function(phon_word_in_stage3, o_context_str_stage3, current_ortho_map_stage3)
+            -- (Procedural Consonant Resolution including Metathesis - same as provided)
             if STAGE_DEBUG_ENABLED["ConsonantResolution"] then print("  ConsonantResolution START (Proc): In=", phon_word_in_stage3) end
-            -- debug_print_minimal("ConsonantResolution", "Metathesis Sub-Stage START: ", phon_word_in_stage3)
+            debug_print_detailed("ConsonantResolution", "Metathesis Sub-Stage START: ", phon_word_in_stage3)
             local metathesis_phon_parts = {}
             local meta_scan_offset = 1
             while meta_scan_offset <= ulen(phon_word_in_stage3) do
@@ -1106,19 +986,19 @@ function irishPhonetics.transcribe(orthographic_word)
                         n_is_palatal = true
                     end
                 end
-                -- debug_print_minimal("ConsonantResolution", "Metathesis Check: c_base=", c_phon_base, "c_pal=",tostring(c_is_palatal), "n_base=", n_phon_base, "n_pal=", tostring(n_is_palatal), "at offset", meta_scan_offset)
+                debug_print_detailed("ConsonantResolution", "Metathesis Check: c_base=", c_phon_base, "c_pal=",tostring(c_is_palatal), "n_base=", n_phon_base, "n_pal=", tostring(n_is_palatal), "at offset", meta_scan_offset)
                 local c_is_k_type = (c_phon_base == "k" or c_phon_base == "c")
                 local c_is_g_type = (c_phon_base == "g")
                 if ((c_is_k_type) and n_phon_base == "n") or (c_is_g_type and n_phon_base == "n") then
                      if (meta_scan_offset == 1 and stress_marker == "") or (meta_scan_offset == (1 + ulen(stress_marker)) and stress_marker ~= "") then
-                        debug_print_minimal("ConsonantResolution", "Metathesis candidate found: ", stress_marker..c_phon_base..(c_is_palatal and "'" or "")..n_phon_base..(n_is_palatal and "'" or ""))
+                        debug_print_detailed("ConsonantResolution", "Metathesis candidate found: ", stress_marker..c_phon_base..(c_is_palatal and "'" or "")..n_phon_base..(n_is_palatal and "'" or ""))
                         local n_phon_end_idx_in_phon = n_phon_start_idx_in_phon + (n_is_palatal and 1 or 0)
                         local ortho_s_n, ortho_len_n = get_original_indices_from_map(n_phon_start_idx_in_phon, n_phon_end_idx_in_phon, current_ortho_map_stage3)
                         local quality_for_r
                         local n_ortho_actual_start_idx = ortho_s_n
                         local n_ortho_actual_end_idx = ortho_s_n + ortho_len_n -1
                         quality_for_r = determine_consonant_quality_ortho(o_context_str_stage3, n_ortho_actual_start_idx, n_ortho_actual_end_idx)
-                        -- debug_print_minimal("ConsonantResolution", "Original ortho 'n' (ortho indices " .. n_ortho_actual_start_idx .. "-" .. n_ortho_actual_end_idx .. " in '" .. o_context_str_stage3 .. "') quality was: ", quality_for_r, ". Thus, quality for metathesized 'r': ", quality_for_r)
+                        debug_print_detailed("ConsonantResolution", "Original ortho 'n' (ortho indices " .. n_ortho_actual_start_idx .. "-" .. n_ortho_actual_end_idx .. " in '" .. o_context_str_stage3 .. "') quality was: ", quality_for_r, ". Thus, quality for metathesized 'r': ", quality_for_r)
                         table.insert(metathesis_phon_parts, stress_marker .. c_phon_base .. (c_is_palatal and "'" or ""))
                         if quality_for_r == "palatal" then table.insert(metathesis_phon_parts, "r'") else table.insert(metathesis_phon_parts, "r") end
                         meta_scan_offset = n_phon_end_idx_in_phon + 1
@@ -1132,7 +1012,7 @@ function irishPhonetics.transcribe(orthographic_word)
                 end
             end
             phon_word_in_stage3 = table.concat(metathesis_phon_parts)
-            -- debug_print_minimal("ConsonantResolution", "Metathesis Sub-Stage END: ", phon_word_in_stage3)
+            debug_print_detailed("ConsonantResolution", "Metathesis Sub-Stage END: ", phon_word_in_stage3)
 
             local multi_char_rules_stage3 = {}
             local single_char_rule_data_stage3
@@ -1147,6 +1027,36 @@ function irishPhonetics.transcribe(orthographic_word)
             while pass1_scan_offset_stage3 <= ulen(phon_word_in_stage3) do
                 local best_match_s_this_iter, best_match_e_this_iter, best_rule_this_iter_idx
                 local best_captures_this_iter = {}; local current_best_match_length_this_iter = -1
+                
+                -- Check for existing multi-char phonetic units first (like 'r'', 'n'')
+                local parsed_sub_units = parse_phonetic_string_to_units_for_epenthesis(usub(phon_word_in_stage3, pass1_scan_offset_stage3))
+                if parsed_sub_units and #parsed_sub_units > 0 and parsed_sub_units[1].quality ~= "unknown_fallback" then
+                    local unit_phon = parsed_sub_units[1].phon
+                    local unit_len = ulen(unit_phon)
+                    
+                    -- Check if this parsed unit itself is a key for a multi-char rule that needs to apply at this point
+                    local rule_found_for_parsed_unit = false
+                    for rule_idx_loop, rule_data_loop in ipairs(multi_char_rules_stage3) do
+                        if rule_data_loop.pattern == unit_phon then
+                            best_match_s_this_iter = pass1_scan_offset_stage3
+                            best_match_e_this_iter = pass1_scan_offset_stage3 + unit_len - 1
+                            best_rule_this_iter_idx = rule_idx_loop
+                            current_best_match_length_this_iter = unit_len
+                            best_captures_this_iter = {} -- No captures for direct match pattern
+                            rule_found_for_parsed_unit = true
+                            break
+                        end
+                    end
+                    
+                    if not rule_found_for_parsed_unit then
+                        -- If no rule explicitly matches the multi-char unit, keep it as is for now
+                        table.insert(pass1_phonetic_parts_stage3, unit_phon)
+                        pass1_scan_offset_stage3 = pass1_scan_offset_stage3 + unit_len
+                        goto continue_pass1_scan_offset_stage3
+                    end
+                end
+
+                -- If not handled by multi-char phonetic unit directly, or if it's a new match
                 for rule_idx_loop, rule_data_loop in ipairs(multi_char_rules_stage3) do
                     local s, e, cap1, cap2, cap3, cap4; s, e, cap1, cap2, cap3, cap4 = ufind(phon_word_in_stage3, rule_data_loop.pattern, pass1_scan_offset_stage3)
                     if s then local current_match_len_loop = e - s + 1
@@ -1155,6 +1065,7 @@ function irishPhonetics.transcribe(orthographic_word)
                         end
                     end
                 end
+
                 if best_rule_this_iter_idx then
                     if best_match_s_this_iter > pass1_scan_offset_stage3 then table.insert(pass1_phonetic_parts_stage3, usub(phon_word_in_stage3, pass1_scan_offset_stage3, best_match_s_this_iter - 1)) end
                     local rule = multi_char_rules_stage3[best_rule_this_iter_idx]; local full_match_segment = usub(phon_word_in_stage3, best_match_s_this_iter, best_match_e_this_iter)
@@ -1171,29 +1082,37 @@ function irishPhonetics.transcribe(orthographic_word)
                     if pass1_scan_offset_stage3 <= ulen(phon_word_in_stage3) then table.insert(pass1_phonetic_parts_stage3, usub(phon_word_in_stage3, pass1_scan_offset_stage3, pass1_scan_offset_stage3)); pass1_scan_offset_stage3 = pass1_scan_offset_stage3 + 1
                     else break end
                 end
+                ::continue_pass1_scan_offset_stage3::
             end
             phon_word_in_stage3 = table.concat(pass1_phonetic_parts_stage3)
-            -- debug_print_minimal("ConsonantResolution", "After Pass 1 (markers): ", phon_word_in_stage3)
+            debug_print_detailed("ConsonantResolution", "After Pass 1 (markers): ", phon_word_in_stage3)
+
             if single_char_rule_data_stage3 then
                 local pass2_phonetic_parts_stage3 = {}; local pass2_scan_offset_stage3 = 1
                 while pass2_scan_offset_stage3 <= ulen(phon_word_in_stage3) do
                     local char_to_check = usub(phon_word_in_stage3, pass2_scan_offset_stage3, pass2_scan_offset_stage3)
-                    if char_to_check:match("^[bcdfghkmprst]$") then
-                        local original_ortho_s, original_ortho_len = get_original_indices_from_map(pass2_scan_offset_stage3, pass2_scan_offset_stage3, current_ortho_map_stage3)
-                        local original_match_info = {ortho_s = original_ortho_s, ortho_e = original_ortho_s + original_ortho_len -1}
-                        -- debug_print_minimal("ConsonantResolution", "Pass 2: Checking '", char_to_check, "' at phon_idx ", pass2_scan_offset_stage3, " -> ortho_s:", original_ortho_s, "ortho_e:", original_match_info.ortho_e)
-                        local replacement_text = single_char_rule_data_stage3.replacement(char_to_check, o_context_str_stage3, original_match_info)
-                        replacement_text = replacement_text or char_to_check
-                        table.insert(pass2_phonetic_parts_stage3, replacement_text)
-                        -- debug_print_minimal("ConsonantResolution", "Pass 2: Replaced '", char_to_check, "' with '", replacement_text, "'")
-                    else
+                    local processed_this_char = false
+                    -- Only apply single character rule if it's actually a single orthographic consonant
+                    local original_ortho_s, original_ortho_len = get_original_indices_from_map(pass2_scan_offset_stage3, pass2_scan_offset_stage3, current_ortho_map_stage3)
+                    if original_ortho_len == 1 then -- Ensure it maps to a single original orthographic character
+                        if char_to_check:match("^[bcdfghkmprst]$") then
+                            local original_match_info = {ortho_s = original_ortho_s, ortho_e = original_ortho_s + original_ortho_len -1}
+                            debug_print_detailed("ConsonantResolution", "Pass 2: Checking '", char_to_check, "' at phon_idx ", pass2_scan_offset_stage3, " -> ortho_s:", original_ortho_s, "ortho_e:", original_match_info.ortho_e)
+                            local replacement_text = single_char_rule_data_stage3.replacement(char_to_check, o_context_str_stage3, original_match_info)
+                            replacement_text = replacement_text or char_to_check
+                            table.insert(pass2_phonetic_parts_stage3, replacement_text)
+                            debug_print_detailed("ConsonantResolution", "Pass 2: Replaced '", char_to_check, "' with '", replacement_text, "'")
+                            processed_this_char = true
+                        end
+                    end
+                    if not processed_this_char then
                         table.insert(pass2_phonetic_parts_stage3, char_to_check)
                     end
                     pass2_scan_offset_stage3 = pass2_scan_offset_stage3 + 1
                 end
                 phon_word_in_stage3 = table.concat(pass2_phonetic_parts_stage3)
             end
-            -- debug_print_minimal("ConsonantResolution", "After Pass 2 (single chars): ", phon_word_in_stage3)
+            debug_print_detailed("ConsonantResolution", "After Pass 2 (single chars): ", phon_word_in_stage3)
             if STAGE_DEBUG_ENABLED["ConsonantResolution"] then print("  ConsonantResolution END (Proc): Out=", phon_word_in_stage3) end
             return phon_word_in_stage3
         end},
@@ -1203,13 +1122,13 @@ function irishPhonetics.transcribe(orthographic_word)
         {name = "Stage4_2_LongVowelsOrthoToTempMarker", rules = irishPhonetics.rules_stage4_2_long_vowels_ortho_to_temp_marker, use_original_context_for_rules = false},
         {name = "Stage4_3_DiphthongsOrthoToTempMarker", rules = irishPhonetics.rules_stage4_3_diphthongs_ortho_to_temp_marker, use_original_context_for_rules = false},
         {name = "Stage4_4_ResolveTempVowelMarkers", rules = irishPhonetics.rules_stage4_4_resolve_temp_vowel_markers, use_original_context_for_rules = false, has_internal_loop = true},
-        {name = "Stage4_4_1_VocalizeLenitedFricatives", rules = irishPhonetics.rules_stage4_4_1_vocalize_lenited_fricatives, use_original_context_for_rules = false, has_internal_loop = true},
         {name = "Stage4_5_ContextualAllophonyOnPhonetic", rules = irishPhonetics.rules_stage4_5_contextual_allophony_on_phonetic, use_original_context_for_rules = false, is_procedural_stage = true, func = function(phon_word)
+            -- (Procedural Contextual Allophony - same as provided)
             if STAGE_DEBUG_ENABLED["Stage4_5_ContextualAllophonyOnPhonetic"] then print("  Stage4_5_ContextualAllophonyOnPhonetic START: In=", phon_word) end
-            -- debug_print_minimal("Stage4_5_ContextualAllophonyOnPhonetic", "Applying placeholder creation rules (ONCE)...")
-            for _, rule in ipairs(placeholder_creation_rules_stage4_5) do local old_str = phon_word; phon_word = ugsub(phon_word, rule.pattern, rule.replacement); if old_str ~= phon_word then debug_print_minimal("Stage4_5_ContextualAllophonyOnPhonetic", "Placeholder created: '", rule.pattern, "' -> '", rule.replacement, "'. Result: '", phon_word, "'") end end
-            -- debug_print_minimal("Stage4_5_ContextualAllophonyOnPhonetic", "After placeholder creation: ", phon_word)
-            -- debug_print_minimal("Stage4_5_ContextualAllophonyOnPhonetic", "Applying core allophony rules (iteratively)...")
+            debug_print_detailed("Stage4_5_ContextualAllophonyOnPhonetic", "Applying placeholder creation rules (ONCE)...")
+            for _, rule in ipairs(placeholder_creation_rules_stage4_5) do local old_str = phon_word; phon_word = ugsub(phon_word, rule.pattern, rule.replacement); if old_str ~= phon_word then debug_print_detailed("Stage4_5_ContextualAllophonyOnPhonetic", "Placeholder created: '", rule.pattern, "' -> '", rule.replacement, "'. Result: '", phon_word, "'") end end
+            debug_print_detailed("Stage4_5_ContextualAllophonyOnPhonetic", "After placeholder creation: ", phon_word)
+            debug_print_detailed("Stage4_5_ContextualAllophonyOnPhonetic", "Applying core allophony rules (iteratively)...")
             local pass_counter_core_loop = 0; local core_loop_changed_string
             repeat
                 core_loop_changed_string = false; pass_counter_core_loop = pass_counter_core_loop + 1
@@ -1222,35 +1141,35 @@ function irishPhonetics.transcribe(orthographic_word)
                         else
                             new_phon_string, num_replacements = ugsub(phon_word, rule_data_loop.pattern, rule_data_loop.replacement)
                         end
-                        if new_phon_string ~= phon_word then debug_print_minimal("Stage4_5_ContextualAllophonyOnPhonetic", "Core Iter.gsub: Rule '", rule_data_loop.pattern, "' APPLIED to '", phon_word, "' -> '", new_phon_string, "' (", num_replacements, "x)"); phon_word = new_phon_string; core_loop_changed_string = true end
+                        if new_phon_string ~= phon_word then debug_print_detailed("Stage4_5_ContextualAllophonyOnPhonetic", "Core Iter.gsub: Rule '", rule_data_loop.pattern, "' APPLIED to '", phon_word, "' -> '", new_phon_string, "' (", num_replacements, "x)"); phon_word = new_phon_string; core_loop_changed_string = true end
                     end
                 end
-                -- if core_loop_changed_string then debug_print_minimal("Stage4_5_ContextualAllophonyOnPhonetic", "Core Iter.gsub Pass "..pass_counter_core_loop.." ended. String changed from '", phonetic_before_this_core_pass, "' to '", phon_word, "'")
-                -- else debug_print_minimal("Stage4_5_ContextualAllophonyOnPhonetic", "Core Iter.gsub Pass "..pass_counter_core_loop.." ended. No changes in this pass. String remains: '", phon_word, "'") end
+                if core_loop_changed_string then debug_print_detailed("Stage4_5_ContextualAllophonyOnPhonetic", "Core Iter.gsub Pass "..pass_counter_core_loop.." ended. String changed from '", phonetic_before_this_core_pass, "' to '", phon_word, "'")
+                else debug_print_detailed("Stage4_5_ContextualAllophonyOnPhonetic", "Core Iter.gsub Pass "..pass_counter_core_loop.." ended. No changes in this pass. String remains: '", phon_word, "'") end
             until not core_loop_changed_string
-            -- debug_print_minimal("Stage4_5_ContextualAllophonyOnPhonetic", "After core allophony rules: ", phon_word)
-            -- debug_print_minimal("Stage4_5_ContextualAllophonyOnPhonetic", "Applying placeholder restoration rules (ONCE)...")
-            for _, rule in ipairs(placeholder_restoration_rules_stage4_5) do local old_str = phon_word; phon_word = ugsub(phon_word, rule.pattern, rule.replacement); if old_str ~= phon_word then debug_print_minimal("Stage4_5_ContextualAllophonyOnPhonetic", "Placeholder restored: '", rule.pattern, "' -> '", rule.replacement, "'. Result: '", phon_word, "'") end end
-            -- debug_print_minimal("Stage4_5_ContextualAllophonyOnPhonetic", "After placeholder restoration: ", phon_word)
-            -- debug_print_minimal("Stage4_5_ContextualAllophonyOnPhonetic", "Applying Connacht ɑu -> əu shift (ONCE)...")
+            debug_print_detailed("Stage4_5_ContextualAllophonyOnPhonetic", "After core allophony rules: ", phon_word)
+            debug_print_detailed("Stage4_5_ContextualAllophonyOnPhonetic", "Applying placeholder restoration rules (ONCE)...")
+            for _, rule in ipairs(placeholder_restoration_rules_stage4_5) do local old_str = phon_word; phon_word = ugsub(phon_word, rule.pattern, rule.replacement); if old_str ~= phon_word then debug_print_detailed("Stage4_5_ContextualAllophonyOnPhonetic", "Placeholder restored: '", rule.pattern, "' -> '", rule.replacement, "'. Result: '", phon_word, "'") end end
+            debug_print_detailed("Stage4_5_ContextualAllophonyOnPhonetic", "After placeholder restoration: ", phon_word)
+            
+            debug_print_detailed("Stage4_5_ContextualAllophonyOnPhonetic", "Applying Connacht ɑu -> əu shift (ONCE)...")
             local old_str_au_shift = phon_word
             phon_word = ugsub(phon_word, connacht_au_to_schwa_u_shift_rule_stage4_5.pattern, connacht_au_to_schwa_u_shift_rule_stage4_5.replacement)
-            -- if old_str_au_shift ~= phon_word then debug_print_minimal("Stage4_5_ContextualAllophonyOnPhonetic", "Connacht ɑu->əu shift: '", connacht_au_to_schwa_u_shift_rule_stage4_5.pattern, "'. Result: '", phon_word, "'") end
-            -- debug_print_minimal("Stage4_5_ContextualAllophonyOnPhonetic", "After Connacht ɑu->əu shift: ", phon_word)
-            -- debug_print_minimal("Stage4_5_ContextualAllophonyOnPhonetic", "Applying &TEMP_CONN_AU& -> əu shift (ONCE)...")
+            if old_str_au_shift ~= phon_word then debug_print_detailed("Stage4_5_ContextualAllophonyOnPhonetic", "Connacht ɑu->əu shift: '", connacht_au_to_schwa_u_shift_rule_stage4_5.pattern, "'. Result: '", phon_word, "'") end
+            debug_print_detailed("Stage4_5_ContextualAllophonyOnPhonetic", "After Connacht ɑu->əu shift: ", phon_word)
+            debug_print_detailed("Stage4_5_ContextualAllophonyOnPhonetic", "Applying &TEMP_CONN_AU& -> əu shift (ONCE)...")
             local old_str_temp_au_shift = phon_word
             phon_word = ugsub(phon_word, temp_conn_au_to_final_au_rule_stage4_5.pattern, temp_conn_au_to_final_au_rule_stage4_5.replacement)
-            -- if old_str_temp_au_shift ~= phon_word then debug_print_minimal("Stage4_5_ContextualAllophonyOnPhonetic", "&TEMP_CONN_AU&->əu shift: '", temp_conn_au_to_final_au_rule_stage4_5.pattern, "'. Result: '", phon_word, "'") end
-            -- debug_print_minimal("Stage4_5_ContextualAllophonyOnPhonetic", "After &TEMP_CONN_AU&->əu shift: ", phon_word)
+            if old_str_temp_au_shift ~= phon_word then debug_print_detailed("Stage4_5_ContextualAllophonyOnPhonetic", "&TEMP_CONN_AU&->əu shift: '", temp_conn_au_to_final_au_rule_stage4_5.pattern, "'. Result: '", phon_word, "'") end
+            debug_print_detailed("Stage4_5_ContextualAllophonyOnPhonetic", "After &TEMP_CONN_AU&->əu shift: ", phon_word)
             if STAGE_DEBUG_ENABLED["Stage4_5_ContextualAllophonyOnPhonetic"] then print("  Stage4_5_ContextualAllophonyOnPhonetic END: Out=", phon_word) end
             return phon_word
         end},
-        {name = "Nasalization", is_procedural_stage = true, func = irishPhonetics.apply_vowel_nasalization},
-        {name = "Stage4_6_UnstressedVowelReduction_Procedural", is_procedural_stage = true, func = apply_unstressed_vowel_reduction_procedural},
         {name = "EpenthesisAndStrongSonorants", is_procedural_stage = true, func = function(phon_word_in_stage5, o_context_str_stage5, current_ortho_map_stage5)
+            -- (Procedural Epenthesis and Strong Sonorants - same as provided, now uses refined C2 condition internally)
             if STAGE_DEBUG_ENABLED["EpenthesisAndStrongSonorants"] then print("  EpenthesisAndStrongSonorants START (Proc): In=", phon_word_in_stage5) end
             phon_word_in_stage5 = irishPhonetics.apply_procedural_epenthesis(phon_word_in_stage5, o_context_str_stage5, current_ortho_map_stage5)
-            debug_print_minimal("EpenthesisAndStrongSonorants", "After procedural epenthesis: ", phon_word_in_stage5)
+            debug_print_detailed("EpenthesisAndStrongSonorants", "After procedural epenthesis: ", phon_word_in_stage5)
             local rules_to_apply_strong_son = irishPhonetics.rules_stage5_strong_sonorants_only
             local iteration_changed_string_strong_son = false
             local new_phonetic_string_parts_strong_son = {}; local scan_offset_strong_son = 1
@@ -1269,11 +1188,7 @@ function irishPhonetics.transcribe(orthographic_word)
                     local rule_ss = rules_to_apply_strong_son[best_rule_this_iter_idx_ss]; local full_match_segment_ss = usub(phon_word_in_stage5, best_match_s_this_iter_ss, best_match_e_this_iter_ss)
                     local actual_captures_for_func_current_rule_ss = {}; if best_captures_this_iter_ss then for k_cap_ss, v_cap_ss in ipairs(best_captures_this_iter_ss) do if v_cap_ss ~= nil then table.insert(actual_captures_for_func_current_rule_ss, v_cap_ss) end end end
                     local apply_this_rule_ss = true
-                    if rule_ss.use_current_phonetic_for_condition and rule_ss.condition_func then
-                         local parsed_units_for_cond_ss = parse_phonetic_string_to_units_for_epenthesis(full_match_segment_ss)
-                         local condition_is_met_ss = rule_ss.condition_func(full_match_segment_ss, parsed_units_for_cond_ss);
-                         if not condition_is_met_ss then apply_this_rule_ss = false end
-                    end
+                    if rule_ss.use_current_phonetic_for_condition and rule_ss.condition_func then local condition_is_met_ss = rule_ss.condition_func(full_match_segment_ss); if not condition_is_met_ss then apply_this_rule_ss = false end end
                     local replacement_text_ss
                     if apply_this_rule_ss then
                         if type(rule_ss.replacement) == "string" then replacement_text_ss = rule_ss.replacement; if replacement_text_ss:match("%%[%d]") then local temp_repl_ss = replacement_text_ss; for i_cap_ss = #actual_captures_for_func_current_rule_ss, 1, -1 do temp_repl_ss = ugsub(temp_repl_ss, "%%"..i_cap_ss, actual_captures_for_func_current_rule_ss[i_cap_ss] or "") end; replacement_text_ss = temp_repl_ss end
@@ -1284,10 +1199,14 @@ function irishPhonetics.transcribe(orthographic_word)
                 else if scan_offset_strong_son <= ulen(phon_word_in_stage5) then table.insert(new_phonetic_string_parts_strong_son, usub(phon_word_in_stage5, scan_offset_strong_son)) end; break end
             end
             phon_word_in_stage5 = table.concat(new_phonetic_string_parts_strong_son)
-            debug_print_minimal("EpenthesisAndStrongSonorants", "After strong sonorant rules: ", phon_word_in_stage5)
+            debug_print_detailed("EpenthesisAndStrongSonorants", "After strong sonorant rules: ", phon_word_in_stage5)
             if STAGE_DEBUG_ENABLED["EpenthesisAndStrongSonorants"] then print("  EpenthesisAndStrongSonorants END (Proc): Out=", phon_word_in_stage5) end
             return phon_word_in_stage5
         end},
+        {name = "Nasalization", is_procedural_stage = true, func = function(phon_word_in_stage_nasal, o_context_str_nasal) -- Pass original context for exemptions
+            return irishPhonetics.apply_vowel_nasalization(phon_word_in_stage_nasal, o_context_str_nasal)
+        end},
+        {name = "Stage4_6_UnstressedVowelReduction_Procedural", is_procedural_stage = true, func = apply_unstressed_vowel_reduction_procedural},
         {name = "Diacritics", rules = irishPhonetics.rules_stage6_diacritics, use_original_context_for_rules = false},
         {name = "FinalCleanup", rules = irishPhonetics.rules_stage7_final_cleanup, use_original_context_for_rules = false},
     }
@@ -1300,6 +1219,8 @@ function irishPhonetics.transcribe(orthographic_word)
             if STAGE_DEBUG_ENABLED[stage_data.name] then print("  " .. stage_data.name .. " START (Proc): In=", current_word_phonetic) end
             if stage_data.name == "ConsonantResolution" or stage_data.name == "EpenthesisAndStrongSonorants" then
                 current_word_phonetic = stage_data.func(current_word_phonetic, original_ortho_for_context, ortho_map)
+            elseif stage_data.name == "Nasalization" then -- Special handling for Nasalization to pass original_ortho_word
+                 current_word_phonetic = stage_data.func(current_word_phonetic, original_ortho_for_context)
             else
                 current_word_phonetic = stage_data.func(current_word_phonetic)
             end
@@ -1343,11 +1264,11 @@ function irishPhonetics.transcribe(orthographic_word)
                 for rule_idx_loop, rule_data_loop in ipairs(rules_to_apply) do
                     if type(rule_data_loop.pattern) == "string" then
                         local new_phon_string, num_replacements = ugsub(current_word_phonetic, rule_data_loop.pattern, rule_data_loop.replacement)
-                        if new_phon_string ~= current_word_phonetic then debug_print_minimal(stage_data.name, "Iter.gsub: Rule '", rule_data_loop.pattern, "' APPLIED to '", current_word_phonetic, "' -> '", new_phon_string, "' (", num_replacements, "x)"); current_word_phonetic = new_phon_string; iteration_changed_string_this_stage = true end
+                        if new_phon_string ~= current_word_phonetic then debug_print_detailed(stage_data.name, "Iter.gsub: Rule '", rule_data_loop.pattern, "' APPLIED to '", current_word_phonetic, "' -> '", new_phon_string, "' (", num_replacements, "x)"); current_word_phonetic = new_phon_string; iteration_changed_string_this_stage = true end
                     end
                 end
-                -- if iteration_changed_string_this_stage then debug_print_minimal(stage_data.name, "Iter.gsub Pass "..pass_counter_this_stage.." ended. String changed from '", phonetic_before_this_gsub_pass, "' to '", current_word_phonetic, "'")
-                -- else debug_print_minimal(stage_data.name, "Iter.gsub Pass "..pass_counter_this_stage.." ended. No changes in this pass. String remains: '", current_word_phonetic, "'") end
+                if iteration_changed_string_this_stage then debug_print_detailed(stage_data.name, "Iter.gsub Pass "..pass_counter_this_stage.." ended. String changed from '", phonetic_before_this_gsub_pass, "' to '", current_word_phonetic, "'")
+                else debug_print_detailed(stage_data.name, "Iter.gsub Pass "..pass_counter_this_stage.." ended. No changes in this pass. String remains: '", current_word_phonetic, "'") end
             until not iteration_changed_string_this_stage
         else
             local iteration_changed_string_this_stage_non_iter = false
@@ -1369,11 +1290,7 @@ function irishPhonetics.transcribe(orthographic_word)
                     local original_match_info_for_func = {ortho_s = original_ortho_s_for_rule, ortho_e = original_ortho_s_for_rule + original_ortho_len_for_rule - 1}
                     local actual_captures_for_func_current_rule = {}; if best_captures_this_iter then for k_cap, v_cap in ipairs(best_captures_this_iter) do if v_cap ~= nil then table.insert(actual_captures_for_func_current_rule, v_cap) end end end
                     local apply_this_rule = true
-                    if rule.use_current_phonetic_for_condition and rule.condition_func then
-                         local parsed_units_for_cond = parse_phonetic_string_to_units_for_epenthesis(full_match_segment)
-                         local condition_is_met = rule.condition_func(full_match_segment, parsed_units_for_cond);
-                         if not condition_is_met then apply_this_rule = false end
-                    end
+                    if rule.use_current_phonetic_for_condition and rule.condition_func then local current_word_phonetic_before_pass_for_cond = current_word_phonetic; local condition_is_met = rule.condition_func(current_word_phonetic_before_pass_for_cond); if not condition_is_met then apply_this_rule = false end end
                     local replacement_text
                     if apply_this_rule then
                         if type(rule.replacement) == "string" then replacement_text = rule.replacement; if replacement_text:match("%%[%d]") then local temp_repl = replacement_text; for i_cap = #actual_captures_for_func_current_rule, 1, -1 do temp_repl = ugsub(temp_repl, "%%"..i_cap, actual_captures_for_func_current_rule[i_cap] or "") end; replacement_text = temp_repl end
@@ -1393,138 +1310,47 @@ end
 return current_word_phonetic
 end
 
--- ====== NEW: CSV Test Suite Functionality ======
+-- Example Usage:
+local RUN_FULL_TEST_SET = false
 
-local function split_csv_line(line)
-    local fields = {}
-    local current_field_start = 1
-    local in_quotes = false
-    for i = 1, ulen(line) do
-        local char = usub(line, i, i)
-        if char == '"' then
-            in_quotes = not in_quotes
-        elseif char == ',' and not in_quotes then
-            table.insert(fields, usub(line, current_field_start, i - 1))
-            current_field_start = i + 1
-        end
-    end
-    table.insert(fields, usub(line, current_field_start)) -- Add the last field
+local words_to_test_nasalization = {
+    "ainm", "mná", "rámh", "snámh", "fonn", "ceann", "am", "cam", "trom", "lámh",
+    "cnámh", "cnead", "cnoc", "gnaoi", "gnó",
+    "seilf", "dorcha", "olc", "oilc", "dearc", "feirc",
+    "balbh", "garbh", "gorm", "bolg"
+}
 
-    for i, field in ipairs(fields) do
-        -- Trim leading/trailing quotes if any
-        fields[i] = ugsub(field, '^"(.*)"$', "%1")
-        fields[i] = ugsub(fields[i], '^%s*(.-)%s*$', "%1") -- Trim whitespace
-    end
-    return fields
-end
+local words_to_test_full_37AB = {
+"fhéach", "fhág", "fhíor", "fhostaigh", "fhuair", "scríobh", "teach", "deartháir", "cat", "bord", "ceann", "poll", "balla", "leabhar", "samhradh", "beannacht", "fonn",
+"leagan", "teanga", "seacht", "aghaidh", "suidhe", "nimhe", "bóthar", "oíche", "fear", "glaic", "muc", "fliuch", "fada", "beag", "séimhiú", "úrú", "bacach",
+"isteach", "baile", "duine", "Gaeltacht", "Conamara", "Gaeilge", "aoibhinn", "buí", "caol", "leathan", "drochbhean", "an-mhaith", "fuinneog", "oiliúint",
+"staighre", "fios", "athbhliain", "comhrá", "mícheart", "oícheanta", "codladh", "luigh", "fiche", "duchaise", "saibhir", "deacair", "sláinte", "ceart", "lae",
+"laoch", "aer", "ceo", "ceol", "coir", "coill", "faoi", "gaoth", "bádaí", "capaillí", "foclaí", "brógaí", "dearmad", "seomraí", "doras", "amhrán", "Banríon",
+"dearcadh", "dearfa", "mí-ádh", "droch-obair", "seanbhean", "bhean", "fíoruisce", "athchúrsáil", "an-fear", "an-oíche", "beart", "bean", "geal", "eagla", "muid", "duit",
+"fuil", "goil", "buil", "cuir", "druid", "luibh", "ceist", "ocht", "páiste", "sparán", "scéal", "bláth", "cnoc", "gnó", "dlí", "mná", "trá", "uisce", "obair",
+"imir", "eolas", "athair", "máthair", "deirfiúr", "imirt", "oibre", "ceacht", "ceistneoir", "ceistigh", "arm", "borb", "bolg", "garbh", "gorm", "gairm", "balbh",
+"seilf", "dearg", "fearg", "colm", "ainm", "scrúdaigh", "cónaigh", "beannaigh",
+"teann", "trom", "am", "cam", "gall", "tall", "dún", "dubh", "móin"
+}
 
-function irishPhonetics.run_csv_test_suite(csv_file_path)
-    local csv_file = io.open(csv_file_path, "r")
-    if not csv_file then
-        original_print_func("ERROR: Could not open CSV file: " .. csv_file_path)
-        return
-    end
-
-    original_print_func("\n--- Running CSV Test Suite: " .. csv_file_path .. " ---")
-    if debug_file then debug_file:write("\n--- Running CSV Test Suite: " .. csv_file_path .. " ---\n") end
-
-    local header = csv_file:read("*l")
-    if not header then
-        original_print_func("ERROR: CSV file is empty or could not read header.")
-        csv_file:close()
-        return
-    end
-
-    local connacht_tags = {
-        ["Connacht"] = true, ["Connemara"] = true, ["Galway"] = true,
-        ["Mayo"] = true, ["Aran"] = true, ["Cois-Fharraige"] = true
-    }
-    local general_tag = ""
-
-    local line_num = 1
-    for line in csv_file:lines() do
-        line_num = line_num + 1
-        local fields = split_csv_line(line)
-        if #fields >= 3 then
-            local word = fields[1]
-            local tags_str = fields[2]
-            local csv_ipa_raw = fields[3]
-
-            local process_this_word = false
-            if tags_str == general_tag then
-                process_this_word = true
-            else
-                local current_tags = {}
-                for tag in ugmatch(tags_str, "([^;%s]+)") do
-                    current_tags[tag] = true
-                end
-                for connacht_tag_key, _ in pairs(connacht_tags) do
-                    if current_tags[connacht_tag_key] then
-                        process_this_word = true
-                        break
-                    end
-                end
-            end
-
-            if process_this_word then
-                local old_minimal_debug = MINIMAL_DEBUG_ENABLED
-                MINIMAL_DEBUG_ENABLED = true -- Force minimal for bulk CSV run
-
-                local script_ipa = irishPhonetics.transcribe(word)
-
-                MINIMAL_DEBUG_ENABLED = old_minimal_debug -- Restore
-
-                original_print_func(string.format("%-20s (%-20s) -> %-30s (CSV: %s)", word, tags_str, script_ipa, csv_ipa_raw))
-                if debug_file then
-                    debug_file:write(string.format("%-20s (%-20s) -> %-30s (CSV: %s)\n", word, tags_str, script_ipa, csv_ipa_raw))
-                end
-            end
-        else
-            -- original_print_func("Warning: Skipping malformed CSV line " .. line_num .. ": " .. line)
-        end
-    end
-
-    csv_file:close()
-    original_print_func("--- CSV Test Suite Finished ---")
-    if debug_file then debug_file:write("--- CSV Test Suite Finished ---\n") end
-end
-
-
--- Example Usage (at the very end of the file):
-local RUN_CSV_TESTS = false -- Set to true to run the CSV tests
-local CSV_FILE_NAME = "wiki_sample_for_llm.csv" -- Make sure this file exists
-
-if RUN_CSV_TESTS then
-    irishPhonetics.run_csv_test_suite(CSV_FILE_NAME)
+local words_to_test_final
+if RUN_FULL_TEST_SET then
+    local temp_full_set = {}
+    local seen_in_full = {}
+    for _,w in ipairs(words_to_test_full_37AB or {}) do if not seen_in_full[w] then table.insert(temp_full_set, w); seen_in_full[w]=true end end
+    for _,w in ipairs(words_to_test_nasalization) do if not seen_in_full[w] then table.insert(temp_full_set, w); seen_in_full[w]=true end end
+    words_to_test_final = temp_full_set
 else
-    -- Run focused tests if not running CSV
-    local words_to_test_focused = {
-        "ainm",
-        "oilc",
-        "seilf",
-        "mná",
-        "ceann",
-        "balla",
-        "dorcha"
-    }
-    print("\n--- Running Focused Test Set for Parser Debug (Iteration 37BG) ---")
-    MINIMAL_DEBUG_ENABLED = false -- Ensure parser logs are verbose for these
-    for _, stage_name_key in pairs({"PreProcess", "MarkDigraphsAndVocalisationTriggers", "ConsonantResolution", "Stage4_0_SpecificOrthoToTempMarker", "Stage4_0_1_Resolve_CH_Marker", "Stage4_1_VocmarkToTempMarker", "Stage4_2_LongVowelsOrthoToTempMarker", "Stage4_3_DiphthongsOrthoToTempMarker", "Stage4_4_ResolveTempVowelMarkers", "Stage4_4_1_VocalizeLenitedFricatives", "Stage4_5_ContextualAllophonyOnPhonetic", "Nasalization", "Stage4_6_UnstressedVowelReduction_Procedural", "Diacritics", "FinalCleanup"}) do
-        STAGE_DEBUG_ENABLED[stage_name_key] = false
-    end
-    STAGE_DEBUG_ENABLED.EpenthesisAndStrongSonorants = true
-    STAGE_DEBUG_ENABLED.Parser = true
-    STAGE_DEBUG_ENABLED.ParserSetup = true
-
-
-    for _, word in ipairs(words_to_test_focused) do
-        local original = word
-        print("\n--- Testing word:", original, "---")
-        local transcribed = irishPhonetics.transcribe(original)
-        print(string.format("%-15s -> [%s]", original, transcribed))
-    end
+    words_to_test_final = words_to_test_nasalization
 end
 
+
+print("\n--- Running Test Set for Iteration 37AU (Nasalization Focus - RERUN) ---")
+for _, word in ipairs(words_to_test_final) do
+    local original = word
+    local transcribed = irishPhonetics.transcribe(original)
+    print(string.format("%-15s -> [%s]", original, transcribed))
+end
 
 if debug_file then debug_file:close() end
 return irishPhonetics

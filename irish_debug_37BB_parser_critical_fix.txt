@@ -1,0 +1,1101 @@
+﻿
+--- Running Test Set for Iteration 37AY (Unstressed Vowel Reduction Refined) ---
+
+--- Transcribing: [ainm] ---
+Af. Nasalization: [ˈɑnm']
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	ˈɑnm'
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	ˈɑnm'
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	ˈɑnm'	'
+    PARSER_DBG (Epenthes): Matched unit: '	ˈ	' with quality: 'stress_mark'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	n	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	m	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈɑnm'	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	ˈɑnm'	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	ˈɑnm'
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [ˈɑnm']
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɑnm'
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɑnm'
+  apply_procedural_epenthesis START: In=	ˈɑnm'
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	ˈɑnm'	'
+    PARSER_DBG (Epenthes): Matched unit: '	ˈ	' with quality: 'stress_mark'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	n	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	m	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	ˈ(stress_mark) | ɑ(vowel) | n(nonpalatal) | m(nonpalatal) | '(unknown_fallback)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈɑnm'	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Epenthes): Checking V-C1-C2: 	ɑ	n	m	 | Cluster key: 	nm	 | C1 Qual: 	nonpalatal	 | C2 Qual: 	nonpalatal
+  apply_procedural_epenthesis END (no change): Out=	ˈɑnm'
+    MIN_DBG (Epenthes): After procedural epenthesis: 	ˈɑnm'
+    MIN_DBG (Epenthes): After strong sonorant rules: 	ˈɑnm'
+  EpenthesisAndStrongSonorants END (Proc): Out=	ˈɑnm'
+Af. EpenthesisAndStrongSonorants: [ˈɑnm']
+  FinalCleanup START: In=	ˈɑnm'
+  FinalCleanup END: Out=	ˈɑnm'
+Af. FinalCleanup: [ˈɑnm']
+ainm            -> [ˈɑnm']
+
+--- Transcribing: [mná] ---
+Af. Nasalization: [mnɑː]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	mnɑː
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	mnɑː
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	mnɑː	'
+    PARSER_DBG (Epenthes): Matched unit: '	m	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	n	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɑː	' (type: 	vowel	) with quality: '	vowel	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	mnɑː	' (using 	3	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	mnɑː	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	mnɑː
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [mnɑː]
+  EpenthesisAndStrongSonorants START (Proc): In=	mnɑː
+  EpenthesisAndStrongSonorants START (Proc): In=	mnɑː
+  apply_procedural_epenthesis START: In=	mnɑː
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	mnɑː	'
+    PARSER_DBG (Epenthes): Matched unit: '	m	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	n	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɑː	' (type: 	vowel	) with quality: '	vowel	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	m(nonpalatal) | n(nonpalatal) | ɑː(vowel)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	mnɑː	' (using 	3	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	mnɑː
+    MIN_DBG (Epenthes): After procedural epenthesis: 	mnɑː
+    MIN_DBG (Epenthes): After strong sonorant rules: 	mnɑː
+  EpenthesisAndStrongSonorants END (Proc): Out=	mnɑː
+Af. EpenthesisAndStrongSonorants: [mnɑː]
+  FinalCleanup START: In=	mnɑː
+  FinalCleanup END: Out=	mnɑː
+Af. FinalCleanup: [mnɑː]
+mná            -> [mnɑː]
+
+--- Transcribing: [fonn] ---
+Af. Nasalization: [fɔN]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	fɔN
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	fɔN
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	fɔN	'
+    PARSER_DBG (Epenthes): Matched unit: '	f	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɔ	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	N	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	fɔN	' (using 	3	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	fɔN	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	fɔN
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [fɔN]
+  EpenthesisAndStrongSonorants START (Proc): In=	fɔN
+  EpenthesisAndStrongSonorants START (Proc): In=	fɔN
+  apply_procedural_epenthesis START: In=	fɔN
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	fɔN	'
+    PARSER_DBG (Epenthes): Matched unit: '	f	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɔ	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	N	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	f(nonpalatal) | ɔ(vowel) | N(nonpalatal)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	fɔN	' (using 	3	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	fɔN
+    MIN_DBG (Epenthes): After procedural epenthesis: 	fɔN
+    MIN_DBG (Epenthes): After strong sonorant rules: 	fɔN
+  EpenthesisAndStrongSonorants END (Proc): Out=	fɔN
+Af. EpenthesisAndStrongSonorants: [fɔN]
+  FinalCleanup START: In=	fɔN
+  FinalCleanup END: Out=	fɔN
+Af. FinalCleanup: [fɔN]
+fonn            -> [fɔN]
+
+--- Transcribing: [ceann] ---
+Af. Nasalization: [k'æN]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	k'æN
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	k'æN
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	k'æN	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	æ	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	N	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	k'æN	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	k'æN	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	k'æN
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [k'æN]
+  EpenthesisAndStrongSonorants START (Proc): In=	k'æN
+  EpenthesisAndStrongSonorants START (Proc): In=	k'æN
+  apply_procedural_epenthesis START: In=	k'æN
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	k'æN	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	æ	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	N	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	k(nonpalatal) | '(unknown_fallback) | æ(vowel) | N(nonpalatal)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	k'æN	' (using 	4	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	k'æN
+    MIN_DBG (Epenthes): After procedural epenthesis: 	k'æN
+    MIN_DBG (Epenthes): After strong sonorant rules: 	k'æN
+  EpenthesisAndStrongSonorants END (Proc): Out=	k'æN
+Af. EpenthesisAndStrongSonorants: [k'æN]
+  FinalCleanup START: In=	k'æN
+  FinalCleanup END: Out=	k'æN
+Af. FinalCleanup: [k'æN]
+ceann           -> [k'æN]
+
+--- Transcribing: [am] ---
+Af. Nasalization: [ˈɑm]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	ˈɑm
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	ˈɑm
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	ˈɑm	'
+    PARSER_DBG (Epenthes): Matched unit: '	ˈ	' with quality: 'stress_mark'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	m	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈɑm	' (using 	2	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	ˈɑm	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	ˈɑm
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [ˈɑm]
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɑm
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɑm
+  apply_procedural_epenthesis START: In=	ˈɑm
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	ˈɑm	'
+    PARSER_DBG (Epenthes): Matched unit: '	ˈ	' with quality: 'stress_mark'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	m	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	ˈ(stress_mark) | ɑ(vowel) | m(nonpalatal)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈɑm	' (using 	2	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	ˈɑm
+    MIN_DBG (Epenthes): After procedural epenthesis: 	ˈɑm
+    MIN_DBG (Epenthes): After strong sonorant rules: 	ˈɑm
+  EpenthesisAndStrongSonorants END (Proc): Out=	ˈɑm
+Af. EpenthesisAndStrongSonorants: [ˈɑm]
+  FinalCleanup START: In=	ˈɑm
+  FinalCleanup END: Out=	ˈɑm
+Af. FinalCleanup: [ˈɑm]
+am              -> [ˈɑm]
+
+--- Transcribing: [cam] ---
+Af. Nasalization: [kɑm]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	kɑm
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	kɑm
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	kɑm	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	m	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	kɑm	' (using 	3	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	kɑm	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	kɑm
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [kɑm]
+  EpenthesisAndStrongSonorants START (Proc): In=	kɑm
+  EpenthesisAndStrongSonorants START (Proc): In=	kɑm
+  apply_procedural_epenthesis START: In=	kɑm
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	kɑm	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	m	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	k(nonpalatal) | ɑ(vowel) | m(nonpalatal)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	kɑm	' (using 	3	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	kɑm
+    MIN_DBG (Epenthes): After procedural epenthesis: 	kɑm
+    MIN_DBG (Epenthes): After strong sonorant rules: 	kɑm
+  EpenthesisAndStrongSonorants END (Proc): Out=	kɑm
+Af. EpenthesisAndStrongSonorants: [kɑm]
+  FinalCleanup START: In=	kɑm
+  FinalCleanup END: Out=	kɑm
+Af. FinalCleanup: [kɑm]
+cam             -> [kɑm]
+
+--- Transcribing: [trom] ---
+Af. Nasalization: [trɔm]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	trɔm
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	trɔm
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	trɔm	'
+    PARSER_DBG (Epenthes): Matched unit: '	t	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɔ	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	m	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	trɔm	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	trɔm	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	trɔm
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [trɔm]
+  EpenthesisAndStrongSonorants START (Proc): In=	trɔm
+  EpenthesisAndStrongSonorants START (Proc): In=	trɔm
+  apply_procedural_epenthesis START: In=	trɔm
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	trɔm	'
+    PARSER_DBG (Epenthes): Matched unit: '	t	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɔ	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	m	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	t(nonpalatal) | r(nonpalatal) | ɔ(vowel) | m(nonpalatal)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	trɔm	' (using 	4	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	trɔm
+    MIN_DBG (Epenthes): After procedural epenthesis: 	trɔm
+    MIN_DBG (Epenthes): After strong sonorant rules: 	trɔm
+  EpenthesisAndStrongSonorants END (Proc): Out=	trɔm
+Af. EpenthesisAndStrongSonorants: [trɔm]
+  FinalCleanup START: In=	trɔm
+  FinalCleanup END: Out=	trɔm
+Af. FinalCleanup: [trɔm]
+trom            -> [trɔm]
+
+--- Transcribing: [lámh] ---
+Af. Nasalization: [lɑːv]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	lɑːv
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	lɑːv
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	lɑːv	'
+    PARSER_DBG (Epenthes): Matched unit: '	l	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɑː	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	v	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	lɑːv	' (using 	3	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	lɑːv	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	lɑːv
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [lɑːv]
+  EpenthesisAndStrongSonorants START (Proc): In=	lɑːv
+  EpenthesisAndStrongSonorants START (Proc): In=	lɑːv
+  apply_procedural_epenthesis START: In=	lɑːv
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	lɑːv	'
+    PARSER_DBG (Epenthes): Matched unit: '	l	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɑː	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	v	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	l(nonpalatal) | ɑː(vowel) | v(nonpalatal)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	lɑːv	' (using 	3	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	lɑːv
+    MIN_DBG (Epenthes): After procedural epenthesis: 	lɑːv
+    MIN_DBG (Epenthes): After strong sonorant rules: 	lɑːv
+  EpenthesisAndStrongSonorants END (Proc): Out=	lɑːv
+Af. EpenthesisAndStrongSonorants: [lɑːv]
+  FinalCleanup START: In=	lɑːv
+  FinalCleanup END: Out=	lɑːv
+Af. FinalCleanup: [lɑːv]
+lámh           -> [lɑːv]
+
+--- Transcribing: [oilc] ---
+Af. Nasalization: [ˈɛlk']
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	ˈɛlk'
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	ˈɛlk'
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	ˈɛlk'	'
+    PARSER_DBG (Epenthes): Matched unit: '	ˈ	' with quality: 'stress_mark'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɛ	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	l	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈɛlk'	' (using 	4	 non-stress units) count: 	0	 result: 	false
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	ˈɛlk'	'
+    PARSER_DBG (Epenthes): Matched unit: '	ˈ	' with quality: 'stress_mark'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɛ	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	l	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	5
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	ˈɛlk'
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [ˈɛlk']
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɛlk'
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɛlk'
+  apply_procedural_epenthesis START: In=	ˈɛlk'
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	ˈɛlk'	'
+    PARSER_DBG (Epenthes): Matched unit: '	ˈ	' with quality: 'stress_mark'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɛ	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	l	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	ˈ(stress_mark) | ɛ(unknown_fallback) | l(nonpalatal) | k(nonpalatal) | '(unknown_fallback)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈɛlk'	' (using 	4	 non-stress units) count: 	0	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	ˈɛlk'
+    MIN_DBG (Epenthes): After procedural epenthesis: 	ˈɛlk'
+    MIN_DBG (Epenthes): After strong sonorant rules: 	ˈɛlk'
+  EpenthesisAndStrongSonorants END (Proc): Out=	ˈɛlk'
+Af. EpenthesisAndStrongSonorants: [ˈɛlk']
+  FinalCleanup START: In=	ˈɛlk'
+  FinalCleanup END: Out=	ˈɛlk'
+Af. FinalCleanup: [ˈɛlk']
+oilc            -> [ˈɛlk']
+
+--- Transcribing: [seilf] ---
+Af. Nasalization: [s'elf']
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	s'elf'
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	s'elf'
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	s'elf'	'
+    PARSER_DBG (Epenthes): Matched unit: '	s'	' (type: 	consonant	) with quality: '	palatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	e	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	l	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	f	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	s'elf'	' (using 	5	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	s'elf'	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	s'elf'
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [s'elf']
+  EpenthesisAndStrongSonorants START (Proc): In=	s'elf'
+  EpenthesisAndStrongSonorants START (Proc): In=	s'elf'
+  apply_procedural_epenthesis START: In=	s'elf'
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	s'elf'	'
+    PARSER_DBG (Epenthes): Matched unit: '	s'	' (type: 	consonant	) with quality: '	palatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	e	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	l	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	f	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	s'(palatal) | e(vowel) | l(nonpalatal) | f(nonpalatal) | '(unknown_fallback)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	s'elf'	' (using 	5	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Epenthes): Checking V-C1-C2: 	e	l	f	 | Cluster key: 	lf	 | C1 Qual: 	nonpalatal	 | C2 Qual: 	nonpalatal
+  apply_procedural_epenthesis END (no change): Out=	s'elf'
+    MIN_DBG (Epenthes): After procedural epenthesis: 	s'elf'
+    MIN_DBG (Epenthes): After strong sonorant rules: 	s'elf'
+  EpenthesisAndStrongSonorants END (Proc): Out=	s'elf'
+Af. EpenthesisAndStrongSonorants: [s'elf']
+  FinalCleanup START: In=	s'elf'
+  FinalCleanup END: Out=	s'elf'
+Af. FinalCleanup: [s'elf']
+seilf           -> [s'elf']
+
+--- Transcribing: [olc] ---
+Af. Nasalization: [ˈɔlk]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	ˈɔlk
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	ˈɔlk
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	ˈɔlk	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɔ	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	l	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈɔlk	' (using 	3	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	ˈɔlk	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	ˈɔlk
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [ˈɔlk]
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɔlk
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɔlk
+  apply_procedural_epenthesis START: In=	ˈɔlk
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	ˈɔlk	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɔ	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	l	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	ˈɔ(vowel) | l(nonpalatal) | k(nonpalatal)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈɔlk	' (using 	3	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Epenthes): Checking V-C1-C2: 	ˈɔ	l	k	 | Cluster key: 	lk	 | C1 Qual: 	nonpalatal	 | C2 Qual: 	nonpalatal
+    MIN_DBG (Epenthes): PROCEDURAL Epenthesis Triggered for: 	ˈɔ	l	k	 -> inserting 	ə
+  apply_procedural_epenthesis END (modified): Out=	ˈɔlək
+    MIN_DBG (Epenthes): After procedural epenthesis: 	ˈɔlək
+    MIN_DBG (Epenthes): After strong sonorant rules: 	ˈɔlək
+  EpenthesisAndStrongSonorants END (Proc): Out=	ˈɔlək
+Af. EpenthesisAndStrongSonorants: [ˈɔlək]
+  FinalCleanup START: In=	ˈɔlək
+  FinalCleanup END: Out=	ˈɔlək
+Af. FinalCleanup: [ˈɔlək]
+olc             -> [ˈɔlək]
+
+--- Transcribing: [gorm] ---
+Af. Nasalization: [gɔrm]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	gɔrm
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	gɔrm
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	gɔrm	'
+    PARSER_DBG (Epenthes): Matched unit: '	g	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɔ	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	m	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	gɔrm	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	gɔrm	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	gɔrm
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [gɔrm]
+  EpenthesisAndStrongSonorants START (Proc): In=	gɔrm
+  EpenthesisAndStrongSonorants START (Proc): In=	gɔrm
+  apply_procedural_epenthesis START: In=	gɔrm
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	gɔrm	'
+    PARSER_DBG (Epenthes): Matched unit: '	g	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɔ	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	m	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	g(nonpalatal) | ɔ(vowel) | r(nonpalatal) | m(nonpalatal)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	gɔrm	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Epenthes): Checking V-C1-C2: 	ɔ	r	m	 | Cluster key: 	rm	 | C1 Qual: 	nonpalatal	 | C2 Qual: 	nonpalatal
+    MIN_DBG (Epenthes): PROCEDURAL Epenthesis Triggered for: 	ɔ	r	m	 -> inserting 	ə
+  apply_procedural_epenthesis END (modified): Out=	gɔrəm
+    MIN_DBG (Epenthes): After procedural epenthesis: 	gɔrəm
+    MIN_DBG (Epenthes): After strong sonorant rules: 	gɔrəm
+  EpenthesisAndStrongSonorants END (Proc): Out=	gɔrəm
+Af. EpenthesisAndStrongSonorants: [gɔrəm]
+  FinalCleanup START: In=	gɔrəm
+  FinalCleanup END: Out=	gɔrəm
+Af. FinalCleanup: [gɔrəm]
+gorm            -> [gɔrəm]
+
+--- Transcribing: [bolg] ---
+Af. Nasalization: [bɔlg]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	bɔlg
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	bɔlg
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	bɔlg	'
+    PARSER_DBG (Epenthes): Matched unit: '	b	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɔ	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	l	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	g	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	bɔlg	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	bɔlg	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	bɔlg
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [bɔlg]
+  EpenthesisAndStrongSonorants START (Proc): In=	bɔlg
+  EpenthesisAndStrongSonorants START (Proc): In=	bɔlg
+  apply_procedural_epenthesis START: In=	bɔlg
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	bɔlg	'
+    PARSER_DBG (Epenthes): Matched unit: '	b	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɔ	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	l	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	g	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	b(nonpalatal) | ɔ(vowel) | l(nonpalatal) | g(nonpalatal)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	bɔlg	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Epenthes): Checking V-C1-C2: 	ɔ	l	g	 | Cluster key: 	lg	 | C1 Qual: 	nonpalatal	 | C2 Qual: 	nonpalatal
+    MIN_DBG (Epenthes): PROCEDURAL Epenthesis Triggered for: 	ɔ	l	g	 -> inserting 	ə
+  apply_procedural_epenthesis END (modified): Out=	bɔləg
+    MIN_DBG (Epenthes): After procedural epenthesis: 	bɔləg
+    MIN_DBG (Epenthes): After strong sonorant rules: 	bɔləg
+  EpenthesisAndStrongSonorants END (Proc): Out=	bɔləg
+Af. EpenthesisAndStrongSonorants: [bɔləg]
+  FinalCleanup START: In=	bɔləg
+  FinalCleanup END: Out=	bɔləg
+Af. FinalCleanup: [bɔləg]
+bolg            -> [bɔləg]
+
+--- Transcribing: [dorcha] ---
+Af. Nasalization: [dɔrxɑ]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	dɔrxɑ
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	dɔrxɑ
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	dɔrxɑ	'
+    PARSER_DBG (Epenthes): Matched unit: '	d	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɔ	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	x	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	dɔrxɑ	' (using 	5	 non-stress units) count: 	2	 result: 	false
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	dɔrxɑ	'
+    PARSER_DBG (Epenthes): Matched unit: '	d	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɔ	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	x	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	5
+    MIN_DBG (Stage4_6): No explicit stress, assuming first vowel '	ɔ	' at unit index 	2	 is stressed.
+    MIN_DBG (Stage4_6): Reducing '	ɑ	' to '	ə	'. Prec: 	nonpalatal	 Foll: 	neutral
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	dɔrxə	'
+    PARSER_DBG (Epenthes): Matched unit: '	d	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɔ	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	x	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ə	' (type: 	vowel	) with quality: '	vowel	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	dɔrxə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	dɔrxə	'
+    PARSER_DBG (Epenthes): Matched unit: '	d	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɔ	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	x	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ə	' (type: 	vowel	) with quality: '	vowel	'
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	5
+    MIN_DBG (Stage4_6): No explicit stress, assuming first vowel '	ɔ	' at unit index 	2	 is stressed.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	dɔrxə
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [dɔrxə]
+  EpenthesisAndStrongSonorants START (Proc): In=	dɔrxə
+  EpenthesisAndStrongSonorants START (Proc): In=	dɔrxə
+  apply_procedural_epenthesis START: In=	dɔrxə
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	dɔrxə	'
+    PARSER_DBG (Epenthes): Matched unit: '	d	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɔ	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	x	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ə	' (type: 	vowel	) with quality: '	vowel	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	d(nonpalatal) | ɔ(vowel) | r(nonpalatal) | x(nonpalatal) | ə(vowel)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	dɔrxə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	dɔrxə
+    MIN_DBG (Epenthes): After procedural epenthesis: 	dɔrxə
+    MIN_DBG (Epenthes): After strong sonorant rules: 	dɔrxə
+  EpenthesisAndStrongSonorants END (Proc): Out=	dɔrxə
+Af. EpenthesisAndStrongSonorants: [dɔrxə]
+  FinalCleanup START: In=	dɔrxə
+  FinalCleanup END: Out=	dɔrxə
+Af. FinalCleanup: [dɔrxə]
+dorcha          -> [dɔrxə]
+
+--- Transcribing: [cnámh] ---
+Af. Nasalization: [krɑːv]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	krɑːv
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	krɑːv
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	krɑːv	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɑː	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	v	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	krɑːv	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	krɑːv	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	krɑːv
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [krɑːv]
+  EpenthesisAndStrongSonorants START (Proc): In=	krɑːv
+  EpenthesisAndStrongSonorants START (Proc): In=	krɑːv
+  apply_procedural_epenthesis START: In=	krɑːv
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	krɑːv	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɑː	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	v	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	k(nonpalatal) | r(nonpalatal) | ɑː(vowel) | v(nonpalatal)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	krɑːv	' (using 	4	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	krɑːv
+    MIN_DBG (Epenthes): After procedural epenthesis: 	krɑːv
+    MIN_DBG (Epenthes): After strong sonorant rules: 	krɑːv
+  EpenthesisAndStrongSonorants END (Proc): Out=	krɑːv
+Af. EpenthesisAndStrongSonorants: [krɑːv]
+  FinalCleanup START: In=	krɑːv
+  FinalCleanup END: Out=	krɑːv
+Af. FinalCleanup: [krɑːv]
+cnámh          -> [krɑːv]
+
+--- Transcribing: [cnead] ---
+Af. Nasalization: [kr''eɑd]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	kr''eɑd
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	kr''eɑd
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	kr''eɑd	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	e	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	d	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	kr''eɑd	' (using 	7	 non-stress units) count: 	2	 result: 	false
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	kr''eɑd	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	e	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	d	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	7
+    MIN_DBG (Stage4_6): No explicit stress, assuming first vowel '	e	' at unit index 	5	 is stressed.
+    MIN_DBG (Stage4_6): Reducing '	ɑ	' to '	ə	'. Prec: 	neutral	 Foll: 	nonpalatal
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	kr''eəd	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	e	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	ə	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	d	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	kr''eəd	' (using 	7	 non-stress units) count: 	2	 result: 	false
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	kr''eəd	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	e	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	ə	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	d	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	7
+    MIN_DBG (Stage4_6): No explicit stress, assuming first vowel '	e	' at unit index 	5	 is stressed.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	kr''eəd
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [kr''eəd]
+  EpenthesisAndStrongSonorants START (Proc): In=	kr''eəd
+  EpenthesisAndStrongSonorants START (Proc): In=	kr''eəd
+  apply_procedural_epenthesis START: In=	kr''eəd
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	kr''eəd	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	e	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	ə	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	d	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	k(nonpalatal) | r(nonpalatal) | '(unknown_fallback) | '(unknown_fallback) | e(vowel) | ə(vowel) | d(nonpalatal)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	kr''eəd	' (using 	7	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	kr''eəd
+    MIN_DBG (Epenthes): After procedural epenthesis: 	kr''eəd
+    MIN_DBG (Epenthes): After strong sonorant rules: 	kr''eəd
+  EpenthesisAndStrongSonorants END (Proc): Out=	kr''eəd
+Af. EpenthesisAndStrongSonorants: [kr''eəd]
+  FinalCleanup START: In=	kr''eəd
+  FinalCleanup END: Out=	kr''eəd
+Af. FinalCleanup: [kr''eəd]
+cnead           -> [kr''eəd]
+
+--- Transcribing: [cnoc] ---
+Af. Nasalization: [krɔk]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	krɔk
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	krɔk
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	krɔk	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɔ	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	krɔk	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	krɔk	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	krɔk
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [krɔk]
+  EpenthesisAndStrongSonorants START (Proc): In=	krɔk
+  EpenthesisAndStrongSonorants START (Proc): In=	krɔk
+  apply_procedural_epenthesis START: In=	krɔk
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	krɔk	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɔ	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	k(nonpalatal) | r(nonpalatal) | ɔ(vowel) | k(nonpalatal)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	krɔk	' (using 	4	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	krɔk
+    MIN_DBG (Epenthes): After procedural epenthesis: 	krɔk
+    MIN_DBG (Epenthes): After strong sonorant rules: 	krɔk
+  EpenthesisAndStrongSonorants END (Proc): Out=	krɔk
+Af. EpenthesisAndStrongSonorants: [krɔk]
+  FinalCleanup START: In=	krɔk
+  FinalCleanup END: Out=	krɔk
+Af. FinalCleanup: [krɔk]
+cnoc            -> [krɔk]
+
+--- Transcribing: [gnaoi] ---
+Af. Nasalization: [gr''iː]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	gr''iː
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	gr''iː
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	gr''iː	'
+    PARSER_DBG (Epenthes): Matched unit: '	g	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	iː	' (type: 	vowel	) with quality: '	vowel	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	gr''iː	' (using 	5	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	gr''iː	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	gr''iː
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [gr''iː]
+  EpenthesisAndStrongSonorants START (Proc): In=	gr''iː
+  EpenthesisAndStrongSonorants START (Proc): In=	gr''iː
+  apply_procedural_epenthesis START: In=	gr''iː
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	gr''iː	'
+    PARSER_DBG (Epenthes): Matched unit: '	g	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	iː	' (type: 	vowel	) with quality: '	vowel	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	g(nonpalatal) | r(nonpalatal) | '(unknown_fallback) | '(unknown_fallback) | iː(vowel)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	gr''iː	' (using 	5	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	gr''iː
+    MIN_DBG (Epenthes): After procedural epenthesis: 	gr''iː
+    MIN_DBG (Epenthes): After strong sonorant rules: 	gr''iː
+  EpenthesisAndStrongSonorants END (Proc): Out=	gr''iː
+Af. EpenthesisAndStrongSonorants: [gr''iː]
+  FinalCleanup START: In=	gr''iː
+  FinalCleanup END: Out=	gr''iː
+Af. FinalCleanup: [gr''iː]
+gnaoi           -> [gr''iː]
+
+--- Transcribing: [gnó] ---
+Af. Nasalization: [groː]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	groː
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	groː
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	groː	'
+    PARSER_DBG (Epenthes): Matched unit: '	g	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	oː	' (type: 	vowel	) with quality: '	vowel	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	groː	' (using 	3	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	groː	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	groː
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [groː]
+  EpenthesisAndStrongSonorants START (Proc): In=	groː
+  EpenthesisAndStrongSonorants START (Proc): In=	groː
+  apply_procedural_epenthesis START: In=	groː
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	groː	'
+    PARSER_DBG (Epenthes): Matched unit: '	g	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	oː	' (type: 	vowel	) with quality: '	vowel	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	g(nonpalatal) | r(nonpalatal) | oː(vowel)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	groː	' (using 	3	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	groː
+    MIN_DBG (Epenthes): After procedural epenthesis: 	groː
+    MIN_DBG (Epenthes): After strong sonorant rules: 	groː
+  EpenthesisAndStrongSonorants END (Proc): Out=	groː
+Af. EpenthesisAndStrongSonorants: [groː]
+  FinalCleanup START: In=	groː
+  FinalCleanup END: Out=	groː
+Af. FinalCleanup: [groː]
+gnó            -> [groː]
+
+--- Transcribing: [dearc] ---
+Af. Nasalization: [d'ær'k]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	d'ær'k
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	d'ær'k
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	d'ær'k	'
+    PARSER_DBG (Epenthes): Matched unit: '	d	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	æ	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	d'ær'k	' (using 	6	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	d'ær'k	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	d'ær'k
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [d'ær'k]
+  EpenthesisAndStrongSonorants START (Proc): In=	d'ær'k
+  EpenthesisAndStrongSonorants START (Proc): In=	d'ær'k
+  apply_procedural_epenthesis START: In=	d'ær'k
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	d'ær'k	'
+    PARSER_DBG (Epenthes): Matched unit: '	d	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	æ	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	d(nonpalatal) | '(unknown_fallback) | æ(vowel) | r(nonpalatal) | '(unknown_fallback) | k(nonpalatal)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	d'ær'k	' (using 	6	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	d'ær'k
+    MIN_DBG (Epenthes): After procedural epenthesis: 	d'ær'k
+    MIN_DBG (Epenthes): After strong sonorant rules: 	d'ær'k
+  EpenthesisAndStrongSonorants END (Proc): Out=	d'ær'k
+Af. EpenthesisAndStrongSonorants: [d'ær'k]
+  FinalCleanup START: In=	d'ær'k
+  FinalCleanup END: Out=	d'ær'k
+Af. FinalCleanup: [d'ær'k]
+dearc           -> [d'ær'k]
+
+--- Transcribing: [feirc] ---
+Af. Nasalization: [f'er'k']
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	f'er'k'
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	f'er'k'
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	f'er'k'	'
+    PARSER_DBG (Epenthes): Matched unit: '	f	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	e	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	f'er'k'	' (using 	7	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	f'er'k'	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	f'er'k'
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [f'er'k']
+  EpenthesisAndStrongSonorants START (Proc): In=	f'er'k'
+  EpenthesisAndStrongSonorants START (Proc): In=	f'er'k'
+  apply_procedural_epenthesis START: In=	f'er'k'
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	f'er'k'	'
+    PARSER_DBG (Epenthes): Matched unit: '	f	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	e	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	f(nonpalatal) | '(unknown_fallback) | e(vowel) | r(nonpalatal) | '(unknown_fallback) | k(nonpalatal) | '(unknown_fallback)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	f'er'k'	' (using 	7	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	f'er'k'
+    MIN_DBG (Epenthes): After procedural epenthesis: 	f'er'k'
+    MIN_DBG (Epenthes): After strong sonorant rules: 	f'er'k'
+  EpenthesisAndStrongSonorants END (Proc): Out=	f'er'k'
+Af. EpenthesisAndStrongSonorants: [f'er'k']
+  FinalCleanup START: In=	f'er'k'
+  FinalCleanup END: Out=	f'er'k'
+Af. FinalCleanup: [f'er'k']
+feirc           -> [f'er'k']
+
+--- Transcribing: [balbh] ---
+Af. Nasalization: [bɑlv]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	bɑlv
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	bɑlv
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	bɑlv	'
+    PARSER_DBG (Epenthes): Matched unit: '	b	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	l	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	v	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	bɑlv	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	bɑlv	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	bɑlv
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [bɑlv]
+  EpenthesisAndStrongSonorants START (Proc): In=	bɑlv
+  EpenthesisAndStrongSonorants START (Proc): In=	bɑlv
+  apply_procedural_epenthesis START: In=	bɑlv
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	bɑlv	'
+    PARSER_DBG (Epenthes): Matched unit: '	b	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	l	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	v	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	b(nonpalatal) | ɑ(vowel) | l(nonpalatal) | v(nonpalatal)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	bɑlv	' (using 	4	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	bɑlv
+    MIN_DBG (Epenthes): After procedural epenthesis: 	bɑlv
+    MIN_DBG (Epenthes): After strong sonorant rules: 	bɑlv
+  EpenthesisAndStrongSonorants END (Proc): Out=	bɑlv
+Af. EpenthesisAndStrongSonorants: [bɑlv]
+  FinalCleanup START: In=	bɑlv
+  FinalCleanup END: Out=	bɑlv
+Af. FinalCleanup: [bɑlv]
+balbh           -> [bɑlv]
+
+--- Transcribing: [garbh] ---
+Af. Nasalization: [gɑrv]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	gɑrv
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	gɑrv
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	gɑrv	'
+    PARSER_DBG (Epenthes): Matched unit: '	g	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	v	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	gɑrv	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	gɑrv	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	gɑrv
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [gɑrv]
+  EpenthesisAndStrongSonorants START (Proc): In=	gɑrv
+  EpenthesisAndStrongSonorants START (Proc): In=	gɑrv
+  apply_procedural_epenthesis START: In=	gɑrv
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	gɑrv	'
+    PARSER_DBG (Epenthes): Matched unit: '	g	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	v	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	g(nonpalatal) | ɑ(vowel) | r(nonpalatal) | v(nonpalatal)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	gɑrv	' (using 	4	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	gɑrv
+    MIN_DBG (Epenthes): After procedural epenthesis: 	gɑrv
+    MIN_DBG (Epenthes): After strong sonorant rules: 	gɑrv
+  EpenthesisAndStrongSonorants END (Proc): Out=	gɑrv
+Af. EpenthesisAndStrongSonorants: [gɑrv]
+  FinalCleanup START: In=	gɑrv
+  FinalCleanup END: Out=	gɑrv
+Af. FinalCleanup: [gɑrv]
+garbh           -> [gɑrv]
+
+--- Transcribing: [balla] ---
+Af. Nasalization: [bɑLɑ]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	bɑLɑ
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	bɑLɑ
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	bɑLɑ	'
+    PARSER_DBG (Epenthes): Matched unit: '	b	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	L	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	bɑLɑ	' (using 	4	 non-stress units) count: 	2	 result: 	false
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	bɑLɑ	'
+    PARSER_DBG (Epenthes): Matched unit: '	b	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	L	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	4
+    MIN_DBG (Stage4_6): No explicit stress, assuming first vowel '	ɑ	' at unit index 	2	 is stressed.
+    MIN_DBG (Stage4_6): Reducing '	ɑ	' to '	ə	'. Prec: 	nonpalatal	 Foll: 	neutral
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	bɑLə	'
+    PARSER_DBG (Epenthes): Matched unit: '	b	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	L	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ə	' (type: 	vowel	) with quality: '	vowel	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	bɑLə	' (using 	4	 non-stress units) count: 	2	 result: 	false
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	bɑLə	'
+    PARSER_DBG (Epenthes): Matched unit: '	b	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	L	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ə	' (type: 	vowel	) with quality: '	vowel	'
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	4
+    MIN_DBG (Stage4_6): No explicit stress, assuming first vowel '	ɑ	' at unit index 	2	 is stressed.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	bɑLə
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [bɑLə]
+  EpenthesisAndStrongSonorants START (Proc): In=	bɑLə
+  EpenthesisAndStrongSonorants START (Proc): In=	bɑLə
+  apply_procedural_epenthesis START: In=	bɑLə
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	bɑLə	'
+    PARSER_DBG (Epenthes): Matched unit: '	b	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	L	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ə	' (type: 	vowel	) with quality: '	vowel	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	b(nonpalatal) | ɑ(vowel) | L(nonpalatal) | ə(vowel)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	bɑLə	' (using 	4	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	bɑLə
+    MIN_DBG (Epenthes): After procedural epenthesis: 	bɑLə
+    MIN_DBG (Epenthes): After strong sonorant rules: 	bɑLə
+  EpenthesisAndStrongSonorants END (Proc): Out=	bɑLə
+Af. EpenthesisAndStrongSonorants: [bɑLə]
+  FinalCleanup START: In=	bɑLə
+  FinalCleanup END: Out=	bɑLə
+Af. FinalCleanup: [bɑLə]
+balla           -> [bɑLə]
+
+--- Transcribing: [codladh] ---
+Af. Nasalization: [kɔdlə]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	kɔdlə
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	kɔdlə
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	kɔdlə	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɔ	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	d	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	l	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ə	' (type: 	vowel	) with quality: '	vowel	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	kɔdlə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	kɔdlə	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɔ	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	d	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	l	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ə	' (type: 	vowel	) with quality: '	vowel	'
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	5
+    MIN_DBG (Stage4_6): No explicit stress, assuming first vowel '	ɔ	' at unit index 	2	 is stressed.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	kɔdlə
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [kɔdlə]
+  EpenthesisAndStrongSonorants START (Proc): In=	kɔdlə
+  EpenthesisAndStrongSonorants START (Proc): In=	kɔdlə
+  apply_procedural_epenthesis START: In=	kɔdlə
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	kɔdlə	'
+    PARSER_DBG (Epenthes): Matched unit: '	k	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ɔ	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	d	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	l	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ə	' (type: 	vowel	) with quality: '	vowel	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	k(nonpalatal) | ɔ(vowel) | d(nonpalatal) | l(nonpalatal) | ə(vowel)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	kɔdlə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	kɔdlə
+    MIN_DBG (Epenthes): After procedural epenthesis: 	kɔdlə
+    MIN_DBG (Epenthes): After strong sonorant rules: 	kɔdlə
+  EpenthesisAndStrongSonorants END (Proc): Out=	kɔdlə
+Af. EpenthesisAndStrongSonorants: [kɔdlə]
+  FinalCleanup START: In=	kɔdlə
+  FinalCleanup END: Out=	kɔdlə
+Af. FinalCleanup: [kɔdlə]
+codladh         -> [kɔdlə]
+
+--- Transcribing: [daoine] ---
+Af. Nasalization: [d'iːne]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	d'iːne
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	d'iːne
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	d'iːne	'
+    PARSER_DBG (Epenthes): Matched unit: '	d	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	iː	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	n	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	e	' (type: 	vowel	) with quality: '	vowel	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	d'iːne	' (using 	5	 non-stress units) count: 	2	 result: 	false
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	d'iːne	'
+    PARSER_DBG (Epenthes): Matched unit: '	d	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	iː	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	n	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	e	' (type: 	vowel	) with quality: '	vowel	'
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	5
+    MIN_DBG (Stage4_6): No explicit stress, assuming first vowel '	iː	' at unit index 	3	 is stressed.
+    MIN_DBG (Stage4_6): Reducing '	e	' to '	ə	'. Prec: 	nonpalatal	 Foll: 	neutral
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	d'iːnə	'
+    PARSER_DBG (Epenthes): Matched unit: '	d	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	iː	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	n	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ə	' (type: 	vowel	) with quality: '	vowel	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	d'iːnə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	d'iːnə	'
+    PARSER_DBG (Epenthes): Matched unit: '	d	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	iː	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	n	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ə	' (type: 	vowel	) with quality: '	vowel	'
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	5
+    MIN_DBG (Stage4_6): No explicit stress, assuming first vowel '	iː	' at unit index 	3	 is stressed.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	d'iːnə
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [d'iːnə]
+  EpenthesisAndStrongSonorants START (Proc): In=	d'iːnə
+  EpenthesisAndStrongSonorants START (Proc): In=	d'iːnə
+  apply_procedural_epenthesis START: In=	d'iːnə
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	d'iːnə	'
+    PARSER_DBG (Epenthes): Matched unit: '	d	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	'	' with quality: '	unknown_fallback	'
+    PARSER_DBG (Epenthes): Matched unit: '	iː	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	n	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ə	' (type: 	vowel	) with quality: '	vowel	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	d(nonpalatal) | '(unknown_fallback) | iː(vowel) | n(nonpalatal) | ə(vowel)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	d'iːnə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	d'iːnə
+    MIN_DBG (Epenthes): After procedural epenthesis: 	d'iːnə
+    MIN_DBG (Epenthes): After strong sonorant rules: 	d'iːnə
+  EpenthesisAndStrongSonorants END (Proc): Out=	d'iːnə
+Af. EpenthesisAndStrongSonorants: [d'iːnə]
+  FinalCleanup START: In=	d'iːnə
+  FinalCleanup END: Out=	d'iːnə
+Af. FinalCleanup: [d'iːnə]
+daoine          -> [d'iːnə]
+
+--- Transcribing: [eolas] ---
+Af. Nasalization: [ˈoːlɑs]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	ˈoːlɑs
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	ˈoːlɑs
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	ˈoːlɑs	'
+    PARSER_DBG (Epenthes): Matched unit: '	oː	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	l	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	s	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈoːlɑs	' (using 	4	 non-stress units) count: 	2	 result: 	false
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	ˈoːlɑs	'
+    PARSER_DBG (Epenthes): Matched unit: '	oː	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	l	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	s	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	4
+    MIN_DBG (Stage4_6): Reducing '	ɑ	' to '	ə	'. Prec: 	nonpalatal	 Foll: 	nonpalatal
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	ˈoːləs	'
+    PARSER_DBG (Epenthes): Matched unit: '	oː	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	l	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ə	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	s	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈoːləs	' (using 	4	 non-stress units) count: 	2	 result: 	false
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	ˈoːləs	'
+    PARSER_DBG (Epenthes): Matched unit: '	oː	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	l	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ə	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	s	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	4
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	ˈoːləs
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [ˈoːləs]
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈoːləs
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈoːləs
+  apply_procedural_epenthesis START: In=	ˈoːləs
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	ˈoːləs	'
+    PARSER_DBG (Epenthes): Matched unit: '	oː	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	l	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ə	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	s	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	ˈoː(vowel) | l(nonpalatal) | ə(vowel) | s(nonpalatal)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈoːləs	' (using 	4	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	ˈoːləs
+    MIN_DBG (Epenthes): After procedural epenthesis: 	ˈoːləs
+    MIN_DBG (Epenthes): After strong sonorant rules: 	ˈoːləs
+  EpenthesisAndStrongSonorants END (Proc): Out=	ˈoːləs
+Af. EpenthesisAndStrongSonorants: [ˈoːləs]
+  FinalCleanup START: In=	ˈoːləs
+  FinalCleanup END: Out=	ˈoːləs
+Af. FinalCleanup: [ˈoːləs]
+eolas           -> [ˈoːləs]
+
+--- Transcribing: [athair] ---
+Af. Nasalization: [ˈɑhair]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	ˈɑhair
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	ˈɑhair
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	ˈɑhair	'
+    PARSER_DBG (Epenthes): Matched unit: '	ˈ	' with quality: 'stress_mark'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	h	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ai	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈɑhair	' (using 	4	 non-stress units) count: 	2	 result: 	false
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	ˈɑhair	'
+    PARSER_DBG (Epenthes): Matched unit: '	ˈ	' with quality: 'stress_mark'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	h	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ai	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	5
+    MIN_DBG (Stage4_6): No explicit stress, assuming first vowel '	ɑ	' at unit index 	2	 is stressed.
+    MIN_DBG (Stage4_6): Reducing '	ai	' to '	ə	'. Prec: 	nonpalatal	 Foll: 	nonpalatal
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	ˈɑhər	'
+    PARSER_DBG (Epenthes): Matched unit: '	ˈ	' with quality: 'stress_mark'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	h	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ə	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈɑhər	' (using 	4	 non-stress units) count: 	2	 result: 	false
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	ˈɑhər	'
+    PARSER_DBG (Epenthes): Matched unit: '	ˈ	' with quality: 'stress_mark'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	h	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ə	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	5
+    MIN_DBG (Stage4_6): No explicit stress, assuming first vowel '	ɑ	' at unit index 	2	 is stressed.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	ˈɑhər
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [ˈɑhər]
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɑhər
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɑhər
+  apply_procedural_epenthesis START: In=	ˈɑhər
+    PARSER_DBG (Epenthes): Parsing phonetic string: '	ˈɑhər	'
+    PARSER_DBG (Epenthes): Matched unit: '	ˈ	' with quality: 'stress_mark'
+    PARSER_DBG (Epenthes): Fallback: Matched unit: '	ɑ	' with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	h	' (type: 	consonant	) with quality: '	nonpalatal	'
+    PARSER_DBG (Epenthes): Matched unit: '	ə	' (type: 	vowel	) with quality: '	vowel	'
+    PARSER_DBG (Epenthes): Matched unit: '	r	' (type: 	consonant	) with quality: '	nonpalatal	'
+    MIN_DBG (Epenthes): Parsed units for epenthesis: 	ˈ(stress_mark) | ɑ(vowel) | h(nonpalatal) | ə(vowel) | r(nonpalatal)
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈɑhər	' (using 	4	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	ˈɑhər
+    MIN_DBG (Epenthes): After procedural epenthesis: 	ˈɑhər
+    MIN_DBG (Epenthes): After strong sonorant rules: 	ˈɑhər
+  EpenthesisAndStrongSonorants END (Proc): Out=	ˈɑhər
+Af. EpenthesisAndStrongSonorants: [ˈɑhər]
+  FinalCleanup START: In=	ˈɑhər
+  FinalCleanup END: Out=	ˈɑhər
+Af. FinalCleanup: [ˈɑhər]
+athair          -> [ˈɑhər]

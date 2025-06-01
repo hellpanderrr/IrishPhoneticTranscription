@@ -1,0 +1,4247 @@
+﻿
+--- Running CSV Test Suite: wiki_sample_for_llm.csv ---
+
+--- Transcribing: [an-] ---
+an-                  (Ulster; Connemara   ) -> ˈɑn-                         (CSV: ˈan̪ˠ)
+
+--- Transcribing: [bindealán] ---
+bindealán           (Connacht            ) -> b'inəɑlɑːn                 (CSV: ˈbʲin̠ʲdʲəlˠɑːnˠ)
+
+--- Transcribing: [cora] ---
+cora                 (                    ) -> kɔrɑ                         (CSV: ˈkɔɾˠə)
+
+--- Transcribing: [dia duit] ---
+Dia duit             (                    ) -> d'iə dət'                    (CSV: ˌdʲiə ˈd̪ˠɪtʲ)
+
+--- Transcribing: [furasta] ---
+furasta              (Galway              ) -> fɔrɑstɑ                     (CSV: ˈfˠɾˠʊsˠt̪ˠə)
+
+--- Transcribing: [oibre] ---
+oibre                (Cois-Fharraige      ) -> ˈɛb'r'e                      (CSV: ˈaibʲɾʲə)
+
+--- Transcribing: [beannaigh] ---
+beannaigh            (Galway              ) -> b'æNə                        (CSV: ˈbʲæn̪ˠə)
+
+--- Transcribing: [amhras] ---
+amhras               (Aran                ) -> ˈəurrɑs                     (CSV: ˈanˠvˠɾˠəsˠ, ˈavˠɾˠəsˠ, ˈãvˠɾˠəsˠ)
+
+--- Transcribing: [rúisis] ---
+Rúisis              (                    ) -> ruːis'is'                     (CSV: ˈɾˠuːʃəʃ)
+
+--- Transcribing: [brabúsach] ---
+brabúsach           (Connacht            ) -> brɑbuːsɑx                   (CSV: ˈbˠɾˠabˠuːsˠəx)
+
+--- Transcribing: [cíora] ---
+cíora               (                    ) -> k'iːərɑ                     (CSV: ˈciːɾˠə)
+
+--- Transcribing: [almóinn] ---
+almóinn             (Connacht            ) -> ˈɑlmoːN'                    (CSV: ˈal̪ˠmˠoːn̠ʲ)
+
+--- Transcribing: [beithígh] ---
+beithígh            (Cois-Fharraige      ) -> b'eh'iːj                      (CSV: ˈbʲɛi)
+
+--- Transcribing: [ascaille] ---
+ascaille             (                    ) -> ˈɑskaiL'ə                   (CSV: ˈasˠkəl̠ʲə)
+
+--- Transcribing: [litiam] ---
+litiam               (                    ) -> lit'əm                        (CSV: ˈl̠ʲɪtʲiəmˠ)
+
+--- Transcribing: [-tar] ---
+-tar                 (                    ) -> -tɑr                          (CSV: t̪ˠəɾˠ)
+
+--- Transcribing: [crú] ---
+crú                 (Munster; Connacht   ) -> kruː                          (CSV: kɾˠuː)
+
+--- Transcribing: [cabhsa] ---
+cabhsa               (                    ) -> kɑvsɑ                        (CSV: ˈkausˠə)
+
+--- Transcribing: [fódhla] ---
+Fódhla              (                    ) -> foːɣlɑ                      (CSV: ˈfˠoːlˠə, ˈfˠoːl̪ˠə)
+
+--- Transcribing: [cnámha] ---
+cnámha              (Connacht            ) -> krɑːwɑ                      (CSV: knˠɑːvˠə, kɾˠɑːwə)
+
+--- Transcribing: [gairm] ---
+gairm                (                    ) -> gair'm'                        (CSV: )
+
+--- Transcribing: [gála] ---
+gála                (Munster; Connacht   ) -> gɑːlɑ                       (CSV: ˈɡɑːl̪ˠə)
+
+--- Transcribing: [acastóir] ---
+acastóir            (Connacht            ) -> ˈɑkɑstoːr'                 (CSV: ˈaˌkasˠt̪ˠoːɾʲ)
+
+--- Transcribing: [teachín] ---
+teachín             (Connacht            ) -> t'æːxiːn                    (CSV: ˈtʲaxiːnʲ)
+
+--- Transcribing: [cliabhán] ---
+cliabhán            (Connacht            ) -> kliəwɑːn                    (CSV: ˈclʲiəwɑːnˠ, ˈclʲiəwɑːn̪ˠ)
+
+--- Transcribing: [deinim] ---
+deinim               (                    ) -> d'enim'                        (CSV: ˈdʲɛnʲəmʲ, ˈdʲɛnʲɪmʲ, ˈdʲɪnʲəmʲ)
+
+--- Transcribing: [sraoill] ---
+sraoill              (Ulster; Connacht    ) -> sr'iːL'                       (CSV: sˠɾˠiːl̠ʲ)
+
+--- Transcribing: [láidir] ---
+láidir              (Munster; Connacht   ) -> lɑːid'ir'                    (CSV: ˈl̪ˠɑːdʲəɾʲ)
+
+--- Transcribing: [ríocht] ---
+ríocht              (Munster; Connacht   ) -> r'iːəxt                      (CSV: ɾˠiəxt̪ˠ)
+
+--- Transcribing: [búistéara] ---
+búistéara          (                    ) -> buːis't'eːɑrɑ              (CSV: ˈbˠuːʃtʲeːɾˠə)
+
+--- Transcribing: [taoiseach] ---
+Taoiseach            (Munster; Connacht   ) -> t'iːs'æːx                   (CSV: ˈt̪ˠiːʃəx)
+
+--- Transcribing: [go dtí go] ---
+go dtí go           (                    ) -> gɔ diː gə                   (CSV: ɡə ˈdʲiː ɡə)
+
+--- Transcribing: [magadh] ---
+magadh               (Galway              ) -> mɑgə                         (CSV: ˈmˠaɡə)
+
+--- Transcribing: [brobh] ---
+brobh                (Mayo                ) -> broː                          (CSV: bˠɾˠɔw)
+
+--- Transcribing: [easna] ---
+easna                (Cois-Fharraige      ) -> ˈeɑsnɑ                      (CSV: ˈaːsˠn̪ˠə)
+
+--- Transcribing: [altfadh] ---
+altfadh              (Mayo                ) -> ˈɑltfə                      (CSV: ˈal̪ˠt̪ˠuː)
+
+--- Transcribing: [éiríonn] ---
+éiríonn            (Connacht            ) -> ˈeːr'iːəN                  (CSV: ˈəiɾʲiːn̪ˠ)
+
+--- Transcribing: [gasa] ---
+gasa                 (Aran                ) -> gɑsɑ                         (CSV: ˈɡasˠiː)
+
+--- Transcribing: [uí] ---
+uí                  (                    ) -> ˈuiː                         (CSV: iː)
+
+--- Transcribing: [dúin] ---
+dúin                (                    ) -> duːin                         (CSV: d̪ˠuːnʲ)
+
+--- Transcribing: [gaedhlaing] ---
+Gaedhlaing           (                    ) -> geːjləŋ                     (CSV: ˈɡeːlɪɲ)
+
+--- Transcribing: [mil] ---
+mil                  (Munster; Connacht   ) -> m'il                           (CSV: mʲɪlʲ)
+
+--- Transcribing: [gearbach] ---
+gearbach             (Munster; Connacht   ) -> g'ær'bɑx                     (CSV: ˈɟaɾˠəbˠəx)
+
+--- Transcribing: [díobh] ---
+díobh               (Cois-Fharraige      ) -> d'&I_ACUTE_LONGoː             (CSV: d̪ˠiːbˠ)
+
+--- Transcribing: [tóin] ---
+tóin                (Ulster; Connacht    ) -> toːn                          (CSV: t̪ˠoːnʲ)
+
+--- Transcribing: [cnótha] ---
+cnótha              (Galway              ) -> kroːhɑ                       (CSV: ˈknˠohiː)
+
+--- Transcribing: [ceapadh] ---
+ceapadh              (Mayo                ) -> k'eɑpə                       (CSV: ˈcapˠuː)
+
+--- Transcribing: [átha] ---
+átha                (                    ) -> ˈɑːhɑ                      (CSV: ˈaːhə)
+
+--- Transcribing: [feidhmeannach] ---
+feidhmeannach        (                    ) -> f'ejm'əNɑx                   (CSV: ˈfʲəimʲən̪ˠəx)
+
+--- Transcribing: [beaga] ---
+beaga                (Aran                ) -> b'eɑgɑ                       (CSV: bʲɞɡə)
+
+--- Transcribing: [liopard] ---
+liopard              (                    ) -> lɪpɑrd                       (CSV: ˈlʲi.pˠəɾˠdˠ)
+
+--- Transcribing: [fireann] ---
+fireann              (                    ) -> f'ir'əN                       (CSV: ˈfʲɪɾʲən̪ˠ)
+
+--- Transcribing: [glún] ---
+glún                (Ulster; Connacht    ) -> gluːn                         (CSV: ɡlˠuːnˠ)
+
+--- Transcribing: [deasa] ---
+deasa                (                    ) -> d'eɑsɑ                       (CSV: ˈdʲasˠə)
+
+--- Transcribing: [mapa] ---
+mapa                 (                    ) -> mɑpɑ                         (CSV: ˈmˠapˠə)
+
+--- Transcribing: [bleácach] ---
+bleácach            (                    ) -> bleɑːkɑx                    (CSV: ˈbʲlʲɑːkəx)
+
+--- Transcribing: [cáit] ---
+Cáit                (                    ) -> kɑːit'                       (CSV: kaːtʲ, kɑːtʲ)
+
+--- Transcribing: [baisteadh] ---
+baisteadh            (Galway; Ulster; Mayo) -> bais't'uː                     (CSV: ˈbˠaʃtʲətʲ)
+
+--- Transcribing: [tost] ---
+tost                 (                    ) -> tɔst                          (CSV: t̪ˠɔsˠt̪ˠ, t̪ˠɞsˠt̪ˠ)
+
+--- Transcribing: [abcáisis] ---
+Abcáisis            (                    ) -> ˈɑbkɑːis'is'               (CSV: abˠˈkaːʃɪʃ, ˈabˠkaːʃɪʃ)
+
+--- Transcribing: [breathnú] ---
+breathnú            (Cois-Fharraige      ) -> br'eɑhnuː                    (CSV: ˈbˠɾˠæːn̪ˠuː)
+
+--- Transcribing: [casa] ---
+casa                 (Aran; Munster       ) -> kɑsɑ                         (CSV: ˈkɑsˠə)
+
+--- Transcribing: [ros comáin] ---
+Ros Comáin          (                    ) -> rɔs kəmɑːin                (CSV: ɾˠɔsˠ ˈkʊmˠɑːnʲ)
+
+--- Transcribing: [tugaim] ---
+tugaim               (Munster; Connacht   ) -> tʊgəm'                       (CSV: ˈt̪ˠʊɡəmʲ)
+
+--- Transcribing: [foirmiúlacht] ---
+foirmiúlacht        (Connacht            ) -> fɛr'm'uːlɑxt                (CSV: ˈfˠɔɾˠmʲuːlˠəxt̪ˠ, ˈfˠɔɾˠmʲuːl̪ˠəxt̪ˠ)
+
+--- Transcribing: [cúnamh] ---
+cúnamh              (Cois-Fharraige      ) -> kuːnɑv                       (CSV: ˈkuːn̪ˠə)
+
+--- Transcribing: [éilítear] ---
+éilítear           (Connacht            ) -> ˈeːlʲiːt'ər'              (CSV: ˈeːlʲiːɾʲ)
+
+--- Transcribing: [peacadh] ---
+peacadh              (Mayo; Ulster        ) -> p'eɑkə                       (CSV: ˈpʲaku(ː))
+
+--- Transcribing: [achar] ---
+achar                (                    ) -> ˈɑxɑr                       (CSV: ˈaxəɾˠ)
+
+--- Transcribing: [cat crainn] ---
+cat crainn           (Mayo; Ulster        ) -> kɑt kraiN'                    (CSV: ˌkat̪ˠ ˈkɾˠɪn̠ʲ)
+
+--- Transcribing: [rang] ---
+rang                 (Cois-Fharraige      ) -> rɑŋ                          (CSV: ɾˠaːŋɡ)
+
+--- Transcribing: [bean rialta] ---
+bean rialta          (                    ) -> b'æn r'əltɑ                 (CSV: ˌbʲanˠ ˈɾˠiəl̪ˠt̪ˠə)
+
+--- Transcribing: [tiuf-teaf] ---
+tiuf-teaf            (                    ) -> t'iəf-t'əɑf                 (CSV: ˈtʲufˠˌtʲafˠ)
+
+--- Transcribing: [tinnis] ---
+tinnis               (                    ) -> t'iN'is'                       (CSV: ˈtʲɪn̠ʲəʃ)
+
+--- Transcribing: [aoibheallach] ---
+aoibheallach         (Munster; Connacht   ) -> ˈiːv'əɑLɑx                (CSV: ˈiːvʲəl̪ˠəx)
+
+--- Transcribing: [cíocrach] ---
+cíocrach            (Connacht            ) -> k'iːəkrɑx                   (CSV: ˈciːkɾˠəx)
+
+--- Transcribing: [focal] ---
+focal                (Ulster; Munster; Connacht) -> fɔkɑl                        (CSV: ˈfˠɔkəl̪ˠ)
+
+--- Transcribing: [tarraing] ---
+tarraing             (Cois-Fharraige      ) -> tɑRaiŋ                       (CSV: ˈt̪ˠaɾˠən̠ʲ)
+
+--- Transcribing: [seanchas] ---
+seanchas             (                    ) -> s'ænxɑs                      (CSV: ˈʃanˠəxəsˠ, ˈʃan̪ˠəxəsˠ)
+
+--- Transcribing: [cóbh] ---
+Cóbh                (                    ) -> koːv                          (CSV: koːvˠ)
+
+--- Transcribing: [gearrtha] ---
+gearrtha             (Cois-Fharraige; Mayo) -> g'eɑRh'ə                     (CSV: ˈɟɑːɾˠhə)
+
+--- Transcribing: [dealbh] ---
+dealbh               (                    ) -> d'eɑlv                        (CSV: ˈdʲalˠəvˠ)
+
+--- Transcribing: [eascann] ---
+eascann              (Aran                ) -> ˈeɑskɑN                     (CSV: ˈæsˠkən)
+
+--- Transcribing: [clamhsán] ---
+clamhsán            (Connacht            ) -> klɑvsɑːn                    (CSV: ˈklˠausˠɑːnˠ, ˈkl̪ˠausˠɑːn̪ˠ)
+
+--- Transcribing: [drong] ---
+drong                (Aran                ) -> drɔŋ                         (CSV: d̪ˠɾˠɔŋ)
+
+--- Transcribing: [suíomh] ---
+suíomh              (Galway; Munster     ) -> sɔ&I_ACUTE_LONGoː            (CSV: sˠiːvˠ)
+
+--- Transcribing: [cumannachas] ---
+cumannachas          (                    ) -> kɔmɑNɑxɑs                  (CSV: ˈkʊmˠən̪ˠəxəs)
+
+--- Transcribing: [deiseal] ---
+deiseal              (                    ) -> d'es'iɑl                      (CSV: ˈdʲɛʃəlˠ)
+
+--- Transcribing: [caitheamh] ---
+caitheamh            (Mayo                ) -> kaih'əɑv                     (CSV: ˈkahuː)
+
+--- Transcribing: [tagann] ---
+tagann               (                    ) -> tɑgɑN                        (CSV: ˈt̪ˠaɡən̪ˠ)
+
+--- Transcribing: [deargadh] ---
+deargadh             (Galway; Munster     ) -> d'ær'gə                      (CSV: ˈdʲaɾˠəɡə)
+
+--- Transcribing: [buíocán] ---
+buíocán            (Connacht            ) -> buiːəkɑːn                  (CSV: ˈbˠiːkɑːnˠ, ˈbˠiːkɑːn̪ˠ)
+
+--- Transcribing: [eascrach] ---
+eascrach             (                    ) -> ˈeɑskrɑx                    (CSV: ˈasˠkɾˠəx)
+
+--- Transcribing: [peanna] ---
+peanna               (Cois-Fharraige      ) -> p'æNɑ                        (CSV: ˈpʲaːn̪ˠə)
+
+--- Transcribing: [maraigh] ---
+maraigh              (Mayo                ) -> mɑrə                         (CSV: ˈmˠaɾˠiː)
+
+--- Transcribing: [ceirt] ---
+ceirt                (                    ) -> k'er't'                        (CSV: cɛɾˠtʲ)
+
+--- Transcribing: [fria] ---
+fria                 (Cois-Fharraige      ) -> fr'iə                         (CSV: fˠɾˠeː)
+
+--- Transcribing: [beireadh] ---
+beireadh             (Mayo                ) -> b'er'uː                       (CSV: ˈbʲɛɾʲuː)
+
+--- Transcribing: [macánta] ---
+macánta             (Connacht            ) -> mɑkɑːntɑ                   (CSV: ˈmakɑːn̪ˠt̪ˠə)
+
+--- Transcribing: [barúil] ---
+barúil              (Connacht            ) -> bɑruːil                      (CSV: ˈbˠaɾˠuːlʲ)
+
+--- Transcribing: [cealg] ---
+cealg                (Ulster; Munster; Connacht) -> k'eɑlg'                       (CSV: ˈcal̪ˠəɡ)
+
+--- Transcribing: [deileanna] ---
+deileanna            (                    ) -> d'elɑNɑ                      (CSV: ˈdʲɛlʲən̪ˠə)
+
+--- Transcribing: [fealsúnacht] ---
+fealsúnacht         (Connacht            ) -> f'eɑlsuːnɑxt                (CSV: ˈfʲal̪ˠsˠuːnˠəxt̪ˠ)
+
+--- Transcribing: [slogadh] ---
+slogadh              (Galway              ) -> slɔgə                        (CSV: ˈsˠl̪ˠɔɡəvˠ)
+
+--- Transcribing: [agamsa] ---
+agamsa               (Aran                ) -> ˈɑgɑmsɑ                    (CSV: ˈɑmˠsˠə, ˈɑɡəmˠsˠə)
+
+--- Transcribing: [gearmáin] ---
+Gearmáin            (Mayo; Connemara     ) -> g'ær'mɑːin                  (CSV: ˈɟaɾˠəmˠɑːnʲ)
+
+--- Transcribing: [garga] ---
+garga                (                    ) -> gɑrgɑ                        (CSV: ˈɡaɾˠəɡə)
+
+--- Transcribing: [dílse] ---
+dílse               (Galway              ) -> d'iːls'i                      (CSV: ˈdʲiːlʲʃə)
+
+--- Transcribing: [beidh] ---
+beidh                (Connacht            ) -> b'eiː                         (CSV: bʲai, bʲe)
+
+--- Transcribing: [fuinseog] ---
+fuinseog             (Connacht            ) -> fɪns'oːg                     (CSV: ˈfˠɪn̠ʲʃoːɡ)
+
+--- Transcribing: [éad] ---
+éad                 (Ulster; Connacht    ) -> ˈeːɑd                       (CSV: eːd̪ˠ)
+
+--- Transcribing: [catach] ---
+catach               (Connacht            ) -> kɑtɑx                        (CSV: ˈkat̪ˠəx)
+
+--- Transcribing: [orla] ---
+orla                 (                    ) -> ˈɔrlɑ                       (CSV: ˈɔːɾˠl̪ˠə)
+
+--- Transcribing: [sleá] ---
+sleá                (Munster; Connacht   ) -> sleɑː                        (CSV: ˈʃl̠ʲɑː)
+
+--- Transcribing: [foscadh] ---
+foscadh              (Cois-Fharraige      ) -> fɔskə                        (CSV: ˈfˠasˠkə)
+
+--- Transcribing: [ribe] ---
+ribe                 (                    ) -> r'ib'ə                        (CSV: ˈɾˠɪbʲə)
+
+--- Transcribing: [cóisir] ---
+cóisir              (Munster; Connacht   ) -> koːs'ir'                      (CSV: ˈkoːʃəɾʲ)
+
+--- Transcribing: [fine gael] ---
+Fine Gael            (                    ) -> f'inə geːl                   (CSV: ˌfʲɪnʲə ˈɡeːlˠ)
+
+--- Transcribing: [máthair] ---
+máthair             (Connacht            ) -> mɑːhər                      (CSV: ˈmˠãːhəɾʲ)
+
+--- Transcribing: [áitíonn] ---
+áitíonn            (Connacht            ) -> ˈɑːit'iːəN                (CSV: ˈɑːtʲiːn̪ˠ)
+
+--- Transcribing: [imir] ---
+imir                 (                    ) -> ˈim'ir'                       (CSV: ˈɪmʲəɾʲ)
+
+--- Transcribing: [sagairt] ---
+sagairt              (Cois-Fharraige      ) -> sɑgair't'                     (CSV: ˈsˠæɡəɾˠtʲ)
+
+--- Transcribing: [spéis] ---
+spéis               (                    ) -> sp'eːs'                       (CSV: sˠpʲeːʃ)
+
+--- Transcribing: [nuaghinte] ---
+nuaghinte            (                    ) -> nuajint'ə                     (CSV: ˈn̪ˠʊʝɪnʲtʲə)
+
+--- Transcribing: [taispeáin] ---
+taispeáin           (Cois-Fharraige      ) -> tais'p'əɑːin                (CSV: t̪ˠəˈsˠpˠɑːnʲ, ˈsˠpˠɑːnʲ)
+
+--- Transcribing: [ging] ---
+ging                 (                    ) -> g'iŋ                          (CSV: ɟɪɲ)
+
+--- Transcribing: [canáil] ---
+canáil              (Connacht            ) -> kɑnɑːil                     (CSV: ˈkanˠɑːlʲ)
+
+--- Transcribing: [diaspóra] ---
+diaspóra            (Connacht            ) -> d'iəspoːrɑ                  (CSV: ˈdʲiəsˠpˠoːɾˠə)
+
+--- Transcribing: [plátaí] ---
+plátaí             (Connacht            ) -> plɑːtiː                     (CSV: ˈpˠlˠɑːt̪ˠiː)
+
+--- Transcribing: [aireachtáil] ---
+aireachtáil         (Mayo                ) -> ˈair'æːxtɑːil             (CSV: ˈaɾʲəxt̪ˠɑːlʲ)
+
+--- Transcribing: [feirge] ---
+feirge               (                    ) -> f'er'g'ə                      (CSV: ˈfʲɛɾʲɪɟɪ)
+
+--- Transcribing: [buaine] ---
+buaine               (Munster; Connacht   ) -> bɔənə                       (CSV: ˈbˠuənʲə)
+
+--- Transcribing: [naonúr] ---
+naonúr              (Connacht            ) -> nɨːnuːr                     (CSV: ˈn̪ˠiːnˠuːɾˠ)
+
+--- Transcribing: [sútra] ---
+sútra               (                    ) -> suːtrɑ                       (CSV: ˈsˠuːt̪ˠɾˠə)
+
+--- Transcribing: [dhíotsa] ---
+dhíotsa             (                    ) -> jiːt'sɑ                      (CSV: ˈjiːt̪ˠsˠə)
+
+--- Transcribing: [déanann] ---
+déanann             (Aran                ) -> d'eːɑnɑN                    (CSV: ˈdʲeːnən̪ˠ, ˈdʲiːnən̪ˠ)
+
+--- Transcribing: [bruith] ---
+bruith               (Cois-Fharraige      ) -> brɪh'                         (CSV: bˠɾˠʊ)
+
+--- Transcribing: [miotóg] ---
+miotóg              (Connacht            ) -> m'ɪtoːg                      (CSV: ˈmʲɪt̪ˠoːɡ)
+
+--- Transcribing: [bailím] ---
+bailím              (Aran                ) -> bailʲiːm'                    (CSV: ˈbˠaliːmʲ)
+
+--- Transcribing: [scoláireacht] ---
+scoláireacht        (Connacht            ) -> skɔlɑːir'æːxt             (CSV: ˈsˠkɔlˠɑːɾʲəxt̪ˠ)
+
+--- Transcribing: [dream] ---
+dream                (Ulster; Connacht    ) -> dr'eɑm                        (CSV: dʲɾʲamˠ)
+
+--- Transcribing: [seilbhe] ---
+seilbhe              (                    ) -> s'elv'ə                       (CSV: ˈʃɛlʲəvʲə)
+
+--- Transcribing: [lúbaire] ---
+lúbaire             (                    ) -> luːbər'ə                    (CSV: ˈl̪ˠuːbˠəɾʲə)
+
+--- Transcribing: [trach] ---
+trach                (                    ) -> trɑx                          (CSV: t̪ˠɾˠɑx)
+
+--- Transcribing: [tógtar] ---
+tógtar              (                    ) -> toːgtɑr                      (CSV: ˈt̪ˠoːkt̪ˠəɾˠ)
+
+--- Transcribing: [liacht] ---
+liacht               (                    ) -> liəxt                         (CSV: l̠ʲiəxt̪ˠ)
+
+--- Transcribing: [scrábán] ---
+scrábán            (Connacht            ) -> skrɑːbɑːn                  (CSV: ˈsˠkɾˠɑːbɑːnˠ)
+
+--- Transcribing: [saothrú] ---
+saothrú             (Cois-Fharraige      ) -> sɨːhruː                     (CSV: ˈsˠiːɾˠuː)
+
+--- Transcribing: [tuirse] ---
+tuirse               (                    ) -> tɪr's'i                       (CSV: ˈt̪ˠʊɾˠʃə)
+
+--- Transcribing: [gliogaire] ---
+gliogaire            (                    ) -> glɪgər'ə                    (CSV: ˈɟlʲɯɡəɾʲə)
+
+--- Transcribing: [ghním] ---
+ghním               (Connacht            ) -> ɣniːm                        (CSV: n̠ʲiːmʲ)
+
+--- Transcribing: [faigh] ---
+faigh                (                    ) -> fə                            (CSV: fˠəi)
+
+--- Transcribing: [ucht] ---
+ucht                 (Connacht            ) -> ˈʊxt                         (CSV: ɔxt̪ˠ)
+
+--- Transcribing: [teoiric] ---
+teoiric              (Munster; Connacht   ) -> t'oːir'ik'                    (CSV: ˈtʲoːɾʲɪc)
+
+--- Transcribing: [caillte] ---
+caillte              (Mayo                ) -> kaiL't'ə                      (CSV: ˈkalʲtʲiː)
+
+--- Transcribing: [gol] ---
+gol                  (Munster; Connacht   ) -> gɔl                           (CSV: ɡɔl̪ˠ)
+
+--- Transcribing: [cathaoirleach] ---
+cathaoirleach        (Cois-Fharraige      ) -> kɑhiːrlæːx                 (CSV: ˈkaiɾˠl̠ʲəx)
+
+--- Transcribing: [cleachtadh] ---
+cleachtadh           (Mayo; Ulster        ) -> klæːxtə                     (CSV: ˈclʲaxt̪ˠətʲ)
+
+--- Transcribing: [duine] ---
+duine                (Ulster; Munster; Connacht) -> dɪnə                         (CSV: ˈd̪ˠɪnʲə)
+
+--- Transcribing: [crann] ---
+crann                (Cois-Fharraige; Aran) -> krɑN                          (CSV: kɾˠɑːn̪ˠ)
+
+--- Transcribing: [foláir] ---
+foláir              (Cois-Fharraige      ) -> fɔlɑːir'                    (CSV: fʲlʲɑːɾˠ)
+
+--- Transcribing: [treabh] ---
+treabh               (Connacht            ) -> tr'eɑv                        (CSV: ˈtʲɾʲəu)
+
+--- Transcribing: [caora] ---
+caora                (Ulster; Munster; Connacht) -> kɨːrɑ                       (CSV: ˈkiːɾˠə)
+
+--- Transcribing: [cailce] ---
+cailce               (                    ) -> kailk'ə                       (CSV: ˈkalʲcə)
+
+--- Transcribing: [agus] ---
+agus                 (Ulster; Mayo; Aran; Connemara; Munster) -> ˈɑgɔs                       (CSV: əɡəsˠ, ɡəsˠ)
+
+--- Transcribing: [bairbre] ---
+Bairbre              (                    ) -> bair'b'r'ə                    (CSV: ˈbˠaɾʲəbʲɾʲə)
+
+--- Transcribing: [laistiar] ---
+laistiar             (                    ) -> lais't'ər                     (CSV: l̪ˠaʃˈtʲiəɾˠ)
+
+--- Transcribing: [gil] ---
+gil                  (                    ) -> g'il                           (CSV: ɟɪlʲ)
+
+--- Transcribing: [oblátach] ---
+oblátach            (Connacht            ) -> ˈɔblɑːtɑx                 (CSV: ˈɔbˠlˠɑːt̪ˠəx)
+
+--- Transcribing: [oibriú] ---
+oibriú              (Mayo                ) -> ˈɛb'r'uː                    (CSV: ˈɛbʲɾʲuː)
+
+--- Transcribing: [ar dtús] ---
+ar dtús             (                    ) -> ˈɑr duːs                    (CSV: əɾˠˈd̪ˠuːsˠ)
+
+--- Transcribing: [scuabadh] ---
+scuabadh             (Galway; Munster     ) -> skuabə                        (CSV: ˈsˠkuəbˠə)
+
+--- Transcribing: [ionadh] ---
+ionadh               (Mayo                ) -> ˈɪnə                        (CSV: ˈiːnˠuː, ˈiːn̪ˠuː)
+
+--- Transcribing: [id] ---
+id                   (                    ) -> ˈid'                          (CSV: ɪd̪ˠ)
+
+--- Transcribing: [inar] ---
+inar                 (                    ) -> ˈinɑr                        (CSV: ˈɪnˠəɾˠ)
+
+--- Transcribing: [fataí] ---
+fataí               (Connacht            ) -> fɑtiː                        (CSV: ˈfˠat̪ˠiː, ˈfˠɑt̪ˠiː)
+
+--- Transcribing: [cóireáil] ---
+cóireáil           (Connacht            ) -> koːr'əɑːil                 (CSV: ˈkoːrʲɑːlʲ)
+
+--- Transcribing: [srathnaigh] ---
+srathnaigh           (Galway              ) -> srɑhnə                       (CSV: ˈsˠɾˠahnˠə, ˈsˠɾˠahn̪ˠə)
+
+--- Transcribing: [th] ---
+Th                   (                    ) ->                                (CSV: h)
+
+--- Transcribing: [beag] ---
+beag                 (Munster; Connacht   ) -> b'eɑg'                        (CSV: bʲɞɡ)
+
+--- Transcribing: [fichead] ---
+fichead              (Aran; Ulster; Munster) -> f'ixəɑd                      (CSV: ˈfʲɪhəd̪ˠ)
+
+--- Transcribing: [dathúil] ---
+dathúil             (Cois-Fharraige      ) -> dɑhuːil                      (CSV: d̪ˠəulʲ, ˈd̪ˠahuːlʲ, ˈd̪ˠauːlʲ)
+
+--- Transcribing: [lear] ---
+lear                 (                    ) -> lær'                          (CSV: l̠ʲaɾˠ)
+
+--- Transcribing: [fuáil] ---
+fuáil               (Connacht            ) -> fɔɑːil                      (CSV: ˈfˠuːɑːlʲ)
+
+--- Transcribing: [fata] ---
+fata                 (Connacht            ) -> fɑtɑ                         (CSV: ˈfˠat̪ˠə, ˈfˠɑt̪ˠə)
+
+--- Transcribing: [bhfuáil] ---
+bhfuáil             (                    ) -> vɔɑːil                      (CSV: ˈwuːaːlʲ)
+
+--- Transcribing: [ina dhiaidh] ---
+ina dhiaidh          (Aran                ) -> ˈinɑ ji                      (CSV: nə ˈjiə)
+
+--- Transcribing: [héileacaptar] ---
+héileacaptar        (                    ) -> h'eːləɑkɑptɑr             (CSV: ˈheː.l̪ʲəˌkapˠ.t̪ˠəɾˠ)
+
+--- Transcribing: [iontas] ---
+iontas               (Ulster; Connacht    ) -> ˈɪntɑs                      (CSV: ˈiːn̪ˠt̪ˠəsˠ)
+
+--- Transcribing: [dearnamar] ---
+dearnamar            (                    ) -> d'ær'nɑmɑr                  (CSV: ˈdʲaːɾˠn̪ˠəmˠəɾˠ)
+
+--- Transcribing: [ticéad] ---
+ticéad              (                    ) -> t'ik'eːɑd                    (CSV: tʲɪceːd̪ˠ)
+
+--- Transcribing: [seasc] ---
+seasc                (                    ) -> s'eɑsk                        (CSV: ʃasˠk)
+
+--- Transcribing: [dearcaim] ---
+dearcaim             (Munster; Connacht   ) -> d'ær'kəm'                    (CSV: ˈdʲaɾˠkəmʲ)
+
+--- Transcribing: [chuaigh] ---
+chuaigh              (Galway; Ulster; Munster) -> xɔə                          (CSV: xuə)
+
+--- Transcribing: [cuideachtúil] ---
+cuideachtúil        (Connacht            ) -> kɪd'æːxtuːil               (CSV: ˈkudʲəxt̪ˠuːlʲ)
+
+--- Transcribing: [bille] ---
+bille                (                    ) -> b'iL'ə                        (CSV: ˈbʲɪlʲə)
+
+--- Transcribing: [uimhir] ---
+uimhir               (Munster; Connacht   ) -> ˈɪv'ir'                      (CSV: ˈɪvʲəɾʲ)
+
+--- Transcribing: [buíocháin] ---
+buíocháin          (Connacht            ) -> buiːəxɑːin                 (CSV: ˈbˠiəxɑːnʲ)
+
+--- Transcribing: [cumhdaigh] ---
+cumhdaigh            (Galway              ) -> kɔvdə                        (CSV: ˈkuːd̪ˠə)
+
+--- Transcribing: [deora] ---
+deora                (Munster; Connacht   ) -> d'oːrɑ                       (CSV: ˈdʲoːɾˠə)
+
+--- Transcribing: [casfar] ---
+casfar               (                    ) -> kɑsfɑr                       (CSV: ˈkɑsˠfˠəɾˠ)
+
+--- Transcribing: [connachtach] ---
+Connachtach          (Munster; Connacht   ) -> kɔNɑxtɑx                    (CSV: ˈkon̪ˠəxt̪ˠəx)
+
+--- Transcribing: [fearúil] ---
+fearúil             (Connacht            ) -> f'æruːil                     (CSV: ˈfʲaɾˠuːlʲ)
+
+--- Transcribing: [-as] ---
+-as                  (                    ) -> -ɑs                           (CSV: əsˠ)
+
+--- Transcribing: [ga] ---
+ga                   (Aran                ) -> gɑ                            (CSV: ˈɡɞhə)
+
+--- Transcribing: [hata] ---
+hata                 (Ulster; Connacht    ) -> hɑtɑ                         (CSV: ˈhat̪ˠə)
+
+--- Transcribing: [caithne] ---
+caithne              (                    ) -> kaih'nə                       (CSV: ˈkahnʲə)
+
+--- Transcribing: [stopallán] ---
+stopallán           (Connacht            ) -> stɔpɑLɑːn                  (CSV: ˈsˠt̪ˠɔpəl̪ˠɑːnˠ)
+
+--- Transcribing: [ardfhear] ---
+ardfhear             (Munster; Connacht   ) -> ˈɑrdh'ær'                   (CSV: ˈɑːɾˠd̪ˠˌaɾˠ)
+
+--- Transcribing: [compóirt] ---
+compóirt            (Cois-Fharraige      ) -> kɔmpoːr't'                   (CSV: ˈkuːmˠpˠoːɾˠtʲ)
+
+--- Transcribing: [sara fada] ---
+sara fada            (                    ) -> sɑrɑ fɑdɑ                  (CSV: ˈsˠɑɾˠə ˈfˠɑd̪ˠə)
+
+--- Transcribing: [clúdach] ---
+clúdach             (Munster; Connacht   ) -> kluːdɑx                      (CSV: ˈklˠuːd̪ˠəx, ˈkl̪ˠuːd̪ˠəx)
+
+--- Transcribing: [déanaidís] ---
+déanaidís          (Aran                ) -> d'eːɑnəd'iːs'              (CSV: ˈdʲiːnədʲiːʃ)
+
+--- Transcribing: [geire] ---
+geire                (                    ) -> g'er'ə                        (CSV: ˈɟɛɾʲə)
+
+--- Transcribing: [albanach] ---
+Albanach             (Connacht            ) -> ˈɑlbɑnɑx                   (CSV: ˈalˠəbˠənˠəx, ˈal̪ˠəbˠən̪ˠəx)
+
+--- Transcribing: [easóg] ---
+easóg               (Connacht            ) -> ˈeɑsoːg                     (CSV: ˈasˠoːɡ, ˈæsˠoːɡ)
+
+--- Transcribing: [guite] ---
+guite                (                    ) -> gɪt'ə                        (CSV: ˈɡɪtʲə)
+
+--- Transcribing: [mar ea] ---
+mar ea               (                    ) -> mɑr eɑ                       (CSV: mˠaɾˠ ˈja)
+
+--- Transcribing: [piachán] ---
+piachán             (Connacht            ) -> p'iəxɑːn                    (CSV: ˈpʲiəxːɑːn)
+
+--- Transcribing: [cíobhaí] ---
+cíobhaí            (Ulster; Connacht    ) -> k'iːəwiː                    (CSV: ˈciːwiː)
+
+--- Transcribing: [dol] ---
+dol                  (Ulster; Connacht    ) -> dɔl                           (CSV: d̪ˠɔlˠ)
+
+--- Transcribing: [tréith] ---
+tréith              (                    ) -> tr'eːh'                       (CSV: tʲɾʲeː)
+
+--- Transcribing: [clúiteach] ---
+clúiteach           (Munster; Connacht   ) -> kluːit'æːx                  (CSV: ˈkl̪ˠuːtʲəx)
+
+--- Transcribing: [margadh] ---
+margadh              (Mayo; Ulster        ) -> mɑrgə                        (CSV: ˈmˠaɾˠəɡuː)
+
+--- Transcribing: [súiste] ---
+súiste              (                    ) -> suːis't'ə                    (CSV: ˈsˠuːʃtʲə)
+
+--- Transcribing: [séide] ---
+séide               (                    ) -> s'eːd'ə                      (CSV: ˈʃeːdʲə)
+
+--- Transcribing: [pis] ---
+pis                  (                    ) -> p'is'                          (CSV: pʲɪʃ)
+
+--- Transcribing: [nádúr] ---
+nádúr              (                    ) -> nɑːduːr                     (CSV: ˈn̪ˠaːd̪ˠuːɾˠ)
+
+--- Transcribing: [cluife] ---
+cluife               (                    ) -> klɪf'ə                       (CSV: ˈklˠifʲə, ˈklˠufʲə, ˈklˠɨfʲə)
+
+--- Transcribing: [gleoite] ---
+gleoite              (                    ) -> gloːit'ə                     (CSV: ˈɟlʲoːtʲə)
+
+--- Transcribing: [billiún] ---
+billiún             (                    ) -> b'iL'uːn                      (CSV: ˈbʲil̠ʲuːnˠ)
+
+--- Transcribing: [ngnóthaí] ---
+ngnóthaí           (Cois-Fharraige      ) -> ŋnoːhiː                     (CSV: ˈn̪ˠuːiː)
+
+--- Transcribing: [giúis] ---
+giúis               (Munster; Connacht   ) -> g'uːis'                       (CSV: ɟuːʃ)
+
+--- Transcribing: [múch] ---
+múch                (                    ) -> muːx                          (CSV: mˠuːx)
+
+--- Transcribing: [deireanach] ---
+deireanach           (Aran                ) -> d'er'əɑnɑx                  (CSV: ˈdʲɛɾʲ(ə)nəx)
+
+--- Transcribing: [tiocfas] ---
+tiocfas              (                    ) -> t'ɪkfɑs                      (CSV: ˈtʲʊkəsˠ)
+
+--- Transcribing: [scaradh] ---
+scaradh              (Galway              ) -> skɑrə                        (CSV: ˈsˠkaɾˠə)
+
+--- Transcribing: [geilt] ---
+geilt                (                    ) -> g'elt'                         (CSV: )
+
+--- Transcribing: [fliuchadh] ---
+fliuchadh            (Galway; Munster     ) -> fliəxə                       (CSV: ˈfʲlʲʊxə, ˈfʲlʲʊxəx)
+
+--- Transcribing: [ionad] ---
+ionad                (Connacht            ) -> ˈɪnɑd                       (CSV: ˈinˠəd̪ˠ)
+
+--- Transcribing: [ofrála] ---
+ofrála              (Connacht            ) -> ˈɔfrɑːlɑ                  (CSV: ˈɔfˠɾˠɑːlˠə, ˈɔfˠɾˠɑːl̪ˠə)
+
+--- Transcribing: [laethanta na riabhaí] ---
+laethanta na riabhaí (Connacht            ) -> leːhɑntɑ nɑ rəwiː        (CSV: ˈl̪ˠeːhən̪ˠt̪ˠə n̪ˠə ˈɾˠiəwiː)
+
+--- Transcribing: [lúb] ---
+lúb                 (                    ) -> luːb                          (CSV: l̪ˠuːbˠ)
+
+--- Transcribing: [bualadh] ---
+bualadh              (Galway; Munster     ) -> bualə                         (CSV: ˈbˠuəl̪ˠə)
+
+--- Transcribing: [barr] ---
+barr                 (Munster; Connacht   ) -> bɑR                           (CSV: bˠɑːɾˠ)
+
+--- Transcribing: [rú] ---
+rú                  (                    ) -> ruː                           (CSV: ɾˠuː)
+
+--- Transcribing: [crosaire] ---
+crosaire             (                    ) -> krɔsər'ə                    (CSV: ˈkɾˠɔsəɾʲə)
+
+--- Transcribing: [cnogaí] ---
+cnogaí              (                    ) -> krɔgiː                       (CSV: ˈknˠuɡiː)
+
+--- Transcribing: [coisrig] ---
+coisrig              (                    ) -> kɛs'r'ig'                     (CSV: ˈkɔʃɾʲɪc)
+
+--- Transcribing: [dreancaid] ---
+dreancaid            (                    ) -> dr'eɑnkəd'                   (CSV: ˈdʲɾʲaŋkədʲ)
+
+--- Transcribing: [croíthe] ---
+croíthe             (                    ) -> kroiːh'ə                     (CSV: ˈkɾˠiːhɪ)
+
+--- Transcribing: [cealgfaidh] ---
+cealgfaidh           (Galway; Ulster; Mayo) -> k'eɑlg'fə                    (CSV: ˈcalˠəkə)
+
+--- Transcribing: [tóra] ---
+tóra                (Munster; Connacht   ) -> toːrɑ                        (CSV: ˈt̪ˠoːɾˠə)
+
+--- Transcribing: [cruinniú] ---
+cruinniú            (Connacht            ) -> krɪN'uː                      (CSV: ˈkɾˠɪn̠ʲuː)
+
+--- Transcribing: [seisear] ---
+seisear              (                    ) -> s'es'ər'                      (CSV: ˈʃɛʃəɾˠ)
+
+--- Transcribing: [toghadh] ---
+toghadh              (Connacht            ) -> tɔɣə                        (CSV: ˈt̪ˠəu.ə)
+
+--- Transcribing: [túir] ---
+túir                (                    ) -> tuːir'                        (CSV: t̪ˠuːɾʲ)
+
+--- Transcribing: [uireasach] ---
+uireasach            (                    ) -> ˈɪr'əɑsɑx                 (CSV: ˈɪɾʲəsˠəx)
+
+--- Transcribing: [stróic] ---
+stróic              (                    ) -> stroːk'                       (CSV: sˠt̪ˠɾˠoːc)
+
+--- Transcribing: [seoighe] ---
+Seoighe              (                    ) -> s'oːiji                       (CSV: ˈʃoːjə)
+
+--- Transcribing: [ainrialaí] ---
+ainrialaí           (                    ) -> ˈainr'ilʲiː                 (CSV: ˈanʲˌɾˠiəlˠiː)
+
+--- Transcribing: [ceilteach] ---
+Ceilteach            (Connacht            ) -> k'elt'æːx                    (CSV: ˈcɛl̠ʲtʲəx)
+
+--- Transcribing: [ligh] ---
+ligh                 (Connacht            ) -> lij                            (CSV: l̠ʲiː)
+
+--- Transcribing: [boga] ---
+boga                 (                    ) -> bɔgɑ                         (CSV: ˈbˠɔɡə)
+
+--- Transcribing: [coille] ---
+coille               (                    ) -> kɛL'e                         (CSV: ˈkɞl̠ʲə)
+
+--- Transcribing: [pobail] ---
+pobail               (Munster; Connacht   ) -> pɔbəl                        (CSV: ˈpˠɔbˠəlʲ)
+
+--- Transcribing: [chíonn] ---
+chíonn              (                    ) -> çiːəN                       (CSV: çiːn̪ˠ)
+
+--- Transcribing: [glún] ---
+glún                (Ulster; Munster; Connacht) -> gluːn                         (CSV: ɡl̪ˠuːn̪ˠ)
+
+--- Transcribing: [pápa] ---
+pápa                (Munster; Connacht   ) -> pɑːpɑ                       (CSV: ˈpˠɑːpˠə)
+
+--- Transcribing: [bacach] ---
+bacach               (Cois-Fharraige; Connacht) -> bɑkɑx                        (CSV: ˈbˠaːkəx)
+
+--- Transcribing: [dóiche] ---
+dóiche              (                    ) -> doːçi                        (CSV: ˈd̪ˠɔ(ː)içɪ)
+
+--- Transcribing: [matánach] ---
+matánach            (Connacht            ) -> mɑtɑːnɑx                   (CSV: ˈmˠat̪ˠɑːnˠəx)
+
+--- Transcribing: [leanacht] ---
+leanacht             (                    ) -> leɑnɑxt                      (CSV: ˈl̠ʲanˠəxt̪ˠ)
+
+--- Transcribing: [candála] ---
+candála             (Cois-Fharraige      ) -> kɑnɑːlɑ                    (CSV: ˈkan̪ˠd̪ˠɑːl̪ˠə)
+
+--- Transcribing: [polainn] ---
+Polainn              (Kerry; Connacht     ) -> pɔləN'                       (CSV: ˈpˠɔlˠən̠ʲ)
+
+--- Transcribing: [pearsanta] ---
+pearsanta            (                    ) -> p'ær'sɑntɑ                  (CSV: ˈpʲaɾˠsˠən̪ˠt̪ˠə)
+
+--- Transcribing: [cána] ---
+cána                (Connacht            ) -> kɑːnɑ                       (CSV: ˈkɑːnˠə)
+
+--- Transcribing: [athraigh] ---
+athraigh             (Aran                ) -> ˈɑhrə                       (CSV: ˈaɾˠə, ˈæɾˠə, ˈɑɾˠə)
+
+--- Transcribing: [frása] ---
+frása               (Munster; Connacht   ) -> frɑːsɑ                      (CSV: ˈfˠɾˠɑːsˠə)
+
+--- Transcribing: [carn aoiligh] ---
+carn aoiligh         (Galway              ) -> kɑrn iːlij                   (CSV: -ˈɯːlʲə, kɑːɾˠn̪ˠ ˈiːlʲə)
+
+--- Transcribing: [amharc] ---
+amharc               (Aran                ) -> ˈɑuɑrk                      (CSV: ˈafˠəɾˠk)
+
+--- Transcribing: [olldord] ---
+olldord              (                    ) -> ˈɔLdərd                     (CSV: ˈɔl̪ˠˌd̪ˠoːɾˠd̪ˠ)
+
+--- Transcribing: [bord] ---
+bord                 (Aran                ) -> bɔrd                          (CSV: bˠɑuɾˠd̪ˠ)
+
+--- Transcribing: [mar gheall ar] ---
+mar gheall ar        (Galway; Cois-Fharraige) -> mɑr jeɑL ɑr'                (CSV: mˠaːɾˠ jɑːl̪ˠ(t̪ˠ)eɾʲ)
+
+--- Transcribing: [codail] ---
+codail               (Munster; Connacht   ) -> kɔdəl                        (CSV: ˈkod̪ˠəlʲ)
+
+--- Transcribing: [raidió] ---
+raidió              (Connacht            ) -> raid'ioː                      (CSV: ˈɾˠadʲiːoː)
+
+--- Transcribing: [-ann] ---
+-ann                 (                    ) -> -ɑN                           (CSV: ən̪ˠ)
+
+--- Transcribing: [againn] ---
+againn               (Galway; Aran        ) -> ˈɑgaiN'                      (CSV: aːn̠ʲ)
+
+--- Transcribing: [tíoróideach] ---
+tíoróideach        (Connacht            ) -> t'iːəroːd'æːx             (CSV: ˈtʲiːɾˠoːdʲəx)
+
+--- Transcribing: [pratastúnach] ---
+Pratastúnach        (Cois-Fharraige      ) -> prɑtɑstuːnɑx               (CSV: ˈpˠɾˠaːt̪ˠəsˠt̪ˠuːn̪ˠəx)
+
+--- Transcribing: [iarann] ---
+iarann               (                    ) -> ˈiərɑN                      (CSV: ˈiəɾˠən̪ˠ)
+
+--- Transcribing: [díreacha] ---
+díreacha            (Munster; Connacht   ) -> d'iːr'æːxɑ                 (CSV: ˈdʲiːɾʲəxə)
+
+--- Transcribing: [mol] ---
+mol                  (                    ) -> mɔl                           (CSV: )
+
+--- Transcribing: [leapacha] ---
+leapacha             (Cois-Fharraige      ) -> leɑpɑxɑ                     (CSV: ˈl̠ʲæpˠəxiː)
+
+--- Transcribing: [ardghlórach] ---
+ardghlórach         (Connacht            ) -> ˈɑrdɣloːrɑx               (CSV: ˈɑːɾˠd̪ˠˌɣlˠoːɾˠəx)
+
+--- Transcribing: [áit] ---
+áit                 (Munster; Connacht   ) -> ˈɑːit'                      (CSV: ɑːtʲ)
+
+--- Transcribing: [daoine] ---
+daoine               (                    ) -> d'iːnə                       (CSV: ˈd̪ˠiːnʲə)
+
+--- Transcribing: [salann] ---
+salann               (Connacht            ) -> sɑlɑN                        (CSV: ˈsˠalˠən̪ˠ, ˈsˠal̪ˠən̪ˠ)
+
+--- Transcribing: [cluin] ---
+cluin                (Aran                ) -> klɪn                          (CSV: klɨn)
+
+--- Transcribing: [rinneabhair] ---
+rinneabhair          (                    ) -> r'iN'əəər                   (CSV: ˈɾˠɪnʲəwəɾʲ)
+
+--- Transcribing: [prátaí] ---
+prátaí             (Connacht            ) -> prɑːtiː                     (CSV: ˈpˠɾˠɑːt̪ˠiː)
+
+--- Transcribing: [buaigh] ---
+buaigh               (Mayo; Ulster        ) -> bɔə                          (CSV: bˠuəj)
+
+--- Transcribing: [mairim] ---
+mairim               (Munster; Connacht   ) -> mair'im'                       (CSV: ˈmˠaɾʲəmʲ)
+
+--- Transcribing: [cruach] ---
+cruach               (                    ) -> kruax                          (CSV: kɾˠuəx)
+
+--- Transcribing: [bandach] ---
+bandach              (Connacht            ) -> bɑnɑx                        (CSV: ˈbˠan̪ˠd̪ˠəx)
+
+--- Transcribing: [veigeatóir] ---
+veigeatóir          (Connacht            ) -> veg'əɑtoːr'                 (CSV: ˈvʲɛɟɪt̪ˠoːɾʲ)
+
+--- Transcribing: [cál ceannann] ---
+cál ceannann        (Munster; Connacht   ) -> kɑːl k'əNɑN                (CSV: ˌkɑːlˠ ˈcan̪ˠən̪ˠ)
+
+--- Transcribing: [rothar] ---
+rothar               (                    ) -> rɔhɑr                        (CSV: ˈɾˠɔhəɾˠ)
+
+--- Transcribing: [oraibh] ---
+oraibh               (Galway; stressed    ) -> ˈɔrəː                      (CSV: ˈɔɾˠiː)
+
+--- Transcribing: [rith] ---
+rith                 (Cois-Fharraige      ) -> r'ih'                          (CSV: ɾˠʊ)
+
+--- Transcribing: [farraigí] ---
+farraigí            (Connacht            ) -> fɑRaigiː                     (CSV: ˈfˠaɾˠəɟiː)
+
+--- Transcribing: [crín] ---
+crín                (                    ) -> kr'iːn                        (CSV: cɾʲiːnʲ)
+
+--- Transcribing: [fara] ---
+fara                 (                    ) -> fɑrɑ                         (CSV: ˈfˠaɾˠə)
+
+--- Transcribing: [uille] ---
+uille                (Mayo; Ulster        ) -> ˈɪL'ə                       (CSV: ˈɪl̠ʲə)
+
+--- Transcribing: [bua] ---
+bua                  (Aran                ) -> bua                            (CSV: bˠuː)
+
+--- Transcribing: [iomlán] ---
+iomlán              (Connacht            ) -> ˈɪmlɑːn                    (CSV: ˈʊmˠlˠɑːnˠ, ˈʊmˠl̪ˠɑːn̪ˠ)
+
+--- Transcribing: [brad] ---
+brad                 (                    ) -> brɑd                          (CSV: bˠɾˠad̪ˠ)
+
+--- Transcribing: [linn] ---
+linn                 (Mayo; Ulster        ) -> liN'                           (CSV: l̠ʲɪn̠ʲ)
+
+--- Transcribing: [minicí] ---
+minicí              (                    ) -> m'inik'iː                     (CSV: ˈmʲɪnɪciː)
+
+--- Transcribing: [faoina] ---
+faoina               (                    ) -> f'iːnɑ                       (CSV: ˈfˠiːnˠə)
+
+--- Transcribing: [uait] ---
+uait                 (Aran                ) -> ˈəait'                       (CSV: wætʲ)
+
+--- Transcribing: [tiocfaidh] ---
+tiocfaidh            (Galway; Mayo        ) -> t'ɪkfə                       (CSV: ˈtʲukə)
+
+--- Transcribing: [gair] ---
+gair                 (                    ) -> gair'                          (CSV: ɡaɾʲ)
+
+--- Transcribing: [buíocha] ---
+buíocha             (                    ) -> buiːəxɑ                     (CSV: ˈbˠiːxə)
+
+--- Transcribing: [bun] ---
+bun                  (Munster; Connacht   ) -> bɔn                           (CSV: bˠun̪ˠ)
+
+--- Transcribing: [ní] ---
+ní                  (                    ) -> niː                           (CSV: n̠ʲiː)
+
+--- Transcribing: [foirgneamh] ---
+foirgneamh           (Mayo                ) -> fɛr'g'neɑv                   (CSV: ˈfˠɔɾʲɪɟnʲuː)
+
+--- Transcribing: [ról] ---
+ról                 (                    ) -> roːl                          (CSV: ɾˠoːlˠ)
+
+--- Transcribing: [suíochán] ---
+suíochán           (Connacht            ) -> suiːəxɑːn                  (CSV: ˈsˠiːxɑːnˠ)
+
+--- Transcribing: [ghaiscíoch] ---
+ghaiscíoch          (Connacht            ) -> ɣaisk'iːiç                  (CSV: ˈɣaʃciːx)
+
+--- Transcribing: [géagleabhair] ---
+géagleabhair        (                    ) -> g'eːɑgləəər               (CSV: ˈɟeːɡl̠ʲəuɾʲ)
+
+--- Transcribing: [trí déag] ---
+trí déag           (                    ) -> tr'iː d'eːɑg                (CSV: tʲɾʲiː dʲeːɡ)
+
+--- Transcribing: [gréasáin] ---
+gréasáin           (Connacht            ) -> gr'eːɑsɑːin                (CSV: ˈɟɾeːsˠɑːnʲ)
+
+--- Transcribing: [bígí] ---
+bígí               (                    ) -> b'iːg'iː                     (CSV: ˈbʲi(ː)ɟiː)
+
+--- Transcribing: [fís] ---
+fís                 (                    ) -> f'iːs'                        (CSV: fʲiːʃ)
+
+--- Transcribing: [céide] ---
+céide               (                    ) -> k'eːd'ə                      (CSV: ˈceːdʲə)
+
+--- Transcribing: [leatsa] ---
+leatsa               (                    ) -> leɑtsɑ                       (CSV: ˈlʲat̪ˠsˠə)
+
+--- Transcribing: [traidisiún] ---
+traidisiún          (Connacht            ) -> traid'is'uːn                  (CSV: t̪ˠɾˠəˈdʲɪʃuːnˠ)
+
+--- Transcribing: [tuí] ---
+tuí                 (                    ) -> tuiː                          (CSV: t̪ˠiː)
+
+--- Transcribing: [chuig] ---
+chuig                (Cois-Fharraige      ) -> xɪg'                          (CSV: ɛɟ)
+
+--- Transcribing: [inghlactha] ---
+inghlactha           (                    ) -> ˈiŋh'lɑk'h'ə               (CSV: ɪnʲˈɣlˠakə)
+
+--- Transcribing: [álainn] ---
+álainn              (Mayo; Connemara     ) -> ˈɑːləN'                    (CSV: ˈɑːlˠən̠ʲ, ˈɑːl̪ˠən̠ʲ)
+
+--- Transcribing: [mearcair] ---
+mearcair             (                    ) -> m'ær'kər'                    (CSV: ˈmʲaɾˠkəɾʲ)
+
+--- Transcribing: [raeta-rómáinsis] ---
+Raeta-Rómáinsis    (                    ) -> reːtɑ-roːmɑːins'is'       (CSV: ˈɾˠeːtˠəroːˌmˠaːnʲʃɪʃ, ˌɾˠeːtˠəroːˈmˠaːnʲʃɪʃ)
+
+--- Transcribing: [brasaíl] ---
+Brasaíl             (                    ) -> brɑsiːl                      (CSV: bˠɾˠaˈsˠiːlʲ)
+
+--- Transcribing: [súsán] ---
+súsán              (Connacht            ) -> suːsɑːn                     (CSV: ˈsˠuːsˠɑːn̪ˠ)
+
+--- Transcribing: ['ur] ---
+'ur                  (Connacht            ) -> 'ɔr                           (CSV: ə)
+
+--- Transcribing: [éistim] ---
+éistim              (Munster; Connacht   ) -> ˈeːs't'im'                   (CSV: ˈeːʃtʲəmʲ)
+
+--- Transcribing: [beithir] ---
+beithir              (                    ) -> b'eh'ir'                       (CSV: ˈbʲɛhəɾʲ)
+
+--- Transcribing: [ph] ---
+ph                   (                    ) -> f                              (CSV: fʲ, fˠ)
+
+--- Transcribing: [fána] ---
+fána                (Munster; Connacht   ) -> fɑːnɑ                       (CSV: ˈfˠɑːn̪ˠə)
+
+--- Transcribing: [beiread] ---
+beiread              (                    ) -> b'er'əɑd                     (CSV: ˈbʲɛɾʲəd̪ˠ)
+
+--- Transcribing: [síobadh] ---
+síobadh             (Galway; Munster     ) -> s'iːəbə                     (CSV: ˈʃiːbˠə)
+
+--- Transcribing: [molfar] ---
+molfar               (                    ) -> mɔlfɑr                       (CSV: ˈmˠɔlˠfˠəɾˠ)
+
+--- Transcribing: [biseach] ---
+biseach              (Connacht            ) -> b'is'æːx                     (CSV: ˈbʲɪʃəx)
+
+--- Transcribing: [céad] ---
+céad                (Ulster; Connacht    ) -> k'eːɑd                       (CSV: ceːd̪ˠ)
+
+--- Transcribing: [faoi bhun] ---
+faoi bhun            (Connacht            ) -> f'iː wən                     (CSV: fˠiːˈwʊnˠ)
+
+--- Transcribing: [cóta fearthainne] ---
+cóta fearthainne    (                    ) -> koːtɑ f'ər'həN'ə          (CSV: ˈkoːt̪ˠə ˈfʲaɾˠhənʲə)
+
+--- Transcribing: [gearradh] ---
+gearradh             (Galway; Munster     ) -> g'eɑRə                       (CSV: ˈɟaɾˠə, ˈɟaɾˠəx)
+
+--- Transcribing: [uacht] ---
+uacht                (Munster; Connacht   ) -> ˈuaxt                         (CSV: uəxt̪ˠ)
+
+--- Transcribing: [grianach] ---
+grianach             (Connacht            ) -> gr'iənɑx                     (CSV: ˈɟɾʲiənˠəx, ˈɟɾʲiən̪ˠəx)
+
+--- Transcribing: [buille] ---
+buille               (Ulster; Connacht    ) -> bɪL'ə                        (CSV: ˈbˠɪl̠ʲə)
+
+--- Transcribing: [féasta] ---
+féasta              (Ulster; Connacht    ) -> f'eːɑstɑ                    (CSV: ˈfʲeːsˠt̪ˠə)
+
+--- Transcribing: [cunlach] ---
+cunlach              (                    ) -> kɔnlɑx                       (CSV: ˈkuːn̪ˠl̪ˠəx)
+
+--- Transcribing: [síoda] ---
+síoda               (                    ) -> s'iːədɑ                     (CSV: ˈʃiːd̪ˠə)
+
+--- Transcribing: [pósaid] ---
+pósaid              (                    ) -> poːsəd'                      (CSV: pˠoːsˠədʲ)
+
+--- Transcribing: [bior] ---
+bior                 (Aran                ) -> b'ɪr                          (CSV: ˈbʲɪɾˠ)
+
+--- Transcribing: [maidhm] ---
+maidhm               (                    ) -> maijm'                         (CSV: mˠəimʲ)
+
+--- Transcribing: [uirthise] ---
+uirthise             (Aran                ) -> ˈɪr'h'is'i                   (CSV: ˈɔɾˠəʃə, ˈɞɾˠəʃə)
+
+--- Transcribing: [oigheann] ---
+oigheann             (Aran                ) -> ˈɔjɑN                       (CSV: ˈəiən)
+
+--- Transcribing: [cangail] ---
+cangail              (                    ) -> kɑŋail                       (CSV: ˈkaŋɡəlʲ)
+
+--- Transcribing: [dinnéar] ---
+dinnéar             (Connacht            ) -> d'iN'eːɑr                    (CSV: ˈdʲɪn̠ʲeːɾˠ)
+
+--- Transcribing: [méar] ---
+méar                (Ulster; Connacht    ) -> m'eːɑr                       (CSV: mʲeːɾˠ)
+
+--- Transcribing: [astu] ---
+astu                 (Aran                ) -> ˈɑstɔ                       (CSV: ˈɑsˠt̪ˠəbˠ)
+
+--- Transcribing: [fána] ---
+fána                (Connacht            ) -> fɑːnɑ                       (CSV: ˈfˠɑːnˠə)
+
+--- Transcribing: [earra] ---
+earra                (                    ) -> ˈeɑRɑ                       (CSV: ˈaɾˠə, ˈfˠʌɾˠuː)
+
+--- Transcribing: [aon duine] ---
+aon duine            (                    ) -> ˈɨːn dənə                 (CSV: eːn̪ˠˈd̪ˠɪnʲə, eːˈn̪ˠɪnʲə, ˈeːn̠ʲə)
+
+--- Transcribing: [tuairisceoir] ---
+tuairisceoir         (                    ) -> tɔər'is'k'oːir'             (CSV: t̪ˠuˑəɾʲɪʃcoːɾʲ)
+
+--- Transcribing: [claigeann] ---
+claigeann            (                    ) -> klaig'əN                      (CSV: ˈklˠaɟən̪ˠ, ˈklˠæɟən̪ˠ)
+
+--- Transcribing: [cnáib] ---
+cnáib               (Connacht            ) -> krɑːib'                      (CSV: kɾˠɑːbʲ)
+
+--- Transcribing: [éillín] ---
+éillín             (Ulster; Connacht    ) -> ˈeːL'iːn                    (CSV: ˈeːl̠ʲiːnʲ)
+
+--- Transcribing: [gíotáil] ---
+gíotáil            (Connacht            ) -> g'iːətɑːil                 (CSV: ˈɟiːt̪ˠɑːlʲ)
+
+--- Transcribing: [fraincis] ---
+Fraincis             (                    ) -> fraink'is'                     (CSV: ˈfˠɾˠaɲcɪʃ)
+
+--- Transcribing: [muise] ---
+muise                (                    ) -> mɪs'i                         (CSV: ˈmˠɪʃə)
+
+--- Transcribing: [dearg] ---
+dearg                (                    ) -> d'ær'g'                       (CSV: ˈdʲaɾˠəɡ)
+
+--- Transcribing: [nuaí] ---
+nuaí                (                    ) -> nuiː                          (CSV: ˈn̪ˠuːiː)
+
+--- Transcribing: [ucht] ---
+ucht                 (                    ) -> ˈʊxt                         (CSV: )
+
+--- Transcribing: [banrach] ---
+banrach              (Connemara           ) -> bɑnrɑx                       (CSV: ˈbɑːn̪ˠt̪ˠɾəx)
+
+--- Transcribing: [gile] ---
+gile                 (                    ) -> g'ilə                         (CSV: ˈɟɪlʲə)
+
+--- Transcribing: [acmhainneach] ---
+acmhainneach         (Connacht            ) -> ˈɑkvaiN'æːx                (CSV: ˈakuːn̠ʲəx)
+
+--- Transcribing: [dusta] ---
+dusta                (                    ) -> dɔstɑ                        (CSV: ˈd̪ˠɪsˠt̪ˠə, ˈd̪ˠʊsˠt̪ˠə)
+
+--- Transcribing: [lasrach] ---
+lasrach              (Connacht            ) -> lɑsrɑx                       (CSV: ˈl̪ˠɑsˠɾˠəx)
+
+--- Transcribing: [alltracha] ---
+alltracha            (Aran                ) -> ˈɑLtrɑxɑ                   (CSV: ˈɑl̪ˠt̪ˠɾˠəxə)
+
+--- Transcribing: [droim] ---
+droim                (Mayo; Ulster        ) -> drɛm'                         (CSV: d̪ˠɾˠɪmʲ)
+
+--- Transcribing: [dín] ---
+dín                 (                    ) -> d'iːn                         (CSV: dʲiːnʲ)
+
+--- Transcribing: [páipéar] ---
+páipéar            (Connacht            ) -> pɑːip'eːɑr                 (CSV: ˈpˠɑːpʲeːɾˠ)
+
+--- Transcribing: [easpaig] ---
+easpaig              (                    ) -> ˈeɑspəg'                    (CSV: ˈasˠpˠɪɟ)
+
+--- Transcribing: [faoi deara] ---
+faoi deara           (Aran                ) -> f'iː d'ərɑ                  (CSV: fˠiːˈdʲaɾʲə)
+
+--- Transcribing: [áiteamh] ---
+áiteamh             (Galway; Munster     ) -> ˈɑːit'əɑv                 (CSV: ˈɑːtʲəvˠ)
+
+--- Transcribing: [ceachta] ---
+ceachta              (                    ) -> k'æːxtɑ                     (CSV: ˈcaxt̪ˠə)
+
+--- Transcribing: [boird] ---
+boird                (Aran                ) -> bɛr'd'                        (CSV: bˠɑuɾˠdʲ)
+
+--- Transcribing: [inseacht] ---
+inseacht             (Mayo                ) -> ˈins'æːxt                   (CSV: ˈanʲʃəxt̪ˠ)
+
+--- Transcribing: [freagair] ---
+freagair             (                    ) -> fr'eɑgər'                    (CSV: ˈfʲɾʲaɡəɾʲ)
+
+--- Transcribing: [díbeartach] ---
+díbeartach          (Aran                ) -> d'iːb'ər'tɑx                (CSV: ˈdʲiːbˠəɾəx)
+
+--- Transcribing: [taobh] ---
+taobh                (Ulster; Connacht    ) -> tɨːv                         (CSV: t̪ˠiːw)
+
+--- Transcribing: [catalóin] ---
+Catalóin            (Ulster; Connacht    ) -> kɑtɑloːn                    (CSV: ˈkatˠəl̪ˠoːnʲ)
+
+--- Transcribing: [ceallach] ---
+ceallach             (Connacht            ) -> k'eɑLɑx                      (CSV: ˈcal̪ˠəx)
+
+--- Transcribing: [léinte] ---
+léinte              (                    ) -> leːnt'ə                      (CSV: ˈl̠ʲeːn̠ʲtʲə)
+
+--- Transcribing: [tibhe] ---
+tibhe                (                    ) -> t'iv'ə                        (CSV: ˈtʲɪvʲə)
+
+--- Transcribing: [moladh] ---
+moladh               (Galway; Ulster; Mayo) -> mɔlə                         (CSV: ˈmˠɔlˠətʲ, ˈmˠɔl̪ˠətʲ)
+
+--- Transcribing: [cad] ---
+cad                  (                    ) -> kɑd                           (CSV: kad̪ˠ, kəd̪ˠ)
+
+--- Transcribing: [moladh] ---
+moladh               (Mayo                ) -> mɔlə                         (CSV: ˈmˠɔlˠuː, ˈmˠɔl̪ˠuː)
+
+--- Transcribing: [gráinne] ---
+gráinne             (Ulster; Connacht    ) -> grɑːiN'ə                    (CSV: ˈɡɾˠɑːn̠ʲə)
+
+--- Transcribing: [bonn] ---
+bonn                 (Mayo                ) -> bɔN                           (CSV: bˠʊn̪ˠ)
+
+--- Transcribing: [oighear] ---
+oighear              (                    ) -> ˈɔjər'                      (CSV: əiɾˠ)
+
+--- Transcribing: [cloig] ---
+cloig                (                    ) -> klɛg'                         (CSV: klˠɪɟ)
+
+--- Transcribing: [geataí] ---
+geataí              (                    ) -> g'eɑtiː                      (CSV: ˈɟat̪ˠiː)
+
+--- Transcribing: [cogaíocha] ---
+cogaíocha           (Cois-Fharraige      ) -> kɔgiːəxɑ                   (CSV: ˈkɔɡeːxiː, ˈkɔɡiəxiː)
+
+--- Transcribing: [fliuch] ---
+fliuch               (Aran                ) -> fliiç                         (CSV: fʲlʲɞx)
+
+--- Transcribing: [margadh] ---
+margadh              (Galway; Munster     ) -> mɑrgə                        (CSV: ˈmˠaɾˠəɡə, ˈmˠɑɾˠəɡə)
+
+--- Transcribing: [bhur] ---
+bhur                 (Connacht            ) -> wɔr                           (CSV: ə)
+
+--- Transcribing: [reabab] ---
+reabab               (                    ) -> r'eɑbɑb                      (CSV: ˈɾˠabˠəbˠ)
+
+--- Transcribing: [abhras] ---
+abhras               (                    ) -> ˈɑvrɑs                      (CSV: ˈəuɾˠəsˠ)
+
+--- Transcribing: [beann] ---
+beann                (Mayo; Ulster        ) -> b'æN                          (CSV: bʲan̪ˠ)
+
+--- Transcribing: [gearradh] ---
+gearradh             (Galway; Ulster; Mayo) -> g'eɑRə                       (CSV: ˈɟaɾˠətʲ)
+
+--- Transcribing: [ruacan] ---
+ruacan               (                    ) -> ruakɑn                        (CSV: ˈɾˠuəkənˠ)
+
+--- Transcribing: [tóin in airde] ---
+tóin in airde       (Connacht            ) -> toːn in ər'd'ə              (CSV: ˌt̪ˠuːnʲ əˈn̪ˠaiɾʲdʲə, ˌt̪ˠuːnʲ əˈn̪ˠɑːɾˠdʲə)
+
+--- Transcribing: [comhlach] ---
+comhlach             (Connacht            ) -> kɔvlɑx                       (CSV: ˈkuːlˠəx)
+
+--- Transcribing: [ballán] ---
+ballán              (Aran                ) -> bɑLɑːn                      (CSV: ˈbˠʊl̪ˠɑːn)
+
+--- Transcribing: [áinsíoch] ---
+áinsíoch           (Connacht            ) -> ˈɑːins'iːəx               (CSV: ˈaːn̠ʲʃiəx)
+
+--- Transcribing: [ciliméadar] ---
+ciliméadar          (Connacht            ) -> k'ilim'eːɑdɑr               (CSV: ˈcɪlʲəmʲed̪ˠəɾˠ, ˈcɪlʲəmʲeːd̪ˠəɾˠ)
+
+--- Transcribing: [póirse] ---
+póirse              (Munster; Connacht   ) -> poːr's'i                      (CSV: ˈpˠoːɾˠʃə)
+
+--- Transcribing: [sligeán] ---
+sligeán             (Connacht            ) -> slig'əɑːn                   (CSV: ˈʃl̠ʲiɟaːnˠ)
+
+--- Transcribing: [beach chapaill] ---
+beach chapaill       (                    ) -> b'æːx xɑpəL'               (CSV: bʲax ˈxapˠəl̠ʲ)
+
+--- Transcribing: [trua] ---
+trua                 (                    ) -> trua                           (CSV: t̪ˠɾˠuə)
+
+--- Transcribing: [cith] ---
+cith                 (Galway              ) -> k'ih'                          (CSV: ci)
+
+--- Transcribing: [goirid] ---
+goirid               (                    ) -> gɛr'id'                       (CSV: ˈɡɛɾʲədʲ, ˈɡɨ̞ɾʲədʲ)
+
+--- Transcribing: [argóint] ---
+argóint             (Ulster; Connacht    ) -> ˈɑrgoːnt'                   (CSV: ˈaɾˠəɡoːnʲtʲ)
+
+--- Transcribing: [caitliceach] ---
+Caitliceach          (Munster; Connacht   ) -> kait'lik'æːx                 (CSV: ˈkatʲlʲɪcəx)
+
+--- Transcribing: [d'fhulaing] ---
+d'fhulaing           (                    ) -> d'hɔləŋ                     (CSV: ˈd̪ˠʊlˠən̠ʲ, ˈd̪ˠʊl̪ˠən̠ʲ)
+
+--- Transcribing: [creig] ---
+creig                (                    ) -> kr'eg'                         (CSV: cɾʲɛɟ)
+
+--- Transcribing: [deireadh] ---
+deireadh             (Galway; Ulster; Mayo) -> d'er'uː                       (CSV: ˈdʲɛɾʲətʲ)
+
+--- Transcribing: [gara] ---
+gara                 (Mayo; Ulster; Connemara) -> gɑrɑ                         (CSV: ˈɡaɾˠə)
+
+--- Transcribing: [críostaí] ---
+Críostaí           (Connacht            ) -> kr'iːəstiː                  (CSV: ˈcɾʲiːsˠt̪ˠiː)
+
+--- Transcribing: [smíste] ---
+smíste              (                    ) -> sm'iːs't'ə                   (CSV: ˈsˠmʲiːʃtʲə)
+
+--- Transcribing: [aoibh] ---
+aoibh                (                    ) -> ˈiːv'                        (CSV: ˈiːvʲ)
+
+--- Transcribing: [táille] ---
+táille              (Connacht            ) -> tɑːiL'ə                     (CSV: ˈt̪ˠɑːl̠ʲə)
+
+--- Transcribing: [óga] ---
+óga                 (Munster; Connacht   ) -> ˈoːgɑ                       (CSV: ˈoːɡə)
+
+--- Transcribing: [fuin] ---
+fuin                 (                    ) -> fɪn                           (CSV: fˠɪnʲ)
+
+--- Transcribing: [sceach] ---
+sceach               (                    ) -> sk'æːx                       (CSV: ʃcax)
+
+--- Transcribing: [fraoigh] ---
+fraoigh              (Ulster; Connacht    ) -> fr'iːj                        (CSV: fˠɾˠiː)
+
+--- Transcribing: [ceirbreach] ---
+ceirbreach           (Munster; Connacht   ) -> k'er'b'r'æːx                 (CSV: ˈcɛɾʲəbʲɾʲəx)
+
+--- Transcribing: [aeir] ---
+aeir                 (                    ) -> ˈeːir'                       (CSV: eːɾʲ)
+
+--- Transcribing: [fliuchaim] ---
+fliuchaim            (Aran                ) -> fliəxəm'                     (CSV: ˈfʲlʲɞxəmʲ)
+
+--- Transcribing: [nócha] ---
+nócha               (                    ) -> noːxɑ                        (CSV: ˈn̪ˠoːxə)
+
+--- Transcribing: [gais] ---
+gais                 (                    ) -> gais'                          (CSV: ɡaʃ)
+
+--- Transcribing: [glaine] ---
+glaine               (                    ) -> glainə                        (CSV: ˈɡlˠanʲə, ˈɡl̪ˠanʲə)
+
+--- Transcribing: [pointe] ---
+pointe               (Mayo; Ulster        ) -> pɛnt'e                        (CSV: ˈpˠɪn̠ʲtʲə)
+
+--- Transcribing: [teib] ---
+teib                 (                    ) -> t'eb'                          (CSV: tʲɛbʲ)
+
+--- Transcribing: [brocach] ---
+brocach              (Connacht            ) -> brɔkɑx                       (CSV: ˈbˠɾˠokəx)
+
+--- Transcribing: [fiacha] ---
+fiacha               (                    ) -> f'iəxɑ                       (CSV: ˈfʲiəxə)
+
+--- Transcribing: [uaighe] ---
+uaighe               (Cois-Fharraige      ) -> ˈəaiji                       (CSV: uəj)
+
+--- Transcribing: [agam] ---
+agam                 (Cois-Fharraige; Connacht) -> ˈɑgɑm                       (CSV: ˈaː(ɡə)mˠ)
+
+--- Transcribing: [iarraidh] ---
+iarraidh             (Galway              ) -> ˈiəRə                       (CSV: ˈiəɾˠə)
+
+--- Transcribing: [oinniún] ---
+oinniún             (Connacht            ) -> ˈɛN'uːn                     (CSV: ˈin̠ʲuːnˠ)
+
+--- Transcribing: [cíor thuathail] ---
+cíor thuathail      (                    ) -> k'iːər həhəl               (CSV: cɪəɾˠ hʊəhɪlʲ)
+
+--- Transcribing: [brobh] ---
+brobh                (Galway; Munster     ) -> broː                          (CSV: bˠɾˠɔvˠ)
+
+--- Transcribing: [annamh] ---
+annamh               (Mayo                ) -> ˈɑNɑv                       (CSV: ˈan̪ˠuː)
+
+--- Transcribing: [scioból] ---
+scioból             (Connacht            ) -> sk'ɪboːl                     (CSV: ˈʃcɪbˠoːl̪ˠ)
+
+--- Transcribing: [-ígí] ---
+-ígí               (                    ) -> -iːg'iː                      (CSV: iːɟiː)
+
+--- Transcribing: [craice] ---
+craice               (                    ) -> kraik'ə                       (CSV: ˈkɾˠacə)
+
+--- Transcribing: [orthusan] ---
+orthusan             (Aran                ) -> ˈɔrhəsɑn                   (CSV: ˈɔɾˠəpˠsˠən, ˈɞɾˠəpˠsˠən)
+
+--- Transcribing: [baisc] ---
+baisc                (                    ) -> bais'k'                        (CSV: bˠaʃc)
+
+--- Transcribing: [casann] ---
+casann               (Aran; Munster       ) -> kɑsɑN                        (CSV: ˈkɑsən̪ˠ)
+
+--- Transcribing: [caimseog] ---
+caimseog             (                    ) -> kaim's'oːg                    (CSV: ˈkamʲʃoːɡ)
+
+--- Transcribing: [nímid] ---
+nímid               (                    ) -> niːm'id'                      (CSV: ˈn̠ʲiːmʲədʲ)
+
+--- Transcribing: [airím] ---
+airím               (Mayo; Aran; Connacht) -> ˈair'iːm'                    (CSV: ˈaɾʲiːmʲ)
+
+--- Transcribing: [ceárta] ---
+ceárta              (Connacht            ) -> k'eɑːrtɑ                    (CSV: ˈcɑːɾˠt̪ˠə)
+
+--- Transcribing: [éilím] ---
+éilím              (Connacht            ) -> ˈeːlʲiːm'                  (CSV: ˈeːlʲiːmʲ)
+
+--- Transcribing: [goradh] ---
+goradh               (Connacht            ) -> gɔrə                         (CSV: ˈɡɔɾˠə)
+
+--- Transcribing: [déas] ---
+déas                (                    ) -> d'eːɑs                       (CSV: dʲeːsˠ)
+
+--- Transcribing: [ciseán] ---
+ciseán              (Ulster; Connacht    ) -> k'is'iɑːn                    (CSV: ˈcɪʃɑːnˠ, ˈcɪʃɑːn̪ˠ)
+
+--- Transcribing: [fliuchaim] ---
+fliuchaim            (Cois-Fharraige; Aran) -> fliəxəm'                     (CSV: ˈfʲlʲɔxəmʲ)
+
+--- Transcribing: [déanfar] ---
+déanfar             (Aran                ) -> d'eːɑnfɑr                   (CSV: ˈdʲiːnfˠəɾˠ)
+
+--- Transcribing: [deireanach] ---
+deireanach           (Munster; Connacht   ) -> d'er'əɑnɑx                  (CSV: ˈdʲɛɾʲən̪ˠəx)
+
+--- Transcribing: [ach] ---
+ach                  (Aran; Munster       ) -> ˈɑx                          (CSV: ɑx)
+
+--- Transcribing: [seanmóir] ---
+seanmóir            (Mayo; Connacht      ) -> s'eɑnmoːr'                   (CSV: ˈʃanˠəmˠəɾʲ)
+
+--- Transcribing: [cathú] ---
+cathú               (Connacht            ) -> kɑhuː                        (CSV: ˈkɑhu(ː))
+
+--- Transcribing: [anamacha] ---
+anamacha             (                    ) -> ˈɑnɑmɑxɑ                  (CSV: ˈanˠəmˠəxə)
+
+--- Transcribing: [bunús] ---
+bunús               (Connacht            ) -> bɔnuːs                       (CSV: ˈbʊnˠuːsˠ)
+
+--- Transcribing: [caib] ---
+caib                 (Mayo; Ulster; Connemara) -> kaib'                          (CSV: kabʲ)
+
+--- Transcribing: [samhna] ---
+Samhna               (                    ) -> sɑvnɑ                        (CSV: ˈsˠəʊnˠə)
+
+--- Transcribing: [gadaí] ---
+gadaí               (Aran                ) -> gɑdiː                        (CSV: ˈɡɑd̪ˠiː)
+
+--- Transcribing: [déin] ---
+déin                (                    ) -> d'eːn                         (CSV: dʲeːnʲ)
+
+--- Transcribing: [lastuaidh] ---
+lastuaidh            (Ulster; Connacht    ) -> lɑstɔə                      (CSV: l̪ˠasˠˈt̪ˠuə(j))
+
+--- Transcribing: [carr] ---
+carr                 (Munster; Connacht   ) -> kɑR                           (CSV: kɑːɾˠ)
+
+--- Transcribing: [aireach] ---
+aireach              (Aran                ) -> ˈair'æːx                    (CSV: ˈæɾʲəx)
+
+--- Transcribing: [sciúlán] ---
+sciúlán            (Connacht            ) -> sk'uːlɑːn                   (CSV: ˈʃcuːlˠɑːnˠ, ˈʃcuːl̪ˠɑːn̪ˠ)
+
+--- Transcribing: [baladh] ---
+baladh               (                    ) -> bɑlə                         (CSV: ˈbˠalˠ(h)uː)
+
+--- Transcribing: [bréidín] ---
+bréidín            (Ulster; Connacht    ) -> br'eːd'iːn                   (CSV: ˈbʲɾʲeːdʲiːnʲ)
+
+--- Transcribing: [dáimh] ---
+dáimh               (Munster; Connacht   ) -> d&A_ACUTE_LONGiː              (CSV: d̪ˠɑːvʲ)
+
+--- Transcribing: [ciumhaiseanna] ---
+ciumhaiseanna        (                    ) -> k'iəwəsɑNɑ                 (CSV: ˈcuːʃən̪ˠə)
+
+--- Transcribing: [claíomhchruthach] ---
+claíomhchruthach    (Mayo; Ulster        ) -> klʲiːəvxrəhɑx             (CSV: klˠiːwxɾˠʊha)
+
+--- Transcribing: [sord] ---
+Sord                 (Connacht            ) -> sɔrd                          (CSV: sˠauɾˠd̪ˠ)
+
+--- Transcribing: [fliuchfar] ---
+fliuchfar            (Aran                ) -> fliəxfɑr                     (CSV: ˈfʲlʲɞxfˠəɾˠ)
+
+--- Transcribing: [teith] ---
+teith                (                    ) -> t'eh'                          (CSV: tʲɛ(h))
+
+--- Transcribing: [fómhair] ---
+fómhair             (Aran                ) -> foːwər                       (CSV: ˈfˠuːvˠəɾʲ)
+
+--- Transcribing: [grianmhar] ---
+grianmhar            (Connacht            ) -> gr'iənvɑr                    (CSV: ˈɟɾʲiənˠvˠəɾˠ, ˈɟɾʲiən̪ˠvˠəɾˠ)
+
+--- Transcribing: [aimsir] ---
+aimsir               (Aran                ) -> ˈaim's'ir'                    (CSV: ˈæmʲʃəɾʲ)
+
+--- Transcribing: [aithrí] ---
+aithrí              (Aran                ) -> ˈaih'r'iː                    (CSV: ˈæɾʲiː)
+
+--- Transcribing: [eo] ---
+eo                   (Munster; Connacht   ) -> ˈoː                          (CSV: oː)
+
+--- Transcribing: [dearcadh] ---
+dearcadh             (Mayo; Ulster        ) -> d'ær'kə                      (CSV: ˈdʲaɾˠkuː)
+
+--- Transcribing: [íocaíocht] ---
+íocaíocht          (                    ) -> ˈiːɔkiːəxt                (CSV: ˈiːkiəxt̪ˠ)
+
+--- Transcribing: [did] ---
+did                  (                    ) -> d'id'                          (CSV: ˈdʲɪdʲ)
+
+--- Transcribing: [bige] ---
+bige                 (                    ) -> b'ig'ə                        (CSV: ˈbʲɪɟɪ)
+
+--- Transcribing: [dónall] ---
+Dónall              (Connacht            ) -> doːnɑL                       (CSV: ˈd̪ˠuːnˠəl̪ˠ, ˈd̪ˠuːn̪ˠəl̪ˠ)
+
+--- Transcribing: [bagáiste] ---
+bagáiste            (Connacht            ) -> bɑgɑːis't'ə                (CSV: ˈbˠaɡɑːʃtʲə)
+
+--- Transcribing: [dáiríre] ---
+dáiríre            (Munster; Connacht   ) -> dɑːir'iːr'ə                (CSV: d̪ˠɑːˈɾʲiːɾʲə)
+
+--- Transcribing: [spáin] ---
+spáin               (                    ) -> spɑːin                       (CSV: spˠɑːnʲ)
+
+--- Transcribing: [leathré] ---
+leathré             (                    ) -> leɑhreː                      (CSV: ˈlʲahˌɾʲeː)
+
+--- Transcribing: [nead] ---
+nead                 (Ulster; Connacht    ) -> neɑd                          (CSV: n̠ʲad̪ˠ)
+
+--- Transcribing: [laige] ---
+laige                (                    ) -> laig'ə                        (CSV: ˈl̪ˠaɟɪ)
+
+--- Transcribing: [deich] ---
+deich                (Cois-Fharraige; Ulster; Aran) -> d'ex                           (CSV: dʲɛ)
+
+--- Transcribing: [sna] ---
+sna                  (                    ) -> snɑ                           (CSV: sˠnˠə)
+
+--- Transcribing: [eatarthu] ---
+eatarthu             (Aran                ) -> ˈeɑtɑrhə                   (CSV: ˈɑt̪ˠɾˠəbˠ, ˈɑt̪ˠɾˠəpˠ)
+
+--- Transcribing: [gabha] ---
+gabha                (Galway; Connacht    ) -> gɑuɑ                         (CSV: ɡau)
+
+--- Transcribing: [ts] ---
+ts                   (                    ) -> ts                             (CSV: tʲ, t̪ˠ)
+
+--- Transcribing: [dúinn] ---
+dúinn               (Cois-Fharraige      ) -> duːiN'                        (CSV: d̪ˠuːn̠ʲ, d̪ˠɪn̠ʲ)
+
+--- Transcribing: [aithreacha] ---
+aithreacha           (Connemara           ) -> ˈaih'r'æːxɑ                (CSV: ˈæːɾʲəxiː)
+
+--- Transcribing: [giob] ---
+giob                 (Munster; Connacht   ) -> g'ɪb                          (CSV: ɟɪbˠ)
+
+--- Transcribing: [téamh] ---
+téamh               (Mayo                ) -> t'eːɑv                       (CSV: tʲeːw)
+
+--- Transcribing: [leisce] ---
+leisce               (Ulster; Connacht    ) -> les'k'ə                       (CSV: ˈl̠ʲɛʃcɪ)
+
+--- Transcribing: [amh] ---
+amh                  (Galway; Munster     ) -> ˈɑv                          (CSV: ˈavˠ)
+
+--- Transcribing: [aifreann] ---
+Aifreann             (                    ) -> ˈaif'r'əN                    (CSV: )
+
+--- Transcribing: [inscne] ---
+inscne               (                    ) -> ˈins'k'nə                    (CSV: ˈɪn̠ʲʃ(c)nʲə)
+
+--- Transcribing: [flaitheas] ---
+flaitheas            (                    ) -> flaih'əɑs'                   (CSV: ˈfˠlˠahəsˠ, ˈfˠl̪ˠahəsˠ)
+
+--- Transcribing: [seoirse] ---
+Seoirse              (                    ) -> s'oːir's'i                    (CSV: ˈʃoːɾˠʃə)
+
+--- Transcribing: [blas] ---
+blas                 (Mayo; Ulster; Connemara) -> blɑs                          (CSV: bˠlˠasˠ, bˠl̪ˠasˠ)
+
+--- Transcribing: [drochmhúineadh] ---
+drochmhúineadh      (Aran                ) -> drɔxwuːinuː                 (CSV: d̪ˠɾˠɔxˈuːnə)
+
+--- Transcribing: [taca] ---
+taca                 (                    ) -> tɑkɑ                         (CSV: ˈt̪ˠakə, ˈt̪ˠɑkə)
+
+--- Transcribing: [súil] ---
+súil                (                    ) -> suːil                         (CSV: sˠuːlʲ)
+
+--- Transcribing: [dara] ---
+dara                 (Ulster; Connacht    ) -> dɑrɑ                         (CSV: ˈd̪ˠaɾˠə)
+
+--- Transcribing: [ciumhais] ---
+ciumhais             (                    ) -> k'iəwəs                      (CSV: cuːsˠ, cuːʃ, cũːsˠ)
+
+--- Transcribing: [m'anam] ---
+m'anam               (                    ) -> m'ænɑm                       (CSV: ˈmˠanˠəmˠ)
+
+--- Transcribing: [stail] ---
+stail                (Cois-Fharraige      ) -> stail                          (CSV: sˠt̪ˠælʲ)
+
+--- Transcribing: [bunúsach] ---
+bunúsach            (Connacht            ) -> bɔnuːsɑx                    (CSV: ˈbʊn̪ˠuːsˠəx)
+
+--- Transcribing: [cruimh] ---
+cruimh               (Mayo                ) -> kruiː                         (CSV: kɾˠivʲ)
+
+--- Transcribing: [uisinn] ---
+uisinn               (Ulster; Connacht    ) -> ˈɪs'iN'                      (CSV: ˈɪʃən̠ʲ)
+
+--- Transcribing: [grua] ---
+grua                 (Munster; Connacht   ) -> grua                           (CSV: ˈɡɾˠuə)
+
+--- Transcribing: [teir] ---
+teir                 (                    ) -> t'er'                          (CSV: tʲɛɾʲ)
+
+--- Transcribing: [éigean] ---
+éigean              (                    ) -> ˈeːg'ən                     (CSV: ˈeːɟənˠ, ˈeːɟən̪ˠ)
+
+--- Transcribing: [sinsear] ---
+sinsear              (Ulster; Connacht    ) -> s'ins'ər'                     (CSV: ˈʃɪn̠ʲʃəɾˠ)
+
+--- Transcribing: [pínn] ---
+pínn                (                    ) -> p'iːN'                        (CSV: pʲiːn̠ʲ)
+
+--- Transcribing: [chonaic] ---
+chonaic              (Cois-Fharraige; Connacht) -> xɔnək'                       (CSV: ˈxaːnʲic ~ ˈhaːnʲic ~ ˈxinʲic ~ ˈxaːɲc)
+
+--- Transcribing: [gin] ---
+gin                  (                    ) -> g'in                           (CSV: ˈɟɪnʲ)
+
+--- Transcribing: [slige] ---
+slige                (                    ) -> slig'ə                        (CSV: ˈʃl̠ʲɪɟɪ)
+
+--- Transcribing: [flaithis] ---
+flaithis             (Aran                ) -> flaih'is'                      (CSV: ˈfˠlæhəʃ)
+
+--- Transcribing: [fual] ---
+fual                 (                    ) -> fual                           (CSV: fˠuəlˠ, fˠuəl̪ˠ)
+
+--- Transcribing: [gabhaidís] ---
+gabhaidís           (                    ) -> gɑuədiːs                    (CSV: ˈɡauədʲiːʃ)
+
+--- Transcribing: [both] ---
+both                 (                    ) -> bɔh                           (CSV: bˠɔ(h))
+
+--- Transcribing: [ginideach] ---
+ginideach            (Munster; Connacht   ) -> g'inid'æːx                   (CSV: ˈɟɪnʲədʲəx)
+
+--- Transcribing: [smaoineamh] ---
+smaoineamh           (Galway              ) -> sm'iːnəɑv                   (CSV: ˈsˠmˠiːnʲə)
+
+--- Transcribing: [ceantar] ---
+ceantar              (                    ) -> k'eɑntɑr                     (CSV: ˈcan̪ˠt̪ˠəɾˠ)
+
+--- Transcribing: [ním] ---
+ním                 (Connacht            ) -> niːm'                         (CSV: n̠ʲiːmʲ)
+
+--- Transcribing: [scaitheamh] ---
+scaitheamh           (Cois-Fharraige      ) -> skaih'əɑv                    (CSV: sˠka)
+
+--- Transcribing: [toir] ---
+toir                 (                    ) -> tɛr'                          (CSV: t̪ˠɛɾʲ)
+
+--- Transcribing: [draein] ---
+draein               (                    ) -> dreːin                        (CSV: d̪ˠɾˠeːnʲ)
+
+--- Transcribing: [feoite] ---
+feoite               (Munster; Connacht   ) -> f'oːit'ə                     (CSV: ˈfʲoːtʲə)
+
+--- Transcribing: [sínigh] ---
+Sínigh              (Galway              ) -> s'iːnij                       (CSV: ˈʃiːnʲə)
+
+--- Transcribing: [mais] ---
+mais                 (                    ) -> mais'                          (CSV: mˠaʃ)
+
+--- Transcribing: [focal] ---
+focal                (Ulster; Connacht    ) -> fɔkɑl                        (CSV: ˈfˠɔkəlˠ)
+
+--- Transcribing: [oiltear] ---
+oiltear              (                    ) -> ˈɛlt'ær'                    (CSV: ˈɛlʲtʲəɾˠ, ˈɪlʲtʲəɾˠ)
+
+--- Transcribing: [castóir] ---
+castóir             (                    ) -> kɑstoːr'                     (CSV: kˠasˠ.ˈtˠoːɾʲ, ˈkˠasˠ.tˠoɾʲ)
+
+--- Transcribing: [bolg] ---
+bolg                 (                    ) -> bɔləg                        (CSV: ˈbˠɔlˠəɡ, ˈbˠɔl̪ˠəɡ)
+
+--- Transcribing: [garbh] ---
+garbh                (Mayo; Ulster        ) -> gɑrv                          (CSV: ˈɡaɾˠuː)
+
+--- Transcribing: [fearsaid] ---
+fearsaid             (Aran; Ulster        ) -> f'ær'səd'                    (CSV: ˈfʲaɾˠsˠəd̪ˠ)
+
+--- Transcribing: [maime] ---
+maime                (                    ) -> maim'ə                        (CSV: ˈmˠamʲə)
+
+--- Transcribing: [beachlann] ---
+beachlann            (                    ) -> b'æːxlɑN                    (CSV: ˈbʲaxlən̪ˠ)
+
+--- Transcribing: [cian] ---
+Cian                 (                    ) -> k'iən                         (CSV: ˈciənˠ)
+
+--- Transcribing: [peirsis] ---
+Peirsis              (                    ) -> p'er's'is'                     (CSV: ˈpʲɛɾʲʃɪʃ)
+
+--- Transcribing: [éadbhard] ---
+Éadbhard            (Ulster; Connacht    ) -> ˈeːɑdwɑrd                  (CSV: ˈeːd̪ˠwəɾˠd̪ˠ)
+
+--- Transcribing: [bú] ---
+bú                  (                    ) -> buː                           (CSV: bˠuː)
+
+--- Transcribing: [pící] ---
+pící               (Connacht            ) -> p'iːk'iː                     (CSV: ˈpʲiːciː)
+
+--- Transcribing: [ainm] ---
+ainm                 (Galway              ) -> ˈɑnm'                        (CSV: ˈænʲəmʲ, ˈæːnʲəmʲ)
+
+--- Transcribing: [aibhne] ---
+aibhne               (Aran                ) -> ˈaiv'nə                      (CSV: ˈuəvn̠ʲə, ˈəivʲnə, ˈəivʲn̠ʲə)
+
+--- Transcribing: [-úint] ---
+-úint               (Munster; Connacht   ) -> -uːint'                       (CSV: uːn̠ʲtʲ)
+
+--- Transcribing: [rúnaí] ---
+rúnaí              (Connacht            ) -> ruːniː                       (CSV: ˈɾˠuːnˠiː)
+
+--- Transcribing: [cion] ---
+cion                 (Connacht            ) -> k'ɪn                          (CSV: cɞnˠ)
+
+--- Transcribing: [araibis] ---
+Araibis              (                    ) -> ˈɑraib'is'                   (CSV: ˈaɾˠəbʲəʃ)
+
+--- Transcribing: [tráthúil] ---
+tráthúil           (Connacht            ) -> trɑːhuːil                   (CSV: ˈtˠɾˠɑː.huːlʲ)
+
+--- Transcribing: [aoileach] ---
+aoileach             (Munster; Connacht   ) -> ˈiːlæːx                    (CSV: ˈiːlʲəx)
+
+--- Transcribing: [cluais] ---
+cluais               (                    ) -> klɔis'                        (CSV: klˠuəʃ, kl̪ˠuəʃ)
+
+--- Transcribing: [coraíocht] ---
+coraíocht           (                    ) -> kɔriːəxt                    (CSV: ˈkɑɾˠiəxt̪ˠ)
+
+--- Transcribing: [casóg] ---
+casóg               (Connacht            ) -> kɑsoːg                       (CSV: ˈkasˠoːɡ)
+
+--- Transcribing: [mealladh] ---
+mealladh             (Galway; Munster     ) -> m'eɑLə                       (CSV: ˈmʲal̪ˠə)
+
+--- Transcribing: [maíte] ---
+maíte               (                    ) -> miːt'ə                       (CSV: ˈmˠiːtʲə)
+
+--- Transcribing: [dia dhaoibh] ---
+Dia dhaoibh          (Cois-Fharraige      ) -> d'iə jiːv'                   (CSV: ˌdʲiə ˈiːbʲ, ˌdʲiə ˈɣiːbʲ)
+
+--- Transcribing: [clé] ---
+clé                 (                    ) -> kleː                          (CSV: clʲeː)
+
+--- Transcribing: [conamara] ---
+Conamara             (Galway              ) -> kɔnɑmɑrɑ                   (CSV: konˠəˈmaɾˠə, ˌkun̪ˠəˈmaːɾˠə)
+
+--- Transcribing: [saoileann] ---
+saoileann            (                    ) -> s'iːlɑN                      (CSV: ˈsˠiːlʲən̪ˠ)
+
+--- Transcribing: [léitheoireacht] ---
+léitheoireacht      (Connacht            ) -> leːh'oːiræːxt              (CSV: ˈl̠ʲeːhoːɾʲəxt̪ˠ)
+
+--- Transcribing: [d'íosfadh] ---
+d'íosfadh           (Galway              ) -> d'iːəsfə                    (CSV: ˈdʲiːsətʲ, ˈdʲiːsəx)
+
+--- Transcribing: [áis] ---
+áis                 (                    ) -> ˈɑːis'                      (CSV: aːʃ, ɑːʃ)
+
+--- Transcribing: [feilm] ---
+feilm                (                    ) -> f'elm'                         (CSV: ˈfʲɛlʲəmʲ)
+
+--- Transcribing: [bró] ---
+bró                 (Munster; Connacht   ) -> broː                          (CSV: bˠɾˠoː)
+
+--- Transcribing: [faide] ---
+faide                (                    ) -> faid'ə                        (CSV: ˈfˠadʲə, ˈfˠɑdʲə)
+
+--- Transcribing: [báinín] ---
+báinín             (Connacht            ) -> bɑːiniːn                    (CSV: ˈbˠɑːnʲiːnʲ)
+
+--- Transcribing: [ceann] ---
+ceann                (Galway              ) -> k'æN                          (CSV: cɑːn̪ˠ)
+
+--- Transcribing: [bróige] ---
+bróige              (                    ) -> broːg'ə                      (CSV: ˈbˠɾˠoːɟɪ)
+
+--- Transcribing: [lucht] ---
+lucht                (Munster; Connacht   ) -> lʊxt                          (CSV: l̪ˠʊxt̪ˠ)
+
+--- Transcribing: [tháinig] ---
+tháinig             (                    ) -> hɑːinig                      (CSV: ˈhɑːnʲɪɟ)
+
+--- Transcribing: [smuga] ---
+smuga                (Munster; Connacht   ) -> smʊgɑ                        (CSV: ˈsˠmˠʊɡə)
+
+--- Transcribing: [lomadh] ---
+lomadh               (Galway              ) -> lɔmə                         (CSV: ˈl̪ˠʊmˠə, ˈl̪ˠʊmˠəvˠ, ˈl̪ˠʊmˠəx)
+
+--- Transcribing: [facais] ---
+facais               (                    ) -> fɑkais'                       (CSV: ˈfˠakəʃ)
+
+--- Transcribing: [cosán] ---
+cosán               (Aran; Connacht      ) -> kɔsɑːn                      (CSV: ˈkəsˠɑːnˠ)
+
+--- Transcribing: [ré] ---
+ré                  (                    ) -> r'eː                          (CSV: ɾˠeː)
+
+--- Transcribing: [deargfaidh] ---
+deargfaidh           (Cois-Fharraige      ) -> d'ær'g'fə                    (CSV: ˈdʲæɾˠəkə)
+
+--- Transcribing: [coradh] ---
+coradh               (Galway; Munster     ) -> kɔrə                         (CSV: ˈkɔɾˠə)
+
+--- Transcribing: [aimsir] ---
+aimsir               (Cois-Fharraige      ) -> ˈaim's'ir'                    (CSV: ˈæːmʲʃəɾʲ)
+
+--- Transcribing: [ar nós] ---
+ar nós              (Connacht            ) -> ˈɑr noːs                    (CSV: əɾˠˈn̪ˠuːsˠ)
+
+--- Transcribing: [dreo] ---
+dreo                 (Munster; Connacht   ) -> dr'oː                         (CSV: dʲɾʲoː)
+
+--- Transcribing: [ceatharlach] ---
+Ceatharlach          (Munster; Connacht   ) -> k'eɑhɑrlɑx                  (CSV: ˈcahəɾˠl̪ˠəx)
+
+--- Transcribing: [toirbh] ---
+toirbh               (                    ) -> tɛr'v'                        (CSV: ˈt̪ˠɛɾʲəvʲ)
+
+--- Transcribing: [cardáil] ---
+cardáil             (Connacht            ) -> kɑrdɑːil                    (CSV: ˈkɑːɾˠd̪ˠɑːlʲ)
+
+--- Transcribing: [luaidhe] ---
+luaidhe              (                    ) -> lɔiji                         (CSV: ˈl̪ˠuː.iː)
+
+--- Transcribing: [láth] ---
+láth                (                    ) -> l&A_ACUTE_LONG_VOChSILENT_FINAL& (CSV: l̪ˠɑː)
+
+--- Transcribing: [eadrainn] ---
+eadrainn             (Aran                ) -> ˈeɑdrəN'                    (CSV: ˈad̪ˠɾˠən̠ʲ)
+
+--- Transcribing: [cartadh] ---
+cartadh              (Galway; Ulster; Mayo) -> kɑrtə                        (CSV: ˈkaɾˠt̪ˠətʲ)
+
+--- Transcribing: [aitheanta] ---
+aitheanta            (                    ) -> ˈaih'əɑntɑ                 (CSV: ˈahən̪ˠt̪ˠə)
+
+--- Transcribing: [fáisc] ---
+fáisc               (                    ) -> fɑːis'k'                     (CSV: ˈfˠaːʃc, ˈfˠɑːʃc)
+
+--- Transcribing: [altfaidh] ---
+altfaidh             (Connacht            ) -> ˈɑltfə                      (CSV: ˈal̪ˠt̪ˠiː, ˈal̪ˠt̪ˠə)
+
+--- Transcribing: [téis] ---
+téis                (                    ) -> t'eːs'                        (CSV: tʲeːʃ)
+
+--- Transcribing: [riamh] ---
+riamh                (Ulster; Connacht    ) -> r'iəv                         (CSV: ɾˠiəw)
+
+--- Transcribing: [iomaire] ---
+iomaire              (Munster; Connacht   ) -> ˈɪmər'ə                    (CSV: ˈʊmˠəɾʲə)
+
+--- Transcribing: [rúsc] ---
+rúsc                (                    ) -> ruːsk                         (CSV: ɾˠuːsˠk)
+
+--- Transcribing: [dreoilín] ---
+dreoilín            (Connacht            ) -> dr'oːilʲiːn                 (CSV: ˈdʲɾʲoːlʲiːnʲ)
+
+--- Transcribing: [banc] ---
+banc                 (Aran                ) -> bɑnk                          (CSV: bʲæŋk)
+
+--- Transcribing: [múineadh] ---
+múineadh            (Galway; Munster     ) -> muːinuː                      (CSV: ˈmˠuːnʲə)
+
+--- Transcribing: [breis] ---
+breis                (                    ) -> br'es'                         (CSV: bʲɾʲɛʃ)
+
+--- Transcribing: [dia's muire duit] ---
+Dia's Muire duit     (                    ) -> d'iə's mər'ə dət'          (CSV: ˌdʲiəs ˈmˠɪɾʲə ˈd̪ˠɪtʲ)
+
+--- Transcribing: [cearca] ---
+cearca               (Cois-Fharraige      ) -> k'ær'kɑ                      (CSV: ˈcæːɾˠkə)
+
+--- Transcribing: [eala] ---
+eala                 (                    ) -> ˈeɑlɑ                       (CSV: ˈalˠə, ˈal̪ˠə)
+
+--- Transcribing: [scór] ---
+scór                (                    ) -> skoːr                         (CSV: sˠkoːɾˠ)
+
+--- Transcribing: [athmhachnamh] ---
+athmhachnamh         (Mayo                ) -> ˈɑhwɑxnɑv                  (CSV: ˈaˈwˠaxn̪uː)
+
+--- Transcribing: [teann] ---
+teann                (Galway              ) -> t'æN                          (CSV: tʲɑːn̪ˠ)
+
+--- Transcribing: [déanadh] ---
+déanadh             (Cois-Fharraige      ) -> d'eːɑnə                     (CSV: ˈdʲiːnˠətʲ, ˈdʲiːn̪ˠəx, ˈdʲɪnˠətʲ, ˈdʲɪn̪ˠəx)
+
+--- Transcribing: [guidid] ---
+guidid               (                    ) -> gɪd'id'                       (CSV: ˈɡɪdʲədʲ)
+
+--- Transcribing: [cupla] ---
+cupla                (                    ) -> kɔplɑ                        (CSV: ˈkʊpˠlˠə)
+
+--- Transcribing: [ruainne] ---
+ruainne              (Cois-Fharraige      ) -> rɔəN'ə                      (CSV: ˈɾˠuːn̠ʲə)
+
+--- Transcribing: [lúnasa] ---
+Lúnasa              (                    ) -> luːnɑsɑ                     (CSV: ˈl̪ˠuːn̪ˠəsˠə)
+
+--- Transcribing: [deirimid] ---
+deirimid             (                    ) -> d'er'im'id'                    (CSV: ˈdʲɛɾʲəmʲədʲ)
+
+--- Transcribing: [dósan] ---
+dósan               (Connacht            ) -> doːsɑn                       (CSV: ˈd̪ˠoːsˠənˠ)
+
+--- Transcribing: [bíodh] ---
+bíodh               (Galway; Ulster; Mayo) -> b'iːəɣ                      (CSV: bʲiːtʲ)
+
+--- Transcribing: [gluais] ---
+gluais               (                    ) -> glɔis'                        (CSV: ɡlˠuəʃ, ɡl̪ˠuəʃ)
+
+--- Transcribing: [leáigh] ---
+leáigh              (                    ) -> leɑːij                       (CSV: )
+
+--- Transcribing: [dála] ---
+dála                (Munster; Connacht   ) -> dɑːlɑ                       (CSV: ˈd̪ˠɑːlˠə)
+
+--- Transcribing: [séipéal] ---
+séipéal            (Connacht            ) -> s'eːp'eːɑl                  (CSV: ˈʃeːpʲeːl̪ˠ)
+
+--- Transcribing: [chítear] ---
+chítear             (                    ) -> çiːt'ər'                    (CSV: ˈçiːtʲəɾˠ)
+
+--- Transcribing: [sine] ---
+sine                 (Munster; Connacht   ) -> s'inə                         (CSV: ˈʃɪnʲə)
+
+--- Transcribing: [dealg] ---
+dealg                (Mayo; Ulster        ) -> d'eɑlg'                       (CSV: ˈdʲalˠəɡ)
+
+--- Transcribing: [déanfaidh] ---
+déanfaidh           (Aran                ) -> d'eːɑnfə                    (CSV: ˈdʲiːnə)
+
+--- Transcribing: [díchiall] ---
+díchiall            (Connacht            ) -> d'iːxəL                      (CSV: ˈdʲiːˌceːl̠ʲə, ˈdʲiːˌçeːl̠ʲə)
+
+--- Transcribing: [fuaire] ---
+fuaire               (                    ) -> fɔər'ə                      (CSV: ˈfˠuəɾʲə)
+
+--- Transcribing: [aibhilín] ---
+Aibhilín            (Connacht            ) -> ˈaiv'ilʲiːn                 (CSV: ˈavʲəlʲiːnʲ)
+
+--- Transcribing: [beannaigh] ---
+beannaigh            (Mayo                ) -> b'æNə                        (CSV: ˈbʲan̪ˠiː)
+
+--- Transcribing: [brath] ---
+brath                (Cois-Fharraige      ) -> brɑh                          (CSV: bˠɾˠa)
+
+--- Transcribing: [ruthag] ---
+ruthag               (                    ) -> rɔhɑg                        (CSV: ˈɾˠʊhəɡ)
+
+--- Transcribing: [díbríodh] ---
+díbríodh           (Galway              ) -> d'iːb'r'iːəɣ               (CSV: ˈdʲiːbʲɾʲiːvˠ, ˈdʲiːbʲɾʲiːx)
+
+--- Transcribing: [geairid] ---
+geairid              (                    ) -> g'eər'id'                     (CSV: ˈɟaɾʲədʲ)
+
+--- Transcribing: [foghlaim] ---
+foghlaim             (Munster; Connacht   ) -> fɔɣləm                      (CSV: ˈfˠoːlˠəmʲ, ˈfˠoːl̪ˠəmʲ)
+
+--- Transcribing: [teideal] ---
+teideal              (                    ) -> t'ed'əɑl                     (CSV: ˈtʲɛdʲəl)
+
+--- Transcribing: [dearóil] ---
+dearóil             (Connacht            ) -> d'æroːl                      (CSV: ˈdʲaɾˠoːlʲ)
+
+--- Transcribing: [obann] ---
+obann                (                    ) -> ˈɔbɑN                       (CSV: ˈɔbˠən̪ˠ, ˈɞbˠən̪ˠ)
+
+--- Transcribing: [nádúrthach] ---
+nádúrthach         (Cois-Fharraige      ) -> nɑːduːrhɑx                 (CSV: ˈn̪ˠɑd̪ˠuːɾˠəx)
+
+--- Transcribing: [úrleathair] ---
+úrleathair          (Aran                ) -> ˈuːrləɑhər                (CSV: uːɾʲˈl̠ʲeːɾʲ)
+
+--- Transcribing: [d'ólfadh] ---
+d'ólfadh            (Mayo                ) -> d'oːlfə                      (CSV: ˈd̪ˠoːlˠhuː)
+
+--- Transcribing: [puiteach] ---
+puiteach             (Connacht            ) -> pɪt'æːx                     (CSV: ˈpˠʊtʲəx)
+
+--- Transcribing: [dulta] ---
+dulta                (                    ) -> dɔltɑ                        (CSV: ˈd̪ˠʊl̪ˠt̪ˠə)
+
+--- Transcribing: [lí] ---
+lí                  (Munster; Connacht   ) -> lʲiː                         (CSV: l̠ʲiː)
+
+--- Transcribing: [mórán] ---
+mórán              (Connacht            ) -> moːrɑːn                     (CSV: ˈmˠoːɾˠɑːnˠ)
+
+--- Transcribing: [cloisim] ---
+cloisim              (Galway              ) -> klɛs'im'                      (CSV: ˈklˠiʃəmʲ)
+
+--- Transcribing: [bolscaire] ---
+bolscaire            (Munster; Connacht   ) -> bɔlskər'ə                   (CSV: ˈbˠɔl̪ˠsˠkərʲə)
+
+--- Transcribing: [síthe] ---
+síthe               (                    ) -> s'iːh'ə                      (CSV: ˈʃiːhə)
+
+--- Transcribing: [dreoigh] ---
+dreoigh              (Mayo                ) -> dr'oːij                       (CSV: dʲɾʲoːj)
+
+--- Transcribing: [oideachas] ---
+oideachas            (Munster; Connacht   ) -> ˈɛd'æːxɑs                 (CSV: ˈɛdʲəxəsˠ)
+
+--- Transcribing: [léigh] ---
+léigh               (                    ) -> leːj                          (CSV: )
+
+--- Transcribing: [seilide] ---
+seilide              (                    ) -> s'elid'ə                      (CSV: ˈʃɛlʲədʲə)
+
+--- Transcribing: [dóibhsean] ---
+dóibhsean           (Aran                ) -> doːv's'ən                    (CSV: ˈd̪ˠoːpˠsˠən)
+
+--- Transcribing: [saoradh] ---
+saoradh              (Mayo                ) -> sɨːrə                       (CSV: ˈsˠiːɾˠuː)
+
+--- Transcribing: [uaimh] ---
+Uaimh                (                    ) -> ˈ&UA_DIPHiː                  (CSV: əˈn̪ˠuəvʲ)
+
+--- Transcribing: [calma] ---
+calma                (                    ) -> kɑlmɑ                        (CSV: ˈkalˠəmˠə, ˈkal̪ˠəmˠə)
+
+--- Transcribing: [sás] ---
+sás                 (Munster; Connacht   ) -> sɑːs                         (CSV: sˠɑːsˠ)
+
+--- Transcribing: [trúig] ---
+trúig               (                    ) -> truːig'                       (CSV: ˈt̪ˠɾˠuːɟ)
+
+--- Transcribing: [páirtí an lucht oibre] ---
+Páirtí an Lucht Oibre (Galway              ) -> pɑːir't'iː ɑn ləxt ɛb'r'ə (CSV: ˈpˠɑːɾˠtʲiːnˠ ˌl̪ˠɔxt̪ˠ ˈəibʲɾʲə)
+
+--- Transcribing: [séidim] ---
+séidim              (Munster; Connacht   ) -> s'eːd'im'                     (CSV: ˈʃeːdʲəmʲ)
+
+--- Transcribing: [glactha] ---
+glactha              (Aran                ) -> glɑkhɑ                       (CSV: ˈɡlˠɑkə)
+
+--- Transcribing: [cogal] ---
+cogal                (Connacht            ) -> kɔgɑl                        (CSV: ˈkɔɡəlˠ)
+
+--- Transcribing: [foscadh] ---
+foscadh              (Aran                ) -> fɔskə                        (CSV: ˈfˠɑsˠkə)
+
+--- Transcribing: [agam] ---
+agam                 (Connacht            ) -> ˈɑgɑm                       (CSV: amˠ, ˈa(ɡə)mˠ, ˈaɡəmˠ, ˈoɡəmˠ)
+
+--- Transcribing: [suite] ---
+suite                (                    ) -> sɪt'ə                        (CSV: ˈsˠɪtʲə)
+
+--- Transcribing: [mol] ---
+mol                  (Munster; Connacht   ) -> mɔl                           (CSV: mˠɔl̪ˠ)
+
+--- Transcribing: [peann] ---
+peann                (Galway              ) -> p'æN                          (CSV: pʲɑːn̪ˠ)
+
+--- Transcribing: [airnéis] ---
+airnéis             (                    ) -> ˈair'neːs'                   (CSV: ˈaːɾˠn̠ʲeʃ, ˈaːɾˠn̠ʲæʃ, ˈaːɾˠn̠ʲɛʃ, ˈʌɾˠn̠ʲæʃ)
+
+--- Transcribing: [greannach] ---
+greannach            (Connacht            ) -> gr'æNɑx                      (CSV: ˈɟrʲan̪ˠəx)
+
+--- Transcribing: [sál] ---
+sál                 (Connacht            ) -> sɑːl                         (CSV: sˠɑːlˠ)
+
+--- Transcribing: [ceannach] ---
+ceannach             (Connacht            ) -> k'æNɑx                       (CSV: ˈcan̪ˠəx)
+
+--- Transcribing: [reiligiún] ---
+reiligiún           (Connacht            ) -> r'elig'uːn                    (CSV: ˈɾˠɛlʲɪɟuːnˠ)
+
+--- Transcribing: [loch] ---
+loch                 (Munster; Connacht   ) -> lɔx                           (CSV: l̪ˠɔx)
+
+--- Transcribing: [briathar] ---
+briathar             (Aran; Connemara     ) -> br'iəhɑr                     (CSV: ˈbʲɾʲiəɾˠ)
+
+--- Transcribing: [cleasach] ---
+cleasach             (Munster; Connacht   ) -> kleɑsɑx                      (CSV: ˈclʲasˠəx)
+
+--- Transcribing: [pinc] ---
+pinc                 (                    ) -> p'ink'                         (CSV: pʲɪɲc)
+
+--- Transcribing: [smacht] ---
+smacht               (Mayo; Ulster; Connemara) -> smɑxt                         (CSV: sˠmˠaxt̪ˠ)
+
+--- Transcribing: [laidin] ---
+Laidin               (Cois-Fharraige; Mayo) -> laid'in                        (CSV: ˈl̪ˠadʲənʲ)
+
+--- Transcribing: [trácht] ---
+trácht              (Munster; Connacht   ) -> trɑːxt                       (CSV: t̪ˠɾˠɑːxt̪ˠ)
+
+--- Transcribing: [freastal] ---
+freastal             (                    ) -> fr'eɑstɑl                    (CSV: ˈfʲɾʲasˠt̪ˠəlˠ, ˈfʲɾʲasˠt̪ˠəl̪ˠ)
+
+--- Transcribing: [dhóibh] ---
+dhóibh              (Galway              ) -> ɣoːv'                        (CSV: (ɣ)oːbʲ, oːbˠ, ɣoːbˠ)
+
+--- Transcribing: [fút] ---
+fút                 (                    ) -> fuːt                          (CSV: fˠuːt̪ˠ)
+
+--- Transcribing: [brian] ---
+Brian                (                    ) -> br'iən                        (CSV: bʲɾʲiən̪ˠ)
+
+--- Transcribing: [mín] ---
+mín                 (                    ) -> m'iːn                         (CSV: mʲiːnʲ)
+
+--- Transcribing: [tímid] ---
+tímid               (                    ) -> t'iːm'id'                     (CSV: ˈtʲiːmʲədʲ)
+
+--- Transcribing: [péinis] ---
+péinis              (                    ) -> p'eːnis'                      (CSV: ˈpʲeːnʲəʃ)
+
+--- Transcribing: [codladh] ---
+codladh              (Galway; Munster     ) -> kɔdlə                        (CSV: ˈkol̪ˠə)
+
+--- Transcribing: [suarach] ---
+suarach              (                    ) -> suarɑx                        (CSV: ˈsˠuˑəɾˠəx)
+
+--- Transcribing: [amhrán] ---
+amhrán              (Connacht            ) -> ˈəurrɑːn                   (CSV: ˈoːɾˠɑːnˠ, ˈoːɾˠɑːn̪ˠ)
+
+--- Transcribing: [bacán] ---
+bacán               (Connacht            ) -> bɑkɑːn                      (CSV: ˈbˠukɑːnˠ, ˈbˠukɑːn̪ˠ)
+
+--- Transcribing: [gaibhte] ---
+gaibhte              (Aran                ) -> gaiv't'ə                      (CSV: ˈɡɔtʲə)
+
+--- Transcribing: [caitheamh] ---
+caitheamh            (Galway; Cois-Fharraige) -> kaih'əɑv                     (CSV: kaː)
+
+--- Transcribing: [peaca] ---
+peaca                (Aran; Munster       ) -> p'eɑkɑ                       (CSV: ˈpʲakə)
+
+--- Transcribing: [rialtas] ---
+rialtas              (                    ) -> r'iəltɑs                     (CSV: ˈɾˠiəl̪ˠt̪ˠəsˠ)
+
+--- Transcribing: [géagláidre] ---
+géagláidre         (                    ) -> g'eːɑglɑːid'r'ə           (CSV: ˈɟeːɡˌlˠɑːdʲɾʲə)
+
+--- Transcribing: [bogadh] ---
+bogadh               (Galway; Mayo        ) -> bɔgə                         (CSV: ˈbˠɔɡətʲ)
+
+--- Transcribing: [beannchar] ---
+Beannchar            (                    ) -> b'æNxɑr                      (CSV: ˈbʲan̪ˠəxəɾˠ)
+
+--- Transcribing: [abhainn] ---
+abhainn              (Connacht            ) -> ˈəaiN'                       (CSV: əun̠ʲ)
+
+--- Transcribing: [buachalla] ---
+buachalla            (                    ) -> buaxɑLɑ                      (CSV: ˈbˠuəxəl̪ˠə)
+
+--- Transcribing: [tart] ---
+tart                 (Aran; Munster       ) -> tɑrt                          (CSV: t̪ˠɑɾˠt̪ˠ)
+
+--- Transcribing: [colmán] ---
+Colmán              (Connacht            ) -> kɔlmɑːn                     (CSV: ˈkɔlˠəmˠɑːnˠ, ˈkɔl̪ˠəmˠɑːn̪ˠ)
+
+--- Transcribing: [caoin] ---
+caoin                (                    ) -> k'iːn                         (CSV: kiːnʲ)
+
+--- Transcribing: [splanc] ---
+splanc               (Cois-Fharraige; Ulster; Connacht) -> splɑnk                        (CSV: sˠpˠl̪ˠaːŋk)
+
+--- Transcribing: [buailim] ---
+buailim              (Munster; Connacht   ) -> bɔəlim'                      (CSV: ˈbˠuəlʲəmʲ)
+
+--- Transcribing: [cónra] ---
+cónra               (Mayo; Ulster        ) -> koːnrɑ                       (CSV: ˈkoːnˠɾˠə)
+
+--- Transcribing: [a chara] ---
+a chara              (                    ) -> ˈɑ xɑrɑ                    (CSV: ə ˈxaɾˠə)
+
+--- Transcribing: [geimhreadh] ---
+geimhreadh           (Connacht            ) -> g'ev'r'uː                     (CSV: ˈɟĩvʲɾʲuː, ˈɟɛvʲɾʲu)
+
+--- Transcribing: [gan] ---
+gan                  (Aran; also          ) -> gɑn                           (CSV: ɡɑn, ɡɔn)
+
+--- Transcribing: [cuireadh] ---
+cuireadh             (Galway              ) -> kɪr'uː                       (CSV: ˈkɪɾʲəvˠ)
+
+--- Transcribing: [dubhghus] ---
+Dubhghus             (                    ) -> dɔvɣəs                      (CSV: ˈd̪ˠuːɣusˠ)
+
+--- Transcribing: [bp] ---
+bP                   (                    ) -> b                              (CSV: bʲ, bˠ)
+
+--- Transcribing: [foghar] ---
+foghar               (Munster; Connacht   ) -> fɔɣɑr                       (CSV: fˠauɾˠ)
+
+--- Transcribing: [ba] ---
+ba                   (                    ) -> bɑ                            (CSV: bˠə, bˠəj)
+
+--- Transcribing: [plúr] ---
+plúr                (                    ) -> pluːr                         (CSV: pˠlˠuːɾˠ, pˠl̪ˠuːɾˠ)
+
+--- Transcribing: [sliogán] ---
+sliogán             (Connacht            ) -> slɪgɑːn                     (CSV: ˈʃl̠ʲiɟaːnˠ)
+
+--- Transcribing: [cuimhniú] ---
+cuimhniú            (Cois-Fharraige      ) -> kɪv'nuː                      (CSV: ˈkiːnʲuː)
+
+--- Transcribing: [saighead] ---
+saighead             (                    ) -> saijiɑd'                      (CSV: sˠəid̪ˠ)
+
+--- Transcribing: [-ímis] ---
+-ímis               (                    ) -> -iːm'is'                      (CSV: iːmʲəʃ)
+
+--- Transcribing: [d'athraigh] ---
+d'athraigh           (Cois-Fharraige      ) -> d'æhrə                       (CSV: ˈd̪ˠaːɾˠə)
+
+--- Transcribing: [grán buí] ---
+grán buí           (Munster; Connacht   ) -> grɑːn bəː                  (CSV: ˈɡɾˠɑːnˠ bˠiː)
+
+--- Transcribing: [alpán] ---
+alpán               (Connacht            ) -> ˈɑlpɑːn                    (CSV: ˈalˠpˠɑːnˠ, ˈal̪ˠpˠɑːn̪ˠ)
+
+--- Transcribing: [geala] ---
+geala                (                    ) -> g'eɑlɑ                       (CSV: ˈɟalˠə)
+
+--- Transcribing: [biail] ---
+biail                (Aran                ) -> b'iəil                        (CSV: bʲeːl, bʲiəl)
+
+--- Transcribing: [tigeann] ---
+tigeann              (                    ) -> t'ig'əN                       (CSV: ˈtʲɪɟən̪ˠ)
+
+--- Transcribing: [feirg] ---
+feirg                (                    ) -> f'er'g'                        (CSV: ˈfʲɛɾʲɪɟ)
+
+--- Transcribing: [leafaos] ---
+leafaos              (Connacht            ) -> leɑfɨːs                     (CSV: ˈl̠ʲaˌfˠiːsˠ)
+
+--- Transcribing: [ballaí] ---
+ballaí              (                    ) -> bɑLiː                        (CSV: ˈbˠal̪ˠiː)
+
+--- Transcribing: [tirim] ---
+tirim                (Waterford; Ulster; Munster; Connacht) -> t'ir'im'                       (CSV: ˈtʲeɾʲəmʲ)
+
+--- Transcribing: [aitheantas] ---
+aitheantas           (                    ) -> ˈaih'əɑntɑs'               (CSV: ˈahən̪ˠt̪ˠəsˠ)
+
+--- Transcribing: [dollar] ---
+dollar               (                    ) -> dɔLɑr                        (CSV: ˈd̪ˠɔl̪ˠəɾˠ)
+
+--- Transcribing: [corcaigh] ---
+Corcaigh             (Connacht            ) -> kɔrkə                        (CSV: ˈkɔɾˠkiː, ˈkɔɾˠkə)
+
+--- Transcribing: [puint] ---
+puint                (                    ) -> pɪnt'                         (CSV: pˠɪnʲtʲ)
+
+--- Transcribing: [oileadh] ---
+oileadh              (                    ) -> ˈɔluː                       (CSV: ˈɛlʲətʲ, ˈɪlʲətʲ)
+
+--- Transcribing: [plé] ---
+plé                 (                    ) -> pleː                          (CSV: pʲlʲeː)
+
+--- Transcribing: [tarrtháil] ---
+tarrtháil           (Connacht            ) -> tɑRhɑːil                    (CSV: ˈt̪ˠɑːɾˠhɑːlʲ)
+
+--- Transcribing: [ceird] ---
+ceird                (Aran; Connacht      ) -> k'er'd'                        (CSV: kaiɾʲdʲ)
+
+--- Transcribing: [taitneachtáil] ---
+taitneachtáil       (Cois-Fharraige      ) -> tait'næːxtɑːil             (CSV: ˈt̪ˠæn̠ʲəxt̪ˠɑːlʲ)
+
+--- Transcribing: [cuimhne] ---
+cuimhne              (Cois-Fharraige; Munster) -> kɪv'nə                       (CSV: ˈkiːnʲə)
+
+--- Transcribing: [dromán] ---
+dromán              (Connacht            ) -> drɔmɑːn                     (CSV: ˈd̪ˠɾʊmˠɑːnˠ, ˈd̪ˠɾʊmˠɑːn̪ˠ)
+
+--- Transcribing: [aiféala] ---
+aiféala             (                    ) -> ˈaif'eːɑlɑ                 (CSV: ˈafʲeːlˠə)
+
+--- Transcribing: [faighinn] ---
+faighinn             (Aran                ) -> faijiN'                        (CSV: ˈfˠaiən̠ʲ)
+
+--- Transcribing: [hathruithe] ---
+hathruithe           (                    ) -> hɑhrɪhə                     (CSV: ˈhahɾˠɪhə)
+
+--- Transcribing: [bh] ---
+bh                   (                    ) -> v                              (CSV: vʲ, w)
+
+--- Transcribing: [maidineacha] ---
+maidineacha          (                    ) -> maid'inæːxɑ                 (CSV: ˈmˠadʲənʲəxə)
+
+--- Transcribing: [meánach] ---
+meánach             (Connacht            ) -> m'eɑːnɑx                    (CSV: ˈmʲɑːnˠəx)
+
+--- Transcribing: [geata] ---
+geata                (                    ) -> g'eɑtɑ                       (CSV: ˈɟat̪ˠə)
+
+--- Transcribing: [toil] ---
+toil                 (Cois-Fharraige      ) -> tɔl                           (CSV: t̪ˠɪlʲ)
+
+--- Transcribing: [seasca] ---
+seasca               (                    ) -> s'eɑskɑ                      (CSV: ˈʃasˠkə)
+
+--- Transcribing: [cladhaire] ---
+cladhaire            (Connacht            ) -> klɑɣairə                    (CSV: ˈklˠaiɾʲə)
+
+--- Transcribing: [ghuí] ---
+ghuí                (                    ) -> ɣuiː                         (CSV: ɣiː)
+
+--- Transcribing: [ólfaidh] ---
+ólfaidh             (                    ) -> ˈoːlfə                      (CSV: ˈɔːlˠhi, ˈɔːlˠhə, ˈɔːl̪ˠhi, ˈɔːl̪ˠhə)
+
+--- Transcribing: [daltach] ---
+daltach              (Connacht            ) -> dɑltɑx                       (CSV: ˈd̪ˠal̪ˠt̪ˠəx)
+
+--- Transcribing: [leithe] ---
+leithe               (                    ) -> leh'ə                         (CSV: ˈl̠ʲɛhə)
+
+--- Transcribing: [mairg] ---
+mairg                (Connacht            ) -> mair'g'                        (CSV: ˈmˠaɾʲɪɟ)
+
+--- Transcribing: [díograis] ---
+díograis            (                    ) -> d'iːəgris'                   (CSV: ˈdʲiːɡɾˠəʃ)
+
+--- Transcribing: [gealladh] ---
+gealladh             (Galway              ) -> g'eɑLə                       (CSV: ˈɟal̪ˠəvˠ)
+
+--- Transcribing: [liom] ---
+liom                 (unstressed; Connacht) -> lɪm                           (CSV: lʲəmˠ)
+
+--- Transcribing: [focail] ---
+focail               (Munster; Connacht   ) -> fɔkəl                        (CSV: ˈfˠɔkəlʲ)
+
+--- Transcribing: [greas] ---
+greas                (                    ) -> gr'eɑs                        (CSV: ɟɾʲasˠ)
+
+--- Transcribing: [seacht déag] ---
+seacht déag         (                    ) -> s'æːxt d'eːɑg              (CSV: ʃaxt̪ˠ dʲeːɡ)
+
+--- Transcribing: [bisigh] ---
+bisigh               (Galway              ) -> b'is'ij                        (CSV: ˈbʲɪʃə)
+
+--- Transcribing: [luch] ---
+luch                 (                    ) -> lʊx                           (CSV: )
+
+--- Transcribing: [gigil] ---
+gigil                (                    ) -> g'ig'il                        (CSV: ˈɟɪɟɪlʲ)
+
+--- Transcribing: [intleacht] ---
+intleacht            (Cois-Fharraige; Munster) -> ˈint'læːxt                  (CSV: ˈiːnʲtʲlʲəxt̪ˠ)
+
+--- Transcribing: [cláracha] ---
+cláracha            (Cois-Fharraige      ) -> klɑːrɑxɑ                   (CSV: ˈkl̪ˠɑɾˠəxiː)
+
+--- Transcribing: [tae] ---
+tae                  (                    ) -> teː                           (CSV: t̪ˠeː)
+
+--- Transcribing: [domhnach] ---
+Domhnach             (                    ) -> dɔvnɑx                       (CSV: ˈd̪ˠoːn̪ˠəx, ˈd̪ˠəun̪ˠəx)
+
+--- Transcribing: [culaith] ---
+culaith              (Connacht            ) -> kɔləh'                       (CSV: ˈkulˠ(h)ə)
+
+--- Transcribing: [spág] ---
+spág                (                    ) -> spɑːg                        (CSV: sˠpˠɑːɡ)
+
+--- Transcribing: [luachair] ---
+luachair             (                    ) -> luaxər'                       (CSV: l̪ˠuəxəɾʲ)
+
+--- Transcribing: [dúradh] ---
+dúradh              (Galway; Aran        ) -> duːrə                        (CSV: ˈd̪ˠuːɾˠəvˠ)
+
+--- Transcribing: [fírinneach] ---
+fírinneach          (Connacht            ) -> f'iːr'iN'æːx                (CSV: ˈfʲiːɾʲən̠ʲəx)
+
+--- Transcribing: [fair] ---
+fair                 (                    ) -> fair'                          (CSV: fˠaɾʲ)
+
+--- Transcribing: [mosar] ---
+mosar                (                    ) -> mɔsɑr                        (CSV: ˈmɔsˠəɾˠ)
+
+--- Transcribing: [boscaí] ---
+boscaí              (Connacht            ) -> bɔskiː                       (CSV: ˈbˠɔsˠkiː)
+
+--- Transcribing: [siab] ---
+siab                 (                    ) -> s'iəb                         (CSV: ʃiəbˠ)
+
+--- Transcribing: [baois] ---
+baois                (                    ) -> b'iːs'                        (CSV: bˠiːʃ)
+
+--- Transcribing: [ceart] ---
+ceart                (                    ) -> k'ær't                        (CSV: caɾˠt̪ˠ, cæːɾˠt̪ˠ)
+
+--- Transcribing: [rámhaíocht] ---
+rámhaíocht         (Ulster; Connacht    ) -> rɑːwiːəxt                  (CSV: ˈɾˠɑːwiəxt̪ˠ)
+
+--- Transcribing: [saic] ---
+saic                 (Cois-Fharraige      ) -> saik'                          (CSV: sˠec)
+
+--- Transcribing: [luachmhar] ---
+luachmhar            (Ulster; Connacht    ) -> luaxwɑr                       (CSV: ˈl̪ˠuəxwəɾˠ)
+
+--- Transcribing: [ng] ---
+ng                   (                    ) -> ŋ                             (CSV: ŋ, ŋɡ, ɲ, ɲɟ)
+
+--- Transcribing: [cófra] ---
+cófra               (Munster; Connacht   ) -> koːfrɑ                       (CSV: ˈkoːfˠɾˠə)
+
+--- Transcribing: [tobann] ---
+tobann               (Munster; Connacht   ) -> tɔbɑN                        (CSV: ˈt̪ˠɔbˠən̪ˠ)
+
+--- Transcribing: [tochais] ---
+tochais              (                    ) -> tɔxis'                        (CSV: ˈt̪ˠɔxəʃ)
+
+--- Transcribing: [thrí] ---
+thrí                (                    ) -> hriː                          (CSV: hɾʲiː)
+
+--- Transcribing: [tóraíocht] ---
+tóraíocht          (Connacht            ) -> toːriːəxt                   (CSV: ˈt̪ˠoːɾˠiːəxt̪ˠ)
+
+--- Transcribing: [tonn] ---
+tonn                 (Cois-Fharraige; Connemara) -> tɔN                           (CSV: t̪ˠuːn̪ˠ)
+
+--- Transcribing: [ann] ---
+ann                  (Mayo; Ulster        ) -> ˈɑN                          (CSV: an̪ˠ)
+
+--- Transcribing: [feairín] ---
+feairín             (Aran                ) -> f'eər'iːn                    (CSV: ˈfʲaɾˠiːnʲ)
+
+--- Transcribing: [cearc] ---
+cearc                (Cois-Fharraige      ) -> k'ær'k                        (CSV: cæːɾˠk)
+
+--- Transcribing: [righin] ---
+righin               (Connacht            ) -> r'ijin                         (CSV: ɾˠainʲ, ɾˠəinʲ)
+
+--- Transcribing: [raon] ---
+raon                 (Ulster; Connacht    ) -> rɨːn                         (CSV: ˈɾˠiːnˠ)
+
+--- Transcribing: [thríthi] ---
+thríthi             (Cois-Fharraige      ) -> hriːhi                        (CSV: hɾʲiː)
+
+--- Transcribing: [díchéillí] ---
+díchéillí         (                    ) -> d'iːçeːL'iː                (CSV: ˈdʲiːˌçeːlʲiː, ˈdʲiːˌçeːl̠ʲiː)
+
+--- Transcribing: [íosfadh] ---
+íosfadh             (Galway; Ulster      ) -> ˈiːɔsfə                    (CSV: ˈiːsˠətʲ)
+
+--- Transcribing: [cláirseacha] ---
+cláirseacha         (Munster; Connacht   ) -> klɑːir's'æːxɑ             (CSV: ˈklˠɑːɾˠʃəxə)
+
+--- Transcribing: [galar] ---
+galar                (Aran                ) -> gɑlɑr                        (CSV: ˈɡɑl̪ˠd̪ˠɾˠə)
+
+--- Transcribing: [inneach] ---
+inneach              (Connacht            ) -> ˈiN'æːx                     (CSV: ˈɪn̠ʲax)
+
+--- Transcribing: [bleidhmhíol] ---
+bleidhmhíol         (                    ) -> blejv'iːəl                   (CSV: ˈbʲlʲɛjvʲiːl̪ˠ)
+
+--- Transcribing: [pógfaidh] ---
+pógfaidh            (                    ) -> poːgfə                       (CSV: )
+
+--- Transcribing: [gearraim] ---
+gearraim             (Connacht            ) -> g'eɑRəm'                     (CSV: ˈɟaːɾˠəmʲ)
+
+--- Transcribing: [ith] ---
+ith                  (                    ) -> ˈih'                          (CSV: i(h))
+
+--- Transcribing: [páirtí] ---
+páirtí             (Connacht            ) -> pɑːir't'iː                  (CSV: ˈpˠɑːɾˠtʲiː)
+
+--- Transcribing: [-ófá] ---
+-ófá               (                    ) -> -oːfɑː                      (CSV: oːfˠaː, oːhaː)
+
+--- Transcribing: [beiridís] ---
+beiridís            (                    ) -> b'er'id'iːs'                  (CSV: ˈbʲɛɾʲədʲiːʃ)
+
+--- Transcribing: [dolaí] ---
+dolaí               (                    ) -> dɔlʲiː                      (CSV: ˈd̪ˠɔlˠiː)
+
+--- Transcribing: [pógfaidh] ---
+pógfaidh            (Munster; Connacht   ) -> poːgfə                       (CSV: ˈpˠoːkə)
+
+--- Transcribing: [cearca] ---
+cearca               (                    ) -> k'ær'kɑ                      (CSV: ˈcaɾˠkə)
+
+--- Transcribing: [seanmóirí] ---
+seanmóirí          (Connacht            ) -> s'eɑnmoːr'iː                (CSV: ˈʃanˠəmoːɾʲiː, ˈʃan̪ˠəmoːɾʲiː)
+
+--- Transcribing: [aifreann] ---
+Aifreann             (Aran; rare          ) -> ˈaif'r'əN                    (CSV: ˈɪfʲɾʲən̪ˠ)
+
+--- Transcribing: [las] ---
+las                  (                    ) -> lɑs                           (CSV: l̪ˠasˠ)
+
+--- Transcribing: [mainistreach] ---
+mainistreach         (                    ) -> mainis't'r'æːx               (CSV: ˈmˠanʲəʃtʲɾʲəx)
+
+--- Transcribing: [colm] ---
+colm                 (Connacht            ) -> kɔlm                          (CSV: ˈkolˠəmˠ)
+
+--- Transcribing: [caolas] ---
+caolas               (Ulster; Connacht    ) -> kɨːlɑs                      (CSV: ˈkiːlˠəsˠ, kʰɰiːlˠəsˠ)
+
+--- Transcribing: [iaim] ---
+iaim                 (                    ) -> ˈəim'                        (CSV: iəmʲ)
+
+--- Transcribing: [taitnigh] ---
+taitnigh             (Cois-Fharraige      ) -> tait'nij                       (CSV: ˈt̪ˠan̠ʲə, ˈt̪ˠæːn̠ʲə)
+
+--- Transcribing: [ga] ---
+ga                   (                    ) -> gɑ                            (CSV: ɡa)
+
+--- Transcribing: [bia] ---
+bia                  (                    ) -> b'iə                          (CSV: bʲiə)
+
+--- Transcribing: [d'ullmhaigh] ---
+d'ullmhaigh          (Galway              ) -> d'ɔLvə                       (CSV: ˈd̪ˠʊl̪ˠwə)
+
+--- Transcribing: [barriall] ---
+barriall             (Connacht            ) -> bɑR'iəL                      (CSV: ˈbˠɑːɾˠiəl̪ˠ)
+
+--- Transcribing: [caoirigh] ---
+caoirigh             (Mayo                ) -> k'iːr'ij                      (CSV: ˈkiːɾʲiː)
+
+--- Transcribing: [folamh] ---
+folamh               (Cois-Fharraige      ) -> fɔlɑv                        (CSV: ˈfˠaːl̪ˠə)
+
+--- Transcribing: [smigín] ---
+smigín              (Ulster; Connacht    ) -> sm'ig'iːn                     (CSV: ˈsˠmʲɪɟiːnʲ)
+
+--- Transcribing: [dúradar] ---
+dúradar             (                    ) -> duːrɑdɑr                    (CSV: ˈd̪ˠuːɾˠəd̪ˠəɾˠ)
+
+--- Transcribing: [ardaingeal] ---
+ardaingeal           (Aran                ) -> ˈɑrdaiŋəɑl                (CSV: ˌɑːɾˠdˠˈæɲɟəl)
+
+--- Transcribing: [agat] ---
+agat                 (Mayo; Connacht      ) -> ˈɑgɑt                       (CSV: ˈuɡəd̪ˠ)
+
+--- Transcribing: [d'aithníodh] ---
+d'aithníodh         (Mayo                ) -> d'aih'niːəɣ                 (CSV: ˈdˠa(h)nʲiːfˠ)
+
+--- Transcribing: [féil] ---
+féil                (                    ) -> f'eːl                         (CSV: fʲeːlʲ)
+
+--- Transcribing: [fógair] ---
+fógair              (Munster; Connacht   ) -> foːgər'                      (CSV: ˈfˠoːɡəɾʲ)
+
+--- Transcribing: [foireann] ---
+foireann             (                    ) -> fɛr'æN                       (CSV: ˈfˠɪɾʲən̪ˠ)
+
+--- Transcribing: [dom] ---
+dom                  (                    ) -> dɔm                           (CSV: d̪ˠɔmˠ)
+
+--- Transcribing: [uaigh] ---
+uaigh                (Waterford; Munster; Galway; Connacht) -> ˈəə                         (CSV: uə)
+
+--- Transcribing: [tosaigh] ---
+tosaigh              (Mayo                ) -> tɔsə                         (CSV: ˈt̪ˠɔsˠiː)
+
+--- Transcribing: [canúint] ---
+canúint             (Connacht            ) -> kɑnuːint'                    (CSV: ˈkanˠuːn̠ʲtʲ, ˈkɑnwənʲtʲ, ˈkɑnˠuːn̠ʲtʲ)
+
+--- Transcribing: [saill] ---
+saill                (Aran                ) -> saiL'                          (CSV: sˠail̠ʲ)
+
+--- Transcribing: [grinne] ---
+grinne               (Ulster; Kerry; Cork; Connacht) -> gr'iN'ə                       (CSV: ˈɟɾʲɪn̠ʲə)
+
+--- Transcribing: [chun] ---
+chun                 (                    ) -> xɔn                           (CSV: xʊnˠ)
+
+--- Transcribing: [ciarraí] ---
+Ciarraí             (                    ) -> k'iəRiː                      (CSV: ˈciəɾˠiː)
+
+--- Transcribing: [tríd] ---
+tríd                (                    ) -> tr'iːd'                       (CSV: tʲɾʲiːdʲ)
+
+--- Transcribing: [aiféalach] ---
+aiféalach           (Aran                ) -> ˈaif'eːɑlɑx                (CSV: ˈafʲeːləx)
+
+--- Transcribing: [dochtúirí] ---
+dochtúirí          (Connacht            ) -> dɔxtuːir'iː                 (CSV: ˈd̪ˠɔxt̪ˠuːɾʲiː)
+
+--- Transcribing: [-fidís] ---
+-fidís              (                    ) -> -f'id'iːs'                    (CSV: hədʲiːʃ)
+
+--- Transcribing: [daonchairdiúil] ---
+daonchairdiúil      (Connacht            ) -> dɨːnxər'd'uːil             (CSV: ˈd̪iːn̪xɑːɾˠdʲuːlʲ)
+
+--- Transcribing: [ais] ---
+ais                  (                    ) -> ˈais'                         (CSV: aʃ)
+
+--- Transcribing: [gruth] ---
+gruth                (Connacht            ) -> grɔh                          (CSV: ɡɾˠɞ)
+
+--- Transcribing: [capaill] ---
+capaill              (                    ) -> kɑpaiL'                       (CSV: ˈkapˠəl̪ʲ)
+
+--- Transcribing: [grianghraf] ---
+grianghraf           (                    ) -> gr'iəŋhrɑf                  (CSV: ˈɟɾʲiənˠˌɣɾˠafˠ)
+
+--- Transcribing: [gobadh] ---
+gobadh               (Mayo                ) -> gɔbə                         (CSV: ˈɡɔbˠuː)
+
+--- Transcribing: [liath] ---
+liath                (                    ) -> liəh                          (CSV: )
+
+--- Transcribing: [féinfhostaithe] ---
+féinfhostaithe      (                    ) -> f'eːnhəstəhə               (CSV: ˈfʲeːnʲosˠt̪ˠəhə)
+
+--- Transcribing: [suaimhneach] ---
+suaimhneach          (Connacht            ) -> sɔəv'næːx                  (CSV: ˈsˠiːmʲɾʲəx)
+
+--- Transcribing: [díomsa] ---
+díomsa              (                    ) -> d'iːəmsɑ                    (CSV: ˈdʲiːmˠsˠə)
+
+--- Transcribing: [bolcáin] ---
+Bolcáin             (Connacht            ) -> bɔlkɑːin                    (CSV: ˈbɔlˠkɑːnʲ)
+
+--- Transcribing: [ceathrúnaí] ---
+ceathrúnaí         (Cois-Fharraige      ) -> k'eɑhruːniː                 (CSV: ˈcæːɾˠuːn̪ˠiː)
+
+--- Transcribing: [dólámhach] ---
+dólámhach          (Connacht            ) -> doːlɑːwɑx                  (CSV: ˈd̪ˠoːˌl̪ˠɑːwəx)
+
+--- Transcribing: [spúnóg] ---
+spúnóg             (Connacht            ) -> spuːnoːg                     (CSV: ˈsˠpˠuːnˠoːɡ)
+
+--- Transcribing: [cúng] ---
+cúng                (Munster; Connacht   ) -> kuːŋ                         (CSV: kuːŋ(ɡ), kũːŋ(ɡ))
+
+--- Transcribing: [fearghal] ---
+Fearghal             (                    ) -> f'ær'ɣɑl                    (CSV: ˈfʲaɾˠəlˠ)
+
+--- Transcribing: [suím] ---
+suím                (                    ) -> suiːm'                        (CSV: sˠiːmʲ)
+
+--- Transcribing: [chíd] ---
+chíd                (                    ) -> çiːd'                        (CSV: ˈçiːdʲ)
+
+--- Transcribing: [péint] ---
+péint               (                    ) -> p'eːnt'                       (CSV: pʲeːnʲtʲ)
+
+--- Transcribing: [gaiscígh] ---
+gaiscígh            (Connacht            ) -> gais'k'iːj                    (CSV: ˈɡaʃciː)
+
+--- Transcribing: [acais] ---
+acais                (Aran                ) -> ˈɑkais'                      (CSV: ˈækəʃ)
+
+--- Transcribing: [biotáille] ---
+biotáille           (Aran                ) -> b'ɪtɑːiL'ə                 (CSV: ˈbʲɪt̪ˠɑːl̠ʲtʲə)
+
+--- Transcribing: [craoibhe] ---
+craoibhe             (                    ) -> kr'iːv'ə                     (CSV: ˈkɾˠiːvʲə)
+
+--- Transcribing: [rinne] ---
+Rinne                (                    ) -> r'iN'ə                        (CSV: ˈɾˠɪn̠ʲə)
+
+--- Transcribing: [salainn] ---
+salainn              (                    ) -> sɑlaiN'                       (CSV: ˈsˠalˠən̠ʲ, ˈsˠal̪ˠən̠ʲ)
+
+--- Transcribing: [péiste] ---
+péiste              (                    ) -> p'eːs't'ə                    (CSV: ˈpʲeːʃtʲə)
+
+--- Transcribing: [bus] ---
+bus                  (                    ) -> bɔs                           (CSV: bˠʊsˠ)
+
+--- Transcribing: [boid] ---
+boid                 (                    ) -> bɛd'                          (CSV: bˠɪdʲ)
+
+--- Transcribing: [mire] ---
+mire                 (                    ) -> m'ir'ə                        (CSV: ˈmʲɪɾʲə)
+
+--- Transcribing: [iarrtar] ---
+iarrtar              (                    ) -> ˈiəRtɑr                     (CSV: ˈiəɾˠt̪ˠəɾˠ)
+
+--- Transcribing: [seordán] ---
+seordán             (Connacht            ) -> s'oːrdɑːn                   (CSV: ˈʃoːɾˠd̪ˠɑːnˠ)
+
+--- Transcribing: [craobhach] ---
+craobhach            (Connacht            ) -> krɨːwɑx                     (CSV: ˈkɾˠiːwəx)
+
+--- Transcribing: [toighe] ---
+toighe               (                    ) -> tɔji                          (CSV: t̪ˠiə)
+
+--- Transcribing: [bís] ---
+bís                 (                    ) -> b'iːs'                        (CSV: bʲiːʃ)
+
+--- Transcribing: [dhíobh] ---
+dhíobh              (Galway              ) -> j&I_ACUTE_LONGoː              (CSV: (ɣ)iːbˠ, jiːbˠ)
+
+--- Transcribing: [lochán] ---
+lochán              (Connacht            ) -> lɔxɑːn                      (CSV: ˈl̪ˠɔxɑːnˠ)
+
+--- Transcribing: [tiubh] ---
+tiubh                (Galway              ) -> t'iuː                         (CSV: tʲʊ(w))
+
+--- Transcribing: [dubhghall] ---
+Dubhghall            (                    ) -> dɔvɣɑL                      (CSV: ˈd̪ˠʊwəl̪ˠ)
+
+--- Transcribing: [briota] ---
+briota               (                    ) -> br'ɪtɑ                       (CSV: ˈbʲɾʲɨ̞t̪ˠə)
+
+--- Transcribing: [uaigneas] ---
+uaigneas             (Ulster; Connacht    ) -> ˈəaig'nəɑs                 (CSV: ˈuəɟnʲəsˠ)
+
+--- Transcribing: [gróigeadh] ---
+gróigeadh           (Mayo                ) -> groːg'uː                     (CSV: ˈɡɾˠoːɟuː)
+
+--- Transcribing: [feabhas] ---
+feabhas              (Munster; Connacht   ) -> f'eəɑs                       (CSV: fʲausˠ)
+
+--- Transcribing: [síob] ---
+síob                (                    ) -> s'iːəb                       (CSV: ʃiːbˠ)
+
+--- Transcribing: [clois] ---
+clois                (                    ) -> klɛs'                         (CSV: klˠɔʃ)
+
+--- Transcribing: [fleaite] ---
+fleaite              (                    ) -> fleət'ə                      (CSV: ˈfʲlʲatʲə, ˈfʲlʲætʲə)
+
+--- Transcribing: [cab] ---
+cab                  (                    ) -> kɑb                           (CSV: kabˠ, kɑbˠ)
+
+--- Transcribing: [-tí] ---
+-tí                 (                    ) -> -t'iː                         (CSV: tʲiː)
+
+--- Transcribing: [damhsa] ---
+damhsa               (                    ) -> dɑvsɑ                        (CSV: ˈd̪ˠəusˠə)
+
+--- Transcribing: [fómhair] ---
+fómhair             (Cois-Fharraige      ) -> foːwər                       (CSV: ˈfˠuːwəɾʲ)
+
+--- Transcribing: [min] ---
+min                  (Munster; Connacht   ) -> m'in                           (CSV: ˈmʲinʲ)
+
+--- Transcribing: [dhó] ---
+dhó                 (Munster; Connacht   ) -> ɣoː                          (CSV: ɣoː)
+
+--- Transcribing: [feisigh] ---
+feisigh              (                    ) -> f'es'ij                        (CSV: ˈfʲɛʃiː)
+
+--- Transcribing: [dearthár] ---
+dearthár            (Cois-Fharraige      ) -> d'ær'hɑːr                   (CSV: ˈdʲɾʲɑːɾˠ)
+
+--- Transcribing: [cata] ---
+cata                 (Mayo; Ulster        ) -> kɑtɑ                         (CSV: ˈkat̪ˠə)
+
+--- Transcribing: [troscadh] ---
+troscadh             (Mayo; Connacht      ) -> trɔskə                       (CSV: ˈt̪ˠɾˠosˠkuː)
+
+--- Transcribing: [dúnadh] ---
+dúnadh              (Galway              ) -> duːnə                        (CSV: ˈd̪ˠuːnˠə, ˈd̪ˠuːnˠəvˠ, ˈd̪ˠuːnˠəx)
+
+--- Transcribing: [aidiacht] ---
+aidiacht             (Connacht            ) -> ˈaid'əxt                     (CSV: ˈadʲiəxt̪ˠ)
+
+--- Transcribing: [díobhsan] ---
+díobhsan            (Aran                ) -> d'iːəvsɑn                   (CSV: ˈdʲiːpˠsˠən)
+
+--- Transcribing: [morgadh] ---
+morgadh              (Galway; Munster     ) -> mɔrgə                        (CSV: ˈmˠɔɾˠəɡə)
+
+--- Transcribing: [toiligh] ---
+toiligh              (Connacht            ) -> tɔlij                         (CSV: ˈt̪ˠɛlʲiː)
+
+--- Transcribing: [cuibhrigh] ---
+cuibhrigh            (Galway              ) -> kɪv'r'ij                      (CSV: ˈkɪvʲɾʲə)
+
+--- Transcribing: [meadhg] ---
+meadhg               (Munster; Connacht   ) -> m'eɑɣg                       (CSV: ˈmʲaiɡ, ˈmʲəiɡ)
+
+--- Transcribing: [roinn] ---
+roinn                (Galway              ) -> rɛN'                          (CSV: ɾˠiːn̠ʲ)
+
+--- Transcribing: [faoi deara] ---
+faoi deara           (                    ) -> f'iː d'ərɑ                  (CSV: fˠiːˈdʲaɾˠə)
+
+--- Transcribing: [laistigh] ---
+laistigh             (Ulster; Connacht    ) -> lais't'ij                      (CSV: l̪ˠaʃˈtʲɪj)
+
+--- Transcribing: [tom] ---
+tom                  (Mayo                ) -> tɔm                           (CSV: t̪ˠʊmˠ)
+
+--- Transcribing: [glór] ---
+glór                (Munster; Connacht   ) -> gloːr                         (CSV: ɡl̪ˠoːɾˠ)
+
+--- Transcribing: [baile] ---
+baile                (Connemara           ) -> bailə                         (CSV: ˈbˠɑːlʲə)
+
+--- Transcribing: [cireabaití] ---
+Cireabaití          (                    ) -> k'ir'əɑbət'iː              (CSV: ˈkɪɾʲəˌbatiː)
+
+--- Transcribing: [fiachta] ---
+fiachta              (                    ) -> f'iəxtɑ                      (CSV: ˈfʲiəxt̪ˠə)
+
+--- Transcribing: [súile] ---
+súile               (                    ) -> suːilə                       (CSV: ˈsˠuːlʲə)
+
+--- Transcribing: [breith] ---
+breith               (Cois-Fharraige; Ulster; Aran) -> br'eh'                         (CSV: bʲɾʲɛ)
+
+--- Transcribing: [cén chaoi] ---
+cén chaoi           (Cois-Fharraige      ) -> k'eːn çiː                   (CSV: cɛˈxiː)
+
+--- Transcribing: [ceap] ---
+ceap                 (Cois-Fharraige      ) -> k'eɑp                         (CSV: cæːpˠ)
+
+--- Transcribing: [cúinge] ---
+cúinge              (Connacht            ) -> kuːiŋə                      (CSV: ˈkuːɲɪ)
+
+--- Transcribing: [gaeil] ---
+Gaeil                (                    ) -> geːil                         (CSV: ɡeːlʲ)
+
+--- Transcribing: [coiteann] ---
+coiteann             (Munster; Connacht   ) -> kɛt'æN                       (CSV: ˈkɔtʲən̪ˠ)
+
+--- Transcribing: [tchí] ---
+tchí                (                    ) -> tçiː                         (CSV: tʲiː)
+
+--- Transcribing: [náisiún] ---
+náisiún            (Connacht            ) -> nɑːis'uːn                   (CSV: ˈn̪ˠɑːʃuːnˠ)
+
+--- Transcribing: [slat] ---
+slat                 (Aran                ) -> slɑt                          (CSV: sˠlɑt̪ˠ)
+
+--- Transcribing: [cáibín] ---
+cáibín             (Connacht            ) -> kɑːib'iːn                   (CSV: ˈkaːbʲiːnʲ, ˈkɑːbʲiːnʲ)
+
+--- Transcribing: [éireannach] ---
+Éireannach          (Munster; Connacht   ) -> ˈeːr'əNɑx                  (CSV: ˈeːɾʲən̪ˠəx)
+
+--- Transcribing: [féachaint] ---
+féachaint           (Aran                ) -> f'eːɑçənt'                 (CSV: ˈfʲiəxən̠ʲtʲ)
+
+--- Transcribing: [duilliúr] ---
+duilliúr            (Connacht            ) -> dɪL'uːr                      (CSV: ˈd̪ˠɪl̠ʲuːɾˠ)
+
+--- Transcribing: [cá háit] ---
+cá háit            (                    ) -> kɑː hɑːit'                 (CSV: kɑːˈhɑːtʲ)
+
+--- Transcribing: [sonrú] ---
+sonrú               (Connacht            ) -> sɔnruː                       (CSV: ˈsˠon̪ˠɾˠuː)
+
+--- Transcribing: [traein] ---
+traein               (                    ) -> treːin                        (CSV: t̪ˠɾˠeːnʲ)
+
+--- Transcribing: [speal] ---
+speal                (                    ) -> sp'eɑl                        (CSV: sˠpʲalˠ, sˠpʲal̪ˠ)
+
+--- Transcribing: [bocht] ---
+bocht                (                    ) -> bɔxt                          (CSV: bˠɔxt̪ˠ)
+
+--- Transcribing: [fáidh] ---
+fáidh               (Connacht            ) -> f&A_ACUTE_LONGiː              (CSV: fˠɑːj)
+
+--- Transcribing: [beo] ---
+beo                  (Munster; Connacht   ) -> b'oː                          (CSV: bʲoː)
+
+--- Transcribing: [céad mháta] ---
+céad mháta         (Connacht            ) -> k'eːɑd wɑːtɑ              (CSV: ceːd̪ˠ ˈwɑːt̪ˠə)
+
+--- Transcribing: [pianadh] ---
+pianadh              (Galway; Munster     ) -> p'iənə                       (CSV: ˈpʲiənˠəx)
+
+--- Transcribing: [cúb] ---
+cúb                 (                    ) -> kuːb                          (CSV: kuːb)
+
+--- Transcribing: [cnámh] ---
+cnámh               (Galway; Cois-Fharraige) -> krɑːv                        (CSV: kɾɑːvʲ)
+
+--- Transcribing: [roinn] ---
+roinn                (Mayo                ) -> rɛN'                          (CSV: ɾˠɪn̠ʲ)
+
+--- Transcribing: [dianghlasáil] ---
+dianghlasáil        (                    ) -> d'iəŋhlɑsɑːil             (CSV: dʲiənˠˈɣlˠa.sˠɑːlʲ)
+
+--- Transcribing: [ansin] ---
+ansin                (Aran                ) -> ˈɑns'in                      (CSV: ən̪ˠˈʃɪnʲ)
+
+--- Transcribing: [méir] ---
+méir                (                    ) -> m'eːr'                        (CSV: mʲeːɾʲ)
+
+--- Transcribing: [úsáid] ---
+úsáid              (Connacht            ) -> ˈuːsɑːid'                  (CSV: ˈuːsˠɑːdʲ)
+
+--- Transcribing: [sách] ---
+sách                (Munster; Connacht   ) -> sɑːx                         (CSV: sˠɑːx)
+
+--- Transcribing: [méibhín] ---
+Méibhín            (                    ) -> m'eːv'iːn                    (CSV: ˈmʲeːvʲiːnʲ)
+
+--- Transcribing: [bail] ---
+bail                 (                    ) -> bail                           (CSV: bˠalʲ)
+
+--- Transcribing: [amhrán] ---
+amhrán              (Aran; also; Connacht) -> ˈəurrɑːn                   (CSV: ˈɑːɾˠɑːnˠ)
+
+--- Transcribing: [caisearbhán] ---
+caisearbhán         (Connacht            ) -> kais'ər'vɑːn                (CSV: ˈkaʃəɾˠwaːn̪ˠ)
+
+--- Transcribing: [faighfeá] ---
+faighfeá            (                    ) -> faijf'əɑː                   (CSV: ˈfˠaiɑː)
+
+--- Transcribing: [banaltra] ---
+banaltra             (                    ) -> bɑnɑltrɑ                    (CSV: ˈbˠanˠəl̪ˠt̪ˠɾˠə)
+
+--- Transcribing: [bonn] ---
+bonn                 (Aran                ) -> bɔN                           (CSV: bˠɔn̪ˠ, bˠɞn̪ˠ)
+
+--- Transcribing: [piocadh] ---
+piocadh              (Galway; Mayo        ) -> p'ɪkə                        (CSV: ˈpʲʊkətʲ)
+
+--- Transcribing: [iontráil] ---
+iontráil            (Connacht            ) -> ˈɪntrɑːil                  (CSV: ˈʊn̪ˠt̪ˠɾˠɑːlʲ)
+
+--- Transcribing: [deartháracha] ---
+deartháracha        (Cois-Fharraige      ) -> d'ær'hɑːrɑxɑ              (CSV: ˈdʲɾʲɑːɾˠəxiː)
+
+--- Transcribing: [oilfidh] ---
+oilfidh              (Ulster; Connacht    ) -> ˈɛlf'iː                     (CSV: ˈɛlʲ(h)ə, ˈɪlʲ(h)ə)
+
+--- Transcribing: [sealbh] ---
+sealbh               (                    ) -> s'eɑlv                        (CSV: ˈʃalˠəvˠ)
+
+--- Transcribing: [dona] ---
+dona                 (Connacht            ) -> dɔnɑ                         (CSV: ˈd̪ˠɔnˠə, ˈd̪ˠɞnˠə, ˈd̪ˠɞn̪ˠə)
+
+--- Transcribing: [feochan] ---
+feochan              (Connacht            ) -> f'oːxɑn                      (CSV: ˈfʲoːxənˠ)
+
+--- Transcribing: [glinne] ---
+glinne               (                    ) -> gliN'ə                        (CSV: ˈɟlʲin̠ʲə)
+
+--- Transcribing: [claonadh] ---
+claonadh             (                    ) -> klɨːnə                      (CSV: ˈklˠɤːnˠətʲ)
+
+--- Transcribing: [brón] ---
+brón                (Mayo; Ulster        ) -> broːn                         (CSV: bˠɾˠoːnˠ)
+
+--- Transcribing: [badráil] ---
+badráil             (Connacht            ) -> bɑdrɑːil                    (CSV: ˈbˠad̪ˠɾˠɑːlʲ)
+
+--- Transcribing: [chuige] ---
+chuige               (Galway              ) -> xɪg'ə                        (CSV: ˈɛɟɪ)
+
+--- Transcribing: [miúil] ---
+miúil               (                    ) -> m'uːil                        (CSV: mʲuːlʲ)
+
+--- Transcribing: [giúiré] ---
+giúiré             (                    ) -> g'uːir'eː                    (CSV: ˈɟuːɾʲeː)
+
+--- Transcribing: [sínigh] ---
+Sínigh              (Mayo                ) -> s'iːnij                       (CSV: ˈʃiːnʲiː)
+
+--- Transcribing: [caillteanas] ---
+caillteanas          (Aran                ) -> kaiL't'əɑnɑs                (CSV: ˈkalʲtʲəmˠəsˠ)
+
+--- Transcribing: [teicni-] ---
+teicni-              (                    ) -> t'ek'ni-                       (CSV: tʲɛcnʲə)
+
+--- Transcribing: [ifreann] ---
+ifreann              (                    ) -> ˈif'r'əN                     (CSV: ˈɪfʲɾʲən̪ˠ)
+
+--- Transcribing: [tál] ---
+tál                 (Munster; Connacht   ) -> tɑːl                         (CSV: t̪ˠɑːlˠ)
+
+--- Transcribing: [gortaigh] ---
+gortaigh             (Galway              ) -> gɔrtə                        (CSV: ˈɡɔɾˠt̪ˠə)
+
+--- Transcribing: [coinnigh] ---
+coinnigh             (Cois-Fharraige      ) -> kɛN'ij                        (CSV: ˈkɪn̠ʲə)
+
+--- Transcribing: [urchóideach] ---
+urchóideach         (Connacht            ) -> ˈɔrxoːd'æːx               (CSV: ˈʊɾˠəxoːdʲəx)
+
+--- Transcribing: [péacán] ---
+péacán             (Connacht            ) -> p'eːɑkɑːn                  (CSV: ˈpʲeːkɑːnˠ, ˈpʲeːkɑːn̪ˠ)
+
+--- Transcribing: [deartháireacha] ---
+deartháireacha      (Mayo; Connemara; South; West) -> d'ær'hɑːiræːxɑ           (CSV: ˈdʲɾʲiçaːɾʲəxə)
+
+--- Transcribing: [síor-] ---
+síor-               (                    ) -> s'iːər-                      (CSV: ʃiːɾʲ, ʃiːɾˠ)
+
+--- Transcribing: [nod] ---
+nod                  (Munster; Connacht   ) -> nɔd                           (CSV: n̪ˠɔd̪ˠ)
+
+--- Transcribing: [brat] ---
+brat                 (Cois-Fharraige; Ulster; Mayo) -> brɑt                          (CSV: bˠɾˠat̪ˠ)
+
+--- Transcribing: [murab] ---
+murab                (                    ) -> mɔrɑb                        (CSV: ˈmˠʊɾˠəbˠ)
+
+--- Transcribing: [-íos] ---
+-íos                (                    ) -> -iːəs                        (CSV: iːsˠ)
+
+--- Transcribing: [boird] ---
+boird                (Connemara           ) -> bɛr'd'                        (CSV: bˠəuɾˠdʲ)
+
+--- Transcribing: [éag] ---
+éag                 (Ulster; Connacht    ) -> ˈeːɑg                       (CSV: eːɡ, ɛə̯ɡ)
+
+--- Transcribing: [stiofán] ---
+Stiofán             (Connacht            ) -> st'ɪfɑːn                    (CSV: ˈʃtʲʊfˠɑːnˠ, ˈʃtʲʊfˠɑːn̪ˠ)
+
+--- Transcribing: [go raibh maith agat] ---
+go raibh maith agat  (                    ) -> gɔ rəv' m'əh' ɑg'ət'      (CSV: ɡəɾˠəmˠəˈhaɡət̪ˠ, ɡəɾˠəˈmˠahəɡət̪ˠ)
+
+--- Transcribing: [maoilín] ---
+maoilín             (Connacht            ) -> m'iːlʲiːn                   (CSV: ˈmˠiːlʲiːnʲ)
+
+--- Transcribing: [agóid] ---
+agóid               (Connacht            ) -> ˈɑgoːd'                     (CSV: ˈaɡoːdʲ)
+
+--- Transcribing: [suan] ---
+suan                 (                    ) -> suan                           (CSV: sˠuən̪ˠ)
+
+--- Transcribing: [fiabhrais] ---
+fiabhrais            (Aran                ) -> f'iəvrəs                     (CSV: ˈfʲɛvˠɾˠəʃ)
+
+--- Transcribing: [cathair] ---
+cathair              (                    ) -> kɑhair                        (CSV: ˈkahəɾʲ, ˈkɑhəɾʲ)
+
+--- Transcribing: [madraí] ---
+madraí              (Cois-Fharraige      ) -> mɑdriː                       (CSV: ˈmˠɑːd̪ˠɾˠiː)
+
+--- Transcribing: [iompar] ---
+iompar               (Munster; Connacht   ) -> ˈɪmpɑr                      (CSV: ˈʊmˠpˠəɾˠ)
+
+--- Transcribing: [siabadh] ---
+siabadh              (Galway; Ulster; Mayo) -> s'iəbə                       (CSV: ˈʃiəbˠətʲ)
+
+--- Transcribing: [aisteoir] ---
+aisteoir             (Connacht            ) -> ˈais't'oːir'                 (CSV: ˈaʃtʲoːɾʲ)
+
+--- Transcribing: [claonadh] ---
+claonadh             (Mayo                ) -> klɨːnə                      (CSV: ˈklˠiːnˠuː)
+
+--- Transcribing: [dínne] ---
+dínne               (                    ) -> d'iːN'ə                      (CSV: ˈdʲiːn̠ʲə)
+
+--- Transcribing: [dhóibhsean] ---
+dhóibhsean          (Aran                ) -> ɣoːv's'ən                   (CSV: ˈɣoːpˠsˠən)
+
+--- Transcribing: [éide] ---
+éide                (                    ) -> ˈeːd'ə                      (CSV: ˈeːdʲə)
+
+--- Transcribing: [aifreann] ---
+Aifreann             (Cois-Fharraige      ) -> ˈaif'r'əN                    (CSV: ˈæfʲɾʲən̪ˠ, ˈæːfʲɾʲən̪ˠ)
+
+--- Transcribing: [cáinim] ---
+cáinim              (                    ) -> kɑːinim'                     (CSV: ˈkɑːnʲəmʲ)
+
+--- Transcribing: [insím] ---
+insím               (Aran                ) -> ˈins'iːm'                    (CSV: ˈinʲʃiːmʲ, ˈinʲʃəmʲ, ˈiːnʲʃiːmʲ)
+
+--- Transcribing: [cáisc] ---
+Cáisc               (                    ) -> kɑːis'k'                     (CSV: kaːʃc, kɑːʃc)
+
+--- Transcribing: [bádóir] ---
+bádóir             (Connacht            ) -> bɑːdoːr'                    (CSV: ˈbˠɑːd̪ˠoːɾʲ)
+
+--- Transcribing: [úir] ---
+úir                 (                    ) -> ˈuːir'                       (CSV: uːɾʲ)
+
+--- Transcribing: [corcán] ---
+corcán              (                    ) -> kɔrkɑːn                     (CSV: ˈkɔɾˠkɑːn̪ˠ)
+
+--- Transcribing: [amanna] ---
+amanna               (Aran; Connemara     ) -> ˈɑmɑNɑ                     (CSV: ˈamˠən̪ˠiː)
+
+--- Transcribing: [fheoil] ---
+fheoil               (Munster; Connacht   ) -> h'oːil                        (CSV: oːlʲ)
+
+--- Transcribing: [stéic] ---
+stéic               (                    ) -> st'eːk'                       (CSV: ˈʃtʲeːc)
+
+--- Transcribing: [stuaic] ---
+stuaic               (                    ) -> stɔək'                       (CSV: sˠt̪ˠuəc)
+
+--- Transcribing: [ciar] ---
+ciar                 (                    ) -> k'iər                         (CSV: ciəɾˠ)
+
+--- Transcribing: [sileadh] ---
+sileadh              (Galway; Munster     ) -> s'iluː                        (CSV: ˈʃɪlʲəx)
+
+--- Transcribing: [airg] ---
+airg                 (                    ) -> ˈair'g'                       (CSV: ˈaɾʲɪɟ)
+
+--- Transcribing: [clabhta] ---
+clabhta              (                    ) -> klɑvtɑ                       (CSV: ˈklˠaut̪ˠə)
+
+--- Transcribing: [uan] ---
+uan                  (                    ) -> ˈuan                          (CSV: uənˠ, uən̪ˠ, uːnˠ, uːn̪ˠ)
+
+--- Transcribing: [sealadach] ---
+sealadach            (                    ) -> s'eɑlɑdɑx                   (CSV: ˈʃalˠəd̪ˠəx)
+
+--- Transcribing: [abacas] ---
+abacas               (                    ) -> ˈɑbɑkɑs                    (CSV: ˈabˠəkəsˠ)
+
+--- Transcribing: [clairnéid] ---
+clairnéid           (Connacht            ) -> klair'neːd'                   (CSV: ˈklˠɑːɾˠnʲeːdʲ)
+
+--- Transcribing: [comhrialtas] ---
+comhrialtas          (Cois-Fharraige      ) -> kɔvrəltɑs                   (CSV: ˈkuːɾˠiəl̪ˠt̪ˠəsˠ)
+
+--- Transcribing: [formad] ---
+formad               (                    ) -> fɔrəmɑd                     (CSV: ˈfˠɔɾˠəmˠəd̪ˠ)
+
+--- Transcribing: [caladh] ---
+caladh               (Connemara           ) -> kɑlə                         (CSV: ˈkalˠə)
+
+--- Transcribing: [cathaoir] ---
+cathaoir             (Mayo                ) -> kɑhiːr                       (CSV: ˈkahiːɾʲ)
+
+--- Transcribing: [glacfaidh] ---
+glacfaidh            (                    ) -> glɑkfə                       (CSV: ˈɡlˠakə)
+
+--- Transcribing: [nc] ---
+nc                   (                    ) -> nk                             (CSV: ŋk, ɲc)
+
+--- Transcribing: [fuadh] ---
+fuadh                (Galway; Munster     ) -> fɔə                          (CSV: fˠuəx)
+
+--- Transcribing: [anchroí] ---
+anchroí             (Aran                ) -> ˈɑnxroiː                    (CSV: ˈɑnxɾˠə)
+
+--- Transcribing: [breabadh] ---
+breabadh             (Galway; Ulster; Mayo) -> br'eɑbə                      (CSV: ˈbʲɾʲabˠətʲ)
+
+--- Transcribing: [gus] ---
+gus                  (Munster; Connacht   ) -> gɔs                           (CSV: ɡʊsˠ)
+
+--- Transcribing: [doireadh] ---
+doireadh             (Galway              ) -> dɛr'uː                       (CSV: ˈd̪ˠɛɾʲəvˠ)
+
+--- Transcribing: [déarfar] ---
+déarfar             (                    ) -> d'eːɑrfɑr                   (CSV: ˈdʲeːɾˠfˠəɾˠ)
+
+--- Transcribing: [fosta] ---
+fosta                (                    ) -> fɔstɑ                        (CSV: ˈfˠɔsˠt̪ˠə)
+
+--- Transcribing: [corrú] ---
+corrú               (Connacht            ) -> kɔRuː                        (CSV: ˈkɔɾˠuː)
+
+--- Transcribing: [gairmeach] ---
+gairmeach            (                    ) -> gair'm'æːx                   (CSV: ɡaɾʲˌmʲəx)
+
+--- Transcribing: [preas] ---
+preas                (                    ) -> pr'eɑs                        (CSV: pʲɾʲasˠ)
+
+--- Transcribing: [tuilleadh] ---
+tuilleadh            (Mayo; Ulster        ) -> tɪL'uː                       (CSV: ˈtʲil̠ʲuː)
+
+--- Transcribing: [maitheamh] ---
+maitheamh            (Mayo                ) -> maih'əɑv                     (CSV: ˈmˠahuː)
+
+--- Transcribing: [eireaball] ---
+eireaball            (Aran; Ulster        ) -> ˈer'əɑbɑL                  (CSV: ˈɾˠɨbˠəl̪ˠ)
+
+--- Transcribing: [deinir] ---
+deinir               (                    ) -> d'enir'                        (CSV: ˈdʲɪnʲəɾʲ)
+
+--- Transcribing: [coradh] ---
+coradh               (Galway; Munster     ) -> kɔrə                         (CSV: ˈkɔɾˠəx)
+
+--- Transcribing: [gnóthachtáil] ---
+gnóthachtáil       (Cois-Fharraige      ) -> groːhɑxtɑːil               (CSV: ˈɡɾˠuːxt̪ˠɑːlʲ)
+
+--- Transcribing: [corrach] ---
+corrach              (Munster; Connacht   ) -> kɔRɑx                        (CSV: ˈkɔɾˠəx)
+
+--- Transcribing: [-íodh] ---
+-íodh               (Mayo; Ulster        ) -> -iːəɣ                       (CSV: iːw)
+
+--- Transcribing: [cion] ---
+cion                 (Aran; Connacht      ) -> k'ɪn                          (CSV: cinˠ)
+
+--- Transcribing: [brón] ---
+brón                (Aran                ) -> broːn                         (CSV: bˠɾˠoːn)
+
+--- Transcribing: [earrach] ---
+earrach              (Galway              ) -> ˈeɑRɑx                      (CSV: ˈæɾˠəx)
+
+--- Transcribing: [plaic] ---
+plaic                (                    ) -> plaik'                         (CSV: pˠlˠac)
+
+--- Transcribing: [muiceoil] ---
+muiceoil             (Munster; Connacht   ) -> mɪk'oːil                     (CSV: ˈmˠɪcoːlʲ)
+
+--- Transcribing: [fillim] ---
+fillim               (Connacht            ) -> f'iL'im'                       (CSV: ˈfʲɪl̠ʲəmʲ)
+
+--- Transcribing: [dainséar] ---
+dainséar            (Connacht            ) -> dains'eːɑr                   (CSV: ˈd̪ˠan̠ʲʃeːɾˠ)
+
+--- Transcribing: [rotha] ---
+rotha                (                    ) -> rɔhɑ                         (CSV: ˈɾˠɔhə)
+
+--- Transcribing: [déan athmhachnamh] ---
+déan athmhachnamh   (Galway              ) -> d'eːɑn ɑhwɑxnɑv           (CSV: ˈdʲiːnˠ ˈaˈwˠaxn̪ə)
+
+--- Transcribing: [dílse] ---
+dílse               (Mayo; Ulster; Munster) -> d'iːls'i                      (CSV: ˈdʲiːʃl̠ʲə)
+
+--- Transcribing: [bh] ---
+Bh                   (                    ) -> v                              (CSV: vʲ, w)
+
+--- Transcribing: [ubh] ---
+ubh                  (Aran                ) -> ˈuː                          (CSV: ɔvˠ)
+
+--- Transcribing: [is éigean] ---
+is éigean           (                    ) -> ˈis' eːg'ən                 (CSV: ˈʃeːɟənˠ)
+
+--- Transcribing: [daoibh] ---
+daoibh               (Aran                ) -> d'iːv'                        (CSV: dʲiːbʲ)
+
+--- Transcribing: [ceannaím] ---
+ceannaím            (Connacht            ) -> k'æNiːm'                     (CSV: ˈcan̪ˠiːmʲ)
+
+--- Transcribing: [tuirne] ---
+tuirne               (                    ) -> tɪr'nə                       (CSV: ˈt̪ˠuːɾˠn̠ʲə)
+
+--- Transcribing: [siúd] ---
+siúd                (                    ) -> s'uːd                         (CSV: ʃuːd̪ˠ)
+
+--- Transcribing: [cat] ---
+cat                  (Aran                ) -> kɑt                           (CSV: kɔt̪ˠ)
+
+--- Transcribing: [tóga] ---
+tóga                (Munster; Connacht   ) -> toːgɑ                        (CSV: ˈt̪ˠoːɡə)
+
+--- Transcribing: [beireadh] ---
+beireadh             (Galway; Munster     ) -> b'er'uː                       (CSV: ˈbʲɛɾʲəx)
+
+--- Transcribing: [strainséara] ---
+strainséara         (Cois-Fharraige      ) -> strains'eːɑrɑ               (CSV: ˈsˠt̪ˠɾˠæːnʲʃeːɾˠə)
+
+--- Transcribing: [saoil] ---
+saoil                (Ulster; Connacht    ) -> s'iːl                         (CSV: sˠiːlʲ)
+
+--- Transcribing: [ocht] ---
+ocht                 (Connacht            ) -> ˈɔxt                         (CSV: ɔxt̪ˠ)
+
+--- Transcribing: [séad] ---
+séad                (Ulster; Connacht    ) -> s'eːɑd                       (CSV: ʃeːd̪ˠ)
+
+--- Transcribing: [srath] ---
+srath                (                    ) -> srɑh                          (CSV: sˠɾˠa(h))
+
+--- Transcribing: [díbhse] ---
+díbhse              (                    ) -> d'iːv's'i                     (CSV: ˈdʲiːvʲʃə)
+
+--- Transcribing: [bearna] ---
+bearna               (Aran                ) -> b'ær'nɑ                      (CSV: ˈbʲaːɾˠn̪ˠə)
+
+--- Transcribing: [fuadach] ---
+fuadach              (Munster; Connacht   ) -> fuadɑx                        (CSV: ˈfˠuəd̪ˠəx)
+
+--- Transcribing: [teastas] ---
+teastas              (                    ) -> t'eɑstɑs                     (CSV: ˈtʲasˠt̪ˠəsˠ)
+
+--- Transcribing: [-ímid] ---
+-ímid               (                    ) -> -iːm'id'                      (CSV: iːmʲədʲ)
+
+--- Transcribing: [tláith] ---
+tláith              (Connacht            ) -> tlɑːih'                      (CSV: t̪ˠlˠɑː)
+
+--- Transcribing: [clogaide] ---
+clogaide             (Munster; Connacht   ) -> klɔgəd'ə                    (CSV: ˈklˠɔɡədʲə)
+
+--- Transcribing: [ceird] ---
+ceird                (Mayo; Connacht      ) -> k'er'd'                        (CSV: ceɾˠdʲ ~ coɾˠdʲ)
+
+--- Transcribing: [leiceann] ---
+leiceann             (                    ) -> lek'əN                        (CSV: ˈl̠ʲɛcən̪ˠ)
+
+--- Transcribing: [cinneadh] ---
+cinneadh             (Galway; Kerry       ) -> k'iN'uː                       (CSV: ˈcɪn̠ʲəx)
+
+--- Transcribing: [cearr] ---
+cearr                (Munster; Connacht   ) -> k'eɑR                         (CSV: cɑːɾˠ)
+
+--- Transcribing: [ciribeas] ---
+Ciribeas             (                    ) -> k'ir'ib'əɑs                  (CSV: ˈkɪɾʲəˌbas)
+
+--- Transcribing: [abhaile] ---
+abhaile              (Connacht            ) -> ˈəailə                      (CSV: əˈwalʲə)
+
+--- Transcribing: [naomh] ---
+naomh                (Connacht            ) -> nɨːv                         (CSV: n̪ˠiːvˠ)
+
+--- Transcribing: [pilib] ---
+Pilib                (                    ) -> p'ilib'                        (CSV: ˈpʲɪlʲəbʲ)
+
+--- Transcribing: [tithe] ---
+tithe                (                    ) -> t'ih'ə                        (CSV: ˈtʲɪhɪ)
+
+--- Transcribing: [bámhar] ---
+bámhar              (Connacht            ) -> bɑːwɑr                      (CSV: ˈbˠɑːwəɾˠ)
+
+--- Transcribing: [cnoic] ---
+cnoic                (Aran                ) -> krɛk'                         (CSV: knˠic)
+
+--- Transcribing: [shá] ---
+shá                 (Munster; Connacht   ) -> hɑː                          (CSV: hɑː)
+
+--- Transcribing: [laighin] ---
+Laighin              (                    ) -> laijin                         (CSV: l̪ˠəinʲ)
+
+--- Transcribing: [rinn] ---
+Rinn                 (Cois-Fharraige      ) -> r'iN'                          (CSV: ɾˠiːn̠ʲ)
+
+--- Transcribing: [comhionann] ---
+comhionann           (Cois-Fharraige; Connacht) -> kɔv'ənɑN                    (CSV: ˈkuːˈaːn̪ˠən̪ˠ)
+
+--- Transcribing: [comhrá] ---
+comhrá              (Connacht            ) -> kɔvrɑː                      (CSV: ˈkoːɾˠɑː)
+
+--- Transcribing: [cearnóige] ---
+cearnóige           (Connacht            ) -> k'ær'noːg'ə                 (CSV: ˈcɑːɾˠn̪ˠoːɟə)
+
+--- Transcribing: [i ngeall ar] ---
+i ngeall ar          (Mayo; Connacht      ) -> ˈi ŋəɑL ɑr                (CSV: əˈɲal̪ˠ ɛɾʲ)
+
+--- Transcribing: [na] ---
+na                   (                    ) -> nɑ                            (CSV: n̪ˠə)
+
+--- Transcribing: [uireasa] ---
+uireasa              (                    ) -> ˈɪr'əɑsɑ                  (CSV: ˈɪɾʲəsˠə)
+
+--- Transcribing: [maoineach] ---
+maoineach            (Munster; Connacht   ) -> m'iːnæːx                    (CSV: ˈmˠiːnʲəx, ˈmˠĩːnʲəx)
+
+--- Transcribing: [altadh] ---
+altadh               (Galway; Ulster; Mayo) -> ˈɑltə                       (CSV: ˈal̪ˠt̪ˠətʲ)
+
+--- Transcribing: [baladh] ---
+baladh               (Aran; Connemara     ) -> bɑlə                         (CSV: ˈbˠɑlˠ(h)ə)
+
+--- Transcribing: [fhág] ---
+fhág                (Munster; Connacht   ) -> hɑːg                         (CSV: ˈɑːɡ)
+
+--- Transcribing: [scríobh] ---
+scríobh             (Ulster; Connacht    ) -> skr'&I_ACUTE_LONGoː           (CSV: ʃcɾʲiːw)
+
+--- Transcribing: [teach] ---
+teach                (                    ) -> t'æːx                        (CSV: tʲax)
+
+--- Transcribing: [teach] ---
+teach                (Cois-Fharraige      ) -> t'æːx                        (CSV: tʲæːx)
+
+--- Transcribing: [deartháir] ---
+deartháir           (                    ) -> d'ær'hɑːiɾʲ               (CSV: ˈdʲaɾˠhaɾʲ, ˈdʲɾʲiçaːɾʲ)
+
+--- Transcribing: [deartháir] ---
+deartháir           (Aran                ) -> d'ær'hɑːiɾʲ               (CSV: ˈdʲɾʲɑːhəɾʲ)
+
+--- Transcribing: [deartháir] ---
+deartháir           (Cois-Fharraige      ) -> d'ær'hɑːiɾʲ               (CSV: ˈdʲɾʲɑːɾʲ)
+
+--- Transcribing: [cat] ---
+cat                  (Aran                ) -> kɑt                           (CSV: kɔt̪ˠ)
+
+--- Transcribing: [cat] ---
+cat                  (Cois-Fharraige      ) -> kɑt                           (CSV: kʊt̪ˠ)
+
+--- Transcribing: [cat] ---
+cat                  (Mayo; Ulster        ) -> kɑt                           (CSV: kat̪ˠ)
+
+--- Transcribing: [cat] ---
+cat                  (Aran; Munster       ) -> kɑt                           (CSV: kɑt̪ˠ)
+
+--- Transcribing: [bord] ---
+bord                 (                    ) -> bɔrd                          (CSV: bˠoːɾˠd̪ˠ)
+
+--- Transcribing: [bord] ---
+bord                 (Aran                ) -> bɔrd                          (CSV: bˠɑuɾˠd̪ˠ)
+
+--- Transcribing: [bord] ---
+bord                 (Connemara           ) -> bɔrd                          (CSV: bˠəuɾˠd̪ˠ)
+
+--- Transcribing: [ceann] ---
+ceann                (Galway              ) -> k'æN                          (CSV: cɑːn̪ˠ)
+
+--- Transcribing: [ceann] ---
+ceann                (Mayo                ) -> k'æN                          (CSV: can̪ˠ)
+
+--- Transcribing: [poll] ---
+poll                 (Galway; Kerry       ) -> pɔL                           (CSV: pˠɑul̪ˠ)
+
+--- Transcribing: [balla] ---
+balla                (                    ) -> bɑLɑ                         (CSV: )
+
+--- Transcribing: [balla] ---
+balla                (Aran                ) -> bɑLɑ                         (CSV: ˈbˠɑl̪ˠə)
+
+--- Transcribing: [balla] ---
+balla                (Mayo; Ulster; Connemara) -> bɑLɑ                         (CSV: ˈbˠal̪ˠə)
+
+--- Transcribing: [leabhar] ---
+leabhar              (Connacht            ) -> leəɑr                        (CSV: l̠ʲəuɾˠ)
+
+--- Transcribing: [samhradh] ---
+samhradh             (Galway; Munster     ) -> səurrə                       (CSV: ˈsˠauɾˠə, ˈsˠãuɾˠə)
+
+--- Transcribing: [samhradh] ---
+samhradh             (Mayo                ) -> səurrə                       (CSV: ˈsˠauɾˠuː)
+
+--- Transcribing: [beannacht] ---
+beannacht            (Connacht            ) -> b'æNɑxt                      (CSV: ˈbʲan̪ˠəxt̪ˠ)
+
+--- Transcribing: [fonn] ---
+fonn                 (Galway; Cork        ) -> fɔN                           (CSV: fˠuːn̪ˠ)
+
+--- Transcribing: [leagan] ---
+leagan               (Cois-Fharraige      ) -> leɑgɑn                       (CSV: ˈl̠ʲæɡən̪ˠ, ˈl̠ʲæːɡən̪ˠ)
+
+--- Transcribing: [leagan] ---
+leagan               (Mayo                ) -> leɑgɑn                       (CSV: ˈlʲaɡənˠ)
+
+--- Transcribing: [teanga] ---
+teanga               (Aran; Kerry         ) -> t'æŋɑ                       (CSV: ˈtʲaŋɡə)
+
+--- Transcribing: [teanga] ---
+teanga               (Cois-Fharraige      ) -> t'æŋɑ                       (CSV: ˈtʲæːŋɡə)
+
+--- Transcribing: [teanga] ---
+teanga               (Waterford; Mayo; Cork) -> t'æŋɑ                       (CSV: ˈtʲaŋə)
+
+--- Transcribing: [seacht] ---
+seacht               (                    ) -> s'æxt                         (CSV: ʃaxt̪ˠ)
+
+--- Transcribing: [seacht] ---
+seacht               (Cois-Fharraige      ) -> s'æxt                         (CSV: ʃæxt̪ˠ, ʃæːxt̪ˠ)
+
+--- Transcribing: [aghaidh] ---
+aghaidh              (Ulster; Aran        ) -> ˈəi                          (CSV: ˈaiə)
+
+--- Transcribing: [aghaidh] ---
+aghaidh              (Aran; Connacht      ) -> ˈəi                          (CSV: ai)
+
+--- Transcribing: [nimhe] ---
+nimhe                (Connacht            ) -> nʲiv'ə                       (CSV: ˈn̠ʲivʲə)
+
+--- Transcribing: [bóthar] ---
+bóthar              (                    ) -> boːhɑr                       (CSV: ˈbˠoːhəɾˠ)
+
+--- Transcribing: [bóthar] ---
+bóthar              (Cois-Fharraige      ) -> boːhɑr                       (CSV: ˈbˠoːɾˠ)
+
+--- Transcribing: [oíche] ---
+oíche               (                    ) -> ˈoiːçi                      (CSV: )
+
+--- Transcribing: [oíche] ---
+oíche               (Aran                ) -> ˈoiːçi                      (CSV: iə, ˈɪhə)
+
+--- Transcribing: [oíche] ---
+oíche               (Ulster; Aran        ) -> ˈoiːçi                      (CSV: ˈiːhə)
+
+--- Transcribing: [oíche] ---
+oíche               (Cois-Fharraige      ) -> ˈoiːçi                      (CSV: ˈiː)
+
+--- Transcribing: [oíche] ---
+oíche               (Mayo                ) -> ˈoiːçi                      (CSV: ˈiːçə)
+
+--- Transcribing: [fear] ---
+fear                 (                    ) -> f'ær'                         (CSV: fʲaɾˠ)
+
+--- Transcribing: [fear] ---
+fear                 (Cois-Fharraige      ) -> f'ær'                         (CSV: fʲæɾˠ)
+
+--- Transcribing: [muc] ---
+muc                  (                    ) -> mʊk                           (CSV: mˠʊk)
+
+--- Transcribing: [fliuch] ---
+fliuch               (Aran                ) -> fliiç                         (CSV: fʲlʲɞx)
+
+--- Transcribing: [fliuch] ---
+fliuch               (Ulster; Cois-Fharraige; Aran) -> fliiç                         (CSV: fʲlʲɔx)
+
+--- Transcribing: [fada] ---
+fada                 (Aran; Munster       ) -> fɑdɑ                         (CSV: ˈfˠɑd̪ˠə)
+
+--- Transcribing: [fada] ---
+fada                 (Mayo; Ulster; Connemara) -> fɑdɑ                         (CSV: ˈfˠad̪ˠə)
+
+--- Transcribing: [beag] ---
+beag                 (Munster; Connacht   ) -> b'eɑg'                        (CSV: bʲɞɡ)
+
+--- Transcribing: [úrú] ---
+úrú                (                    ) -> ˈuːruː                      (CSV: ˈuːɾˠuː)
+
+--- Transcribing: [bacach] ---
+bacach               (Connacht            ) -> bɑkɑx                        (CSV: ˈbˠakəx)
+
+--- Transcribing: [bacach] ---
+bacach               (Cois-Fharraige; Connacht) -> bɑkɑx                        (CSV: ˈbˠaːkəx)
+
+--- Transcribing: [isteach] ---
+isteach              (                    ) -> ˈis't'æːx                   (CSV: əʃˈtʲax)
+
+--- Transcribing: [isteach] ---
+isteach              (Cois-Fharraige      ) -> ˈis't'æːx                   (CSV: əʃˈtʲæx, əʃˈtʲæːx)
+
+--- Transcribing: [baile] ---
+baile                (Aran                ) -> bailə                         (CSV: ˈbˠalə, ˈbˠælə)
+
+--- Transcribing: [baile] ---
+baile                (Connemara           ) -> bailə                         (CSV: ˈbˠɑːlʲə)
+
+--- Transcribing: [duine] ---
+duine                (Ulster; Munster; Connacht) -> dɪnə                         (CSV: ˈd̪ˠɪnʲə)
+
+--- Transcribing: [gaeltacht] ---
+Gaeltacht            (Munster; Connacht   ) -> geːltɑxt                     (CSV: ˈɡeːl̪ˠt̪ˠəxt̪ˠ)
+
+--- Transcribing: [conamara] ---
+Conamara             (Galway              ) -> kɔnɑmɑrɑ                   (CSV: konˠəˈmaɾˠə, ˌkun̪ˠəˈmaːɾˠə)
+
+--- Transcribing: [conamara] ---
+Conamara             (Galway; Aran        ) -> kɔnɑmɑrɑ                   (CSV: kon̪ˠəˈmaɾˠə)
+
+--- Transcribing: [conamara] ---
+Conamara             (Galway; Cois-Fharraige) -> kɔnɑmɑrɑ                   (CSV: ˌkun̪ˠəˈmaɾˠə)
+
+--- Transcribing: [gaeilge] ---
+Gaeilge              (Galway              ) -> geːilg'ə                     (CSV: ˈɡeːlʲɟɪ)
+
+--- Transcribing: [gaeilge] ---
+Gaeilge              (Mayo; Ulster        ) -> geːilg'ə                     (CSV: ˈɡeːlʲɪc)
+
+--- Transcribing: [aoibhinn] ---
+aoibhinn             (Ulster; Connacht    ) -> ˈiːv'iN'                     (CSV: ˈiːvʲən̠ʲ)
+
+--- Transcribing: [buí] ---
+buí                 (                    ) -> buiː                          (CSV: )
+
+--- Transcribing: [buí] ---
+buí                 (Munster; Connacht   ) -> buiː                          (CSV: bˠiː)
+
+--- Transcribing: [caol] ---
+caol                 (Ulster; Connacht    ) -> kɨːl                         (CSV: kiːlˠ, kiːl̪ˠ)
+
+--- Transcribing: [leathan] ---
+leathan              (Ulster; Connacht    ) -> leɑhɑn                       (CSV: ˈl̠ʲahənˠ, ˈl̠ʲahən̪ˠ)
+
+--- Transcribing: [fuinneog] ---
+fuinneog             (Connacht            ) -> fɪN'oːg                      (CSV: ˈfˠɪn̠ʲoːɡ)
+
+--- Transcribing: [staighre] ---
+staighre             (Ulster; Connacht    ) -> staijr'ə                      (CSV: ˈsˠt̪ˠaiɾʲə)
+
+--- Transcribing: [fios] ---
+fios                 (Connacht            ) -> f'ɪs                          (CSV: fʲɪsˠ)
+
+--- Transcribing: [comhrá] ---
+comhrá              (Connacht            ) -> kɔvrɑː                      (CSV: ˈkoːɾˠɑː)
+
+--- Transcribing: [oícheanta] ---
+oícheanta           (Cois-Fharraige      ) -> ˈoiːçiɑntɑ                (CSV: ˈiːn̪ˠt̪ˠiː)
+
+--- Transcribing: [oícheanta] ---
+oícheanta           (Ulster; Connacht    ) -> ˈoiːçiɑntɑ                (CSV: ˈiːçən̪ˠt̪ˠə)
+
+--- Transcribing: [codladh] ---
+codladh              (Galway; Munster     ) -> kɔdlə                        (CSV: ˈkol̪ˠə)
+
+--- Transcribing: [codladh] ---
+codladh              (Mayo                ) -> kɔdlə                        (CSV: ˈkol̪ˠuː)
+
+--- Transcribing: [luigh] ---
+luigh                (Cois-Fharraige      ) -> lɪj                           (CSV: l̪ˠɔ)
+
+--- Transcribing: [luigh] ---
+luigh                (Mayo; Ulster        ) -> lɪj                           (CSV: l̪ˠiː)
+
+--- Transcribing: [fiche] ---
+fiche                (Ulster; Aran; Munster) -> f'içi                         (CSV: ˈfʲɪhə)
+
+--- Transcribing: [fiche] ---
+fiche                (Cois-Fharraige      ) -> f'içi                         (CSV: fʲiː)
+
+--- Transcribing: [fiche] ---
+fiche                (Mayo                ) -> f'içi                         (CSV: ˈfʲɪçə)
+
+--- Transcribing: [deacair] ---
+deacair              (Cois-Fharraige      ) -> d'eɑkər'                     (CSV: ˈdʲækəɾʲ)
+
+--- Transcribing: [deacair] ---
+deacair              (Aran; Kerry         ) -> d'eɑkər'                     (CSV: ˈdʲɞkəɾʲ)
+
+--- Transcribing: [sláinte] ---
+sláinte             (Cois-Fharraige      ) -> slɑːint'ə                   (CSV: ˈsˠl̪ˠan̠ʲtʲə, ˈsˠl̪ˠəin̠ʲtʲə)
+
+--- Transcribing: [ceart] ---
+ceart                (                    ) -> k'ær't                        (CSV: caɾˠt̪ˠ, cæːɾˠt̪ˠ)
+
+--- Transcribing: [ceart] ---
+ceart                (Cois-Fharraige      ) -> k'ær't                        (CSV: cæɾˠt̪ˠ)
+
+--- Transcribing: [lae] ---
+lae                  (                    ) -> leː                           (CSV: l̪ˠeː)
+
+--- Transcribing: [laoch] ---
+laoch                (Ulster; Connacht    ) -> lɨːx                         (CSV: l̪ˠiːx)
+
+--- Transcribing: [aer] ---
+aer                  (Ulster; Munster; Connacht) -> ˈeːr'                        (CSV: eːɾˠ)
+
+--- Transcribing: [ceo] ---
+ceo                  (Munster; Connacht   ) -> k'oː                          (CSV: coː)
+
+--- Transcribing: [ceol] ---
+ceol                 (                    ) -> k'oːl                         (CSV: )
+
+--- Transcribing: [ceol] ---
+ceol                 (Connacht            ) -> k'oːl                         (CSV: coːlˠ)
+
+--- Transcribing: [ceol] ---
+ceol                 (Munster; Connacht   ) -> k'oːl                         (CSV: coːl̪ˠ)
+
+--- Transcribing: [coir] ---
+coir                 (                    ) -> kɛr'                          (CSV: kɛɾʲ)
+
+--- Transcribing: [coill] ---
+coill                (Connacht            ) -> kɛL'                          (CSV: kail̠ʲ, kɞl̠ʲ)
+
+--- Transcribing: [coill] ---
+coill                (Galway; Connacht    ) -> kɛL'                          (CSV: koil̠ʲ)
+
+--- Transcribing: [coill] ---
+coill                (Mayo; Connacht      ) -> kɛL'                          (CSV: kel̠ʲ)
+
+--- Transcribing: [faoi] ---
+faoi                 (                    ) -> f'iː                          (CSV: fˠiː)
+
+--- Transcribing: [gaoth] ---
+gaoth                (Ulster; Connacht    ) -> gɨːh                         (CSV: ɡiː, ɡɯː)
+
+--- Transcribing: [dearmad] ---
+dearmad              (Ulster; Mayo; Aran  ) -> d'ær'mɑd                     (CSV: ˈdʲaɾˠəmˠəd̪ˠ)
+
+--- Transcribing: [dearmad] ---
+dearmad              (Cois-Fharraige      ) -> d'ær'mɑd                     (CSV: ˈdʲæɾˠəmˠəd̪ˠ, ˈdʲæːɾˠəmˠəd̪ˠ)
+
+--- Transcribing: [seomraí] ---
+seomraí             (                    ) -> s'oːmriː                     (CSV: ˈʃoːmˠɾˠiː, ˈʃuːmˠɾˠiː)
+
+--- Transcribing: [doras] ---
+doras                (Aran; also          ) -> dɔrɑs                        (CSV: ˈd̪ˠɞɾˠəsˠ)
+
+--- Transcribing: [doras] ---
+doras                (Ulster; Connacht    ) -> dɔrɑs                        (CSV: ˈd̪ˠɔɾˠəsˠ)
+
+--- Transcribing: [amhrán] ---
+amhrán              (Connacht            ) -> ˈəurrɑːn                   (CSV: ˈoːɾˠɑːnˠ, ˈoːɾˠɑːn̪ˠ)
+
+--- Transcribing: [amhrán] ---
+amhrán              (Aran; also; Connacht) -> ˈəurrɑːn                   (CSV: ˈɑːɾˠɑːnˠ)
+
+--- Transcribing: [dearcadh] ---
+dearcadh             (Galway              ) -> d'ær'kə                      (CSV: ˈdʲaɾˠkəvˠ)
+
+--- Transcribing: [dearcadh] ---
+dearcadh             (Galway; Ulster; Mayo) -> d'ær'kə                      (CSV: ˈdʲaɾˠkətʲ)
+
+--- Transcribing: [dearcadh] ---
+dearcadh             (Galway; Munster     ) -> d'ær'kə                      (CSV: ˈdʲaɾˠkə)
+
+--- Transcribing: [dearcadh] ---
+dearcadh             (Mayo; Ulster        ) -> d'ær'kə                      (CSV: ˈdʲaɾˠkuː)
+
+--- Transcribing: [dearcadh] ---
+dearcadh             (Galway; Munster     ) -> d'ær'kə                      (CSV: ˈdʲaɾˠkəx)
+
+--- Transcribing: [dearfa] ---
+dearfa               (                    ) -> d'ær'fɑ                      (CSV: ˈdʲaɾˠəfˠə)
+
+--- Transcribing: [dearfa] ---
+dearfa               (Aran                ) -> d'ær'fɑ                      (CSV: ˈdʲarˠfˠə, ˈdʲɛɾˠfˠə)
+
+--- Transcribing: [seanbhean] ---
+seanbhean            (Ulster; Connacht    ) -> s'ænv'ən                     (CSV: ˈʃanˠvʲanˠ)
+
+--- Transcribing: [seanbhean] ---
+seanbhean            (Cois-Fharraige; Ulster; Connacht) -> s'ænv'ən                     (CSV: ˈʃæːn̪ˠˌvʲæːn̪ˠ)
+
+--- Transcribing: [bhean] ---
+bhean                (Galway              ) -> v'æn                          (CSV: vʲænˠ)
+
+--- Transcribing: [bhean] ---
+bhean                (Galway; Cois-Fharraige) -> v'æn                          (CSV: vʲæːn̪ˠ)
+
+--- Transcribing: [bhean] ---
+bhean                (Mayo; Ulster        ) -> v'æn                          (CSV: vʲanˠ)
+
+--- Transcribing: [beart] ---
+beart                (                    ) -> b'ær't                        (CSV: bʲaɾˠt̪ˠ)
+
+--- Transcribing: [bean] ---
+bean                 (Aran                ) -> b'æn                          (CSV: bʲæn)
+
+--- Transcribing: [bean] ---
+bean                 (Cois-Fharraige      ) -> b'æn                          (CSV: bʲæːn̪ˠ)
+
+--- Transcribing: [bean] ---
+bean                 (Mayo; Ulster        ) -> b'æn                          (CSV: bʲanˠ)
+
+--- Transcribing: [bean] ---
+bean                 (Mayo; Ulster; Munster) -> b'æn                          (CSV: bʲan̪ˠ)
+
+--- Transcribing: [geal] ---
+geal                 (                    ) -> g'eɑl                         (CSV: ɟalˠ, ɟal̪ˠ)
+
+--- Transcribing: [eagla] ---
+eagla                (Aran                ) -> ˈeɑg'lɑ                     (CSV: ˈaːɡlə)
+
+--- Transcribing: [eagla] ---
+eagla                (Mayo                ) -> ˈeɑg'lɑ                     (CSV: ˈaɡlˠuː)
+
+--- Transcribing: [muid] ---
+muid                 (                    ) -> mɪd'                          (CSV: mˠɪdʲ)
+
+--- Transcribing: [duit] ---
+duit                 (                    ) -> dɪt'                          (CSV: d̪ˠɪtʲ)
+
+--- Transcribing: [fuil] ---
+fuil                 (Munster; Connacht   ) -> fɪl                           (CSV: fˠɪlʲ)
+
+--- Transcribing: [goil] ---
+goil                 (                    ) -> gɔl                           (CSV: ɡɔlʲ, ɡɛlʲ)
+
+--- Transcribing: [goil] ---
+goil                 (Aran                ) -> gɔl                           (CSV: ɡɞl)
+
+--- Transcribing: [cuir] ---
+cuir                 (                    ) -> kɪr'                          (CSV: kɪɾʲ)
+
+--- Transcribing: [druid] ---
+druid                (                    ) -> drɪd'                         (CSV: d̪ˠɾˠɪdʲ)
+
+--- Transcribing: [druid] ---
+druid                (Aran                ) -> drɪd'                         (CSV: d̪ˠɾˠɛdʲ, ˈd̪ˠɞɾˠədʲ)
+
+--- Transcribing: [luibh] ---
+luibh                (Munster; Connacht   ) -> luiː                          (CSV: l̪ˠɪvʲ)
+
+--- Transcribing: [ceist] ---
+ceist                (                    ) -> k'es't'                        (CSV: cɛʃtʲ)
+
+--- Transcribing: [ocht] ---
+ocht                 (Connacht            ) -> ˈɔxt                         (CSV: ɔxt̪ˠ)
+
+--- Transcribing: [páiste] ---
+páiste              (Munster; Connacht   ) -> pɑːis't'ə                   (CSV: ˈpˠɑːʃtʲə)
+
+--- Transcribing: [sparán] ---
+sparán              (Connacht            ) -> spɑrɑːn                     (CSV: ˈsˠpˠaɾˠɑːnˠ)
+
+--- Transcribing: [scéal] ---
+scéal               (Ulster; Connacht    ) -> sk'eːɑl                      (CSV: ʃceːlˠ, ʃceːl̪ˠ)
+
+--- Transcribing: [bláth] ---
+bláth               (Connacht            ) -> bl&A_ACUTE_LONG_VOChSILENT_FINAL& (CSV: bˠlˠɑː, bˠl̪ˠɑː)
+
+--- Transcribing: [cnoc] ---
+cnoc                 (Connacht            ) -> krɔk                          (CSV: knok, knuk, knɞk, kɾˠok, kɾˠuk, kɾˠɞk)
+
+--- Transcribing: [gnó] ---
+gnó                 (Connacht            ) -> groː                          (CSV: ɡnˠoː, ɡnˠuː, ɡɾˠoː, ɡɾˠuː)
+
+--- Transcribing: [dlí] ---
+dlí                 (Aran                ) -> dʲlʲiː                      (CSV: dʲliː, d̪ˠəˈliə)
+
+--- Transcribing: [dlí] ---
+dlí                 (Cois-Fharraige; Ulster; Munster) -> dʲlʲiː                      (CSV: dʲlʲiː)
+
+--- Transcribing: [dlí] ---
+dlí                 (Mayo; Ulster        ) -> dʲlʲiː                      (CSV: ˈdʲlʲiːw)
+
+--- Transcribing: [mná] ---
+mná                 (Aran; Munster       ) -> mnɑː                         (CSV: mˠn̪ˠɑː, mˠn̪ˠɑ̃ː)
+
+--- Transcribing: [mná] ---
+mná                 (Mayo; Connemara     ) -> mnɑː                         (CSV: mˠɾˠɑː)
+
+--- Transcribing: [trá] ---
+trá                 (Cois-Fharraige      ) -> trɑː                         (CSV: t̪ˠɾˠɑːw)
+
+--- Transcribing: [trá] ---
+trá                 (Cois-Fharraige; Munster; Connacht) -> trɑː                         (CSV: t̪ˠɾˠɑː)
+
+--- Transcribing: [trá] ---
+trá                 (Cois-Fharraige; genitive) -> trɑː                         (CSV: tˠrˠɑːw)
+
+--- Transcribing: [uisce] ---
+uisce                (                    ) -> ˈɪs'k'ə                     (CSV: ˈiʃcə, ˈiʃcɪ)
+
+--- Transcribing: [obair] ---
+obair                (Munster; Connacht   ) -> ˈɔbər'                      (CSV: ˈɔbˠəɾʲ)
+
+--- Transcribing: [imir] ---
+imir                 (                    ) -> ˈim'ir'                       (CSV: ˈɪmʲəɾʲ)
+
+--- Transcribing: [eolas] ---
+eolas                (Connacht            ) -> ˈoːlɑs                      (CSV: ˈoːlˠəsˠ)
+
+--- Transcribing: [eolas] ---
+eolas                (Munster; Connacht   ) -> ˈoːlɑs                      (CSV: ˈoːl̪ˠəsˠ)
+
+--- Transcribing: [athair] ---
+athair               (                    ) -> ˈɑhair                       (CSV: ˈahæɾʲ, ˈahəɾˠ, ˈæhæɾʲ, ˈɛhəɾˠ)
+
+--- Transcribing: [athair] ---
+athair               (Aran                ) -> ˈɑhair                       (CSV: ˈæhəɾʲ)
+
+--- Transcribing: [athair] ---
+athair               (Cois-Fharraige      ) -> ˈɑhair                       (CSV: æɾʲ, æːɾʲ)
+
+--- Transcribing: [athair] ---
+athair               (Mayo; Munster       ) -> ˈɑhair                       (CSV: ˈahəɾʲ)
+
+--- Transcribing: [máthair] ---
+máthair             (Connacht            ) -> mɑːhər                      (CSV: ˈmˠãːhəɾʲ)
+
+--- Transcribing: [máthair] ---
+máthair             (Cois-Fharraige; Connacht) -> mɑːhər                      (CSV: ˈmˠɑːɾʲ)
+
+--- Transcribing: [máthair] ---
+máthair             (Munster; Connacht   ) -> mɑːhər                      (CSV: ˈmˠɑːhəɾʲ)
+
+--- Transcribing: [deirfiúr] ---
+deirfiúr            (                    ) -> d'er'f'uːr                    (CSV: ˈdʲɛɾʲəfʲəɾˠ, ˈdʲɛɾʲəhuːɾˠ)
+
+--- Transcribing: [deirfiúr] ---
+deirfiúr            (Aran                ) -> d'er'f'uːr                    (CSV: ˈdʲɾʲauhəɾˠ)
+
+--- Transcribing: [deirfiúr] ---
+deirfiúr            (West; South; Mayo; Aran; Connemara) -> d'er'f'uːr                    (CSV: ˈdʲɾʲɛhuːɾˠ)
+
+--- Transcribing: [deirfiúr] ---
+deirfiúr            (Cois-Fharraige      ) -> d'er'f'uːr                    (CSV: ˈdʲɾʲauɾˠ)
+
+--- Transcribing: [imirt] ---
+imirt                (Munster; Connacht   ) -> ˈim'ir't'                     (CSV: ˈɪmʲəɾˠtʲ)
+
+--- Transcribing: [oibre] ---
+oibre                (                    ) -> ˈɛb'r'e                      (CSV: ˈɛbʲɾʲə)
+
+--- Transcribing: [oibre] ---
+oibre                (Cois-Fharraige      ) -> ˈɛb'r'e                      (CSV: ˈaibʲɾʲə)
+
+--- Transcribing: [ceacht] ---
+ceacht               (                    ) -> k'æxt                         (CSV: caxt̪ˠ)
+
+--- Transcribing: [ceacht] ---
+ceacht               (Cois-Fharraige      ) -> k'æxt                         (CSV: cæxt̪ˠ)
+
+--- Transcribing: [arm] ---
+arm                  (Aran; Munster       ) -> ˈɑrm                         (CSV: ˈɑɾˠəmˠ)
+
+--- Transcribing: [arm] ---
+arm                  (Mayo; Ulster; Connemara) -> ˈɑrm                         (CSV: ˈaɾˠəmˠ)
+
+--- Transcribing: [bolg] ---
+bolg                 (                    ) -> bɔləg                        (CSV: ˈbˠɔlˠəɡ, ˈbˠɔl̪ˠəɡ)
+
+--- Transcribing: [bolg] ---
+bolg                 (Aran                ) -> bɔləg                        (CSV: ˈbˠɔlək)
+
+--- Transcribing: [garbh] ---
+garbh                (Aran; Munster       ) -> gɑrv                          (CSV: ˈɡɑɾˠəvˠ)
+
+--- Transcribing: [garbh] ---
+garbh                (Connemara           ) -> gɑrv                          (CSV: ˈɡaɾˠəvˠ)
+
+--- Transcribing: [garbh] ---
+garbh                (Mayo; Ulster        ) -> gɑrv                          (CSV: ˈɡaɾˠuː)
+
+--- Transcribing: [gorm] ---
+gorm                 (Connacht            ) -> gɔrəm                        (CSV: ˈɡɞɾˠəmˠ)
+
+--- Transcribing: [gorm] ---
+gorm                 (Ulster; Connacht    ) -> gɔrəm                        (CSV: ˈɡɔɾˠəmˠ)
+
+--- Transcribing: [gairm] ---
+gairm                (                    ) -> gair'm'                        (CSV: )
+
+--- Transcribing: [gairm] ---
+gairm                (Connacht            ) -> gair'm'                        (CSV: ˈɡeɾʲəmʲ)
+
+--- Transcribing: [balbh] ---
+balbh                (Aran                ) -> bɑlv                          (CSV: ˈbˠɑləvˠ)
+
+--- Transcribing: [balbh] ---
+balbh                (Connemara           ) -> bɑlv                          (CSV: ˈbˠalˠəvˠ, ˈbˠal̪ˠəvˠ)
+
+--- Transcribing: [balbh] ---
+balbh                (Mayo                ) -> bɑlv                          (CSV: ˈbˠalˠuː, ˈbˠal̪ˠuː)
+
+--- Transcribing: [seilbh] ---
+seilbh               (                    ) -> s'elv'                         (CSV: ˈʃɛlʲəvʲ)
+
+--- Transcribing: [dearg] ---
+dearg                (                    ) -> d'ær'g'                       (CSV: ˈdʲaɾˠəɡ)
+
+--- Transcribing: [dearg] ---
+dearg                (Aran                ) -> d'ær'g'                       (CSV: ˈdʲaɾˠək)
+
+--- Transcribing: [dearg] ---
+dearg                (Cois-Fharraige      ) -> d'ær'g'                       (CSV: ˈdʲæɾˠəɡ, ˈdʲæːɾˠəɡ)
+
+--- Transcribing: [fearg] ---
+fearg                (Aran                ) -> f'ær'g'                       (CSV: ˈfʲaɾˠəɡ, ˈfʲæɾˠəɡ)
+
+--- Transcribing: [fearg] ---
+fearg                (Cois-Fharraige      ) -> f'ær'g'                       (CSV: ˈfʲæːɾˠəɡ)
+
+--- Transcribing: [colm] ---
+colm                 (Connacht            ) -> kɔlm                          (CSV: ˈkolˠəmˠ)
+
+--- Transcribing: [colm] ---
+colm                 (Cois-Fharraige; Connacht) -> kɔlm                          (CSV: ˈkol̪ˠəmˠ)
+
+--- Transcribing: [ainm] ---
+ainm                 (Galway              ) -> ˈɑnm'                        (CSV: ˈænʲəmʲ, ˈæːnʲəmʲ)
+
+--- Transcribing: [ainm] ---
+ainm                 (Mayo; Munster       ) -> ˈɑnm'                        (CSV: ˈanʲəmʲ)
+
+--- Transcribing: [scrúdaigh] ---
+scrúdaigh           (Galway              ) -> skruːdə                      (CSV: ˈsˠkɾˠuːd̪ˠə)
+
+--- Transcribing: [scrúdaigh] ---
+scrúdaigh           (Mayo                ) -> skruːdə                      (CSV: ˈsˠkɾˠuːd̪ˠiː)
+
+--- Transcribing: [cónaigh] ---
+cónaigh             (Connacht            ) -> koːnə                        (CSV: ˈkoːnˠiː, ˈkoːnˠə)
+
+--- Transcribing: [beannaigh] ---
+beannaigh            (Galway              ) -> b'æNə                        (CSV: ˈbʲæn̪ˠə)
+
+--- Transcribing: [beannaigh] ---
+beannaigh            (Mayo                ) -> b'æNə                        (CSV: ˈbʲan̪ˠiː)
+
+--- Transcribing: [teann] ---
+teann                (Galway              ) -> t'æN                          (CSV: tʲɑːn̪ˠ)
+
+--- Transcribing: [teann] ---
+teann                (Mayo; Ulster        ) -> t'æN                          (CSV: tʲan̪ˠ)
+
+--- Transcribing: [trom] ---
+trom                 (Galway              ) -> trɔm                          (CSV: t̪ˠɾˠuːmˠ)
+
+--- Transcribing: [trom] ---
+trom                 (Mayo                ) -> trɔm                          (CSV: t̪ˠɾˠʊmˠ)
+
+--- Transcribing: [am] ---
+am                   (                    ) -> ˈɑm                          (CSV: əmˠ)
+
+--- Transcribing: [am] ---
+am                   (Galway              ) -> ˈɑm                          (CSV: ɑːmˠ)
+
+--- Transcribing: [am] ---
+am                   (Galway; Ulster; Mayo) -> ˈɑm                          (CSV: amˠ)
+
+--- Transcribing: [cam] ---
+cam                  (Galway              ) -> kɑm                           (CSV: kɑːmˠ)
+
+--- Transcribing: [cam] ---
+cam                  (Mayo; Ulster        ) -> kɑm                           (CSV: kamˠ)
+
+--- Transcribing: [gall] ---
+gall                 (Aran                ) -> gɑL                           (CSV: ɡɑ(ː)l̪ˠ)
+
+--- Transcribing: [gall] ---
+gall                 (Cois-Fharraige      ) -> gɑL                           (CSV: ɡɑːl̪ˠ)
+
+--- Transcribing: [dún] ---
+dún                 (                    ) -> duːn                          (CSV: d̪ˠuːnˠ)
+
+--- Transcribing: [dubh] ---
+dubh                 (Aran                ) -> duː                           (CSV: d̪ˠɞ, d̪ˠʊ)
+
+--- Transcribing: [dubh] ---
+dubh                 (Connemara           ) -> duː                           (CSV: d̪ˠʊ(vˠ))
+
+--- Transcribing: [dubh] ---
+dubh                 (Mayo                ) -> duː                           (CSV: d̪ˠʊw)
+
+--- Transcribing: [dubh] ---
+dubh                 (Mayo; Ulster; rare  ) -> duː                           (CSV: d̪ˠʊfˠ)
+
+--- Transcribing: [móin] ---
+móin                (Cois-Fharraige; Kerry) -> moːn                          (CSV: mˠuːnʲ)
+
+--- Transcribing: [dubh] ---
+dubh                 (Aran                ) -> duː                           (CSV: d̪ˠɞ, d̪ˠʊ)
+
+--- Transcribing: [dubh] ---
+dubh                 (Connemara           ) -> duː                           (CSV: d̪ˠʊ(vˠ))
+
+--- Transcribing: [dubh] ---
+dubh                 (Mayo                ) -> duː                           (CSV: d̪ˠʊw)
+
+--- Transcribing: [dubh] ---
+dubh                 (Mayo; Ulster; rare  ) -> duː                           (CSV: d̪ˠʊfˠ)
+
+--- Transcribing: [samhradh] ---
+samhradh             (Galway; Munster     ) -> səurrə                       (CSV: ˈsˠauɾˠə, ˈsˠãuɾˠə)
+
+--- Transcribing: [samhradh] ---
+samhradh             (Mayo                ) -> səurrə                       (CSV: ˈsˠauɾˠuː)
+
+--- Transcribing: [cnámh] ---
+cnámh               (Galway              ) -> krɑːv                        (CSV: knaːvʲ)
+
+--- Transcribing: [cnámh] ---
+cnámh               (Galway; Aran        ) -> krɑːv                        (CSV: knɑːvʲ)
+
+--- Transcribing: [cnámh] ---
+cnámh               (Galway; Cois-Fharraige) -> krɑːv                        (CSV: kɾɑːvʲ)
+
+--- Transcribing: [cnámh] ---
+cnámh               (Mayo; Ulster        ) -> krɑːv                        (CSV: kɾˠãːvʲ)
+
+--- Transcribing: [cnámh] ---
+cnámh               (plural-only; plural; genitive; Ulster; Mayo) -> krɑːv                        (CSV: kɾˠãːw)
+
+--- Transcribing: [nimhe] ---
+nimhe                (Connacht            ) -> nʲiv'ə                       (CSV: ˈn̠ʲivʲə)
+
+--- Transcribing: [aghaidh] ---
+aghaidh              (Ulster; Aran        ) -> ˈəi                          (CSV: ˈaiə)
+
+--- Transcribing: [aghaidh] ---
+aghaidh              (Aran; Connacht      ) -> ˈəi                          (CSV: ai)
+
+--- Transcribing: [leabhar] ---
+leabhar              (Connacht            ) -> leəɑr                        (CSV: l̠ʲəuɾˠ)
+
+--- Transcribing: [bóthar] ---
+bóthar              (                    ) -> boːhɑr                       (CSV: ˈbˠoːhəɾˠ)
+
+--- Transcribing: [bóthar] ---
+bóthar              (Cois-Fharraige      ) -> boːhɑr                       (CSV: ˈbˠoːɾˠ)
+
+--- Transcribing: [cat] ---
+cat                  (Aran                ) -> kɑt                           (CSV: kɔt̪ˠ)
+
+--- Transcribing: [cat] ---
+cat                  (Cois-Fharraige      ) -> kɑt                           (CSV: kʊt̪ˠ)
+
+--- Transcribing: [cat] ---
+cat                  (Mayo; Ulster        ) -> kɑt                           (CSV: kat̪ˠ)
+
+--- Transcribing: [cat] ---
+cat                  (Aran; Munster       ) -> kɑt                           (CSV: kɑt̪ˠ)
+
+--- Transcribing: [fios] ---
+fios                 (Connacht            ) -> f'ɪs                          (CSV: fʲɪsˠ)
+
+--- Transcribing: [coill] ---
+coill                (Connacht            ) -> kɛL'                          (CSV: kail̠ʲ, kɞl̠ʲ)
+
+--- Transcribing: [coill] ---
+coill                (Galway; Connacht    ) -> kɛL'                          (CSV: koil̠ʲ)
+
+--- Transcribing: [coill] ---
+coill                (Mayo; Connacht      ) -> kɛL'                          (CSV: kel̠ʲ)
+
+--- Transcribing: [caol] ---
+caol                 (Ulster; Connacht    ) -> kɨːl                         (CSV: kiːlˠ, kiːl̪ˠ)
+
+--- Transcribing: [gaoth] ---
+gaoth                (Ulster; Connacht    ) -> gɨːh                         (CSV: ɡiː, ɡɯː)
+
+--- Transcribing: [aoibhinn] ---
+aoibhinn             (Ulster; Connacht    ) -> ˈiːv'iN'                     (CSV: ˈiːvʲən̠ʲ)
+
+--- Transcribing: [móin] ---
+móin                (Cois-Fharraige; Kerry) -> moːn                          (CSV: mˠuːnʲ)
+
+--- Transcribing: [bord] ---
+bord                 (                    ) -> bɔrd                          (CSV: bˠoːɾˠd̪ˠ)
+
+--- Transcribing: [bord] ---
+bord                 (Aran                ) -> bɔrd                          (CSV: bˠɑuɾˠd̪ˠ)
+
+--- Transcribing: [bord] ---
+bord                 (Connemara           ) -> bɔrd                          (CSV: bˠəuɾˠd̪ˠ)
+
+--- Transcribing: [poll] ---
+poll                 (Galway; Kerry       ) -> pɔL                           (CSV: pˠɑul̪ˠ)
+
+--- Transcribing: [fonn] ---
+fonn                 (Galway; Cork        ) -> fɔN                           (CSV: fˠuːn̪ˠ)
+
+--- Transcribing: [ceann] ---
+ceann                (Galway              ) -> k'æN                          (CSV: cɑːn̪ˠ)
+
+--- Transcribing: [ceann] ---
+ceann                (Mayo                ) -> k'æN                          (CSV: can̪ˠ)
+
+--- Transcribing: [beannaigh] ---
+beannaigh            (Galway              ) -> b'æNə                        (CSV: ˈbʲæn̪ˠə)
+
+--- Transcribing: [beannaigh] ---
+beannaigh            (Mayo                ) -> b'æNə                        (CSV: ˈbʲan̪ˠiː)
+--- CSV Test Suite Finished ---
+
+--- Running Test Set for Iteration 37BD (Parser Perfected & Vocalization Refactor) ---
+
+--- Transcribing: [ainm] ---
+ainm            -> [ˈɑnm']
+
+--- Transcribing: [oilc] ---
+oilc            -> [ˈɛlk']
+
+--- Transcribing: [seilf] ---
+seilf           -> [s'elf']
+
+--- Transcribing: [balla] ---
+balla           -> [bɑLɑ]
+
+--- Transcribing: [codladh] ---
+codladh         -> [kɔdlə]
+
+--- Transcribing: [daoine] ---
+daoine          -> [d'iːnə]
+
+--- Transcribing: [eolas] ---
+eolas           -> [ˈoːlɑs]
+
+--- Transcribing: [athair] ---
+athair          -> [ˈɑhair]
+
+--- Transcribing: [dorcha] ---
+dorcha          -> [dɔrəxɑ]
+
+--- Transcribing: [cnead] ---
+cnead           -> [kr''eɑd]
+
+--- Transcribing: [samhradh] ---
+samhradh        -> [səurrə]
+
+--- Transcribing: [abhann] ---
+abhann          -> [ˈɑuɑN]
+
+--- Transcribing: [gabhal] ---
+gabhal          -> [gɑuɑl]
+
+--- Transcribing: [labhairt] ---
+labhairt        -> [lɑuərt']
+
+--- Transcribing: [cobhair] ---
+cobhair         -> [kɔwər]
+
+--- Transcribing: [domhan] ---
+domhan          -> [dɔwɑn]
+
+--- Transcribing: [radharc] ---
+radharc         -> [rɑɣɑrk]
+
+--- Transcribing: [laghad] ---
+laghad          -> [lɑɣɑd]
+
+--- Transcribing: [bodhar] ---
+bodhar          -> [bɔɣɑr]
+
+--- Transcribing: [foghmhar] ---
+foghmhar        -> [fɔɣwɑr]
+
+--- Transcribing: [feidhm] ---
+feidhm          -> [f'ejm']
+
+--- Transcribing: [suidhe] ---
+suidhe          -> [sɪji]
+
+--- Transcribing: [dubhach] ---
+dubhach         -> [dɔwɑx]
+
+--- Transcribing: [slighe] ---
+slighe          -> [sliji]
+
+--- Transcribing: [buíon] ---
+buíon          -> [buiːən]
+
+--- Transcribing: [cnámh] ---
+cnámh          -> [krɑːv]
+
+--- Transcribing: [mná] ---
+mná            -> [mnɑː]

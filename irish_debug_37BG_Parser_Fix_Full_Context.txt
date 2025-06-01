@@ -1,0 +1,355 @@
+﻿
+--- Running Focused Test Set for Parser Debug (Iteration 37BG) ---
+
+--- Testing word:	ainm	---
+
+--- Transcribing: [ainm] ---
+    PARSER_DBG (Parser): --- Parsing phonetic string START (NFC): '	ˈɑnm'	' (Raw: '	ˈɑnm'	') ---
+    PARSER_DBG (Parser): Found stress mark at pos 	1	. Remaining: '	ɑnm'	'
+    PARSER_DBG (Parser): Pos:	2	Char:'	ɑ	' Rem:'	ɑnm'	' Bytes:	C9 91
+    PARSER_DBG (Parser):   Adding unit: '	ˈ	' (stress_mark) (no other unit matched after it at this pos)
+    PARSER_DBG (Parser): Pos:	2	Char:'	ɑ	' Rem:'	ɑnm'	' Bytes:	C9 91
+    PARSER_DBG (Parser):   FALLBACK: No match from priority list for char '	ɑ	' at pos 	2	. Bytes: 	C9 91
+    PARSER_DBG (Parser): Pos:	3	Char:'	n	' Rem:'	nm'	' Bytes:	6E
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	n	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	n	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	4	Char:'	m	' Rem:'	m'	' Bytes:	6D
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	m	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	m	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	5	Char:'	'	' Rem:'	'	' Bytes:	27
+    PARSER_DBG (Parser):   FALLBACK: No match from priority list for char '	'	' at pos 	5	. Bytes: 	27
+    PARSER_DBG (Parser): --- Parsing phonetic string END. Units found: 	5	 ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈɑnm'	' (using 	4	 non-stress units) count: 	0	 result: 	false
+    PARSER_DBG (Parser): --- Parsing phonetic string START (NFC): '	ˈɑnm'	' (Raw: '	ˈɑnm'	') ---
+    PARSER_DBG (Parser): Found stress mark at pos 	1	. Remaining: '	ɑnm'	'
+    PARSER_DBG (Parser): Pos:	2	Char:'	ɑ	' Rem:'	ɑnm'	' Bytes:	C9 91
+    PARSER_DBG (Parser):   Adding unit: '	ˈ	' (stress_mark) (no other unit matched after it at this pos)
+    PARSER_DBG (Parser): Pos:	2	Char:'	ɑ	' Rem:'	ɑnm'	' Bytes:	C9 91
+    PARSER_DBG (Parser):   FALLBACK: No match from priority list for char '	ɑ	' at pos 	2	. Bytes: 	C9 91
+    PARSER_DBG (Parser): Pos:	3	Char:'	n	' Rem:'	nm'	' Bytes:	6E
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	n	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	n	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	4	Char:'	m	' Rem:'	m'	' Bytes:	6D
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	m	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	m	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	5	Char:'	'	' Rem:'	'	' Bytes:	27
+    PARSER_DBG (Parser):   FALLBACK: No match from priority list for char '	'	' at pos 	5	. Bytes: 	27
+    PARSER_DBG (Parser): --- Parsing phonetic string END. Units found: 	5	 ---
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɑnm'
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɑnm'
+  apply_procedural_epenthesis START: In=	ˈɑnm'
+    PARSER_DBG (Parser): --- Parsing phonetic string START (NFC): '	ˈɑnm'	' (Raw: '	ˈɑnm'	') ---
+    PARSER_DBG (Parser): Found stress mark at pos 	1	. Remaining: '	ɑnm'	'
+    PARSER_DBG (Parser): Pos:	2	Char:'	ɑ	' Rem:'	ɑnm'	' Bytes:	C9 91
+    PARSER_DBG (Parser):   Adding unit: '	ˈ	' (stress_mark) (no other unit matched after it at this pos)
+    PARSER_DBG (Parser): Pos:	2	Char:'	ɑ	' Rem:'	ɑnm'	' Bytes:	C9 91
+    PARSER_DBG (Parser):   FALLBACK: No match from priority list for char '	ɑ	' at pos 	2	. Bytes: 	C9 91
+    PARSER_DBG (Parser): Pos:	3	Char:'	n	' Rem:'	nm'	' Bytes:	6E
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	n	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	n	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	4	Char:'	m	' Rem:'	m'	' Bytes:	6D
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	m	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	m	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	5	Char:'	'	' Rem:'	'	' Bytes:	27
+    PARSER_DBG (Parser):   FALLBACK: No match from priority list for char '	'	' at pos 	5	. Bytes: 	27
+    PARSER_DBG (Parser): --- Parsing phonetic string END. Units found: 	5	 ---
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	ˈ(stress_mark) | ɑ(unknown_fallback) | n(nonpalatal) | m(nonpalatal) | '(unknown_fallback)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈɑnm'	' (using 	4	 non-stress units) count: 	0	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	ˈɑnm'
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	ˈɑnm'
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	ˈɑnm'
+  EpenthesisAndStrongSonorants END (Proc): Out=	ˈɑnm'
+Af. EpenthesisAndStrongSonorants: [ˈɑnm']
+ainm            -> [ˈɑnm']
+
+--- Testing word:	oilc	---
+
+--- Transcribing: [oilc] ---
+    PARSER_DBG (Parser): --- Parsing phonetic string START (NFC): '	ˈɛlk'	' (Raw: '	ˈɛlk'	') ---
+    PARSER_DBG (Parser): Found stress mark at pos 	1	. Remaining: '	ɛlk'	'
+    PARSER_DBG (Parser): Pos:	2	Char:'	ɛ	' Rem:'	ɛlk'	' Bytes:	C9 9B
+    PARSER_DBG (Parser):   Adding unit: '	ˈ	' (stress_mark) (no other unit matched after it at this pos)
+    PARSER_DBG (Parser): Pos:	2	Char:'	ɛ	' Rem:'	ɛlk'	' Bytes:	C9 9B
+    PARSER_DBG (Parser):   FALLBACK: No match from priority list for char '	ɛ	' at pos 	2	. Bytes: 	C9 9B
+    PARSER_DBG (Parser): Pos:	3	Char:'	l	' Rem:'	lk'	' Bytes:	6C
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	l	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	l	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	4	Char:'	k	' Rem:'	k'	' Bytes:	6B
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	k	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	k	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	5	Char:'	'	' Rem:'	'	' Bytes:	27
+    PARSER_DBG (Parser):   FALLBACK: No match from priority list for char '	'	' at pos 	5	. Bytes: 	27
+    PARSER_DBG (Parser): --- Parsing phonetic string END. Units found: 	5	 ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈɛlk'	' (using 	4	 non-stress units) count: 	0	 result: 	false
+    PARSER_DBG (Parser): --- Parsing phonetic string START (NFC): '	ˈɛlk'	' (Raw: '	ˈɛlk'	') ---
+    PARSER_DBG (Parser): Found stress mark at pos 	1	. Remaining: '	ɛlk'	'
+    PARSER_DBG (Parser): Pos:	2	Char:'	ɛ	' Rem:'	ɛlk'	' Bytes:	C9 9B
+    PARSER_DBG (Parser):   Adding unit: '	ˈ	' (stress_mark) (no other unit matched after it at this pos)
+    PARSER_DBG (Parser): Pos:	2	Char:'	ɛ	' Rem:'	ɛlk'	' Bytes:	C9 9B
+    PARSER_DBG (Parser):   FALLBACK: No match from priority list for char '	ɛ	' at pos 	2	. Bytes: 	C9 9B
+    PARSER_DBG (Parser): Pos:	3	Char:'	l	' Rem:'	lk'	' Bytes:	6C
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	l	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	l	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	4	Char:'	k	' Rem:'	k'	' Bytes:	6B
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	k	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	k	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	5	Char:'	'	' Rem:'	'	' Bytes:	27
+    PARSER_DBG (Parser):   FALLBACK: No match from priority list for char '	'	' at pos 	5	. Bytes: 	27
+    PARSER_DBG (Parser): --- Parsing phonetic string END. Units found: 	5	 ---
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɛlk'
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɛlk'
+  apply_procedural_epenthesis START: In=	ˈɛlk'
+    PARSER_DBG (Parser): --- Parsing phonetic string START (NFC): '	ˈɛlk'	' (Raw: '	ˈɛlk'	') ---
+    PARSER_DBG (Parser): Found stress mark at pos 	1	. Remaining: '	ɛlk'	'
+    PARSER_DBG (Parser): Pos:	2	Char:'	ɛ	' Rem:'	ɛlk'	' Bytes:	C9 9B
+    PARSER_DBG (Parser):   Adding unit: '	ˈ	' (stress_mark) (no other unit matched after it at this pos)
+    PARSER_DBG (Parser): Pos:	2	Char:'	ɛ	' Rem:'	ɛlk'	' Bytes:	C9 9B
+    PARSER_DBG (Parser):   FALLBACK: No match from priority list for char '	ɛ	' at pos 	2	. Bytes: 	C9 9B
+    PARSER_DBG (Parser): Pos:	3	Char:'	l	' Rem:'	lk'	' Bytes:	6C
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	l	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	l	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	4	Char:'	k	' Rem:'	k'	' Bytes:	6B
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	k	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	k	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	5	Char:'	'	' Rem:'	'	' Bytes:	27
+    PARSER_DBG (Parser):   FALLBACK: No match from priority list for char '	'	' at pos 	5	. Bytes: 	27
+    PARSER_DBG (Parser): --- Parsing phonetic string END. Units found: 	5	 ---
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	ˈ(stress_mark) | ɛ(unknown_fallback) | l(nonpalatal) | k(nonpalatal) | '(unknown_fallback)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈɛlk'	' (using 	4	 non-stress units) count: 	0	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	ˈɛlk'
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	ˈɛlk'
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	ˈɛlk'
+  EpenthesisAndStrongSonorants END (Proc): Out=	ˈɛlk'
+Af. EpenthesisAndStrongSonorants: [ˈɛlk']
+oilc            -> [ˈɛlk']
+
+--- Testing word:	seilf	---
+
+--- Transcribing: [seilf] ---
+    PARSER_DBG (Parser): --- Parsing phonetic string START (NFC): '	s'elf'	' (Raw: '	s'elf'	') ---
+    PARSER_DBG (Parser): Pos:	1	Char:'	s	' Rem:'	s'elf'	' Bytes:	73
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	s'	' (len:	2	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	s'	' (stress: '		') with quality: '	palatal	'
+    PARSER_DBG (Parser): Pos:	3	Char:'	e	' Rem:'	elf'	' Bytes:	65
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	e	' (len:	1	, type:	vowel	)
+    PARSER_DBG (Parser):   Adding unit: '	e	' (stress: '		') with quality: '	vowel	'
+    PARSER_DBG (Parser): Pos:	4	Char:'	l	' Rem:'	lf'	' Bytes:	6C
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	l	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	l	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	5	Char:'	f	' Rem:'	f'	' Bytes:	66
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	f	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	f	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	6	Char:'	'	' Rem:'	'	' Bytes:	27
+    PARSER_DBG (Parser):   FALLBACK: No match from priority list for char '	'	' at pos 	6	. Bytes: 	27
+    PARSER_DBG (Parser): --- Parsing phonetic string END. Units found: 	5	 ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	s'elf'	' (using 	5	 non-stress units) count: 	1	 result: 	true
+  EpenthesisAndStrongSonorants START (Proc): In=	s'elf'
+  EpenthesisAndStrongSonorants START (Proc): In=	s'elf'
+  apply_procedural_epenthesis START: In=	s'elf'
+    PARSER_DBG (Parser): --- Parsing phonetic string START (NFC): '	s'elf'	' (Raw: '	s'elf'	') ---
+    PARSER_DBG (Parser): Pos:	1	Char:'	s	' Rem:'	s'elf'	' Bytes:	73
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	s'	' (len:	2	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	s'	' (stress: '		') with quality: '	palatal	'
+    PARSER_DBG (Parser): Pos:	3	Char:'	e	' Rem:'	elf'	' Bytes:	65
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	e	' (len:	1	, type:	vowel	)
+    PARSER_DBG (Parser):   Adding unit: '	e	' (stress: '		') with quality: '	vowel	'
+    PARSER_DBG (Parser): Pos:	4	Char:'	l	' Rem:'	lf'	' Bytes:	6C
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	l	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	l	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	5	Char:'	f	' Rem:'	f'	' Bytes:	66
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	f	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	f	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	6	Char:'	'	' Rem:'	'	' Bytes:	27
+    PARSER_DBG (Parser):   FALLBACK: No match from priority list for char '	'	' at pos 	6	. Bytes: 	27
+    PARSER_DBG (Parser): --- Parsing phonetic string END. Units found: 	5	 ---
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	s'(palatal) | e(vowel) | l(nonpalatal) | f(nonpalatal) | '(unknown_fallback)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	s'elf'	' (using 	5	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Epenthesis): Checking V-C1-C2: 	e	l	f	 | Cluster key: 	lf	 | C1 Qual: 	nonpalatal	 | C2 Qual: 	nonpalatal
+  apply_procedural_epenthesis END (no change): Out=	s'elf'
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	s'elf'
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	s'elf'
+  EpenthesisAndStrongSonorants END (Proc): Out=	s'elf'
+Af. EpenthesisAndStrongSonorants: [s'elf']
+seilf           -> [s'elf']
+
+--- Testing word:	mná	---
+
+--- Transcribing: [mná] ---
+    PARSER_DBG (Parser): --- Parsing phonetic string START (NFC): '	mnɑː	' (Raw: '	mnɑː	') ---
+    PARSER_DBG (Parser): Pos:	1	Char:'	m	' Rem:'	mnɑː	' Bytes:	6D
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	m	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	m	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	2	Char:'	n	' Rem:'	nɑː	' Bytes:	6E
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	n	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	n	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	3	Char:'	ɑ	' Rem:'	ɑː	' Bytes:	C9 91
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	ɑː	' (len:	2	, type:	vowel	)
+    PARSER_DBG (Parser):   Adding unit: '	ɑː	' (stress: '		') with quality: '	vowel	'
+    PARSER_DBG (Parser): --- Parsing phonetic string END. Units found: 	3	 ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	mnɑː	' (using 	3	 non-stress units) count: 	1	 result: 	true
+  EpenthesisAndStrongSonorants START (Proc): In=	mnɑː
+  EpenthesisAndStrongSonorants START (Proc): In=	mnɑː
+  apply_procedural_epenthesis START: In=	mnɑː
+    PARSER_DBG (Parser): --- Parsing phonetic string START (NFC): '	mnɑː	' (Raw: '	mnɑː	') ---
+    PARSER_DBG (Parser): Pos:	1	Char:'	m	' Rem:'	mnɑː	' Bytes:	6D
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	m	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	m	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	2	Char:'	n	' Rem:'	nɑː	' Bytes:	6E
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	n	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	n	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	3	Char:'	ɑ	' Rem:'	ɑː	' Bytes:	C9 91
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	ɑː	' (len:	2	, type:	vowel	)
+    PARSER_DBG (Parser):   Adding unit: '	ɑː	' (stress: '		') with quality: '	vowel	'
+    PARSER_DBG (Parser): --- Parsing phonetic string END. Units found: 	3	 ---
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	m(nonpalatal) | n(nonpalatal) | ɑː(vowel)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	mnɑː	' (using 	3	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	mnɑː
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	mnɑː
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	mnɑː
+  EpenthesisAndStrongSonorants END (Proc): Out=	mnɑː
+Af. EpenthesisAndStrongSonorants: [mnɑː]
+mná            -> [mnɑː]
+
+--- Testing word:	ceann	---
+
+--- Transcribing: [ceann] ---
+    PARSER_DBG (Parser): --- Parsing phonetic string START (NFC): '	k'æN	' (Raw: '	k'æN	') ---
+    PARSER_DBG (Parser): Pos:	1	Char:'	k	' Rem:'	k'æN	' Bytes:	6B
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	k	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	k	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	2	Char:'	'	' Rem:'	'æN	' Bytes:	27
+    PARSER_DBG (Parser):   FALLBACK: No match from priority list for char '	'	' at pos 	2	. Bytes: 	27
+    PARSER_DBG (Parser): Pos:	3	Char:'	æ	' Rem:'	æN	' Bytes:	C3 A6
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	æ	' (len:	1	, type:	vowel	)
+    PARSER_DBG (Parser):   Adding unit: '	æ	' (stress: '		') with quality: '	vowel	'
+    PARSER_DBG (Parser): Pos:	4	Char:'	N	' Rem:'	N	' Bytes:	4E
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	N	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	N	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): --- Parsing phonetic string END. Units found: 	4	 ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	k'æN	' (using 	4	 non-stress units) count: 	1	 result: 	true
+  EpenthesisAndStrongSonorants START (Proc): In=	k'æN
+  EpenthesisAndStrongSonorants START (Proc): In=	k'æN
+  apply_procedural_epenthesis START: In=	k'æN
+    PARSER_DBG (Parser): --- Parsing phonetic string START (NFC): '	k'æN	' (Raw: '	k'æN	') ---
+    PARSER_DBG (Parser): Pos:	1	Char:'	k	' Rem:'	k'æN	' Bytes:	6B
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	k	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	k	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	2	Char:'	'	' Rem:'	'æN	' Bytes:	27
+    PARSER_DBG (Parser):   FALLBACK: No match from priority list for char '	'	' at pos 	2	. Bytes: 	27
+    PARSER_DBG (Parser): Pos:	3	Char:'	æ	' Rem:'	æN	' Bytes:	C3 A6
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	æ	' (len:	1	, type:	vowel	)
+    PARSER_DBG (Parser):   Adding unit: '	æ	' (stress: '		') with quality: '	vowel	'
+    PARSER_DBG (Parser): Pos:	4	Char:'	N	' Rem:'	N	' Bytes:	4E
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	N	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	N	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): --- Parsing phonetic string END. Units found: 	4	 ---
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	k(nonpalatal) | '(unknown_fallback) | æ(vowel) | N(nonpalatal)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	k'æN	' (using 	4	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	k'æN
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	k'æN
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	k'æN
+  EpenthesisAndStrongSonorants END (Proc): Out=	k'æN
+Af. EpenthesisAndStrongSonorants: [k'æN]
+ceann           -> [k'æN]
+
+--- Testing word:	balla	---
+
+--- Transcribing: [balla] ---
+    PARSER_DBG (Parser): --- Parsing phonetic string START (NFC): '	bɑLɑ	' (Raw: '	bɑLɑ	') ---
+    PARSER_DBG (Parser): Pos:	1	Char:'	b	' Rem:'	bɑLɑ	' Bytes:	62
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	b	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	b	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	2	Char:'	ɑ	' Rem:'	ɑLɑ	' Bytes:	C9 91
+    PARSER_DBG (Parser):   FALLBACK: No match from priority list for char '	ɑ	' at pos 	2	. Bytes: 	C9 91
+    PARSER_DBG (Parser): Pos:	3	Char:'	L	' Rem:'	Lɑ	' Bytes:	4C
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	L	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	L	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	4	Char:'	ɑ	' Rem:'	ɑ	' Bytes:	C9 91
+    PARSER_DBG (Parser):   FALLBACK: No match from priority list for char '	ɑ	' at pos 	4	. Bytes: 	C9 91
+    PARSER_DBG (Parser): --- Parsing phonetic string END. Units found: 	4	 ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	bɑLɑ	' (using 	4	 non-stress units) count: 	0	 result: 	false
+    PARSER_DBG (Parser): --- Parsing phonetic string START (NFC): '	bɑLɑ	' (Raw: '	bɑLɑ	') ---
+    PARSER_DBG (Parser): Pos:	1	Char:'	b	' Rem:'	bɑLɑ	' Bytes:	62
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	b	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	b	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	2	Char:'	ɑ	' Rem:'	ɑLɑ	' Bytes:	C9 91
+    PARSER_DBG (Parser):   FALLBACK: No match from priority list for char '	ɑ	' at pos 	2	. Bytes: 	C9 91
+    PARSER_DBG (Parser): Pos:	3	Char:'	L	' Rem:'	Lɑ	' Bytes:	4C
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	L	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	L	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	4	Char:'	ɑ	' Rem:'	ɑ	' Bytes:	C9 91
+    PARSER_DBG (Parser):   FALLBACK: No match from priority list for char '	ɑ	' at pos 	4	. Bytes: 	C9 91
+    PARSER_DBG (Parser): --- Parsing phonetic string END. Units found: 	4	 ---
+  EpenthesisAndStrongSonorants START (Proc): In=	bɑLɑ
+  EpenthesisAndStrongSonorants START (Proc): In=	bɑLɑ
+  apply_procedural_epenthesis START: In=	bɑLɑ
+    PARSER_DBG (Parser): --- Parsing phonetic string START (NFC): '	bɑLɑ	' (Raw: '	bɑLɑ	') ---
+    PARSER_DBG (Parser): Pos:	1	Char:'	b	' Rem:'	bɑLɑ	' Bytes:	62
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	b	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	b	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	2	Char:'	ɑ	' Rem:'	ɑLɑ	' Bytes:	C9 91
+    PARSER_DBG (Parser):   FALLBACK: No match from priority list for char '	ɑ	' at pos 	2	. Bytes: 	C9 91
+    PARSER_DBG (Parser): Pos:	3	Char:'	L	' Rem:'	Lɑ	' Bytes:	4C
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	L	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	L	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	4	Char:'	ɑ	' Rem:'	ɑ	' Bytes:	C9 91
+    PARSER_DBG (Parser):   FALLBACK: No match from priority list for char '	ɑ	' at pos 	4	. Bytes: 	C9 91
+    PARSER_DBG (Parser): --- Parsing phonetic string END. Units found: 	4	 ---
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	b(nonpalatal) | ɑ(unknown_fallback) | L(nonpalatal) | ɑ(unknown_fallback)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	bɑLɑ	' (using 	4	 non-stress units) count: 	0	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	bɑLɑ
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	bɑLɑ
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	bɑLɑ
+  EpenthesisAndStrongSonorants END (Proc): Out=	bɑLɑ
+Af. EpenthesisAndStrongSonorants: [bɑLɑ]
+balla           -> [bɑLɑ]
+
+--- Testing word:	dorcha	---
+
+--- Transcribing: [dorcha] ---
+    PARSER_DBG (Parser): --- Parsing phonetic string START (NFC): '	dɔrxɑ	' (Raw: '	dɔrxɑ	') ---
+    PARSER_DBG (Parser): Pos:	1	Char:'	d	' Rem:'	dɔrxɑ	' Bytes:	64
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	d	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	d	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	2	Char:'	ɔ	' Rem:'	ɔrxɑ	' Bytes:	C9 94
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	ɔ	' (len:	1	, type:	vowel	)
+    PARSER_DBG (Parser):   Adding unit: '	ɔ	' (stress: '		') with quality: '	vowel	'
+    PARSER_DBG (Parser): Pos:	3	Char:'	r	' Rem:'	rxɑ	' Bytes:	72
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	r	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	r	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	4	Char:'	x	' Rem:'	xɑ	' Bytes:	78
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	x	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	x	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	5	Char:'	ɑ	' Rem:'	ɑ	' Bytes:	C9 91
+    PARSER_DBG (Parser):   FALLBACK: No match from priority list for char '	ɑ	' at pos 	5	. Bytes: 	C9 91
+    PARSER_DBG (Parser): --- Parsing phonetic string END. Units found: 	5	 ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	dɔrxɑ	' (using 	5	 non-stress units) count: 	1	 result: 	true
+  EpenthesisAndStrongSonorants START (Proc): In=	dɔrxɑ
+  EpenthesisAndStrongSonorants START (Proc): In=	dɔrxɑ
+  apply_procedural_epenthesis START: In=	dɔrxɑ
+    PARSER_DBG (Parser): --- Parsing phonetic string START (NFC): '	dɔrxɑ	' (Raw: '	dɔrxɑ	') ---
+    PARSER_DBG (Parser): Pos:	1	Char:'	d	' Rem:'	dɔrxɑ	' Bytes:	64
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	d	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	d	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	2	Char:'	ɔ	' Rem:'	ɔrxɑ	' Bytes:	C9 94
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	ɔ	' (len:	1	, type:	vowel	)
+    PARSER_DBG (Parser):   Adding unit: '	ɔ	' (stress: '		') with quality: '	vowel	'
+    PARSER_DBG (Parser): Pos:	3	Char:'	r	' Rem:'	rxɑ	' Bytes:	72
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	r	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	r	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	4	Char:'	x	' Rem:'	xɑ	' Bytes:	78
+    PARSER_DBG (Parser):   >>> MATCHED (and taking): '	x	' (len:	1	, type:	consonant	)
+    PARSER_DBG (Parser):   Adding unit: '	x	' (stress: '		') with quality: '	nonpalatal	'
+    PARSER_DBG (Parser): Pos:	5	Char:'	ɑ	' Rem:'	ɑ	' Bytes:	C9 91
+    PARSER_DBG (Parser):   FALLBACK: No match from priority list for char '	ɑ	' at pos 	5	. Bytes: 	C9 91
+    PARSER_DBG (Parser): --- Parsing phonetic string END. Units found: 	5	 ---
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	d(nonpalatal) | ɔ(vowel) | r(nonpalatal) | x(nonpalatal) | ɑ(unknown_fallback)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	dɔrxɑ	' (using 	5	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Epenthesis): Checking V-C1-C2: 	ɔ	r	x	 | Cluster key: 	rx	 | C1 Qual: 	nonpalatal	 | C2 Qual: 	nonpalatal
+    MIN_DBG (Epenthesis): PROCEDURAL Epenthesis Triggered for: 	ɔ	r	x	 -> inserting 	ə
+  apply_procedural_epenthesis END (modified): Out=	dɔrəxɑ
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	dɔrəxɑ
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	dɔrəxɑ
+  EpenthesisAndStrongSonorants END (Proc): Out=	dɔrəxɑ
+Af. EpenthesisAndStrongSonorants: [dɔrəxɑ]
+dorcha          -> [dɔrəxɑ]

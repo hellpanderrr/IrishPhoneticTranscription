@@ -1,0 +1,654 @@
+﻿
+--- Running Test Set for Iteration 37AY (Unstressed Vowel Reduction Refined) ---
+
+--- Transcribing: [ainm] ---
+Af. Nasalization: [ˈɑnm']
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	ˈɑnm'
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	ˈɑnm'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈɑnm'	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	ˈɑnm'	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	ˈɑnm'
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [ˈɑnm']
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɑnm'
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɑnm'
+  apply_procedural_epenthesis START: In=	ˈɑnm'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈɑnm'	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Epenthes): Checking V-C1-C2: 	ɑ	n	m	 | Cluster key: 	nm	 | C1 Qual: 	nonpalatal	 | C2 Qual: 	nonpalatal
+  apply_procedural_epenthesis END (no change): Out=	ˈɑnm'
+    MIN_DBG (Epenthes): After procedural epenthesis: 	ˈɑnm'
+    MIN_DBG (Epenthes): After strong sonorant rules: 	ˈɑnm'
+  EpenthesisAndStrongSonorants END (Proc): Out=	ˈɑnm'
+Af. EpenthesisAndStrongSonorants: [ˈɑnm']
+  FinalCleanup START: In=	ˈɑnm'
+  FinalCleanup END: Out=	ˈɑnm'
+Af. FinalCleanup: [ˈɑnm']
+ainm            -> [ˈɑnm']
+
+--- Transcribing: [mná] ---
+Af. Nasalization: [mnɑː]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	mnɑː
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	mnɑː
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	mnɑː	' (using 	3	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	mnɑː	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	mnɑː
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [mnɑː]
+  EpenthesisAndStrongSonorants START (Proc): In=	mnɑː
+  EpenthesisAndStrongSonorants START (Proc): In=	mnɑː
+  apply_procedural_epenthesis START: In=	mnɑː
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	mnɑː	' (using 	3	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	mnɑː
+    MIN_DBG (Epenthes): After procedural epenthesis: 	mnɑː
+    MIN_DBG (Epenthes): After strong sonorant rules: 	mnɑː
+  EpenthesisAndStrongSonorants END (Proc): Out=	mnɑː
+Af. EpenthesisAndStrongSonorants: [mnɑː]
+  FinalCleanup START: In=	mnɑː
+  FinalCleanup END: Out=	mnɑː
+Af. FinalCleanup: [mnɑː]
+mná            -> [mnɑː]
+
+--- Transcribing: [fonn] ---
+Af. Nasalization: [fɔN]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	fɔN
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	fɔN
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	fɔN	' (using 	3	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	fɔN	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	fɔN
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [fɔN]
+  EpenthesisAndStrongSonorants START (Proc): In=	fɔN
+  EpenthesisAndStrongSonorants START (Proc): In=	fɔN
+  apply_procedural_epenthesis START: In=	fɔN
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	fɔN	' (using 	3	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	fɔN
+    MIN_DBG (Epenthes): After procedural epenthesis: 	fɔN
+    MIN_DBG (Epenthes): After strong sonorant rules: 	fɔN
+  EpenthesisAndStrongSonorants END (Proc): Out=	fɔN
+Af. EpenthesisAndStrongSonorants: [fɔN]
+  FinalCleanup START: In=	fɔN
+  FinalCleanup END: Out=	fɔN
+Af. FinalCleanup: [fɔN]
+fonn            -> [fɔN]
+
+--- Transcribing: [ceann] ---
+Af. Nasalization: [k'æN]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	k'æN
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	k'æN
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	k'æN	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	k'æN	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	k'æN
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [k'æN]
+  EpenthesisAndStrongSonorants START (Proc): In=	k'æN
+  EpenthesisAndStrongSonorants START (Proc): In=	k'æN
+  apply_procedural_epenthesis START: In=	k'æN
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	k'æN	' (using 	4	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	k'æN
+    MIN_DBG (Epenthes): After procedural epenthesis: 	k'æN
+    MIN_DBG (Epenthes): After strong sonorant rules: 	k'æN
+  EpenthesisAndStrongSonorants END (Proc): Out=	k'æN
+Af. EpenthesisAndStrongSonorants: [k'æN]
+  FinalCleanup START: In=	k'æN
+  FinalCleanup END: Out=	k'æN
+Af. FinalCleanup: [k'æN]
+ceann           -> [k'æN]
+
+--- Transcribing: [am] ---
+Af. Nasalization: [ˈɑm]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	ˈɑm
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	ˈɑm
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈɑm	' (using 	2	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	ˈɑm	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	ˈɑm
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [ˈɑm]
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɑm
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɑm
+  apply_procedural_epenthesis START: In=	ˈɑm
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈɑm	' (using 	2	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	ˈɑm
+    MIN_DBG (Epenthes): After procedural epenthesis: 	ˈɑm
+    MIN_DBG (Epenthes): After strong sonorant rules: 	ˈɑm
+  EpenthesisAndStrongSonorants END (Proc): Out=	ˈɑm
+Af. EpenthesisAndStrongSonorants: [ˈɑm]
+  FinalCleanup START: In=	ˈɑm
+  FinalCleanup END: Out=	ˈɑm
+Af. FinalCleanup: [ˈɑm]
+am              -> [ˈɑm]
+
+--- Transcribing: [cam] ---
+Af. Nasalization: [kɑm]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	kɑm
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	kɑm
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	kɑm	' (using 	3	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	kɑm	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	kɑm
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [kɑm]
+  EpenthesisAndStrongSonorants START (Proc): In=	kɑm
+  EpenthesisAndStrongSonorants START (Proc): In=	kɑm
+  apply_procedural_epenthesis START: In=	kɑm
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	kɑm	' (using 	3	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	kɑm
+    MIN_DBG (Epenthes): After procedural epenthesis: 	kɑm
+    MIN_DBG (Epenthes): After strong sonorant rules: 	kɑm
+  EpenthesisAndStrongSonorants END (Proc): Out=	kɑm
+Af. EpenthesisAndStrongSonorants: [kɑm]
+  FinalCleanup START: In=	kɑm
+  FinalCleanup END: Out=	kɑm
+Af. FinalCleanup: [kɑm]
+cam             -> [kɑm]
+
+--- Transcribing: [trom] ---
+Af. Nasalization: [trɔm]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	trɔm
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	trɔm
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	trɔm	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	trɔm	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	trɔm
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [trɔm]
+  EpenthesisAndStrongSonorants START (Proc): In=	trɔm
+  EpenthesisAndStrongSonorants START (Proc): In=	trɔm
+  apply_procedural_epenthesis START: In=	trɔm
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	trɔm	' (using 	4	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	trɔm
+    MIN_DBG (Epenthes): After procedural epenthesis: 	trɔm
+    MIN_DBG (Epenthes): After strong sonorant rules: 	trɔm
+  EpenthesisAndStrongSonorants END (Proc): Out=	trɔm
+Af. EpenthesisAndStrongSonorants: [trɔm]
+  FinalCleanup START: In=	trɔm
+  FinalCleanup END: Out=	trɔm
+Af. FinalCleanup: [trɔm]
+trom            -> [trɔm]
+
+--- Transcribing: [lámh] ---
+Af. Nasalization: [lɑːv]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	lɑːv
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	lɑːv
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	lɑːv	' (using 	3	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	lɑːv	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	lɑːv
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [lɑːv]
+  EpenthesisAndStrongSonorants START (Proc): In=	lɑːv
+  EpenthesisAndStrongSonorants START (Proc): In=	lɑːv
+  apply_procedural_epenthesis START: In=	lɑːv
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	lɑːv	' (using 	3	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	lɑːv
+    MIN_DBG (Epenthes): After procedural epenthesis: 	lɑːv
+    MIN_DBG (Epenthes): After strong sonorant rules: 	lɑːv
+  EpenthesisAndStrongSonorants END (Proc): Out=	lɑːv
+Af. EpenthesisAndStrongSonorants: [lɑːv]
+  FinalCleanup START: In=	lɑːv
+  FinalCleanup END: Out=	lɑːv
+Af. FinalCleanup: [lɑːv]
+lámh           -> [lɑːv]
+
+--- Transcribing: [oilc] ---
+Af. Nasalization: [ˈɛlk']
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	ˈɛlk'
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	ˈɛlk'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈɛlk'	' (using 	4	 non-stress units) count: 	0	 result: 	false
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	5
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	ˈɛlk'
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [ˈɛlk']
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɛlk'
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɛlk'
+  apply_procedural_epenthesis START: In=	ˈɛlk'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈɛlk'	' (using 	4	 non-stress units) count: 	0	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	ˈɛlk'
+    MIN_DBG (Epenthes): After procedural epenthesis: 	ˈɛlk'
+    MIN_DBG (Epenthes): After strong sonorant rules: 	ˈɛlk'
+  EpenthesisAndStrongSonorants END (Proc): Out=	ˈɛlk'
+Af. EpenthesisAndStrongSonorants: [ˈɛlk']
+  FinalCleanup START: In=	ˈɛlk'
+  FinalCleanup END: Out=	ˈɛlk'
+Af. FinalCleanup: [ˈɛlk']
+oilc            -> [ˈɛlk']
+
+--- Transcribing: [seilf] ---
+Af. Nasalization: [s'elf']
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	s'elf'
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	s'elf'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	s'elf'	' (using 	5	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	s'elf'	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	s'elf'
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [s'elf']
+  EpenthesisAndStrongSonorants START (Proc): In=	s'elf'
+  EpenthesisAndStrongSonorants START (Proc): In=	s'elf'
+  apply_procedural_epenthesis START: In=	s'elf'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	s'elf'	' (using 	5	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Epenthes): Checking V-C1-C2: 	e	l	f	 | Cluster key: 	lf	 | C1 Qual: 	nonpalatal	 | C2 Qual: 	nonpalatal
+  apply_procedural_epenthesis END (no change): Out=	s'elf'
+    MIN_DBG (Epenthes): After procedural epenthesis: 	s'elf'
+    MIN_DBG (Epenthes): After strong sonorant rules: 	s'elf'
+  EpenthesisAndStrongSonorants END (Proc): Out=	s'elf'
+Af. EpenthesisAndStrongSonorants: [s'elf']
+  FinalCleanup START: In=	s'elf'
+  FinalCleanup END: Out=	s'elf'
+Af. FinalCleanup: [s'elf']
+seilf           -> [s'elf']
+
+--- Transcribing: [olc] ---
+Af. Nasalization: [ˈɔlk]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	ˈɔlk
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	ˈɔlk
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈɔlk	' (using 	3	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	ˈɔlk	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	ˈɔlk
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [ˈɔlk]
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɔlk
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɔlk
+  apply_procedural_epenthesis START: In=	ˈɔlk
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈɔlk	' (using 	3	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Epenthes): Checking V-C1-C2: 	ˈɔ	l	k	 | Cluster key: 	lk	 | C1 Qual: 	nonpalatal	 | C2 Qual: 	nonpalatal
+    MIN_DBG (Epenthes): PROCEDURAL Epenthesis Triggered for: 	ˈɔ	l	k	 -> inserting 	ə
+  apply_procedural_epenthesis END (modified): Out=	ˈɔlək
+    MIN_DBG (Epenthes): After procedural epenthesis: 	ˈɔlək
+    MIN_DBG (Epenthes): After strong sonorant rules: 	ˈɔlək
+  EpenthesisAndStrongSonorants END (Proc): Out=	ˈɔlək
+Af. EpenthesisAndStrongSonorants: [ˈɔlək]
+  FinalCleanup START: In=	ˈɔlək
+  FinalCleanup END: Out=	ˈɔlək
+Af. FinalCleanup: [ˈɔlək]
+olc             -> [ˈɔlək]
+
+--- Transcribing: [gorm] ---
+Af. Nasalization: [gɔrm]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	gɔrm
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	gɔrm
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	gɔrm	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	gɔrm	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	gɔrm
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [gɔrm]
+  EpenthesisAndStrongSonorants START (Proc): In=	gɔrm
+  EpenthesisAndStrongSonorants START (Proc): In=	gɔrm
+  apply_procedural_epenthesis START: In=	gɔrm
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	gɔrm	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Epenthes): Checking V-C1-C2: 	ɔ	r	m	 | Cluster key: 	rm	 | C1 Qual: 	nonpalatal	 | C2 Qual: 	nonpalatal
+    MIN_DBG (Epenthes): PROCEDURAL Epenthesis Triggered for: 	ɔ	r	m	 -> inserting 	ə
+  apply_procedural_epenthesis END (modified): Out=	gɔrəm
+    MIN_DBG (Epenthes): After procedural epenthesis: 	gɔrəm
+    MIN_DBG (Epenthes): After strong sonorant rules: 	gɔrəm
+  EpenthesisAndStrongSonorants END (Proc): Out=	gɔrəm
+Af. EpenthesisAndStrongSonorants: [gɔrəm]
+  FinalCleanup START: In=	gɔrəm
+  FinalCleanup END: Out=	gɔrəm
+Af. FinalCleanup: [gɔrəm]
+gorm            -> [gɔrəm]
+
+--- Transcribing: [bolg] ---
+Af. Nasalization: [bɔlg]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	bɔlg
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	bɔlg
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	bɔlg	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	bɔlg	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	bɔlg
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [bɔlg]
+  EpenthesisAndStrongSonorants START (Proc): In=	bɔlg
+  EpenthesisAndStrongSonorants START (Proc): In=	bɔlg
+  apply_procedural_epenthesis START: In=	bɔlg
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	bɔlg	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Epenthes): Checking V-C1-C2: 	ɔ	l	g	 | Cluster key: 	lg	 | C1 Qual: 	nonpalatal	 | C2 Qual: 	nonpalatal
+    MIN_DBG (Epenthes): PROCEDURAL Epenthesis Triggered for: 	ɔ	l	g	 -> inserting 	ə
+  apply_procedural_epenthesis END (modified): Out=	bɔləg
+    MIN_DBG (Epenthes): After procedural epenthesis: 	bɔləg
+    MIN_DBG (Epenthes): After strong sonorant rules: 	bɔləg
+  EpenthesisAndStrongSonorants END (Proc): Out=	bɔləg
+Af. EpenthesisAndStrongSonorants: [bɔləg]
+  FinalCleanup START: In=	bɔləg
+  FinalCleanup END: Out=	bɔləg
+Af. FinalCleanup: [bɔləg]
+bolg            -> [bɔləg]
+
+--- Transcribing: [dorcha] ---
+Af. Nasalization: [dɔrxɑ]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	dɔrxɑ
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	dɔrxɑ
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	dɔrxɑ	' (using 	5	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	5
+    MIN_DBG (Stage4_6): No explicit stress, assuming first vowel '	ɔ	' at unit index 	2	 is stressed.
+    MIN_DBG (Stage4_6): Reducing '	ɑ	' to '	ə	'. Prec: 	nonpalatal	 Foll: 	neutral
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	dɔrxə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	5
+    MIN_DBG (Stage4_6): No explicit stress, assuming first vowel '	ɔ	' at unit index 	2	 is stressed.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	dɔrxə
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [dɔrxə]
+  EpenthesisAndStrongSonorants START (Proc): In=	dɔrxə
+  EpenthesisAndStrongSonorants START (Proc): In=	dɔrxə
+  apply_procedural_epenthesis START: In=	dɔrxə
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	dɔrxə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	dɔrxə
+    MIN_DBG (Epenthes): After procedural epenthesis: 	dɔrxə
+    MIN_DBG (Epenthes): After strong sonorant rules: 	dɔrxə
+  EpenthesisAndStrongSonorants END (Proc): Out=	dɔrxə
+Af. EpenthesisAndStrongSonorants: [dɔrxə]
+  FinalCleanup START: In=	dɔrxə
+  FinalCleanup END: Out=	dɔrxə
+Af. FinalCleanup: [dɔrxə]
+dorcha          -> [dɔrxə]
+
+--- Transcribing: [cnámh] ---
+Af. Nasalization: [krɑːv]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	krɑːv
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	krɑːv
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	krɑːv	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	krɑːv	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	krɑːv
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [krɑːv]
+  EpenthesisAndStrongSonorants START (Proc): In=	krɑːv
+  EpenthesisAndStrongSonorants START (Proc): In=	krɑːv
+  apply_procedural_epenthesis START: In=	krɑːv
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	krɑːv	' (using 	4	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	krɑːv
+    MIN_DBG (Epenthes): After procedural epenthesis: 	krɑːv
+    MIN_DBG (Epenthes): After strong sonorant rules: 	krɑːv
+  EpenthesisAndStrongSonorants END (Proc): Out=	krɑːv
+Af. EpenthesisAndStrongSonorants: [krɑːv]
+  FinalCleanup START: In=	krɑːv
+  FinalCleanup END: Out=	krɑːv
+Af. FinalCleanup: [krɑːv]
+cnámh          -> [krɑːv]
+
+--- Transcribing: [cnead] ---
+Af. Nasalization: [kr''eɑd]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	kr''eɑd
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	kr''eɑd
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	kr''eɑd	' (using 	7	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	7
+    MIN_DBG (Stage4_6): No explicit stress, assuming first vowel '	e	' at unit index 	5	 is stressed.
+    MIN_DBG (Stage4_6): Reducing '	ɑ	' to '	i	'. Prec: 	neutral	 Foll: 	palatal
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	kr''eid	' (using 	6	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	kr''eid	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	kr''eid
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [kr''eid]
+  EpenthesisAndStrongSonorants START (Proc): In=	kr''eid
+  EpenthesisAndStrongSonorants START (Proc): In=	kr''eid
+  apply_procedural_epenthesis START: In=	kr''eid
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	kr''eid	' (using 	6	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	kr''eid
+    MIN_DBG (Epenthes): After procedural epenthesis: 	kr''eid
+    MIN_DBG (Epenthes): After strong sonorant rules: 	kr''eid
+  EpenthesisAndStrongSonorants END (Proc): Out=	kr''eid
+Af. EpenthesisAndStrongSonorants: [kr''eid]
+  FinalCleanup START: In=	kr''eid
+  FinalCleanup END: Out=	kr''eid
+Af. FinalCleanup: [kr''eid]
+cnead           -> [kr''eid]
+
+--- Transcribing: [cnoc] ---
+Af. Nasalization: [krɔk]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	krɔk
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	krɔk
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	krɔk	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	krɔk	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	krɔk
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [krɔk]
+  EpenthesisAndStrongSonorants START (Proc): In=	krɔk
+  EpenthesisAndStrongSonorants START (Proc): In=	krɔk
+  apply_procedural_epenthesis START: In=	krɔk
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	krɔk	' (using 	4	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	krɔk
+    MIN_DBG (Epenthes): After procedural epenthesis: 	krɔk
+    MIN_DBG (Epenthes): After strong sonorant rules: 	krɔk
+  EpenthesisAndStrongSonorants END (Proc): Out=	krɔk
+Af. EpenthesisAndStrongSonorants: [krɔk]
+  FinalCleanup START: In=	krɔk
+  FinalCleanup END: Out=	krɔk
+Af. FinalCleanup: [krɔk]
+cnoc            -> [krɔk]
+
+--- Transcribing: [gnaoi] ---
+Af. Nasalization: [gr''iː]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	gr''iː
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	gr''iː
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	gr''iː	' (using 	5	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	gr''iː	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	gr''iː
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [gr''iː]
+  EpenthesisAndStrongSonorants START (Proc): In=	gr''iː
+  EpenthesisAndStrongSonorants START (Proc): In=	gr''iː
+  apply_procedural_epenthesis START: In=	gr''iː
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	gr''iː	' (using 	5	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	gr''iː
+    MIN_DBG (Epenthes): After procedural epenthesis: 	gr''iː
+    MIN_DBG (Epenthes): After strong sonorant rules: 	gr''iː
+  EpenthesisAndStrongSonorants END (Proc): Out=	gr''iː
+Af. EpenthesisAndStrongSonorants: [gr''iː]
+  FinalCleanup START: In=	gr''iː
+  FinalCleanup END: Out=	gr''iː
+Af. FinalCleanup: [gr''iː]
+gnaoi           -> [gr''iː]
+
+--- Transcribing: [gnó] ---
+Af. Nasalization: [groː]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	groː
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	groː
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	groː	' (using 	3	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	groː	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	groː
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [groː]
+  EpenthesisAndStrongSonorants START (Proc): In=	groː
+  EpenthesisAndStrongSonorants START (Proc): In=	groː
+  apply_procedural_epenthesis START: In=	groː
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	groː	' (using 	3	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	groː
+    MIN_DBG (Epenthes): After procedural epenthesis: 	groː
+    MIN_DBG (Epenthes): After strong sonorant rules: 	groː
+  EpenthesisAndStrongSonorants END (Proc): Out=	groː
+Af. EpenthesisAndStrongSonorants: [groː]
+  FinalCleanup START: In=	groː
+  FinalCleanup END: Out=	groː
+Af. FinalCleanup: [groː]
+gnó            -> [groː]
+
+--- Transcribing: [dearc] ---
+Af. Nasalization: [d'ær'k]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	d'ær'k
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	d'ær'k
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	d'ær'k	' (using 	6	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	d'ær'k	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	d'ær'k
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [d'ær'k]
+  EpenthesisAndStrongSonorants START (Proc): In=	d'ær'k
+  EpenthesisAndStrongSonorants START (Proc): In=	d'ær'k
+  apply_procedural_epenthesis START: In=	d'ær'k
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	d'ær'k	' (using 	6	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	d'ær'k
+    MIN_DBG (Epenthes): After procedural epenthesis: 	d'ær'k
+    MIN_DBG (Epenthes): After strong sonorant rules: 	d'ær'k
+  EpenthesisAndStrongSonorants END (Proc): Out=	d'ær'k
+Af. EpenthesisAndStrongSonorants: [d'ær'k]
+  FinalCleanup START: In=	d'ær'k
+  FinalCleanup END: Out=	d'ær'k
+Af. FinalCleanup: [d'ær'k]
+dearc           -> [d'ær'k]
+
+--- Transcribing: [feirc] ---
+Af. Nasalization: [f'er'k']
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	f'er'k'
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	f'er'k'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	f'er'k'	' (using 	7	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	f'er'k'	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	f'er'k'
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [f'er'k']
+  EpenthesisAndStrongSonorants START (Proc): In=	f'er'k'
+  EpenthesisAndStrongSonorants START (Proc): In=	f'er'k'
+  apply_procedural_epenthesis START: In=	f'er'k'
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	f'er'k'	' (using 	7	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	f'er'k'
+    MIN_DBG (Epenthes): After procedural epenthesis: 	f'er'k'
+    MIN_DBG (Epenthes): After strong sonorant rules: 	f'er'k'
+  EpenthesisAndStrongSonorants END (Proc): Out=	f'er'k'
+Af. EpenthesisAndStrongSonorants: [f'er'k']
+  FinalCleanup START: In=	f'er'k'
+  FinalCleanup END: Out=	f'er'k'
+Af. FinalCleanup: [f'er'k']
+feirc           -> [f'er'k']
+
+--- Transcribing: [balbh] ---
+Af. Nasalization: [bɑlv]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	bɑlv
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	bɑlv
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	bɑlv	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	bɑlv	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	bɑlv
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [bɑlv]
+  EpenthesisAndStrongSonorants START (Proc): In=	bɑlv
+  EpenthesisAndStrongSonorants START (Proc): In=	bɑlv
+  apply_procedural_epenthesis START: In=	bɑlv
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	bɑlv	' (using 	4	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	bɑlv
+    MIN_DBG (Epenthes): After procedural epenthesis: 	bɑlv
+    MIN_DBG (Epenthes): After strong sonorant rules: 	bɑlv
+  EpenthesisAndStrongSonorants END (Proc): Out=	bɑlv
+Af. EpenthesisAndStrongSonorants: [bɑlv]
+  FinalCleanup START: In=	bɑlv
+  FinalCleanup END: Out=	bɑlv
+Af. FinalCleanup: [bɑlv]
+balbh           -> [bɑlv]
+
+--- Transcribing: [garbh] ---
+Af. Nasalization: [gɑrv]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	gɑrv
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	gɑrv
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	gɑrv	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6): Word '	gɑrv	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	gɑrv
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [gɑrv]
+  EpenthesisAndStrongSonorants START (Proc): In=	gɑrv
+  EpenthesisAndStrongSonorants START (Proc): In=	gɑrv
+  apply_procedural_epenthesis START: In=	gɑrv
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	gɑrv	' (using 	4	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	gɑrv
+    MIN_DBG (Epenthes): After procedural epenthesis: 	gɑrv
+    MIN_DBG (Epenthes): After strong sonorant rules: 	gɑrv
+  EpenthesisAndStrongSonorants END (Proc): Out=	gɑrv
+Af. EpenthesisAndStrongSonorants: [gɑrv]
+  FinalCleanup START: In=	gɑrv
+  FinalCleanup END: Out=	gɑrv
+Af. FinalCleanup: [gɑrv]
+garbh           -> [gɑrv]
+
+--- Transcribing: [balla] ---
+Af. Nasalization: [bɑLɑ]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	bɑLɑ
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	bɑLɑ
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	bɑLɑ	' (using 	4	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	4
+    MIN_DBG (Stage4_6): No explicit stress, assuming first vowel '	ɑ	' at unit index 	2	 is stressed.
+    MIN_DBG (Stage4_6): Reducing '	ɑ	' to '	ə	'. Prec: 	nonpalatal	 Foll: 	neutral
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	bɑLə	' (using 	4	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	4
+    MIN_DBG (Stage4_6): No explicit stress, assuming first vowel '	ɑ	' at unit index 	2	 is stressed.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	bɑLə
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [bɑLə]
+  EpenthesisAndStrongSonorants START (Proc): In=	bɑLə
+  EpenthesisAndStrongSonorants START (Proc): In=	bɑLə
+  apply_procedural_epenthesis START: In=	bɑLə
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	bɑLə	' (using 	4	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	bɑLə
+    MIN_DBG (Epenthes): After procedural epenthesis: 	bɑLə
+    MIN_DBG (Epenthes): After strong sonorant rules: 	bɑLə
+  EpenthesisAndStrongSonorants END (Proc): Out=	bɑLə
+Af. EpenthesisAndStrongSonorants: [bɑLə]
+  FinalCleanup START: In=	bɑLə
+  FinalCleanup END: Out=	bɑLə
+Af. FinalCleanup: [bɑLə]
+balla           -> [bɑLə]
+
+--- Transcribing: [codladh] ---
+Af. Nasalization: [kɔdlə]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	kɔdlə
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	kɔdlə
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	kɔdlə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	5
+    MIN_DBG (Stage4_6): No explicit stress, assuming first vowel '	ɔ	' at unit index 	2	 is stressed.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	kɔdlə
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [kɔdlə]
+  EpenthesisAndStrongSonorants START (Proc): In=	kɔdlə
+  EpenthesisAndStrongSonorants START (Proc): In=	kɔdlə
+  apply_procedural_epenthesis START: In=	kɔdlə
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	kɔdlə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	kɔdlə
+    MIN_DBG (Epenthes): After procedural epenthesis: 	kɔdlə
+    MIN_DBG (Epenthes): After strong sonorant rules: 	kɔdlə
+  EpenthesisAndStrongSonorants END (Proc): Out=	kɔdlə
+Af. EpenthesisAndStrongSonorants: [kɔdlə]
+  FinalCleanup START: In=	kɔdlə
+  FinalCleanup END: Out=	kɔdlə
+Af. FinalCleanup: [kɔdlə]
+codladh         -> [kɔdlə]
+
+--- Transcribing: [daoine] ---
+Af. Nasalization: [d'iːne]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	d'iːne
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	d'iːne
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	d'iːne	' (using 	5	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	5
+    MIN_DBG (Stage4_6): No explicit stress, assuming first vowel '	iː	' at unit index 	3	 is stressed.
+    MIN_DBG (Stage4_6): Reducing '	e	' to '	ə	'. Prec: 	nonpalatal	 Foll: 	neutral
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	d'iːnə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	5
+    MIN_DBG (Stage4_6): No explicit stress, assuming first vowel '	iː	' at unit index 	3	 is stressed.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	d'iːnə
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [d'iːnə]
+  EpenthesisAndStrongSonorants START (Proc): In=	d'iːnə
+  EpenthesisAndStrongSonorants START (Proc): In=	d'iːnə
+  apply_procedural_epenthesis START: In=	d'iːnə
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	d'iːnə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	d'iːnə
+    MIN_DBG (Epenthes): After procedural epenthesis: 	d'iːnə
+    MIN_DBG (Epenthes): After strong sonorant rules: 	d'iːnə
+  EpenthesisAndStrongSonorants END (Proc): Out=	d'iːnə
+Af. EpenthesisAndStrongSonorants: [d'iːnə]
+  FinalCleanup START: In=	d'iːnə
+  FinalCleanup END: Out=	d'iːnə
+Af. FinalCleanup: [d'iːnə]
+daoine          -> [d'iːnə]
+
+--- Transcribing: [eolas] ---
+Af. Nasalization: [ˈoːlɑs]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	ˈoːlɑs
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	ˈoːlɑs
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈoːlɑs	' (using 	4	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	4
+    MIN_DBG (Stage4_6): Reducing '	ɑ	' to '	ə	'. Prec: 	nonpalatal	 Foll: 	nonpalatal
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈoːləs	' (using 	4	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	4
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	ˈoːləs
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [ˈoːləs]
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈoːləs
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈoːləs
+  apply_procedural_epenthesis START: In=	ˈoːləs
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈoːləs	' (using 	4	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	ˈoːləs
+    MIN_DBG (Epenthes): After procedural epenthesis: 	ˈoːləs
+    MIN_DBG (Epenthes): After strong sonorant rules: 	ˈoːləs
+  EpenthesisAndStrongSonorants END (Proc): Out=	ˈoːləs
+Af. EpenthesisAndStrongSonorants: [ˈoːləs]
+  FinalCleanup START: In=	ˈoːləs
+  FinalCleanup END: Out=	ˈoːləs
+Af. FinalCleanup: [ˈoːləs]
+eolas           -> [ˈoːləs]
+
+--- Transcribing: [athair] ---
+Af. Nasalization: [ˈɑhair]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	ˈɑhair
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	ˈɑhair
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈɑhair	' (using 	4	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	5
+    MIN_DBG (Stage4_6): No explicit stress, assuming first vowel '	ɑ	' at unit index 	2	 is stressed.
+    MIN_DBG (Stage4_6): Reducing '	ai	' to '	ə	'. Prec: 	nonpalatal	 Foll: 	nonpalatal
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈɑhər	' (using 	4	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6): Parsed units for reduction: 	5
+    MIN_DBG (Stage4_6): No explicit stress, assuming first vowel '	ɑ	' at unit index 	2	 is stressed.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	ˈɑhər
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [ˈɑhər]
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɑhər
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɑhər
+  apply_procedural_epenthesis START: In=	ˈɑhər
+    MIN_DBG (Epenthes): is_likely_monosyllable_revised for '	ˈɑhər	' (using 	4	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	ˈɑhər
+    MIN_DBG (Epenthes): After procedural epenthesis: 	ˈɑhər
+    MIN_DBG (Epenthes): After strong sonorant rules: 	ˈɑhər
+  EpenthesisAndStrongSonorants END (Proc): Out=	ˈɑhər
+Af. EpenthesisAndStrongSonorants: [ˈɑhər]
+  FinalCleanup START: In=	ˈɑhər
+  FinalCleanup END: Out=	ˈɑhər
+Af. FinalCleanup: [ˈɑhər]
+athair          -> [ˈɑhər]

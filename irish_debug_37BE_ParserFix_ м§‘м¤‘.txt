@@ -1,0 +1,387 @@
+﻿
+--- Running Test Set for Iteration 37BC (Fricative Vocalization) ---
+
+--- Transcribing: [ainm] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈɑnm'	' (using 	4	 non-stress units) count: 	0	 result: 	false
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɑnm'
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɑnm'
+  apply_procedural_epenthesis START: In=	ˈɑnm'
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	ˈ(stress_mark) | ɑ(unknown_fallback) | n(nonpalatal) | m(nonpalatal) | '(unknown_fallback)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈɑnm'	' (using 	4	 non-stress units) count: 	0	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	ˈɑnm'
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	ˈɑnm'
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	ˈɑnm'
+  EpenthesisAndStrongSonorants END (Proc): Out=	ˈɑnm'
+Af. EpenthesisAndStrongSonorants: [ˈɑnm']
+ainm            -> [ˈɑnm']
+
+--- Transcribing: [oilc] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈɛlk'	' (using 	4	 non-stress units) count: 	0	 result: 	false
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɛlk'
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɛlk'
+  apply_procedural_epenthesis START: In=	ˈɛlk'
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	ˈ(stress_mark) | ɛ(unknown_fallback) | l(nonpalatal) | k(nonpalatal) | '(unknown_fallback)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈɛlk'	' (using 	4	 non-stress units) count: 	0	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	ˈɛlk'
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	ˈɛlk'
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	ˈɛlk'
+  EpenthesisAndStrongSonorants END (Proc): Out=	ˈɛlk'
+Af. EpenthesisAndStrongSonorants: [ˈɛlk']
+oilc            -> [ˈɛlk']
+
+--- Transcribing: [seilf] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	s'elf'	' (using 	5	 non-stress units) count: 	1	 result: 	true
+  EpenthesisAndStrongSonorants START (Proc): In=	s'elf'
+  EpenthesisAndStrongSonorants START (Proc): In=	s'elf'
+  apply_procedural_epenthesis START: In=	s'elf'
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	s'(palatal) | e(vowel) | l(nonpalatal) | f(nonpalatal) | '(unknown_fallback)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	s'elf'	' (using 	5	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Epenthesis): Checking V-C1-C2: 	e	l	f	 | Cluster key: 	lf	 | C1 Qual: 	nonpalatal	 | C2 Qual: 	nonpalatal
+  apply_procedural_epenthesis END (no change): Out=	s'elf'
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	s'elf'
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	s'elf'
+  EpenthesisAndStrongSonorants END (Proc): Out=	s'elf'
+Af. EpenthesisAndStrongSonorants: [s'elf']
+seilf           -> [s'elf']
+
+--- Transcribing: [balla] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	bɑLɑ	' (using 	4	 non-stress units) count: 	0	 result: 	false
+  EpenthesisAndStrongSonorants START (Proc): In=	bɑLɑ
+  EpenthesisAndStrongSonorants START (Proc): In=	bɑLɑ
+  apply_procedural_epenthesis START: In=	bɑLɑ
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	b(nonpalatal) | ɑ(unknown_fallback) | L(nonpalatal) | ɑ(unknown_fallback)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	bɑLɑ	' (using 	4	 non-stress units) count: 	0	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	bɑLɑ
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	bɑLɑ
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	bɑLɑ
+  EpenthesisAndStrongSonorants END (Proc): Out=	bɑLɑ
+Af. EpenthesisAndStrongSonorants: [bɑLɑ]
+balla           -> [bɑLɑ]
+
+--- Transcribing: [codladh] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	kɔdlə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+  EpenthesisAndStrongSonorants START (Proc): In=	kɔdlə
+  EpenthesisAndStrongSonorants START (Proc): In=	kɔdlə
+  apply_procedural_epenthesis START: In=	kɔdlə
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	k(nonpalatal) | ɔ(vowel) | d(nonpalatal) | l(nonpalatal) | ə(vowel)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	kɔdlə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	kɔdlə
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	kɔdlə
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	kɔdlə
+  EpenthesisAndStrongSonorants END (Proc): Out=	kɔdlə
+Af. EpenthesisAndStrongSonorants: [kɔdlə]
+codladh         -> [kɔdlə]
+
+--- Transcribing: [daoine] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	d'iːne	' (using 	5	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	d'iːnə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+  EpenthesisAndStrongSonorants START (Proc): In=	d'iːnə
+  EpenthesisAndStrongSonorants START (Proc): In=	d'iːnə
+  apply_procedural_epenthesis START: In=	d'iːnə
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	d(nonpalatal) | '(unknown_fallback) | iː(vowel) | n(nonpalatal) | ə(vowel)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	d'iːnə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	d'iːnə
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	d'iːnə
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	d'iːnə
+  EpenthesisAndStrongSonorants END (Proc): Out=	d'iːnə
+Af. EpenthesisAndStrongSonorants: [d'iːnə]
+daoine          -> [d'iːnə]
+
+--- Transcribing: [eolas] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈoːlɑs	' (using 	4	 non-stress units) count: 	1	 result: 	true
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈoːlɑs
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈoːlɑs
+  apply_procedural_epenthesis START: In=	ˈoːlɑs
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	ˈoː(vowel) | l(nonpalatal) | ɑ(unknown_fallback) | s(nonpalatal)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈoːlɑs	' (using 	4	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	ˈoːlɑs
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	ˈoːlɑs
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	ˈoːlɑs
+  EpenthesisAndStrongSonorants END (Proc): Out=	ˈoːlɑs
+Af. EpenthesisAndStrongSonorants: [ˈoːlɑs]
+eolas           -> [ˈoːlɑs]
+
+--- Transcribing: [athair] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈɑhair	' (using 	4	 non-stress units) count: 	1	 result: 	true
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɑhair
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɑhair
+  apply_procedural_epenthesis START: In=	ˈɑhair
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	ˈ(stress_mark) | ɑ(unknown_fallback) | h(nonpalatal) | ai(vowel) | r(nonpalatal)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈɑhair	' (using 	4	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	ˈɑhair
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	ˈɑhair
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	ˈɑhair
+  EpenthesisAndStrongSonorants END (Proc): Out=	ˈɑhair
+Af. EpenthesisAndStrongSonorants: [ˈɑhair]
+athair          -> [ˈɑhair]
+
+--- Transcribing: [dorcha] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	dɔrxɑ	' (using 	5	 non-stress units) count: 	1	 result: 	true
+  EpenthesisAndStrongSonorants START (Proc): In=	dɔrxɑ
+  EpenthesisAndStrongSonorants START (Proc): In=	dɔrxɑ
+  apply_procedural_epenthesis START: In=	dɔrxɑ
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	d(nonpalatal) | ɔ(vowel) | r(nonpalatal) | x(nonpalatal) | ɑ(unknown_fallback)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	dɔrxɑ	' (using 	5	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Epenthesis): Checking V-C1-C2: 	ɔ	r	x	 | Cluster key: 	rx	 | C1 Qual: 	nonpalatal	 | C2 Qual: 	nonpalatal
+    MIN_DBG (Epenthesis): PROCEDURAL Epenthesis Triggered for: 	ɔ	r	x	 -> inserting 	ə
+  apply_procedural_epenthesis END (modified): Out=	dɔrəxɑ
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	dɔrəxɑ
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	dɔrəxɑ
+  EpenthesisAndStrongSonorants END (Proc): Out=	dɔrəxɑ
+Af. EpenthesisAndStrongSonorants: [dɔrəxɑ]
+dorcha          -> [dɔrəxɑ]
+
+--- Transcribing: [cnead] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	kr''eɑd	' (using 	7	 non-stress units) count: 	1	 result: 	true
+  EpenthesisAndStrongSonorants START (Proc): In=	kr''eɑd
+  EpenthesisAndStrongSonorants START (Proc): In=	kr''eɑd
+  apply_procedural_epenthesis START: In=	kr''eɑd
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	k(nonpalatal) | r(nonpalatal) | '(unknown_fallback) | '(unknown_fallback) | e(vowel) | ɑ(unknown_fallback) | d(nonpalatal)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	kr''eɑd	' (using 	7	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	kr''eɑd
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	kr''eɑd
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	kr''eɑd
+  EpenthesisAndStrongSonorants END (Proc): Out=	kr''eɑd
+Af. EpenthesisAndStrongSonorants: [kr''eɑd]
+cnead           -> [kr''eɑd]
+
+--- Transcribing: [samhradh] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	səurrə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+  EpenthesisAndStrongSonorants START (Proc): In=	səurrə
+  EpenthesisAndStrongSonorants START (Proc): In=	səurrə
+  apply_procedural_epenthesis START: In=	səurrə
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	s(nonpalatal) | əu(vowel) | r(nonpalatal) | r(nonpalatal) | ə(vowel)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	səurrə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	səurrə
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	səurrə
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	səurrə
+  EpenthesisAndStrongSonorants END (Proc): Out=	səurrə
+Af. EpenthesisAndStrongSonorants: [səurrə]
+samhradh        -> [səurrə]
+
+--- Transcribing: [abhann] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈ%1_BH_V_ɑN	' (using 	10	 non-stress units) count: 	0	 result: 	false
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈ%1_BH_V_ɑN
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈ%1_BH_V_ɑN
+  apply_procedural_epenthesis START: In=	ˈ%1_BH_V_ɑN
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	ˈ(stress_mark) | %(unknown_fallback) | 1(unknown_fallback) | _(unknown_fallback) | B(unknown_fallback) | H(unknown_fallback) | _(unknown_fallback) | V(unknown_fallback) | _(unknown_fallback) | ɑ(unknown_fallback) | N(nonpalatal)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈ%1_BH_V_ɑN	' (using 	10	 non-stress units) count: 	0	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	ˈ%1_BH_V_ɑN
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	ˈ%1_BH_V_ɑN
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	ˈ%1_BH_V_ɑN
+  EpenthesisAndStrongSonorants END (Proc): Out=	ˈ%1_BH_V_ɑN
+Af. EpenthesisAndStrongSonorants: [ˈ%1_BH_V_ɑN]
+abhann          -> [ˈ%1_BH_V_ɑN]
+
+--- Transcribing: [gabhal] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	g%1_BH_V_ɑl	' (using 	11	 non-stress units) count: 	0	 result: 	false
+  EpenthesisAndStrongSonorants START (Proc): In=	g%1_BH_V_ɑl
+  EpenthesisAndStrongSonorants START (Proc): In=	g%1_BH_V_ɑl
+  apply_procedural_epenthesis START: In=	g%1_BH_V_ɑl
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	g(nonpalatal) | %(unknown_fallback) | 1(unknown_fallback) | _(unknown_fallback) | B(unknown_fallback) | H(unknown_fallback) | _(unknown_fallback) | V(unknown_fallback) | _(unknown_fallback) | ɑ(unknown_fallback) | l(nonpalatal)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	g%1_BH_V_ɑl	' (using 	11	 non-stress units) count: 	0	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	g%1_BH_V_ɑl
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	g%1_BH_V_ɑl
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	g%1_BH_V_ɑl
+  EpenthesisAndStrongSonorants END (Proc): Out=	g%1_BH_V_ɑl
+Af. EpenthesisAndStrongSonorants: [g%1_BH_V_ɑl]
+gabhal          -> [g%1_BH_V_ɑl]
+
+--- Transcribing: [labhairt] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	l%1_BH_V_airt	' (using 	12	 non-stress units) count: 	1	 result: 	true
+  EpenthesisAndStrongSonorants START (Proc): In=	l%1_BH_V_airt
+  EpenthesisAndStrongSonorants START (Proc): In=	l%1_BH_V_airt
+  apply_procedural_epenthesis START: In=	l%1_BH_V_airt
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	l(nonpalatal) | %(unknown_fallback) | 1(unknown_fallback) | _(unknown_fallback) | B(unknown_fallback) | H(unknown_fallback) | _(unknown_fallback) | V(unknown_fallback) | _(unknown_fallback) | ai(vowel) | r(nonpalatal) | t(nonpalatal)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	l%1_BH_V_airt	' (using 	12	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Epenthesis): Checking V-C1-C2: 	ai	r	t	 | Cluster key: 	rt	 | C1 Qual: 	nonpalatal	 | C2 Qual: 	nonpalatal
+  apply_procedural_epenthesis END (no change): Out=	l%1_BH_V_airt
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	l%1_BH_V_airt
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	l%1_BH_V_airt
+  EpenthesisAndStrongSonorants END (Proc): Out=	l%1_BH_V_airt
+Af. EpenthesisAndStrongSonorants: [l%1_BH_V_airt]
+labhairt        -> [l%1_BH_V_airt]
+
+--- Transcribing: [cobhair] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	k%1_BH_V_air	' (using 	11	 non-stress units) count: 	1	 result: 	true
+  EpenthesisAndStrongSonorants START (Proc): In=	k%1_BH_V_air
+  EpenthesisAndStrongSonorants START (Proc): In=	k%1_BH_V_air
+  apply_procedural_epenthesis START: In=	k%1_BH_V_air
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	k(nonpalatal) | %(unknown_fallback) | 1(unknown_fallback) | _(unknown_fallback) | B(unknown_fallback) | H(unknown_fallback) | _(unknown_fallback) | V(unknown_fallback) | _(unknown_fallback) | ai(vowel) | r(nonpalatal)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	k%1_BH_V_air	' (using 	11	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	k%1_BH_V_air
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	k%1_BH_V_air
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	k%1_BH_V_air
+  EpenthesisAndStrongSonorants END (Proc): Out=	k%1_BH_V_air
+Af. EpenthesisAndStrongSonorants: [k%1_BH_V_air]
+cobhair         -> [k%1_BH_V_air]
+
+--- Transcribing: [domhan] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	d%1_MH_V_ɑn	' (using 	11	 non-stress units) count: 	0	 result: 	false
+  EpenthesisAndStrongSonorants START (Proc): In=	d%1_MH_V_ɑn
+  EpenthesisAndStrongSonorants START (Proc): In=	d%1_MH_V_ɑn
+  apply_procedural_epenthesis START: In=	d%1_MH_V_ɑn
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	d(nonpalatal) | %(unknown_fallback) | 1(unknown_fallback) | _(unknown_fallback) | M(nonpalatal) | H(unknown_fallback) | _(unknown_fallback) | V(unknown_fallback) | _(unknown_fallback) | ɑ(unknown_fallback) | n(nonpalatal)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	d%1_MH_V_ɑn	' (using 	11	 non-stress units) count: 	0	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	d%1_MH_V_ɑn
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	d%1_MH_V_ɑn
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	d%1_MH_V_ɑn
+  EpenthesisAndStrongSonorants END (Proc): Out=	d%1_MH_V_ɑn
+Af. EpenthesisAndStrongSonorants: [d%1_MH_V_ɑn]
+domhan          -> [d%1_MH_V_ɑn]
+
+--- Transcribing: [radharc] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	r%1_DH_V_ɑrk	' (using 	12	 non-stress units) count: 	0	 result: 	false
+  EpenthesisAndStrongSonorants START (Proc): In=	r%1_DH_V_ɑrk
+  EpenthesisAndStrongSonorants START (Proc): In=	r%1_DH_V_ɑrk
+  apply_procedural_epenthesis START: In=	r%1_DH_V_ɑrk
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	r(nonpalatal) | %(unknown_fallback) | 1(unknown_fallback) | _(unknown_fallback) | D(unknown_fallback) | H(unknown_fallback) | _(unknown_fallback) | V(unknown_fallback) | _(unknown_fallback) | ɑ(unknown_fallback) | r(nonpalatal) | k(nonpalatal)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	r%1_DH_V_ɑrk	' (using 	12	 non-stress units) count: 	0	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	r%1_DH_V_ɑrk
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	r%1_DH_V_ɑrk
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	r%1_DH_V_ɑrk
+  EpenthesisAndStrongSonorants END (Proc): Out=	r%1_DH_V_ɑrk
+Af. EpenthesisAndStrongSonorants: [r%1_DH_V_ɑrk]
+radharc         -> [r%1_DH_V_ɑrk]
+
+--- Transcribing: [laghad] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	l%1_GH_V_ɑd	' (using 	11	 non-stress units) count: 	0	 result: 	false
+  EpenthesisAndStrongSonorants START (Proc): In=	l%1_GH_V_ɑd
+  EpenthesisAndStrongSonorants START (Proc): In=	l%1_GH_V_ɑd
+  apply_procedural_epenthesis START: In=	l%1_GH_V_ɑd
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	l(nonpalatal) | %(unknown_fallback) | 1(unknown_fallback) | _(unknown_fallback) | G(unknown_fallback) | H(unknown_fallback) | _(unknown_fallback) | V(unknown_fallback) | _(unknown_fallback) | ɑ(unknown_fallback) | d(nonpalatal)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	l%1_GH_V_ɑd	' (using 	11	 non-stress units) count: 	0	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	l%1_GH_V_ɑd
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	l%1_GH_V_ɑd
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	l%1_GH_V_ɑd
+  EpenthesisAndStrongSonorants END (Proc): Out=	l%1_GH_V_ɑd
+Af. EpenthesisAndStrongSonorants: [l%1_GH_V_ɑd]
+laghad          -> [l%1_GH_V_ɑd]
+
+--- Transcribing: [bodhar] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	b%1_DH_V_ɑr	' (using 	11	 non-stress units) count: 	0	 result: 	false
+  EpenthesisAndStrongSonorants START (Proc): In=	b%1_DH_V_ɑr
+  EpenthesisAndStrongSonorants START (Proc): In=	b%1_DH_V_ɑr
+  apply_procedural_epenthesis START: In=	b%1_DH_V_ɑr
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	b(nonpalatal) | %(unknown_fallback) | 1(unknown_fallback) | _(unknown_fallback) | D(unknown_fallback) | H(unknown_fallback) | _(unknown_fallback) | V(unknown_fallback) | _(unknown_fallback) | ɑ(unknown_fallback) | r(nonpalatal)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	b%1_DH_V_ɑr	' (using 	11	 non-stress units) count: 	0	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	b%1_DH_V_ɑr
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	b%1_DH_V_ɑr
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	b%1_DH_V_ɑr
+  EpenthesisAndStrongSonorants END (Proc): Out=	b%1_DH_V_ɑr
+Af. EpenthesisAndStrongSonorants: [b%1_DH_V_ɑr]
+bodhar          -> [b%1_DH_V_ɑr]
+
+--- Transcribing: [foghmhar] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	f%1_GH_V_wɑr	' (using 	12	 non-stress units) count: 	0	 result: 	false
+  EpenthesisAndStrongSonorants START (Proc): In=	f%1_GH_V_wɑr
+  EpenthesisAndStrongSonorants START (Proc): In=	f%1_GH_V_wɑr
+  apply_procedural_epenthesis START: In=	f%1_GH_V_wɑr
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	f(nonpalatal) | %(unknown_fallback) | 1(unknown_fallback) | _(unknown_fallback) | G(unknown_fallback) | H(unknown_fallback) | _(unknown_fallback) | V(unknown_fallback) | _(unknown_fallback) | w(nonpalatal) | ɑ(unknown_fallback) | r(nonpalatal)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	f%1_GH_V_wɑr	' (using 	12	 non-stress units) count: 	0	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	f%1_GH_V_wɑr
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	f%1_GH_V_wɑr
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	f%1_GH_V_wɑr
+  EpenthesisAndStrongSonorants END (Proc): Out=	f%1_GH_V_wɑr
+Af. EpenthesisAndStrongSonorants: [f%1_GH_V_wɑr]
+foghmhar        -> [f%1_GH_V_wɑr]
+
+--- Transcribing: [feidhm] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	f'e%1_DH_V_m	' (using 	12	 non-stress units) count: 	1	 result: 	true
+  EpenthesisAndStrongSonorants START (Proc): In=	f'e%1_DH_V_m
+  EpenthesisAndStrongSonorants START (Proc): In=	f'e%1_DH_V_m
+  apply_procedural_epenthesis START: In=	f'e%1_DH_V_m
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	f(nonpalatal) | '(unknown_fallback) | e(vowel) | %(unknown_fallback) | 1(unknown_fallback) | _(unknown_fallback) | D(unknown_fallback) | H(unknown_fallback) | _(unknown_fallback) | V(unknown_fallback) | _(unknown_fallback) | m(nonpalatal)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	f'e%1_DH_V_m	' (using 	12	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	f'e%1_DH_V_m
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	f'e%1_DH_V_m
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	f'e%1_DH_V_m
+  EpenthesisAndStrongSonorants END (Proc): Out=	f'e%1_DH_V_m
+Af. EpenthesisAndStrongSonorants: [f'e%1_DH_V_m]
+feidhm          -> [f'e%1_DH_V_m]
+
+--- Transcribing: [suidhe] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	sɔ%1_DH_V_e	' (using 	11	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	sɔ%1_DH_V_ə	' (using 	11	 non-stress units) count: 	2	 result: 	false
+  EpenthesisAndStrongSonorants START (Proc): In=	sɔ%1_DH_V_ə
+  EpenthesisAndStrongSonorants START (Proc): In=	sɔ%1_DH_V_ə
+  apply_procedural_epenthesis START: In=	sɔ%1_DH_V_ə
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	s(nonpalatal) | ɔ(vowel) | %(unknown_fallback) | 1(unknown_fallback) | _(unknown_fallback) | D(unknown_fallback) | H(unknown_fallback) | _(unknown_fallback) | V(unknown_fallback) | _(unknown_fallback) | ə(vowel)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	sɔ%1_DH_V_ə	' (using 	11	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	sɔ%1_DH_V_ə
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	sɔ%1_DH_V_ə
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	sɔ%1_DH_V_ə
+  EpenthesisAndStrongSonorants END (Proc): Out=	sɔ%1_DH_V_ə
+Af. EpenthesisAndStrongSonorants: [sɔ%1_DH_V_ə]
+suidhe          -> [sɔ%1_DH_V_ə]
+
+--- Transcribing: [dubhach] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	d%1_BH_V_ɑx	' (using 	11	 non-stress units) count: 	0	 result: 	false
+  EpenthesisAndStrongSonorants START (Proc): In=	d%1_BH_V_ɑx
+  EpenthesisAndStrongSonorants START (Proc): In=	d%1_BH_V_ɑx
+  apply_procedural_epenthesis START: In=	d%1_BH_V_ɑx
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	d(nonpalatal) | %(unknown_fallback) | 1(unknown_fallback) | _(unknown_fallback) | B(unknown_fallback) | H(unknown_fallback) | _(unknown_fallback) | V(unknown_fallback) | _(unknown_fallback) | ɑ(unknown_fallback) | x(nonpalatal)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	d%1_BH_V_ɑx	' (using 	11	 non-stress units) count: 	0	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	d%1_BH_V_ɑx
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	d%1_BH_V_ɑx
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	d%1_BH_V_ɑx
+  EpenthesisAndStrongSonorants END (Proc): Out=	d%1_BH_V_ɑx
+Af. EpenthesisAndStrongSonorants: [d%1_BH_V_ɑx]
+dubhach         -> [d%1_BH_V_ɑx]
+
+--- Transcribing: [slighe] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	sl%1_GH_V_e	' (using 	11	 non-stress units) count: 	1	 result: 	true
+  EpenthesisAndStrongSonorants START (Proc): In=	sl%1_GH_V_e
+  EpenthesisAndStrongSonorants START (Proc): In=	sl%1_GH_V_e
+  apply_procedural_epenthesis START: In=	sl%1_GH_V_e
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	s(nonpalatal) | l(nonpalatal) | %(unknown_fallback) | 1(unknown_fallback) | _(unknown_fallback) | G(unknown_fallback) | H(unknown_fallback) | _(unknown_fallback) | V(unknown_fallback) | _(unknown_fallback) | e(vowel)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	sl%1_GH_V_e	' (using 	11	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	sl%1_GH_V_e
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	sl%1_GH_V_e
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	sl%1_GH_V_e
+  EpenthesisAndStrongSonorants END (Proc): Out=	sl%1_GH_V_e
+Af. EpenthesisAndStrongSonorants: [sl%1_GH_V_e]
+slighe          -> [sl%1_GH_V_e]
+
+--- Transcribing: [buíon] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	buiːɔn	' (using 	5	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	buiːən	' (using 	5	 non-stress units) count: 	2	 result: 	false
+  EpenthesisAndStrongSonorants START (Proc): In=	buiːən
+  EpenthesisAndStrongSonorants START (Proc): In=	buiːən
+  apply_procedural_epenthesis START: In=	buiːən
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	b(nonpalatal) | ui(vowel) | ː(unknown_fallback) | ə(vowel) | n(nonpalatal)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	buiːən	' (using 	5	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	buiːən
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	buiːən
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	buiːən
+  EpenthesisAndStrongSonorants END (Proc): Out=	buiːən
+Af. EpenthesisAndStrongSonorants: [buiːən]
+buíon          -> [buiːən]
+
+--- Transcribing: [cnámh] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	krɑːv	' (using 	4	 non-stress units) count: 	1	 result: 	true
+  EpenthesisAndStrongSonorants START (Proc): In=	krɑːv
+  EpenthesisAndStrongSonorants START (Proc): In=	krɑːv
+  apply_procedural_epenthesis START: In=	krɑːv
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	k(nonpalatal) | r(nonpalatal) | ɑː(vowel) | v(nonpalatal)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	krɑːv	' (using 	4	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	krɑːv
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	krɑːv
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	krɑːv
+  EpenthesisAndStrongSonorants END (Proc): Out=	krɑːv
+Af. EpenthesisAndStrongSonorants: [krɑːv]
+cnámh          -> [krɑːv]
+
+--- Transcribing: [mná] ---
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	mnɑː	' (using 	3	 non-stress units) count: 	1	 result: 	true
+  EpenthesisAndStrongSonorants START (Proc): In=	mnɑː
+  EpenthesisAndStrongSonorants START (Proc): In=	mnɑː
+  apply_procedural_epenthesis START: In=	mnɑː
+    MIN_DBG (Epenthesis): Parsed units for epenthesis: 	m(nonpalatal) | n(nonpalatal) | ɑː(vowel)
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	mnɑː	' (using 	3	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	mnɑː
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	mnɑː
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	mnɑː
+  EpenthesisAndStrongSonorants END (Proc): Out=	mnɑː
+Af. EpenthesisAndStrongSonorants: [mnɑː]
+mná            -> [mnɑː]

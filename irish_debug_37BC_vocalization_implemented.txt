@@ -1,0 +1,1062 @@
+﻿
+--- Running Test Set for Iteration 37BC (Fricative Vocalization) ---
+
+--- Transcribing: [ainm] ---
+  ConsonantResolution START (Proc): In=	ˈainm
+  ConsonantResolution START (Proc): In=	ˈainm
+  ConsonantResolution END (Proc): Out=	ˈainm'
+Af. ConsonantResolution: [ˈainm']
+  Stage4_4_ResolveTempVowelMarkers START: In=	ˈ&AI_DIPH&nm'
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&AI_DIPH&(nm')	' APPLIED to '	ˈ&AI_DIPH&nm'	' -> '	ˈanm'	' (	1	x)
+  Stage4_4_ResolveTempVowelMarkers END: Out=	ˈanm'
+Af. Stage4_4_ResolveTempVowelMarkers: [ˈanm']
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	ˈanm'
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	ˈanm'
+Af. Stage4_4_1_VocalizeLenitedFricatives: [ˈanm']
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	ˈanm'
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	ˈanm'
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	a	' APPLIED to '	ˈanm'	' -> '	ˈɑnm'	' (	1	x)
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	ˈɑnm'
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [ˈɑnm']
+Af. Nasalization: [ˈɑnm']
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	ˈɑnm'
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	ˈɑnm'
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈɑnm'	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6_U): Word '	ˈɑnm'	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	ˈɑnm'
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [ˈɑnm']
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɑnm'
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɑnm'
+  apply_procedural_epenthesis START: In=	ˈɑnm'
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈɑnm'	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Epenthesis): Checking V-C1-C2: 	ɑ	n	m	 | Cluster key: 	nm	 | C1 Qual: 	nonpalatal	 | C2 Qual: 	nonpalatal
+  apply_procedural_epenthesis END (no change): Out=	ˈɑnm'
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	ˈɑnm'
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	ˈɑnm'
+  EpenthesisAndStrongSonorants END (Proc): Out=	ˈɑnm'
+Af. EpenthesisAndStrongSonorants: [ˈɑnm']
+  FinalCleanup START: In=	ˈɑnm'
+  FinalCleanup END: Out=	ˈɑnm'
+Af. FinalCleanup: [ˈɑnm']
+ainm            -> [ˈɑnm']
+
+--- Transcribing: [oilc] ---
+  ConsonantResolution START (Proc): In=	ˈoilc
+  ConsonantResolution START (Proc): In=	ˈoilc
+  ConsonantResolution END (Proc): Out=	ˈoilk'
+Af. ConsonantResolution: [ˈoilk']
+  Stage4_4_ResolveTempVowelMarkers START: In=	ˈ&OI_DIPH&lk'
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&OI_DIPH&([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾ]*')	' APPLIED to '	ˈ&OI_DIPH&lk'	' -> '	ˈɛlk'	' (	1	x)
+  Stage4_4_ResolveTempVowelMarkers END: Out=	ˈɛlk'
+Af. Stage4_4_ResolveTempVowelMarkers: [ˈɛlk']
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	ˈɛlk'
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	ˈɛlk'
+Af. Stage4_4_1_VocalizeLenitedFricatives: [ˈɛlk']
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	ˈɛlk'
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	ˈɛlk'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	ˈɛlk'
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [ˈɛlk']
+Af. Nasalization: [ˈɛlk']
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	ˈɛlk'
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	ˈɛlk'
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈɛlk'	' (using 	4	 non-stress units) count: 	0	 result: 	false
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	ˈɛlk'
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [ˈɛlk']
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɛlk'
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɛlk'
+  apply_procedural_epenthesis START: In=	ˈɛlk'
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈɛlk'	' (using 	4	 non-stress units) count: 	0	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	ˈɛlk'
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	ˈɛlk'
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	ˈɛlk'
+  EpenthesisAndStrongSonorants END (Proc): Out=	ˈɛlk'
+Af. EpenthesisAndStrongSonorants: [ˈɛlk']
+  FinalCleanup START: In=	ˈɛlk'
+  FinalCleanup END: Out=	ˈɛlk'
+Af. FinalCleanup: [ˈɛlk']
+oilc            -> [ˈɛlk']
+
+--- Transcribing: [seilf] ---
+  ConsonantResolution START (Proc): In=	seilf
+  ConsonantResolution START (Proc): In=	seilf
+  ConsonantResolution END (Proc): Out=	s'eilf'
+Af. ConsonantResolution: [s'eilf']
+  Stage4_4_ResolveTempVowelMarkers START: In=	s'&EI_DIPH&lf'
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&EI_DIPH&	' APPLIED to '	s'&EI_DIPH&lf'	' -> '	s'elf'	' (	1	x)
+  Stage4_4_ResolveTempVowelMarkers END: Out=	s'elf'
+Af. Stage4_4_ResolveTempVowelMarkers: [s'elf']
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	s'elf'
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	s'elf'
+Af. Stage4_4_1_VocalizeLenitedFricatives: [s'elf']
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	s'elf'
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	s'elf'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	s'elf'
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [s'elf']
+Af. Nasalization: [s'elf']
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	s'elf'
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	s'elf'
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	s'elf'	' (using 	5	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6_U): Word '	s'elf'	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	s'elf'
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [s'elf']
+  EpenthesisAndStrongSonorants START (Proc): In=	s'elf'
+  EpenthesisAndStrongSonorants START (Proc): In=	s'elf'
+  apply_procedural_epenthesis START: In=	s'elf'
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	s'elf'	' (using 	5	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Epenthesis): Checking V-C1-C2: 	e	l	f	 | Cluster key: 	lf	 | C1 Qual: 	nonpalatal	 | C2 Qual: 	nonpalatal
+  apply_procedural_epenthesis END (no change): Out=	s'elf'
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	s'elf'
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	s'elf'
+  EpenthesisAndStrongSonorants END (Proc): Out=	s'elf'
+Af. EpenthesisAndStrongSonorants: [s'elf']
+  FinalCleanup START: In=	s'elf'
+  FinalCleanup END: Out=	s'elf'
+Af. FinalCleanup: [s'elf']
+seilf           -> [s'elf']
+
+--- Transcribing: [balla] ---
+  ConsonantResolution START (Proc): In=	ba_LL_a
+  ConsonantResolution START (Proc): In=	ba_LL_a
+    MIN_DBG (ConsonantR): Initial non-palatal '	b	' for '	b	' in '	balla	' -> returning base
+  ConsonantResolution END (Proc): Out=	baLa
+Af. ConsonantResolution: [baLa]
+  Stage4_4_ResolveTempVowelMarkers START: In=	baLa
+  Stage4_4_ResolveTempVowelMarkers END: Out=	baLa
+Af. Stage4_4_ResolveTempVowelMarkers: [baLa]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	baLa
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	baLa
+Af. Stage4_4_1_VocalizeLenitedFricatives: [baLa]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	baLa
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	baLa
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	a	' APPLIED to '	baLa	' -> '	bɑLɑ	' (	2	x)
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	bɑLɑ
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [bɑLɑ]
+Af. Nasalization: [bɑLɑ]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	bɑLɑ
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	bɑLɑ
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	bɑLɑ	' (using 	4	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ɑ	' at unit index 	2	 is stressed.
+    MIN_DBG (Stage4_6_U): Reducing '	ɑ	' to '	ə	'. Prec: 	nonpalatal	 Foll: 	neutral
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	bɑLə	' (using 	4	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ɑ	' at unit index 	2	 is stressed.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	bɑLə
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [bɑLə]
+  EpenthesisAndStrongSonorants START (Proc): In=	bɑLə
+  EpenthesisAndStrongSonorants START (Proc): In=	bɑLə
+  apply_procedural_epenthesis START: In=	bɑLə
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	bɑLə	' (using 	4	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	bɑLə
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	bɑLə
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	bɑLə
+  EpenthesisAndStrongSonorants END (Proc): Out=	bɑLə
+Af. EpenthesisAndStrongSonorants: [bɑLə]
+  FinalCleanup START: In=	bɑLə
+  FinalCleanup END: Out=	bɑLə
+Af. FinalCleanup: [bɑLə]
+balla           -> [bɑLə]
+
+--- Transcribing: [codladh] ---
+  ConsonantResolution START (Proc): In=	codl&A_VOC_D_FINAL&
+  ConsonantResolution START (Proc): In=	codl&A_VOC_D_FINAL&
+    MIN_DBG (ConsonantR): Initial non-palatal '	k	' for '	c	' in '	codladh	' -> returning base
+  ConsonantResolution END (Proc): Out=	kodl&A_VOC_D_FINAL&
+Af. ConsonantResolution: [kodl&A_VOC_D_FINAL&]
+  Stage4_4_ResolveTempVowelMarkers START: In=	kodl&A_VOC_D_FINAL&
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&A_VOC_D_FINAL&(#?)	' APPLIED to '	kodl&A_VOC_D_FINAL&	' -> '	kodlə	' (	1	x)
+  Stage4_4_ResolveTempVowelMarkers END: Out=	kodlə
+Af. Stage4_4_ResolveTempVowelMarkers: [kodlə]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	kodlə
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	kodlə
+Af. Stage4_4_1_VocalizeLenitedFricatives: [kodlə]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	kodlə
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	kodlə
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	o	' APPLIED to '	kodlə	' -> '	kɔdlə	' (	1	x)
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	kɔdlə
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [kɔdlə]
+Af. Nasalization: [kɔdlə]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	kɔdlə
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	kɔdlə
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	kɔdlə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ɔ	' at unit index 	2	 is stressed.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	kɔdlə
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [kɔdlə]
+  EpenthesisAndStrongSonorants START (Proc): In=	kɔdlə
+  EpenthesisAndStrongSonorants START (Proc): In=	kɔdlə
+  apply_procedural_epenthesis START: In=	kɔdlə
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	kɔdlə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	kɔdlə
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	kɔdlə
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	kɔdlə
+  EpenthesisAndStrongSonorants END (Proc): Out=	kɔdlə
+Af. EpenthesisAndStrongSonorants: [kɔdlə]
+  FinalCleanup START: In=	kɔdlə
+  FinalCleanup END: Out=	kɔdlə
+Af. FinalCleanup: [kɔdlə]
+codladh         -> [kɔdlə]
+
+--- Transcribing: [daoine] ---
+  ConsonantResolution START (Proc): In=	d&AOI_LONG&ne
+  ConsonantResolution START (Proc): In=	d&AOI_LONG&ne
+  ConsonantResolution END (Proc): Out=	d'&AOI_LONG&ne
+Af. ConsonantResolution: [d'&AOI_LONG&ne]
+  Stage4_4_ResolveTempVowelMarkers START: In=	d'&AOI_LONG&ne
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&AOI_LONG&	' APPLIED to '	d'&AOI_LONG&ne	' -> '	d'iːne	' (	1	x)
+  Stage4_4_ResolveTempVowelMarkers END: Out=	d'iːne
+Af. Stage4_4_ResolveTempVowelMarkers: [d'iːne]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	d'iːne
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	d'iːne
+Af. Stage4_4_1_VocalizeLenitedFricatives: [d'iːne]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	d'iːne
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	d'iːne
+    MIN_DBG (Stage4_5_C): Placeholder created: '	iː	' -> '	&PHON_I_LONG&	'. Result: '	d'&PHON_I_LONG&ne	'
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_I_LONG&	' -> '	iː	'. Result: '	d'iːne	'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	d'iːne
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [d'iːne]
+Af. Nasalization: [d'iːne]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	d'iːne
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	d'iːne
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	d'iːne	' (using 	5	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	iː	' at unit index 	3	 is stressed.
+    MIN_DBG (Stage4_6_U): Reducing '	e	' to '	ə	'. Prec: 	nonpalatal	 Foll: 	neutral
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	d'iːnə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	iː	' at unit index 	3	 is stressed.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	d'iːnə
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [d'iːnə]
+  EpenthesisAndStrongSonorants START (Proc): In=	d'iːnə
+  EpenthesisAndStrongSonorants START (Proc): In=	d'iːnə
+  apply_procedural_epenthesis START: In=	d'iːnə
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	d'iːnə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	d'iːnə
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	d'iːnə
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	d'iːnə
+  EpenthesisAndStrongSonorants END (Proc): Out=	d'iːnə
+Af. EpenthesisAndStrongSonorants: [d'iːnə]
+  FinalCleanup START: In=	d'iːnə
+  FinalCleanup END: Out=	d'iːnə
+Af. FinalCleanup: [d'iːnə]
+daoine          -> [d'iːnə]
+
+--- Transcribing: [eolas] ---
+  ConsonantResolution START (Proc): In=	ˈeolas
+  ConsonantResolution START (Proc): In=	ˈeolas
+  ConsonantResolution END (Proc): Out=	ˈeolas
+Af. ConsonantResolution: [ˈeolas]
+  Stage4_4_ResolveTempVowelMarkers START: In=	ˈ&EO_SEQ&las
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&EO_SEQ&	' APPLIED to '	ˈ&EO_SEQ&las	' -> '	ˈoːlas	' (	1	x)
+  Stage4_4_ResolveTempVowelMarkers END: Out=	ˈoːlas
+Af. Stage4_4_ResolveTempVowelMarkers: [ˈoːlas]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	ˈoːlas
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	ˈoːlas
+Af. Stage4_4_1_VocalizeLenitedFricatives: [ˈoːlas]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	ˈoːlas
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	ˈoːlas
+    MIN_DBG (Stage4_5_C): Placeholder created: '	oː	' -> '	&PHON_O_LONG&	'. Result: '	ˈ&PHON_O_LONG&las	'
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	a	' APPLIED to '	ˈ&PHON_O_LONG&las	' -> '	ˈ&PHON_O_LONG&lɑs	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_O_LONG&	' -> '	oː	'. Result: '	ˈoːlɑs	'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	ˈoːlɑs
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [ˈoːlɑs]
+Af. Nasalization: [ˈoːlɑs]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	ˈoːlɑs
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	ˈoːlɑs
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈoːlɑs	' (using 	4	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6_U): Reducing '	ɑ	' to '	ə	'. Prec: 	nonpalatal	 Foll: 	nonpalatal
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈoːləs	' (using 	4	 non-stress units) count: 	2	 result: 	false
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	ˈoːləs
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [ˈoːləs]
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈoːləs
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈoːləs
+  apply_procedural_epenthesis START: In=	ˈoːləs
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈoːləs	' (using 	4	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	ˈoːləs
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	ˈoːləs
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	ˈoːləs
+  EpenthesisAndStrongSonorants END (Proc): Out=	ˈoːləs
+Af. EpenthesisAndStrongSonorants: [ˈoːləs]
+  FinalCleanup START: In=	ˈoːləs
+  FinalCleanup END: Out=	ˈoːləs
+Af. FinalCleanup: [ˈoːləs]
+eolas           -> [ˈoːləs]
+
+--- Transcribing: [athair] ---
+  ConsonantResolution START (Proc): In=	ˈa_TH_air
+  ConsonantResolution START (Proc): In=	ˈa_TH_air
+  ConsonantResolution END (Proc): Out=	ˈahair
+Af. ConsonantResolution: [ˈahair]
+  Stage4_4_ResolveTempVowelMarkers START: In=	ˈah&AI_DIPH&r
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&AI_DIPH&	' APPLIED to '	ˈah&AI_DIPH&r	' -> '	ˈahair	' (	1	x)
+  Stage4_4_ResolveTempVowelMarkers END: Out=	ˈahair
+Af. Stage4_4_ResolveTempVowelMarkers: [ˈahair]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	ˈahair
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	ˈahair
+Af. Stage4_4_1_VocalizeLenitedFricatives: [ˈahair]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	ˈahair
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	ˈahair
+    MIN_DBG (Stage4_5_C): Placeholder created: '	ai	' -> '	&PHON_AI_DIPH&	'. Result: '	ˈah&PHON_AI_DIPH&r	'
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	a	' APPLIED to '	ˈah&PHON_AI_DIPH&r	' -> '	ˈɑh&PHON_AI_DIPH&r	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_AI_DIPH&	' -> '	ai	'. Result: '	ˈɑhair	'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	ˈɑhair
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [ˈɑhair]
+Af. Nasalization: [ˈɑhair]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	ˈɑhair
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	ˈɑhair
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈɑhair	' (using 	4	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ɑ	' at unit index 	2	 is stressed.
+    MIN_DBG (Stage4_6_U): Reducing '	ai	' to '	ə	'. Prec: 	nonpalatal	 Foll: 	nonpalatal
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈɑhər	' (using 	4	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ɑ	' at unit index 	2	 is stressed.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	ˈɑhər
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [ˈɑhər]
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɑhər
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈɑhər
+  apply_procedural_epenthesis START: In=	ˈɑhər
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈɑhər	' (using 	4	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	ˈɑhər
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	ˈɑhər
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	ˈɑhər
+  EpenthesisAndStrongSonorants END (Proc): Out=	ˈɑhər
+Af. EpenthesisAndStrongSonorants: [ˈɑhər]
+  FinalCleanup START: In=	ˈɑhər
+  FinalCleanup END: Out=	ˈɑhər
+Af. FinalCleanup: [ˈɑhər]
+athair          -> [ˈɑhər]
+
+--- Transcribing: [dorcha] ---
+  ConsonantResolution START (Proc): In=	dor_CH_a
+  ConsonantResolution START (Proc): In=	dor_CH_a
+    MIN_DBG (ConsonantR): Initial non-palatal '	d	' for '	d	' in '	dorcha	' -> returning base
+  ConsonantResolution END (Proc): Out=	dor_CH_a
+Af. ConsonantResolution: [dor_CH_a]
+  Stage4_4_ResolveTempVowelMarkers START: In=	dorxa
+  Stage4_4_ResolveTempVowelMarkers END: Out=	dorxa
+Af. Stage4_4_ResolveTempVowelMarkers: [dorxa]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	dorxa
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	dorxa
+Af. Stage4_4_1_VocalizeLenitedFricatives: [dorxa]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	dorxa
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	dorxa
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	a	' APPLIED to '	dorxa	' -> '	dorxɑ	' (	1	x)
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	o	' APPLIED to '	dorxɑ	' -> '	dɔrxɑ	' (	1	x)
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	dɔrxɑ
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [dɔrxɑ]
+Af. Nasalization: [dɔrxɑ]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	dɔrxɑ
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	dɔrxɑ
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	dɔrxɑ	' (using 	5	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ɔ	' at unit index 	2	 is stressed.
+    MIN_DBG (Stage4_6_U): Reducing '	ɑ	' to '	ə	'. Prec: 	nonpalatal	 Foll: 	neutral
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	dɔrxə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ɔ	' at unit index 	2	 is stressed.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	dɔrxə
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [dɔrxə]
+  EpenthesisAndStrongSonorants START (Proc): In=	dɔrxə
+  EpenthesisAndStrongSonorants START (Proc): In=	dɔrxə
+  apply_procedural_epenthesis START: In=	dɔrxə
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	dɔrxə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	dɔrxə
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	dɔrxə
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	dɔrxə
+  EpenthesisAndStrongSonorants END (Proc): Out=	dɔrxə
+Af. EpenthesisAndStrongSonorants: [dɔrxə]
+  FinalCleanup START: In=	dɔrxə
+  FinalCleanup END: Out=	dɔrxə
+Af. FinalCleanup: [dɔrxə]
+dorcha          -> [dɔrxə]
+
+--- Transcribing: [cnead] ---
+  ConsonantResolution START (Proc): In=	cnead
+  ConsonantResolution START (Proc): In=	cnead
+    MIN_DBG (ConsonantR): Metathesis candidate found: 	cn
+    MIN_DBG (ConsonantR): Initial non-palatal '	k	' for '	c	' in '	cnead	' -> returning base
+  ConsonantResolution END (Proc): Out=	kr''ead
+Af. ConsonantResolution: [kr''ead]
+  Stage4_4_ResolveTempVowelMarkers START: In=	kr''ead
+  Stage4_4_ResolveTempVowelMarkers END: Out=	kr''ead
+Af. Stage4_4_ResolveTempVowelMarkers: [kr''ead]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	kr''ead
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	kr''ead
+Af. Stage4_4_1_VocalizeLenitedFricatives: [kr''ead]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	kr''ead
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	kr''ead
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	a	' APPLIED to '	kr''ead	' -> '	kr''eɑd	' (	1	x)
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	kr''eɑd
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [kr''eɑd]
+Af. Nasalization: [kr''eɑd]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	kr''eɑd
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	kr''eɑd
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	kr''eɑd	' (using 	7	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	e	' at unit index 	5	 is stressed.
+    MIN_DBG (Stage4_6_U): Reducing '	ɑ	' to '	ə	'. Prec: 	neutral	 Foll: 	nonpalatal
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	kr''eəd	' (using 	7	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	e	' at unit index 	5	 is stressed.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	kr''eəd
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [kr''eəd]
+  EpenthesisAndStrongSonorants START (Proc): In=	kr''eəd
+  EpenthesisAndStrongSonorants START (Proc): In=	kr''eəd
+  apply_procedural_epenthesis START: In=	kr''eəd
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	kr''eəd	' (using 	7	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	kr''eəd
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	kr''eəd
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	kr''eəd
+  EpenthesisAndStrongSonorants END (Proc): Out=	kr''eəd
+Af. EpenthesisAndStrongSonorants: [kr''eəd]
+  FinalCleanup START: In=	kr''eəd
+  FinalCleanup END: Out=	kr''eəd
+Af. FinalCleanup: [kr''eəd]
+cnead           -> [kr''eəd]
+
+--- Transcribing: [samhradh] ---
+  ConsonantResolution START (Proc): In=	s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&
+  ConsonantResolution START (Proc): In=	s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&
+  ConsonantResolution END (Proc): Out=	s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&
+Af. ConsonantResolution: [s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&]
+  Stage4_4_ResolveTempVowelMarkers START: In=	s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&A_VOC_M_MEDIAL_R&(r)	' APPLIED to '	s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&	' -> '	s&TEMP_CONN_AU&rr&A_VOC_D_FINAL&	' (	1	x)
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&A_VOC_D_FINAL&(#?)	' APPLIED to '	s&TEMP_CONN_AU&rr&A_VOC_D_FINAL&	' -> '	s&TEMP_CONN_AU&rrə	' (	1	x)
+  Stage4_4_ResolveTempVowelMarkers END: Out=	s&TEMP_CONN_AU&rrə
+Af. Stage4_4_ResolveTempVowelMarkers: [s&TEMP_CONN_AU&rrə]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	s&TEMP_CONN_AU&rrə
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	s&TEMP_CONN_AU&rrə
+Af. Stage4_4_1_VocalizeLenitedFricatives: [s&TEMP_CONN_AU&rrə]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	s&TEMP_CONN_AU&rrə
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	s&TEMP_CONN_AU&rrə
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	səurrə
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [səurrə]
+Af. Nasalization: [səurrə]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	səurrə
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	səurrə
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	səurrə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	əu	' at unit index 	2	 is stressed.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	səurrə
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [səurrə]
+  EpenthesisAndStrongSonorants START (Proc): In=	səurrə
+  EpenthesisAndStrongSonorants START (Proc): In=	səurrə
+  apply_procedural_epenthesis START: In=	səurrə
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	səurrə	' (using 	5	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	səurrə
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	səurrə
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	səurrə
+  EpenthesisAndStrongSonorants END (Proc): Out=	səurrə
+Af. EpenthesisAndStrongSonorants: [səurrə]
+  FinalCleanup START: In=	səurrə
+  FinalCleanup END: Out=	səurrə
+Af. FinalCleanup: [səurrə]
+samhradh        -> [səurrə]
+
+--- Transcribing: [abhann] ---
+  ConsonantResolution START (Proc): In=	ˈa_BH_a_NN_
+  ConsonantResolution START (Proc): In=	ˈa_BH_a_NN_
+  ConsonantResolution END (Proc): Out=	ˈ%1_BH_V_aN
+Af. ConsonantResolution: [ˈ%1_BH_V_aN]
+  Stage4_4_ResolveTempVowelMarkers START: In=	ˈ%1_BH_V_aN
+  Stage4_4_ResolveTempVowelMarkers END: Out=	ˈ%1_BH_V_aN
+Af. Stage4_4_ResolveTempVowelMarkers: [ˈ%1_BH_V_aN]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	ˈ%1_BH_V_aN
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	ˈ%1_BH_V_aN
+Af. Stage4_4_1_VocalizeLenitedFricatives: [ˈ%1_BH_V_aN]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	ˈ%1_BH_V_aN
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	ˈ%1_BH_V_aN
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	a	' APPLIED to '	ˈ%1_BH_V_aN	' -> '	ˈ%1_BH_V_ɑN	' (	1	x)
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	ˈ%1_BH_V_ɑN
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [ˈ%1_BH_V_ɑN]
+Af. Nasalization: [ˈ%1_BH_V_ɑN]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	ˈ%1_BH_V_ɑN
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	ˈ%1_BH_V_ɑN
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈ%1_BH_V_ɑN	' (using 	10	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6_U): Word '	ˈ%1_BH_V_ɑN	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	ˈ%1_BH_V_ɑN
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [ˈ%1_BH_V_ɑN]
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈ%1_BH_V_ɑN
+  EpenthesisAndStrongSonorants START (Proc): In=	ˈ%1_BH_V_ɑN
+  apply_procedural_epenthesis START: In=	ˈ%1_BH_V_ɑN
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	ˈ%1_BH_V_ɑN	' (using 	10	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	ˈ%1_BH_V_ɑN
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	ˈ%1_BH_V_ɑN
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	ˈ%1_BH_V_ɑN
+  EpenthesisAndStrongSonorants END (Proc): Out=	ˈ%1_BH_V_ɑN
+Af. EpenthesisAndStrongSonorants: [ˈ%1_BH_V_ɑN]
+  FinalCleanup START: In=	ˈ%1_BH_V_ɑN
+  FinalCleanup END: Out=	ˈ%1_BH_V_ɑN
+Af. FinalCleanup: [ˈ%1_BH_V_ɑN]
+abhann          -> [ˈ%1_BH_V_ɑN]
+
+--- Transcribing: [gabhal] ---
+  ConsonantResolution START (Proc): In=	ga_BH_al
+  ConsonantResolution START (Proc): In=	ga_BH_al
+    MIN_DBG (ConsonantR): Initial non-palatal '	g	' for '	g	' in '	gabhal	' -> returning base
+  ConsonantResolution END (Proc): Out=	g%1_BH_V_al
+Af. ConsonantResolution: [g%1_BH_V_al]
+  Stage4_4_ResolveTempVowelMarkers START: In=	g%1_BH_V_al
+  Stage4_4_ResolveTempVowelMarkers END: Out=	g%1_BH_V_al
+Af. Stage4_4_ResolveTempVowelMarkers: [g%1_BH_V_al]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	g%1_BH_V_al
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	g%1_BH_V_al
+Af. Stage4_4_1_VocalizeLenitedFricatives: [g%1_BH_V_al]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	g%1_BH_V_al
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	g%1_BH_V_al
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	a	' APPLIED to '	g%1_BH_V_al	' -> '	g%1_BH_V_ɑl	' (	1	x)
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	g%1_BH_V_ɑl
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [g%1_BH_V_ɑl]
+Af. Nasalization: [g%1_BH_V_ɑl]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	g%1_BH_V_ɑl
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	g%1_BH_V_ɑl
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	g%1_BH_V_ɑl	' (using 	11	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6_U): Word '	g%1_BH_V_ɑl	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	g%1_BH_V_ɑl
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [g%1_BH_V_ɑl]
+  EpenthesisAndStrongSonorants START (Proc): In=	g%1_BH_V_ɑl
+  EpenthesisAndStrongSonorants START (Proc): In=	g%1_BH_V_ɑl
+  apply_procedural_epenthesis START: In=	g%1_BH_V_ɑl
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	g%1_BH_V_ɑl	' (using 	11	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	g%1_BH_V_ɑl
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	g%1_BH_V_ɑl
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	g%1_BH_V_ɑl
+  EpenthesisAndStrongSonorants END (Proc): Out=	g%1_BH_V_ɑl
+Af. EpenthesisAndStrongSonorants: [g%1_BH_V_ɑl]
+  FinalCleanup START: In=	g%1_BH_V_ɑl
+  FinalCleanup END: Out=	g%1_BH_V_ɑl
+Af. FinalCleanup: [g%1_BH_V_ɑl]
+gabhal          -> [g%1_BH_V_ɑl]
+
+--- Transcribing: [labhairt] ---
+  ConsonantResolution START (Proc): In=	la_BH_airt
+  ConsonantResolution START (Proc): In=	la_BH_airt
+  ConsonantResolution END (Proc): Out=	l%1_BH_V_airt
+Af. ConsonantResolution: [l%1_BH_V_airt]
+  Stage4_4_ResolveTempVowelMarkers START: In=	l%1_BH_V_&AI_DIPH&rt
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&AI_DIPH&	' APPLIED to '	l%1_BH_V_&AI_DIPH&rt	' -> '	l%1_BH_V_airt	' (	1	x)
+  Stage4_4_ResolveTempVowelMarkers END: Out=	l%1_BH_V_airt
+Af. Stage4_4_ResolveTempVowelMarkers: [l%1_BH_V_airt]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	l%1_BH_V_airt
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	l%1_BH_V_airt
+Af. Stage4_4_1_VocalizeLenitedFricatives: [l%1_BH_V_airt]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	l%1_BH_V_airt
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	l%1_BH_V_airt
+    MIN_DBG (Stage4_5_C): Placeholder created: '	ai	' -> '	&PHON_AI_DIPH&	'. Result: '	l%1_BH_V_&PHON_AI_DIPH&rt	'
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_AI_DIPH&	' -> '	ai	'. Result: '	l%1_BH_V_airt	'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	l%1_BH_V_airt
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [l%1_BH_V_airt]
+Af. Nasalization: [l%1_BH_V_airt]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	l%1_BH_V_airt
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	l%1_BH_V_airt
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	l%1_BH_V_airt	' (using 	12	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6_U): Word '	l%1_BH_V_airt	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	l%1_BH_V_airt
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [l%1_BH_V_airt]
+  EpenthesisAndStrongSonorants START (Proc): In=	l%1_BH_V_airt
+  EpenthesisAndStrongSonorants START (Proc): In=	l%1_BH_V_airt
+  apply_procedural_epenthesis START: In=	l%1_BH_V_airt
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	l%1_BH_V_airt	' (using 	12	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Epenthesis): Checking V-C1-C2: 	ai	r	t	 | Cluster key: 	rt	 | C1 Qual: 	nonpalatal	 | C2 Qual: 	nonpalatal
+  apply_procedural_epenthesis END (no change): Out=	l%1_BH_V_airt
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	l%1_BH_V_airt
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	l%1_BH_V_airt
+  EpenthesisAndStrongSonorants END (Proc): Out=	l%1_BH_V_airt
+Af. EpenthesisAndStrongSonorants: [l%1_BH_V_airt]
+  FinalCleanup START: In=	l%1_BH_V_airt
+  FinalCleanup END: Out=	l%1_BH_V_airt
+Af. FinalCleanup: [l%1_BH_V_airt]
+labhairt        -> [l%1_BH_V_airt]
+
+--- Transcribing: [cobhair] ---
+  ConsonantResolution START (Proc): In=	co_BH_air
+  ConsonantResolution START (Proc): In=	co_BH_air
+    MIN_DBG (ConsonantR): Initial non-palatal '	k	' for '	c	' in '	cobhair	' -> returning base
+  ConsonantResolution END (Proc): Out=	k%1_BH_V_air
+Af. ConsonantResolution: [k%1_BH_V_air]
+  Stage4_4_ResolveTempVowelMarkers START: In=	k%1_BH_V_&AI_DIPH&r
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&AI_DIPH&	' APPLIED to '	k%1_BH_V_&AI_DIPH&r	' -> '	k%1_BH_V_air	' (	1	x)
+  Stage4_4_ResolveTempVowelMarkers END: Out=	k%1_BH_V_air
+Af. Stage4_4_ResolveTempVowelMarkers: [k%1_BH_V_air]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	k%1_BH_V_air
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	k%1_BH_V_air
+Af. Stage4_4_1_VocalizeLenitedFricatives: [k%1_BH_V_air]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	k%1_BH_V_air
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	k%1_BH_V_air
+    MIN_DBG (Stage4_5_C): Placeholder created: '	ai	' -> '	&PHON_AI_DIPH&	'. Result: '	k%1_BH_V_&PHON_AI_DIPH&r	'
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_AI_DIPH&	' -> '	ai	'. Result: '	k%1_BH_V_air	'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	k%1_BH_V_air
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [k%1_BH_V_air]
+Af. Nasalization: [k%1_BH_V_air]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	k%1_BH_V_air
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	k%1_BH_V_air
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	k%1_BH_V_air	' (using 	11	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6_U): Word '	k%1_BH_V_air	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	k%1_BH_V_air
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [k%1_BH_V_air]
+  EpenthesisAndStrongSonorants START (Proc): In=	k%1_BH_V_air
+  EpenthesisAndStrongSonorants START (Proc): In=	k%1_BH_V_air
+  apply_procedural_epenthesis START: In=	k%1_BH_V_air
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	k%1_BH_V_air	' (using 	11	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	k%1_BH_V_air
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	k%1_BH_V_air
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	k%1_BH_V_air
+  EpenthesisAndStrongSonorants END (Proc): Out=	k%1_BH_V_air
+Af. EpenthesisAndStrongSonorants: [k%1_BH_V_air]
+  FinalCleanup START: In=	k%1_BH_V_air
+  FinalCleanup END: Out=	k%1_BH_V_air
+Af. FinalCleanup: [k%1_BH_V_air]
+cobhair         -> [k%1_BH_V_air]
+
+--- Transcribing: [domhan] ---
+  ConsonantResolution START (Proc): In=	do_MH_an
+  ConsonantResolution START (Proc): In=	do_MH_an
+    MIN_DBG (ConsonantR): Initial non-palatal '	d	' for '	d	' in '	domhan	' -> returning base
+  ConsonantResolution END (Proc): Out=	d%1_MH_V_an
+Af. ConsonantResolution: [d%1_MH_V_an]
+  Stage4_4_ResolveTempVowelMarkers START: In=	d%1_MH_V_an
+  Stage4_4_ResolveTempVowelMarkers END: Out=	d%1_MH_V_an
+Af. Stage4_4_ResolveTempVowelMarkers: [d%1_MH_V_an]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	d%1_MH_V_an
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	d%1_MH_V_an
+Af. Stage4_4_1_VocalizeLenitedFricatives: [d%1_MH_V_an]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	d%1_MH_V_an
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	d%1_MH_V_an
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	a	' APPLIED to '	d%1_MH_V_an	' -> '	d%1_MH_V_ɑn	' (	1	x)
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	d%1_MH_V_ɑn
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [d%1_MH_V_ɑn]
+Af. Nasalization: [d%1_MH_V_ɑn]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	d%1_MH_V_ɑn
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	d%1_MH_V_ɑn
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	d%1_MH_V_ɑn	' (using 	11	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6_U): Word '	d%1_MH_V_ɑn	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	d%1_MH_V_ɑn
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [d%1_MH_V_ɑn]
+  EpenthesisAndStrongSonorants START (Proc): In=	d%1_MH_V_ɑn
+  EpenthesisAndStrongSonorants START (Proc): In=	d%1_MH_V_ɑn
+  apply_procedural_epenthesis START: In=	d%1_MH_V_ɑn
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	d%1_MH_V_ɑn	' (using 	11	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	d%1_MH_V_ɑn
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	d%1_MH_V_ɑn
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	d%1_MH_V_ɑn
+  EpenthesisAndStrongSonorants END (Proc): Out=	d%1_MH_V_ɑn
+Af. EpenthesisAndStrongSonorants: [d%1_MH_V_ɑn]
+  FinalCleanup START: In=	d%1_MH_V_ɑn
+  FinalCleanup END: Out=	d%1_MH_V_ɑn
+Af. FinalCleanup: [d%1_MH_V_ɑn]
+domhan          -> [d%1_MH_V_ɑn]
+
+--- Transcribing: [radharc] ---
+  ConsonantResolution START (Proc): In=	ra_DH_arc
+  ConsonantResolution START (Proc): In=	ra_DH_arc
+  ConsonantResolution END (Proc): Out=	r%1_DH_V_ark
+Af. ConsonantResolution: [r%1_DH_V_ark]
+  Stage4_4_ResolveTempVowelMarkers START: In=	r%1_DH_V_ark
+  Stage4_4_ResolveTempVowelMarkers END: Out=	r%1_DH_V_ark
+Af. Stage4_4_ResolveTempVowelMarkers: [r%1_DH_V_ark]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	r%1_DH_V_ark
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	r%1_DH_V_ark
+Af. Stage4_4_1_VocalizeLenitedFricatives: [r%1_DH_V_ark]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	r%1_DH_V_ark
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	r%1_DH_V_ark
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	a	' APPLIED to '	r%1_DH_V_ark	' -> '	r%1_DH_V_ɑrk	' (	1	x)
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	r%1_DH_V_ɑrk
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [r%1_DH_V_ɑrk]
+Af. Nasalization: [r%1_DH_V_ɑrk]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	r%1_DH_V_ɑrk
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	r%1_DH_V_ɑrk
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	r%1_DH_V_ɑrk	' (using 	12	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6_U): Word '	r%1_DH_V_ɑrk	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	r%1_DH_V_ɑrk
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [r%1_DH_V_ɑrk]
+  EpenthesisAndStrongSonorants START (Proc): In=	r%1_DH_V_ɑrk
+  EpenthesisAndStrongSonorants START (Proc): In=	r%1_DH_V_ɑrk
+  apply_procedural_epenthesis START: In=	r%1_DH_V_ɑrk
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	r%1_DH_V_ɑrk	' (using 	12	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Epenthesis): Checking V-C1-C2: 	ɑ	r	k	 | Cluster key: 	rk	 | C1 Qual: 	nonpalatal	 | C2 Qual: 	nonpalatal
+  apply_procedural_epenthesis END (no change): Out=	r%1_DH_V_ɑrk
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	r%1_DH_V_ɑrk
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	r%1_DH_V_ɑrk
+  EpenthesisAndStrongSonorants END (Proc): Out=	r%1_DH_V_ɑrk
+Af. EpenthesisAndStrongSonorants: [r%1_DH_V_ɑrk]
+  FinalCleanup START: In=	r%1_DH_V_ɑrk
+  FinalCleanup END: Out=	r%1_DH_V_ɑrk
+Af. FinalCleanup: [r%1_DH_V_ɑrk]
+radharc         -> [r%1_DH_V_ɑrk]
+
+--- Transcribing: [laghad] ---
+  ConsonantResolution START (Proc): In=	la_GH_ad
+  ConsonantResolution START (Proc): In=	la_GH_ad
+  ConsonantResolution END (Proc): Out=	l%1_GH_V_ad
+Af. ConsonantResolution: [l%1_GH_V_ad]
+  Stage4_4_ResolveTempVowelMarkers START: In=	l%1_GH_V_ad
+  Stage4_4_ResolveTempVowelMarkers END: Out=	l%1_GH_V_ad
+Af. Stage4_4_ResolveTempVowelMarkers: [l%1_GH_V_ad]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	l%1_GH_V_ad
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	l%1_GH_V_ad
+Af. Stage4_4_1_VocalizeLenitedFricatives: [l%1_GH_V_ad]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	l%1_GH_V_ad
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	l%1_GH_V_ad
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	a	' APPLIED to '	l%1_GH_V_ad	' -> '	l%1_GH_V_ɑd	' (	1	x)
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	l%1_GH_V_ɑd
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [l%1_GH_V_ɑd]
+Af. Nasalization: [l%1_GH_V_ɑd]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	l%1_GH_V_ɑd
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	l%1_GH_V_ɑd
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	l%1_GH_V_ɑd	' (using 	11	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6_U): Word '	l%1_GH_V_ɑd	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	l%1_GH_V_ɑd
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [l%1_GH_V_ɑd]
+  EpenthesisAndStrongSonorants START (Proc): In=	l%1_GH_V_ɑd
+  EpenthesisAndStrongSonorants START (Proc): In=	l%1_GH_V_ɑd
+  apply_procedural_epenthesis START: In=	l%1_GH_V_ɑd
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	l%1_GH_V_ɑd	' (using 	11	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	l%1_GH_V_ɑd
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	l%1_GH_V_ɑd
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	l%1_GH_V_ɑd
+  EpenthesisAndStrongSonorants END (Proc): Out=	l%1_GH_V_ɑd
+Af. EpenthesisAndStrongSonorants: [l%1_GH_V_ɑd]
+  FinalCleanup START: In=	l%1_GH_V_ɑd
+  FinalCleanup END: Out=	l%1_GH_V_ɑd
+Af. FinalCleanup: [l%1_GH_V_ɑd]
+laghad          -> [l%1_GH_V_ɑd]
+
+--- Transcribing: [bodhar] ---
+  ConsonantResolution START (Proc): In=	bo_DH_ar
+  ConsonantResolution START (Proc): In=	bo_DH_ar
+    MIN_DBG (ConsonantR): Initial non-palatal '	b	' for '	b	' in '	bodhar	' -> returning base
+  ConsonantResolution END (Proc): Out=	b%1_DH_V_ar
+Af. ConsonantResolution: [b%1_DH_V_ar]
+  Stage4_4_ResolveTempVowelMarkers START: In=	b%1_DH_V_ar
+  Stage4_4_ResolveTempVowelMarkers END: Out=	b%1_DH_V_ar
+Af. Stage4_4_ResolveTempVowelMarkers: [b%1_DH_V_ar]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	b%1_DH_V_ar
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	b%1_DH_V_ar
+Af. Stage4_4_1_VocalizeLenitedFricatives: [b%1_DH_V_ar]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	b%1_DH_V_ar
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	b%1_DH_V_ar
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	a	' APPLIED to '	b%1_DH_V_ar	' -> '	b%1_DH_V_ɑr	' (	1	x)
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	b%1_DH_V_ɑr
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [b%1_DH_V_ɑr]
+Af. Nasalization: [b%1_DH_V_ɑr]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	b%1_DH_V_ɑr
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	b%1_DH_V_ɑr
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	b%1_DH_V_ɑr	' (using 	11	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6_U): Word '	b%1_DH_V_ɑr	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	b%1_DH_V_ɑr
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [b%1_DH_V_ɑr]
+  EpenthesisAndStrongSonorants START (Proc): In=	b%1_DH_V_ɑr
+  EpenthesisAndStrongSonorants START (Proc): In=	b%1_DH_V_ɑr
+  apply_procedural_epenthesis START: In=	b%1_DH_V_ɑr
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	b%1_DH_V_ɑr	' (using 	11	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	b%1_DH_V_ɑr
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	b%1_DH_V_ɑr
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	b%1_DH_V_ɑr
+  EpenthesisAndStrongSonorants END (Proc): Out=	b%1_DH_V_ɑr
+Af. EpenthesisAndStrongSonorants: [b%1_DH_V_ɑr]
+  FinalCleanup START: In=	b%1_DH_V_ɑr
+  FinalCleanup END: Out=	b%1_DH_V_ɑr
+Af. FinalCleanup: [b%1_DH_V_ɑr]
+bodhar          -> [b%1_DH_V_ɑr]
+
+--- Transcribing: [foghmhar] ---
+  ConsonantResolution START (Proc): In=	fo_GH__MH_ar
+  ConsonantResolution START (Proc): In=	fo_GH__MH_ar
+    MIN_DBG (ConsonantR): Initial non-palatal '	f	' for '	f	' in '	foghmhar	' -> returning base
+  ConsonantResolution END (Proc): Out=	f%1_GH_V_war
+Af. ConsonantResolution: [f%1_GH_V_war]
+  Stage4_4_ResolveTempVowelMarkers START: In=	f%1_GH_V_war
+  Stage4_4_ResolveTempVowelMarkers END: Out=	f%1_GH_V_war
+Af. Stage4_4_ResolveTempVowelMarkers: [f%1_GH_V_war]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	f%1_GH_V_war
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	f%1_GH_V_war
+Af. Stage4_4_1_VocalizeLenitedFricatives: [f%1_GH_V_war]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	f%1_GH_V_war
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	f%1_GH_V_war
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	a	' APPLIED to '	f%1_GH_V_war	' -> '	f%1_GH_V_wɑr	' (	1	x)
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	f%1_GH_V_wɑr
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [f%1_GH_V_wɑr]
+Af. Nasalization: [f%1_GH_V_wɑr]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	f%1_GH_V_wɑr
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	f%1_GH_V_wɑr
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	f%1_GH_V_wɑr	' (using 	12	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6_U): Word '	f%1_GH_V_wɑr	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	f%1_GH_V_wɑr
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [f%1_GH_V_wɑr]
+  EpenthesisAndStrongSonorants START (Proc): In=	f%1_GH_V_wɑr
+  EpenthesisAndStrongSonorants START (Proc): In=	f%1_GH_V_wɑr
+  apply_procedural_epenthesis START: In=	f%1_GH_V_wɑr
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	f%1_GH_V_wɑr	' (using 	12	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	f%1_GH_V_wɑr
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	f%1_GH_V_wɑr
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	f%1_GH_V_wɑr
+  EpenthesisAndStrongSonorants END (Proc): Out=	f%1_GH_V_wɑr
+Af. EpenthesisAndStrongSonorants: [f%1_GH_V_wɑr]
+  FinalCleanup START: In=	f%1_GH_V_wɑr
+  FinalCleanup END: Out=	f%1_GH_V_wɑr
+Af. FinalCleanup: [f%1_GH_V_wɑr]
+foghmhar        -> [f%1_GH_V_wɑr]
+
+--- Transcribing: [feidhm] ---
+  ConsonantResolution START (Proc): In=	fei_DH_m
+  ConsonantResolution START (Proc): In=	fei_DH_m
+  ConsonantResolution END (Proc): Out=	f'e%1_DH_V_m
+Af. ConsonantResolution: [f'e%1_DH_V_m]
+  Stage4_4_ResolveTempVowelMarkers START: In=	f'e%1_DH_V_m
+  Stage4_4_ResolveTempVowelMarkers END: Out=	f'e%1_DH_V_m
+Af. Stage4_4_ResolveTempVowelMarkers: [f'e%1_DH_V_m]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	f'e%1_DH_V_m
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	f'e%1_DH_V_m
+Af. Stage4_4_1_VocalizeLenitedFricatives: [f'e%1_DH_V_m]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	f'e%1_DH_V_m
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	f'e%1_DH_V_m
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	f'e%1_DH_V_m
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [f'e%1_DH_V_m]
+Af. Nasalization: [f'e%1_DH_V_m]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	f'e%1_DH_V_m
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	f'e%1_DH_V_m
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	f'e%1_DH_V_m	' (using 	12	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6_U): Word '	f'e%1_DH_V_m	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	f'e%1_DH_V_m
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [f'e%1_DH_V_m]
+  EpenthesisAndStrongSonorants START (Proc): In=	f'e%1_DH_V_m
+  EpenthesisAndStrongSonorants START (Proc): In=	f'e%1_DH_V_m
+  apply_procedural_epenthesis START: In=	f'e%1_DH_V_m
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	f'e%1_DH_V_m	' (using 	12	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	f'e%1_DH_V_m
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	f'e%1_DH_V_m
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	f'e%1_DH_V_m
+  EpenthesisAndStrongSonorants END (Proc): Out=	f'e%1_DH_V_m
+Af. EpenthesisAndStrongSonorants: [f'e%1_DH_V_m]
+  FinalCleanup START: In=	f'e%1_DH_V_m
+  FinalCleanup END: Out=	f'e%1_DH_V_m
+Af. FinalCleanup: [f'e%1_DH_V_m]
+feidhm          -> [f'e%1_DH_V_m]
+
+--- Transcribing: [suidhe] ---
+  ConsonantResolution START (Proc): In=	sui_DH_e
+  ConsonantResolution START (Proc): In=	sui_DH_e
+  ConsonantResolution END (Proc): Out=	su%1_DH_V_e
+Af. ConsonantResolution: [su%1_DH_V_e]
+  Stage4_4_ResolveTempVowelMarkers START: In=	su%1_DH_V_e
+  Stage4_4_ResolveTempVowelMarkers END: Out=	su%1_DH_V_e
+Af. Stage4_4_ResolveTempVowelMarkers: [su%1_DH_V_e]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	su%1_DH_V_e
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	su%1_DH_V_e
+Af. Stage4_4_1_VocalizeLenitedFricatives: [su%1_DH_V_e]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	su%1_DH_V_e
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	su%1_DH_V_e
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	u	' APPLIED to '	su%1_DH_V_e	' -> '	sɔ%1_DH_V_e	' (	1	x)
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	sɔ%1_DH_V_e
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [sɔ%1_DH_V_e]
+Af. Nasalization: [sɔ%1_DH_V_e]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	sɔ%1_DH_V_e
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	sɔ%1_DH_V_e
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	sɔ%1_DH_V_e	' (using 	11	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ɔ	' at unit index 	2	 is stressed.
+    MIN_DBG (Stage4_6_U): Reducing '	e	' to '	ə	'. Prec: 	neutral	 Foll: 	neutral
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	sɔ%1_DH_V_ə	' (using 	11	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ɔ	' at unit index 	2	 is stressed.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	sɔ%1_DH_V_ə
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [sɔ%1_DH_V_ə]
+  EpenthesisAndStrongSonorants START (Proc): In=	sɔ%1_DH_V_ə
+  EpenthesisAndStrongSonorants START (Proc): In=	sɔ%1_DH_V_ə
+  apply_procedural_epenthesis START: In=	sɔ%1_DH_V_ə
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	sɔ%1_DH_V_ə	' (using 	11	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	sɔ%1_DH_V_ə
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	sɔ%1_DH_V_ə
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	sɔ%1_DH_V_ə
+  EpenthesisAndStrongSonorants END (Proc): Out=	sɔ%1_DH_V_ə
+Af. EpenthesisAndStrongSonorants: [sɔ%1_DH_V_ə]
+  FinalCleanup START: In=	sɔ%1_DH_V_ə
+  FinalCleanup END: Out=	sɔ%1_DH_V_ə
+Af. FinalCleanup: [sɔ%1_DH_V_ə]
+suidhe          -> [sɔ%1_DH_V_ə]
+
+--- Transcribing: [dubhach] ---
+  ConsonantResolution START (Proc): In=	du_BH_a_CH_
+  ConsonantResolution START (Proc): In=	du_BH_a_CH_
+    MIN_DBG (ConsonantR): Initial non-palatal '	d	' for '	d	' in '	dubhach	' -> returning base
+  ConsonantResolution END (Proc): Out=	d%1_BH_V_a_CH_
+Af. ConsonantResolution: [d%1_BH_V_a_CH_]
+  Stage4_4_ResolveTempVowelMarkers START: In=	d%1_BH_V_ax
+  Stage4_4_ResolveTempVowelMarkers END: Out=	d%1_BH_V_ax
+Af. Stage4_4_ResolveTempVowelMarkers: [d%1_BH_V_ax]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	d%1_BH_V_ax
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	d%1_BH_V_ax
+Af. Stage4_4_1_VocalizeLenitedFricatives: [d%1_BH_V_ax]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	d%1_BH_V_ax
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	d%1_BH_V_ax
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	a	' APPLIED to '	d%1_BH_V_ax	' -> '	d%1_BH_V_ɑx	' (	1	x)
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	d%1_BH_V_ɑx
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [d%1_BH_V_ɑx]
+Af. Nasalization: [d%1_BH_V_ɑx]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	d%1_BH_V_ɑx
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	d%1_BH_V_ɑx
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	d%1_BH_V_ɑx	' (using 	11	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6_U): Word '	d%1_BH_V_ɑx	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	d%1_BH_V_ɑx
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [d%1_BH_V_ɑx]
+  EpenthesisAndStrongSonorants START (Proc): In=	d%1_BH_V_ɑx
+  EpenthesisAndStrongSonorants START (Proc): In=	d%1_BH_V_ɑx
+  apply_procedural_epenthesis START: In=	d%1_BH_V_ɑx
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	d%1_BH_V_ɑx	' (using 	11	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	d%1_BH_V_ɑx
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	d%1_BH_V_ɑx
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	d%1_BH_V_ɑx
+  EpenthesisAndStrongSonorants END (Proc): Out=	d%1_BH_V_ɑx
+Af. EpenthesisAndStrongSonorants: [d%1_BH_V_ɑx]
+  FinalCleanup START: In=	d%1_BH_V_ɑx
+  FinalCleanup END: Out=	d%1_BH_V_ɑx
+Af. FinalCleanup: [d%1_BH_V_ɑx]
+dubhach         -> [d%1_BH_V_ɑx]
+
+--- Transcribing: [slighe] ---
+  ConsonantResolution START (Proc): In=	sli_GH_e
+  ConsonantResolution START (Proc): In=	sli_GH_e
+  ConsonantResolution END (Proc): Out=	sl%1_GH_V_e
+Af. ConsonantResolution: [sl%1_GH_V_e]
+  Stage4_4_ResolveTempVowelMarkers START: In=	sl%1_GH_V_e
+  Stage4_4_ResolveTempVowelMarkers END: Out=	sl%1_GH_V_e
+Af. Stage4_4_ResolveTempVowelMarkers: [sl%1_GH_V_e]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	sl%1_GH_V_e
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	sl%1_GH_V_e
+Af. Stage4_4_1_VocalizeLenitedFricatives: [sl%1_GH_V_e]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	sl%1_GH_V_e
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	sl%1_GH_V_e
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	sl%1_GH_V_e
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [sl%1_GH_V_e]
+Af. Nasalization: [sl%1_GH_V_e]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	sl%1_GH_V_e
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	sl%1_GH_V_e
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	sl%1_GH_V_e	' (using 	11	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6_U): Word '	sl%1_GH_V_e	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	sl%1_GH_V_e
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [sl%1_GH_V_e]
+  EpenthesisAndStrongSonorants START (Proc): In=	sl%1_GH_V_e
+  EpenthesisAndStrongSonorants START (Proc): In=	sl%1_GH_V_e
+  apply_procedural_epenthesis START: In=	sl%1_GH_V_e
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	sl%1_GH_V_e	' (using 	11	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	sl%1_GH_V_e
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	sl%1_GH_V_e
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	sl%1_GH_V_e
+  EpenthesisAndStrongSonorants END (Proc): Out=	sl%1_GH_V_e
+Af. EpenthesisAndStrongSonorants: [sl%1_GH_V_e]
+  FinalCleanup START: In=	sl%1_GH_V_e
+  FinalCleanup END: Out=	sl%1_GH_V_e
+Af. FinalCleanup: [sl%1_GH_V_e]
+slighe          -> [sl%1_GH_V_e]
+
+--- Transcribing: [buíon] ---
+  ConsonantResolution START (Proc): In=	buíon
+  ConsonantResolution START (Proc): In=	buíon
+    MIN_DBG (ConsonantR): Initial non-palatal '	b	' for '	b	' in '	buíon	' -> returning base
+  ConsonantResolution END (Proc): Out=	buíon
+Af. ConsonantResolution: [buíon]
+  Stage4_4_ResolveTempVowelMarkers START: In=	bu&I_ACUTE_LONG&on
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&I_ACUTE_LONG&	' APPLIED to '	bu&I_ACUTE_LONG&on	' -> '	buiːon	' (	1	x)
+  Stage4_4_ResolveTempVowelMarkers END: Out=	buiːon
+Af. Stage4_4_ResolveTempVowelMarkers: [buiːon]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	buiːon
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	buiːon
+Af. Stage4_4_1_VocalizeLenitedFricatives: [buiːon]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	buiːon
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	buiːon
+    MIN_DBG (Stage4_5_C): Placeholder created: '	ui	' -> '	&PHON_UI_DIPH&	'. Result: '	b&PHON_UI_DIPH&ːon	'
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	o	' APPLIED to '	b&PHON_UI_DIPH&ːon	' -> '	b&PHON_UI_DIPH&ːɔn	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_UI_DIPH&	' -> '	ui	'. Result: '	buiːɔn	'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	buiːɔn
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [buiːɔn]
+Af. Nasalization: [buiːɔn]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	buiːɔn
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	buiːɔn
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	buiːɔn	' (using 	5	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ui	' at unit index 	2	 is stressed.
+    MIN_DBG (Stage4_6_U): Reducing '	ɔ	' to '	ə	'. Prec: 	neutral	 Foll: 	nonpalatal
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	buiːən	' (using 	5	 non-stress units) count: 	2	 result: 	false
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ui	' at unit index 	2	 is stressed.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	buiːən
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [buiːən]
+  EpenthesisAndStrongSonorants START (Proc): In=	buiːən
+  EpenthesisAndStrongSonorants START (Proc): In=	buiːən
+  apply_procedural_epenthesis START: In=	buiːən
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	buiːən	' (using 	5	 non-stress units) count: 	2	 result: 	false
+  apply_procedural_epenthesis END (not monosyllable): Out=	buiːən
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	buiːən
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	buiːən
+  EpenthesisAndStrongSonorants END (Proc): Out=	buiːən
+Af. EpenthesisAndStrongSonorants: [buiːən]
+  FinalCleanup START: In=	buiːən
+  FinalCleanup END: Out=	buiːən
+Af. FinalCleanup: [buiːən]
+buíon          -> [buiːən]
+
+--- Transcribing: [cnámh] ---
+  ConsonantResolution START (Proc): In=	cn&A_ACUTE_LONG_VOC_M_FINAL&
+  ConsonantResolution START (Proc): In=	cn&A_ACUTE_LONG_VOC_M_FINAL&
+    MIN_DBG (ConsonantR): Metathesis candidate found: 	cn
+    MIN_DBG (ConsonantR): Initial non-palatal '	k	' for '	c	' in '	cnámh	' -> returning base
+  ConsonantResolution END (Proc): Out=	kr&A_ACUTE_LONG_VOC_M_FINAL&
+Af. ConsonantResolution: [kr&A_ACUTE_LONG_VOC_M_FINAL&]
+  Stage4_4_ResolveTempVowelMarkers START: In=	kr&A_ACUTE_LONG_VOC_M_FINAL&
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&A_ACUTE_LONG_VOC_M_FINAL&(#?)	' APPLIED to '	kr&A_ACUTE_LONG_VOC_M_FINAL&	' -> '	krɑːv	' (	1	x)
+  Stage4_4_ResolveTempVowelMarkers END: Out=	krɑːv
+Af. Stage4_4_ResolveTempVowelMarkers: [krɑːv]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	krɑːv
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	krɑːv
+Af. Stage4_4_1_VocalizeLenitedFricatives: [krɑːv]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	krɑːv
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	krɑːv
+    MIN_DBG (Stage4_5_C): Placeholder created: '	ɑː	' -> '	&PHON_A_LONG&	'. Result: '	kr&PHON_A_LONG&v	'
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_A_LONG&	' -> '	ɑː	'. Result: '	krɑːv	'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	krɑːv
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [krɑːv]
+Af. Nasalization: [krɑːv]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	krɑːv
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	krɑːv
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	krɑːv	' (using 	4	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6_U): Word '	krɑːv	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	krɑːv
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [krɑːv]
+  EpenthesisAndStrongSonorants START (Proc): In=	krɑːv
+  EpenthesisAndStrongSonorants START (Proc): In=	krɑːv
+  apply_procedural_epenthesis START: In=	krɑːv
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	krɑːv	' (using 	4	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	krɑːv
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	krɑːv
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	krɑːv
+  EpenthesisAndStrongSonorants END (Proc): Out=	krɑːv
+Af. EpenthesisAndStrongSonorants: [krɑːv]
+  FinalCleanup START: In=	krɑːv
+  FinalCleanup END: Out=	krɑːv
+Af. FinalCleanup: [krɑːv]
+cnámh          -> [krɑːv]
+
+--- Transcribing: [mná] ---
+  ConsonantResolution START (Proc): In=	mná
+  ConsonantResolution START (Proc): In=	mná
+    MIN_DBG (ConsonantR): Initial non-palatal '	m	' for '	m	' in '	mná	' -> returning base
+  ConsonantResolution END (Proc): Out=	mná
+Af. ConsonantResolution: [mná]
+  Stage4_4_ResolveTempVowelMarkers START: In=	mn&A_ACUTE_LONG&
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&A_ACUTE_LONG&	' APPLIED to '	mn&A_ACUTE_LONG&	' -> '	mnɑː	' (	1	x)
+  Stage4_4_ResolveTempVowelMarkers END: Out=	mnɑː
+Af. Stage4_4_ResolveTempVowelMarkers: [mnɑː]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	mnɑː
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	mnɑː
+Af. Stage4_4_1_VocalizeLenitedFricatives: [mnɑː]
+  Stage4_5_ContextualAllophonyOnPhonetic START (Proc): In=	mnɑː
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	mnɑː
+    MIN_DBG (Stage4_5_C): Placeholder created: '	ɑː	' -> '	&PHON_A_LONG&	'. Result: '	mn&PHON_A_LONG&	'
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_A_LONG&	' -> '	ɑː	'. Result: '	mnɑː	'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	mnɑː
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [mnɑː]
+Af. Nasalization: [mnɑː]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc): In=	mnɑː
+  Stage4_6_UnstressedVowelReduction_Procedural START: In=	mnɑː
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	mnɑː	' (using 	3	 non-stress units) count: 	1	 result: 	true
+    MIN_DBG (Stage4_6_U): Word '	mnɑː	' is monosyllabic, skipping general reduction.
+  Stage4_6_UnstressedVowelReduction_Procedural END: Out=	mnɑː
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [mnɑː]
+  EpenthesisAndStrongSonorants START (Proc): In=	mnɑː
+  EpenthesisAndStrongSonorants START (Proc): In=	mnɑː
+  apply_procedural_epenthesis START: In=	mnɑː
+    MIN_DBG (Epenthesis): is_likely_monosyllable_revised for '	mnɑː	' (using 	3	 non-stress units) count: 	1	 result: 	true
+  apply_procedural_epenthesis END (no change): Out=	mnɑː
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	mnɑː
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	mnɑː
+  EpenthesisAndStrongSonorants END (Proc): Out=	mnɑː
+Af. EpenthesisAndStrongSonorants: [mnɑː]
+  FinalCleanup START: In=	mnɑː
+  FinalCleanup END: Out=	mnɑː
+Af. FinalCleanup: [mnɑː]
+mná            -> [mnɑː]
