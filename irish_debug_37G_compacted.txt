@@ -1,0 +1,833 @@
+﻿
+--- Running Focused Test Set for Connacht (Iteration 37G - Compacted) ---
+
+--- Testing word: ceann ---
+
+--- Transcribing: [ceann] ---
+    MIN_DBG (PreProcess): Word for stress: '	ceann	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	ceann	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	nn	'. Preceding vowel group '	ea	'. Using last char '	a	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	nn	' in '	ceann	' (idx:	4	): NextVQual=	nil	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	c	' in '	ceann	' (idx:	1	): NextVQual=	slender	, PrevVQual=	nil	 -> FinalQual=	palatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&EA_BROAD_PRE_NN&	' APPLIED to '	k'&EA_BROAD_PRE_NN&N	' -> '	k'aN	' (	1	x)
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾx]['])(a)([kgptdfbmnszrlLNRMɣŋhwx])	' APPLIED to '	k'aN	' -> '	k'ɑN	' (	1	x)
+    MIN_DBG (Stage4_6_U): Word '	k'ɑN	' is monosyllabic, SKIPPING ALL REDUCTION (including specific finals).
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	k'ɑN
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	k'ɑN
+    MIN_DBG (Diacritics): Iter.gsub: Rule '	N$	' APPLIED to '	k'ɑN	' -> '	k'ɑnˠ	' (	1	x)
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	k'	' APPLIED to '	k'ɑnˠ	' -> '	cɑnˠ	' (	1	x)
+ceann           -> [cɑnˠ]
+
+--- Testing word: am ---
+
+--- Transcribing: [am] ---
+    MIN_DBG (PreProcess): Word for stress: '	am	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	am	'. Vowel match: 	a	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	m	'. Preceding vowel group '	a	'. Using last char '	a	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	m	' in '	ˈam	' (idx:	3	): NextVQual=	nil	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	a	' APPLIED to '	ˈam	' -> '	ˈɑm	' (	1	x)
+    MIN_DBG (Stage4_6_U): Word '	ˈɑm	' is monosyllabic, SKIPPING ALL REDUCTION (including specific finals).
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	ˈɑm
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	ˈɑm
+am              -> [ˈɑm]
+
+--- Testing word: fonn ---
+
+--- Transcribing: [fonn] ---
+    MIN_DBG (PreProcess): Word for stress: '	fonn	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	fonn	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	nn	'. Preceding vowel group '	o	'. Using last char '	o	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	nn	' in '	fonn	' (idx:	3	): NextVQual=	nil	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	f	' in '	fonn	' (idx:	1	): NextVQual=	broad	, PrevVQual=	nil	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): Initial non-palatal '	f	' for '	f	' in '	fonn	' -> returning base
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	o	' APPLIED to '	foN	' -> '	fɔN	' (	1	x)
+    MIN_DBG (Stage4_6_U): Word '	fɔN	' is monosyllabic, SKIPPING ALL REDUCTION (including specific finals).
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	fɔN
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	fɔN
+    MIN_DBG (Diacritics): Iter.gsub: Rule '	N$	' APPLIED to '	fɔN	' -> '	fɔnˠ	' (	1	x)
+fonn            -> [fɔnˠ]
+
+--- Testing word: poll ---
+
+--- Transcribing: [poll] ---
+    MIN_DBG (PreProcess): Word for stress: '	poll	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	poll	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	ll	'. Preceding vowel group '	o	'. Using last char '	o	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	ll	' in '	poll	' (idx:	3	): NextVQual=	nil	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	p	' in '	poll	' (idx:	1	): NextVQual=	broad	, PrevVQual=	nil	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): Initial non-palatal '	p	' for '	p	' in '	poll	' -> returning base
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	o	' APPLIED to '	poL	' -> '	pɔL	' (	1	x)
+    MIN_DBG (Stage4_6_U): Word '	pɔL	' is monosyllabic, SKIPPING ALL REDUCTION (including specific finals).
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	pɔL
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	pɔL
+    MIN_DBG (Diacritics): Iter.gsub: Rule '	L$	' APPLIED to '	pɔL	' -> '	pɔlˠ	' (	1	x)
+poll            -> [pɔlˠ]
+
+--- Testing word: trom ---
+
+--- Transcribing: [trom] ---
+    MIN_DBG (PreProcess): Word for stress: '	trom	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	trom	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	t	' in '	trom	' (idx:	1	): NextVQual=	nil	, PrevVQual=	nil	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): Initial non-palatal '	t	' for '	t	' in '	trom	' -> returning base
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	r	' in '	trom	' (idx:	2	): NextVQual=	broad	, PrevVQual=	nil	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	m	'. Preceding vowel group '	o	'. Using last char '	o	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	m	' in '	trom	' (idx:	4	): NextVQual=	nil	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	o	' APPLIED to '	trom	' -> '	trɔm	' (	1	x)
+    MIN_DBG (Stage4_6_U): Word '	trɔm	' is monosyllabic, SKIPPING ALL REDUCTION (including specific finals).
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	trɔm
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	trɔm
+    MIN_DBG (Diacritics): Iter.gsub: Rule '	t([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾx])	' APPLIED to '	trɔm	' -> '	t̪rɔm	' (	1	x)
+trom            -> [t̪rɔm]
+
+--- Testing word: corr ---
+
+--- Transcribing: [corr] ---
+    MIN_DBG (PreProcess): Word for stress: '	corr	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	corr	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	rr	'. Preceding vowel group '	o	'. Using last char '	o	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	rr	' in '	corr	' (idx:	3	): NextVQual=	nil	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	c	' in '	corr	' (idx:	1	): NextVQual=	broad	, PrevVQual=	nil	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): Initial non-palatal '	k	' for '	c	' in '	corr	' -> returning base
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	o	' APPLIED to '	koR	' -> '	kɔR	' (	1	x)
+    MIN_DBG (Stage4_6_U): Word '	kɔR	' is monosyllabic, SKIPPING ALL REDUCTION (including specific finals).
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	kɔR
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	kɔR
+    MIN_DBG (Diacritics): Iter.gsub: Rule '	R$	' APPLIED to '	kɔR	' -> '	kɔɾˠ	' (	1	x)
+corr            -> [kɔɾˠ]
+
+--- Testing word: bord ---
+
+--- Transcribing: [bord] ---
+    MIN_DBG (PreProcess): Word for stress: '	bord	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	bord	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	b	' in '	bord	' (idx:	1	): NextVQual=	broad	, PrevVQual=	nil	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): Initial non-palatal '	b	' for '	b	' in '	bord	' -> returning base
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	r	'. Preceding vowel group '	o	'. Using last char '	o	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	r	' in '	bord	' (idx:	3	): NextVQual=	nil	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	d	'. Preceding vowel group '	o	'. Using last char '	o	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	d	' in '	bord	' (idx:	4	): NextVQual=	nil	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	o	' APPLIED to '	bord	' -> '	bɔrd	' (	1	x)
+    MIN_DBG (Stage4_6_U): Word '	bɔrd	' is monosyllabic, SKIPPING ALL REDUCTION (including specific finals).
+    MIN_DBG (Epenthesis): Checking V-C1-C2: 	ɔ	r	d	 | Cluster key: 	rd	 | C1 Qual: 	nonpalatal	 | C2 Qual: 	nonpalatal
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	bɔrd
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	bɔrd
+    MIN_DBG (Diacritics): Iter.gsub: Rule '	d$	' APPLIED to '	bɔrd	' -> '	bɔrd̪	' (	1	x)
+bord            -> [bɔrd̪]
+
+--- Testing word: tallann ---
+
+--- Transcribing: [tallann] ---
+    MIN_DBG (PreProcess): Word for stress: '	tallann	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	tallann	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	ll	' in '	tallann	' (idx:	3	): NextVQual=	broad	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	nn	'. Preceding vowel group '	a	'. Using last char '	a	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	nn	' in '	tallann	' (idx:	6	): NextVQual=	nil	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	t	' in '	tallann	' (idx:	1	): NextVQual=	broad	, PrevVQual=	nil	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): Initial non-palatal '	t	' for '	t	' in '	tallann	' -> returning base
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	a	' APPLIED to '	taLaN	' -> '	tɑLɑN	' (	2	x)
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ɑ	' at unit index 	2	 is stressed.
+    MIN_DBG (Stage4_6_U): Reducing '	ɑ	' to '	ə	'. Prec: 	nonpalatal	 Foll: 	nonpalatal
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ɑ	' at unit index 	2	 is stressed.
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	tɑLəN
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	tɑLəN
+    MIN_DBG (Diacritics): Iter.gsub: Rule '	N$	' APPLIED to '	tɑLəN	' -> '	tɑLənˠ	' (	1	x)
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	L	' APPLIED to '	tɑLənˠ	' -> '	tɑlˠənˠ	' (	1	x)
+tallann         -> [tɑlˠənˠ]
+
+--- Testing word: seanchas ---
+
+--- Transcribing: [seanchas] ---
+    MIN_DBG (PreProcess): Word for stress: '	seanchas	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	seanchas	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	s	' in '	seanchas	' (idx:	1	): NextVQual=	slender	, PrevVQual=	nil	 -> FinalQual=	palatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	s	'. Preceding vowel group '	a	'. Using last char '	a	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	s	' in '	seanchas	' (idx:	8	): NextVQual=	nil	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	c	' in '	seanchas	' (idx:	5	): NextVQual=	broad	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&EA_BROAD_PRE_N&	' APPLIED to '	s'&EA_BROAD_PRE_N&nxas	' -> '	s'anxas	' (	1	x)
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾx]['])(a)([kgptdfbmnszrlLNRMɣŋhwx])	' APPLIED to '	s'anxas	' -> '	s'ɑnxas	' (	1	x)
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	a	' APPLIED to '	s'ɑnxas	' -> '	s'ɑnxɑs	' (	1	x)
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ɑ	' at unit index 	2	 is stressed.
+    MIN_DBG (Stage4_6_U): Reducing '	ɑ	' to '	ə	'. Prec: 	nonpalatal	 Foll: 	nonpalatal
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ɑ	' at unit index 	2	 is stressed.
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	s'ɑnxəs
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	s'ɑnxəs
+    MIN_DBG (Diacritics): Iter.gsub: Rule '	n([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾx])	' APPLIED to '	s'ɑnxəs	' -> '	s'ɑn̪xəs	' (	1	x)
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	s'	' APPLIED to '	s'ɑn̪xəs	' -> '	ʃɑn̪xəs	' (	1	x)
+seanchas        -> [ʃɑn̪xəs]
+
+--- Testing word: im ---
+
+--- Transcribing: [im] ---
+    MIN_DBG (PreProcess): Word for stress: '	im	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	im	'. Vowel match: 	i	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	m	'. Preceding vowel group '	i	'. Using last char '	i	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	m	' in '	ˈim	' (idx:	3	): NextVQual=	nil	, PrevVQual=	slender	 -> FinalQual=	palatal
+    MIN_DBG (Stage4_6_U): Word '	ˈim'	' is monosyllabic, SKIPPING ALL REDUCTION (including specific finals).
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	ˈim'
+    MIN_DBG (Epenthesis): SS Rule EXEC (Helper): PtnKey='	PalLNM	([eɛiɪ]~?)	' Ptn='	^(ˈ?)([eɛiɪ]~?)(m')(#?)$	' Full='	ˈim'	' VIn='	i	' VOut='	iː	'.
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	ˈiːm'
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	m'	' APPLIED to '	ˈiːm'	' -> '	ˈiːmʲ	' (	1	x)
+im              -> [ˈiːmʲ]
+
+--- Testing word: roinnt ---
+
+--- Transcribing: [roinnt] ---
+    MIN_DBG (PreProcess): Word for stress: '	roinnt	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	roinnt	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	nn	'. Preceding vowel group '	oi	'. Using last char '	i	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	nn	' in '	roinnt	' (idx:	4	): NextVQual=	nil	, PrevVQual=	slender	 -> FinalQual=	palatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	r	' in '	roinnt	' (idx:	1	): NextVQual=	broad	, PrevVQual=	nil	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	n	'. Preceding vowel group '	oi	'. Using last char '	i	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	n	' in '	roinnt	' (idx:	4	): NextVQual=	nil	, PrevVQual=	slender	 -> FinalQual=	palatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&OI_DIPH&([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾx]*')	' APPLIED to '	r&OI_DIPH&N't'	' -> '	rɛN't'	' (	1	x)
+    MIN_DBG (Stage4_6_U): Word '	rɛN't'	' is monosyllabic, SKIPPING ALL REDUCTION (including specific finals).
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	rɛN't'
+    MIN_DBG (Epenthesis): SS Rule EXEC (Helper): PtnKey='	PalLNM	([eɛiɪ]~?)	' Ptn='	^(ˈ?)([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾx]'?)([eɛiɪ]~?)(N')([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾx]'?)(#?)$	' Full='	rɛN't'	' VIn='	ɛ	' VOut='	əi	'.
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	rəiN't'
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	t'	' APPLIED to '	rəiN't'	' -> '	rəiN'tʲ	' (	1	x)
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	N'	' APPLIED to '	rəiN'tʲ	' -> '	rəinʲtʲ	' (	1	x)
+roinnt          -> [rəinʲtʲ]
+
+--- Testing word: caill ---
+
+--- Transcribing: [caill] ---
+    MIN_DBG (PreProcess): Word for stress: '	caill	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	caill	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	ll	'. Preceding vowel group '	ai	'. Using last char '	i	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	ll	' in '	caill	' (idx:	4	): NextVQual=	nil	, PrevVQual=	slender	 -> FinalQual=	palatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	c	' in '	caill	' (idx:	1	): NextVQual=	slender	, PrevVQual=	nil	 -> FinalQual=	palatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&AI_DIPH&	' APPLIED to '	k'&AI_DIPH&L'	' -> '	k'aiL'	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder created: '	ai	' -> '	&PHON_AI_DIPH&	'. Result: '	k'&PHON_AI_DIPH&L'	'
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_AI_DIPH&	' -> '	ai	'. Result: '	k'aiL'	'
+    MIN_DBG (Stage4_6_U): Word '	k'aiL'	' is monosyllabic, SKIPPING ALL REDUCTION (including specific finals).
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	k'aiL'
+    MIN_DBG (Epenthesis): SS Rule EXEC (Helper): PtnKey='	PalLNM	(ai~?)	' Ptn='	^(ˈ?)([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾx]'?)(ai~?)(L')(#?)$	' Full='	k'aiL'	' VIn='	ai	' VOut='	ɑː	'.
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	k'ɑːL'
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	k'	' APPLIED to '	k'ɑːL'	' -> '	cɑːL'	' (	1	x)
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	L'	' APPLIED to '	cɑːL'	' -> '	cɑːlʲ	' (	1	x)
+caill           -> [cɑːlʲ]
+
+--- Testing word: coill ---
+
+--- Transcribing: [coill] ---
+    MIN_DBG (PreProcess): Word for stress: '	coill	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	coill	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	ll	'. Preceding vowel group '	oi	'. Using last char '	i	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	ll	' in '	coill	' (idx:	4	): NextVQual=	nil	, PrevVQual=	slender	 -> FinalQual=	palatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	c	' in '	coill	' (idx:	1	): NextVQual=	broad	, PrevVQual=	nil	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): Initial non-palatal '	k	' for '	c	' in '	coill	' -> returning base
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&OI_DIPH&([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾx]*')	' APPLIED to '	k&OI_DIPH&L'	' -> '	kɛL'	' (	1	x)
+    MIN_DBG (Stage4_6_U): Word '	kɛL'	' is monosyllabic, SKIPPING ALL REDUCTION (including specific finals).
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	kɛL'
+    MIN_DBG (Epenthesis): SS Rule EXEC (Helper): PtnKey='	PalLNM	([eɛiɪ]~?)	' Ptn='	^(ˈ?)([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾx]'?)([eɛiɪ]~?)(L')(#?)$	' Full='	kɛL'	' VIn='	ɛ	' VOut='	əi	'.
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	kəiL'
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	L'	' APPLIED to '	kəiL'	' -> '	kəilʲ	' (	1	x)
+coill           -> [kəilʲ]
+
+--- Testing word: poinn ---
+
+--- Transcribing: [poinn] ---
+    MIN_DBG (PreProcess): Word for stress: '	poinn	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	poinn	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	nn	'. Preceding vowel group '	oi	'. Using last char '	i	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	nn	' in '	poinn	' (idx:	4	): NextVQual=	nil	, PrevVQual=	slender	 -> FinalQual=	palatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	p	' in '	poinn	' (idx:	1	): NextVQual=	broad	, PrevVQual=	nil	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): Initial non-palatal '	p	' for '	p	' in '	poinn	' -> returning base
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&OI_DIPH&([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾx]*')	' APPLIED to '	p&OI_DIPH&N'	' -> '	pɛN'	' (	1	x)
+    MIN_DBG (Stage4_6_U): Word '	pɛN'	' is monosyllabic, SKIPPING ALL REDUCTION (including specific finals).
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	pɛN'
+    MIN_DBG (Epenthesis): SS Rule EXEC (Helper): PtnKey='	PalLNM	([eɛiɪ]~?)	' Ptn='	^(ˈ?)([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾx]'?)([eɛiɪ]~?)(N')(#?)$	' Full='	pɛN'	' VIn='	ɛ	' VOut='	əi	'.
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	pəiN'
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	N'	' APPLIED to '	pəiN'	' -> '	pəinʲ	' (	1	x)
+poinn           -> [pəinʲ]
+
+--- Testing word: cill ---
+
+--- Transcribing: [cill] ---
+    MIN_DBG (PreProcess): Word for stress: '	cill	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	cill	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	ll	'. Preceding vowel group '	i	'. Using last char '	i	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	ll	' in '	cill	' (idx:	3	): NextVQual=	nil	, PrevVQual=	slender	 -> FinalQual=	palatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	c	' in '	cill	' (idx:	1	): NextVQual=	slender	, PrevVQual=	nil	 -> FinalQual=	palatal
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾx]*')(i)([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾx]['])	' APPLIED to '	k'iL'	' -> '	k'ɪL'	' (	1	x)
+    MIN_DBG (Stage4_6_U): Word '	k'ɪL'	' is monosyllabic, SKIPPING ALL REDUCTION (including specific finals).
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	k'ɪL'
+    MIN_DBG (Epenthesis): SS Rule EXEC (Helper): PtnKey='	PalLNM	([eɛiɪ]~?)	' Ptn='	^(ˈ?)([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾx]'?)([eɛiɪ]~?)(L')(#?)$	' Full='	k'ɪL'	' VIn='	ɪ	' VOut='	iː	'.
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	k'iːL'
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	k'	' APPLIED to '	k'iːL'	' -> '	ciːL'	' (	1	x)
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	L'	' APPLIED to '	ciːL'	' -> '	ciːlʲ	' (	1	x)
+cill            -> [ciːlʲ]
+
+--- Testing word: bainne ---
+
+--- Transcribing: [bainne] ---
+    MIN_DBG (PreProcess): Word for stress: '	bainne	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	bainne	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	nn	' in '	bainne	' (idx:	4	): NextVQual=	slender	, PrevVQual=	slender	 -> FinalQual=	palatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	b	' in '	bainne	' (idx:	1	): NextVQual=	slender	, PrevVQual=	nil	 -> FinalQual=	palatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&AI_DIPH&	' APPLIED to '	b'&AI_DIPH&N'e	' -> '	b'aiN'e	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder created: '	ai	' -> '	&PHON_AI_DIPH&	'. Result: '	b'&PHON_AI_DIPH&N'e	'
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_AI_DIPH&	' -> '	ai	'. Result: '	b'aiN'e	'
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ai	' at unit index 	2	 is stressed.
+    MIN_DBG (Stage4_6_U): Reducing '	e	' to '	i	'. Prec: 	palatal	 Foll: 	neutral
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ai	' at unit index 	2	 is stressed.
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	b'aiN'i
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	b'aiN'i
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	N'	' APPLIED to '	b'aiN'i	' -> '	b'ainʲi	' (	1	x)
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	b'	' APPLIED to '	b'ainʲi	' -> '	bʲainʲi	' (	1	x)
+bainne          -> [bʲainʲi]
+
+--- Testing word: leabhar ---
+
+--- Transcribing: [leabhar] ---
+    MIN_DBG (PreProcess): Word for stress: '	leabhar	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	leabhar	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	bh	' in '	leabhar	' (idx:	4	): NextVQual=	broad	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	b	' in '	leabhar	' (idx:	4	): NextVQual=	broad	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	ea	' APPLIED to '	leawar	' -> '	lawar	' (	1	x)
+    MIN_DBG (Stage4_4_1): Iter.gsub: Rule '	(([aæɑɔeɛəiɪuʊʌ]~?)w)	' APPLIED to '	lawar	' -> '	l&TEMP_SCHWA_U_DIPH_VOC&ar	' (	1	x)
+    MIN_DBG (Stage4_4_1): Iter.gsub: Rule '	&TEMP_SCHWA_U_DIPH_VOC&	' APPLIED to '	l&TEMP_SCHWA_U_DIPH_VOC&ar	' -> '	ləuar	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder created: '	ua	' -> '	&PHON_UA_DIPH&	'. Result: '	lə&PHON_UA_DIPH&r	'
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_UA_DIPH&	' -> '	ua	'. Result: '	ləuar	'
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	əu	' at unit index 	2	 is stressed.
+    MIN_DBG (Stage4_6_U): Reducing '	a	' to '	ə	'. Prec: 	neutral	 Foll: 	nonpalatal
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	əu	' at unit index 	2	 is stressed.
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	ləuər
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	ləuər
+leabhar         -> [ləuər]
+
+--- Testing word: amhrán ---
+
+--- Transcribing: [amhrán] ---
+    MIN_DBG (PreProcess): Word for stress: '	amhrán	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	amhrán	'. Vowel match: 	a	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	a	' in '	ˈamhrán	' (idx:	2	): NextVQual=	nil	, PrevVQual=	nil	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	r	' in '	ˈamhrán	' (idx:	5	): NextVQual=	broad	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&A_VOC_M_MEDIAL_R&(r)	' APPLIED to '	ˈ&A_VOC_M_MEDIAL_R&rr&A_ACUTE_LONG&n	' -> '	ˈ&TEMP_CONN_AU&rr&A_ACUTE_LONG&n	' (	1	x)
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&A_ACUTE_LONG&	' APPLIED to '	ˈ&TEMP_CONN_AU&rr&A_ACUTE_LONG&n	' -> '	ˈ&TEMP_CONN_AU&rrɑːn	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder created: '	ɑː	' -> '	&PHON_A_LONG&	'. Result: '	ˈ&TEMP_CONN_AU&rr&PHON_A_LONG&n	'
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_A_LONG&	' -> '	ɑː	'. Result: '	ˈ&TEMP_CONN_AU&rrɑːn	'
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	ˈəurrɑːn
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	ˈəurrɑːn
+    MIN_DBG (Diacritics): Iter.gsub: Rule '	n$	' APPLIED to '	ˈəurrɑːn	' -> '	ˈəurrɑːn̪	' (	1	x)
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	ˈə	' APPLIED to '	ˈəurrɑːn̪	' -> '	əurrɑːn̪	' (	1	x)
+amhrán         -> [əurrɑːn̪]
+
+--- Testing word: samhradh ---
+
+--- Transcribing: [samhradh] ---
+    MIN_DBG (PreProcess): Word for stress: '	samhradh	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	samhradh	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	s	' in '	samhradh	' (idx:	1	): NextVQual=	broad	, PrevVQual=	nil	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	a	' in '	samhradh	' (idx:	2	): NextVQual=	nil	, PrevVQual=	nil	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	r	' in '	samhradh	' (idx:	5	): NextVQual=	broad	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&A_VOC_M_MEDIAL_R&(r)	' APPLIED to '	s&A_VOC_M_MEDIAL_R&rr&A_VOC_D_FINAL&	' -> '	s&TEMP_CONN_AU&rr&A_VOC_D_FINAL&	' (	1	x)
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&A_VOC_D_FINAL&(#?)	' APPLIED to '	s&TEMP_CONN_AU&rr&A_VOC_D_FINAL&	' -> '	s&TEMP_CONN_AU&rrə	' (	1	x)
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	əu	' at unit index 	2	 is stressed.
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	səurrə
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	səurrə
+samhradh        -> [səurrə]
+
+--- Testing word: slaghdán ---
+
+--- Transcribing: [slaghdán] ---
+    MIN_DBG (PreProcess): Word for stress: '	slaghdán	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	slaghdán	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	gh	'. Preceding vowel group '	a	'. Using last char '	a	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	gh	' in '	slaghdán	' (idx:	4	): NextVQual=	nil	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	s	' in '	slaghdán	' (idx:	1	): NextVQual=	nil	, PrevVQual=	nil	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	g	'. Preceding vowel group '	a	'. Using last char '	a	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	g	' in '	slaghdán	' (idx:	4	): NextVQual=	nil	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&A_ACUTE_LONG&	' APPLIED to '	slaɣd&A_ACUTE_LONG&n	' -> '	slaɣdɑːn	' (	1	x)
+    MIN_DBG (Stage4_4_1): Iter.gsub: Rule '	(([aæɑɔeɛəiɪuʊʌ]~?)[ɣ])	' APPLIED to '	slaɣdɑːn	' -> '	sl&TEMP_SCHWA_I_DIPH_VOC&dɑːn	' (	1	x)
+    MIN_DBG (Stage4_4_1): Iter.gsub: Rule '	&TEMP_SCHWA_I_DIPH_VOC&	' APPLIED to '	sl&TEMP_SCHWA_I_DIPH_VOC&dɑːn	' -> '	sləidɑːn	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder created: '	əi	' -> '	&PHON_SCHWA_I_DIPH&	'. Result: '	sl&PHON_SCHWA_I_DIPH&dɑːn	'
+    MIN_DBG (Stage4_5_C): Placeholder created: '	ɑː	' -> '	&PHON_A_LONG&	'. Result: '	sl&PHON_SCHWA_I_DIPH&d&PHON_A_LONG&n	'
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_A_LONG&	' -> '	ɑː	'. Result: '	sl&PHON_SCHWA_I_DIPH&dɑːn	'
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_SCHWA_I_DIPH&	' -> '	əi	'. Result: '	sləidɑːn	'
+    MIN_DBG (Stage4_5_1): V1='	əi	', C_after_V1_qual='	nonpalatal	', C_after_V1_phon='	d	', V2='	ɑː	'
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	əi	' at unit index 	3	 is stressed.
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	sləidɑːn
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	sləidɑːn
+    MIN_DBG (Diacritics): Iter.gsub: Rule '	n$	' APPLIED to '	sləidɑːn	' -> '	sləidɑːn̪	' (	1	x)
+slaghdán       -> [sləidɑːn̪]
+
+--- Testing word: adhradh ---
+
+--- Transcribing: [adhradh] ---
+    MIN_DBG (PreProcess): Word for stress: '	adhradh	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	adhradh	'. Vowel match: 	a	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	dh	'. Preceding vowel group '	a	'. Using last char '	a	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	dh	' in '	ˈadhradh	' (idx:	3	): NextVQual=	nil	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	d	'. Preceding vowel group '	a	'. Using last char '	a	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	d	' in '	ˈadhradh	' (idx:	3	): NextVQual=	nil	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&A_VOC_D_FINAL&(#?)	' APPLIED to '	ˈaɣr&A_VOC_D_FINAL&	' -> '	ˈaɣrə	' (	1	x)
+    MIN_DBG (Stage4_4_1): Iter.gsub: Rule '	(([aæɑɔeɛəiɪuʊʌ]~?)[ɣ])	' APPLIED to '	ˈaɣrə	' -> '	ˈ&TEMP_SCHWA_I_DIPH_VOC&rə	' (	1	x)
+    MIN_DBG (Stage4_4_1): Iter.gsub: Rule '	&TEMP_SCHWA_I_DIPH_VOC&	' APPLIED to '	ˈ&TEMP_SCHWA_I_DIPH_VOC&rə	' -> '	ˈəirə	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder created: '	əi	' -> '	&PHON_SCHWA_I_DIPH&	'. Result: '	ˈ&PHON_SCHWA_I_DIPH&rə	'
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_SCHWA_I_DIPH&	' -> '	əi	'. Result: '	ˈəirə	'
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	ˈəirə
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	ˈəirə
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	ˈə	' APPLIED to '	ˈəirə	' -> '	əirə	' (	1	x)
+adhradh         -> [əirə]
+
+--- Testing word: laghadh ---
+
+--- Transcribing: [laghadh] ---
+    MIN_DBG (PreProcess): Word for stress: '	laghadh	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	laghadh	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	gh	' in '	laghadh	' (idx:	3	): NextVQual=	broad	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&A_VOC_D_FINAL&(#?)	' APPLIED to '	laɣ&A_VOC_D_FINAL&	' -> '	laɣə	' (	1	x)
+    MIN_DBG (Stage4_4_1): Iter.gsub: Rule '	(([aæɑɔeɛəiɪuʊʌ]~?)[ɣ])	' APPLIED to '	laɣə	' -> '	l&TEMP_SCHWA_I_DIPH_VOC&ə	' (	1	x)
+    MIN_DBG (Stage4_4_1): Iter.gsub: Rule '	&TEMP_SCHWA_I_DIPH_VOC&	' APPLIED to '	l&TEMP_SCHWA_I_DIPH_VOC&ə	' -> '	ləiə	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder created: '	iə	' -> '	&PHON_IA_DIPH&	'. Result: '	lə&PHON_IA_DIPH&	'
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_IA_DIPH&	' -> '	iə	'. Result: '	ləiə	'
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	əi	' at unit index 	2	 is stressed.
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	ləiə
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	ləiə
+laghadh         -> [ləiə]
+
+--- Testing word: feabhas ---
+
+--- Transcribing: [feabhas] ---
+    MIN_DBG (PreProcess): Word for stress: '	feabhas	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	feabhas	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	bh	' in '	feabhas	' (idx:	4	): NextVQual=	broad	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	f	' in '	feabhas	' (idx:	1	): NextVQual=	slender	, PrevVQual=	nil	 -> FinalQual=	palatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	b	' in '	feabhas	' (idx:	4	): NextVQual=	broad	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	ea	' APPLIED to '	f'eawas	' -> '	f'awas	' (	1	x)
+    MIN_DBG (Stage4_4_1): Iter.gsub: Rule '	(([aæɑɔeɛəiɪuʊʌ]~?)w)	' APPLIED to '	f'awas	' -> '	f'&TEMP_SCHWA_U_DIPH_VOC&as	' (	1	x)
+    MIN_DBG (Stage4_4_1): Iter.gsub: Rule '	&TEMP_SCHWA_U_DIPH_VOC&	' APPLIED to '	f'&TEMP_SCHWA_U_DIPH_VOC&as	' -> '	f'əuas	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder created: '	ua	' -> '	&PHON_UA_DIPH&	'. Result: '	f'ə&PHON_UA_DIPH&s	'
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_UA_DIPH&	' -> '	ua	'. Result: '	f'əuas	'
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	əu	' at unit index 	2	 is stressed.
+    MIN_DBG (Stage4_6_U): Reducing '	a	' to '	ə	'. Prec: 	neutral	 Foll: 	nonpalatal
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	əu	' at unit index 	2	 is stressed.
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	f'əuəs
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	f'əuəs
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	f'	' APPLIED to '	f'əuəs	' -> '	fʲəuəs	' (	1	x)
+feabhas         -> [fʲəuəs]
+
+--- Testing word: ghabh ---
+
+--- Transcribing: [ghabh] ---
+    MIN_DBG (PreProcess): Word for stress: '	ghabh	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	ghabh	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	gh	' in '	ghabh	' (idx:	1	): NextVQual=	broad	, PrevVQual=	nil	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	bh	'. Preceding vowel group '	a	'. Using last char '	a	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	bh	' in '	ghabh	' (idx:	4	): NextVQual=	nil	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (Stage4_4_1): Iter.gsub: Rule '	(([aæɑɔeɛəiɪuʊʌ]~?)v)$	' APPLIED to '	ɣav	' -> '	ɣ&TEMP_SCHWA_U_DIPH_VOC&	' (	1	x)
+    MIN_DBG (Stage4_4_1): Iter.gsub: Rule '	&TEMP_SCHWA_U_DIPH_VOC&	' APPLIED to '	ɣ&TEMP_SCHWA_U_DIPH_VOC&	' -> '	ɣəu	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder created: '	əu	' -> '	&PHON_SCHWA_U_DIPH&	'. Result: '	ɣ&PHON_SCHWA_U_DIPH&	'
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_SCHWA_U_DIPH&	' -> '	əu	'. Result: '	ɣəu	'
+    MIN_DBG (Stage4_6_U): Word '	ɣəu	' is monosyllabic, SKIPPING ALL REDUCTION (including specific finals).
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	ɣəu
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	ɣəu
+ghabh           -> [ɣəu]
+
+--- Testing word: damhsa ---
+
+--- Transcribing: [damhsa] ---
+    MIN_DBG (PreProcess): Word for stress: '	damhsa	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	damhsa	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	mh	'. Preceding vowel group '	a	'. Using last char '	a	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	mh	' in '	damhsa	' (idx:	3	): NextVQual=	nil	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	d	' in '	damhsa	' (idx:	1	): NextVQual=	broad	, PrevVQual=	nil	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): Initial non-palatal '	d	' for '	d	' in '	damhsa	' -> returning base
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	m	'. Preceding vowel group '	a	'. Using last char '	a	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	m	' in '	damhsa	' (idx:	3	): NextVQual=	nil	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (Stage4_4_1): Iter.gsub: Rule '	(([aæɑɔeɛəiɪuʊʌ]~?)v)([^'])	' APPLIED to '	davsa	' -> '	d&TEMP_SCHWA_U_DIPH_VOC&aa	' (	1	x)
+    MIN_DBG (Stage4_4_1): Iter.gsub: Rule '	&TEMP_SCHWA_U_DIPH_VOC&	' APPLIED to '	d&TEMP_SCHWA_U_DIPH_VOC&aa	' -> '	dəuaa	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder created: '	ua	' -> '	&PHON_UA_DIPH&	'. Result: '	də&PHON_UA_DIPH&a	'
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	a	' APPLIED to '	də&PHON_UA_DIPH&a	' -> '	də&PHON_UA_DIPH&ɑ	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_UA_DIPH&	' -> '	ua	'. Result: '	dəuaɑ	'
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	əu	' at unit index 	2	 is stressed.
+    MIN_DBG (Stage4_6_U): Reducing '	a	' to '	ə	'. Prec: 	neutral	 Foll: 	neutral
+    MIN_DBG (Stage4_6_U): Reducing '	ɑ	' to '	ə	'. Prec: 	neutral	 Foll: 	neutral
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	əu	' at unit index 	2	 is stressed.
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	dəuəə
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	dəuəə
+damhsa          -> [dəuəə]
+
+--- Testing word: deifir ---
+
+--- Transcribing: [deifir] ---
+    MIN_DBG (PreProcess): Word for stress: '	deifir	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	deifir	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	d	' in '	deifir	' (idx:	1	): NextVQual=	slender	, PrevVQual=	nil	 -> FinalQual=	palatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	f	' in '	deifir	' (idx:	4	): NextVQual=	slender	, PrevVQual=	slender	 -> FinalQual=	palatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	r	'. Preceding vowel group '	i	'. Using last char '	i	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	r	' in '	deifir	' (idx:	6	): NextVQual=	nil	, PrevVQual=	slender	 -> FinalQual=	palatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&EI_DIPH&	' APPLIED to '	d'&EI_DIPH&f'ir'	' -> '	d'ef'ir'	' (	1	x)
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾx]*')(e)([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾx]['])	' APPLIED to '	d'ef'ir'	' -> '	d'ɛf'ir'	' (	1	x)
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾx]*')(i)([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾx]['])	' APPLIED to '	d'ɛf'ir'	' -> '	d'ɛf'ɪr'	' (	1	x)
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ɛ	' at unit index 	2	 is stressed.
+    MIN_DBG (Stage4_6_U): Reducing '	ɪ	' to '	i	'. Prec: 	palatal	 Foll: 	palatal
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ɛ	' at unit index 	2	 is stressed.
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	d'ɛf'ir'
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	d'ɛf'ir'
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	d'	' APPLIED to '	d'ɛf'ir'	' -> '	dʲɛf'ir'	' (	1	x)
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	r'	' APPLIED to '	dʲɛf'ir'	' -> '	dʲɛf'iɾʲ	' (	1	x)
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	f'	' APPLIED to '	dʲɛf'iɾʲ	' -> '	dʲɛfʲiɾʲ	' (	1	x)
+deifir          -> [dʲɛfʲiɾʲ]
+
+--- Testing word: nimhe ---
+
+--- Transcribing: [nimhe] ---
+    MIN_DBG (PreProcess): Word for stress: '	nimhe	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	nimhe	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	mh	' in '	nimhe	' (idx:	3	): NextVQual=	slender	, PrevVQual=	slender	 -> FinalQual=	palatal
+    MIN_DBG (Stage4_4_1): Iter.gsub: Rule '	(([aæɑɔeɛəiɪuʊʌ]~?))(v')	' APPLIED to '	niv'e	' -> '	n&TEMP_I_LONG_VOC&e	' (	1	x)
+    MIN_DBG (Stage4_4_1): Iter.gsub: Rule '	&TEMP_I_LONG_VOC&	' APPLIED to '	n&TEMP_I_LONG_VOC&e	' -> '	niːe	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder created: '	iː	' -> '	&PHON_I_LONG&	'. Result: '	n&PHON_I_LONG&e	'
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_I_LONG&	' -> '	iː	'. Result: '	niːe	'
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	iː	' at unit index 	2	 is stressed.
+    MIN_DBG (Stage4_6_U): Reducing '	e	' to '	ə	'. Prec: 	neutral	 Foll: 	neutral
+    MIN_DBG (Stage4_6_U): Specific final rule '	iːə$	' applied. New word: 	niː
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	iː	' at unit index 	2	 is stressed.
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	iː	' at unit index 	2	 is stressed.
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	niː
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	niː
+nimhe           -> [niː]
+
+--- Testing word: suidhe ---
+
+--- Transcribing: [suidhe] ---
+    MIN_DBG (PreProcess): Word for stress: '	suidhe	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	suidhe	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	dh	' in '	suidhe	' (idx:	4	): NextVQual=	slender	, PrevVQual=	slender	 -> FinalQual=	palatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	s	' in '	suidhe	' (idx:	1	): NextVQual=	broad	, PrevVQual=	nil	 -> FinalQual=	nonpalatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&UI_DIPH&	' APPLIED to '	s&UI_DIPH&je	' -> '	sɪje	' (	1	x)
+    MIN_DBG (Stage4_4_1): Iter.gsub: Rule '	(([aæɑɔeɛəiɪuʊʌ]~?))([j])	' APPLIED to '	sɪje	' -> '	s&TEMP_I_LONG_VOC&e	' (	1	x)
+    MIN_DBG (Stage4_4_1): Iter.gsub: Rule '	&TEMP_I_LONG_VOC&	' APPLIED to '	s&TEMP_I_LONG_VOC&e	' -> '	siːe	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder created: '	iː	' -> '	&PHON_I_LONG&	'. Result: '	s&PHON_I_LONG&e	'
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_I_LONG&	' -> '	iː	'. Result: '	siːe	'
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	iː	' at unit index 	2	 is stressed.
+    MIN_DBG (Stage4_6_U): Reducing '	e	' to '	ə	'. Prec: 	neutral	 Foll: 	neutral
+    MIN_DBG (Stage4_6_U): Specific final rule '	iːə$	' applied. New word: 	siː
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	iː	' at unit index 	2	 is stressed.
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	iː	' at unit index 	2	 is stressed.
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	siː
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	siː
+suidhe          -> [siː]
+
+--- Testing word: beidh ---
+
+--- Transcribing: [beidh] ---
+    MIN_DBG (PreProcess): Word for stress: '	beidh	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	beidh	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	b	' in '	beidh	' (idx:	1	): NextVQual=	slender	, PrevVQual=	nil	 -> FinalQual=	palatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&EIDH_CONN_AI&(#?)	' APPLIED to '	b'&EIDH_CONN_AI&	' -> '	b'ai	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder created: '	ai	' -> '	&PHON_AI_DIPH&	'. Result: '	b'&PHON_AI_DIPH&	'
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_AI_DIPH&	' -> '	ai	'. Result: '	b'ai	'
+    MIN_DBG (Stage4_6_U): Word '	b'ai	' is monosyllabic, SKIPPING ALL REDUCTION (including specific finals).
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	b'ai
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	b'ai
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	b'	' APPLIED to '	b'ai	' -> '	bʲai	' (	1	x)
+beidh           -> [bʲai]
+
+--- Testing word: lae ---
+
+--- Transcribing: [lae] ---
+    MIN_DBG (PreProcess): Word for stress: '	lae	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	lae	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&AE_SEQ&	' APPLIED to '	l&AE_SEQ&	' -> '	leː	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder created: '	eː	' -> '	&PHON_E_LONG&	'. Result: '	l&PHON_E_LONG&	'
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_E_LONG&	' -> '	eː	'. Result: '	leː	'
+    MIN_DBG (Stage4_6_U): Word '	leː	' is monosyllabic, SKIPPING ALL REDUCTION (including specific finals).
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	leː
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	leː
+lae             -> [leː]
+
+--- Testing word: scadán ---
+
+--- Transcribing: [scadán] ---
+    MIN_DBG (PreProcess): Word for stress: '	scadán	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	scadán	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	s	' in '	scadán	' (idx:	1	): NextVQual=	nil	, PrevVQual=	nil	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	c	' in '	scadán	' (idx:	2	): NextVQual=	broad	, PrevVQual=	nil	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	d	' in '	scadán	' (idx:	4	): NextVQual=	broad	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&A_ACUTE_LONG&	' APPLIED to '	skad&A_ACUTE_LONG&n	' -> '	skadɑːn	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder created: '	ɑː	' -> '	&PHON_A_LONG&	'. Result: '	skad&PHON_A_LONG&n	'
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	a	' APPLIED to '	skad&PHON_A_LONG&n	' -> '	skɑd&PHON_A_LONG&n	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_A_LONG&	' -> '	ɑː	'. Result: '	skɑdɑːn	'
+    MIN_DBG (Stage4_5_1): V1='	ɑ	', C_after_V1_qual='	nonpalatal	', C_after_V1_phon='	d	', V2='	ɑː	'
+    MIN_DBG (Stage4_5_1): Applying raising: V1 '	ɑ	' -> '	ʊ	'
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ʊ	' at unit index 	3	 is stressed.
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	skʊdɑːn
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	skʊdɑːn
+    MIN_DBG (Diacritics): Iter.gsub: Rule '	n$	' APPLIED to '	skʊdɑːn	' -> '	skʊdɑːn̪	' (	1	x)
+scadán         -> [skʊdɑːn̪]
+
+--- Testing word: cailín ---
+
+--- Transcribing: [cailín] ---
+    MIN_DBG (PreProcess): Word for stress: '	cailín	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	cailín	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	c	' in '	cailín	' (idx:	1	): NextVQual=	slender	, PrevVQual=	nil	 -> FinalQual=	palatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&I_ACUTE_LONG&	' APPLIED to '	k'&AI_DIPH&l&I_ACUTE_LONG&n	' -> '	k'&AI_DIPH&liːn	' (	1	x)
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&AI_DIPH&	' APPLIED to '	k'&AI_DIPH&liːn	' -> '	k'ailiːn	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder created: '	ai	' -> '	&PHON_AI_DIPH&	'. Result: '	k'&PHON_AI_DIPH&liːn	'
+    MIN_DBG (Stage4_5_C): Placeholder created: '	iː	' -> '	&PHON_I_LONG&	'. Result: '	k'&PHON_AI_DIPH&l&PHON_I_LONG&n	'
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	l(&PHON_I_LONG&)	' APPLIED to '	k'&PHON_AI_DIPH&l&PHON_I_LONG&n	' -> '	k'&PHON_AI_DIPH&l'&PHON_I_LONG&n	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_I_LONG&	' -> '	iː	'. Result: '	k'&PHON_AI_DIPH&l'iːn	'
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_AI_DIPH&	' -> '	ai	'. Result: '	k'ail'iːn	'
+    MIN_DBG (Stage4_5_1): V1='	ai	', C_after_V1_qual='	palatal	', C_after_V1_phon='	l'	', V2='	iː	'
+    MIN_DBG (Stage4_5_1): Applying raising: V1 '	ai	' -> '	ɪ	'
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ɪ	' at unit index 	2	 is stressed.
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	k'ɪl'iːn
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	k'ɪl'iːn
+    MIN_DBG (Diacritics): Iter.gsub: Rule '	n$	' APPLIED to '	k'ɪl'iːn	' -> '	k'ɪl'iːn̪	' (	1	x)
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	k'	' APPLIED to '	k'ɪl'iːn̪	' -> '	cɪl'iːn̪	' (	1	x)
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	l'	' APPLIED to '	cɪl'iːn̪	' -> '	cɪlʲiːn̪	' (	1	x)
+cailín         -> [cɪlʲiːn̪]
+
+--- Testing word: soláthar ---
+
+--- Transcribing: [soláthar] ---
+    MIN_DBG (PreProcess): Word for stress: '	soláthar	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	soláthar	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	s	' in '	soláthar	' (idx:	1	): NextVQual=	broad	, PrevVQual=	nil	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	t	' in '	soláthar	' (idx:	5	): NextVQual=	broad	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	t	' in '	soláthar	' (idx:	5	): NextVQual=	broad	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&A_ACUTE_LONG&	' APPLIED to '	sol&A_ACUTE_LONG&har	' -> '	solɑːhar	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder created: '	ɑː	' -> '	&PHON_A_LONG&	'. Result: '	sol&PHON_A_LONG&har	'
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	a	' APPLIED to '	sol&PHON_A_LONG&har	' -> '	sol&PHON_A_LONG&hɑr	' (	1	x)
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	o	' APPLIED to '	sol&PHON_A_LONG&hɑr	' -> '	sɔl&PHON_A_LONG&hɑr	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_A_LONG&	' -> '	ɑː	'. Result: '	sɔlɑːhɑr	'
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ɔ	' at unit index 	2	 is stressed.
+    MIN_DBG (Stage4_6_U): Reducing '	ɑ	' to '	ə	'. Prec: 	nonpalatal	 Foll: 	nonpalatal
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ɔ	' at unit index 	2	 is stressed.
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	sɔlɑːhər
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	sɔlɑːhər
+soláthar       -> [sɔlɑːhər]
+
+--- Testing word: bacán ---
+
+--- Transcribing: [bacán] ---
+    MIN_DBG (PreProcess): Word for stress: '	bacán	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	bacán	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	b	' in '	bacán	' (idx:	1	): NextVQual=	broad	, PrevVQual=	nil	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): Initial non-palatal '	b	' for '	b	' in '	bacán	' -> returning base
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	c	' in '	bacán	' (idx:	3	): NextVQual=	broad	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&A_ACUTE_LONG&	' APPLIED to '	bak&A_ACUTE_LONG&n	' -> '	bakɑːn	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder created: '	ɑː	' -> '	&PHON_A_LONG&	'. Result: '	bak&PHON_A_LONG&n	'
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	a	' APPLIED to '	bak&PHON_A_LONG&n	' -> '	bɑk&PHON_A_LONG&n	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_A_LONG&	' -> '	ɑː	'. Result: '	bɑkɑːn	'
+    MIN_DBG (Stage4_5_1): V1='	ɑ	', C_after_V1_qual='	nonpalatal	', C_after_V1_phon='	k	', V2='	ɑː	'
+    MIN_DBG (Stage4_5_1): Applying raising: V1 '	ɑ	' -> '	ʊ	'
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ʊ	' at unit index 	2	 is stressed.
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	bʊkɑːn
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	bʊkɑːn
+    MIN_DBG (Diacritics): Iter.gsub: Rule '	n$	' APPLIED to '	bʊkɑːn	' -> '	bʊkɑːn̪	' (	1	x)
+bacán          -> [bʊkɑːn̪]
+
+--- Testing word: fuinneog ---
+
+--- Transcribing: [fuinneog] ---
+    MIN_DBG (PreProcess): Word for stress: '	fuinneog	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	fuinneog	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	nn	' in '	fuinneog	' (idx:	4	): NextVQual=	slender	, PrevVQual=	slender	 -> FinalQual=	palatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	f	' in '	fuinneog	' (idx:	1	): NextVQual=	broad	, PrevVQual=	nil	 -> FinalQual=	nonpalatal
+    MIN_DBG (ConsonantR): Initial non-palatal '	f	' for '	f	' in '	fuinneog	' -> returning base
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	e	' in '	fuinneog	' (idx:	6	): NextVQual=	broad	, PrevVQual=	slender	 -> FinalQual=	nonpalatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&EO_SEQ&	' APPLIED to '	f&UI_DIPH&N'&EO_SEQ&g	' -> '	f&UI_DIPH&N'oːg	' (	1	x)
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&UI_DIPH&	' APPLIED to '	f&UI_DIPH&N'oːg	' -> '	fɪN'oːg	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder created: '	oː	' -> '	&PHON_O_LONG&	'. Result: '	fɪN'&PHON_O_LONG&g	'
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_O_LONG&	' -> '	oː	'. Result: '	fɪN'oːg	'
+    MIN_DBG (Stage4_5_1): V1='	ɪ	', C_after_V1_qual='	palatal	', C_after_V1_phon='	N'	', V2='	oː	'
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ɪ	' at unit index 	2	 is stressed.
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	fɪN'oːg
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	fɪN'oːg
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	N'	' APPLIED to '	fɪN'oːg	' -> '	fɪnʲoːg	' (	1	x)
+fuinneog        -> [fɪnʲoːg]
+
+--- Testing word: oileán ---
+
+--- Transcribing: [oileán] ---
+    MIN_DBG (PreProcess): Word for stress: '	oileán	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	oileán	'. Vowel match: 	o	. CV match: 	nil
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&A_ACUTE_LONG&	' APPLIED to '	ˈ&OI_DIPH&le&A_ACUTE_LONG&n	' -> '	ˈ&OI_DIPH&leɑːn	' (	1	x)
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&OI_DIPH&	' APPLIED to '	ˈ&OI_DIPH&leɑːn	' -> '	ˈɔleɑːn	' (	1	x)
+    MIN_DBG (Stage4_5_C): Placeholder created: '	ɑː	' -> '	&PHON_A_LONG&	'. Result: '	ˈɔle&PHON_A_LONG&n	'
+    MIN_DBG (Stage4_5_C): Placeholder restored: '	&PHON_A_LONG&	' -> '	ɑː	'. Result: '	ˈɔleɑːn	'
+    MIN_DBG (Stage4_6_U): Reducing '	e	' to '	ə	'. Prec: 	nonpalatal	 Foll: 	neutral
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	ˈɔləɑːn
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	ˈɔləɑːn
+    MIN_DBG (Diacritics): Iter.gsub: Rule '	n$	' APPLIED to '	ˈɔləɑːn	' -> '	ˈɔləɑːn̪	' (	1	x)
+oileán         -> [ˈɔləɑːn̪]
+
+--- Testing word: fear ---
+
+--- Transcribing: [fear] ---
+    MIN_DBG (PreProcess): Word for stress: '	fear	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	fear	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	f	' in '	fear	' (idx:	1	): NextVQual=	slender	, PrevVQual=	nil	 -> FinalQual=	palatal
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho: Final cons '	r	'. Preceding vowel group '	ea	'. Using last char '	a	' for prev_v_type_char.
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	r	' in '	fear	' (idx:	4	): NextVQual=	nil	, PrevVQual=	slender	 -> FinalQual=	palatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&EA_SLENDER_PRE_RPRIME&	' APPLIED to '	f'&EA_SLENDER_PRE_RPRIME&r'	' -> '	f'ær'	' (	1	x)
+    MIN_DBG (Stage4_6_U): Word '	f'ær'	' is monosyllabic, SKIPPING ALL REDUCTION (including specific finals).
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	f'ær'
+    MIN_DBG (Epenthesis): SS Rule EXEC (Helper): PtnKey='	PalR	([aæɑ]~?)	' Ptn='	^(ˈ?)([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾx]'?)([aæɑ]~?)(r')(#?)$	' Full='	f'ær'	' VIn='	æ	' VOut='	ɑː	'.
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	f'ɑːr'
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	r'	' APPLIED to '	f'ɑːr'	' -> '	f'ɑːɾʲ	' (	1	x)
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	f'	' APPLIED to '	f'ɑːɾʲ	' -> '	fʲɑːɾʲ	' (	1	x)
+fear            -> [fʲɑːɾʲ]
+
+--- Testing word: geal ---
+
+--- Transcribing: [geal] ---
+    MIN_DBG (PreProcess): Word for stress: '	geal	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	geal	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	g	' in '	geal	' (idx:	1	): NextVQual=	slender	, PrevVQual=	nil	 -> FinalQual=	palatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	ea	' APPLIED to '	g'eal	' -> '	g'al	' (	1	x)
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾx]['])(a)([kgptdfbmnszrlLNRMɣŋhwx])	' APPLIED to '	g'al	' -> '	g'ɑl	' (	1	x)
+    MIN_DBG (Stage4_6_U): Word '	g'ɑl	' is monosyllabic, SKIPPING ALL REDUCTION (including specific finals).
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	g'ɑl
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	g'ɑl
+    MIN_DBG (Diacritics): Iter.gsub: Rule '	l$	' APPLIED to '	g'ɑl	' -> '	g'ɑl̪	' (	1	x)
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	g'	' APPLIED to '	g'ɑl̪	' -> '	ɟɑl̪	' (	1	x)
+geal            -> [ɟɑl̪]
+
+--- Testing word: bean ---
+
+--- Transcribing: [bean] ---
+    MIN_DBG (PreProcess): Word for stress: '	bean	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	bean	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	b	' in '	bean	' (idx:	1	): NextVQual=	slender	, PrevVQual=	nil	 -> FinalQual=	palatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&EA_BROAD_PRE_N&	' APPLIED to '	b'&EA_BROAD_PRE_N&n	' -> '	b'an	' (	1	x)
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾx]['])(a)([kgptdfbmnszrlLNRMɣŋhwx])	' APPLIED to '	b'an	' -> '	b'ɑn	' (	1	x)
+    MIN_DBG (Stage4_6_U): Word '	b'ɑn	' is monosyllabic, SKIPPING ALL REDUCTION (including specific finals).
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	b'ɑn
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	b'ɑn
+    MIN_DBG (Diacritics): Iter.gsub: Rule '	n$	' APPLIED to '	b'ɑn	' -> '	b'ɑn̪	' (	1	x)
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	b'	' APPLIED to '	b'ɑn̪	' -> '	bʲɑn̪	' (	1	x)
+bean            -> [bʲɑn̪]
+
+--- Testing word: teach ---
+
+--- Transcribing: [teach] ---
+    MIN_DBG (PreProcess): Word for stress: '	teach	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	teach	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	t	' in '	teach	' (idx:	1	): NextVQual=	slender	, PrevVQual=	nil	 -> FinalQual=	palatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&EA_SLENDER_PRE_CH&	' APPLIED to '	t'&EA_SLENDER_PRE_CH&x	' -> '	t'æx	' (	1	x)
+    MIN_DBG (Stage4_6_U): Word '	t'æx	' is monosyllabic, SKIPPING ALL REDUCTION (including specific finals).
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	t'æx
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	t'æx
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	t'	' APPLIED to '	t'æx	' -> '	tʲæx	' (	1	x)
+teach           -> [tʲæx]
+
+--- Testing word: leaba ---
+
+--- Transcribing: [leaba] ---
+    MIN_DBG (PreProcess): Word for stress: '	leaba	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	leaba	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	b	' in '	leaba	' (idx:	4	): NextVQual=	broad	, PrevVQual=	broad	 -> FinalQual=	nonpalatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	ea	' APPLIED to '	leaba	' -> '	laba	' (	1	x)
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	a	' APPLIED to '	laba	' -> '	lɑbɑ	' (	2	x)
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ɑ	' at unit index 	2	 is stressed.
+    MIN_DBG (Stage4_6_U): Reducing '	ɑ	' to '	ə	'. Prec: 	nonpalatal	 Foll: 	neutral
+    MIN_DBG (Stage4_6_U): No explicit stress, assuming first vowel '	ɑ	' at unit index 	2	 is stressed.
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	lɑbə
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	lɑbə
+leaba           -> [lɑbə]
+
+--- Testing word: seacht ---
+
+--- Transcribing: [seacht] ---
+    MIN_DBG (PreProcess): Word for stress: '	seacht	'
+    MIN_DBG (PreProcess): Attempting direct stress on '	seacht	'. Vowel match: 	nil	. CV match: 	nil
+    MIN_DBG (ConsonantR): determine_cons_qual_ortho for '	s	' in '	seacht	' (idx:	1	): NextVQual=	slender	, PrevVQual=	nil	 -> FinalQual=	palatal
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	&EACHT_BROAD_FIX&	' APPLIED to '	s'&EACHT_BROAD_FIX&	' -> '	s'axt	' (	1	x)
+    MIN_DBG (Stage4_5_C): Core Iter.gsub: Rule '	([kgptdfbmnszrlLNRMçjɣŋhwcʃɟɾx]['])(a)([kgptdfbmnszrlLNRMɣŋhwx])	' APPLIED to '	s'axt	' -> '	s'ɑxt	' (	1	x)
+    MIN_DBG (Stage4_6_U): Word '	s'ɑxt	' is monosyllabic, SKIPPING ALL REDUCTION (including specific finals).
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	s'ɑxt
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	s'ɑxt
+    MIN_DBG (Diacritics): Iter.gsub: Rule '	t$	' APPLIED to '	s'ɑxt	' -> '	s'ɑxt̪	' (	1	x)
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	s'	' APPLIED to '	s'ɑxt̪	' -> '	ʃɑxt̪	' (	1	x)
+seacht          -> [ʃɑxt̪]
+
+--- Transcribing: [ceann] ---
+
+--- Transcribing: [am] ---
+
+--- Transcribing: [fonn] ---
+
+--- Transcribing: [poll] ---
+
+--- Transcribing: [trom] ---
+
+--- Transcribing: [corr] ---
+
+--- Transcribing: [bord] ---
+
+--- Transcribing: [tallann] ---
+
+--- Transcribing: [seanchas] ---
+
+--- Transcribing: [im] ---
+
+--- Transcribing: [roinnt] ---
+
+--- Transcribing: [caill] ---
+
+--- Transcribing: [coill] ---
+
+--- Transcribing: [poinn] ---
+
+--- Transcribing: [cill] ---
+
+--- Transcribing: [bainne] ---
+
+--- Transcribing: [leabhar] ---
+
+--- Transcribing: [amhrán] ---
+
+--- Transcribing: [samhradh] ---
+
+--- Transcribing: [slaghdán] ---
+
+--- Transcribing: [adhradh] ---
+
+--- Transcribing: [laghadh] ---
+
+--- Transcribing: [feabhas] ---
+
+--- Transcribing: [ghabh] ---
+
+--- Transcribing: [damhsa] ---
+
+--- Transcribing: [deifir] ---
+
+--- Transcribing: [nimhe] ---
+
+--- Transcribing: [suidhe] ---
+
+--- Transcribing: [beidh] ---
+
+--- Transcribing: [lae] ---
+
+--- Transcribing: [scadán] ---
+
+--- Transcribing: [cailín] ---
+
+--- Transcribing: [soláthar] ---
+
+--- Transcribing: [bacán] ---
+
+--- Transcribing: [fuinneog] ---
+
+--- Transcribing: [oileán] ---
+
+--- Transcribing: [fear] ---
+
+--- Transcribing: [geal] ---
+
+--- Transcribing: [bean] ---
+
+--- Transcribing: [teach] ---
+
+--- Transcribing: [leaba] ---
+
+--- Transcribing: [seacht] ---

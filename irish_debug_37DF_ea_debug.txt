@@ -1,0 +1,6 @@
+﻿
+--- Running Focused Test Set for Connacht (Iteration 37DF - EA Debug) ---
+
+--- Testing word: ceann ---
+
+--- Transcribing: [ceann] ---

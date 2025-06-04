@@ -1,7 +1,1 @@
-﻿Create a prompt for LLM with an extensive overview of the project, current issues and next steps. Include overall conceptual pipeline, number of iterations left. 
-
-Lua regex does not have alterations, lookarounds and optional capture groups! 
-NO | for sequence alternation. (Character sets [...] are for single character alternation).
-NO lookarounds.
-NO non-capturing groups (?:...). All () are capturing.
-? applies to the immediately preceding item (character, class, NOT capture group) to make that item match 0 or 1 times.
+﻿Create an extensive LLM prompt with an overview of the project, remaining issues and next steps. Include conceptual overview of the pipeline with all linguistic minutae. Note lua regex limitations. Include iterations left estimate.

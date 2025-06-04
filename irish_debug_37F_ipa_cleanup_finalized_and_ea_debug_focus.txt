@@ -1,0 +1,212 @@
+﻿
+--- Running Focused Test Set for Connacht (Iteration 37DE - EA Refinement) ---
+
+--- Testing word: ceann ---
+
+--- Transcribing: [ceann] ---
+ceann           -> [k'ɑN]
+
+--- Testing word: am ---
+
+--- Transcribing: [am] ---
+am              -> [ˈɑm]
+
+--- Testing word: fonn ---
+
+--- Transcribing: [fonn] ---
+fonn            -> [fɔN]
+
+--- Testing word: poll ---
+
+--- Transcribing: [poll] ---
+poll            -> [pɔL]
+
+--- Testing word: trom ---
+
+--- Transcribing: [trom] ---
+trom            -> [trɔm]
+
+--- Testing word: corr ---
+
+--- Transcribing: [corr] ---
+corr            -> [kɔR]
+
+--- Testing word: bord ---
+
+--- Transcribing: [bord] ---
+bord            -> [bɔrd]
+
+--- Testing word: tallann ---
+
+--- Transcribing: [tallann] ---
+tallann         -> [tɑLəN]
+
+--- Testing word: seanchas ---
+
+--- Transcribing: [seanchas] ---
+seanchas        -> [s'ɑnxəs]
+
+--- Testing word: im ---
+
+--- Transcribing: [im] ---
+im              -> [ˈiːm']
+
+--- Testing word: roinnt ---
+
+--- Transcribing: [roinnt] ---
+roinnt          -> [rəiN't']
+
+--- Testing word: caill ---
+
+--- Transcribing: [caill] ---
+caill           -> [k'ɑːL']
+
+--- Testing word: coill ---
+
+--- Transcribing: [coill] ---
+coill           -> [kəiL']
+
+--- Testing word: poinn ---
+
+--- Transcribing: [poinn] ---
+poinn           -> [pəiN']
+
+--- Testing word: cill ---
+
+--- Transcribing: [cill] ---
+cill            -> [k'iːL']
+
+--- Testing word: bainne ---
+
+--- Transcribing: [bainne] ---
+bainne          -> [b'aiN'i]
+
+--- Testing word: leabhar ---
+
+--- Transcribing: [leabhar] ---
+leabhar         -> [ləuər]
+
+--- Testing word: amhrán ---
+
+--- Transcribing: [amhrán] ---
+amhrán         -> [ˈəurrɑːn]
+
+--- Testing word: samhradh ---
+
+--- Transcribing: [samhradh] ---
+samhradh        -> [səurrə]
+
+--- Testing word: slaghdán ---
+
+--- Transcribing: [slaghdán] ---
+slaghdán       -> [sləidɑːn]
+
+--- Testing word: adhradh ---
+
+--- Transcribing: [adhradh] ---
+adhradh         -> [ˈəirə]
+
+--- Testing word: laghadh ---
+
+--- Transcribing: [laghadh] ---
+laghadh         -> [ləiə]
+
+--- Testing word: feabhas ---
+
+--- Transcribing: [feabhas] ---
+feabhas         -> [f'əuəs]
+
+--- Testing word: ghabh ---
+
+--- Transcribing: [ghabh] ---
+ghabh           -> [ɣəu]
+
+--- Testing word: damhsa ---
+
+--- Transcribing: [damhsa] ---
+damhsa          -> [dəuəə]
+
+--- Testing word: deifir ---
+
+--- Transcribing: [deifir] ---
+deifir          -> [d'ef'ir']
+
+--- Testing word: nimhe ---
+
+--- Transcribing: [nimhe] ---
+nimhe           -> [niː]
+
+--- Testing word: suidhe ---
+
+--- Transcribing: [suidhe] ---
+suidhe          -> [siː]
+
+--- Testing word: beidh ---
+
+--- Transcribing: [beidh] ---
+beidh           -> [b'ai]
+
+--- Testing word: lae ---
+
+--- Transcribing: [lae] ---
+lae             -> [leː]
+
+--- Testing word: scadán ---
+
+--- Transcribing: [scadán] ---
+scadán         -> [skʊdɑːn]
+
+--- Testing word: cailín ---
+
+--- Transcribing: [cailín] ---
+cailín         -> [k'ɪl'iːn]
+
+--- Testing word: soláthar ---
+
+--- Transcribing: [soláthar] ---
+soláthar       -> [sɔlɑːhər]
+
+--- Testing word: bacán ---
+
+--- Transcribing: [bacán] ---
+bacán          -> [bʊkɑːn]
+
+--- Testing word: fuinneog ---
+
+--- Transcribing: [fuinneog] ---
+fuinneog        -> [fɪN'oːg]
+
+--- Testing word: oileán ---
+
+--- Transcribing: [oileán] ---
+oileán         -> [ˈɔləɑːn]
+
+--- Testing word: fear ---
+
+--- Transcribing: [fear] ---
+fear            -> [f'ɑːr']
+
+--- Testing word: geal ---
+
+--- Transcribing: [geal] ---
+geal            -> [g'ɑl]
+
+--- Testing word: bean ---
+
+--- Transcribing: [bean] ---
+bean            -> [b'ɑn]
+
+--- Testing word: teach ---
+
+--- Transcribing: [teach] ---
+teach           -> [t'æx]
+
+--- Testing word: leaba ---
+
+--- Transcribing: [leaba] ---
+leaba           -> [lɑbə]
+
+--- Testing word: seacht ---
+
+--- Transcribing: [seacht] ---
+seacht          -> [s'ɑxt]

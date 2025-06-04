@@ -1,0 +1,26 @@
+﻿
+--- Running Focused Test Set for Connacht (Iteration 37DE - EA Refinement) ---
+
+--- Testing word: ceann ---
+
+--- Transcribing: [ceann] ---
+ceann           -> [k'ɑnˠ]
+
+--- Testing word: am ---
+
+--- Transcribing: [am] ---
+am              -> [ˈɑm]
+
+--- Testing word: fonn ---
+
+--- Transcribing: [fonn] ---
+fonn            -> [fɔnˠ]
+
+--- Testing word: poll ---
+
+--- Transcribing: [poll] ---
+poll            -> [pɔlˠ]
+
+--- Testing word: trom ---
+
+--- Transcribing: [trom] ---

@@ -1,0 +1,1057 @@
+﻿
+--- Running Focused Test Set for Connacht (Iteration 37J - CSV Targets) ---
+
+--- Testing word: ceann ---
+
+--- Transcribing: [ceann] ---
+  PreProcess START: In=	ceann
+  PreProcess END: Out=	ceann
+  MarkDigraphsAndVocalisationTriggers START: In=	ceann
+  MarkDigraphsAndVocalisationTriggers END: Out=	cea_NN_TAG_
+Af. MarkDigraphsAndVocalisationTriggers: [cea_NN_TAG_]
+  ConsonantResolution START (Proc): In=	cea_NN_TAG_
+  ConsonantResolution END (Proc): Out=	k'eaN_STRONG_BROAD
+Af. ConsonantResolution: [k'eaN_STRONG_BROAD]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	k'eaN_STRONG_BROAD
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	k'&EA_BROAD_PRE_NN_TAG&N_STRONG_BROAD
+Af. Stage4_0_SpecificOrthoToTempMarker: [k'&EA_BROAD_PRE_NN_TAG&N_STRONG_BROAD]
+  Stage4_0_1_Resolve_CH_Marker START: In=	k'&EA_BROAD_PRE_NN_TAG&N_STRONG_BROAD
+  Stage4_0_1_Resolve_CH_Marker END: Out=	k'&EA_BROAD_PRE_NN_TAG&N_STRONG_BROAD
+Af. Stage4_0_1_Resolve_CH_Marker: [k'&EA_BROAD_PRE_NN_TAG&N_STRONG_BROAD]
+  Stage4_1_VocmarkToTempMarker START: In=	k'&EA_BROAD_PRE_NN_TAG&N_STRONG_BROAD
+  Stage4_1_VocmarkToTempMarker END: Out=	k'&EA_BROAD_PRE_NN_TAG&N_STRONG_BROAD
+Af. Stage4_1_VocmarkToTempMarker: [k'&EA_BROAD_PRE_NN_TAG&N_STRONG_BROAD]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	k'&EA_BROAD_PRE_NN_TAG&N_STRONG_BROAD
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	k'&EA_BROAD_PRE_NN_TAG&N_STRONG_BROAD
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [k'&EA_BROAD_PRE_NN_TAG&N_STRONG_BROAD]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	k'&EA_BROAD_PRE_NN_TAG&N_STRONG_BROAD
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	k'&EA_BROAD_PRE_NN_TAG&N_STRONG_BROAD
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [k'&EA_BROAD_PRE_NN_TAG&N_STRONG_BROAD]
+  Stage4_4_ResolveTempVowelMarkers START: In=	k'&EA_BROAD_PRE_NN_TAG&N_STRONG_BROAD
+  Stage4_4_ResolveTempVowelMarkers END: Out=	k'aN_STRONG_BROAD
+Af. Stage4_4_ResolveTempVowelMarkers: [k'aN_STRONG_BROAD]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	k'aN_STRONG_BROAD
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	k'aN_STRONG_BROAD
+Af. Stage4_4_1_VocalizeLenitedFricatives: [k'aN_STRONG_BROAD]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	k'aN_STRONG_BROAD
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	k'ɑN_STRONG_BROAD
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [k'ɑN_STRONG_BROAD]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	k'ɑN_STRONG_BROAD
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	k'ɑN_STRONG_BROAD
+Af. Stage4_5_1_DisyllabicShortLongRaising: [k'ɑN_STRONG_BROAD]
+  Nasalization START (Proc Helper): In=	k'ɑN_STRONG_BROAD
+  Nasalization END (no change by unit_processor): Out=	k'ɑN_STRONG_BROAD
+Af. Nasalization: [k'ɑN_STRONG_BROAD]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	k'ɑN_STRONG_BROAD
+  Stage4_6_UnstressedVowelReduction_Procedural END (monosyllable): Out=	k'ɑN_STRONG_BROAD
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [k'ɑN_STRONG_BROAD]
+  EpenthesisAndStrongSonorants START (Proc): In=	k'ɑN_STRONG_BROAD
+  EpenthesisAndStrongSonorants END (Proc): Out=	k'ɑN_STRONG_BROAD
+Af. EpenthesisAndStrongSonorants: [k'ɑN_STRONG_BROAD]
+  Diacritics START: In=	k'ɑN_STRONG_BROAD
+  Diacritics END: Out=	k'ɑN_STRONG_BROAD
+Af. Diacritics: [k'ɑN_STRONG_BROAD]
+  FinalCleanup START: In=	k'ɑN_STRONG_BROAD
+  FinalCleanup END: Out=	cɑn̪ˠ
+Af. FinalCleanup: [cɑn̪ˠ]
+ceann           -> [cɑn̪ˠ]
+
+--- Testing word: am ---
+
+--- Transcribing: [am] ---
+  PreProcess START: In=	am
+  PreProcess END: Out=	am
+  MarkDigraphsAndVocalisationTriggers START: In=	am
+  MarkDigraphsAndVocalisationTriggers END: Out=	am
+Af. MarkDigraphsAndVocalisationTriggers: [am]
+  ConsonantResolution START (Proc): In=	am
+  ConsonantResolution END (Proc): Out=	am
+Af. ConsonantResolution: [am]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	am
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	am
+Af. Stage4_0_SpecificOrthoToTempMarker: [am]
+  Stage4_0_1_Resolve_CH_Marker START: In=	am
+  Stage4_0_1_Resolve_CH_Marker END: Out=	am
+Af. Stage4_0_1_Resolve_CH_Marker: [am]
+  Stage4_1_VocmarkToTempMarker START: In=	am
+  Stage4_1_VocmarkToTempMarker END: Out=	am
+Af. Stage4_1_VocmarkToTempMarker: [am]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	am
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	am
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [am]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	am
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	am
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [am]
+  Stage4_4_ResolveTempVowelMarkers START: In=	am
+  Stage4_4_ResolveTempVowelMarkers END: Out=	am
+Af. Stage4_4_ResolveTempVowelMarkers: [am]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	am
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	am
+Af. Stage4_4_1_VocalizeLenitedFricatives: [am]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	am
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	ɑm
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [ɑm]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	ɑm
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	ɑm
+Af. Stage4_5_1_DisyllabicShortLongRaising: [ɑm]
+  Nasalization START (Proc Helper): In=	ɑm
+  Nasalization END (no change by unit_processor): Out=	ɑm
+Af. Nasalization: [ɑm]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	ɑm
+  Stage4_6_UnstressedVowelReduction_Procedural END (monosyllable): Out=	ɑm
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [ɑm]
+  EpenthesisAndStrongSonorants START (Proc): In=	ɑm
+  EpenthesisAndStrongSonorants END (Proc): Out=	ɑm
+Af. EpenthesisAndStrongSonorants: [ɑm]
+  Diacritics START: In=	ɑm
+  Diacritics END: Out=	ɑmˠ
+Af. Diacritics: [ɑmˠ]
+  FinalCleanup START: In=	ɑmˠ
+  FinalCleanup END: Out=	ɑmˠ
+Af. FinalCleanup: [ɑmˠ]
+am              -> [ɑmˠ]
+
+--- Testing word: fonn ---
+
+--- Transcribing: [fonn] ---
+  PreProcess START: In=	fonn
+  PreProcess END: Out=	fonn
+  MarkDigraphsAndVocalisationTriggers START: In=	fonn
+  MarkDigraphsAndVocalisationTriggers END: Out=	fo_NN_TAG_
+Af. MarkDigraphsAndVocalisationTriggers: [fo_NN_TAG_]
+  ConsonantResolution START (Proc): In=	fo_NN_TAG_
+  ConsonantResolution END (Proc): Out=	foN_STRONG_BROAD
+Af. ConsonantResolution: [foN_STRONG_BROAD]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	foN_STRONG_BROAD
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	foN_STRONG_BROAD
+Af. Stage4_0_SpecificOrthoToTempMarker: [foN_STRONG_BROAD]
+  Stage4_0_1_Resolve_CH_Marker START: In=	foN_STRONG_BROAD
+  Stage4_0_1_Resolve_CH_Marker END: Out=	foN_STRONG_BROAD
+Af. Stage4_0_1_Resolve_CH_Marker: [foN_STRONG_BROAD]
+  Stage4_1_VocmarkToTempMarker START: In=	foN_STRONG_BROAD
+  Stage4_1_VocmarkToTempMarker END: Out=	foN_STRONG_BROAD
+Af. Stage4_1_VocmarkToTempMarker: [foN_STRONG_BROAD]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	foN_STRONG_BROAD
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	foN_STRONG_BROAD
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [foN_STRONG_BROAD]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	foN_STRONG_BROAD
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	foN_STRONG_BROAD
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [foN_STRONG_BROAD]
+  Stage4_4_ResolveTempVowelMarkers START: In=	foN_STRONG_BROAD
+  Stage4_4_ResolveTempVowelMarkers END: Out=	foN_STRONG_BROAD
+Af. Stage4_4_ResolveTempVowelMarkers: [foN_STRONG_BROAD]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	foN_STRONG_BROAD
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	foN_STRONG_BROAD
+Af. Stage4_4_1_VocalizeLenitedFricatives: [foN_STRONG_BROAD]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	foN_STRONG_BROAD
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	fɔN_STRONG_BROAD
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [fɔN_STRONG_BROAD]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	fɔN_STRONG_BROAD
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	fɔN_STRONG_BROAD
+Af. Stage4_5_1_DisyllabicShortLongRaising: [fɔN_STRONG_BROAD]
+  Nasalization START (Proc Helper): In=	fɔN_STRONG_BROAD
+  Nasalization END (no change by unit_processor): Out=	fɔN_STRONG_BROAD
+Af. Nasalization: [fɔN_STRONG_BROAD]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	fɔN_STRONG_BROAD
+  Stage4_6_UnstressedVowelReduction_Procedural END (monosyllable): Out=	fɔN_STRONG_BROAD
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [fɔN_STRONG_BROAD]
+  EpenthesisAndStrongSonorants START (Proc): In=	fɔN_STRONG_BROAD
+  EpenthesisAndStrongSonorants END (Proc): Out=	fɔN_STRONG_BROAD
+Af. EpenthesisAndStrongSonorants: [fɔN_STRONG_BROAD]
+  Diacritics START: In=	fɔN_STRONG_BROAD
+  Diacritics END: Out=	fɔN_STRONG_BROAD
+Af. Diacritics: [fɔN_STRONG_BROAD]
+  FinalCleanup START: In=	fɔN_STRONG_BROAD
+  FinalCleanup END: Out=	fɔn̪ˠ
+Af. FinalCleanup: [fɔn̪ˠ]
+fonn            -> [fɔn̪ˠ]
+
+--- Testing word: poll ---
+
+--- Transcribing: [poll] ---
+  PreProcess START: In=	poll
+  PreProcess END: Out=	poll
+  MarkDigraphsAndVocalisationTriggers START: In=	poll
+  MarkDigraphsAndVocalisationTriggers END: Out=	po_LL_TAG_
+Af. MarkDigraphsAndVocalisationTriggers: [po_LL_TAG_]
+  ConsonantResolution START (Proc): In=	po_LL_TAG_
+  ConsonantResolution END (Proc): Out=	poL_STRONG_BROAD
+Af. ConsonantResolution: [poL_STRONG_BROAD]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	poL_STRONG_BROAD
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	poL_STRONG_BROAD
+Af. Stage4_0_SpecificOrthoToTempMarker: [poL_STRONG_BROAD]
+  Stage4_0_1_Resolve_CH_Marker START: In=	poL_STRONG_BROAD
+  Stage4_0_1_Resolve_CH_Marker END: Out=	poL_STRONG_BROAD
+Af. Stage4_0_1_Resolve_CH_Marker: [poL_STRONG_BROAD]
+  Stage4_1_VocmarkToTempMarker START: In=	poL_STRONG_BROAD
+  Stage4_1_VocmarkToTempMarker END: Out=	poL_STRONG_BROAD
+Af. Stage4_1_VocmarkToTempMarker: [poL_STRONG_BROAD]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	poL_STRONG_BROAD
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	poL_STRONG_BROAD
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [poL_STRONG_BROAD]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	poL_STRONG_BROAD
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	poL_STRONG_BROAD
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [poL_STRONG_BROAD]
+  Stage4_4_ResolveTempVowelMarkers START: In=	poL_STRONG_BROAD
+  Stage4_4_ResolveTempVowelMarkers END: Out=	poL_STRONG_BROAD
+Af. Stage4_4_ResolveTempVowelMarkers: [poL_STRONG_BROAD]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	poL_STRONG_BROAD
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	poL_STRONG_BROAD
+Af. Stage4_4_1_VocalizeLenitedFricatives: [poL_STRONG_BROAD]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	poL_STRONG_BROAD
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	pɔL_STRONG_BROAD
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [pɔL_STRONG_BROAD]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	pɔL_STRONG_BROAD
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	pɔL_STRONG_BROAD
+Af. Stage4_5_1_DisyllabicShortLongRaising: [pɔL_STRONG_BROAD]
+  Nasalization START (Proc Helper): In=	pɔL_STRONG_BROAD
+  Nasalization END (no change by unit_processor): Out=	pɔL_STRONG_BROAD
+Af. Nasalization: [pɔL_STRONG_BROAD]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	pɔL_STRONG_BROAD
+  Stage4_6_UnstressedVowelReduction_Procedural END (monosyllable): Out=	pɔL_STRONG_BROAD
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [pɔL_STRONG_BROAD]
+  EpenthesisAndStrongSonorants START (Proc): In=	pɔL_STRONG_BROAD
+  EpenthesisAndStrongSonorants END (Proc): Out=	pɑuL_STRONG_BROAD
+Af. EpenthesisAndStrongSonorants: [pɑuL_STRONG_BROAD]
+  Diacritics START: In=	pɑuL_STRONG_BROAD
+  Diacritics END: Out=	pɑuL_STRONG_BROAD
+Af. Diacritics: [pɑuL_STRONG_BROAD]
+  FinalCleanup START: In=	pɑuL_STRONG_BROAD
+  FinalCleanup END: Out=	pɑul̪ˠ
+Af. FinalCleanup: [pɑul̪ˠ]
+poll            -> [pɑul̪ˠ]
+
+--- Testing word: trom ---
+
+--- Transcribing: [trom] ---
+  PreProcess START: In=	trom
+  PreProcess END: Out=	trom
+  MarkDigraphsAndVocalisationTriggers START: In=	trom
+  MarkDigraphsAndVocalisationTriggers END: Out=	trom
+Af. MarkDigraphsAndVocalisationTriggers: [trom]
+  ConsonantResolution START (Proc): In=	trom
+  ConsonantResolution END (Proc): Out=	trom
+Af. ConsonantResolution: [trom]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	trom
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	trom
+Af. Stage4_0_SpecificOrthoToTempMarker: [trom]
+  Stage4_0_1_Resolve_CH_Marker START: In=	trom
+  Stage4_0_1_Resolve_CH_Marker END: Out=	trom
+Af. Stage4_0_1_Resolve_CH_Marker: [trom]
+  Stage4_1_VocmarkToTempMarker START: In=	trom
+  Stage4_1_VocmarkToTempMarker END: Out=	trom
+Af. Stage4_1_VocmarkToTempMarker: [trom]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	trom
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	trom
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [trom]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	trom
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	trom
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [trom]
+  Stage4_4_ResolveTempVowelMarkers START: In=	trom
+  Stage4_4_ResolveTempVowelMarkers END: Out=	trom
+Af. Stage4_4_ResolveTempVowelMarkers: [trom]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	trom
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	trom
+Af. Stage4_4_1_VocalizeLenitedFricatives: [trom]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	trom
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	trɔm
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [trɔm]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	trɔm
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	trɔm
+Af. Stage4_5_1_DisyllabicShortLongRaising: [trɔm]
+  Nasalization START (Proc Helper): In=	trɔm
+  Nasalization END (no change by unit_processor): Out=	trɔm
+Af. Nasalization: [trɔm]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	trɔm
+  Stage4_6_UnstressedVowelReduction_Procedural END (monosyllable): Out=	trɔm
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [trɔm]
+  EpenthesisAndStrongSonorants START (Proc): In=	trɔm
+  EpenthesisAndStrongSonorants END (Proc): Out=	trɔm
+Af. EpenthesisAndStrongSonorants: [trɔm]
+  Diacritics START: In=	trɔm
+  Diacritics END: Out=	t̪rɔmˠ
+Af. Diacritics: [t̪rɔmˠ]
+  FinalCleanup START: In=	t̪rɔmˠ
+  FinalCleanup END: Out=	t̪rɔmˠ
+Af. FinalCleanup: [t̪rɔmˠ]
+trom            -> [t̪rɔmˠ]
+
+--- Testing word: corr ---
+
+--- Transcribing: [corr] ---
+  PreProcess START: In=	corr
+  PreProcess END: Out=	corr
+  MarkDigraphsAndVocalisationTriggers START: In=	corr
+  MarkDigraphsAndVocalisationTriggers END: Out=	co_RR_TAG_
+Af. MarkDigraphsAndVocalisationTriggers: [co_RR_TAG_]
+  ConsonantResolution START (Proc): In=	co_RR_TAG_
+  ConsonantResolution END (Proc): Out=	koR
+Af. ConsonantResolution: [koR]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	koR
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	koR
+Af. Stage4_0_SpecificOrthoToTempMarker: [koR]
+  Stage4_0_1_Resolve_CH_Marker START: In=	koR
+  Stage4_0_1_Resolve_CH_Marker END: Out=	koR
+Af. Stage4_0_1_Resolve_CH_Marker: [koR]
+  Stage4_1_VocmarkToTempMarker START: In=	koR
+  Stage4_1_VocmarkToTempMarker END: Out=	koR
+Af. Stage4_1_VocmarkToTempMarker: [koR]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	koR
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	koR
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [koR]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	koR
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	koR
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [koR]
+  Stage4_4_ResolveTempVowelMarkers START: In=	koR
+  Stage4_4_ResolveTempVowelMarkers END: Out=	koR
+Af. Stage4_4_ResolveTempVowelMarkers: [koR]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	koR
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	koR
+Af. Stage4_4_1_VocalizeLenitedFricatives: [koR]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	koR
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	kɔR
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [kɔR]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	kɔR
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	kɔR
+Af. Stage4_5_1_DisyllabicShortLongRaising: [kɔR]
+  Nasalization START (Proc Helper): In=	kɔR
+  Nasalization END (no change by unit_processor): Out=	kɔR
+Af. Nasalization: [kɔR]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	kɔR
+  Stage4_6_UnstressedVowelReduction_Procedural END (monosyllable): Out=	kɔR
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [kɔR]
+  EpenthesisAndStrongSonorants START (Proc): In=	kɔR
+  EpenthesisAndStrongSonorants END (Proc): Out=	kɔR
+Af. EpenthesisAndStrongSonorants: [kɔR]
+  Diacritics START: In=	kɔR
+  Diacritics END: Out=	kɔɾˠ
+Af. Diacritics: [kɔɾˠ]
+  FinalCleanup START: In=	kɔɾˠ
+  FinalCleanup END: Out=	kɔɾˠ
+Af. FinalCleanup: [kɔɾˠ]
+corr            -> [kɔɾˠ]
+
+--- Testing word: bord ---
+
+--- Transcribing: [bord] ---
+  PreProcess START: In=	bord
+  PreProcess END: Out=	bord
+  MarkDigraphsAndVocalisationTriggers START: In=	bord
+  MarkDigraphsAndVocalisationTriggers END: Out=	bord
+Af. MarkDigraphsAndVocalisationTriggers: [bord]
+  ConsonantResolution START (Proc): In=	bord
+  ConsonantResolution END (Proc): Out=	bord
+Af. ConsonantResolution: [bord]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	bord
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	bord
+Af. Stage4_0_SpecificOrthoToTempMarker: [bord]
+  Stage4_0_1_Resolve_CH_Marker START: In=	bord
+  Stage4_0_1_Resolve_CH_Marker END: Out=	bord
+Af. Stage4_0_1_Resolve_CH_Marker: [bord]
+  Stage4_1_VocmarkToTempMarker START: In=	bord
+  Stage4_1_VocmarkToTempMarker END: Out=	bord
+Af. Stage4_1_VocmarkToTempMarker: [bord]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	bord
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	bord
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [bord]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	bord
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	bord
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [bord]
+  Stage4_4_ResolveTempVowelMarkers START: In=	bord
+  Stage4_4_ResolveTempVowelMarkers END: Out=	bord
+Af. Stage4_4_ResolveTempVowelMarkers: [bord]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	bord
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	bord
+Af. Stage4_4_1_VocalizeLenitedFricatives: [bord]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	bord
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	bɔrd
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [bɔrd]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	bɔrd
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	bɔrd
+Af. Stage4_5_1_DisyllabicShortLongRaising: [bɔrd]
+  Nasalization START (Proc Helper): In=	bɔrd
+  Nasalization END (no change by unit_processor): Out=	bɔrd
+Af. Nasalization: [bɔrd]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	bɔrd
+  Stage4_6_UnstressedVowelReduction_Procedural END (monosyllable): Out=	bɔrd
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [bɔrd]
+  EpenthesisAndStrongSonorants START (Proc): In=	bɔrd
+  EpenthesisAndStrongSonorants END (Proc): Out=	bɔrd
+Af. EpenthesisAndStrongSonorants: [bɔrd]
+  Diacritics START: In=	bɔrd
+  Diacritics END: Out=	bɔɾˠd̪
+Af. Diacritics: [bɔɾˠd̪]
+  FinalCleanup START: In=	bɔɾˠd̪
+  FinalCleanup END: Out=	bɔɾˠd̪
+Af. FinalCleanup: [bɔɾˠd̪]
+bord            -> [bɔɾˠd̪]
+
+--- Testing word: im ---
+
+--- Transcribing: [im] ---
+  PreProcess START: In=	im
+  PreProcess END: Out=	im
+  MarkDigraphsAndVocalisationTriggers START: In=	im
+  MarkDigraphsAndVocalisationTriggers END: Out=	im
+Af. MarkDigraphsAndVocalisationTriggers: [im]
+  ConsonantResolution START (Proc): In=	im
+  ConsonantResolution END (Proc): Out=	im'
+Af. ConsonantResolution: [im']
+  Stage4_0_SpecificOrthoToTempMarker START: In=	im'
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	im'
+Af. Stage4_0_SpecificOrthoToTempMarker: [im']
+  Stage4_0_1_Resolve_CH_Marker START: In=	im'
+  Stage4_0_1_Resolve_CH_Marker END: Out=	im'
+Af. Stage4_0_1_Resolve_CH_Marker: [im']
+  Stage4_1_VocmarkToTempMarker START: In=	im'
+  Stage4_1_VocmarkToTempMarker END: Out=	im'
+Af. Stage4_1_VocmarkToTempMarker: [im']
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	im'
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	im'
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [im']
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	im'
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	im'
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [im']
+  Stage4_4_ResolveTempVowelMarkers START: In=	im'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	im'
+Af. Stage4_4_ResolveTempVowelMarkers: [im']
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	im'
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	im'
+Af. Stage4_4_1_VocalizeLenitedFricatives: [im']
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	im'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	ɪm'
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [ɪm']
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	ɪm'
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	ɪm'
+Af. Stage4_5_1_DisyllabicShortLongRaising: [ɪm']
+  Nasalization START (Proc Helper): In=	ɪm'
+  Nasalization END (no change by unit_processor): Out=	ɪm'
+Af. Nasalization: [ɪm']
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	ɪm'
+  Stage4_6_UnstressedVowelReduction_Procedural END (monosyllable): Out=	ɪm'
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [ɪm']
+  EpenthesisAndStrongSonorants START (Proc): In=	ɪm'
+  EpenthesisAndStrongSonorants END (Proc): Out=	iːm'
+Af. EpenthesisAndStrongSonorants: [iːm']
+  Diacritics START: In=	iːm'
+  Diacritics END: Out=	iːm'
+Af. Diacritics: [iːm']
+  FinalCleanup START: In=	iːm'
+  FinalCleanup END: Out=	iːmʲ
+Af. FinalCleanup: [iːmʲ]
+im              -> [iːmʲ]
+
+--- Testing word: roinnt ---
+
+--- Transcribing: [roinnt] ---
+  PreProcess START: In=	roinnt
+  PreProcess END: Out=	roinnt
+  MarkDigraphsAndVocalisationTriggers START: In=	roinnt
+  MarkDigraphsAndVocalisationTriggers END: Out=	roi_NN_TAG_t
+Af. MarkDigraphsAndVocalisationTriggers: [roi_NN_TAG_t]
+  ConsonantResolution START (Proc): In=	roi_NN_TAG_t
+  ConsonantResolution END (Proc): Out=	roiN'_STRON'G_PALt
+Af. ConsonantResolution: [roiN'_STRON'G_PALt]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	roiN'_STRON'G_PALt
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	roiN'_STRON'G_PALt
+Af. Stage4_0_SpecificOrthoToTempMarker: [roiN'_STRON'G_PALt]
+  Stage4_0_1_Resolve_CH_Marker START: In=	roiN'_STRON'G_PALt
+  Stage4_0_1_Resolve_CH_Marker END: Out=	roiN'_STRON'G_PALt
+Af. Stage4_0_1_Resolve_CH_Marker: [roiN'_STRON'G_PALt]
+  Stage4_1_VocmarkToTempMarker START: In=	roiN'_STRON'G_PALt
+  Stage4_1_VocmarkToTempMarker END: Out=	roiN'_STRON'G_PALt
+Af. Stage4_1_VocmarkToTempMarker: [roiN'_STRON'G_PALt]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	roiN'_STRON'G_PALt
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	roiN'_STRON'G_PALt
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [roiN'_STRON'G_PALt]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	roiN'_STRON'G_PALt
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	r&OI_DIPH_TAG&N'_STRON'G_PALt
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [r&OI_DIPH_TAG&N'_STRON'G_PALt]
+  Stage4_4_ResolveTempVowelMarkers START: In=	r&OI_DIPH_TAG&N'_STRON'G_PALt
+  Stage4_4_ResolveTempVowelMarkers END: Out=	rɛN'_STRON'G_PALt
+Af. Stage4_4_ResolveTempVowelMarkers: [rɛN'_STRON'G_PALt]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	rɛN'_STRON'G_PALt
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	rɛN'_STRON'G_PALt
+Af. Stage4_4_1_VocalizeLenitedFricatives: [rɛN'_STRON'G_PALt]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	rɛN'_STRON'G_PALt
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	rɛN'_STRON'G_PALt
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [rɛN'_STRON'G_PALt]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	rɛN'_STRON'G_PALt
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	rɛN'_STRON'G_PALt
+Af. Stage4_5_1_DisyllabicShortLongRaising: [rɛN'_STRON'G_PALt]
+  Nasalization START (Proc Helper): In=	rɛN'_STRON'G_PALt
+  Nasalization END (no change by unit_processor): Out=	rɛN'_STRON'G_PALt
+Af. Nasalization: [rɛN'_STRON'G_PALt]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	rɛN'_STRON'G_PALt
+  Stage4_6_UnstressedVowelReduction_Procedural END (monosyllable): Out=	rɛN'_STRON'G_PALt
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [rɛN'_STRON'G_PALt]
+  EpenthesisAndStrongSonorants START (Proc): In=	rɛN'_STRON'G_PALt
+  EpenthesisAndStrongSonorants END (Proc): Out=	rɛN'_STRON'G_PALt
+Af. EpenthesisAndStrongSonorants: [rɛN'_STRON'G_PALt]
+  Diacritics START: In=	rɛN'_STRON'G_PALt
+  Diacritics END: Out=	rɛN'_STRON'G_PALt̪
+Af. Diacritics: [rɛN'_STRON'G_PALt̪]
+  FinalCleanup START: In=	rɛN'_STRON'G_PALt̪
+  FinalCleanup END: Out=	rɛnˠ'_STɾˠOnˠ'G_PAlˠt̪
+Af. FinalCleanup: [rɛnˠ'_STɾˠOnˠ'G_PAlˠt̪]
+roinnt          -> [rɛnˠ'_STɾˠOnˠ'G_PAlˠt̪]
+
+--- Testing word: caill ---
+
+--- Transcribing: [caill] ---
+  PreProcess START: In=	caill
+  PreProcess END: Out=	caill
+  MarkDigraphsAndVocalisationTriggers START: In=	caill
+  MarkDigraphsAndVocalisationTriggers END: Out=	cai_LL_TAG_
+Af. MarkDigraphsAndVocalisationTriggers: [cai_LL_TAG_]
+  ConsonantResolution START (Proc): In=	cai_LL_TAG_
+  ConsonantResolution END (Proc): Out=	k'aiL'_STRON'G_PAL
+Af. ConsonantResolution: [k'aiL'_STRON'G_PAL]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	k'aiL'_STRON'G_PAL
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	k'aiL'_STRON'G_PAL
+Af. Stage4_0_SpecificOrthoToTempMarker: [k'aiL'_STRON'G_PAL]
+  Stage4_0_1_Resolve_CH_Marker START: In=	k'aiL'_STRON'G_PAL
+  Stage4_0_1_Resolve_CH_Marker END: Out=	k'aiL'_STRON'G_PAL
+Af. Stage4_0_1_Resolve_CH_Marker: [k'aiL'_STRON'G_PAL]
+  Stage4_1_VocmarkToTempMarker START: In=	k'aiL'_STRON'G_PAL
+  Stage4_1_VocmarkToTempMarker END: Out=	k'aiL'_STRON'G_PAL
+Af. Stage4_1_VocmarkToTempMarker: [k'aiL'_STRON'G_PAL]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	k'aiL'_STRON'G_PAL
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	k'aiL'_STRON'G_PAL
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [k'aiL'_STRON'G_PAL]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	k'aiL'_STRON'G_PAL
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	k'&AI_DIPH_TAG&L'_STRON'G_PAL
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [k'&AI_DIPH_TAG&L'_STRON'G_PAL]
+  Stage4_4_ResolveTempVowelMarkers START: In=	k'&AI_DIPH_TAG&L'_STRON'G_PAL
+  Stage4_4_ResolveTempVowelMarkers END: Out=	k'aiL'_STRON'G_PAL
+Af. Stage4_4_ResolveTempVowelMarkers: [k'aiL'_STRON'G_PAL]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	k'aiL'_STRON'G_PAL
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	k'aiL'_STRON'G_PAL
+Af. Stage4_4_1_VocalizeLenitedFricatives: [k'aiL'_STRON'G_PAL]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	k'aiL'_STRON'G_PAL
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	k'aiL'_STRON'G_PAL
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [k'aiL'_STRON'G_PAL]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	k'aiL'_STRON'G_PAL
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	k'aiL'_STRON'G_PAL
+Af. Stage4_5_1_DisyllabicShortLongRaising: [k'aiL'_STRON'G_PAL]
+  Nasalization START (Proc Helper): In=	k'aiL'_STRON'G_PAL
+  Nasalization END (no change by unit_processor): Out=	k'aiL'_STRON'G_PAL
+Af. Nasalization: [k'aiL'_STRON'G_PAL]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	k'aiL'_STRON'G_PAL
+  Stage4_6_UnstressedVowelReduction_Procedural END (monosyllable): Out=	k'aiL'_STRON'G_PAL
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [k'aiL'_STRON'G_PAL]
+  EpenthesisAndStrongSonorants START (Proc): In=	k'aiL'_STRON'G_PAL
+  EpenthesisAndStrongSonorants END (Proc): Out=	k'aiL'_STRON'G_PAL
+Af. EpenthesisAndStrongSonorants: [k'aiL'_STRON'G_PAL]
+  Diacritics START: In=	k'aiL'_STRON'G_PAL
+  Diacritics END: Out=	k'aiL'_STRON'G_PAL
+Af. Diacritics: [k'aiL'_STRON'G_PAL]
+  FinalCleanup START: In=	k'aiL'_STRON'G_PAL
+  FinalCleanup END: Out=	cailˠ'_STɾˠOnˠ'G_PAlˠ
+Af. FinalCleanup: [cailˠ'_STɾˠOnˠ'G_PAlˠ]
+caill           -> [cailˠ'_STɾˠOnˠ'G_PAlˠ]
+
+--- Testing word: coill ---
+
+--- Transcribing: [coill] ---
+  PreProcess START: In=	coill
+  PreProcess END: Out=	coill
+  MarkDigraphsAndVocalisationTriggers START: In=	coill
+  MarkDigraphsAndVocalisationTriggers END: Out=	coi_LL_TAG_
+Af. MarkDigraphsAndVocalisationTriggers: [coi_LL_TAG_]
+  ConsonantResolution START (Proc): In=	coi_LL_TAG_
+  ConsonantResolution END (Proc): Out=	k'oiL'_STRON'G_PAL
+Af. ConsonantResolution: [k'oiL'_STRON'G_PAL]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	k'oiL'_STRON'G_PAL
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	k'oiL'_STRON'G_PAL
+Af. Stage4_0_SpecificOrthoToTempMarker: [k'oiL'_STRON'G_PAL]
+  Stage4_0_1_Resolve_CH_Marker START: In=	k'oiL'_STRON'G_PAL
+  Stage4_0_1_Resolve_CH_Marker END: Out=	k'oiL'_STRON'G_PAL
+Af. Stage4_0_1_Resolve_CH_Marker: [k'oiL'_STRON'G_PAL]
+  Stage4_1_VocmarkToTempMarker START: In=	k'oiL'_STRON'G_PAL
+  Stage4_1_VocmarkToTempMarker END: Out=	k'oiL'_STRON'G_PAL
+Af. Stage4_1_VocmarkToTempMarker: [k'oiL'_STRON'G_PAL]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	k'oiL'_STRON'G_PAL
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	k'oiL'_STRON'G_PAL
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [k'oiL'_STRON'G_PAL]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	k'oiL'_STRON'G_PAL
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	k'&OI_DIPH_TAG&L'_STRON'G_PAL
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [k'&OI_DIPH_TAG&L'_STRON'G_PAL]
+  Stage4_4_ResolveTempVowelMarkers START: In=	k'&OI_DIPH_TAG&L'_STRON'G_PAL
+  Stage4_4_ResolveTempVowelMarkers END: Out=	k'ɛL'_STRON'G_PAL
+Af. Stage4_4_ResolveTempVowelMarkers: [k'ɛL'_STRON'G_PAL]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	k'ɛL'_STRON'G_PAL
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	k'ɛL'_STRON'G_PAL
+Af. Stage4_4_1_VocalizeLenitedFricatives: [k'ɛL'_STRON'G_PAL]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	k'ɛL'_STRON'G_PAL
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	k'ɛL'_STRON'G_PAL
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [k'ɛL'_STRON'G_PAL]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	k'ɛL'_STRON'G_PAL
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	k'ɛL'_STRON'G_PAL
+Af. Stage4_5_1_DisyllabicShortLongRaising: [k'ɛL'_STRON'G_PAL]
+  Nasalization START (Proc Helper): In=	k'ɛL'_STRON'G_PAL
+  Nasalization END (no change by unit_processor): Out=	k'ɛL'_STRON'G_PAL
+Af. Nasalization: [k'ɛL'_STRON'G_PAL]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	k'ɛL'_STRON'G_PAL
+  Stage4_6_UnstressedVowelReduction_Procedural END (monosyllable): Out=	k'ɛL'_STRON'G_PAL
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [k'ɛL'_STRON'G_PAL]
+  EpenthesisAndStrongSonorants START (Proc): In=	k'ɛL'_STRON'G_PAL
+  EpenthesisAndStrongSonorants END (Proc): Out=	k'ɛL'_STRON'G_PAL
+Af. EpenthesisAndStrongSonorants: [k'ɛL'_STRON'G_PAL]
+  Diacritics START: In=	k'ɛL'_STRON'G_PAL
+  Diacritics END: Out=	k'ɛL'_STRON'G_PAL
+Af. Diacritics: [k'ɛL'_STRON'G_PAL]
+  FinalCleanup START: In=	k'ɛL'_STRON'G_PAL
+  FinalCleanup END: Out=	cɛlˠ'_STɾˠOnˠ'G_PAlˠ
+Af. FinalCleanup: [cɛlˠ'_STɾˠOnˠ'G_PAlˠ]
+coill           -> [cɛlˠ'_STɾˠOnˠ'G_PAlˠ]
+
+--- Testing word: cill ---
+
+--- Transcribing: [cill] ---
+  PreProcess START: In=	cill
+  PreProcess END: Out=	cill
+  MarkDigraphsAndVocalisationTriggers START: In=	cill
+  MarkDigraphsAndVocalisationTriggers END: Out=	ci_LL_TAG_
+Af. MarkDigraphsAndVocalisationTriggers: [ci_LL_TAG_]
+  ConsonantResolution START (Proc): In=	ci_LL_TAG_
+  ConsonantResolution END (Proc): Out=	k'iL'_STRON'G_PAL
+Af. ConsonantResolution: [k'iL'_STRON'G_PAL]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	k'iL'_STRON'G_PAL
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	k'iL'_STRON'G_PAL
+Af. Stage4_0_SpecificOrthoToTempMarker: [k'iL'_STRON'G_PAL]
+  Stage4_0_1_Resolve_CH_Marker START: In=	k'iL'_STRON'G_PAL
+  Stage4_0_1_Resolve_CH_Marker END: Out=	k'iL'_STRON'G_PAL
+Af. Stage4_0_1_Resolve_CH_Marker: [k'iL'_STRON'G_PAL]
+  Stage4_1_VocmarkToTempMarker START: In=	k'iL'_STRON'G_PAL
+  Stage4_1_VocmarkToTempMarker END: Out=	k'iL'_STRON'G_PAL
+Af. Stage4_1_VocmarkToTempMarker: [k'iL'_STRON'G_PAL]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	k'iL'_STRON'G_PAL
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	k'iL'_STRON'G_PAL
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [k'iL'_STRON'G_PAL]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	k'iL'_STRON'G_PAL
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	k'iL'_STRON'G_PAL
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [k'iL'_STRON'G_PAL]
+  Stage4_4_ResolveTempVowelMarkers START: In=	k'iL'_STRON'G_PAL
+  Stage4_4_ResolveTempVowelMarkers END: Out=	k'iL'_STRON'G_PAL
+Af. Stage4_4_ResolveTempVowelMarkers: [k'iL'_STRON'G_PAL]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	k'iL'_STRON'G_PAL
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	k'iL'_STRON'G_PAL
+Af. Stage4_4_1_VocalizeLenitedFricatives: [k'iL'_STRON'G_PAL]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	k'iL'_STRON'G_PAL
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	k'ɪL'_STRON'G_PAL
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [k'ɪL'_STRON'G_PAL]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	k'ɪL'_STRON'G_PAL
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	k'ɪL'_STRON'G_PAL
+Af. Stage4_5_1_DisyllabicShortLongRaising: [k'ɪL'_STRON'G_PAL]
+  Nasalization START (Proc Helper): In=	k'ɪL'_STRON'G_PAL
+  Nasalization END (no change by unit_processor): Out=	k'ɪL'_STRON'G_PAL
+Af. Nasalization: [k'ɪL'_STRON'G_PAL]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	k'ɪL'_STRON'G_PAL
+  Stage4_6_UnstressedVowelReduction_Procedural END (monosyllable): Out=	k'ɪL'_STRON'G_PAL
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [k'ɪL'_STRON'G_PAL]
+  EpenthesisAndStrongSonorants START (Proc): In=	k'ɪL'_STRON'G_PAL
+  EpenthesisAndStrongSonorants END (Proc): Out=	k'ɪL'_STRON'G_PAL
+Af. EpenthesisAndStrongSonorants: [k'ɪL'_STRON'G_PAL]
+  Diacritics START: In=	k'ɪL'_STRON'G_PAL
+  Diacritics END: Out=	k'ɪL'_STRON'G_PAL
+Af. Diacritics: [k'ɪL'_STRON'G_PAL]
+  FinalCleanup START: In=	k'ɪL'_STRON'G_PAL
+  FinalCleanup END: Out=	cɪlˠ'_STɾˠOnˠ'G_PAlˠ
+Af. FinalCleanup: [cɪlˠ'_STɾˠOnˠ'G_PAlˠ]
+cill            -> [cɪlˠ'_STɾˠOnˠ'G_PAlˠ]
+
+--- Testing word: nimhe ---
+
+--- Transcribing: [nimhe] ---
+  PreProcess START: In=	nimhe
+  PreProcess END: Out=	nimhe
+  MarkDigraphsAndVocalisationTriggers START: In=	nimhe
+  MarkDigraphsAndVocalisationTriggers END: Out=	n&I_VOC_M_MEDIAL_E_FINAL_TAG&e
+Af. MarkDigraphsAndVocalisationTriggers: [n&I_VOC_M_MEDIAL_E_FINAL_TAG&e]
+  ConsonantResolution START (Proc): In=	n&I_VOC_M_MEDIAL_E_FINAL_TAG&e
+  ConsonantResolution END (Proc): Out=	n&I_VOC_M_MEDIAL_E_FINAL_TAG&e
+Af. ConsonantResolution: [n&I_VOC_M_MEDIAL_E_FINAL_TAG&e]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	n&I_VOC_M_MEDIAL_E_FINAL_TAG&e
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	n&I_VOC_M_MEDIAL_E_FINAL_TAG&e
+Af. Stage4_0_SpecificOrthoToTempMarker: [n&I_VOC_M_MEDIAL_E_FINAL_TAG&e]
+  Stage4_0_1_Resolve_CH_Marker START: In=	n&I_VOC_M_MEDIAL_E_FINAL_TAG&e
+  Stage4_0_1_Resolve_CH_Marker END: Out=	n&I_VOC_M_MEDIAL_E_FINAL_TAG&e
+Af. Stage4_0_1_Resolve_CH_Marker: [n&I_VOC_M_MEDIAL_E_FINAL_TAG&e]
+  Stage4_1_VocmarkToTempMarker START: In=	n&I_VOC_M_MEDIAL_E_FINAL_TAG&e
+  Stage4_1_VocmarkToTempMarker END: Out=	n&I_VOC_M_MEDIAL_E_FINAL_TAG&e
+Af. Stage4_1_VocmarkToTempMarker: [n&I_VOC_M_MEDIAL_E_FINAL_TAG&e]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	n&I_VOC_M_MEDIAL_E_FINAL_TAG&e
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	n&I_VOC_M_MEDIAL_E_FINAL_TAG&e
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [n&I_VOC_M_MEDIAL_E_FINAL_TAG&e]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	n&I_VOC_M_MEDIAL_E_FINAL_TAG&e
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	n&I_VOC_M_MEDIAL_E_FINAL_TAG&e
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [n&I_VOC_M_MEDIAL_E_FINAL_TAG&e]
+  Stage4_4_ResolveTempVowelMarkers START: In=	n&I_VOC_M_MEDIAL_E_FINAL_TAG&e
+  Stage4_4_ResolveTempVowelMarkers END: Out=	nɪv'e
+Af. Stage4_4_ResolveTempVowelMarkers: [nɪv'e]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	nɪv'e
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	nɪv'e
+Af. Stage4_4_1_VocalizeLenitedFricatives: [nɪv'e]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	nɪv'e
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	nɪv'ɛ
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [nɪv'ɛ]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	nɪv'ɛ
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	nɪv'ɛ
+Af. Stage4_5_1_DisyllabicShortLongRaising: [nɪv'ɛ]
+  Nasalization START (Proc Helper): In=	nɪv'ɛ
+  Nasalization END (no change by unit_processor): Out=	nɪv'ɛ
+Af. Nasalization: [nɪv'ɛ]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	nɪv'ɛ
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc Helper): In=	nɪv'ɛ
+  Stage4_6_UnstressedVowelReduction_Procedural END (modified by unit_processor): Out=	nɪv'i
+  Stage4_6_UnstressedVowelReduction_Procedural END (Outer): Out=	nɪv'i
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [nɪv'i]
+  EpenthesisAndStrongSonorants START (Proc): In=	nɪv'i
+  EpenthesisAndStrongSonorants END (Proc): Out=	nɪv'i
+Af. EpenthesisAndStrongSonorants: [nɪv'i]
+  Diacritics START: In=	nɪv'i
+  Diacritics END: Out=	nɪv'i
+Af. Diacritics: [nɪv'i]
+  FinalCleanup START: In=	nɪv'i
+  FinalCleanup END: Out=	nɪvʲi
+Af. FinalCleanup: [nɪvʲi]
+nimhe           -> [nɪvʲi]
+
+--- Testing word: suidhe ---
+
+--- Transcribing: [suidhe] ---
+  PreProcess START: In=	suidhe
+  PreProcess END: Out=	suidhe
+  MarkDigraphsAndVocalisationTriggers START: In=	suidhe
+  MarkDigraphsAndVocalisationTriggers END: Out=	s&UI_VOC_D_MEDIAL_E_FINAL_TAG&e
+Af. MarkDigraphsAndVocalisationTriggers: [s&UI_VOC_D_MEDIAL_E_FINAL_TAG&e]
+  ConsonantResolution START (Proc): In=	s&UI_VOC_D_MEDIAL_E_FINAL_TAG&e
+  ConsonantResolution END (Proc): Out=	s&'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG&'e
+Af. ConsonantResolution: [s&'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG&'e]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	s&'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG&'e
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	s&'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG&'e
+Af. Stage4_0_SpecificOrthoToTempMarker: [s&'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG&'e]
+  Stage4_0_1_Resolve_CH_Marker START: In=	s&'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG&'e
+  Stage4_0_1_Resolve_CH_Marker END: Out=	s&'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG&'e
+Af. Stage4_0_1_Resolve_CH_Marker: [s&'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG&'e]
+  Stage4_1_VocmarkToTempMarker START: In=	s&'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG&'e
+  Stage4_1_VocmarkToTempMarker END: Out=	s&'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG&'e
+Af. Stage4_1_VocmarkToTempMarker: [s&'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG&'e]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	s&'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG&'e
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	s&'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG&'e
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [s&'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG&'e]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	s&'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG&'e
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	s&'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG&'e
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [s&'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG&'e]
+  Stage4_4_ResolveTempVowelMarkers START: In=	s&'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG&'e
+  Stage4_4_ResolveTempVowelMarkers END: Out=	s'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG'e
+Af. Stage4_4_ResolveTempVowelMarkers: [s'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG'e]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	s'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG'e
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	s'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG'e
+Af. Stage4_4_1_VocalizeLenitedFricatives: [s'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG'e]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	s'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG'e
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	s'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG'ɛ
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [s'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG'ɛ]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	s'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG'ɛ
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	s'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG'ɛ
+Af. Stage4_5_1_DisyllabicShortLongRaising: [s'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG'ɛ]
+  Nasalization START (Proc Helper): In=	s'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG'ɛ
+  Nasalization END (no change by unit_processor): Out=	s'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG'ɛ
+Af. Nasalization: [s'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG'ɛ]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	s'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG'ɛ
+  Stage4_6_UnstressedVowelReduction_Procedural END (monosyllable): Out=	s'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG'ɛ
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [s'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG'ɛ]
+  EpenthesisAndStrongSonorants START (Proc): In=	s'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG'ɛ
+  EpenthesisAndStrongSonorants END (Proc): Out=	s'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG'ɛ
+Af. EpenthesisAndStrongSonorants: [s'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG'ɛ]
+  Diacritics START: In=	s'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG'ɛ
+  Diacritics END: Out=	s'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG'ɛ
+Af. Diacritics: [s'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG'ɛ]
+  FinalCleanup START: In=	s'UI_VOC_D_MEDIAL'_E_FIN'AL'_TAG'ɛ
+  FinalCleanup END: Out=	ʃUI_VOC_D_mˠEDIAlˠ'_E_FInˠ'Alˠ'_TAG'ɛ
+Af. FinalCleanup: [ʃUI_VOC_D_mˠEDIAlˠ'_E_FInˠ'Alˠ'_TAG'ɛ]
+suidhe          -> [ʃUI_VOC_D_mˠEDIAlˠ'_E_FInˠ'Alˠ'_TAG'ɛ]
+
+--- Testing word: úsáideoirí ---
+
+--- Transcribing: [úsáideoirí] ---
+  PreProcess START: In=	úsáideoirí
+  PreProcess END: Out=	úsáideoirí
+  MarkDigraphsAndVocalisationTriggers START: In=	úsáideoirí
+  MarkDigraphsAndVocalisationTriggers END: Out=	úsáid&EOI_TRIGRAPH_O_LONG_TAG&rí
+Af. MarkDigraphsAndVocalisationTriggers: [úsáid&EOI_TRIGRAPH_O_LONG_TAG&rí]
+  ConsonantResolution START (Proc): In=	úsáid&EOI_TRIGRAPH_O_LONG_TAG&rí
+  ConsonantResolution END (Proc): Out=	úsáid'&'EOI_TRIGRAPH_O_L'ON'G_TAG&'r'í
+Af. ConsonantResolution: [úsáid'&'EOI_TRIGRAPH_O_L'ON'G_TAG&'r'í]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	úsáid'&'EOI_TRIGRAPH_O_L'ON'G_TAG&'r'í
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	úsáid'&'EOI_TRIGRAPH_O_L'ON'G_TAG&'r'í
+Af. Stage4_0_SpecificOrthoToTempMarker: [úsáid'&'EOI_TRIGRAPH_O_L'ON'G_TAG&'r'í]
+  Stage4_0_1_Resolve_CH_Marker START: In=	úsáid'&'EOI_TRIGRAPH_O_L'ON'G_TAG&'r'í
+  Stage4_0_1_Resolve_CH_Marker END: Out=	úsáid'&'EOI_TRIGRAPH_O_L'ON'G_TAG&'r'í
+Af. Stage4_0_1_Resolve_CH_Marker: [úsáid'&'EOI_TRIGRAPH_O_L'ON'G_TAG&'r'í]
+  Stage4_1_VocmarkToTempMarker START: In=	úsáid'&'EOI_TRIGRAPH_O_L'ON'G_TAG&'r'í
+  Stage4_1_VocmarkToTempMarker END: Out=	úsáid'&'EOI_TRIGRAPH_O_L'ON'G_TAG&'r'í
+Af. Stage4_1_VocmarkToTempMarker: [úsáid'&'EOI_TRIGRAPH_O_L'ON'G_TAG&'r'í]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	úsáid'&'EOI_TRIGRAPH_O_L'ON'G_TAG&'r'í
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	&U_ACUTE_LONG_TAG&s&A_ACUTE_LONG_TAG&id'&'EOI_TRIGRAPH_O_L'ON'G_TAG&'r'&I_ACUTE_LONG_TAG&
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [&U_ACUTE_LONG_TAG&s&A_ACUTE_LONG_TAG&id'&'EOI_TRIGRAPH_O_L'ON'G_TAG&'r'&I_ACUTE_LONG_TAG&]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	&U_ACUTE_LONG_TAG&s&A_ACUTE_LONG_TAG&id'&'EOI_TRIGRAPH_O_L'ON'G_TAG&'r'&I_ACUTE_LONG_TAG&
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	&U_ACUTE_LONG_TAG&s&A_ACUTE_LONG_TAG&id'&'EOI_TRIGRAPH_O_L'ON'G_TAG&'r'&I_ACUTE_LONG_TAG&
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [&U_ACUTE_LONG_TAG&s&A_ACUTE_LONG_TAG&id'&'EOI_TRIGRAPH_O_L'ON'G_TAG&'r'&I_ACUTE_LONG_TAG&]
+  Stage4_4_ResolveTempVowelMarkers START: In=	&U_ACUTE_LONG_TAG&s&A_ACUTE_LONG_TAG&id'&'EOI_TRIGRAPH_O_L'ON'G_TAG&'r'&I_ACUTE_LONG_TAG&
+  Stage4_4_ResolveTempVowelMarkers END: Out=	uːsɑːid''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː
+Af. Stage4_4_ResolveTempVowelMarkers: [uːsɑːid''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	uːsɑːid''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	uːsɑːid''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː
+Af. Stage4_4_1_VocalizeLenitedFricatives: [uːsɑːid''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	uːsɑːid''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	uːsɑːɪd''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [uːsɑːɪd''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	uːsɑːɪd''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	uːsɑːɪd''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː
+Af. Stage4_5_1_DisyllabicShortLongRaising: [uːsɑːɪd''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː]
+  Nasalization START (Proc Helper): In=	uːsɑːɪd''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː
+  Nasalization END (no change by unit_processor): Out=	uːsɑːɪd''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː
+Af. Nasalization: [uːsɑːɪd''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	uːsɑːɪd''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc Helper): In=	uːsɑːɪd''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː
+  Stage4_6_UnstressedVowelReduction_Procedural END (modified by unit_processor): Out=	uːsɑːid''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː
+  Stage4_6_UnstressedVowelReduction_Procedural END (Outer): Out=	uːsɑːid''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [uːsɑːid''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː]
+  EpenthesisAndStrongSonorants START (Proc): In=	uːsɑːid''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː
+  EpenthesisAndStrongSonorants END (Proc): Out=	uːsɑːid''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː
+Af. EpenthesisAndStrongSonorants: [uːsɑːid''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː]
+  Diacritics START: In=	uːsɑːid''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː
+  Diacritics END: Out=	uːsɑːid''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː
+Af. Diacritics: [uːsɑːid''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː]
+  FinalCleanup START: In=	uːsɑːid''EOI_TRIGRAPH_O_L'ON'G_TAG'r'iː
+  FinalCleanup END: Out=	uːsɑːidʲ'EOI_TɾˠIGɾˠAPH_O_lˠ'Onˠ'G_TAG'ɾʲiː
+Af. FinalCleanup: [uːsɑːidʲ'EOI_TɾˠIGɾˠAPH_O_lˠ'Onˠ'G_TAG'ɾʲiː]
+úsáideoirí   -> [uːsɑːidʲ'EOI_TɾˠIGɾˠAPH_O_lˠ'Onˠ'G_TAG'ɾʲiː]
+
+--- Testing word: bainne ---
+
+--- Transcribing: [bainne] ---
+  PreProcess START: In=	bainne
+  PreProcess END: Out=	bainne
+  MarkDigraphsAndVocalisationTriggers START: In=	bainne
+  MarkDigraphsAndVocalisationTriggers END: Out=	bai_NN_TAG_e
+Af. MarkDigraphsAndVocalisationTriggers: [bai_NN_TAG_e]
+  ConsonantResolution START (Proc): In=	bai_NN_TAG_e
+  ConsonantResolution END (Proc): Out=	baiN'_STRON'G_PALe
+Af. ConsonantResolution: [baiN'_STRON'G_PALe]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	baiN'_STRON'G_PALe
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	baiN'_STRON'G_PALe
+Af. Stage4_0_SpecificOrthoToTempMarker: [baiN'_STRON'G_PALe]
+  Stage4_0_1_Resolve_CH_Marker START: In=	baiN'_STRON'G_PALe
+  Stage4_0_1_Resolve_CH_Marker END: Out=	baiN'_STRON'G_PALe
+Af. Stage4_0_1_Resolve_CH_Marker: [baiN'_STRON'G_PALe]
+  Stage4_1_VocmarkToTempMarker START: In=	baiN'_STRON'G_PALe
+  Stage4_1_VocmarkToTempMarker END: Out=	baiN'_STRON'G_PALe
+Af. Stage4_1_VocmarkToTempMarker: [baiN'_STRON'G_PALe]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	baiN'_STRON'G_PALe
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	baiN'_STRON'G_PALe
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [baiN'_STRON'G_PALe]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	baiN'_STRON'G_PALe
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	b&AI_DIPH_TAG&N'_STRON'G_PALe
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [b&AI_DIPH_TAG&N'_STRON'G_PALe]
+  Stage4_4_ResolveTempVowelMarkers START: In=	b&AI_DIPH_TAG&N'_STRON'G_PALe
+  Stage4_4_ResolveTempVowelMarkers END: Out=	baiN'_STRON'G_PALe
+Af. Stage4_4_ResolveTempVowelMarkers: [baiN'_STRON'G_PALe]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	baiN'_STRON'G_PALe
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	baiN'_STRON'G_PALe
+Af. Stage4_4_1_VocalizeLenitedFricatives: [baiN'_STRON'G_PALe]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	baiN'_STRON'G_PALe
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	baiN'_STRON'G_PALɛ
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [baiN'_STRON'G_PALɛ]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	baiN'_STRON'G_PALɛ
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	baiN'_STRON'G_PALɛ
+Af. Stage4_5_1_DisyllabicShortLongRaising: [baiN'_STRON'G_PALɛ]
+  Nasalization START (Proc Helper): In=	baiN'_STRON'G_PALɛ
+  Nasalization END (no change by unit_processor): Out=	baiN'_STRON'G_PALɛ
+Af. Nasalization: [baiN'_STRON'G_PALɛ]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	baiN'_STRON'G_PALɛ
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc Helper): In=	baiN'_STRON'G_PALɛ
+  Stage4_6_UnstressedVowelReduction_Procedural END (modified by unit_processor): Out=	baiN'_STRON'G_PALə
+  Stage4_6_UnstressedVowelReduction_Procedural END (Outer): Out=	baiN'_STRON'G_PALə
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [baiN'_STRON'G_PALə]
+  EpenthesisAndStrongSonorants START (Proc): In=	baiN'_STRON'G_PALə
+  EpenthesisAndStrongSonorants END (Proc): Out=	baiN'_STRON'G_PALə
+Af. EpenthesisAndStrongSonorants: [baiN'_STRON'G_PALə]
+  Diacritics START: In=	baiN'_STRON'G_PALə
+  Diacritics END: Out=	baiN'_STRON'G_PALə
+Af. Diacritics: [baiN'_STRON'G_PALə]
+  FinalCleanup START: In=	baiN'_STRON'G_PALə
+  FinalCleanup END: Out=	bainˠ'_STɾˠOnˠ'G_PAlˠə
+Af. FinalCleanup: [bainˠ'_STɾˠOnˠ'G_PAlˠə]
+bainne          -> [bainˠ'_STɾˠOnˠ'G_PAlˠə]
+
+--- Testing word: seanchas ---
+
+--- Transcribing: [seanchas] ---
+  PreProcess START: In=	seanchas
+  PreProcess END: Out=	seanchas
+  MarkDigraphsAndVocalisationTriggers START: In=	seanchas
+  MarkDigraphsAndVocalisationTriggers END: Out=	sean_CH_TAG_as
+Af. MarkDigraphsAndVocalisationTriggers: [sean_CH_TAG_as]
+  ConsonantResolution START (Proc): In=	sean_CH_TAG_as
+  ConsonantResolution END (Proc): Out=	s'ean_CH_TAG_as
+Af. ConsonantResolution: [s'ean_CH_TAG_as]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	s'ean_CH_TAG_as
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	s'&EA_BROAD_PRE_N_TAG&n_CH_TAG_as
+Af. Stage4_0_SpecificOrthoToTempMarker: [s'&EA_BROAD_PRE_N_TAG&n_CH_TAG_as]
+  Stage4_0_1_Resolve_CH_Marker START: In=	s'&EA_BROAD_PRE_N_TAG&n_CH_TAG_as
+  Stage4_0_1_Resolve_CH_Marker END: Out=	s'&EA_BROAD_PRE_N_TAG&nxas
+Af. Stage4_0_1_Resolve_CH_Marker: [s'&EA_BROAD_PRE_N_TAG&nxas]
+  Stage4_1_VocmarkToTempMarker START: In=	s'&EA_BROAD_PRE_N_TAG&nxas
+  Stage4_1_VocmarkToTempMarker END: Out=	s'&EA_BROAD_PRE_N_TAG&nxas
+Af. Stage4_1_VocmarkToTempMarker: [s'&EA_BROAD_PRE_N_TAG&nxas]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	s'&EA_BROAD_PRE_N_TAG&nxas
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	s'&EA_BROAD_PRE_N_TAG&nxas
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [s'&EA_BROAD_PRE_N_TAG&nxas]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	s'&EA_BROAD_PRE_N_TAG&nxas
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	s'&EA_BROAD_PRE_N_TAG&nxas
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [s'&EA_BROAD_PRE_N_TAG&nxas]
+  Stage4_4_ResolveTempVowelMarkers START: In=	s'&EA_BROAD_PRE_N_TAG&nxas
+  Stage4_4_ResolveTempVowelMarkers END: Out=	s'anxas
+Af. Stage4_4_ResolveTempVowelMarkers: [s'anxas]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	s'anxas
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	s'anxas
+Af. Stage4_4_1_VocalizeLenitedFricatives: [s'anxas]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	s'anxas
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	s'ɑnxɑs
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [s'ɑnxɑs]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	s'ɑnxɑs
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	s'ɑnxɑs
+Af. Stage4_5_1_DisyllabicShortLongRaising: [s'ɑnxɑs]
+  Nasalization START (Proc Helper): In=	s'ɑnxɑs
+  Nasalization END (no change by unit_processor): Out=	s'ɑnxɑs
+Af. Nasalization: [s'ɑnxɑs]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	s'ɑnxɑs
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc Helper): In=	s'ɑnxɑs
+  Stage4_6_UnstressedVowelReduction_Procedural END (modified by unit_processor): Out=	s'ɑnxəs
+  Stage4_6_UnstressedVowelReduction_Procedural END (Outer): Out=	s'ɑnxəs
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [s'ɑnxəs]
+  EpenthesisAndStrongSonorants START (Proc): In=	s'ɑnxəs
+  EpenthesisAndStrongSonorants END (Proc): Out=	s'ɑnxəs
+Af. EpenthesisAndStrongSonorants: [s'ɑnxəs]
+  Diacritics START: In=	s'ɑnxəs
+  Diacritics END: Out=	s'ɑn̪xəsˠ
+Af. Diacritics: [s'ɑn̪xəsˠ]
+  FinalCleanup START: In=	s'ɑn̪xəsˠ
+  FinalCleanup END: Out=	ʃɑn̪xəsˠ
+Af. FinalCleanup: [ʃɑn̪xəsˠ]
+seanchas        -> [ʃɑn̪xəsˠ]
+
+--- Testing word: fear ---
+
+--- Transcribing: [fear] ---
+  PreProcess START: In=	fear
+  PreProcess END: Out=	fear
+  MarkDigraphsAndVocalisationTriggers START: In=	fear
+  MarkDigraphsAndVocalisationTriggers END: Out=	fear
+Af. MarkDigraphsAndVocalisationTriggers: [fear]
+  ConsonantResolution START (Proc): In=	fear
+  ConsonantResolution END (Proc): Out=	f'ear
+Af. ConsonantResolution: [f'ear]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	f'ear
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	f'&EA_BROAD_PRE_R_TAG&r
+Af. Stage4_0_SpecificOrthoToTempMarker: [f'&EA_BROAD_PRE_R_TAG&r]
+  Stage4_0_1_Resolve_CH_Marker START: In=	f'&EA_BROAD_PRE_R_TAG&r
+  Stage4_0_1_Resolve_CH_Marker END: Out=	f'&EA_BROAD_PRE_R_TAG&r
+Af. Stage4_0_1_Resolve_CH_Marker: [f'&EA_BROAD_PRE_R_TAG&r]
+  Stage4_1_VocmarkToTempMarker START: In=	f'&EA_BROAD_PRE_R_TAG&r
+  Stage4_1_VocmarkToTempMarker END: Out=	f'&EA_BROAD_PRE_R_TAG&r
+Af. Stage4_1_VocmarkToTempMarker: [f'&EA_BROAD_PRE_R_TAG&r]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	f'&EA_BROAD_PRE_R_TAG&r
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	f'&EA_BROAD_PRE_R_TAG&r
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [f'&EA_BROAD_PRE_R_TAG&r]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	f'&EA_BROAD_PRE_R_TAG&r
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	f'&EA_BROAD_PRE_R_TAG&r
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [f'&EA_BROAD_PRE_R_TAG&r]
+  Stage4_4_ResolveTempVowelMarkers START: In=	f'&EA_BROAD_PRE_R_TAG&r
+  Stage4_4_ResolveTempVowelMarkers END: Out=	f'ar
+Af. Stage4_4_ResolveTempVowelMarkers: [f'ar]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	f'ar
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	f'ar
+Af. Stage4_4_1_VocalizeLenitedFricatives: [f'ar]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	f'ar
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	f'ær
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [f'ær]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	f'ær
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	f'ær
+Af. Stage4_5_1_DisyllabicShortLongRaising: [f'ær]
+  Nasalization START (Proc Helper): In=	f'ær
+  Nasalization END (no change by unit_processor): Out=	f'ær
+Af. Nasalization: [f'ær]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	f'ær
+  Stage4_6_UnstressedVowelReduction_Procedural END (monosyllable): Out=	f'ær
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [f'ær]
+  EpenthesisAndStrongSonorants START (Proc): In=	f'ær
+  EpenthesisAndStrongSonorants END (Proc): Out=	f'ær
+Af. EpenthesisAndStrongSonorants: [f'ær]
+  Diacritics START: In=	f'ær
+  Diacritics END: Out=	f'æɾˠ
+Af. Diacritics: [f'æɾˠ]
+  FinalCleanup START: In=	f'æɾˠ
+  FinalCleanup END: Out=	fʲæɾˠ
+Af. FinalCleanup: [fʲæɾˠ]
+fear            -> [fʲæɾˠ]
+
+--- Testing word: leaba ---
+
+--- Transcribing: [leaba] ---
+  PreProcess START: In=	leaba
+  PreProcess END: Out=	leaba
+  MarkDigraphsAndVocalisationTriggers START: In=	leaba
+  MarkDigraphsAndVocalisationTriggers END: Out=	leaba
+Af. MarkDigraphsAndVocalisationTriggers: [leaba]
+  ConsonantResolution START (Proc): In=	leaba
+  ConsonantResolution END (Proc): Out=	leaba
+Af. ConsonantResolution: [leaba]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	leaba
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	leaba
+Af. Stage4_0_SpecificOrthoToTempMarker: [leaba]
+  Stage4_0_1_Resolve_CH_Marker START: In=	leaba
+  Stage4_0_1_Resolve_CH_Marker END: Out=	leaba
+Af. Stage4_0_1_Resolve_CH_Marker: [leaba]
+  Stage4_1_VocmarkToTempMarker START: In=	leaba
+  Stage4_1_VocmarkToTempMarker END: Out=	leaba
+Af. Stage4_1_VocmarkToTempMarker: [leaba]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	leaba
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	leaba
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [leaba]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	leaba
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	leaba
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [leaba]
+  Stage4_4_ResolveTempVowelMarkers START: In=	leaba
+  Stage4_4_ResolveTempVowelMarkers END: Out=	laba
+Af. Stage4_4_ResolveTempVowelMarkers: [laba]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	laba
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	laba
+Af. Stage4_4_1_VocalizeLenitedFricatives: [laba]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	laba
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	lɑbɑ
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [lɑbɑ]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	lɑbɑ
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	lɑbɑ
+Af. Stage4_5_1_DisyllabicShortLongRaising: [lɑbɑ]
+  Nasalization START (Proc Helper): In=	lɑbɑ
+  Nasalization END (no change by unit_processor): Out=	lɑbɑ
+Af. Nasalization: [lɑbɑ]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	lɑbɑ
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc Helper): In=	lɑbɑ
+  Stage4_6_UnstressedVowelReduction_Procedural END (modified by unit_processor): Out=	lɑbə
+  Stage4_6_UnstressedVowelReduction_Procedural END (Outer): Out=	lɑbə
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [lɑbə]
+  EpenthesisAndStrongSonorants START (Proc): In=	lɑbə
+  EpenthesisAndStrongSonorants END (Proc): Out=	lɑbə
+Af. EpenthesisAndStrongSonorants: [lɑbə]
+  Diacritics START: In=	lɑbə
+  Diacritics END: Out=	lɑbə
+Af. Diacritics: [lɑbə]
+  FinalCleanup START: In=	lɑbə
+  FinalCleanup END: Out=	lɑbə
+Af. FinalCleanup: [lɑbə]
+leaba           -> [lɑbə]

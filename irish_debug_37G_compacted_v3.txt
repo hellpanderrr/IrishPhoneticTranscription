@@ -1,0 +1,54 @@
+﻿
+--- Running Focused Test Set for Connacht (Iteration 37G - Compacted v3) ---
+
+--- Testing word: úsáideoirí ---
+
+--- Transcribing: [úsáideoirí] ---
+  ConsonantResolution START (Proc): In=	úsáideoirí
+  ConsonantResolution END (Proc): Out=	úsáid'eoir'í
+Af. ConsonantResolution: [úsáid'eoir'í]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	úsáid'eoir'í
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	úsáid'eoir'í
+Af. Stage4_0_SpecificOrthoToTempMarker: [úsáid'eoir'í]
+  Stage4_0_1_Resolve_CH_Marker START: In=	úsáid'eoir'í
+  Stage4_0_1_Resolve_CH_Marker END: Out=	úsáid'eoir'í
+Af. Stage4_0_1_Resolve_CH_Marker: [úsáid'eoir'í]
+  Stage4_1_VocmarkToTempMarker START: In=	úsáid'eoir'í
+  Stage4_1_VocmarkToTempMarker END: Out=	úsáid'eoir'í
+Af. Stage4_1_VocmarkToTempMarker: [úsáid'eoir'í]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	úsáid'eoir'í
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	&U_ACUTE_LONG&s&A_ACUTE_LONG&id'eoir'&I_ACUTE_LONG&
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [&U_ACUTE_LONG&s&A_ACUTE_LONG&id'eoir'&I_ACUTE_LONG&]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	&U_ACUTE_LONG&s&A_ACUTE_LONG&id'eoir'&I_ACUTE_LONG&
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	&U_ACUTE_LONG&s&A_ACUTE_LONG&id'&EO_SEQ&ir'&I_ACUTE_LONG&
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [&U_ACUTE_LONG&s&A_ACUTE_LONG&id'&EO_SEQ&ir'&I_ACUTE_LONG&]
+  Stage4_4_ResolveTempVowelMarkers START: In=	&U_ACUTE_LONG&s&A_ACUTE_LONG&id'&EO_SEQ&ir'&I_ACUTE_LONG&
+  Stage4_4_ResolveTempVowelMarkers END: Out=	uːsɑːid'oːir'iː
+Af. Stage4_4_ResolveTempVowelMarkers: [uːsɑːid'oːir'iː]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	uːsɑːid'oːir'iː
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	uːsɑːid'oːir'iː
+Af. Stage4_4_1_VocalizeLenitedFricatives: [uːsɑːid'oːir'iː]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	uːsɑːid'oːir'iː
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	uːsɑːɪd'oːɪr'iː
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [uːsɑːɪd'oːɪr'iː]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	uːsɑːɪd'oːɪr'iː
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	uːsɑːɪd'oːɪr'iː
+Af. Stage4_5_1_DisyllabicShortLongRaising: [uːsɑːɪd'oːɪr'iː]
+  Nasalization START (Proc Helper): In=	uːsɑːɪd'oːɪr'iː
+  Nasalization END (no change by unit_processor): Out=	uːsɑːɪd'oːɪr'iː
+Af. Nasalization: [uːsɑːɪd'oːɪr'iː]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	uːsɑːɪd'oːɪr'iː
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc Helper): In=	uːsɑːɪd'oːɪr'iː
+  Stage4_6_UnstressedVowelReduction_Procedural END (modified by unit_processor): Out=	uːsɑːid'oːir'iː
+  Stage4_6_UnstressedVowelReduction_Procedural END (Outer): Out=	uːsɑːid'oːir'iː
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [uːsɑːid'oːir'iː]
+  EpenthesisAndStrongSonorants START (Proc): In=	uːsɑːid'oːir'iː
+  EpenthesisAndStrongSonorants END (Proc): Out=	uːsɑːid'oːir'iː
+Af. EpenthesisAndStrongSonorants: [uːsɑːid'oːir'iː]
+  Diacritics START: In=	uːsɑːid'oːir'iː
+  Diacritics END: Out=	uːsɑːid'oːir'iː
+Af. Diacritics: [uːsɑːid'oːir'iː]
+  FinalCleanup START: In=	uːsɑːid'oːir'iː
+  FinalCleanup END: Out=	uːsɑːidʲoːiɾʲiː
+Af. FinalCleanup: [uːsɑːidʲoːiɾʲiː]
+úsáideoirí   -> [uːsɑːidʲoːiɾʲiː]
