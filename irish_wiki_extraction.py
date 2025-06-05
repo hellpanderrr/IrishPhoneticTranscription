@@ -10,7 +10,7 @@ import json
 import csv, json
 
 
-
+raise
 path = r'F:\projects\transcription\wiktionary_ipa_phoneme_lexicons\kaikki.org-dictionary-Irish.jsonl'
 jsons = []
 with open(path, encoding='utf-8') as f:
