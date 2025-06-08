@@ -280,13 +280,24 @@ df[[
 1306
 1049
 1220
-from fuzzywuzzy import fuzz
+1496, #df['match'].mean() == 75.38749819128925 
 
+1636, #75.38749819128925 #0.8988616991688039
+from fuzzywuzzy import fuzz
+import panphon.distance as D
+x = D.Distance()
 df['match']= [
     0 if pd.isna(ipa) or pd.isna(res) or res == '' 
     else (fuzz.partial_ratio(res ,  ipa) )
     for ipa, res in zip(df['ipa'],  df['results'])
 ]
+df['match']= [
+    0 if pd.isna(ipa) or pd.isna(res) or res == '' 
+    else (1 - x.dolgo_prime_distance_div_maxlen(res ,  ipa) if len(ipa.split(', '))==1 else 
+          1 - min([x.dolgo_prime_distance_div_maxlen(res ,  ipa_split) for ipa_split in ipa.split(', ')]))
+    for ipa, res in zip(df['ipa'],  df['results'])
+]
+
 
 def dump_df(df, path='results.json'):
     json.dump(df.to_dict(orient='records'), open('results.json',encoding='utf-8',mode='w'),ensure_ascii=False)

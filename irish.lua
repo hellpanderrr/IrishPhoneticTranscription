@@ -1558,6 +1558,7 @@ irishPhonetics.rules_stage7_final_cleanup = {
     { p = toNFC("MKR_"), r = "" },
     { p = toNFC("ZZZ"),  r = "" },
     { p = toNFC("&"),    r = "" },
+    { p = toNFC("g"),    r = toNFC("ɡ") },
 }
 
 local function apply_rules_to_string_generic_impl(current_string_input, rules_to_apply_list, stage_name_str, mode_str,
