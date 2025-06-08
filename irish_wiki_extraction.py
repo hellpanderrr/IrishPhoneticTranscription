@@ -193,3 +193,104 @@ words_to_test_full_37AA = [
 "teann", "trom", "am", "cam", "gall", "tall", "dún", "dubh", "móin"
 ]
 
+import subprocess
+def get_transcription(greek_word):
+    """
+    Get transcription for a Greek word using the Lua script.
+
+    This function calls the Lua script to get accurate IPA transcriptions.
+    It also caches results to avoid repeated calls for the same word.
+    """
+    # Clean the word (remove punctuation)
+    base = re.sub(r'[!?.,;:]', '', greek_word)
+    print(f'Processing {greek_word} -> {base}')
+
+    # Skip words without any alphabetic characters
+    if not any(c.isalpha() for c in base):
+        return ''
+
+  
+    try:
+        # Call the Lua script to get the pronunciation
+        proc = subprocess.run(            [r'f:\soft\lua\luajit.exe', r'F:\projects\transcription\wiktionary_ipa_phoneme_lexicons\irish\irish.lua'], input=base,                                    timeout=5,text=True,encoding='utf-8',capture_output=True)
+        # Extract the pronunciation from the output
+        pron = proc.stdout.strip()
+
+        return pron
+    except subprocess.TimeoutExpired:
+        print(f"Timeout processing word: {base}")
+        return "[Timeout]"
+    except subprocess.CalledProcessError as e:
+        print(f"Error processing word '{base}': {e.stderr.decode('utf8').strip()}")
+        # Fall back to a simple transcription if the Lua script fails
+        return base
+    
+def batch_transcribe(words):
+    cmd = [
+        r'f:\soft\lua\luajit.exe', 
+        r'F:\projects\transcription\wiktionary_ipa_phoneme_lexicons\irish\irish.lua']
+
+    
+    with subprocess.Popen(
+        cmd,
+        stdin=subprocess.PIPE,
+        stdout=subprocess.PIPE,
+        text=True,
+        encoding='utf-8',
+        bufsize=1  # Line buffering
+    ) as proc:
+        for word in words:
+            proc.stdin.write(word + "\n")
+            proc.stdin.flush()
+            yield proc.stdout.readline().strip()    
+    
+    
+import json
+
+df = pd.read_csv('connacht.csv')
+df['results'] = df.word.apply(get_transcription)
+print(df[df.ipa.str.replace(r"[ˠʲˈ']", '', regex=True).str[0] != df.results.str.replace(r"[ˠʲˈ']", '', regex=True).str[0]].shape)
+df[df.ipa.str.replace(r"[ˠʲˈ']", '', regex=True).str[0] != df.results.str.replace(r"[ˠʲˈ']", '', regex=True).str[0]].sample(1000).sort_values('word').to_csv('errors_38.csv')
+
+ws = df.word
+results = []
+for batch in [ws[i:i+50] for i in range(0,len(ws),50)]:
+    with_spaces = batch[batch.str.split(' ').apply(len)>1]
+    without_spaces = batch[batch.str.split(' ').apply(len)==1]
+    results_no_spaces = get_transcription(' '.join(without_spaces)).split(' ')
+    results_spaces = [get_transcription(i) for i in with_spaces]
+    no_space = pd.concat([without_spaces,pd.Series(results_no_spaces,index=without_spaces.index,name='results')],axis=1)
+    space = pd.concat([with_spaces,pd.Series(results_spaces,index=with_spaces.index,name='results')],axis=1)
+    final = pd.concat([no_space,space])
+    results.append(final)
+df['results'] = pd.concat(results).results
+
+cleaned_ipa = df['ipa'].str.replace(r'[ˠʲˈ]', '', regex=True)
+cleaned_results = df['results'].str.replace(r'[ˠʲˈ]', '', regex=True)
+
+# Create a mask: True only where cleaned_results is a non-empty substring of cleaned_ipa
+df[[
+    False if pd.isna(ipa) or pd.isna(res) or res == '' 
+    else (res in ipa) 
+    for ipa, res in zip(df['ipa'].str.replace(r'[ˠʲˈ]', '', regex=True),  df['results'].str.replace(r'[ˠʲˈ]', '', regex=True))
+]]
+
+366
+793
+1306
+1049
+from fuzzywuzzy import fuzz
+
+df['match']= [
+    0 if pd.isna(ipa) or pd.isna(res) or res == '' 
+    else (fuzz.partial_ratio(res ,  ipa) )
+    for ipa, res in zip(df['ipa'],  df['results'])
+]
+
+def dump_df(df, path='results.json'):
+    json.dump(df.to_dict(orient='records'), open('results.json',encoding='utf-8',mode='w'),ensure_ascii=False)
+
+json.dump(df[df.ipa.str.replace(r"[ˠʲˈ']", '', regex=True).str[0] != df.results.str.replace(r"[ˠʲˈ']", '', regex=True).str[0]].sample(200).sort_values('word').fillna('').to_dict(orient='records'), open('results.json',encoding='utf-8',mode='w'),ensure_ascii=False)
+
+df[df.ipa.str.replace(r"[ˠʲˈ']", '', regex=True).str[0] != df.results.str.replace(r"[ˠʲˈ']", '', regex=True).str[0]].sample(1000).sort_values('word').to_csv('errors_42.csv')
+

@@ -1,0 +1,74 @@
+﻿  PreProcess START: In=	nilabhuiochasoraibhteoiricchinnteoireachta
+  PreProcess END: Out=	nilabhuiochasoraibhteoiricchinnteoireachta
+PERF: Stage PreProcess took 0.005000 seconds for input: nilabhuiochasoraibhteoiricchinnteoireachta
+  MarkDigraphsAndVocalisationTriggers START: In=	nilabhuiochasoraibhteoiricchinnteoireachta
+  MarkDigraphsAndVocalisationTriggers END: Out=	nilaMKR_BHuioMKR_CHasoraiMKR_BHtMKR_EOITRIGOLNGricMKR_CHiMKR_NN_STRtMKR_EOITRIGOLNGrMKR_EACHTBRDFXa
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.059000 seconds for input: nilabhuiochasoraibhteoiricchinnteoireachta
+Af. MarkDigraphsAndVocalisationTriggers: [nilaMKR_BHuioMKR_CHasoraiMKR_BHtMKR_EOITRIGOLNGricMKR_CHiMKR_NN_STRtMKR_EOITRIGOLNGrMKR_EACHTBRDFXa]
+  Stage2_5_MarkSuffixes START: In=	nilaMKR_BHuioMKR_CHasoraiMKR_BHtMKR_EOITRIGOLNGricMKR_CHiMKR_NN_STRtMKR_EOITRIGOLNGrMKR_EACHTBRDFXa
+  Stage2_5_MarkSuffixes END: Out=	nilabhuiochasoraibhteoiricchinntMKR_SUFFIX_OIRƏXTAaa
+PERF: Stage Stage2_5_MarkSuffixes took 0.048000 seconds for input: nilabhuiochasoraibhteoiricchinnteoireachta
+Af. Stage2_5_MarkSuffixes: [nilabhuiochasoraibhteoiricchinntMKR_SUFFIX_OIRƏXTAaa]
+  ConsonantResolution START (Proc): In=	nilabhuiochasoraibhteoiricchinntMKR_SUFFIX_OIRƏXTAaa
+  ConsonantResolution END (Proc): Out=	nilabhuiokhasor'aib'ht'eoir'ik'k'h'innt'MKR_SUFFIX_OIRƏXTAaa
+PERF: Stage ConsonantResolution took 0.057000 seconds for input: nilabhuiochasoraibhteoiricchinnteoireachta
+Af. ConsonantResolution: [nilabhuiokhasor'aib'ht'eoir'ik'k'h'innt'MKR_SUFFIX_OIRƏXTAaa]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	nilabhuiokhasor'aib'ht'eoir'ik'k'h'innt'MKR_SUFFIX_OIRƏXTAaa
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	nilabhuMKR_IO_SHT_TRGTkhasor'aib'ht'eoir'ik'k'h'innt'MKR_SUFFIX_OIRƏXTAaa
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.006000 seconds for input: nilabhuiochasoraibhteoiricchinnteoireachta
+Af. Stage4_0_SpecificOrthoToTempMarker: [nilabhuMKR_IO_SHT_TRGTkhasor'aib'ht'eoir'ik'k'h'innt'MKR_SUFFIX_OIRƏXTAaa]
+  Stage4_0_1_Resolve_CH_Marker START: In=	nilabhuMKR_IO_SHT_TRGTkhasor'aib'ht'eoir'ik'k'h'innt'MKR_SUFFIX_OIRƏXTAaa
+  Stage4_0_1_Resolve_CH_Marker END: Out=	nilabhuMKR_IO_SHT_TRGTkhasor'aib'ht'eoir'ik'k'h'innt'MKR_SUFFIX_OIRƏXTAaa
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.000000 seconds for input: nilabhuiochasoraibhteoiricchinnteoireachta
+Af. Stage4_0_1_Resolve_CH_Marker: [nilabhuMKR_IO_SHT_TRGTkhasor'aib'ht'eoir'ik'k'h'innt'MKR_SUFFIX_OIRƏXTAaa]
+  Stage4_1_VocmarkToTempMarker START: In=	nilabhuMKR_IO_SHT_TRGTkhasor'aib'ht'eoir'ik'k'h'innt'MKR_SUFFIX_OIRƏXTAaa
+  Stage4_1_VocmarkToTempMarker END: Out=	nilabhuMKR_IO_SHT_TRGTkhasor'aib'ht'eoir'ik'k'h'innt'MKR_SUFFIX_OIRƏXTAaa
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.000000 seconds for input: nilabhuiochasoraibhteoiricchinnteoireachta
+Af. Stage4_1_VocmarkToTempMarker: [nilabhuMKR_IO_SHT_TRGTkhasor'aib'ht'eoir'ik'k'h'innt'MKR_SUFFIX_OIRƏXTAaa]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	nilabhuMKR_IO_SHT_TRGTkhasor'aib'ht'eoir'ik'k'h'innt'MKR_SUFFIX_OIRƏXTAaa
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	nilabhuMKR_IO_SHT_TRGTkhasor'aib'ht'eoir'ik'k'h'innt'MKR_SUFFIX_OIRƏXTAaa
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.001000 seconds for input: nilabhuiochasoraibhteoiricchinnteoireachta
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [nilabhuMKR_IO_SHT_TRGTkhasor'aib'ht'eoir'ik'k'h'innt'MKR_SUFFIX_OIRƏXTAaa]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	nilabhuMKR_IO_SHT_TRGTkhasor'aib'ht'eoir'ik'k'h'innt'MKR_SUFFIX_OIRƏXTAaa
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	nilabhuMKR_IO_SHT_TRGTkhasor'MKR_AI_DIPHb'ht'MKR_EO_SEQir'ik'k'h'innt'MKR_SUFFIX_OIRƏXTAaa
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.003000 seconds for input: nilabhuiochasoraibhteoiricchinnteoireachta
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [nilabhuMKR_IO_SHT_TRGTkhasor'MKR_AI_DIPHb'ht'MKR_EO_SEQir'ik'k'h'innt'MKR_SUFFIX_OIRƏXTAaa]
+  Stage4_4_ResolveTempVowelMarkers START: In=	nilabhuMKR_IO_SHT_TRGTkhasor'MKR_AI_DIPHb'ht'MKR_EO_SEQir'ik'k'h'innt'MKR_SUFFIX_OIRƏXTAaa
+  Stage4_4_ResolveTempVowelMarkers END: Out=	nilabhuɪkhasor'aib'ht'oːir'ik'k'h'innt'MKR_SUFFIX_OIRƏXTAaa
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.001000 seconds for input: nilabhuiochasoraibhteoiricchinnteoireachta
+Af. Stage4_4_ResolveTempVowelMarkers: [nilabhuɪkhasor'aib'ht'oːir'ik'k'h'innt'MKR_SUFFIX_OIRƏXTAaa]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	nilabhuɪkhasor'aib'ht'oːir'ik'k'h'innt'MKR_SUFFIX_OIRƏXTAaa
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	nilabhuɪkhasor'aib'ht'oːir'ik'k'h'innt'MKR_SUFFIX_OIRƏXTAaa
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.003000 seconds for input: nilabhuiochasoraibhteoiricchinnteoireachta
+Af. Stage4_4_1_VocalizeLenitedFricatives: [nilabhuɪkhasor'aib'ht'oːir'ik'k'h'innt'MKR_SUFFIX_OIRƏXTAaa]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	nilabhuɪkhasor'aib'ht'oːir'ik'k'h'innt'MKR_SUFFIX_OIRƏXTAaa
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	nɪlɑbhɔɪkhɑsɛr'aib'ht'oːɪr'ɪk'k'h'ɪnnt'MKR_SUFFIX_OIRƏXTAɑɑ
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.019000 seconds for input: nilabhuiochasoraibhteoiricchinnteoireachta
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [nɪlɑbhɔɪkhɑsɛr'aib'ht'oːɪr'ɪk'k'h'ɪnnt'MKR_SUFFIX_OIRƏXTAɑɑ]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	nɪlɑbhɔɪkhɑsɛr'aib'ht'oːɪr'ɪk'k'h'ɪnnt'MKR_SUFFIX_OIRƏXTAɑɑ
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	nɪlɑbhɔɪkhɑsɛr'aib'ht'oːɪr'ɪk'k'h'ɪnnt'MKR_SUFFIX_OIRƏXTAɑɑ
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.298000 seconds for input: nilabhuiochasoraibhteoiricchinnteoireachta
+Af. Stage4_5_1_DisyllabicShortLongRaising: [nɪlɑbhɔɪkhɑsɛr'aib'ht'oːɪr'ɪk'k'h'ɪnnt'MKR_SUFFIX_OIRƏXTAɑɑ]
+  Nasalization START (Proc Helper): In=	nɪlɑbhɔɪkhɑsɛr'aib'ht'oːɪr'ɪk'k'h'ɪnnt'MKR_SUFFIX_OIRƏXTAɑɑ
+  Nasalization END (no change by unit_processor): Out=	nɪlɑbhɔɪkhɑsɛr'aib'ht'oːɪr'ɪk'k'h'ɪnnt'MKR_SUFFIX_OIRƏXTAɑɑ
+PERF: Stage Nasalization took 0.000000 seconds for input: nilabhuiochasoraibhteoiricchinnteoireachta
+Af. Nasalization: [nɪlɑbhɔɪkhɑsɛr'aib'ht'oːɪr'ɪk'k'h'ɪnnt'MKR_SUFFIX_OIRƏXTAɑɑ]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	nɪlɑbhɔɪkhɑsɛr'aib'ht'oːɪr'ɪk'k'h'ɪnnt'MKR_SUFFIX_OIRƏXTAɑɑ
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc Helper): In=	nɪlɑbhɔɪkhɑsɛr'aib'ht'oːɪr'ɪk'k'h'ɪnnt'MKR_SUFFIX_OIRƏXTAɑɑ
+  Stage4_6_UnstressedVowelReduction_Procedural END (modified by unit_processor): Out=	nɪləbhəəkhəsir'ib'ht'oːir'ik'k'h'ənnt'MKR_SUFFIX_OIRƏXTAəə
+  Stage4_6_UnstressedVowelReduction_Procedural END (Outer): Out=	nɪləbhəəkhəsir'ib'ht'oːir'ik'k'h'ənnt'MKR_SUFFIX_OIRƏXTAəə
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.001000 seconds for input: nilabhuiochasoraibhteoiricchinnteoireachta
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [nɪləbhəəkhəsir'ib'ht'oːir'ik'k'h'ənnt'MKR_SUFFIX_OIRƏXTAəə]
+  EpenthesisAndStrongSonorants START (Proc): In=	nɪləbhəəkhəsir'ib'ht'oːir'ik'k'h'ənnt'MKR_SUFFIX_OIRƏXTAəə
+  EpenthesisAndStrongSonorants END (Proc): Out=	nɪləbhəəkhəsir'ib'ht'oːir'ik'k'h'ənnt'MKR_SUFFIX_OIRƏXTAəə
+PERF: Stage EpenthesisAndStrongSonorants took 0.312000 seconds for input: nilabhuiochasoraibhteoiricchinnteoireachta
+Af. EpenthesisAndStrongSonorants: [nɪləbhəəkhəsir'ib'ht'oːir'ik'k'h'ənnt'MKR_SUFFIX_OIRƏXTAəə]
+  Diacritics START: In=	nɪləbhəəkhəsir'ib'ht'oːir'ik'k'h'ənnt'MKR_SUFFIX_OIRƏXTAəə
+  Diacritics END: Out=	n̪ɪl̪əbˠhəəkhəsˠir'ib'ht'oːir'ik'k'h'ən̪nt'MKR_SUFFIX_OIRƏXTAəə
+PERF: Stage Diacritics took 0.004000 seconds for input: nilabhuiochasoraibhteoiricchinnteoireachta
+Af. Diacritics: [n̪ɪl̪əbˠhəəkhəsˠir'ib'ht'oːir'ik'k'h'ən̪nt'MKR_SUFFIX_OIRƏXTAəə]
+  FinalCleanup START: In=	n̪ɪl̪əbˠhəəkhəsˠir'ib'ht'oːir'ik'k'h'ən̪nt'MKR_SUFFIX_OIRƏXTAəə
+  FinalCleanup END: Out=	n̪ɪl̪əbˠhəəkhəsˠiɾʲibʲhtʲoːiɾʲiccçən̪ntʲmˠKɾˠ_SUFFIX_OIɾˠƏXTAəə
+PERF: Stage FinalCleanup took 0.003000 seconds for input: nilabhuiochasoraibhteoiricchinnteoireachta
+Af. FinalCleanup: [n̪ɪl̪əbˠhəəkhəsˠiɾʲibʲhtʲoːiɾʲiccçən̪ntʲmˠKɾˠ_SUFFIX_OIɾˠƏXTAəə]
+n̪ɪl̪əbˠhəəkhəsˠiɾʲibʲhtʲoːiɾʲiccçən̪ntʲmˠKɾˠ_SUFFIX_OIɾˠƏXTAəə

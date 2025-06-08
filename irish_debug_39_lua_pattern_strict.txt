@@ -1,0 +1,1913 @@
+﻿
+--- Running Focused Test Set for Connacht (Iteration 39 - CSV Targets) ---
+
+--- Transcribing: Cháit ---
+  PreProcess START: In=	Cháit
+  PreProcess END: Out=	cháit
+PERF: Stage PreProcess took 0.002000 seconds for input: Cháit
+  MarkDigraphsAndVocalisationTriggers START: In=	cháit
+  MarkDigraphsAndVocalisationTriggers END: Out=	MKR_CHáit
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.003000 seconds for input: Cháit
+Af. MarkDigraphsAndVocalisationTriggers: [MKR_CHáit]
+  Stage2_5_MarkSuffixes START: In=	MKR_CHáit
+  Stage2_5_MarkSuffixes END: Out=	cháit
+PERF: Stage Stage2_5_MarkSuffixes took 0.005000 seconds for input: Cháit
+Af. Stage2_5_MarkSuffixes: [cháit]
+  ConsonantResolution START (Proc): In=	cháit
+  ConsonantResolution END (Proc): Out=	kháit'
+PERF: Stage ConsonantResolution took 0.004000 seconds for input: Cháit
+Af. ConsonantResolution: [kháit']
+  Stage4_0_SpecificOrthoToTempMarker START: In=	kháit'
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	kháit'
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.001000 seconds for input: Cháit
+Af. Stage4_0_SpecificOrthoToTempMarker: [kháit']
+  Stage4_0_1_Resolve_CH_Marker START: In=	kháit'
+  Stage4_0_1_Resolve_CH_Marker END: Out=	kháit'
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.000000 seconds for input: Cháit
+Af. Stage4_0_1_Resolve_CH_Marker: [kháit']
+  Stage4_1_VocmarkToTempMarker START: In=	kháit'
+  Stage4_1_VocmarkToTempMarker END: Out=	kháit'
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.000000 seconds for input: Cháit
+Af. Stage4_1_VocmarkToTempMarker: [kháit']
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	kháit'
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	khMKR_A_ACT_LNGit'
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.001000 seconds for input: Cháit
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [khMKR_A_ACT_LNGit']
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	khMKR_A_ACT_LNGit'
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	khMKR_A_ACT_LNGit'
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.001000 seconds for input: Cháit
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [khMKR_A_ACT_LNGit']
+  Stage4_4_ResolveTempVowelMarkers START: In=	khMKR_A_ACT_LNGit'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	khɑːit'
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.002000 seconds for input: Cháit
+Af. Stage4_4_ResolveTempVowelMarkers: [khɑːit']
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	khɑːit'
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	khɑːit'
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.002000 seconds for input: Cháit
+Af. Stage4_4_1_VocalizeLenitedFricatives: [khɑːit']
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	khɑːit'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	khɑːɪt'
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.005000 seconds for input: Cháit
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [khɑːɪt']
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	khɑːɪt'
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	khɑːɪt'
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.015000 seconds for input: Cháit
+Af. Stage4_5_1_DisyllabicShortLongRaising: [khɑːɪt']
+  Stage4_5_2_ConnachtSpecificVowelShifts START: In=	khɑːɪt'
+  Stage4_5_2_ConnachtSpecificVowelShifts END: Out=	khɑːɪt'
+PERF: Stage Stage4_5_2_ConnachtSpecificVowelShifts took 0.000000 seconds for input: Cháit
+Af. Stage4_5_2_ConnachtSpecificVowelShifts: [khɑːɪt']
+  Nasalization START (Proc Helper): In=	khɑːɪt'
+  Nasalization END (no change by unit_processor): Out=	khɑːɪt'
+PERF: Stage Nasalization took 0.012000 seconds for input: Cháit
+Af. Nasalization: [khɑːɪt']
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	khɑːɪt'
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc Helper): In=	khɑːɪt'
+  Stage4_6_UnstressedVowelReduction_Procedural END (modified by unit_processor): Out=	khɑːit'
+  Stage4_6_UnstressedVowelReduction_Procedural END (Outer): Out=	khɑːit'
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.024000 seconds for input: Cháit
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [khɑːit']
+  EpenthesisAndStrongSonorants START (Proc): In=	khɑːit'
+  EpenthesisAndStrongSonorants END (Proc): Out=	khɑːit'
+PERF: Stage EpenthesisAndStrongSonorants took 0.023000 seconds for input: Cháit
+Af. EpenthesisAndStrongSonorants: [khɑːit']
+  Diacritics START: In=	khɑːit'
+  Diacritics END: Out=	khɑːit'
+PERF: Stage Diacritics took 0.001000 seconds for input: Cháit
+Af. Diacritics: [khɑːit']
+  FinalCleanup START: In=	khɑːit'
+  FinalCleanup END: Out=	khɑːitʲ
+PERF: Stage FinalCleanup took 0.001000 seconds for input: Cháit
+Af. FinalCleanup: [khɑːitʲ]
+Cháit                         -> [khɑːitʲ]
+
+--- Transcribing: Aoine ---
+  PreProcess START: In=	Aoine
+  PreProcess END: Out=	aoine
+PERF: Stage PreProcess took 0.000000 seconds for input: Aoine
+  MarkDigraphsAndVocalisationTriggers START: In=	aoine
+  MarkDigraphsAndVocalisationTriggers END: Out=	MKR_AOILNGne
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.003000 seconds for input: Aoine
+Af. MarkDigraphsAndVocalisationTriggers: [MKR_AOILNGne]
+  Stage2_5_MarkSuffixes START: In=	MKR_AOILNGne
+  Stage2_5_MarkSuffixes END: Out=	aoine
+PERF: Stage Stage2_5_MarkSuffixes took 0.003000 seconds for input: Aoine
+Af. Stage2_5_MarkSuffixes: [aoine]
+  ConsonantResolution START (Proc): In=	aoine
+  ConsonantResolution END (Proc): Out=	aoine
+PERF: Stage ConsonantResolution took 0.003000 seconds for input: Aoine
+Af. ConsonantResolution: [aoine]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	aoine
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	aoine
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.001000 seconds for input: Aoine
+Af. Stage4_0_SpecificOrthoToTempMarker: [aoine]
+  Stage4_0_1_Resolve_CH_Marker START: In=	aoine
+  Stage4_0_1_Resolve_CH_Marker END: Out=	aoine
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.000000 seconds for input: Aoine
+Af. Stage4_0_1_Resolve_CH_Marker: [aoine]
+  Stage4_1_VocmarkToTempMarker START: In=	aoine
+  Stage4_1_VocmarkToTempMarker END: Out=	aoine
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.000000 seconds for input: Aoine
+Af. Stage4_1_VocmarkToTempMarker: [aoine]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	aoine
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	aoine
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.001000 seconds for input: Aoine
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [aoine]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	aoine
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	aMKR_OI_DIPHne
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.001000 seconds for input: Aoine
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [aMKR_OI_DIPHne]
+  Stage4_4_ResolveTempVowelMarkers START: In=	aMKR_OI_DIPHne
+  Stage4_4_ResolveTempVowelMarkers END: Out=	aɔne
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.001000 seconds for input: Aoine
+Af. Stage4_4_ResolveTempVowelMarkers: [aɔne]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	aɔne
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	aɔne
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.001000 seconds for input: Aoine
+Af. Stage4_4_1_VocalizeLenitedFricatives: [aɔne]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	aɔne
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	aɔnɛ
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.004000 seconds for input: Aoine
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [aɔnɛ]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	aɔnɛ
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	aɔnɛ
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.006000 seconds for input: Aoine
+Af. Stage4_5_1_DisyllabicShortLongRaising: [aɔnɛ]
+  Stage4_5_2_ConnachtSpecificVowelShifts START: In=	aɔnɛ
+  Stage4_5_2_ConnachtSpecificVowelShifts END: Out=	aɔnɛ
+PERF: Stage Stage4_5_2_ConnachtSpecificVowelShifts took 0.000000 seconds for input: Aoine
+Af. Stage4_5_2_ConnachtSpecificVowelShifts: [aɔnɛ]
+  Nasalization START (Proc Helper): In=	aɔnɛ
+  Nasalization END (no change by unit_processor): Out=	aɔnɛ
+PERF: Stage Nasalization took 0.007000 seconds for input: Aoine
+Af. Nasalization: [aɔnɛ]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	aɔnɛ
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc Helper): In=	aɔnɛ
+  Stage4_6_UnstressedVowelReduction_Procedural END (modified by unit_processor): Out=	aənə
+  Stage4_6_UnstressedVowelReduction_Procedural END (Outer): Out=	aənə
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.014000 seconds for input: Aoine
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [aənə]
+  EpenthesisAndStrongSonorants START (Proc): In=	aənə
+  EpenthesisAndStrongSonorants END (Proc): Out=	aənə
+PERF: Stage EpenthesisAndStrongSonorants took 0.018000 seconds for input: Aoine
+Af. EpenthesisAndStrongSonorants: [aənə]
+  Diacritics START: In=	aənə
+  Diacritics END: Out=	aən̪ə
+PERF: Stage Diacritics took 0.003000 seconds for input: Aoine
+Af. Diacritics: [aən̪ə]
+  FinalCleanup START: In=	aən̪ə
+  FinalCleanup END: Out=	aən̪ə
+PERF: Stage FinalCleanup took 0.000000 seconds for input: Aoine
+Af. FinalCleanup: [aən̪ə]
+Aoine                          -> [aən̪ə]
+
+--- Transcribing: Gaeil ---
+  PreProcess START: In=	Gaeil
+  PreProcess END: Out=	gaeil
+PERF: Stage PreProcess took 0.001000 seconds for input: Gaeil
+  MarkDigraphsAndVocalisationTriggers START: In=	gaeil
+  MarkDigraphsAndVocalisationTriggers END: Out=	gaeil
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.004000 seconds for input: Gaeil
+Af. MarkDigraphsAndVocalisationTriggers: [gaeil]
+  Stage2_5_MarkSuffixes START: In=	gaeil
+  Stage2_5_MarkSuffixes END: Out=	gaeil
+PERF: Stage Stage2_5_MarkSuffixes took 0.004000 seconds for input: Gaeil
+Af. Stage2_5_MarkSuffixes: [gaeil]
+  ConsonantResolution START (Proc): In=	gaeil
+  ConsonantResolution END (Proc): Out=	gaeil
+PERF: Stage ConsonantResolution took 0.003000 seconds for input: Gaeil
+Af. ConsonantResolution: [gaeil]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	gaeil
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	gaeil
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.001000 seconds for input: Gaeil
+Af. Stage4_0_SpecificOrthoToTempMarker: [gaeil]
+  Stage4_0_1_Resolve_CH_Marker START: In=	gaeil
+  Stage4_0_1_Resolve_CH_Marker END: Out=	gaeil
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.001000 seconds for input: Gaeil
+Af. Stage4_0_1_Resolve_CH_Marker: [gaeil]
+  Stage4_1_VocmarkToTempMarker START: In=	gaeil
+  Stage4_1_VocmarkToTempMarker END: Out=	gaeil
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.001000 seconds for input: Gaeil
+Af. Stage4_1_VocmarkToTempMarker: [gaeil]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	gaeil
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	gaeil
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.001000 seconds for input: Gaeil
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [gaeil]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	gaeil
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	gMKR_AE_SEQil
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.001000 seconds for input: Gaeil
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [gMKR_AE_SEQil]
+  Stage4_4_ResolveTempVowelMarkers START: In=	gMKR_AE_SEQil
+  Stage4_4_ResolveTempVowelMarkers END: Out=	geːil
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.001000 seconds for input: Gaeil
+Af. Stage4_4_ResolveTempVowelMarkers: [geːil]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	geːil
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	geːil
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.001000 seconds for input: Gaeil
+Af. Stage4_4_1_VocalizeLenitedFricatives: [geːil]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	geːil
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	geːɪl
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.006000 seconds for input: Gaeil
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [geːɪl]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	geːɪl
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	geːɪl
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.008000 seconds for input: Gaeil
+Af. Stage4_5_1_DisyllabicShortLongRaising: [geːɪl]
+  Stage4_5_2_ConnachtSpecificVowelShifts START: In=	geːɪl
+  Stage4_5_2_ConnachtSpecificVowelShifts END: Out=	geːɪl
+PERF: Stage Stage4_5_2_ConnachtSpecificVowelShifts took 0.001000 seconds for input: Gaeil
+Af. Stage4_5_2_ConnachtSpecificVowelShifts: [geːɪl]
+  Nasalization START (Proc Helper): In=	geːɪl
+  Nasalization END (no change by unit_processor): Out=	geːɪl
+PERF: Stage Nasalization took 0.007000 seconds for input: Gaeil
+Af. Nasalization: [geːɪl]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	geːɪl
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc Helper): In=	geːɪl
+  Stage4_6_UnstressedVowelReduction_Procedural END (modified by unit_processor): Out=	geːəl
+  Stage4_6_UnstressedVowelReduction_Procedural END (Outer): Out=	geːəl
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.015000 seconds for input: Gaeil
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [geːəl]
+  EpenthesisAndStrongSonorants START (Proc): In=	geːəl
+  EpenthesisAndStrongSonorants END (Proc): Out=	geːəl
+PERF: Stage EpenthesisAndStrongSonorants took 0.023000 seconds for input: Gaeil
+Af. EpenthesisAndStrongSonorants: [geːəl]
+  Diacritics START: In=	geːəl
+  Diacritics END: Out=	geːəl̪
+PERF: Stage Diacritics took 0.002000 seconds for input: Gaeil
+Af. Diacritics: [geːəl̪]
+  FinalCleanup START: In=	geːəl̪
+  FinalCleanup END: Out=	geːəl̪
+PERF: Stage FinalCleanup took 0.001000 seconds for input: Gaeil
+Af. FinalCleanup: [geːəl̪]
+Gaeil                          -> [geːəl̪]
+
+--- Transcribing: -ós ---
+  PreProcess START: In=	-ós
+  PreProcess END: Out=	-ós
+PERF: Stage PreProcess took 0.000000 seconds for input: -ós
+  MarkDigraphsAndVocalisationTriggers START: In=	-ós
+  MarkDigraphsAndVocalisationTriggers END: Out=	-ós
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.004000 seconds for input: -ós
+Af. MarkDigraphsAndVocalisationTriggers: [-ós]
+  Stage2_5_MarkSuffixes START: In=	-ós
+  Stage2_5_MarkSuffixes END: Out=	-MKR_SUFFIX_OOS
+PERF: Stage Stage2_5_MarkSuffixes took 0.002000 seconds for input: -ós
+Af. Stage2_5_MarkSuffixes: [-MKR_SUFFIX_OOS]
+  ConsonantResolution START (Proc): In=	-MKR_SUFFIX_OOS
+  ConsonantResolution END (Proc): Out=	-MKR_SUFFIX_OOS
+PERF: Stage ConsonantResolution took 0.010000 seconds for input: -ós
+Af. ConsonantResolution: [-MKR_SUFFIX_OOS]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	-MKR_SUFFIX_OOS
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	-MKR_SUFFIX_OOS
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.003000 seconds for input: -ós
+Af. Stage4_0_SpecificOrthoToTempMarker: [-MKR_SUFFIX_OOS]
+  Stage4_0_1_Resolve_CH_Marker START: In=	-MKR_SUFFIX_OOS
+  Stage4_0_1_Resolve_CH_Marker END: Out=	-MKR_SUFFIX_OOS
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.000000 seconds for input: -ós
+Af. Stage4_0_1_Resolve_CH_Marker: [-MKR_SUFFIX_OOS]
+  Stage4_1_VocmarkToTempMarker START: In=	-MKR_SUFFIX_OOS
+  Stage4_1_VocmarkToTempMarker END: Out=	-MKR_SUFFIX_OOS
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.000000 seconds for input: -ós
+Af. Stage4_1_VocmarkToTempMarker: [-MKR_SUFFIX_OOS]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	-MKR_SUFFIX_OOS
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	-MKR_SUFFIX_OOS
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.002000 seconds for input: -ós
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [-MKR_SUFFIX_OOS]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	-MKR_SUFFIX_OOS
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	-MKR_SUFFIX_OOS
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.001000 seconds for input: -ós
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [-MKR_SUFFIX_OOS]
+  Stage4_4_ResolveTempVowelMarkers START: In=	-MKR_SUFFIX_OOS
+  Stage4_4_ResolveTempVowelMarkers END: Out=	-oːsˠ
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.001000 seconds for input: -ós
+Af. Stage4_4_ResolveTempVowelMarkers: [-oːsˠ]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	-oːsˠ
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	-oːsˠ
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.001000 seconds for input: -ós
+Af. Stage4_4_1_VocalizeLenitedFricatives: [-oːsˠ]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	-oːsˠ
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	-oːsˠ
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.006000 seconds for input: -ós
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [-oːsˠ]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	-oːsˠ
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	-oːsˠ
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.007000 seconds for input: -ós
+Af. Stage4_5_1_DisyllabicShortLongRaising: [-oːsˠ]
+  Stage4_5_2_ConnachtSpecificVowelShifts START: In=	-oːsˠ
+  Stage4_5_2_ConnachtSpecificVowelShifts END: Out=	-oːsˠ
+PERF: Stage Stage4_5_2_ConnachtSpecificVowelShifts took 0.000000 seconds for input: -ós
+Af. Stage4_5_2_ConnachtSpecificVowelShifts: [-oːsˠ]
+  Nasalization START (Proc Helper): In=	-oːsˠ
+  Nasalization END (no change by unit_processor): Out=	-oːsˠ
+PERF: Stage Nasalization took 0.007000 seconds for input: -ós
+Af. Nasalization: [-oːsˠ]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	-oːsˠ
+  Stage4_6_UnstressedVowelReduction_Procedural END (monosyllable): Out=	-oːsˠ
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.008000 seconds for input: -ós
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [-oːsˠ]
+  EpenthesisAndStrongSonorants START (Proc): In=	-oːsˠ
+  EpenthesisAndStrongSonorants END (Proc): Out=	-oːsˠ
+PERF: Stage EpenthesisAndStrongSonorants took 0.025000 seconds for input: -ós
+Af. EpenthesisAndStrongSonorants: [-oːsˠ]
+  Diacritics START: In=	-oːsˠ
+  Diacritics END: Out=	-oːsˠ
+PERF: Stage Diacritics took 0.001000 seconds for input: -ós
+Af. Diacritics: [-oːsˠ]
+  FinalCleanup START: In=	-oːsˠ
+  FinalCleanup END: Out=	oːsˠ
+PERF: Stage FinalCleanup took 0.001000 seconds for input: -ós
+Af. FinalCleanup: [oːsˠ]
+-ós                           -> [oːsˠ]
+
+--- Transcribing: Dún ---
+  PreProcess START: In=	Dún
+  PreProcess END: Out=	dún
+PERF: Stage PreProcess took 0.001000 seconds for input: Dún
+  MarkDigraphsAndVocalisationTriggers START: In=	dún
+  MarkDigraphsAndVocalisationTriggers END: Out=	dún
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.005000 seconds for input: Dún
+Af. MarkDigraphsAndVocalisationTriggers: [dún]
+  Stage2_5_MarkSuffixes START: In=	dún
+  Stage2_5_MarkSuffixes END: Out=	dún
+PERF: Stage Stage2_5_MarkSuffixes took 0.002000 seconds for input: Dún
+Af. Stage2_5_MarkSuffixes: [dún]
+  ConsonantResolution START (Proc): In=	dún
+  ConsonantResolution END (Proc): Out=	dún
+PERF: Stage ConsonantResolution took 0.002000 seconds for input: Dún
+Af. ConsonantResolution: [dún]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	dún
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	dún
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.001000 seconds for input: Dún
+Af. Stage4_0_SpecificOrthoToTempMarker: [dún]
+  Stage4_0_1_Resolve_CH_Marker START: In=	dún
+  Stage4_0_1_Resolve_CH_Marker END: Out=	dún
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.000000 seconds for input: Dún
+Af. Stage4_0_1_Resolve_CH_Marker: [dún]
+  Stage4_1_VocmarkToTempMarker START: In=	dún
+  Stage4_1_VocmarkToTempMarker END: Out=	dún
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.000000 seconds for input: Dún
+Af. Stage4_1_VocmarkToTempMarker: [dún]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	dún
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	dMKR_U_ACT_LNGn
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.001000 seconds for input: Dún
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [dMKR_U_ACT_LNGn]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	dMKR_U_ACT_LNGn
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	dMKR_U_ACT_LNGn
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.001000 seconds for input: Dún
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [dMKR_U_ACT_LNGn]
+  Stage4_4_ResolveTempVowelMarkers START: In=	dMKR_U_ACT_LNGn
+  Stage4_4_ResolveTempVowelMarkers END: Out=	duːn
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.002000 seconds for input: Dún
+Af. Stage4_4_ResolveTempVowelMarkers: [duːn]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	duːn
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	duːn
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.000000 seconds for input: Dún
+Af. Stage4_4_1_VocalizeLenitedFricatives: [duːn]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	duːn
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	duːn
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.004000 seconds for input: Dún
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [duːn]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	duːn
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	duːn
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.007000 seconds for input: Dún
+Af. Stage4_5_1_DisyllabicShortLongRaising: [duːn]
+  Stage4_5_2_ConnachtSpecificVowelShifts START: In=	duːn
+  Stage4_5_2_ConnachtSpecificVowelShifts END: Out=	duːn
+PERF: Stage Stage4_5_2_ConnachtSpecificVowelShifts took 0.001000 seconds for input: Dún
+Af. Stage4_5_2_ConnachtSpecificVowelShifts: [duːn]
+  Nasalization START (Proc Helper): In=	duːn
+  Nasalization END (no change by unit_processor): Out=	duːn
+PERF: Stage Nasalization took 0.009000 seconds for input: Dún
+Af. Nasalization: [duːn]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	duːn
+  Stage4_6_UnstressedVowelReduction_Procedural END (monosyllable): Out=	duːn
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.007000 seconds for input: Dún
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [duːn]
+  EpenthesisAndStrongSonorants START (Proc): In=	duːn
+  EpenthesisAndStrongSonorants END (Proc): Out=	duːn
+PERF: Stage EpenthesisAndStrongSonorants took 0.017000 seconds for input: Dún
+Af. EpenthesisAndStrongSonorants: [duːn]
+  Diacritics START: In=	duːn
+  Diacritics END: Out=	d̪uːn̪
+PERF: Stage Diacritics took 0.002000 seconds for input: Dún
+Af. Diacritics: [d̪uːn̪]
+  FinalCleanup START: In=	d̪uːn̪
+  FinalCleanup END: Out=	d̪uːn̪
+PERF: Stage FinalCleanup took 0.001000 seconds for input: Dún
+Af. FinalCleanup: [d̪uːn̪]
+Dún                           -> [d̪uːn̪]
+
+--- Transcribing: Béal ---
+  PreProcess START: In=	Béal
+  PreProcess END: Out=	béal
+PERF: Stage PreProcess took 0.000000 seconds for input: Béal
+  MarkDigraphsAndVocalisationTriggers START: In=	béal
+  MarkDigraphsAndVocalisationTriggers END: Out=	béal
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.003000 seconds for input: Béal
+Af. MarkDigraphsAndVocalisationTriggers: [béal]
+  Stage2_5_MarkSuffixes START: In=	béal
+  Stage2_5_MarkSuffixes END: Out=	béal
+PERF: Stage Stage2_5_MarkSuffixes took 0.003000 seconds for input: Béal
+Af. Stage2_5_MarkSuffixes: [béal]
+  ConsonantResolution START (Proc): In=	béal
+  ConsonantResolution END (Proc): Out=	b'éal
+PERF: Stage ConsonantResolution took 0.002000 seconds for input: Béal
+Af. ConsonantResolution: [b'éal]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	b'éal
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	b'éal
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.000000 seconds for input: Béal
+Af. Stage4_0_SpecificOrthoToTempMarker: [b'éal]
+  Stage4_0_1_Resolve_CH_Marker START: In=	b'éal
+  Stage4_0_1_Resolve_CH_Marker END: Out=	b'éal
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.001000 seconds for input: Béal
+Af. Stage4_0_1_Resolve_CH_Marker: [b'éal]
+  Stage4_1_VocmarkToTempMarker START: In=	b'éal
+  Stage4_1_VocmarkToTempMarker END: Out=	b'éal
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.001000 seconds for input: Béal
+Af. Stage4_1_VocmarkToTempMarker: [b'éal]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	b'éal
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	b'MKR_E_ACT_LNGal
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.000000 seconds for input: Béal
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [b'MKR_E_ACT_LNGal]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	b'MKR_E_ACT_LNGal
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	b'MKR_E_ACT_LNGal
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.001000 seconds for input: Béal
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [b'MKR_E_ACT_LNGal]
+  Stage4_4_ResolveTempVowelMarkers START: In=	b'MKR_E_ACT_LNGal
+  Stage4_4_ResolveTempVowelMarkers END: Out=	b'eːal
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.002000 seconds for input: Béal
+Af. Stage4_4_ResolveTempVowelMarkers: [b'eːal]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	b'eːal
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	b'eːal
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.001000 seconds for input: Béal
+Af. Stage4_4_1_VocalizeLenitedFricatives: [b'eːal]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	b'eːal
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	b'eːal
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.003000 seconds for input: Béal
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [b'eːal]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	b'eːal
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	b'eːal
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.007000 seconds for input: Béal
+Af. Stage4_5_1_DisyllabicShortLongRaising: [b'eːal]
+  Stage4_5_2_ConnachtSpecificVowelShifts START: In=	b'eːal
+  Stage4_5_2_ConnachtSpecificVowelShifts END: Out=	b'eːal
+PERF: Stage Stage4_5_2_ConnachtSpecificVowelShifts took 0.000000 seconds for input: Béal
+Af. Stage4_5_2_ConnachtSpecificVowelShifts: [b'eːal]
+  Nasalization START (Proc Helper): In=	b'eːal
+  Nasalization END (no change by unit_processor): Out=	b'eːal
+PERF: Stage Nasalization took 0.007000 seconds for input: Béal
+Af. Nasalization: [b'eːal]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	b'eːal
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc Helper): In=	b'eːal
+  Stage4_6_UnstressedVowelReduction_Procedural END (modified by unit_processor): Out=	b'eːəl
+  Stage4_6_UnstressedVowelReduction_Procedural END (Outer): Out=	b'eːəl
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.014000 seconds for input: Béal
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [b'eːəl]
+  EpenthesisAndStrongSonorants START (Proc): In=	b'eːəl
+  EpenthesisAndStrongSonorants END (Proc): Out=	b'eːəl
+PERF: Stage EpenthesisAndStrongSonorants took 0.017000 seconds for input: Béal
+Af. EpenthesisAndStrongSonorants: [b'eːəl]
+  Diacritics START: In=	b'eːəl
+  Diacritics END: Out=	b'eːəl̪
+PERF: Stage Diacritics took 0.002000 seconds for input: Béal
+Af. Diacritics: [b'eːəl̪]
+  FinalCleanup START: In=	b'eːəl̪
+  FinalCleanup END: Out=	bʲeːəl̪
+PERF: Stage FinalCleanup took 0.001000 seconds for input: Béal
+Af. FinalCleanup: [bʲeːəl̪]
+Béal                          -> [bʲeːəl̪]
+
+--- Transcribing: -igh ---
+  PreProcess START: In=	-igh
+  PreProcess END: Out=	-igh
+PERF: Stage PreProcess took 0.001000 seconds for input: -igh
+  MarkDigraphsAndVocalisationTriggers START: In=	-igh
+  MarkDigraphsAndVocalisationTriggers END: Out=	-iMKR_GH
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.003000 seconds for input: -igh
+Af. MarkDigraphsAndVocalisationTriggers: [-iMKR_GH]
+  Stage2_5_MarkSuffixes START: In=	-iMKR_GH
+  Stage2_5_MarkSuffixes END: Out=	-igh
+PERF: Stage Stage2_5_MarkSuffixes took 0.004000 seconds for input: -igh
+Af. Stage2_5_MarkSuffixes: [-igh]
+  ConsonantResolution START (Proc): In=	-igh
+  ConsonantResolution END (Proc): Out=	-ig'h
+PERF: Stage ConsonantResolution took 0.003000 seconds for input: -igh
+Af. ConsonantResolution: [-ig'h]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	-ig'h
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	-ig'h
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.001000 seconds for input: -igh
+Af. Stage4_0_SpecificOrthoToTempMarker: [-ig'h]
+  Stage4_0_1_Resolve_CH_Marker START: In=	-ig'h
+  Stage4_0_1_Resolve_CH_Marker END: Out=	-ig'h
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.000000 seconds for input: -igh
+Af. Stage4_0_1_Resolve_CH_Marker: [-ig'h]
+  Stage4_1_VocmarkToTempMarker START: In=	-ig'h
+  Stage4_1_VocmarkToTempMarker END: Out=	-ig'h
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.000000 seconds for input: -igh
+Af. Stage4_1_VocmarkToTempMarker: [-ig'h]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	-ig'h
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	-ig'h
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.000000 seconds for input: -igh
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [-ig'h]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	-ig'h
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	-ig'h
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.001000 seconds for input: -igh
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [-ig'h]
+  Stage4_4_ResolveTempVowelMarkers START: In=	-ig'h
+  Stage4_4_ResolveTempVowelMarkers END: Out=	-ig'h
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.001000 seconds for input: -igh
+Af. Stage4_4_ResolveTempVowelMarkers: [-ig'h]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	-ig'h
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	-ig'h
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.001000 seconds for input: -igh
+Af. Stage4_4_1_VocalizeLenitedFricatives: [-ig'h]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	-ig'h
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	-ɪg'h
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.004000 seconds for input: -igh
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [-ɪg'h]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	-ɪg'h
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	-ɪg'h
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.008000 seconds for input: -igh
+Af. Stage4_5_1_DisyllabicShortLongRaising: [-ɪg'h]
+  Stage4_5_2_ConnachtSpecificVowelShifts START: In=	-ɪg'h
+  Stage4_5_2_ConnachtSpecificVowelShifts END: Out=	-ɪg'h
+PERF: Stage Stage4_5_2_ConnachtSpecificVowelShifts took 0.000000 seconds for input: -igh
+Af. Stage4_5_2_ConnachtSpecificVowelShifts: [-ɪg'h]
+  Nasalization START (Proc Helper): In=	-ɪg'h
+  Nasalization END (no change by unit_processor): Out=	-ɪg'h
+PERF: Stage Nasalization took 0.008000 seconds for input: -igh
+Af. Nasalization: [-ɪg'h]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	-ɪg'h
+  Stage4_6_UnstressedVowelReduction_Procedural END (monosyllable): Out=	-ɪg'h
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.008000 seconds for input: -igh
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [-ɪg'h]
+  EpenthesisAndStrongSonorants START (Proc): In=	-ɪg'h
+  EpenthesisAndStrongSonorants END (Proc): Out=	-ɪg'h
+PERF: Stage EpenthesisAndStrongSonorants took 0.019000 seconds for input: -igh
+Af. EpenthesisAndStrongSonorants: [-ɪg'h]
+  Diacritics START: In=	-ɪg'h
+  Diacritics END: Out=	-ɪg'h
+PERF: Stage Diacritics took 0.001000 seconds for input: -igh
+Af. Diacritics: [-ɪg'h]
+  FinalCleanup START: In=	-ɪg'h
+  FinalCleanup END: Out=	ɪɟ
+PERF: Stage FinalCleanup took 0.001000 seconds for input: -igh
+Af. FinalCleanup: [ɪɟ]
+-igh                           -> [ɪɟ]
+
+--- Transcribing: -fidh ---
+  PreProcess START: In=	-fidh
+  PreProcess END: Out=	-fidh
+PERF: Stage PreProcess took 0.001000 seconds for input: -fidh
+  MarkDigraphsAndVocalisationTriggers START: In=	-fidh
+  MarkDigraphsAndVocalisationTriggers END: Out=	-fMKR_IVOCDFIN
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.003000 seconds for input: -fidh
+Af. MarkDigraphsAndVocalisationTriggers: [-fMKR_IVOCDFIN]
+  Stage2_5_MarkSuffixes START: In=	-fMKR_IVOCDFIN
+  Stage2_5_MarkSuffixes END: Out=	-MKR_SUFFIX_FIDH
+PERF: Stage Stage2_5_MarkSuffixes took 0.002000 seconds for input: -fidh
+Af. Stage2_5_MarkSuffixes: [-MKR_SUFFIX_FIDH]
+  ConsonantResolution START (Proc): In=	-MKR_SUFFIX_FIDH
+  ConsonantResolution END (Proc): Out=	-MKR_SUFFIX_FIDH
+PERF: Stage ConsonantResolution took 0.014000 seconds for input: -fidh
+Af. ConsonantResolution: [-MKR_SUFFIX_FIDH]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	-MKR_SUFFIX_FIDH
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	-MKR_SUFFIX_FIDH
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.002000 seconds for input: -fidh
+Af. Stage4_0_SpecificOrthoToTempMarker: [-MKR_SUFFIX_FIDH]
+  Stage4_0_1_Resolve_CH_Marker START: In=	-MKR_SUFFIX_FIDH
+  Stage4_0_1_Resolve_CH_Marker END: Out=	-MKR_SUFFIX_FIDH
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.001000 seconds for input: -fidh
+Af. Stage4_0_1_Resolve_CH_Marker: [-MKR_SUFFIX_FIDH]
+  Stage4_1_VocmarkToTempMarker START: In=	-MKR_SUFFIX_FIDH
+  Stage4_1_VocmarkToTempMarker END: Out=	-MKR_SUFFIX_FIDH
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.001000 seconds for input: -fidh
+Af. Stage4_1_VocmarkToTempMarker: [-MKR_SUFFIX_FIDH]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	-MKR_SUFFIX_FIDH
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	-MKR_SUFFIX_FIDH
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.001000 seconds for input: -fidh
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [-MKR_SUFFIX_FIDH]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	-MKR_SUFFIX_FIDH
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	-MKR_SUFFIX_FIDH
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.001000 seconds for input: -fidh
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [-MKR_SUFFIX_FIDH]
+  Stage4_4_ResolveTempVowelMarkers START: In=	-MKR_SUFFIX_FIDH
+  Stage4_4_ResolveTempVowelMarkers END: Out=	-iː
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.003000 seconds for input: -fidh
+Af. Stage4_4_ResolveTempVowelMarkers: [-iː]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	-iː
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	-iː
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.000000 seconds for input: -fidh
+Af. Stage4_4_1_VocalizeLenitedFricatives: [-iː]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	-iː
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	-iː
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.003000 seconds for input: -fidh
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [-iː]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	-iː
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	-iː
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.004000 seconds for input: -fidh
+Af. Stage4_5_1_DisyllabicShortLongRaising: [-iː]
+  Stage4_5_2_ConnachtSpecificVowelShifts START: In=	-iː
+  Stage4_5_2_ConnachtSpecificVowelShifts END: Out=	-iː
+PERF: Stage Stage4_5_2_ConnachtSpecificVowelShifts took 0.000000 seconds for input: -fidh
+Af. Stage4_5_2_ConnachtSpecificVowelShifts: [-iː]
+  Nasalization START (Proc Helper): In=	-iː
+  Nasalization END (no change by unit_processor): Out=	-iː
+PERF: Stage Nasalization took 0.003000 seconds for input: -fidh
+Af. Nasalization: [-iː]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	-iː
+  Stage4_6_UnstressedVowelReduction_Procedural END (monosyllable): Out=	-iː
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.004000 seconds for input: -fidh
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [-iː]
+  EpenthesisAndStrongSonorants START (Proc): In=	-iː
+  EpenthesisAndStrongSonorants END (Proc): Out=	-iː
+PERF: Stage EpenthesisAndStrongSonorants took 0.013000 seconds for input: -fidh
+Af. EpenthesisAndStrongSonorants: [-iː]
+  Diacritics START: In=	-iː
+  Diacritics END: Out=	-iː
+PERF: Stage Diacritics took 0.000000 seconds for input: -fidh
+Af. Diacritics: [-iː]
+  FinalCleanup START: In=	-iː
+  FinalCleanup END: Out=	iː
+PERF: Stage FinalCleanup took 0.000000 seconds for input: -fidh
+Af. FinalCleanup: [iː]
+-fidh                          -> [iː]
+
+--- Transcribing: -idís ---
+  PreProcess START: In=	-idís
+  PreProcess END: Out=	-idís
+PERF: Stage PreProcess took 0.000000 seconds for input: -idís
+  MarkDigraphsAndVocalisationTriggers START: In=	-idís
+  MarkDigraphsAndVocalisationTriggers END: Out=	-idís
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.004000 seconds for input: -idís
+Af. MarkDigraphsAndVocalisationTriggers: [-idís]
+  Stage2_5_MarkSuffixes START: In=	-idís
+  Stage2_5_MarkSuffixes END: Out=	-idís
+PERF: Stage Stage2_5_MarkSuffixes took 0.005000 seconds for input: -idís
+Af. Stage2_5_MarkSuffixes: [-idís]
+  ConsonantResolution START (Proc): In=	-idís
+  ConsonantResolution END (Proc): Out=	-id'ís'
+PERF: Stage ConsonantResolution took 0.005000 seconds for input: -idís
+Af. ConsonantResolution: [-id'ís']
+  Stage4_0_SpecificOrthoToTempMarker START: In=	-id'ís'
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	-id'ís'
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.002000 seconds for input: -idís
+Af. Stage4_0_SpecificOrthoToTempMarker: [-id'ís']
+  Stage4_0_1_Resolve_CH_Marker START: In=	-id'ís'
+  Stage4_0_1_Resolve_CH_Marker END: Out=	-id'ís'
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.001000 seconds for input: -idís
+Af. Stage4_0_1_Resolve_CH_Marker: [-id'ís']
+  Stage4_1_VocmarkToTempMarker START: In=	-id'ís'
+  Stage4_1_VocmarkToTempMarker END: Out=	-id'ís'
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.000000 seconds for input: -idís
+Af. Stage4_1_VocmarkToTempMarker: [-id'ís']
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	-id'ís'
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	-id'MKR_I_ACT_LNGs'
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.001000 seconds for input: -idís
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [-id'MKR_I_ACT_LNGs']
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	-id'MKR_I_ACT_LNGs'
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	-id'MKR_I_ACT_LNGs'
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.001000 seconds for input: -idís
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [-id'MKR_I_ACT_LNGs']
+  Stage4_4_ResolveTempVowelMarkers START: In=	-id'MKR_I_ACT_LNGs'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	-id'iːs'
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.018000 seconds for input: -idís
+Af. Stage4_4_ResolveTempVowelMarkers: [-id'iːs']
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	-id'iːs'
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	-id'iːs'
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.006000 seconds for input: -idís
+Af. Stage4_4_1_VocalizeLenitedFricatives: [-id'iːs']
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	-id'iːs'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	-ɪd'iːs'
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.019000 seconds for input: -idís
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [-ɪd'iːs']
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	-ɪd'iːs'
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	-ɪd'iːs'
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.018000 seconds for input: -idís
+Af. Stage4_5_1_DisyllabicShortLongRaising: [-ɪd'iːs']
+  Stage4_5_2_ConnachtSpecificVowelShifts START: In=	-ɪd'iːs'
+  Stage4_5_2_ConnachtSpecificVowelShifts END: Out=	-ɪd'iːs'
+PERF: Stage Stage4_5_2_ConnachtSpecificVowelShifts took 0.000000 seconds for input: -idís
+Af. Stage4_5_2_ConnachtSpecificVowelShifts: [-ɪd'iːs']
+  Nasalization START (Proc Helper): In=	-ɪd'iːs'
+  Nasalization END (no change by unit_processor): Out=	-ɪd'iːs'
+PERF: Stage Nasalization took 0.016000 seconds for input: -idís
+Af. Nasalization: [-ɪd'iːs']
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	-ɪd'iːs'
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc Helper): In=	-ɪd'iːs'
+  Stage4_6_UnstressedVowelReduction_Procedural END (no change by unit_processor): Out=	-ɪd'iːs'
+  Stage4_6_UnstressedVowelReduction_Procedural END (Outer): Out=	-ɪd'iːs'
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.033000 seconds for input: -idís
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [-ɪd'iːs']
+  EpenthesisAndStrongSonorants START (Proc): In=	-ɪd'iːs'
+  EpenthesisAndStrongSonorants END (Proc): Out=	-ɪd'iːs'
+PERF: Stage EpenthesisAndStrongSonorants took 0.029000 seconds for input: -idís
+Af. EpenthesisAndStrongSonorants: [-ɪd'iːs']
+  Diacritics START: In=	-ɪd'iːs'
+  Diacritics END: Out=	-ɪd'iːs'
+PERF: Stage Diacritics took 0.001000 seconds for input: -idís
+Af. Diacritics: [-ɪd'iːs']
+  FinalCleanup START: In=	-ɪd'iːs'
+  FinalCleanup END: Out=	ɪdʲiːʃ
+PERF: Stage FinalCleanup took 0.001000 seconds for input: -idís
+Af. FinalCleanup: [ɪdʲiːʃ]
+-idís                         -> [ɪdʲiːʃ]
+
+--- Transcribing: -ófar ---
+  PreProcess START: In=	-ófar
+  PreProcess END: Out=	-ófar
+PERF: Stage PreProcess took 0.001000 seconds for input: -ófar
+  MarkDigraphsAndVocalisationTriggers START: In=	-ófar
+  MarkDigraphsAndVocalisationTriggers END: Out=	-ófar
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.005000 seconds for input: -ófar
+Af. MarkDigraphsAndVocalisationTriggers: [-ófar]
+  Stage2_5_MarkSuffixes START: In=	-ófar
+  Stage2_5_MarkSuffixes END: Out=	-ófar
+PERF: Stage Stage2_5_MarkSuffixes took 0.005000 seconds for input: -ófar
+Af. Stage2_5_MarkSuffixes: [-ófar]
+  ConsonantResolution START (Proc): In=	-ófar
+  ConsonantResolution END (Proc): Out=	-ófar
+PERF: Stage ConsonantResolution took 0.004000 seconds for input: -ófar
+Af. ConsonantResolution: [-ófar]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	-ófar
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	-ófar
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.002000 seconds for input: -ófar
+Af. Stage4_0_SpecificOrthoToTempMarker: [-ófar]
+  Stage4_0_1_Resolve_CH_Marker START: In=	-ófar
+  Stage4_0_1_Resolve_CH_Marker END: Out=	-ófar
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.000000 seconds for input: -ófar
+Af. Stage4_0_1_Resolve_CH_Marker: [-ófar]
+  Stage4_1_VocmarkToTempMarker START: In=	-ófar
+  Stage4_1_VocmarkToTempMarker END: Out=	-ófar
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.000000 seconds for input: -ófar
+Af. Stage4_1_VocmarkToTempMarker: [-ófar]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	-ófar
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	-MKR_O_ACT_LNGfar
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.001000 seconds for input: -ófar
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [-MKR_O_ACT_LNGfar]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	-MKR_O_ACT_LNGfar
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	-MKR_O_ACT_LNGfar
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.000000 seconds for input: -ófar
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [-MKR_O_ACT_LNGfar]
+  Stage4_4_ResolveTempVowelMarkers START: In=	-MKR_O_ACT_LNGfar
+  Stage4_4_ResolveTempVowelMarkers END: Out=	-oːfar
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.001000 seconds for input: -ófar
+Af. Stage4_4_ResolveTempVowelMarkers: [-oːfar]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	-oːfar
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	-oːfar
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.001000 seconds for input: -ófar
+Af. Stage4_4_1_VocalizeLenitedFricatives: [-oːfar]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	-oːfar
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	-oːfar
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.003000 seconds for input: -ófar
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [-oːfar]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	-oːfar
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	-oːfar
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.010000 seconds for input: -ófar
+Af. Stage4_5_1_DisyllabicShortLongRaising: [-oːfar]
+  Stage4_5_2_ConnachtSpecificVowelShifts START: In=	-oːfar
+  Stage4_5_2_ConnachtSpecificVowelShifts END: Out=	-oːfar
+PERF: Stage Stage4_5_2_ConnachtSpecificVowelShifts took 0.001000 seconds for input: -ófar
+Af. Stage4_5_2_ConnachtSpecificVowelShifts: [-oːfar]
+  Nasalization START (Proc Helper): In=	-oːfar
+  Nasalization END (no change by unit_processor): Out=	-oːfar
+PERF: Stage Nasalization took 0.011000 seconds for input: -ófar
+Af. Nasalization: [-oːfar]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	-oːfar
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc Helper): In=	-oːfar
+  Stage4_6_UnstressedVowelReduction_Procedural END (modified by unit_processor): Out=	-oːfər
+  Stage4_6_UnstressedVowelReduction_Procedural END (Outer): Out=	-oːfər
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.026000 seconds for input: -ófar
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [-oːfər]
+  EpenthesisAndStrongSonorants START (Proc): In=	-oːfər
+  EpenthesisAndStrongSonorants END (Proc): Out=	-oːfər
+PERF: Stage EpenthesisAndStrongSonorants took 0.024000 seconds for input: -ófar
+Af. EpenthesisAndStrongSonorants: [-oːfər]
+  Diacritics START: In=	-oːfər
+  Diacritics END: Out=	-oːfˠəɾˠ
+PERF: Stage Diacritics took 0.003000 seconds for input: -ófar
+Af. Diacritics: [-oːfˠəɾˠ]
+  FinalCleanup START: In=	-oːfˠəɾˠ
+  FinalCleanup END: Out=	oːfˠəɾˠ
+PERF: Stage FinalCleanup took 0.001000 seconds for input: -ófar
+Af. FinalCleanup: [oːfˠəɾˠ]
+-ófar                         -> [oːfˠəɾˠ]
+
+--- Transcribing: -úint ---
+  PreProcess START: In=	-úint
+  PreProcess END: Out=	-úint
+PERF: Stage PreProcess took 0.001000 seconds for input: -úint
+  MarkDigraphsAndVocalisationTriggers START: In=	-úint
+  MarkDigraphsAndVocalisationTriggers END: Out=	-úint
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.006000 seconds for input: -úint
+Af. MarkDigraphsAndVocalisationTriggers: [-úint]
+  Stage2_5_MarkSuffixes START: In=	-úint
+  Stage2_5_MarkSuffixes END: Out=	-MKR_SUFFIX_UUNTJ
+PERF: Stage Stage2_5_MarkSuffixes took 0.001000 seconds for input: -úint
+Af. Stage2_5_MarkSuffixes: [-MKR_SUFFIX_UUNTJ]
+  ConsonantResolution START (Proc): In=	-MKR_SUFFIX_UUNTJ
+  ConsonantResolution END (Proc): Out=	-MKR_SUFFIX_UUNTJ
+PERF: Stage ConsonantResolution took 0.014000 seconds for input: -úint
+Af. ConsonantResolution: [-MKR_SUFFIX_UUNTJ]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	-MKR_SUFFIX_UUNTJ
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	-MKR_SUFFIX_UUNTJ
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.002000 seconds for input: -úint
+Af. Stage4_0_SpecificOrthoToTempMarker: [-MKR_SUFFIX_UUNTJ]
+  Stage4_0_1_Resolve_CH_Marker START: In=	-MKR_SUFFIX_UUNTJ
+  Stage4_0_1_Resolve_CH_Marker END: Out=	-MKR_SUFFIX_UUNTJ
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.000000 seconds for input: -úint
+Af. Stage4_0_1_Resolve_CH_Marker: [-MKR_SUFFIX_UUNTJ]
+  Stage4_1_VocmarkToTempMarker START: In=	-MKR_SUFFIX_UUNTJ
+  Stage4_1_VocmarkToTempMarker END: Out=	-MKR_SUFFIX_UUNTJ
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.001000 seconds for input: -úint
+Af. Stage4_1_VocmarkToTempMarker: [-MKR_SUFFIX_UUNTJ]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	-MKR_SUFFIX_UUNTJ
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	-MKR_SUFFIX_UUNTJ
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.001000 seconds for input: -úint
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [-MKR_SUFFIX_UUNTJ]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	-MKR_SUFFIX_UUNTJ
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	-MKR_SUFFIX_UUNTJ
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.001000 seconds for input: -úint
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [-MKR_SUFFIX_UUNTJ]
+  Stage4_4_ResolveTempVowelMarkers START: In=	-MKR_SUFFIX_UUNTJ
+  Stage4_4_ResolveTempVowelMarkers END: Out=	-uːn̠ʲtʲ
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.002000 seconds for input: -úint
+Af. Stage4_4_ResolveTempVowelMarkers: [-uːn̠ʲtʲ]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	-uːn̠ʲtʲ
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	-uːn̠ʲtʲ
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.001000 seconds for input: -úint
+Af. Stage4_4_1_VocalizeLenitedFricatives: [-uːn̠ʲtʲ]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	-uːn̠ʲtʲ
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	-uːn̠ʲtʲ
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.007000 seconds for input: -úint
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [-uːn̠ʲtʲ]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	-uːn̠ʲtʲ
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	-uːn̠ʲtʲ
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.012000 seconds for input: -úint
+Af. Stage4_5_1_DisyllabicShortLongRaising: [-uːn̠ʲtʲ]
+  Stage4_5_2_ConnachtSpecificVowelShifts START: In=	-uːn̠ʲtʲ
+  Stage4_5_2_ConnachtSpecificVowelShifts END: Out=	-uːn̠ʲtʲ
+PERF: Stage Stage4_5_2_ConnachtSpecificVowelShifts took 0.000000 seconds for input: -úint
+Af. Stage4_5_2_ConnachtSpecificVowelShifts: [-uːn̠ʲtʲ]
+  Nasalization START (Proc Helper): In=	-uːn̠ʲtʲ
+  Nasalization END (no change by unit_processor): Out=	-uːn̠ʲtʲ
+PERF: Stage Nasalization took 0.012000 seconds for input: -úint
+Af. Nasalization: [-uːn̠ʲtʲ]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	-uːn̠ʲtʲ
+  Stage4_6_UnstressedVowelReduction_Procedural END (monosyllable): Out=	-uːn̠ʲtʲ
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.011000 seconds for input: -úint
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [-uːn̠ʲtʲ]
+  EpenthesisAndStrongSonorants START (Proc): In=	-uːn̠ʲtʲ
+  EpenthesisAndStrongSonorants END (Proc): Out=	-uːn̠ʲtʲ
+PERF: Stage EpenthesisAndStrongSonorants took 0.022000 seconds for input: -úint
+Af. EpenthesisAndStrongSonorants: [-uːn̠ʲtʲ]
+  Diacritics START: In=	-uːn̠ʲtʲ
+  Diacritics END: Out=	-uːn̠ʲtʲ
+PERF: Stage Diacritics took 0.001000 seconds for input: -úint
+Af. Diacritics: [-uːn̠ʲtʲ]
+  FinalCleanup START: In=	-uːn̠ʲtʲ
+  FinalCleanup END: Out=	uːn̠ʲtʲ
+PERF: Stage FinalCleanup took 0.002000 seconds for input: -úint
+Af. FinalCleanup: [uːn̠ʲtʲ]
+-úint                         -> [uːn̠ʲtʲ]
+
+--- Transcribing: -ithe ---
+  PreProcess START: In=	-ithe
+  PreProcess END: Out=	-ithe
+PERF: Stage PreProcess took 0.000000 seconds for input: -ithe
+  MarkDigraphsAndVocalisationTriggers START: In=	-ithe
+  MarkDigraphsAndVocalisationTriggers END: Out=	-iMKR_THe
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.004000 seconds for input: -ithe
+Af. MarkDigraphsAndVocalisationTriggers: [-iMKR_THe]
+  Stage2_5_MarkSuffixes START: In=	-iMKR_THe
+  Stage2_5_MarkSuffixes END: Out=	-MKR_SUFFIX_IHƏ_GEN
+PERF: Stage Stage2_5_MarkSuffixes took 0.002000 seconds for input: -ithe
+Af. Stage2_5_MarkSuffixes: [-MKR_SUFFIX_IHƏ_GEN]
+  ConsonantResolution START (Proc): In=	-MKR_SUFFIX_IHƏ_GEN
+  ConsonantResolution END (Proc): Out=	-MKR_SUFFIX_IHƏ_GEN
+PERF: Stage ConsonantResolution took 0.014000 seconds for input: -ithe
+Af. ConsonantResolution: [-MKR_SUFFIX_IHƏ_GEN]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	-MKR_SUFFIX_IHƏ_GEN
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	-MKR_SUFFIX_IHƏ_GEN
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.002000 seconds for input: -ithe
+Af. Stage4_0_SpecificOrthoToTempMarker: [-MKR_SUFFIX_IHƏ_GEN]
+  Stage4_0_1_Resolve_CH_Marker START: In=	-MKR_SUFFIX_IHƏ_GEN
+  Stage4_0_1_Resolve_CH_Marker END: Out=	-MKR_SUFFIX_IHƏ_GEN
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.001000 seconds for input: -ithe
+Af. Stage4_0_1_Resolve_CH_Marker: [-MKR_SUFFIX_IHƏ_GEN]
+  Stage4_1_VocmarkToTempMarker START: In=	-MKR_SUFFIX_IHƏ_GEN
+  Stage4_1_VocmarkToTempMarker END: Out=	-MKR_SUFFIX_IHƏ_GEN
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.001000 seconds for input: -ithe
+Af. Stage4_1_VocmarkToTempMarker: [-MKR_SUFFIX_IHƏ_GEN]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	-MKR_SUFFIX_IHƏ_GEN
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	-MKR_SUFFIX_IHƏ_GEN
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.001000 seconds for input: -ithe
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [-MKR_SUFFIX_IHƏ_GEN]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	-MKR_SUFFIX_IHƏ_GEN
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	-MKR_SUFFIX_IHƏ_GEN
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.000000 seconds for input: -ithe
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [-MKR_SUFFIX_IHƏ_GEN]
+  Stage4_4_ResolveTempVowelMarkers START: In=	-MKR_SUFFIX_IHƏ_GEN
+  Stage4_4_ResolveTempVowelMarkers END: Out=	-ɪhə
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.002000 seconds for input: -ithe
+Af. Stage4_4_ResolveTempVowelMarkers: [-ɪhə]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	-ɪhə
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	-ɪhə
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.001000 seconds for input: -ithe
+Af. Stage4_4_1_VocalizeLenitedFricatives: [-ɪhə]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	-ɪhə
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	-ɪhə
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.002000 seconds for input: -ithe
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [-ɪhə]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	-ɪhə
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	-ɪhə
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.009000 seconds for input: -ithe
+Af. Stage4_5_1_DisyllabicShortLongRaising: [-ɪhə]
+  Stage4_5_2_ConnachtSpecificVowelShifts START: In=	-ɪhə
+  Stage4_5_2_ConnachtSpecificVowelShifts END: Out=	-ɪhə
+PERF: Stage Stage4_5_2_ConnachtSpecificVowelShifts took 0.001000 seconds for input: -ithe
+Af. Stage4_5_2_ConnachtSpecificVowelShifts: [-ɪhə]
+  Nasalization START (Proc Helper): In=	-ɪhə
+  Nasalization END (no change by unit_processor): Out=	-ɪhə
+PERF: Stage Nasalization took 0.010000 seconds for input: -ithe
+Af. Nasalization: [-ɪhə]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	-ɪhə
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc Helper): In=	-ɪhə
+  Stage4_6_UnstressedVowelReduction_Procedural END (no change by unit_processor): Out=	-ɪhə
+  Stage4_6_UnstressedVowelReduction_Procedural END (Outer): Out=	-ɪhə
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.016000 seconds for input: -ithe
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [-ɪhə]
+  EpenthesisAndStrongSonorants START (Proc): In=	-ɪhə
+  EpenthesisAndStrongSonorants END (Proc): Out=	-ɪhə
+PERF: Stage EpenthesisAndStrongSonorants took 0.020000 seconds for input: -ithe
+Af. EpenthesisAndStrongSonorants: [-ɪhə]
+  Diacritics START: In=	-ɪhə
+  Diacritics END: Out=	-ɪhə
+PERF: Stage Diacritics took 0.001000 seconds for input: -ithe
+Af. Diacritics: [-ɪhə]
+  FinalCleanup START: In=	-ɪhə
+  FinalCleanup END: Out=	ɪhə
+PERF: Stage FinalCleanup took 0.002000 seconds for input: -ithe
+Af. FinalCleanup: [ɪhə]
+-ithe                          -> [ɪhə]
+
+--- Transcribing: Bhaile ---
+  LexicalLookup: Found '	Bhaile	' -> [	ˈbˠalʲə	]
+Bhaile                         -> [ˈbˠalʲə]
+
+--- Transcribing: Stiofáin ---
+  PreProcess START: In=	Stiofáin
+  PreProcess END: Out=	stiofáin
+PERF: Stage PreProcess took 0.000000 seconds for input: Stiofáin
+  MarkDigraphsAndVocalisationTriggers START: In=	stiofáin
+  MarkDigraphsAndVocalisationTriggers END: Out=	stiofáin
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.006000 seconds for input: Stiofáin
+Af. MarkDigraphsAndVocalisationTriggers: [stiofáin]
+  Stage2_5_MarkSuffixes START: In=	stiofáin
+  Stage2_5_MarkSuffixes END: Out=	stiofáin
+PERF: Stage Stage2_5_MarkSuffixes took 0.007000 seconds for input: Stiofáin
+Af. Stage2_5_MarkSuffixes: [stiofáin]
+  ConsonantResolution START (Proc): In=	stiofáin
+  ConsonantResolution END (Proc): Out=	st'iofáin
+PERF: Stage ConsonantResolution took 0.005000 seconds for input: Stiofáin
+Af. ConsonantResolution: [st'iofáin]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	st'iofáin
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	st'MKR_IO_SHT_TRGTfáin
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.003000 seconds for input: Stiofáin
+Af. Stage4_0_SpecificOrthoToTempMarker: [st'MKR_IO_SHT_TRGTfáin]
+  Stage4_0_1_Resolve_CH_Marker START: In=	st'MKR_IO_SHT_TRGTfáin
+  Stage4_0_1_Resolve_CH_Marker END: Out=	st'MKR_IO_SHT_TRGTfáin
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.001000 seconds for input: Stiofáin
+Af. Stage4_0_1_Resolve_CH_Marker: [st'MKR_IO_SHT_TRGTfáin]
+  Stage4_1_VocmarkToTempMarker START: In=	st'MKR_IO_SHT_TRGTfáin
+  Stage4_1_VocmarkToTempMarker END: Out=	st'MKR_IO_SHT_TRGTfáin
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.000000 seconds for input: Stiofáin
+Af. Stage4_1_VocmarkToTempMarker: [st'MKR_IO_SHT_TRGTfáin]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	st'MKR_IO_SHT_TRGTfáin
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	st'MKR_IO_SHT_TRGTfMKR_A_ACT_LNGin
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.001000 seconds for input: Stiofáin
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [st'MKR_IO_SHT_TRGTfMKR_A_ACT_LNGin]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	st'MKR_IO_SHT_TRGTfMKR_A_ACT_LNGin
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	st'MKR_IO_SHT_TRGTfMKR_A_ACT_LNGin
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.001000 seconds for input: Stiofáin
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [st'MKR_IO_SHT_TRGTfMKR_A_ACT_LNGin]
+  Stage4_4_ResolveTempVowelMarkers START: In=	st'MKR_IO_SHT_TRGTfMKR_A_ACT_LNGin
+  Stage4_4_ResolveTempVowelMarkers END: Out=	st'ɪfɑːin
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.003000 seconds for input: Stiofáin
+Af. Stage4_4_ResolveTempVowelMarkers: [st'ɪfɑːin]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	st'ɪfɑːin
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	st'ɪfɑːin
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.001000 seconds for input: Stiofáin
+Af. Stage4_4_1_VocalizeLenitedFricatives: [st'ɪfɑːin]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	st'ɪfɑːin
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	st'ɪfɑːɪn
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.006000 seconds for input: Stiofáin
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [st'ɪfɑːɪn]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	st'ɪfɑːɪn
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	st'ɪfɑːɪn
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.018000 seconds for input: Stiofáin
+Af. Stage4_5_1_DisyllabicShortLongRaising: [st'ɪfɑːɪn]
+  Stage4_5_2_ConnachtSpecificVowelShifts START: In=	st'ɪfɑːɪn
+  Stage4_5_2_ConnachtSpecificVowelShifts END: Out=	st'ɪfɑːɪn
+PERF: Stage Stage4_5_2_ConnachtSpecificVowelShifts took 0.001000 seconds for input: Stiofáin
+Af. Stage4_5_2_ConnachtSpecificVowelShifts: [st'ɪfɑːɪn]
+  Nasalization START (Proc Helper): In=	st'ɪfɑːɪn
+  Nasalization END (no change by unit_processor): Out=	st'ɪfɑːɪn
+PERF: Stage Nasalization took 0.016000 seconds for input: Stiofáin
+Af. Nasalization: [st'ɪfɑːɪn]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	st'ɪfɑːɪn
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc Helper): In=	st'ɪfɑːɪn
+  Stage4_6_UnstressedVowelReduction_Procedural END (modified by unit_processor): Out=	st'ɪfɑːən
+  Stage4_6_UnstressedVowelReduction_Procedural END (Outer): Out=	st'ɪfɑːən
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.034000 seconds for input: Stiofáin
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [st'ɪfɑːən]
+  EpenthesisAndStrongSonorants START (Proc): In=	st'ɪfɑːən
+  EpenthesisAndStrongSonorants END (Proc): Out=	st'ɪfɑːən
+PERF: Stage EpenthesisAndStrongSonorants took 0.027000 seconds for input: Stiofáin
+Af. EpenthesisAndStrongSonorants: [st'ɪfɑːən]
+  Diacritics START: In=	st'ɪfɑːən
+  Diacritics END: Out=	st'ɪfˠɑːən̪
+PERF: Stage Diacritics took 0.002000 seconds for input: Stiofáin
+Af. Diacritics: [st'ɪfˠɑːən̪]
+  FinalCleanup START: In=	st'ɪfˠɑːən̪
+  FinalCleanup END: Out=	stʲɪfˠɑːən̪
+PERF: Stage FinalCleanup took 0.001000 seconds for input: Stiofáin
+Af. FinalCleanup: [stʲɪfˠɑːən̪]
+Stiofáin                      -> [stʲɪfˠɑːən̪]
+
+--- Transcribing: Fhionlainn ---
+  PreProcess START: In=	Fhionlainn
+  PreProcess END: Out=	fhionlainn
+PERF: Stage PreProcess took 0.000000 seconds for input: Fhionlainn
+  MarkDigraphsAndVocalisationTriggers START: In=	fhionlainn
+  MarkDigraphsAndVocalisationTriggers END: Out=	MKR_FHINITLENionlaiMKR_NN_STR
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.006000 seconds for input: Fhionlainn
+Af. MarkDigraphsAndVocalisationTriggers: [MKR_FHINITLENionlaiMKR_NN_STR]
+  Stage2_5_MarkSuffixes START: In=	MKR_FHINITLENionlaiMKR_NN_STR
+  Stage2_5_MarkSuffixes END: Out=	fhionlaMKR_SUFFIX_INN_VERB
+PERF: Stage Stage2_5_MarkSuffixes took 0.009000 seconds for input: Fhionlainn
+Af. Stage2_5_MarkSuffixes: [fhionlaMKR_SUFFIX_INN_VERB]
+  ConsonantResolution START (Proc): In=	fhionlaMKR_SUFFIX_INN_VERB
+  ConsonantResolution END (Proc): Out=	fh'ionlaMKR_SUFFIX_INN_VERB
+PERF: Stage ConsonantResolution took 0.025000 seconds for input: Fhionlainn
+Af. ConsonantResolution: [fh'ionlaMKR_SUFFIX_INN_VERB]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	fh'ionlaMKR_SUFFIX_INN_VERB
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	fh'MKR_IO_SHT_TRGTnlaMKR_SUFFIX_INN_VERB
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.004000 seconds for input: Fhionlainn
+Af. Stage4_0_SpecificOrthoToTempMarker: [fh'MKR_IO_SHT_TRGTnlaMKR_SUFFIX_INN_VERB]
+  Stage4_0_1_Resolve_CH_Marker START: In=	fh'MKR_IO_SHT_TRGTnlaMKR_SUFFIX_INN_VERB
+  Stage4_0_1_Resolve_CH_Marker END: Out=	fh'MKR_IO_SHT_TRGTnlaMKR_SUFFIX_INN_VERB
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.000000 seconds for input: Fhionlainn
+Af. Stage4_0_1_Resolve_CH_Marker: [fh'MKR_IO_SHT_TRGTnlaMKR_SUFFIX_INN_VERB]
+  Stage4_1_VocmarkToTempMarker START: In=	fh'MKR_IO_SHT_TRGTnlaMKR_SUFFIX_INN_VERB
+  Stage4_1_VocmarkToTempMarker END: Out=	fh'MKR_IO_SHT_TRGTnlaMKR_SUFFIX_INN_VERB
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.000000 seconds for input: Fhionlainn
+Af. Stage4_1_VocmarkToTempMarker: [fh'MKR_IO_SHT_TRGTnlaMKR_SUFFIX_INN_VERB]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	fh'MKR_IO_SHT_TRGTnlaMKR_SUFFIX_INN_VERB
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	fh'MKR_IO_SHT_TRGTnlaMKR_SUFFIX_INN_VERB
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.002000 seconds for input: Fhionlainn
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [fh'MKR_IO_SHT_TRGTnlaMKR_SUFFIX_INN_VERB]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	fh'MKR_IO_SHT_TRGTnlaMKR_SUFFIX_INN_VERB
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	fh'MKR_IO_SHT_TRGTnlaMKR_SUFFIX_INN_VERB
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.001000 seconds for input: Fhionlainn
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [fh'MKR_IO_SHT_TRGTnlaMKR_SUFFIX_INN_VERB]
+  Stage4_4_ResolveTempVowelMarkers START: In=	fh'MKR_IO_SHT_TRGTnlaMKR_SUFFIX_INN_VERB
+  Stage4_4_ResolveTempVowelMarkers END: Out=	fh'ɪnlaən̠ʲ
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.002000 seconds for input: Fhionlainn
+Af. Stage4_4_ResolveTempVowelMarkers: [fh'ɪnlaən̠ʲ]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	fh'ɪnlaən̠ʲ
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	fh'ɪnlaən̠ʲ
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.001000 seconds for input: Fhionlainn
+Af. Stage4_4_1_VocalizeLenitedFricatives: [fh'ɪnlaən̠ʲ]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	fh'ɪnlaən̠ʲ
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	fh'ɪnlaən̠ʲ
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.003000 seconds for input: Fhionlainn
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [fh'ɪnlaən̠ʲ]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	fh'ɪnlaən̠ʲ
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	fh'ɪnlaən̠ʲ
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.027000 seconds for input: Fhionlainn
+Af. Stage4_5_1_DisyllabicShortLongRaising: [fh'ɪnlaən̠ʲ]
+  Stage4_5_2_ConnachtSpecificVowelShifts START: In=	fh'ɪnlaən̠ʲ
+  Stage4_5_2_ConnachtSpecificVowelShifts END: Out=	fh'ɪnlaən̠ʲ
+PERF: Stage Stage4_5_2_ConnachtSpecificVowelShifts took 0.001000 seconds for input: Fhionlainn
+Af. Stage4_5_2_ConnachtSpecificVowelShifts: [fh'ɪnlaən̠ʲ]
+  Nasalization START (Proc Helper): In=	fh'ɪnlaən̠ʲ
+  Nasalization END (no change by unit_processor): Out=	fh'ɪnlaən̠ʲ
+PERF: Stage Nasalization took 0.079000 seconds for input: Fhionlainn
+Af. Nasalization: [fh'ɪnlaən̠ʲ]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	fh'ɪnlaən̠ʲ
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc Helper): In=	fh'ɪnlaən̠ʲ
+  Stage4_6_UnstressedVowelReduction_Procedural END (modified by unit_processor): Out=	fh'ɪnləən̠ʲ
+  Stage4_6_UnstressedVowelReduction_Procedural END (Outer): Out=	fh'ɪnləən̠ʲ
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.063000 seconds for input: Fhionlainn
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [fh'ɪnləən̠ʲ]
+  EpenthesisAndStrongSonorants START (Proc): In=	fh'ɪnləən̠ʲ
+  EpenthesisAndStrongSonorants END (Proc): Out=	fh'ɪnləən̠ʲ
+PERF: Stage EpenthesisAndStrongSonorants took 0.045000 seconds for input: Fhionlainn
+Af. EpenthesisAndStrongSonorants: [fh'ɪnləən̠ʲ]
+  Diacritics START: In=	fh'ɪnləən̠ʲ
+  Diacritics END: Out=	fh'ɪn̪l̪əən̠ʲ
+PERF: Stage Diacritics took 0.003000 seconds for input: Fhionlainn
+Af. Diacritics: [fh'ɪn̪l̪əən̠ʲ]
+  FinalCleanup START: In=	fh'ɪn̪l̪əən̠ʲ
+  FinalCleanup END: Out=	fçɪn̪l̪əən̠ʲ
+PERF: Stage FinalCleanup took 0.001000 seconds for input: Fhionlainn
+Af. FinalCleanup: [fçɪn̪l̪əən̠ʲ]
+Fhionlainn                     -> [fçɪn̪l̪əən̠ʲ]
+
+--- Transcribing: Mhacha ---
+  PreProcess START: In=	Mhacha
+  PreProcess END: Out=	mhacha
+PERF: Stage PreProcess took 0.001000 seconds for input: Mhacha
+  MarkDigraphsAndVocalisationTriggers START: In=	mhacha
+  MarkDigraphsAndVocalisationTriggers END: Out=	MKR_MHaMKR_CHa
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.004000 seconds for input: Mhacha
+Af. MarkDigraphsAndVocalisationTriggers: [MKR_MHaMKR_CHa]
+  Stage2_5_MarkSuffixes START: In=	MKR_MHaMKR_CHa
+  Stage2_5_MarkSuffixes END: Out=	mhacha
+PERF: Stage Stage2_5_MarkSuffixes took 0.004000 seconds for input: Mhacha
+Af. Stage2_5_MarkSuffixes: [mhacha]
+  ConsonantResolution START (Proc): In=	mhacha
+  ConsonantResolution END (Proc): Out=	mhakha
+PERF: Stage ConsonantResolution took 0.005000 seconds for input: Mhacha
+Af. ConsonantResolution: [mhakha]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	mhakha
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	mhakha
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.002000 seconds for input: Mhacha
+Af. Stage4_0_SpecificOrthoToTempMarker: [mhakha]
+  Stage4_0_1_Resolve_CH_Marker START: In=	mhakha
+  Stage4_0_1_Resolve_CH_Marker END: Out=	mhakha
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.000000 seconds for input: Mhacha
+Af. Stage4_0_1_Resolve_CH_Marker: [mhakha]
+  Stage4_1_VocmarkToTempMarker START: In=	mhakha
+  Stage4_1_VocmarkToTempMarker END: Out=	mhakha
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.000000 seconds for input: Mhacha
+Af. Stage4_1_VocmarkToTempMarker: [mhakha]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	mhakha
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	mhakha
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.000000 seconds for input: Mhacha
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [mhakha]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	mhakha
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	mhakha
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.001000 seconds for input: Mhacha
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [mhakha]
+  Stage4_4_ResolveTempVowelMarkers START: In=	mhakha
+  Stage4_4_ResolveTempVowelMarkers END: Out=	mhakha
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.001000 seconds for input: Mhacha
+Af. Stage4_4_ResolveTempVowelMarkers: [mhakha]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	mhakha
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	mhakha
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.000000 seconds for input: Mhacha
+Af. Stage4_4_1_VocalizeLenitedFricatives: [mhakha]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	mhakha
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	mhakha
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.003000 seconds for input: Mhacha
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [mhakha]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	mhakha
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	mhakha
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.011000 seconds for input: Mhacha
+Af. Stage4_5_1_DisyllabicShortLongRaising: [mhakha]
+  Stage4_5_2_ConnachtSpecificVowelShifts START: In=	mhakha
+  Stage4_5_2_ConnachtSpecificVowelShifts END: Out=	mhakha
+PERF: Stage Stage4_5_2_ConnachtSpecificVowelShifts took 0.001000 seconds for input: Mhacha
+Af. Stage4_5_2_ConnachtSpecificVowelShifts: [mhakha]
+  Nasalization START (Proc Helper): In=	mhakha
+  Nasalization END (no change by unit_processor): Out=	mhakha
+PERF: Stage Nasalization took 0.012000 seconds for input: Mhacha
+Af. Nasalization: [mhakha]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	mhakha
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc Helper): In=	mhakha
+  Stage4_6_UnstressedVowelReduction_Procedural END (modified by unit_processor): Out=	mhakhə
+  Stage4_6_UnstressedVowelReduction_Procedural END (Outer): Out=	mhakhə
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.032000 seconds for input: Mhacha
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [mhakhə]
+  EpenthesisAndStrongSonorants START (Proc): In=	mhakhə
+  EpenthesisAndStrongSonorants END (Proc): Out=	mhakhə
+PERF: Stage EpenthesisAndStrongSonorants took 0.028000 seconds for input: Mhacha
+Af. EpenthesisAndStrongSonorants: [mhakhə]
+  Diacritics START: In=	mhakhə
+  Diacritics END: Out=	mˠhakhə
+PERF: Stage Diacritics took 0.003000 seconds for input: Mhacha
+Af. Diacritics: [mˠhakhə]
+  FinalCleanup START: In=	mˠhakhə
+  FinalCleanup END: Out=	mˠhakhə
+PERF: Stage FinalCleanup took 0.002000 seconds for input: Mhacha
+Af. FinalCleanup: [mˠhakhə]
+Mhacha                         -> [mˠhakhə]
+
+--- Transcribing: Bhríd ---
+  PreProcess START: In=	Bhríd
+  PreProcess END: Out=	bhríd
+PERF: Stage PreProcess took 0.001000 seconds for input: Bhríd
+  MarkDigraphsAndVocalisationTriggers START: In=	bhríd
+  MarkDigraphsAndVocalisationTriggers END: Out=	MKR_BHríd
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.004000 seconds for input: Bhríd
+Af. MarkDigraphsAndVocalisationTriggers: [MKR_BHríd]
+  Stage2_5_MarkSuffixes START: In=	MKR_BHríd
+  Stage2_5_MarkSuffixes END: Out=	bhríd
+PERF: Stage Stage2_5_MarkSuffixes took 0.006000 seconds for input: Bhríd
+Af. Stage2_5_MarkSuffixes: [bhríd]
+  ConsonantResolution START (Proc): In=	bhríd
+  ConsonantResolution END (Proc): Out=	bhr'íd'
+PERF: Stage ConsonantResolution took 0.005000 seconds for input: Bhríd
+Af. ConsonantResolution: [bhr'íd']
+  Stage4_0_SpecificOrthoToTempMarker START: In=	bhr'íd'
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	bhr'íd'
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.001000 seconds for input: Bhríd
+Af. Stage4_0_SpecificOrthoToTempMarker: [bhr'íd']
+  Stage4_0_1_Resolve_CH_Marker START: In=	bhr'íd'
+  Stage4_0_1_Resolve_CH_Marker END: Out=	bhr'íd'
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.001000 seconds for input: Bhríd
+Af. Stage4_0_1_Resolve_CH_Marker: [bhr'íd']
+  Stage4_1_VocmarkToTempMarker START: In=	bhr'íd'
+  Stage4_1_VocmarkToTempMarker END: Out=	bhr'íd'
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.001000 seconds for input: Bhríd
+Af. Stage4_1_VocmarkToTempMarker: [bhr'íd']
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	bhr'íd'
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	bhr'MKR_I_ACT_LNGd'
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.000000 seconds for input: Bhríd
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [bhr'MKR_I_ACT_LNGd']
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	bhr'MKR_I_ACT_LNGd'
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	bhr'MKR_I_ACT_LNGd'
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.000000 seconds for input: Bhríd
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [bhr'MKR_I_ACT_LNGd']
+  Stage4_4_ResolveTempVowelMarkers START: In=	bhr'MKR_I_ACT_LNGd'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	bhr'iːd'
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.004000 seconds for input: Bhríd
+Af. Stage4_4_ResolveTempVowelMarkers: [bhr'iːd']
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	bhr'iːd'
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	bhr'iːd'
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.002000 seconds for input: Bhríd
+Af. Stage4_4_1_VocalizeLenitedFricatives: [bhr'iːd']
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	bhr'iːd'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	bhr'iːd'
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.008000 seconds for input: Bhríd
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [bhr'iːd']
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	bhr'iːd'
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	bhr'iːd'
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.016000 seconds for input: Bhríd
+Af. Stage4_5_1_DisyllabicShortLongRaising: [bhr'iːd']
+  Stage4_5_2_ConnachtSpecificVowelShifts START: In=	bhr'iːd'
+  Stage4_5_2_ConnachtSpecificVowelShifts END: Out=	bhr'iːd'
+PERF: Stage Stage4_5_2_ConnachtSpecificVowelShifts took 0.001000 seconds for input: Bhríd
+Af. Stage4_5_2_ConnachtSpecificVowelShifts: [bhr'iːd']
+  Nasalization START (Proc Helper): In=	bhr'iːd'
+  Nasalization END (no change by unit_processor): Out=	bhr'iːd'
+PERF: Stage Nasalization took 0.014000 seconds for input: Bhríd
+Af. Nasalization: [bhr'iːd']
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	bhr'iːd'
+  Stage4_6_UnstressedVowelReduction_Procedural END (monosyllable): Out=	bhr'iːd'
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.016000 seconds for input: Bhríd
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [bhr'iːd']
+  EpenthesisAndStrongSonorants START (Proc): In=	bhr'iːd'
+  EpenthesisAndStrongSonorants END (Proc): Out=	bhr'iːd'
+PERF: Stage EpenthesisAndStrongSonorants took 0.027000 seconds for input: Bhríd
+Af. EpenthesisAndStrongSonorants: [bhr'iːd']
+  Diacritics START: In=	bhr'iːd'
+  Diacritics END: Out=	bˠhr'iːd'
+PERF: Stage Diacritics took 0.003000 seconds for input: Bhríd
+Af. Diacritics: [bˠhr'iːd']
+  FinalCleanup START: In=	bˠhr'iːd'
+  FinalCleanup END: Out=	bˠhɾʲiːdʲ
+PERF: Stage FinalCleanup took 0.001000 seconds for input: Bhríd
+Af. FinalCleanup: [bˠhɾʲiːdʲ]
+Bhríd                         -> [bˠhɾʲiːdʲ]
+
+--- Transcribing: 'un ---
+  PreProcess START: In=	'un
+  PreProcess END: Out=	'un
+PERF: Stage PreProcess took 0.000000 seconds for input: 'un
+  MarkDigraphsAndVocalisationTriggers START: In=	'un
+  MarkDigraphsAndVocalisationTriggers END: Out=	'un
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.002000 seconds for input: 'un
+Af. MarkDigraphsAndVocalisationTriggers: ['un]
+  Stage2_5_MarkSuffixes START: In=	'un
+  Stage2_5_MarkSuffixes END: Out=	'un
+PERF: Stage Stage2_5_MarkSuffixes took 0.003000 seconds for input: 'un
+Af. Stage2_5_MarkSuffixes: ['un]
+  ConsonantResolution START (Proc): In=	'un
+  ConsonantResolution END (Proc): Out=	'un
+PERF: Stage ConsonantResolution took 0.002000 seconds for input: 'un
+Af. ConsonantResolution: ['un]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	'un
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	'un
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.001000 seconds for input: 'un
+Af. Stage4_0_SpecificOrthoToTempMarker: ['un]
+  Stage4_0_1_Resolve_CH_Marker START: In=	'un
+  Stage4_0_1_Resolve_CH_Marker END: Out=	'un
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.001000 seconds for input: 'un
+Af. Stage4_0_1_Resolve_CH_Marker: ['un]
+  Stage4_1_VocmarkToTempMarker START: In=	'un
+  Stage4_1_VocmarkToTempMarker END: Out=	'un
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.000000 seconds for input: 'un
+Af. Stage4_1_VocmarkToTempMarker: ['un]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	'un
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	'un
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.001000 seconds for input: 'un
+Af. Stage4_2_LongVowelsOrthoToTempMarker: ['un]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	'un
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	'un
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.000000 seconds for input: 'un
+Af. Stage4_3_DiphthongsOrthoToTempMarker: ['un]
+  Stage4_4_ResolveTempVowelMarkers START: In=	'un
+  Stage4_4_ResolveTempVowelMarkers END: Out=	'un
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.001000 seconds for input: 'un
+Af. Stage4_4_ResolveTempVowelMarkers: ['un]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	'un
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	'un
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.001000 seconds for input: 'un
+Af. Stage4_4_1_VocalizeLenitedFricatives: ['un]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	'un
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	'ʊn
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.005000 seconds for input: 'un
+Af. Stage4_5_ContextualAllophonyOnPhonetic: ['ʊn]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	'ʊn
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	'ʊn
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.008000 seconds for input: 'un
+Af. Stage4_5_1_DisyllabicShortLongRaising: ['ʊn]
+  Stage4_5_2_ConnachtSpecificVowelShifts START: In=	'ʊn
+  Stage4_5_2_ConnachtSpecificVowelShifts END: Out=	'ʊn
+PERF: Stage Stage4_5_2_ConnachtSpecificVowelShifts took 0.001000 seconds for input: 'un
+Af. Stage4_5_2_ConnachtSpecificVowelShifts: ['ʊn]
+  Nasalization START (Proc Helper): In=	'ʊn
+  Nasalization END (no change by unit_processor): Out=	'ʊn
+PERF: Stage Nasalization took 0.008000 seconds for input: 'un
+Af. Nasalization: ['ʊn]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	'ʊn
+  Stage4_6_UnstressedVowelReduction_Procedural END (monosyllable): Out=	'ʊn
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.007000 seconds for input: 'un
+Af. Stage4_6_UnstressedVowelReduction_Procedural: ['ʊn]
+  EpenthesisAndStrongSonorants START (Proc): In=	'ʊn
+  EpenthesisAndStrongSonorants END (Proc): Out=	'ʊn
+PERF: Stage EpenthesisAndStrongSonorants took 0.020000 seconds for input: 'un
+Af. EpenthesisAndStrongSonorants: ['ʊn]
+  Diacritics START: In=	'ʊn
+  Diacritics END: Out=	'ʊn̪
+PERF: Stage Diacritics took 0.002000 seconds for input: 'un
+Af. Diacritics: ['ʊn̪]
+  FinalCleanup START: In=	'ʊn̪
+  FinalCleanup END: Out=	'ʊn̪
+PERF: Stage FinalCleanup took 0.000000 seconds for input: 'un
+Af. FinalCleanup: ['ʊn̪]
+'un                            -> ['ʊn̪]
+
+--- Transcribing: 'ur ---
+  PreProcess START: In=	'ur
+  PreProcess END: Out=	'ur
+PERF: Stage PreProcess took 0.001000 seconds for input: 'ur
+  MarkDigraphsAndVocalisationTriggers START: In=	'ur
+  MarkDigraphsAndVocalisationTriggers END: Out=	'ur
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.003000 seconds for input: 'ur
+Af. MarkDigraphsAndVocalisationTriggers: ['ur]
+  Stage2_5_MarkSuffixes START: In=	'ur
+  Stage2_5_MarkSuffixes END: Out=	'ur
+PERF: Stage Stage2_5_MarkSuffixes took 0.002000 seconds for input: 'ur
+Af. Stage2_5_MarkSuffixes: ['ur]
+  ConsonantResolution START (Proc): In=	'ur
+  ConsonantResolution END (Proc): Out=	'ur
+PERF: Stage ConsonantResolution took 0.003000 seconds for input: 'ur
+Af. ConsonantResolution: ['ur]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	'ur
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	'ur
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.001000 seconds for input: 'ur
+Af. Stage4_0_SpecificOrthoToTempMarker: ['ur]
+  Stage4_0_1_Resolve_CH_Marker START: In=	'ur
+  Stage4_0_1_Resolve_CH_Marker END: Out=	'ur
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.000000 seconds for input: 'ur
+Af. Stage4_0_1_Resolve_CH_Marker: ['ur]
+  Stage4_1_VocmarkToTempMarker START: In=	'ur
+  Stage4_1_VocmarkToTempMarker END: Out=	'ur
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.001000 seconds for input: 'ur
+Af. Stage4_1_VocmarkToTempMarker: ['ur]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	'ur
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	'ur
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.001000 seconds for input: 'ur
+Af. Stage4_2_LongVowelsOrthoToTempMarker: ['ur]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	'ur
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	'ur
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.000000 seconds for input: 'ur
+Af. Stage4_3_DiphthongsOrthoToTempMarker: ['ur]
+  Stage4_4_ResolveTempVowelMarkers START: In=	'ur
+  Stage4_4_ResolveTempVowelMarkers END: Out=	'ur
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.001000 seconds for input: 'ur
+Af. Stage4_4_ResolveTempVowelMarkers: ['ur]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	'ur
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	'ur
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.001000 seconds for input: 'ur
+Af. Stage4_4_1_VocalizeLenitedFricatives: ['ur]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	'ur
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	'ʊr
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.003000 seconds for input: 'ur
+Af. Stage4_5_ContextualAllophonyOnPhonetic: ['ʊr]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	'ʊr
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	'ʊr
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.005000 seconds for input: 'ur
+Af. Stage4_5_1_DisyllabicShortLongRaising: ['ʊr]
+  Stage4_5_2_ConnachtSpecificVowelShifts START: In=	'ʊr
+  Stage4_5_2_ConnachtSpecificVowelShifts END: Out=	'ʊr
+PERF: Stage Stage4_5_2_ConnachtSpecificVowelShifts took 0.001000 seconds for input: 'ur
+Af. Stage4_5_2_ConnachtSpecificVowelShifts: ['ʊr]
+  Nasalization START (Proc Helper): In=	'ʊr
+  Nasalization END (no change by unit_processor): Out=	'ʊr
+PERF: Stage Nasalization took 0.004000 seconds for input: 'ur
+Af. Nasalization: ['ʊr]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	'ʊr
+  Stage4_6_UnstressedVowelReduction_Procedural END (monosyllable): Out=	'ʊr
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.005000 seconds for input: 'ur
+Af. Stage4_6_UnstressedVowelReduction_Procedural: ['ʊr]
+  EpenthesisAndStrongSonorants START (Proc): In=	'ʊr
+  EpenthesisAndStrongSonorants END (Proc): Out=	'ʊr
+PERF: Stage EpenthesisAndStrongSonorants took 0.015000 seconds for input: 'ur
+Af. EpenthesisAndStrongSonorants: ['ʊr]
+  Diacritics START: In=	'ʊr
+  Diacritics END: Out=	'ʊɾˠ
+PERF: Stage Diacritics took 0.002000 seconds for input: 'ur
+Af. Diacritics: ['ʊɾˠ]
+  FinalCleanup START: In=	'ʊɾˠ
+  FinalCleanup END: Out=	'ʊɾˠ
+PERF: Stage FinalCleanup took 0.000000 seconds for input: 'ur
+Af. FinalCleanup: ['ʊɾˠ]
+'ur                            -> ['ʊɾˠ]
+
+--- Transcribing: Eabhrac ---
+  PreProcess START: In=	Eabhrac
+  PreProcess END: Out=	eabhrac
+PERF: Stage PreProcess took 0.000000 seconds for input: Eabhrac
+  MarkDigraphsAndVocalisationTriggers START: In=	eabhrac
+  MarkDigraphsAndVocalisationTriggers END: Out=	MKR_EAVOCBMEDRrrac
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.003000 seconds for input: Eabhrac
+Af. MarkDigraphsAndVocalisationTriggers: [MKR_EAVOCBMEDRrrac]
+  Stage2_5_MarkSuffixes START: In=	MKR_EAVOCBMEDRrrac
+  Stage2_5_MarkSuffixes END: Out=	eabhrac
+PERF: Stage Stage2_5_MarkSuffixes took 0.007000 seconds for input: Eabhrac
+Af. Stage2_5_MarkSuffixes: [eabhrac]
+  ConsonantResolution START (Proc): In=	eabhrac
+  ConsonantResolution END (Proc): Out=	eabhrak
+PERF: Stage ConsonantResolution took 0.005000 seconds for input: Eabhrac
+Af. ConsonantResolution: [eabhrak]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	eabhrak
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	eabhrak
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.002000 seconds for input: Eabhrac
+Af. Stage4_0_SpecificOrthoToTempMarker: [eabhrak]
+  Stage4_0_1_Resolve_CH_Marker START: In=	eabhrak
+  Stage4_0_1_Resolve_CH_Marker END: Out=	eabhrak
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.000000 seconds for input: Eabhrac
+Af. Stage4_0_1_Resolve_CH_Marker: [eabhrak]
+  Stage4_1_VocmarkToTempMarker START: In=	eabhrak
+  Stage4_1_VocmarkToTempMarker END: Out=	eabhrak
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.000000 seconds for input: Eabhrac
+Af. Stage4_1_VocmarkToTempMarker: [eabhrak]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	eabhrak
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	eabhrak
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.000000 seconds for input: Eabhrac
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [eabhrak]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	eabhrak
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	eabhrak
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.001000 seconds for input: Eabhrac
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [eabhrak]
+  Stage4_4_ResolveTempVowelMarkers START: In=	eabhrak
+  Stage4_4_ResolveTempVowelMarkers END: Out=	abhrak
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.001000 seconds for input: Eabhrac
+Af. Stage4_4_ResolveTempVowelMarkers: [abhrak]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	abhrak
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	abhrak
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.001000 seconds for input: Eabhrac
+Af. Stage4_4_1_VocalizeLenitedFricatives: [abhrak]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	abhrak
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	abhrak
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.003000 seconds for input: Eabhrac
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [abhrak]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	abhrak
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	abhrak
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.011000 seconds for input: Eabhrac
+Af. Stage4_5_1_DisyllabicShortLongRaising: [abhrak]
+  Stage4_5_2_ConnachtSpecificVowelShifts START: In=	abhrak
+  Stage4_5_2_ConnachtSpecificVowelShifts END: Out=	abhrak
+PERF: Stage Stage4_5_2_ConnachtSpecificVowelShifts took 0.000000 seconds for input: Eabhrac
+Af. Stage4_5_2_ConnachtSpecificVowelShifts: [abhrak]
+  Nasalization START (Proc Helper): In=	abhrak
+  Nasalization END (no change by unit_processor): Out=	abhrak
+PERF: Stage Nasalization took 0.013000 seconds for input: Eabhrac
+Af. Nasalization: [abhrak]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	abhrak
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc Helper): In=	abhrak
+  Stage4_6_UnstressedVowelReduction_Procedural END (modified by unit_processor): Out=	abhrək
+  Stage4_6_UnstressedVowelReduction_Procedural END (Outer): Out=	abhrək
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.023000 seconds for input: Eabhrac
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [abhrək]
+  EpenthesisAndStrongSonorants START (Proc): In=	abhrək
+  EpenthesisAndStrongSonorants END (Proc): Out=	abhrək
+PERF: Stage EpenthesisAndStrongSonorants took 0.026000 seconds for input: Eabhrac
+Af. EpenthesisAndStrongSonorants: [abhrək]
+  Diacritics START: In=	abhrək
+  Diacritics END: Out=	abˠhɾˠək
+PERF: Stage Diacritics took 0.001000 seconds for input: Eabhrac
+Af. Diacritics: [abˠhɾˠək]
+  FinalCleanup START: In=	abˠhɾˠək
+  FinalCleanup END: Out=	abˠhɾˠək
+PERF: Stage FinalCleanup took 0.002000 seconds for input: Eabhrac
+Af. FinalCleanup: [abˠhɾˠək]
+Eabhrac                        -> [abˠhɾˠək]
+
+--- Transcribing: Eochaidh ---
+  PreProcess START: In=	Eochaidh
+  PreProcess END: Out=	eochaidh
+PERF: Stage PreProcess took 0.001000 seconds for input: Eochaidh
+  MarkDigraphsAndVocalisationTriggers START: In=	eochaidh
+  MarkDigraphsAndVocalisationTriggers END: Out=	eoMKR_CHMKR_AIDHFINSCHWA
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.003000 seconds for input: Eochaidh
+Af. MarkDigraphsAndVocalisationTriggers: [eoMKR_CHMKR_AIDHFINSCHWA]
+  Stage2_5_MarkSuffixes START: In=	eoMKR_CHMKR_AIDHFINSCHWA
+  Stage2_5_MarkSuffixes END: Out=	eochMKR_SUFFIX_VERB_IHI
+PERF: Stage Stage2_5_MarkSuffixes took 0.004000 seconds for input: Eochaidh
+Af. Stage2_5_MarkSuffixes: [eochMKR_SUFFIX_VERB_IHI]
+  ConsonantResolution START (Proc): In=	eochMKR_SUFFIX_VERB_IHI
+  ConsonantResolution END (Proc): Out=	eokhMKR_SUFFIX_VERB_IHI
+PERF: Stage ConsonantResolution took 0.015000 seconds for input: Eochaidh
+Af. ConsonantResolution: [eokhMKR_SUFFIX_VERB_IHI]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	eokhMKR_SUFFIX_VERB_IHI
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	eokhMKR_SUFFIX_VERB_IHI
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.002000 seconds for input: Eochaidh
+Af. Stage4_0_SpecificOrthoToTempMarker: [eokhMKR_SUFFIX_VERB_IHI]
+  Stage4_0_1_Resolve_CH_Marker START: In=	eokhMKR_SUFFIX_VERB_IHI
+  Stage4_0_1_Resolve_CH_Marker END: Out=	eokhMKR_SUFFIX_VERB_IHI
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.000000 seconds for input: Eochaidh
+Af. Stage4_0_1_Resolve_CH_Marker: [eokhMKR_SUFFIX_VERB_IHI]
+  Stage4_1_VocmarkToTempMarker START: In=	eokhMKR_SUFFIX_VERB_IHI
+  Stage4_1_VocmarkToTempMarker END: Out=	eokhMKR_SUFFIX_VERB_IHI
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.000000 seconds for input: Eochaidh
+Af. Stage4_1_VocmarkToTempMarker: [eokhMKR_SUFFIX_VERB_IHI]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	eokhMKR_SUFFIX_VERB_IHI
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	eokhMKR_SUFFIX_VERB_IHI
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.001000 seconds for input: Eochaidh
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [eokhMKR_SUFFIX_VERB_IHI]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	eokhMKR_SUFFIX_VERB_IHI
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	MKR_EO_SEQkhMKR_SUFFIX_VERB_IHI
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.000000 seconds for input: Eochaidh
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [MKR_EO_SEQkhMKR_SUFFIX_VERB_IHI]
+  Stage4_4_ResolveTempVowelMarkers START: In=	MKR_EO_SEQkhMKR_SUFFIX_VERB_IHI
+  Stage4_4_ResolveTempVowelMarkers END: Out=	oːkhiː
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.002000 seconds for input: Eochaidh
+Af. Stage4_4_ResolveTempVowelMarkers: [oːkhiː]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	oːkhiː
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	oːkhiː
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.001000 seconds for input: Eochaidh
+Af. Stage4_4_1_VocalizeLenitedFricatives: [oːkhiː]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	oːkhiː
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	oːkhiː
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.007000 seconds for input: Eochaidh
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [oːkhiː]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	oːkhiː
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	oːkhiː
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.011000 seconds for input: Eochaidh
+Af. Stage4_5_1_DisyllabicShortLongRaising: [oːkhiː]
+  Stage4_5_2_ConnachtSpecificVowelShifts START: In=	oːkhiː
+  Stage4_5_2_ConnachtSpecificVowelShifts END: Out=	oːkhiː
+PERF: Stage Stage4_5_2_ConnachtSpecificVowelShifts took 0.000000 seconds for input: Eochaidh
+Af. Stage4_5_2_ConnachtSpecificVowelShifts: [oːkhiː]
+  Nasalization START (Proc Helper): In=	oːkhiː
+  Nasalization END (no change by unit_processor): Out=	oːkhiː
+PERF: Stage Nasalization took 0.019000 seconds for input: Eochaidh
+Af. Nasalization: [oːkhiː]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	oːkhiː
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc Helper): In=	oːkhiː
+  Stage4_6_UnstressedVowelReduction_Procedural END (no change by unit_processor): Out=	oːkhiː
+  Stage4_6_UnstressedVowelReduction_Procedural END (Outer): Out=	oːkhiː
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.050000 seconds for input: Eochaidh
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [oːkhiː]
+  EpenthesisAndStrongSonorants START (Proc): In=	oːkhiː
+  EpenthesisAndStrongSonorants END (Proc): Out=	oːkhiː
+PERF: Stage EpenthesisAndStrongSonorants took 0.043000 seconds for input: Eochaidh
+Af. EpenthesisAndStrongSonorants: [oːkhiː]
+  Diacritics START: In=	oːkhiː
+  Diacritics END: Out=	oːkhiː
+PERF: Stage Diacritics took 0.001000 seconds for input: Eochaidh
+Af. Diacritics: [oːkhiː]
+  FinalCleanup START: In=	oːkhiː
+  FinalCleanup END: Out=	oːkhiː
+PERF: Stage FinalCleanup took 0.000000 seconds for input: Eochaidh
+Af. FinalCleanup: [oːkhiː]
+Eochaidh                       -> [oːkhiː]
+
+--- Transcribing: aduaidh ---
+  PreProcess START: In=	aduaidh
+  PreProcess END: Out=	aduaidh
+PERF: Stage PreProcess took 0.000000 seconds for input: aduaidh
+  MarkDigraphsAndVocalisationTriggers START: In=	aduaidh
+  MarkDigraphsAndVocalisationTriggers END: Out=	aduMKR_AIDHFINSCHWA
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.005000 seconds for input: aduaidh
+Af. MarkDigraphsAndVocalisationTriggers: [aduMKR_AIDHFINSCHWA]
+  Stage2_5_MarkSuffixes START: In=	aduMKR_AIDHFINSCHWA
+  Stage2_5_MarkSuffixes END: Out=	aduMKR_SUFFIX_VERB_IHI
+PERF: Stage Stage2_5_MarkSuffixes took 0.003000 seconds for input: aduaidh
+Af. Stage2_5_MarkSuffixes: [aduMKR_SUFFIX_VERB_IHI]
+  ConsonantResolution START (Proc): In=	aduMKR_SUFFIX_VERB_IHI
+  ConsonantResolution END (Proc): Out=	aduMKR_SUFFIX_VERB_IHI
+PERF: Stage ConsonantResolution took 0.020000 seconds for input: aduaidh
+Af. ConsonantResolution: [aduMKR_SUFFIX_VERB_IHI]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	aduMKR_SUFFIX_VERB_IHI
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	aduMKR_SUFFIX_VERB_IHI
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.002000 seconds for input: aduaidh
+Af. Stage4_0_SpecificOrthoToTempMarker: [aduMKR_SUFFIX_VERB_IHI]
+  Stage4_0_1_Resolve_CH_Marker START: In=	aduMKR_SUFFIX_VERB_IHI
+  Stage4_0_1_Resolve_CH_Marker END: Out=	aduMKR_SUFFIX_VERB_IHI
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.000000 seconds for input: aduaidh
+Af. Stage4_0_1_Resolve_CH_Marker: [aduMKR_SUFFIX_VERB_IHI]
+  Stage4_1_VocmarkToTempMarker START: In=	aduMKR_SUFFIX_VERB_IHI
+  Stage4_1_VocmarkToTempMarker END: Out=	aduMKR_SUFFIX_VERB_IHI
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.001000 seconds for input: aduaidh
+Af. Stage4_1_VocmarkToTempMarker: [aduMKR_SUFFIX_VERB_IHI]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	aduMKR_SUFFIX_VERB_IHI
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	aduMKR_SUFFIX_VERB_IHI
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.000000 seconds for input: aduaidh
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [aduMKR_SUFFIX_VERB_IHI]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	aduMKR_SUFFIX_VERB_IHI
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	aduMKR_SUFFIX_VERB_IHI
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.000000 seconds for input: aduaidh
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [aduMKR_SUFFIX_VERB_IHI]
+  Stage4_4_ResolveTempVowelMarkers START: In=	aduMKR_SUFFIX_VERB_IHI
+  Stage4_4_ResolveTempVowelMarkers END: Out=	aduiː
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.002000 seconds for input: aduaidh
+Af. Stage4_4_ResolveTempVowelMarkers: [aduiː]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	aduiː
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	aduiː
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.000000 seconds for input: aduaidh
+Af. Stage4_4_1_VocalizeLenitedFricatives: [aduiː]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	aduiː
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	aduiː
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.003000 seconds for input: aduaidh
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [aduiː]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	aduiː
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	aduiː
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.008000 seconds for input: aduaidh
+Af. Stage4_5_1_DisyllabicShortLongRaising: [aduiː]
+  Stage4_5_2_ConnachtSpecificVowelShifts START: In=	aduiː
+  Stage4_5_2_ConnachtSpecificVowelShifts END: Out=	aduiː
+PERF: Stage Stage4_5_2_ConnachtSpecificVowelShifts took 0.001000 seconds for input: aduaidh
+Af. Stage4_5_2_ConnachtSpecificVowelShifts: [aduiː]
+  Nasalization START (Proc Helper): In=	aduiː
+  Nasalization END (no change by unit_processor): Out=	aduiː
+PERF: Stage Nasalization took 0.008000 seconds for input: aduaidh
+Af. Nasalization: [aduiː]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	aduiː
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc Helper): In=	aduiː
+  Stage4_6_UnstressedVowelReduction_Procedural END (modified by unit_processor): Out=	adəː
+  Stage4_6_UnstressedVowelReduction_Procedural END (Outer): Out=	adəː
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.014000 seconds for input: aduaidh
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [adəː]
+  EpenthesisAndStrongSonorants START (Proc): In=	adəː
+  EpenthesisAndStrongSonorants END (Proc): Out=	adəː
+PERF: Stage EpenthesisAndStrongSonorants took 0.017000 seconds for input: aduaidh
+Af. EpenthesisAndStrongSonorants: [adəː]
+  Diacritics START: In=	adəː
+  Diacritics END: Out=	ad̪əː
+PERF: Stage Diacritics took 0.002000 seconds for input: aduaidh
+Af. Diacritics: [ad̪əː]
+  FinalCleanup START: In=	ad̪əː
+  FinalCleanup END: Out=	ad̪əː
+PERF: Stage FinalCleanup took 0.000000 seconds for input: aduaidh
+Af. FinalCleanup: [ad̪əː]
+aduaidh                        -> [ad̪əː]
+
+--- Transcribing: Bhaile Átha Cliath ---
+  LexicalLookup: Found '	Bhaile	' -> [	ˈbˠalʲə	]
+  LexicalLookup: Found '	Átha	' -> [	ˈɑːhə	]
+  LexicalLookup: Found '	Cliath	' -> [	ˈclʲiə	]
+Bhaile Átha Cliath            -> [ˈbˠalʲə ˈɑːhə ˈclʲiə]
+
+--- Transcribing: Droichead Nua ---
+  LexicalLookup: Found '	Droichead	' -> [	ˈd̪ˠɾˠɛhəd̪ˠ	]
+  LexicalLookup: Found '	Nua	' -> [	ˈn̪ˠuː	]
+Droichead Nua                  -> [ˈd̪ˠɾˠɛhəd̪ˠ ˈn̪ˠuː]
+
+--- Transcribing: Lá Fhéile Pádraig ---
+  PreProcess START: In=	Lá
+  PreProcess END: Out=	lá
+PERF: Stage PreProcess took 0.001000 seconds for input: Lá
+  MarkDigraphsAndVocalisationTriggers START: In=	lá
+  MarkDigraphsAndVocalisationTriggers END: Out=	lá
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.002000 seconds for input: Lá
+Af. MarkDigraphsAndVocalisationTriggers: [lá]
+  Stage2_5_MarkSuffixes START: In=	lá
+  Stage2_5_MarkSuffixes END: Out=	lá
+PERF: Stage Stage2_5_MarkSuffixes took 0.001000 seconds for input: Lá
+Af. Stage2_5_MarkSuffixes: [lá]
+  ConsonantResolution START (Proc): In=	lá
+  ConsonantResolution END (Proc): Out=	lá
+PERF: Stage ConsonantResolution took 0.002000 seconds for input: Lá
+Af. ConsonantResolution: [lá]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	lá
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	lá
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.002000 seconds for input: Lá
+Af. Stage4_0_SpecificOrthoToTempMarker: [lá]
+  Stage4_0_1_Resolve_CH_Marker START: In=	lá
+  Stage4_0_1_Resolve_CH_Marker END: Out=	lá
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.000000 seconds for input: Lá
+Af. Stage4_0_1_Resolve_CH_Marker: [lá]
+  Stage4_1_VocmarkToTempMarker START: In=	lá
+  Stage4_1_VocmarkToTempMarker END: Out=	lá
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.000000 seconds for input: Lá
+Af. Stage4_1_VocmarkToTempMarker: [lá]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	lá
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	lMKR_A_ACT_LNG
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.001000 seconds for input: Lá
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [lMKR_A_ACT_LNG]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	lMKR_A_ACT_LNG
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	lMKR_A_ACT_LNG
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.001000 seconds for input: Lá
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [lMKR_A_ACT_LNG]
+  Stage4_4_ResolveTempVowelMarkers START: In=	lMKR_A_ACT_LNG
+  Stage4_4_ResolveTempVowelMarkers END: Out=	lɑː
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.002000 seconds for input: Lá
+Af. Stage4_4_ResolveTempVowelMarkers: [lɑː]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	lɑː
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	lɑː
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.000000 seconds for input: Lá
+Af. Stage4_4_1_VocalizeLenitedFricatives: [lɑː]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	lɑː
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	lɑː
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.003000 seconds for input: Lá
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [lɑː]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	lɑː
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	lɑː
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.005000 seconds for input: Lá
+Af. Stage4_5_1_DisyllabicShortLongRaising: [lɑː]
+  Stage4_5_2_ConnachtSpecificVowelShifts START: In=	lɑː
+  Stage4_5_2_ConnachtSpecificVowelShifts END: Out=	lɑː
+PERF: Stage Stage4_5_2_ConnachtSpecificVowelShifts took 0.000000 seconds for input: Lá
+Af. Stage4_5_2_ConnachtSpecificVowelShifts: [lɑː]
+  Nasalization START (Proc Helper): In=	lɑː
+  Nasalization END (no change by unit_processor): Out=	lɑː
+PERF: Stage Nasalization took 0.005000 seconds for input: Lá
+Af. Nasalization: [lɑː]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	lɑː
+  Stage4_6_UnstressedVowelReduction_Procedural END (monosyllable): Out=	lɑː
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.003000 seconds for input: Lá
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [lɑː]
+  EpenthesisAndStrongSonorants START (Proc): In=	lɑː
+  EpenthesisAndStrongSonorants END (Proc): Out=	lɑː
+PERF: Stage EpenthesisAndStrongSonorants took 0.014000 seconds for input: Lá
+Af. EpenthesisAndStrongSonorants: [lɑː]
+  Diacritics START: In=	lɑː
+  Diacritics END: Out=	l̪ɑː
+PERF: Stage Diacritics took 0.002000 seconds for input: Lá
+Af. Diacritics: [l̪ɑː]
+  FinalCleanup START: In=	l̪ɑː
+  FinalCleanup END: Out=	l̪ɑː
+PERF: Stage FinalCleanup took 0.000000 seconds for input: Lá
+Af. FinalCleanup: [l̪ɑː]
+  PreProcess START: In=	Fhéile
+  PreProcess END: Out=	fhéile
+PERF: Stage PreProcess took 0.000000 seconds for input: Fhéile
+  MarkDigraphsAndVocalisationTriggers START: In=	fhéile
+  MarkDigraphsAndVocalisationTriggers END: Out=	MKR_FHINITLENéile
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.004000 seconds for input: Fhéile
+Af. MarkDigraphsAndVocalisationTriggers: [MKR_FHINITLENéile]
+  Stage2_5_MarkSuffixes START: In=	MKR_FHINITLENéile
+  Stage2_5_MarkSuffixes END: Out=	fhéile
+PERF: Stage Stage2_5_MarkSuffixes took 0.004000 seconds for input: Fhéile
+Af. Stage2_5_MarkSuffixes: [fhéile]
+  ConsonantResolution START (Proc): In=	fhéile
+  ConsonantResolution END (Proc): Out=	fh'éile
+PERF: Stage ConsonantResolution took 0.004000 seconds for input: Fhéile
+Af. ConsonantResolution: [fh'éile]
+  Stage4_0_SpecificOrthoToTempMarker START: In=	fh'éile
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	fh'éile
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.001000 seconds for input: Fhéile
+Af. Stage4_0_SpecificOrthoToTempMarker: [fh'éile]
+  Stage4_0_1_Resolve_CH_Marker START: In=	fh'éile
+  Stage4_0_1_Resolve_CH_Marker END: Out=	fh'éile
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.001000 seconds for input: Fhéile
+Af. Stage4_0_1_Resolve_CH_Marker: [fh'éile]
+  Stage4_1_VocmarkToTempMarker START: In=	fh'éile
+  Stage4_1_VocmarkToTempMarker END: Out=	fh'éile
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.001000 seconds for input: Fhéile
+Af. Stage4_1_VocmarkToTempMarker: [fh'éile]
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	fh'éile
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	fh'MKR_E_ACT_I_LNGle
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.001000 seconds for input: Fhéile
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [fh'MKR_E_ACT_I_LNGle]
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	fh'MKR_E_ACT_I_LNGle
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	fh'MKR_E_ACT_I_LNGle
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.001000 seconds for input: Fhéile
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [fh'MKR_E_ACT_I_LNGle]
+  Stage4_4_ResolveTempVowelMarkers START: In=	fh'MKR_E_ACT_I_LNGle
+  Stage4_4_ResolveTempVowelMarkers END: Out=	fh'eːle
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.001000 seconds for input: Fhéile
+Af. Stage4_4_ResolveTempVowelMarkers: [fh'eːle]
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	fh'eːle
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	fh'eːle
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.001000 seconds for input: Fhéile
+Af. Stage4_4_1_VocalizeLenitedFricatives: [fh'eːle]
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	fh'eːle
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	fh'eːlɛ
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.006000 seconds for input: Fhéile
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [fh'eːlɛ]
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	fh'eːlɛ
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	fh'eːlɛ
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.011000 seconds for input: Fhéile
+Af. Stage4_5_1_DisyllabicShortLongRaising: [fh'eːlɛ]
+  Stage4_5_2_ConnachtSpecificVowelShifts START: In=	fh'eːlɛ
+  Stage4_5_2_ConnachtSpecificVowelShifts END: Out=	fh'eːlɛ
+PERF: Stage Stage4_5_2_ConnachtSpecificVowelShifts took 0.001000 seconds for input: Fhéile
+Af. Stage4_5_2_ConnachtSpecificVowelShifts: [fh'eːlɛ]
+  Nasalization START (Proc Helper): In=	fh'eːlɛ
+  Nasalization END (no change by unit_processor): Out=	fh'eːlɛ
+PERF: Stage Nasalization took 0.013000 seconds for input: Fhéile
+Af. Nasalization: [fh'eːlɛ]
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	fh'eːlɛ
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc Helper): In=	fh'eːlɛ
+  Stage4_6_UnstressedVowelReduction_Procedural END (modified by unit_processor): Out=	fh'eːlə
+  Stage4_6_UnstressedVowelReduction_Procedural END (Outer): Out=	fh'eːlə
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.021000 seconds for input: Fhéile
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [fh'eːlə]
+  EpenthesisAndStrongSonorants START (Proc): In=	fh'eːlə
+  EpenthesisAndStrongSonorants END (Proc): Out=	fh'eːlə
+PERF: Stage EpenthesisAndStrongSonorants took 0.026000 seconds for input: Fhéile
+Af. EpenthesisAndStrongSonorants: [fh'eːlə]
+  Diacritics START: In=	fh'eːlə
+  Diacritics END: Out=	fh'eːl̪ə
+PERF: Stage Diacritics took 0.002000 seconds for input: Fhéile
+Af. Diacritics: [fh'eːl̪ə]
+  FinalCleanup START: In=	fh'eːl̪ə
+  FinalCleanup END: Out=	fçeːl̪ə
+PERF: Stage FinalCleanup took 0.001000 seconds for input: Fhéile
+Af. FinalCleanup: [fçeːl̪ə]
+  PreProcess START: In=	Pádraig
+  PreProcess END: Out=	pádraig
+PERF: Stage PreProcess took 0.000000 seconds for input: Pádraig
+  MarkDigraphsAndVocalisationTriggers START: In=	pádraig
+  MarkDigraphsAndVocalisationTriggers END: Out=	pádraig
+PERF: Stage MarkDigraphsAndVocalisationTriggers took 0.006000 seconds for input: Pádraig
+Af. MarkDigraphsAndVocalisationTriggers: [pádraig]
+  Stage2_5_MarkSuffixes START: In=	pádraig
+  Stage2_5_MarkSuffixes END: Out=	pádraig
+PERF: Stage Stage2_5_MarkSuffixes took 0.005000 seconds for input: Pádraig
+Af. Stage2_5_MarkSuffixes: [pádraig]
+  ConsonantResolution START (Proc): In=	pádraig
+  ConsonantResolution END (Proc): Out=	pádraig'
+PERF: Stage ConsonantResolution took 0.005000 seconds for input: Pádraig
+Af. ConsonantResolution: [pádraig']
+  Stage4_0_SpecificOrthoToTempMarker START: In=	pádraig'
+  Stage4_0_SpecificOrthoToTempMarker END: Out=	pádraig'
+PERF: Stage Stage4_0_SpecificOrthoToTempMarker took 0.002000 seconds for input: Pádraig
+Af. Stage4_0_SpecificOrthoToTempMarker: [pádraig']
+  Stage4_0_1_Resolve_CH_Marker START: In=	pádraig'
+  Stage4_0_1_Resolve_CH_Marker END: Out=	pádraig'
+PERF: Stage Stage4_0_1_Resolve_CH_Marker took 0.001000 seconds for input: Pádraig
+Af. Stage4_0_1_Resolve_CH_Marker: [pádraig']
+  Stage4_1_VocmarkToTempMarker START: In=	pádraig'
+  Stage4_1_VocmarkToTempMarker END: Out=	pádraig'
+PERF: Stage Stage4_1_VocmarkToTempMarker took 0.000000 seconds for input: Pádraig
+Af. Stage4_1_VocmarkToTempMarker: [pádraig']
+  Stage4_2_LongVowelsOrthoToTempMarker START: In=	pádraig'
+  Stage4_2_LongVowelsOrthoToTempMarker END: Out=	pMKR_A_ACT_LNGdraig'
+PERF: Stage Stage4_2_LongVowelsOrthoToTempMarker took 0.001000 seconds for input: Pádraig
+Af. Stage4_2_LongVowelsOrthoToTempMarker: [pMKR_A_ACT_LNGdraig']
+  Stage4_3_DiphthongsOrthoToTempMarker START: In=	pMKR_A_ACT_LNGdraig'
+  Stage4_3_DiphthongsOrthoToTempMarker END: Out=	pMKR_A_ACT_LNGdrMKR_AI_DIPHg'
+PERF: Stage Stage4_3_DiphthongsOrthoToTempMarker took 0.001000 seconds for input: Pádraig
+Af. Stage4_3_DiphthongsOrthoToTempMarker: [pMKR_A_ACT_LNGdrMKR_AI_DIPHg']
+  Stage4_4_ResolveTempVowelMarkers START: In=	pMKR_A_ACT_LNGdrMKR_AI_DIPHg'
+  Stage4_4_ResolveTempVowelMarkers END: Out=	pɑːdraig'
+PERF: Stage Stage4_4_ResolveTempVowelMarkers took 0.002000 seconds for input: Pádraig
+Af. Stage4_4_ResolveTempVowelMarkers: [pɑːdraig']
+  Stage4_4_1_VocalizeLenitedFricatives START: In=	pɑːdraig'
+  Stage4_4_1_VocalizeLenitedFricatives END: Out=	pɑːdraig'
+PERF: Stage Stage4_4_1_VocalizeLenitedFricatives took 0.001000 seconds for input: Pádraig
+Af. Stage4_4_1_VocalizeLenitedFricatives: [pɑːdraig']
+  Stage4_5_ContextualAllophonyOnPhonetic START: In=	pɑːdraig'
+  Stage4_5_ContextualAllophonyOnPhonetic END: Out=	pɑːdraig'
+PERF: Stage Stage4_5_ContextualAllophonyOnPhonetic took 0.008000 seconds for input: Pádraig
+Af. Stage4_5_ContextualAllophonyOnPhonetic: [pɑːdraig']
+  Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	pɑːdraig'
+  Stage4_5_1_DisyllabicShortLongRaising END (no change by unit_processor): Out=	pɑːdraig'
+PERF: Stage Stage4_5_1_DisyllabicShortLongRaising took 0.016000 seconds for input: Pádraig
+Af. Stage4_5_1_DisyllabicShortLongRaising: [pɑːdraig']
+  Stage4_5_2_ConnachtSpecificVowelShifts START: In=	pɑːdraig'
+  Stage4_5_2_ConnachtSpecificVowelShifts END: Out=	pɑːdraig'
+PERF: Stage Stage4_5_2_ConnachtSpecificVowelShifts took 0.000000 seconds for input: Pádraig
+Af. Stage4_5_2_ConnachtSpecificVowelShifts: [pɑːdraig']
+  Nasalization START (Proc Helper): In=	pɑːdraig'
+  Nasalization END (no change by unit_processor): Out=	pɑːdraig'
+PERF: Stage Nasalization took 0.016000 seconds for input: Pádraig
+Af. Nasalization: [pɑːdraig']
+  Stage4_6_UnstressedVowelReduction_Procedural START (Outer): In=	pɑːdraig'
+  Stage4_6_UnstressedVowelReduction_Procedural START (Proc Helper): In=	pɑːdraig'
+  Stage4_6_UnstressedVowelReduction_Procedural END (modified by unit_processor): Out=	pɑːdrig'
+  Stage4_6_UnstressedVowelReduction_Procedural END (Outer): Out=	pɑːdrig'
+PERF: Stage Stage4_6_UnstressedVowelReduction_Procedural took 0.035000 seconds for input: Pádraig
+Af. Stage4_6_UnstressedVowelReduction_Procedural: [pɑːdrig']
+  EpenthesisAndStrongSonorants START (Proc): In=	pɑːdrig'
+  EpenthesisAndStrongSonorants END (Proc): Out=	pɑːdrig'
+PERF: Stage EpenthesisAndStrongSonorants took 0.035000 seconds for input: Pádraig
+Af. EpenthesisAndStrongSonorants: [pɑːdrig']
+  Diacritics START: In=	pɑːdrig'
+  Diacritics END: Out=	pˠɑːd̪ɾˠig'
+PERF: Stage Diacritics took 0.002000 seconds for input: Pádraig
+Af. Diacritics: [pˠɑːd̪ɾˠig']
+  FinalCleanup START: In=	pˠɑːd̪ɾˠig'
+  FinalCleanup END: Out=	pˠɑːd̪ɾˠiɟ
+PERF: Stage FinalCleanup took 0.002000 seconds for input: Pádraig
+Af. FinalCleanup: [pˠɑːd̪ɾˠiɟ]
+Lá Fhéile Pádraig           -> [l̪ɑː fçeːl̪ə pˠɑːd̪ɾˠiɟ]
