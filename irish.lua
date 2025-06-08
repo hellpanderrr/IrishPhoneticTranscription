@@ -36,7 +36,7 @@ if not status then
     error("ustring module not found.")
 end
 
-local ulower, usub, ulen, ufind, umatch, ugsub, ugmatch, toNFC =
+local ulower, usub, ulen, ufind, umatch, ugsub, ugmatch, N =
     ustring_lib.lower, ustring_lib.sub, ustring_lib.len, ustring_lib.find,
     ustring_lib.match, ustring_lib.gsub, ustring_lib.gmatch, ustring_lib.toNFC
 
@@ -48,7 +48,7 @@ if debug_file then debug_file:write("\239\187\191") else original_print("WARN: C
 local original_print_func = print
 
 -- Debug Flags
-local MINIMAL_DEBUG_ENABLED = true
+local MINIMAL_DEBUG_ENABLED = false
 if MINIMAL_DEBUG_ENABLED then
     STAGE_DEBUG_ENABLED = {
         PreProcess = false,
@@ -102,6 +102,8 @@ else
         Performance = true,
     }
 end
+
+MINIMAL_DEBUG_ENABLED = false
 print = function(...)
     local msg = table.concat({ ... }, "\t")
     original_print_func(msg)
@@ -151,47 +153,47 @@ end
 table.insert(PHONETIC_VOWEL_NUCLEUS_PATTERN_PARTS, SINGLE_VOWEL_WITH_OPT_LONG_CAPTURE_STR)
 
 local SHORT_VOWEL_CAPTURE_FOR_EPENTHESIS = "([" .. ANY_SHORT_VOWEL_PHONETIC_CHARS_STR .. "]~?)"
-local CPART_CAPTURE_STRICT = toNFC("(" .. CONSONANT_CLASS_NO_CAPTURE .. "'?)")
-local VOWEL_A_CLASS_CAPTURE_STRICT = toNFC("([aæɑ]~?)")
-local VOWEL_E_I_CLASS_CAPTURE_STRICT = toNFC("([eɛiɪ]~?)")
-local VOWEL_O_U_CLASS_CAPTURE_STRICT = toNFC("([oɔʊʌ]~?)")
-local DIPHTHONG_AI_CAPTURE_STRICT = toNFC("(ai~?)")
+local CPART_CAPTURE_STRICT = N("(" .. CONSONANT_CLASS_NO_CAPTURE .. "'?)")
+local VOWEL_A_CLASS_CAPTURE_STRICT = N("([aæɑ]~?)")
+local VOWEL_E_I_CLASS_CAPTURE_STRICT = N("([eɛiɪ]~?)")
+local VOWEL_O_U_CLASS_CAPTURE_STRICT = N("([oɔʊʌ]~?)")
+local DIPHTHONG_AI_CAPTURE_STRICT = N("(ai~?)")
 
-local ZZZ_N_STR_BRD_PHON = toNFC("ZZZNSTRBRDZZZ")
-local ZZZ_L_STR_BRD_PHON = toNFC("ZZZLSTRBRDZZZ")
-local ZZZ_N_SNG_BRD_PHON = toNFC("ZZZNSNGBRDZZZ")
-local ZZZ_L_SNG_BRD_PHON = toNFC("ZZZLSNGBRDZZZ")
-local ZZZ_N_STR_PAL_PHON = toNFC("ZZZNSTRPALZZZ")
-local ZZZ_L_STR_PAL_PHON = toNFC("ZZZLSTRPALZZZ")
+local ZZZ_N_STR_BRD_PHON = N("ZZZNSTRBRDZZZ")
+local ZZZ_L_STR_BRD_PHON = N("ZZZLSTRBRDZZZ")
+local ZZZ_N_SNG_BRD_PHON = N("ZZZNSNGBRDZZZ")
+local ZZZ_L_SNG_BRD_PHON = N("ZZZLSNGBRDZZZ")
+local ZZZ_N_STR_PAL_PHON = N("ZZZNSTRPALZZZ")
+local ZZZ_L_STR_PAL_PHON = N("ZZZLSTRPALZZZ")
 
 local BROAD_LNM_MARKERS_FOR_STAGE5 = { ZZZ_N_STR_BRD_PHON, ZZZ_L_STR_BRD_PHON, ZZZ_N_SNG_BRD_PHON, ZZZ_L_SNG_BRD_PHON,
-    toNFC("m"), toNFC("M") }
-local PALATAL_LNM_MARKERS_FOR_STAGE5 = { ZZZ_N_STR_PAL_PHON, ZZZ_L_STR_PAL_PHON, toNFC("n'"), toNFC("N'"), toNFC("l'"),
-    toNFC("L'"), toNFC("m'"), toNFC("M'") }
-local BROAD_R_MARKERS_FOR_STAGE5 = { toNFC("R"), toNFC("r") }
-local PALATAL_R_MARKERS_FOR_STAGE5 = { toNFC("R'"), toNFC("r'") }
+    N("m"), N("M") }
+local PALATAL_LNM_MARKERS_FOR_STAGE5 = { ZZZ_N_STR_PAL_PHON, ZZZ_L_STR_PAL_PHON, N("n'"), N("N'"), N("l'"),
+    N("L'"), N("m'"), N("M'") }
+local BROAD_R_MARKERS_FOR_STAGE5 = { N("R"), N("r") }
+local PALATAL_R_MARKERS_FOR_STAGE5 = { N("R'"), N("r'") }
 
 ALL_PHONETIC_CONSONANTS_INTERMEDIATE_PRIORITY = {
-    toNFC(ZZZ_N_STR_PAL_PHON), toNFC(ZZZ_N_STR_BRD_PHON), toNFC(ZZZ_L_STR_PAL_PHON), toNFC(ZZZ_L_STR_BRD_PHON),
-    toNFC(ZZZ_N_SNG_BRD_PHON), toNFC(ZZZ_L_SNG_BRD_PHON),
-    toNFC("k'"), toNFC("g'"), toNFC("t'"), toNFC("d'"), toNFC("s'"), toNFC("l'"), toNFC("n'"), toNFC("r'"),
-    toNFC("f'"), toNFC("v'"), toNFC("b'"), toNFC("p'"), toNFC("m'"), toNFC("L'"), toNFC("N'"), toNFC("R'"), toNFC("M'"),
-    toNFC("h'"), toNFC("lˠ"), toNFC("nˠ"), toNFC("ɾˠ"), toNFC("mˠ"), toNFC("t̪"), toNFC("d̪"), toNFC("n̪"), toNFC("l̪"),
-    toNFC("n̠ʲ"), toNFC("l̠ʲ"), toNFC("n̪ˠ"), toNFC("l̪ˠ"),
-    toNFC("c"), toNFC("ɟ"), toNFC("ʃ"), toNFC("ç"), toNFC("j"), toNFC("k"), toNFC("g"), toNFC("t"), toNFC("d"), toNFC(
-"p"), toNFC("b"),
-    toNFC("m"), toNFC("n"), toNFC("l"), toNFC("r"), toNFC("s"), toNFC("f"), toNFC("v"), toNFC("L"), toNFC("N"), toNFC(
-"R"), toNFC("M"),
-    toNFC("x"), toNFC("ɣ"), toNFC("ŋ"), toNFC("h"), toNFC("w")
+    N(ZZZ_N_STR_PAL_PHON), N(ZZZ_N_STR_BRD_PHON), N(ZZZ_L_STR_PAL_PHON), N(ZZZ_L_STR_BRD_PHON),
+    N(ZZZ_N_SNG_BRD_PHON), N(ZZZ_L_SNG_BRD_PHON),
+    N("k'"), N("g'"), N("t'"), N("d'"), N("s'"), N("l'"), N("n'"), N("r'"),
+    N("f'"), N("v'"), N("b'"), N("p'"), N("m'"), N("L'"), N("N'"), N("R'"), N("M'"),
+    N("h'"), N("lˠ"), N("nˠ"), N("ɾˠ"), N("mˠ"), N("t̪"), N("d̪"), N("n̪"), N("l̪"),
+    N("n̠ʲ"), N("l̠ʲ"), N("n̪ˠ"), N("l̪ˠ"),
+    N("c"), N("ɟ"), N("ʃ"), N("ç"), N("j"), N("k"), N("g"), N("t"), N("d"), N(
+"p"), N("b"),
+    N("m"), N("n"), N("l"), N("r"), N("s"), N("f"), N("v"), N("L"), N("N"), N(
+"R"), N("M"),
+    N("x"), N("ɣ"), N("ŋ"), N("h"), N("w")
 }
-ALL_PHONETIC_NUCLEI_PRIORITY = { toNFC("eiə~"), toNFC("eiə"), toNFC("ɑ~ː"), toNFC("e~ː"), toNFC("i~ː"), toNFC("o~ː"),
-    toNFC("u~ː"), toNFC("ɨ~ː"), toNFC("æ~ː"), toNFC("ɑː"), toNFC("eː"), toNFC("iː"), toNFC("oː"), toNFC("uː"), toNFC(
-"ɨː"), toNFC("æː"), toNFC("iə~"), toNFC("ua~"), toNFC("ai~"), toNFC("ei~"), toNFC("oi~"), toNFC("ui~"), toNFC("ɑu~"),
-    toNFC("ou~"), toNFC("əu~"), toNFC("aw~"), toNFC("əi~"), toNFC("iə"), toNFC("ua"), toNFC("ai"), toNFC("ei"), toNFC(
-"oi"), toNFC("ui"), toNFC("ɑu"), toNFC("ou"), toNFC("əu"), toNFC("aw"), toNFC("əi"), toNFC("a~"), toNFC("æ~"), toNFC(
-"ɑ~"), toNFC("ɔ~"), toNFC("e~"), toNFC("ɛ~"), toNFC("ə~"), toNFC("i~"), toNFC("ɪ~"), toNFC("u~"), toNFC("ʊ~"), toNFC(
-"ʌ~"), toNFC("a"), toNFC("æ"), toNFC("ɑ"), toNFC("ɔ"), toNFC("e"), toNFC("ɛ"), toNFC("ə"), toNFC("i"), toNFC("ɪ"), toNFC(
-"u"), toNFC("ʊ"), toNFC("ʌ"), toNFC("ʊ̽") }
+ALL_PHONETIC_NUCLEI_PRIORITY = { N("eiə~"), N("eiə"), N("ɑ~ː"), N("e~ː"), N("i~ː"), N("o~ː"),
+    N("u~ː"), N("ɨ~ː"), N("æ~ː"), N("ɑː"), N("eː"), N("iː"), N("oː"), N("uː"), N(
+"ɨː"), N("æː"), N("iə~"), N("ua~"), N("ai~"), N("ei~"), N("oi~"), N("ui~"), N("ɑu~"),
+    N("ou~"), N("əu~"), N("aw~"), N("əi~"), N("iə"), N("ua"), N("ai"), N("ei"), N(
+"oi"), N("ui"), N("ɑu"), N("ou"), N("əu"), N("aw"), N("əi"), N("a~"), N("æ~"), N(
+"ɑ~"), N("ɔ~"), N("e~"), N("ɛ~"), N("ə~"), N("i~"), N("ɪ~"), N("u~"), N("ʊ~"), N(
+"ʌ~"), N("a"), N("æ"), N("ɑ"), N("ɔ"), N("e"), N("ɛ"), N("ə"), N("i"), N("ɪ"), N(
+"u"), N("ʊ"), N("ʌ"), N("ʊ̽") }
 local COMBINED_PHONETIC_UNITS_PRIORITY = {}
 do
     local t = {}
@@ -203,54 +205,54 @@ do
 end
 
 local lexical_exceptions_connacht = {
-    [toNFC("ar")] = toNFC("ɛɾʲ"), -- Keep if this is the desired general pronunciation for 'ar'
-    [toNFC("ach")] = toNFC("əx"),
-    [toNFC("am")] = toNFC("əmˠ"),
-    -- [toNFC("air")] = toNFC("ɛɾʲ"), -- 'air' is often context-dependent, consider if this is always right
-    [toNFC("car")] = toNFC("kɑɾˠ"),
-    [toNFC("'sé")] = toNFC("ʃeː"),
-    [toNFC("sé")] = toNFC("ʃeː"), -- Add unstressed version too
-    [toNFC("Iúr")] = toNFC("ən̠ʲˈtʲuːɾˠ"),
-    [toNFC("an tIúr")] = toNFC("ən̠ʲˈtʲuːɾˠ"), -- More explicit form
-    [toNFC("gníomhaíocht")] = toNFC("ˈɡɾˠiːwiəxt̪ˠ"),
-    [toNFC("shleamhnaigh")] = toNFC("ˈhlʲəun̪ˠə"),
-    [toNFC("amharc")] = toNFC("ˈəuɾˠək"),
-    [toNFC("oíche")] = toNFC("ˈiːhə"),
-    [toNFC("droichead")] = toNFC("ˈd̪ˠɾˠɛhəd̪ˠ"),
-    [toNFC("Mhacha")] = toNFC("ˈwaxə"),
-    [toNFC("Mhuire")] = toNFC("ˈwɪɾʲə"),
-    [toNFC("Taoiseach")] = toNFC("ˈt̪ˠiːʃəx"), -- Target from previous analysis
-    [toNFC("abhainn")] = toNFC("ˈəun̠ʲ"),
-    [toNFC("Aodh")] = toNFC("ˈiː"),
-    [toNFC("Connacht")] = toNFC("ˈkʊn̪ˠəxt̪ˠ"),
-    [toNFC("Chonnacht")] = toNFC("ˈxʊn̪ˠəxt̪ˠ"),
-    [toNFC("cnuimh")] = toNFC("ˈkɾˠɪvʲ"),
-    [toNFC("fheadh")] = toNFC("ˈa"),
-    [toNFC("d'fhág")] = toNFC("ˈd̪ˠɑːɡ"),
-    [toNFC("Iodáil")] = toNFC("ˈɪd̪ˠɑːlʲ"),
-    [toNFC("síofra")] = toNFC("ˈʃiːfˠɾˠə"),
-    [toNFC("aonbheannach")] = toNFC("ˈeːnˠvʲan̪ˠəx"),
-    [toNFC("Bíobla")] = toNFC("ˈbʲiːbˠl̪ˠə"),
-    [toNFC("aríst")] = toNFC("əˈɾʲiːʃtʲ"),
-    [toNFC("éiclips")] = toNFC("ˈeːclʲɪpˠsˠ"),
-    [toNFC("Luaithrigh")] = toNFC("ˈl̪ˠuəhɾʲi"),
-    [toNFC("Nua")] = toNFC("ˈn̪ˠuː"),
-    [toNFC("úth")] = toNFC("ˈʊt̪ˠ"),
-    [toNFC("Afganastáin")] = toNFC("afˠˈɡan̪ˠəsˠt̪ˠɑːnʲ"),
-    [toNFC("Bhaile")] = toNFC("ˈbˠalʲə"),
-    [toNFC("Átha")] = toNFC("ˈɑːhə"),
-    [toNFC("Cliath")] = toNFC("ˈclʲiə"),
+    [N("ar")] = N("ɛɾʲ"), -- Keep if this is the desired general pronunciation for 'ar'
+    [N("ach")] = N("əx"),
+    [N("am")] = N("əmˠ"),
+    -- [N("air")] = N("ɛɾʲ"), -- 'air' is often context-dependent, consider if this is always right
+    [N("car")] = N("kɑɾˠ"),
+    [N("'sé")] = N("ʃeː"),
+    [N("sé")] = N("ʃeː"), -- Add unstressed version too
+    [N("Iúr")] = N("ən̠ʲˈtʲuːɾˠ"),
+    [N("an tIúr")] = N("ən̠ʲˈtʲuːɾˠ"), -- More explicit form
+    [N("gníomhaíocht")] = N("ˈɡɾˠiːwiəxt̪ˠ"),
+    [N("shleamhnaigh")] = N("ˈhlʲəun̪ˠə"),
+    [N("amharc")] = N("ˈəuɾˠək"),
+    [N("oíche")] = N("ˈiːhə"),
+    [N("droichead")] = N("ˈd̪ˠɾˠɛhəd̪ˠ"),
+    [N("Mhacha")] = N("ˈwaxə"),
+    [N("Mhuire")] = N("ˈwɪɾʲə"),
+    [N("Taoiseach")] = N("ˈt̪ˠiːʃəx"), -- Target from previous analysis
+    [N("abhainn")] = N("ˈəun̠ʲ"),
+    [N("Aodh")] = N("ˈiː"),
+    [N("Connacht")] = N("ˈkʊn̪ˠəxt̪ˠ"),
+    [N("Chonnacht")] = N("ˈxʊn̪ˠəxt̪ˠ"),
+    [N("cnuimh")] = N("ˈkɾˠɪvʲ"),
+    [N("fheadh")] = N("ˈa"),
+    [N("d'fhág")] = N("ˈd̪ˠɑːɡ"),
+    [N("Iodáil")] = N("ˈɪd̪ˠɑːlʲ"),
+    [N("síofra")] = N("ˈʃiːfˠɾˠə"),
+    [N("aonbheannach")] = N("ˈeːnˠvʲan̪ˠəx"),
+    [N("Bíobla")] = N("ˈbʲiːbˠl̪ˠə"),
+    [N("aríst")] = N("əˈɾʲiːʃtʲ"),
+    [N("éiclips")] = N("ˈeːclʲɪpˠsˠ"),
+    [N("Luaithrigh")] = N("ˈl̪ˠuəhɾʲi"),
+    [N("Nua")] = N("ˈn̪ˠuː"),
+    [N("úth")] = N("ˈʊt̪ˠ"),
+    [N("Afganastáin")] = N("afˠˈɡan̪ˠəsˠt̪ˠɑːnʲ"),
+    [N("Bhaile")] = N("ˈbˠalʲə"),
+    [N("Átha")] = N("ˈɑːhə"),
+    [N("Cliath")] = N("ˈclʲiə"),
     -- Droichead already added
-    [toNFC("Fhranc")] = toNFC("ˈɾˠaŋk"),
-    [toNFC("Loch")] = toNFC("ˈl̪ˠɔx"),
-    [toNFC("Garman")] = toNFC("ˈɡaɾˠəmˠən̪ˠ"),
-    [toNFC("Tiobraid")] = toNFC("ˈtʲʊbˠɾˠədʲ"),
-    [toNFC("Árann")] = toNFC("ˈɑːɾˠən̪ˠ"),
-    [toNFC("'un")] = toNFC("ən̪ˠ"),
-    [toNFC("un")] = toNFC("ən̪ˠ"), -- Add unstressed version
-    [toNFC("'ur")] = toNFC("əɾˠ"),
-    [toNFC("ur")] = toNFC("əɾˠ"), -- Add unstressed version
-    [toNFC("adhmad")] = toNFC("ˈəimˠəd̪ˠ"),
+    [N("Fhranc")] = N("ˈɾˠaŋk"),
+    [N("Loch")] = N("ˈl̪ˠɔx"),
+    [N("Garman")] = N("ˈɡaɾˠəmˠən̪ˠ"),
+    [N("Tiobraid")] = N("ˈtʲʊbˠɾˠədʲ"),
+    [N("Árann")] = N("ˈɑːɾˠən̪ˠ"),
+    [N("'un")] = N("ən̪ˠ"),
+    [N("un")] = N("ən̪ˠ"), -- Add unstressed version
+    [N("'ur")] = N("əɾˠ"),
+    [N("ur")] = N("əɾˠ"), -- Add unstressed version
+    [N("adhmad")] = N("ˈəimˠəd̪ˠ"),
 }
 
 local UNSTRESSED_WORDS_AND_SUFFIXES = {
@@ -306,56 +308,47 @@ end
 
 
 
-
 local get_ortho_vowel_quality_implication_from_char_or_group_impl
 get_ortho_vowel_quality_implication_from_char_or_group_impl = function(v_char_or_group,
                                                                        is_for_preceding_consonant_context)
     if not v_char_or_group or ulen(v_char_or_group) == 0 then return nil end
 
-    -- Normalize common acute accents to their base for group matching
     local normalized_v_group = v_char_or_group
-    normalized_v_group = ugsub(normalized_v_group, "á", "a")
-    normalized_v_group = ugsub(normalized_v_group, "é", "e")
-    normalized_v_group = ugsub(normalized_v_group, "í", "i")
-    normalized_v_group = ugsub(normalized_v_group, "ó", "o")
-    normalized_v_group = ugsub(normalized_v_group, "ú", "u")
+    normalized_v_group = ugsub(normalized_v_group, "[áǽ]", "a") -- Added ǽ just in case
+    normalized_v_group = ugsub(normalized_v_group, "[éɛ́]", "e") -- Added ɛ́
+    normalized_v_group = ugsub(normalized_v_group, "[íÍ]", "i") -- Added Í
+    normalized_v_group = ugsub(normalized_v_group, "[óɔ́]", "o") -- Added ɔ́
+    normalized_v_group = ugsub(normalized_v_group, "[úʊ́]", "u") -- Added ʊ́
 
     local first_char_of_group = usub(v_char_or_group, 1, 1)
     local last_char_of_group = usub(v_char_or_group, ulen(v_char_or_group), ulen(v_char_or_group))
 
-    if is_for_preceding_consonant_context then -- Quality determined by the START of the following vowel group
-        -- Explicit slenderizing digraphs/trigraphs
+    if is_for_preceding_consonant_context then
         if normalized_v_group == "ei" or normalized_v_group == "eu" or normalized_v_group == "eo" or
             normalized_v_group == "ea" or normalized_v_group == "ia" or normalized_v_group == "io" or
-            normalized_v_group == "iu" or normalized_v_group == "ae" or normalized_v_group == "ai" or -- ai can be broad if final, but slender if initial for preceding C
-            normalized_v_group == "oi" or                                                            -- oi can be broad if final, but slender if initial for preceding C
-            v_char_or_group == "aoi" or v_char_or_group == "aei" or v_char_or_group == "uai" then    -- Keep accents for these specific trigraphs
+            normalized_v_group == "iu" or normalized_v_group == "ae" or
+            normalized_v_group == "ai" or normalized_v_group == "oi" or
+            v_char_or_group == "aoi" or v_char_or_group == "aei" or v_char_or_group == "uai" then
             return "slender"
         end
-        -- Explicit broad digraphs
-        if normalized_v_group == "ui" then return "broad" end -- ui is broad for preceding C
+        if normalized_v_group == "ui" then return "broad" end
         if normalized_v_group == "ao" or normalized_v_group == "ua" or normalized_v_group == "ou" then
             return "broad"
         end
-
-        -- Fallback to first character
         if umatch(first_char_of_group, SLENDER_VOWELS_ORTHO_PATTERN) then
             return "slender"
         elseif umatch(first_char_of_group, BROAD_VOWELS_ORTHO_PATTERN) then
             return "broad"
         end
-    else -- Quality determined by the END of the preceding vowel group
-        -- Explicit slenderizing digraphs/trigraphs
+    else -- Determining quality for a consonant AFTER this vowel group
         if v_char_or_group == "aoi" or v_char_or_group == "aei" or v_char_or_group == "uai" then return "slender" end
-        if normalized_v_group == "ei" or normalized_v_group == "ai" or normalized_v_group == "oi" or normalized_v_group == "ui" then -- ui is slender for following C
+        if normalized_v_group == "ei" or normalized_v_group == "ai" or normalized_v_group == "oi" or normalized_v_group == "ui" then
             return "slender"
         end
-        -- Explicit broad digraphs
-        if normalized_v_group == "ao" or normalized_v_group == "ua" or normalized_v_group == "ou" or normalized_v_group == "ea" or normalized_v_group == "ia" then -- ea/ia broad for following C
+        if normalized_v_group == "ao" or normalized_v_group == "ua" or normalized_v_group == "ou" or
+            normalized_v_group == "ea" or normalized_v_group == "ia" then
             return "broad"
         end
-
-        -- Fallback to last character
         if umatch(last_char_of_group, SLENDER_VOWELS_ORTHO_PATTERN) then
             return "slender"
         elseif umatch(last_char_of_group, BROAD_VOWELS_ORTHO_PATTERN) then
@@ -370,8 +363,10 @@ get_ortho_vowel_quality_implication_from_char_or_group_impl)
 
 local determine_consonant_quality_ortho_impl
 determine_consonant_quality_ortho_impl = function(original_ortho_word, ortho_cons_char_start_idx, ortho_cons_char_end_idx)
-    if not original_ortho_word or not ortho_cons_char_start_idx or not ortho_cons_char_end_idx or ortho_cons_char_start_idx <= 0 or ortho_cons_char_end_idx > ulen(original_ortho_word) or ortho_cons_char_start_idx > ortho_cons_char_end_idx then return
-        "nonpalatal" end
+    if not original_ortho_word or not ortho_cons_char_start_idx or not ortho_cons_char_end_idx or ortho_cons_char_start_idx <= 0 or ortho_cons_char_end_idx > ulen(original_ortho_word) or ortho_cons_char_start_idx > ortho_cons_char_end_idx then
+        debug_print_minimal("ConsonantResolution", string.format("DEBUG DETERMINE_C_QUAL: Invalid indices for '%s': s=%s, e=%s", original_ortho_word, tostring(ortho_cons_char_start_idx), tostring(ortho_cons_char_end_idx)))
+        return "nonpalatal"
+    end
     local current_ortho_cons_seq = usub(original_ortho_word, ortho_cons_char_start_idx, ortho_cons_char_end_idx)
 
     local stress_marker_offset = 0
@@ -393,63 +388,83 @@ determine_consonant_quality_ortho_impl = function(original_ortho_word, ortho_con
     end
     if current_ortho_cons_seq == "l°" or current_ortho_cons_seq == "n°" then return "nonpalatal" end
 
-    local next_v_quality_implication, prev_v_quality_implication
-
-    local next_v_group_str_build = {}
-    local current_scan_idx = ortho_cons_char_end_idx + 1
-    while current_scan_idx <= ulen(original_ortho_word) do
-        local char_at_scan = usub(original_ortho_word, current_scan_idx, current_scan_idx)
-        if umatch(char_at_scan, ALL_VOWELS_ORTHO_PATTERN) then
-            table.insert(next_v_group_str_build, char_at_scan)
-        else
-            break
+    -- Find NEXT determining vowel group (robust extraction)
+    local next_v_group = ""
+    local scan_idx_next = ortho_cons_char_end_idx + 1
+    local temp_scan_idx_next = scan_idx_next
+    while temp_scan_idx_next <= ulen(original_ortho_word) do
+        local char = usub(original_ortho_word, temp_scan_idx_next, temp_scan_idx_next)
+        if umatch(char, ALL_VOWELS_ORTHO_PATTERN) then break
+        elseif umatch(char, "[" .. CONSONANTS_ORTHO_CHARS_STR .. "]") then temp_scan_idx_next = temp_scan_idx_next + 1
+        else break
         end
-        current_scan_idx = current_scan_idx + 1
     end
-    local next_v_group_str = table.concat(next_v_group_str_build)
-    if ulen(next_v_group_str) > 0 then next_v_quality_implication =
-        get_ortho_vowel_quality_implication_from_char_or_group(next_v_group_str, true) end
-
-    local prev_v_group_str_build = {}
-    current_scan_idx = ortho_cons_char_start_idx - 1
-    while current_scan_idx >= 1 do
-        local char_at_scan = usub(original_ortho_word, current_scan_idx, current_scan_idx)
-        if char_at_scan == "ˈ" then break end
-        if umatch(char_at_scan, ALL_VOWELS_ORTHO_PATTERN) then
-            table.insert(prev_v_group_str_build, 1, char_at_scan)
-        else
-            break
+    while temp_scan_idx_next <= ulen(original_ortho_word) do
+        local char = usub(original_ortho_word, temp_scan_idx_next, temp_scan_idx_next)
+        if umatch(char, ALL_VOWELS_ORTHO_PATTERN) then next_v_group = next_v_group .. char; temp_scan_idx_next = temp_scan_idx_next + 1
+        else break
         end
-        current_scan_idx = current_scan_idx - 1
     end
-    local prev_v_group_str = table.concat(prev_v_group_str_build)
-    if ulen(prev_v_group_str) > 0 then prev_v_quality_implication =
-        get_ortho_vowel_quality_implication_from_char_or_group(prev_v_group_str, false) end
 
-    local final_quality
-    if current_ortho_cons_seq == "s" and ortho_cons_char_start_idx > (1 + stress_marker_offset) and prev_v_group_str == "ú" then
-        final_quality = "nonpalatal"
-    elseif not next_v_quality_implication then
-        final_quality = (prev_v_quality_implication == "slender" and "palatal") or "nonpalatal"
+    -- Find PREVIOUS determining vowel group (robust extraction)
+    local prev_v_group = ""
+    local scan_idx_prev = ortho_cons_char_start_idx - 1
+    local temp_prev_v_chars = {}
+    local temp_scan_idx_prev = scan_idx_prev
+    while temp_scan_idx_prev >= 1 do
+        local char = usub(original_ortho_word, temp_scan_idx_prev, temp_scan_idx_prev)
+        if umatch(char, ALL_VOWELS_ORTHO_PATTERN) then break
+        elseif umatch(char, "[" .. CONSONANTS_ORTHO_CHARS_STR .. "]") or char == "ˈ" then temp_scan_idx_prev = temp_scan_idx_prev - 1
+        else break
+        end
+    end
+    while temp_scan_idx_prev >= 1 do
+        local char = usub(original_ortho_word, temp_scan_idx_prev, temp_scan_idx_prev)
+        if umatch(char, ALL_VOWELS_ORTHO_PATTERN) then table.insert(temp_prev_v_chars, 1, char); temp_scan_idx_prev = temp_scan_idx_prev - 1
+        else break
+        end
+    end
+    prev_v_group = table.concat(temp_prev_v_chars)
+
+    local next_qual_implication = get_ortho_vowel_quality_implication_from_char_or_group(next_v_group, true)
+    local prev_qual_implication = get_ortho_vowel_quality_implication_from_char_or_group(prev_v_group, false)
+
+    local determined_quality
+    if next_qual_implication == "slender" then
+        determined_quality = "slender"
+    elseif next_qual_implication == "broad" then
+        if prev_qual_implication == "slender" then
+            determined_quality = "slender" -- Slender Vowel - C - Broad Vowel => C is slender
+        else
+            determined_quality = "broad"
+        end
+    elseif prev_qual_implication == "slender" then
+        determined_quality = "slender"
+    elseif prev_qual_implication == "broad" then
+        determined_quality = "broad"
     else
-        final_quality = (next_v_quality_implication == "slender" and "palatal") or
-        (next_v_quality_implication == "broad" and "nonpalatal") or
-        (prev_v_quality_implication == "slender" and "palatal") or "nonpalatal"
+        determined_quality = "nonpalatal" -- Default (e.g., isolated consonant, though rare for this function)
     end
-    debug_print_minimal("ConsonantResolution", "determine_cons_qual_ortho for '", current_ortho_cons_seq, "' in '",
-        original_ortho_word, "' (idx:", ortho_cons_char_start_idx, "): NextVQual=", next_v_quality_implication or "nil",
-        ", PrevVQual=", prev_v_quality_implication or "nil", " -> FinalQual=", final_quality)
-    return final_quality
+
+    if current_ortho_cons_seq == "s" and (ortho_cons_char_start_idx - stress_marker_offset) > 1 and prev_v_group == "ú" then
+      determined_quality = "nonpalatal"
+    end
+
+    debug_print_minimal("ConsonantResolution", string.format("DEBUG DETERMINE_C_QUAL: For '%s' in '%s' (idx %d): next_v='%s'(%s), prev_v='%s'(%s) -> determined_quality='%s'",
+        current_ortho_cons_seq, original_ortho_word, ortho_cons_char_start_idx,
+        next_v_group, tostring(next_qual_implication), prev_v_group, tostring(prev_qual_implication), determined_quality))
+
+    return determined_quality
 end
-determine_consonant_quality_ortho = (determine_consonant_quality_ortho_impl)
+determine_consonant_quality_ortho = memoize(determine_consonant_quality_ortho_impl)
 
 
 local parse_phonetic_string_to_units_for_epenthesis_impl
 parse_phonetic_string_to_units_for_epenthesis_impl = function(phon_str_raw)
-    local phon_str = toNFC(phon_str_raw); local units = {}; local i = 1
+    local phon_str = N(phon_str_raw); local units = {}; local i = 1
     while i <= ulen(phon_str) do
-        local stress_at_current_pos = ""; if usub(phon_str, i, i) == toNFC("ˈ") then
-            stress_at_current_pos = toNFC("ˈ"); i = i + 1;
+        local stress_at_current_pos = ""; if usub(phon_str, i, i) == N("ˈ") then
+            stress_at_current_pos = N("ˈ"); i = i + 1;
         end
         if i > ulen(phon_str) then
             if stress_at_current_pos ~= "" then table.insert(units,
@@ -505,105 +520,105 @@ is_likely_monosyllable_phonetic_revised = memoize(is_likely_monosyllable_phoneti
 local UNSTRESSED_PREFIXES_ORTHO = { "an%-", "droch%-", "mí%-", "do%-", "ró%-", "dea%-", "fíor%-", "sean%-", "ath%-",
     "comh%-", "fo%-", "frith%-", "idir%-", "in%-", "réamh%-", "so%-", "tras%-", "mór%-", "ban%-", "cam%-", "fionn%-",
     "leas%-" }
-local function resolve_lenited_consonant(base_phoneme_palatal, base_phoneme_nonpalatal, full_match_marker, o_context_str,
-                                         original_match_info_tbl, options)
-    options = options or {};
-    debug_print_minimal(string.format("DEBUG RLC Entry for %s: o_context_str='%s', omi.ortho_s=%s, omi.ortho_e=%s",
-    full_match_marker, o_context_str, tostring(original_match_info_tbl.ortho_s), tostring(original_match_info_tbl.ortho_e)))
-
-    if not original_match_info_tbl or not original_match_info_tbl.ortho_s or not original_match_info_tbl.ortho_e then
-        debug_print_minimal("DEBUG RLC: Early exit, no match info for", full_match_marker)
-        return base_phoneme_nonpalatal
-    end
-
-    local ortho_cons_str = usub(o_context_str, original_match_info_tbl.ortho_s, original_match_info_tbl.ortho_e)
-
-    -- Find NEXT determining vowel group
-    local next_v_group = ""
-    local scan_idx = original_match_info_tbl.ortho_e + 1
-    while scan_idx <= ulen(o_context_str) do -- Scan to find the start of the next vowel group
-        local char = usub(o_context_str, scan_idx, scan_idx)
-        if umatch(char, ALL_VOWELS_ORTHO_PATTERN) then
-            break       -- Found the start of the vowel group
-        elseif umatch(char, "[" .. CONSONANTS_ORTHO_CHARS_STR .. "]") then
-            scan_idx = scan_idx + 1 -- Skip consonant
-        else            -- Some other character, stop
-            debug_print_minimal("DEBUG RLC: Unexpected char '" .. char .. "' at scan_idx " .. scan_idx .. " while finding next vowel start.")
-            break
+    local resolve_lenited_consonant_impl -- Declare forward
+    resolve_lenited_consonant_impl = function(base_phoneme_palatal, base_phoneme_nonpalatal, full_match_marker, o_context_str,
+                                             original_match_info_tbl, options)
+        options = options or {};
+        if not original_match_info_tbl or not original_match_info_tbl.ortho_s or not original_match_info_tbl.ortho_e then
+            debug_print_minimal("ConsonantResolution", string.format("DEBUG RLC: Early exit for '%s', no valid omi: o_s=%s, o_e=%s", full_match_marker, tostring(original_match_info_tbl and original_match_info_tbl.ortho_s), tostring(original_match_info_tbl and original_match_info_tbl.ortho_e)))
+            return base_phoneme_nonpalatal
         end
-    end
-    debug_print_minimal("DEBUG RLC: After finding next vowel start, scan_idx is " .. scan_idx .. ", next_v_group is still '" .. next_v_group .. "'") -- ADD THIS
-
-    while scan_idx <= ulen(o_context_str) do -- Now extract the full vowel group
-        local char = usub(o_context_str, scan_idx, scan_idx)
-        if umatch(char, ALL_VOWELS_ORTHO_PATTERN) then
-            next_v_group = next_v_group .. char
-            scan_idx = scan_idx + 1
-        else
-            break
-        end
-    end
-
-    -- Find PREVIOUS determining vowel grouplocal prev_v_group = ""
-    scan_idx = original_match_info_tbl.ortho_s - 1
-    local temp_prev_v_chars = {}
-    while scan_idx >= 1 do -- Scan backwards to find the end of the previous vowel group
-        local char = usub(o_context_str, scan_idx, scan_idx)
-        if umatch(char, ALL_VOWELS_ORTHO_PATTERN) then
-            break       -- Found the end of the vowel group
-        elseif umatch(char, "[" .. CONSONANTS_ORTHO_CHARS_STR .. "]") or char == "ˈ" then
-            scan_idx = scan_idx - 1 -- Skip consonant or stress
-        else            -- Some other character, stop
-            break
-        end
-    end
-    while scan_idx >= 1 do -- Now extract the full vowel group backwards
-        local char = usub(o_context_str, scan_idx, scan_idx)
-        if umatch(char, ALL_VOWELS_ORTHO_PATTERN) then
-            table.insert(temp_prev_v_chars, 1, char) -- Prepend to build in correct order
-            scan_idx = scan_idx - 1
-        else
-            break
-        end
-    end
-    prev_v_group = table.concat(temp_prev_v_chars)
-
-
-    local next_qual_for_cons = get_ortho_vowel_quality_implication_from_char_or_group(next_v_group, true)
-    local prev_qual_for_cons = get_ortho_vowel_quality_implication_from_char_or_group(prev_v_group, false)
-
-    local quality = next_qual_for_cons or prev_qual_for_cons or "nonpalatal"
-    if next_qual_for_cons == "broad" and prev_qual_for_cons == "slender" then quality = "slender" end
-
-    debug_print_minimal(string.format(
-        "DEBUG RLC for %s in %s: next_v_group='%s', prev_v_group='%s', next_qual_for_cons='%s', prev_qual_for_cons='%s', derived_quality='%s'",
-        ortho_cons_str, o_context_str, next_v_group, prev_v_group, tostring(next_qual_for_cons),
-        tostring(prev_qual_for_cons), quality))
-
-    if options.can_be_w and quality == "nonpalatal" then
-        local is_word_initial_ortho = (original_match_info_tbl.ortho_s == 1 or (original_match_info_tbl.ortho_s == 2 and usub(o_context_str, 1, 1) == "ˈ"))
-        if is_word_initial_ortho and next_v_group ~= "" then
-            local first_next_ortho_vowel = usub(next_v_group, 1, 1)
-            if umatch(first_next_ortho_vowel, "[aoáó]") then
-                debug_print_minimal("DEBUG RLC: mh/bh -> w (broad vowel context)")
-                return toNFC("w")
-            elseif umatch(first_next_ortho_vowel, ALL_VOWELS_ORTHO_PATTERN) then
-                debug_print_minimal("DEBUG RLC: mh/bh -> w (any other vowel initially)")
-                return toNFC("w")
+    
+        local ortho_cons_str = usub(o_context_str, original_match_info_tbl.ortho_s, original_match_info_tbl.ortho_e)
+    
+        -- Find NEXT determining vowel group (robust extraction)
+        local next_v_group = ""
+        local scan_idx_next = original_match_info_tbl.ortho_e + 1
+        local temp_scan_idx_next_rlc = scan_idx_next -- Use a temporary variable for scanning
+        while temp_scan_idx_next_rlc <= ulen(o_context_str) do
+            local char_next = usub(o_context_str, temp_scan_idx_next_rlc, temp_scan_idx_next_rlc)
+            if umatch(char_next, ALL_VOWELS_ORTHO_PATTERN) then break
+            elseif umatch(char_next, "[" .. CONSONANTS_ORTHO_CHARS_STR .. "]") then temp_scan_idx_next_rlc = temp_scan_idx_next_rlc + 1
+            else break
             end
         end
-        debug_print_minimal("DEBUG RLC: mh/bh -> vˠ (nonpalatal, not w)")
-        return toNFC("vˠ")
+        while temp_scan_idx_next_rlc <= ulen(o_context_str) do
+            local char_next = usub(o_context_str, temp_scan_idx_next_rlc, temp_scan_idx_next_rlc)
+            if umatch(char_next, ALL_VOWELS_ORTHO_PATTERN) then next_v_group = next_v_group .. char_next; temp_scan_idx_next_rlc = temp_scan_idx_next_rlc + 1
+            else break
+            end
+        end
+    
+        -- Find PREVIOUS determining vowel group (robust extraction)
+        local prev_v_group = ""
+        local scan_idx_prev = original_match_info_tbl.ortho_s - 1
+        local temp_prev_v_chars_rlc = {}         -- Use a temporary variable
+        local temp_scan_idx_prev_rlc = scan_idx_prev -- Use a temporary variable
+        while temp_scan_idx_prev_rlc >= 1 do
+            local char_prev = usub(o_context_str, temp_scan_idx_prev_rlc, temp_scan_idx_prev_rlc)
+            if umatch(char_prev, ALL_VOWELS_ORTHO_PATTERN) then break
+            elseif umatch(char_prev, "[" .. CONSONANTS_ORTHO_CHARS_STR .. "]") or char_prev == "ˈ" then temp_scan_idx_prev_rlc = temp_scan_idx_prev_rlc - 1
+            else break
+            end
+        end
+        while temp_scan_idx_prev_rlc >= 1 do
+            local char_prev = usub(o_context_str, temp_scan_idx_prev_rlc, temp_scan_idx_prev_rlc)
+            if umatch(char_prev, ALL_VOWELS_ORTHO_PATTERN) then table.insert(temp_prev_v_chars_rlc, 1, char_prev); temp_scan_idx_prev_rlc = temp_scan_idx_prev_rlc - 1
+            else break
+            end
+        end
+        prev_v_group = table.concat(temp_prev_v_chars_rlc)
+    
+        local next_qual_for_cons = get_ortho_vowel_quality_implication_from_char_or_group(next_v_group, true)
+        local prev_qual_for_cons = get_ortho_vowel_quality_implication_from_char_or_group(prev_v_group, false)
+    
+        local quality_derived -- Renamed to avoid conflict with outer scope if any
+        if next_qual_for_cons == "slender" then
+            quality_derived = "slender"
+        elseif next_qual_for_cons == "broad" then
+            if prev_qual_for_cons == "slender" then
+                quality_derived = "slender" -- Slender Vowel - C - Broad Vowel => C is slender
+            else
+                quality_derived = "broad"
+            end
+        elseif prev_qual_for_cons == "slender" then
+            quality_derived = "slender"
+        elseif prev_qual_for_cons == "broad" then
+            quality_derived = "broad"
+        else
+            quality_derived = "nonpalatal" -- Default
+        end
+    
+        debug_print_minimal("ConsonantResolution", string.format("DEBUG RLC for %s in %s (ortho %s): next_v_group='%s'(%s), prev_v_group='%s'(%s) -> quality_derived='%s'",
+            full_match_marker, o_context_str, ortho_cons_str,
+            next_v_group, tostring(next_qual_for_cons), prev_v_group, tostring(prev_qual_for_cons), quality_derived))
+    
+        if options.can_be_w and quality_derived == "nonpalatal" then -- Check against 'nonpalatal' from 'broad'
+            local is_word_initial_ortho = (original_match_info_tbl.ortho_s == 1 or (original_match_info_tbl.ortho_s == 2 and usub(o_context_str, 1, 1) == "ˈ"))
+            if is_word_initial_ortho and next_v_group ~= "" then
+                local first_next_ortho_vowel = usub(next_v_group, 1, 1)
+                if umatch(first_next_ortho_vowel, "[aoáó]") then -- Typically broad vowels that might follow historical slender context for mh/bh
+                    debug_print_minimal("ConsonantResolution", "DEBUG RLC: mh/bh -> w (initial, broad vowel context like ao)")
+                    return N("w")
+                elseif umatch(first_next_ortho_vowel, ALL_VOWELS_ORTHO_PATTERN) then -- Any other vowel initially
+                     debug_print_minimal("ConsonantResolution", "DEBUG RLC: mh/bh -> w (initial, other vowel context)")
+                    return N("w")
+                end
+            end
+            debug_print_minimal("ConsonantResolution", "DEBUG RLC: mh/bh -> vˠ (nonpalatal, not w or not initial enough for w rule)")
+            return N("vˠ")
+        end
+    
+        local result_phoneme = quality_derived == 'slender' and base_phoneme_palatal or base_phoneme_nonpalatal
+        debug_print_minimal("ConsonantResolution", string.format("DEBUG RLC: Final decision: quality_derived=='slender' (%s) -> %s", tostring(quality_derived == 'slender'), result_phoneme))
+        return result_phoneme
     end
+resolve_lenited_consonant = memoize(resolve_lenited_consonant_impl)
 
-    local result_phoneme = quality == 'slender' and base_phoneme_palatal or base_phoneme_nonpalatal
-    debug_print_minimal(string.format("DEBUG RLC: Final decision: quality=='slender' (%s) -> %s", tostring(quality == 'slender'),
-        result_phoneme))
-    return result_phoneme
-end
+
 
 irishPhonetics.rules_stage1_preprocess = { {
-    p = toNFC("^%s*(.-)%s*$"),
+    p = N("^%s*(.-)%s*$"),
     r = function(captured_string)
         if captured_string then
             return
@@ -612,330 +627,282 @@ irishPhonetics.rules_stage1_preprocess = { {
             return ""
         end
     end
-}, { p = toNFC("%s+"), r = " " }, { p = toNFC("�"), r = "" }, }
+}, { p = N("%s+"), r = " " }, { p = N("�"), r = "" }, }
 irishPhonetics.rules_stage2_mark_digraphs_and_vocalisation_triggers = {
-    { p = toNFC("eacht"), r = toNFC("MKR_EACHTBRDFX"),  ortho_len = 5 },
-    { p = toNFC("eoi"),   r = toNFC("MKR_EOITRIGOLNG"), ortho_len = 3 }, { p = toNFC("eói"), r = toNFC("MKR_EOITRIGOLNGACT"), ortho_len = 3 },
-    { p = toNFC("bhf"), r = toNFC("MKR_URUF"), ortho_len = 3 }, { p = toNFC("bp"), r = toNFC("MKR_URUP"), ortho_len = 2 }, { p = toNFC("dt"), r = toNFC("MKR_URUT"), ortho_len = 2 }, { p = toNFC("gc"), r = toNFC("MKR_URUC"), ortho_len = 2 }, { p = toNFC("mb"), r = toNFC("MKR_URUM"), ortho_len = 2 }, { p = toNFC("nd"), r = toNFC("MKR_URUN"), ortho_len = 2 }, { p = toNFC("ng"), r = toNFC("MKR_URUG"), ortho_len = 2 },
-    { p = toNFC("(a)(bh|mh)(n̠ʲ|nʲ|l̠ʲ|lʲ|mʲ)"), r = function(m, a, bh_mh, pal_son) return toNFC(
+    { p = N("eacht"), r = N("MKR_EACHTBRDFX"),  ortho_len = 5 },
+    { p = N("eoi"),   r = N("MKR_EOITRIGOLNG"), ortho_len = 3 }, { p = N("eói"), r = N("MKR_EOITRIGOLNGACT"), ortho_len = 3 },
+    { p = N("bhf"), r = N("MKR_URUF"), ortho_len = 3 }, { p = N("bp"), r = N("MKR_URUP"), ortho_len = 2 }, { p = N("dt"), r = N("MKR_URUT"), ortho_len = 2 }, { p = N("gc"), r = N("MKR_URUC"), ortho_len = 2 }, { p = N("mb"), r = N("MKR_URUM"), ortho_len = 2 }, { p = N("nd"), r = N("MKR_URUN"), ortho_len = 2 }, { p = N("ng"), r = N("MKR_URUG"), ortho_len = 2 },
+    { p = N("(a)(bh|mh)(n̠ʲ|nʲ|l̠ʲ|lʲ|mʲ)"), r = function(m, a, bh_mh, pal_son) return N(
         "MKR_AV_VOC_SLENDER_") .. pal_son end, ortho_len_func = function(m, a, bh_mh, pal_son) return ulen(a ..
         bh_mh .. pal_son) end },
-    { p = toNFC("eidh(#?)$"), r = function(m, c1) return toNFC("MKR_EIDHCONNAI") .. (c1 or "") end, ortho_len = 4 },
-    { p = toNFC("aghaidh(#?)$"), r = function(m, c1) return toNFC("MKR_AGHAIDHVOCTRGT") .. (c1 or "") end, ortho_len = 7 }, { p = toNFC("ubh(#?)$"), r = function(
-    m, c1) return toNFC("MKR_UVOCBFIN") .. (c1 or "") end, ortho_len = 3 }, { p = toNFC("ámh(#?)$"), r = function(
-    m, c1) return toNFC("MKR_AACTLNGVOCMFIN") .. (c1 or "") end, ortho_len = 3 },
-    { p = toNFC("eabh"),     r = toNFC("MKR_EAVOCB"),                                           ortho_len = 4 },
-    { p = toNFC("amh(r)"),   r = function(m, c1) return toNFC("MKR_AVOCMMEDR") .. c1 end,       ortho_len = 3 },
-    { p = toNFC("adh(#?)$"), r = function(m, c1) return toNFC("MKR_AVOCDFIN") .. (c1 or "") end, ortho_len = 3 }, { p = toNFC("eadh(#?)$"), r = function(
-    m, c1) return toNFC("MKR_EAVOCDFIN") .. (c1 or "") end, ortho_len = 4 }, { p = toNFC("agh(#?)$"), r = function(
-    m, c1) return toNFC("MKR_AVOCGFIN") .. (c1 or "") end, ortho_len = 3 }, { p = toNFC("ogh(#?)$"), r = function(
-    m, c1) return toNFC("MKR_OVOCGFIN") .. (c1 or "") end, ortho_len = 3 }, { p = toNFC("obh(#?)$"), r = function(
-    m, c1) return toNFC("MKR_OVOCBFIN") .. (c1 or "") end, ortho_len = 3 }, { p = toNFC("omh(#?)$"), r = function(
-    m, c1) return toNFC("MKR_OVOCMFIN") .. (c1 or "") end, ortho_len = 3 }, { p = toNFC("ibh(#?)$"), r = function(
-    m, c1) return toNFC("MKR_IVOCBFIN") .. (c1 or "") end, ortho_len = 3 }, { p = toNFC("imh(e#?)$"), r = function(
-    m, c1) return toNFC("MKR_IVOCMMEDEFIN") .. (c1 or "") end, ortho_len = 4 }, { p = toNFC("imh(#?)$"), r = function(
-    m, c1) return toNFC("MKR_IVOCMFIN") .. (c1 or "") end, ortho_len = 3 }, { p = toNFC("idh(e#?)$"), r = function(
-    m, c1) return toNFC("MKR_IVOCDMEDEFIN") .. (c1 or "") end, ortho_len = 4 }, { p = toNFC("idh(#?)$"), r = function(
-    m, c1) return toNFC("MKR_IVOCDFIN") .. (c1 or "") end, ortho_len = 3 },
-    { p = toNFC("uidh$"),      r = toNFC("MKR_UIVOCDFIN"),                                                  ortho_len = 4 },
-    { p = toNFC("uidh(e#?)$"), r = function(m, c1) return toNFC("MKR_UIVOCDMEDEFIN") .. (c1 or "") end,     ortho_len = 5 },
-    { p = toNFC("áth(#?)$"),   r = function(m, c1) return toNFC("MKR_AACTLNGVOCTHSILFIN") .. (c1 or "") end, ortho_len = 3 }, { p = toNFC("aidh(#?)$"), r = function(
-    m, c1) return toNFC("MKR_AIDHFINSCHWA") .. (c1 or "") end, ortho_len = 4 }, { p = toNFC("aigh(#?)$"), r = function(
-    m, c1) return toNFC("MKR_AIGHFINSCHWA") .. (c1 or "") end, ortho_len = 4 },
-    { p = toNFC("aoi"), r = toNFC("MKR_AOILNG"),    ortho_len = 3 }, { p = toNFC("ao"), r = toNFC("MKR_AOLNG"), ortho_len = 2 }, { p = toNFC("ói"), r = toNFC("MKR_OIACTLNG"), ortho_len = 2 }, { p = toNFC("aí"), r = toNFC("MKR_AIACTLNG"), ortho_len = 2 },
-    { p = toNFC("^fh"), r = toNFC("MKR_FHINITLEN"), ortho_len = 2 }, { p = toNFC("bh"), r = toNFC("MKR_BH"), ortho_len = 2 }, { p = toNFC("mh"), r = toNFC("MKR_MH"), ortho_len = 2 }, { p = toNFC("ch"), r = toNFC("MKR_CH"), ortho_len = 2 }, { p = toNFC("dh"), r = toNFC("MKR_DH"), ortho_len = 2 }, { p = toNFC("gh"), r = toNFC("MKR_GH"), ortho_len = 2 }, { p = toNFC("ph"), r = toNFC("MKR_PH"), ortho_len = 2 }, { p = toNFC("sh"), r = toNFC("MKR_SH"), ortho_len = 2 }, { p = toNFC("th"), r = toNFC("MKR_TH"), ortho_len = 2 },
-    { p = toNFC("ll"), r = toNFC("MKR_LL_STR"), ortho_len = 2 }, { p = toNFC("nn"), r = toNFC("MKR_NN_STR"), ortho_len = 2 }, { p = toNFC("rr"), r = toNFC("MKR_RR_STR"), ortho_len = 2 }, { p = toNFC("mm"), r = toNFC("MKR_MM_STR"), ortho_len = 2 },
-    { p = toNFC("(ˈ" .. SHORT_VOWELS_ORTHO_SINGLE_STR .. ")l(" .. ALL_VOWELS_ORTHO_PATTERN .. ")"), r = "%1l°%2", ortho_len_func = function(
-        m, c1, c2) return ulen(c1) + 1 + ulen(c2) end }, { p = toNFC("(ˈ" .. SHORT_VOWELS_ORTHO_SINGLE_STR .. ")n(" .. ALL_VOWELS_ORTHO_PATTERN .. ")"), r = "%1n°%2", ortho_len_func = function(
+    { p = N("eidh(#?)$"), r = function(m, c1) return N("MKR_EIDHCONNAI") .. (c1 or "") end, ortho_len = 4 },
+    { p = N("aghaidh(#?)$"), r = function(m, c1) return N("MKR_AGHAIDHVOCTRGT") .. (c1 or "") end, ortho_len = 7 }, { p = N("ubh(#?)$"), r = function(
+    m, c1) return N("MKR_UVOCBFIN") .. (c1 or "") end, ortho_len = 3 }, { p = N("ámh(#?)$"), r = function(
+    m, c1) return N("MKR_AACTLNGVOCMFIN") .. (c1 or "") end, ortho_len = 3 },
+    { p = N("eabh"),     r = N("MKR_EAVOCB"),                                           ortho_len = 4 },
+    { p = N("amh(r)"),   r = function(m, c1) return N("MKR_AVOCMMEDR") .. c1 end,       ortho_len = 3 },
+    { p = N("adh(#?)$"), r = function(m, c1) return N("MKR_AVOCDFIN") .. (c1 or "") end, ortho_len = 3 }, { p = N("eadh(#?)$"), r = function(
+    m, c1) return N("MKR_EAVOCDFIN") .. (c1 or "") end, ortho_len = 4 }, { p = N("agh(#?)$"), r = function(
+    m, c1) return N("MKR_AVOCGFIN") .. (c1 or "") end, ortho_len = 3 }, { p = N("ogh(#?)$"), r = function(
+    m, c1) return N("MKR_OVOCGFIN") .. (c1 or "") end, ortho_len = 3 }, { p = N("obh(#?)$"), r = function(
+    m, c1) return N("MKR_OVOCBFIN") .. (c1 or "") end, ortho_len = 3 }, { p = N("omh(#?)$"), r = function(
+    m, c1) return N("MKR_OVOCMFIN") .. (c1 or "") end, ortho_len = 3 }, { p = N("ibh(#?)$"), r = function(
+    m, c1) return N("MKR_IVOCBFIN") .. (c1 or "") end, ortho_len = 3 }, { p = N("imh(e#?)$"), r = function(
+    m, c1) return N("MKR_IVOCMMEDEFIN") .. (c1 or "") end, ortho_len = 4 }, { p = N("imh(#?)$"), r = function(
+    m, c1) return N("MKR_IVOCMFIN") .. (c1 or "") end, ortho_len = 3 }, { p = N("idh(e#?)$"), r = function(
+    m, c1) return N("MKR_IVOCDMEDEFIN") .. (c1 or "") end, ortho_len = 4 }, { p = N("idh(#?)$"), r = function(
+    m, c1) return N("MKR_IVOCDFIN") .. (c1 or "") end, ortho_len = 3 },
+    { p = N("uidh$"),      r = N("MKR_UIVOCDFIN"),                                                  ortho_len = 4 },
+    { p = N("uidh(e#?)$"), r = function(m, c1) return N("MKR_UIVOCDMEDEFIN") .. (c1 or "") end,     ortho_len = 5 },
+    { p = N("áth(#?)$"),   r = function(m, c1) return N("MKR_AACTLNGVOCTHSILFIN") .. (c1 or "") end, ortho_len = 3 }, { p = N("aidh(#?)$"), r = function(
+    m, c1) return N("MKR_AIDHFINSCHWA") .. (c1 or "") end, ortho_len = 4 }, { p = N("aigh(#?)$"), r = function(
+    m, c1) return N("MKR_AIGHFINSCHWA") .. (c1 or "") end, ortho_len = 4 },
+    { p = N("aoi"), r = N("MKR_AOILNG"),    ortho_len = 3 }, { p = N("ao"), r = N("MKR_AOLNG"), ortho_len = 2 }, { p = N("ói"), r = N("MKR_OIACTLNG"), ortho_len = 2 }, { p = N("aí"), r = N("MKR_AIACTLNG"), ortho_len = 2 },
+    { p = N("^fh"), r = N("MKR_FHINITLEN"), ortho_len = 2 }, { p = N("bh"), r = N("MKR_BH"), ortho_len = 2 }, { p = N("mh"), r = N("MKR_MH"), ortho_len = 2 }, { p = N("ch"), r = N("MKR_CH"), ortho_len = 2 }, { p = N("dh"), r = N("MKR_DH"), ortho_len = 2 }, { p = N("gh"), r = N("MKR_GH"), ortho_len = 2 }, { p = N("ph"), r = N("MKR_PH"), ortho_len = 2 }, { p = N("sh"), r = N("MKR_SH"), ortho_len = 2 }, { p = N("th"), r = N("MKR_TH"), ortho_len = 2 },
+    { p = N("ll"), r = N("MKR_LL_STR"), ortho_len = 2 }, { p = N("nn"), r = N("MKR_NN_STR"), ortho_len = 2 }, { p = N("rr"), r = N("MKR_RR_STR"), ortho_len = 2 }, { p = N("mm"), r = N("MKR_MM_STR"), ortho_len = 2 },
+    { p = N("(ˈ" .. SHORT_VOWELS_ORTHO_SINGLE_STR .. ")l(" .. ALL_VOWELS_ORTHO_PATTERN .. ")"), r = "%1l°%2", ortho_len_func = function(
+        m, c1, c2) return ulen(c1) + 1 + ulen(c2) end }, { p = N("(ˈ" .. SHORT_VOWELS_ORTHO_SINGLE_STR .. ")n(" .. ALL_VOWELS_ORTHO_PATTERN .. ")"), r = "%1n°%2", ortho_len_func = function(
     m, c1, c2) return ulen(c1) + 1 + ulen(c2) end }, }
 irishPhonetics.rules_stage2_5_mark_suffixes = {
-    { p = toNFC("([" .. CONSONANTS_ORTHO_CHARS_STR .. "])(lainn)(#?)$"), r = function(fm, c1, sfx, b) return
-        c1 .. toNFC("MKR_SUFFIX_LAINN") .. (b or "") end,                                                                                                                                     ortho_len_func = function(
+    { p = N("([" .. CONSONANTS_ORTHO_CHARS_STR .. "])(lainn)(#?)$"), r = function(fm, c1, sfx, b) return
+        c1 .. N("MKR_SUFFIX_LAINN") .. (b or "") end,                                                                                                                                     ortho_len_func = function(
         fm, c1, sfx, b) return ulen(c1 .. sfx) end },
-    { p = toNFC("(aigh)(#?)$"),                                          r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_IGH") .. (b or "") end,                                                                                                                                             ortho_len_func = function(
+    { p = N("(aigh)(#?)$"),                                          r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_IGH") .. (b or "") end,                                                                                                                                             ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(igh)(#?)$"),                                           r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_IGH") .. (b or "") end,                                                                                                                                             ortho_len_func = function(
+    { p = N("(igh)(#?)$"),                                           r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_IGH") .. (b or "") end,                                                                                                                                             ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(eoireacht)(a#?)$"),                                    r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_OIRƏXTA") .. (b or "") end,                                                                                                                                         ortho_len_func = function(
+    { p = N("(eoireacht)(a#?)$"),                                    r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_OIRƏXTA") .. (b or "") end,                                                                                                                                         ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(aíocht)(a#?)$"),                                       r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_IƏXTA") .. (b or "") end,                                                                                                                                           ortho_len_func = function(
+    { p = N("(aíocht)(a#?)$"),                                       r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_IƏXTA") .. (b or "") end,                                                                                                                                           ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(úint)(#?)$"),                                          r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_UUNTJ") .. (b or "") end,                                                                                                                                           ortho_len_func = function(
+    { p = N("(úint)(#?)$"),                                          r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_UUNTJ") .. (b or "") end,                                                                                                                                           ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(úil)(#?)$"),                                           r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_UULJ") .. (b or "") end,                                                                                                                                            ortho_len_func = function(
+    { p = N("(úil)(#?)$"),                                           r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_UULJ") .. (b or "") end,                                                                                                                                            ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(óir)(#?)$"),                                           r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_OOIRJ") .. (b or "") end,                                                                                                                                           ortho_len_func = function(
+    { p = N("(óir)(#?)$"),                                           r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_OOIRJ") .. (b or "") end,                                                                                                                                           ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(ín)(#?)$"),                                            r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_IINJ") .. (b or "") end,                                                                                                                                            ortho_len_func = function(
+    { p = N("(ín)(#?)$"),                                            r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_IINJ") .. (b or "") end,                                                                                                                                            ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(íonn)(#?)$"),                                          r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_IIN_VERB") .. (b or "") end,                                                                                                                                        ortho_len_func = function(
+    { p = N("(íonn)(#?)$"),                                          r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_IIN_VERB") .. (b or "") end,                                                                                                                                        ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(eann)(#?)$"),                                          r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_ƏN_VERB") .. (b or "") end,                                                                                                                                         ortho_len_func = function(
+    { p = N("(eann)(#?)$"),                                          r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_ƏN_VERB") .. (b or "") end,                                                                                                                                         ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(ann)(#?)$"),                                           r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_ƏN_VERB") .. (b or "") end,                                                                                                                                         ortho_len_func = function(
+    { p = N("(ann)(#?)$"),                                           r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_ƏN_VERB") .. (b or "") end,                                                                                                                                         ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(ach)(#?)$"),                                           r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_ƏX") .. (b or "") end,                                                                                                                                              ortho_len_func = function(
+    { p = N("(ach)(#?)$"),                                           r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_ƏX") .. (b or "") end,                                                                                                                                              ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(each)(#?)$"),                                          r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_ƏX") .. (b or "") end,                                                                                                                                              ortho_len_func = function(
+    { p = N("(each)(#?)$"),                                          r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_ƏX") .. (b or "") end,                                                                                                                                              ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(aidh)(#?)$"),                                          r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_IGH") .. (b or "") end,                                                                                                                                             ortho_len_func = function(
+    { p = N("(aidh)(#?)$"),                                          r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_IGH") .. (b or "") end,                                                                                                                                             ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(aí)(#?)$"),                                            r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_A_II") .. (b or "") end,                                                                                                                                            ortho_len_func = function(
+    { p = N("(aí)(#?)$"),                                            r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_A_II") .. (b or "") end,                                                                                                                                            ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(b[oaá]l)(adh)(#?)$"),                                  r = function(fm, stem, sfx, b) return
-        stem .. toNFC("MKR_SUFFIX_ADH_CONN_UU") .. (b or "") end,                                                                                                                             ortho_len_func = function(
+    { p = N("(b[oaá]l)(adh)(#?)$"),                                  r = function(fm, stem, sfx, b) return
+        stem .. N("MKR_SUFFIX_ADH_CONN_UU") .. (b or "") end,                                                                                                                             ortho_len_func = function(
         fm, stem, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(adh)(#?)$"),                                           r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_ADH_VAR") .. (b or "") end,                                                                                                                                         ortho_len_func = function(
+    { p = N("(adh)(#?)$"),                                           r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_ADH_VAR") .. (b or "") end,                                                                                                                                         ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(eadh)(#?)$"),                                          r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_ADH_VAR") .. (b or "") end,                                                                                                                                         ortho_len_func = function(
+    { p = N("(eadh)(#?)$"),                                          r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_ADH_VAR") .. (b or "") end,                                                                                                                                         ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(áil)(#?)$"),                                           r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_AALJ") .. (b or "") end,                                                                                                                                            ortho_len_func = function(
+    { p = N("(áil)(#?)$"),                                           r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_AALJ") .. (b or "") end,                                                                                                                                            ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(fidís)(#?)$"),                                         r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_FIDIIS") .. (b or "") end,                                                                                                                                          ortho_len_func = function(
+    { p = N("(fidís)(#?)$"),                                         r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_FIDIIS") .. (b or "") end,                                                                                                                                          ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(fidh)(#?)$"),                                          r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_FIDH") .. (b or "") end,                                                                                                                                            ortho_len_func = function(
+    { p = N("(fidh)(#?)$"),                                          r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_FIDH") .. (b or "") end,                                                                                                                                            ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(fimid)(#?)$"),                                         r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_FIMID") .. (b or "") end,                                                                                                                                           ortho_len_func = function(
+    { p = N("(fimid)(#?)$"),                                         r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_FIMID") .. (b or "") end,                                                                                                                                           ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(fimis)(#?)$"),                                         r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_FIMIS") .. (b or "") end,                                                                                                                                           ortho_len_func = function(
+    { p = N("(fimis)(#?)$"),                                         r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_FIMIS") .. (b or "") end,                                                                                                                                           ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(ímid)(#?)$"),                                          r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_IIMID") .. (b or "") end,                                                                                                                                           ortho_len_func = function(
+    { p = N("(ímid)(#?)$"),                                          r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_IIMID") .. (b or "") end,                                                                                                                                           ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(inn)(#?)$"),                                           r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_INN_VERB") .. (b or "") end,                                                                                                                                        ortho_len_func = function(
+    { p = N("(inn)(#?)$"),                                           r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_INN_VERB") .. (b or "") end,                                                                                                                                        ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(mid)(#?)$"),                                           r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_MID_VERB") .. (b or "") end,                                                                                                                                        ortho_len_func = function(
+    { p = N("(mid)(#?)$"),                                           r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_MID_VERB") .. (b or "") end,                                                                                                                                        ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(ós)(#?)$"),                                            r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_OOS") .. (b or "") end,                                                                                                                                             ortho_len_func = function(
+    { p = N("(ós)(#?)$"),                                            r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_OOS") .. (b or "") end,                                                                                                                                             ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(ófá)(#?)$"),                                           r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_OOFAA") .. (b or "") end,                                                                                                                                           ortho_len_func = function(
+    { p = N("(ófá)(#?)$"),                                           r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_OOFAA") .. (b or "") end,                                                                                                                                           ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(óidh)(#?)$"),                                          r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_OOIJ_VERB") .. (b or "") end,                                                                                                                                       ortho_len_func = function(
+    { p = N("(óidh)(#?)$"),                                          r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_OOIJ_VERB") .. (b or "") end,                                                                                                                                       ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(tá)(#?)$"),                                            r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_TAA_ACT") .. (b or "") end,                                                                                                                                         ortho_len_func = function(
+    { p = N("(tá)(#?)$"),                                            r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_TAA_ACT") .. (b or "") end,                                                                                                                                         ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(tí)(#?)$"),                                            r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_TII_ACT") .. (b or "") end,                                                                                                                                         ortho_len_func = function(
+    { p = N("(tí)(#?)$"),                                            r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_TII_ACT") .. (b or "") end,                                                                                                                                         ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(fí)(#?)$"),                                            r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_FII_ACT") .. (b or "") end,                                                                                                                                         ortho_len_func = function(
+    { p = N("(fí)(#?)$"),                                            r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_FII_ACT") .. (b or "") end,                                                                                                                                         ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(ui)(gthe)(#?)$"),                                      r = function(fm, ui_part, sfx, b) return
-        ui_part .. toNFC("MKR_SUFFIX_IGTHE_CONN") .. (b or "") end,                                                                                                                           ortho_len_func = function(
+    { p = N("(ui)(gthe)(#?)$"),                                      r = function(fm, ui_part, sfx, b) return
+        ui_part .. N("MKR_SUFFIX_IGTHE_CONN") .. (b or "") end,                                                                                                                           ortho_len_func = function(
         fm, ui_part, sfx, b) return ulen(sfx) end },
-    { p = toNFC("(ithe)(#?)$"),                                          r = function(fm, sfx, b) return
-        toNFC("MKR_SUFFIX_IHƏ_GEN") .. (b or "") end,                                                                                                                                         ortho_len_func = function(
+    { p = N("(ithe)(#?)$"),                                          r = function(fm, sfx, b) return
+        N("MKR_SUFFIX_IHƏ_GEN") .. (b or "") end,                                                                                                                                         ortho_len_func = function(
         fm, sfx, b) return ulen(sfx) end },
 }
 
 irishPhonetics.rules_stage3_consonant_resolution = {
-    { p = toNFC("MKR_FHINITLEN"), r = "" },
-    { p = toNFC("MKR_FH_SILENT"), r = "" }, { p = toNFC("MKR_TH"), r = toNFC("h") },
-    { p = toNFC("MKR_URUF"), r = toNFC("w") },
-    { p = toNFC("MKR_URUP"), r = toNFC("b") }, { p = toNFC("MKR_URUT"), r = toNFC("d") }, { p = toNFC("MKR_URUC"), r = toNFC("g") }, { p = toNFC("MKR_URUM"), r = toNFC("m") }, { p = toNFC("MKR_URUN"), r = toNFC("n") }, { p = toNFC("MKR_URUG"), r = toNFC("ŋ") },
-    { p = toNFC("MKR_PH"), r = function(fm, ocs, omi) return resolve_lenited_consonant(toNFC("f'"),
-            toNFC("f"), fm, ocs, omi) end },
-    { p = toNFC("MKR_SH"), r = function(fm, ocs, omi)
-        if not omi or not omi.ortho_s or not omi.ortho_e then return toNFC("h") end; local next_v_start_ortho = omi
+    { p = N("MKR_FHINITLEN"), r = "" },
+    { p = N("MKR_FH_SILENT"), r = "" }, { p = N("MKR_TH"), r = N("h") },
+    { p = N("MKR_URUF"), r = N("w") },
+    { p = N("MKR_URUP"), r = N("b") }, { p = N("MKR_URUT"), r = N("d") }, { p = N("MKR_URUC"), r = N("g") }, { p = N("MKR_URUM"), r = N("m") }, { p = N("MKR_URUN"), r = N("n") }, { p = N("MKR_URUG"), r = N("ŋ") },
+    { p = N("MKR_PH"), r = function(fm, ocs, omi) return resolve_lenited_consonant(N("f'"),
+            N("f"), fm, ocs, omi) end },
+    { p = N("MKR_SH"), r = function(fm, ocs, omi)
+        if not omi or not omi.ortho_s or not omi.ortho_e then return N("h") end; local next_v_start_ortho = omi
         .ortho_e + 1; local next_v_is_slender_flag = false; if next_v_start_ortho <= ulen(ocs) then if umatch(usub(ocs, next_v_start_ortho, next_v_start_ortho), SLENDER_VOWELS_ORTHO_PATTERN) then next_v_is_slender_flag = true end end; if umatch(ocs, "^[sS][eé][áa]n", omi.ortho_s - 1) then return
-            toNFC("h'") end; return next_v_is_slender_flag and toNFC("h'") or toNFC("h")
-    end }, { p = toNFC("MKR_FH_INTERNAL"), r = "" },
-    { p = toNFC("MKR_BH"), r = function(fm, ocs, omi) return resolve_lenited_consonant(toNFC("v'"),
-            toNFC("vˠ"), fm, ocs, omi, { can_be_w = true }) end },
-    { p = toNFC("MKR_MH"), r = function(fm, ocs, omi) return resolve_lenited_consonant(toNFC("v'"),
-            toNFC("vˠ"), fm, ocs, omi, { can_be_w = true }) end },
-    { p = toNFC("MKR_DH"), r = function(fm, ocs, omi) return resolve_lenited_consonant(toNFC("j"),
-            toNFC("ɣ"), fm, ocs, omi) end },
+            N("h'") end; return next_v_is_slender_flag and N("h'") or N("h")
+    end }, { p = N("MKR_FH_INTERNAL"), r = "" },
+    { p = N("MKR_BH"), r = function(fm, ocs, omi) return resolve_lenited_consonant(N("v'"),
+            N("vˠ"), fm, ocs, omi, { can_be_w = true }) end },
+    { p = N("MKR_MH"), r = function(fm, ocs, omi) return resolve_lenited_consonant(N("v'"),
+            N("vˠ"), fm, ocs, omi, { can_be_w = true }) end },
+    { p = N("MKR_DH"), r = function(fm, ocs, omi) return resolve_lenited_consonant(N("j"),
+            N("ɣ"), fm, ocs, omi) end },
     {
-        p = toNFC("MKR_GH"),
+        p = N("MKR_GH"),
         r = function(fm, ocs, omi)
             if omi and omi.ortho_e == ulen(ocs) then
-                local quality_gh = get_ortho_vowel_quality_implication_from_char_or_group( -- Renamed variable
+                local quality_gh = get_ortho_vowel_quality_implication_from_char_or_group(
                 usub(ocs, omi.ortho_s - 1, omi.ortho_s - 1), false)
-                -- Using 'slender' for comparison
-                if quality_gh == "slender" then return toNFC("h") else return toNFC("ɣ") end
+                if quality_gh == "slender" then return N("h") else return N("ɣ") end
             end
-            return resolve_lenited_consonant(toNFC("j"), toNFC("ɣ"), fm, ocs, omi)
+            return resolve_lenited_consonant(N("j"), N("ɣ"), fm, ocs, omi)
         end
     },
-    { p = toNFC("MKR_LL_STR"), r = function(fm, ocs, omi)
-        local quality_ll = get_ortho_vowel_quality_implication_from_char_or_group( -- Renamed variable
+    { p = N("MKR_LL_STR"), r = function(fm, ocs, omi)
+        local quality_ll = get_ortho_vowel_quality_implication_from_char_or_group(
         usub(ocs, omi.ortho_e + 1, omi.ortho_e + 1), true) or
         get_ortho_vowel_quality_implication_from_char_or_group(usub(ocs, omi.ortho_s - 1, omi.ortho_s - 1), false);
-        -- Using 'slender' for comparison
         return quality_ll == "slender" and ZZZ_L_STR_PAL_PHON or ZZZ_L_STR_BRD_PHON
     end },
-    { p = toNFC("MKR_NN_STR"), r = function(fm, ocs, omi)
-        local quality_nn = get_ortho_vowel_quality_implication_from_char_or_group( -- Renamed variable
+    { p = N("MKR_NN_STR"), r = function(fm, ocs, omi)
+        local quality_nn = get_ortho_vowel_quality_implication_from_char_or_group(
         usub(ocs, omi.ortho_e + 1, omi.ortho_e + 1), true) or
         get_ortho_vowel_quality_implication_from_char_or_group(usub(ocs, omi.ortho_s - 1, omi.ortho_s - 1), false);
-        -- Using 'slender' for comparison
         return quality_nn == "slender" and ZZZ_N_STR_PAL_PHON or ZZZ_N_STR_BRD_PHON
     end },
-    { p = toNFC("MKR_RR_STR"), r = function(fm, ocs, omi) return resolve_lenited_consonant(toNFC("R'"),
-            toNFC("R"), fm, ocs, omi) end },
-    { p = toNFC("MKR_MM_STR"), r = function(fm, ocs, omi) return
-    resolve_lenited_consonant(toNFC("M'"), toNFC("M"), fm, ocs, omi) end },
-    { p = toNFC("l°"), r = toNFC("l_neutral_") }, { p = toNFC("n°"), r = toNFC("n_neutral_") },
+    { p = N("MKR_RR_STR"), r = function(fm, ocs, omi) return resolve_lenited_consonant(N("R'"),
+            N("R"), fm, ocs, omi) end },
+    { p = N("MKR_MM_STR"), r = function(fm, ocs, omi) return
+    resolve_lenited_consonant(N("M'"), N("M"), fm, ocs, omi) end },
+    { p = N("l°"), r = N("l_neutral_") }, { p = N("n°"), r = N("n_neutral_") },
     {
-        p = toNFC("([bcdfghkmprst])"), -- Pattern for single consonants
+        -- [[FIX 1: Expanded character class to include l, m, n]]
+        p = N("([bcdfghklmnprst])"),
         r = function(c_capture, ocs, omi)
-            debug_print_minimal(string.format("DEBUG GEN_CONS: Processing '%s' in '%s' (orig ortho '%s' at %d-%d)",
+            debug_print_minimal("ConsonantResolution", string.format("DEBUG GEN_CONS: Processing '%s' (ortho '%s' at %d-%d)",
                 c_capture,
-                "STAGE3_INPUT_STRING_PLACEHOLDER", -- Placeholder, actual stage3 input string is complex to pass here
-                ocs, omi.ortho_s, omi.ortho_e))
+                usub(ocs, omi.ortho_s, omi.ortho_e),
+                omi.ortho_s, omi.ortho_e))
 
             if not c_capture then return "" end
-            if c_capture == toNFC("l_neutral_") or c_capture == toNFC("n_neutral_") then
-                debug_print_minimal(string.format("DEBUG GEN_CONS: '%s' is neutral, returning as is.", c_capture))
+            if c_capture == N("l_neutral_") or c_capture == N("n_neutral_") then
+                debug_print_minimal("ConsonantResolution", string.format("DEBUG GEN_CONS: '%s' is neutral, returning as is.", c_capture))
                 return c_capture
             end
 
-            local base = c_capture;
-            if c_capture == toNFC("c") then base = toNFC("k") end -- Normalize 'c' to 'k' for base
+            local base = c_capture
+            if c_capture == N("c") then base = N("k") end
 
-            -- This check was problematic if omi was not correctly mapped for single chars from phonetic string
-            if not omi or not omi.ortho_s or not omi.ortho_e or not ocs then
-                debug_print_minimal(string.format("DEBUG GEN_CONS: Missing omi/ocs for '%s'. Defaulting.", c_capture))
-                return base == toNFC("s") and toNFC("s") or base
-            end
-
-            local next_v_group = ""
-            local scan_idx_next = omi.ortho_e + 1
-            -- Robust next vowel group extraction (similar to resolve_lenited_consonant)
-            while scan_idx_next <= ulen(ocs) do
-                local char_next = usub(ocs, scan_idx_next, scan_idx_next)
-                if umatch(char_next, ALL_VOWELS_ORTHO_PATTERN) then break
-                elseif umatch(char_next, "[" .. CONSONANTS_ORTHO_CHARS_STR .. "]") then scan_idx_next = scan_idx_next + 1
-                else break
-                end
-            end
-            while scan_idx_next <= ulen(ocs) do
-                local char_next = usub(ocs, scan_idx_next, scan_idx_next)
-                if umatch(char_next, ALL_VOWELS_ORTHO_PATTERN) then next_v_group = next_v_group .. char_next; scan_idx_next = scan_idx_next + 1
-                else break
-                end
-            end
-
-            local prev_v_group = ""
-            local scan_idx_prev = omi.ortho_s - 1
-            local temp_prev_v_chars = {}
-            -- Robust prev vowel group extraction
-            while scan_idx_prev >= 1 do
-                local char_prev = usub(ocs, scan_idx_prev, scan_idx_prev)
-                if umatch(char_prev, ALL_VOWELS_ORTHO_PATTERN) then break
-                elseif umatch(char_prev, "[" .. CONSONANTS_ORTHO_CHARS_STR .. "]") or char_prev == "ˈ" then scan_idx_prev = scan_idx_prev - 1
-                else break
-                end
-            end
-            while scan_idx_prev >= 1 do
-                local char_prev = usub(ocs, scan_idx_prev, scan_idx_prev)
-                if umatch(char_prev, ALL_VOWELS_ORTHO_PATTERN) then table.insert(temp_prev_v_chars, 1, char_prev); scan_idx_prev = scan_idx_prev - 1
-                else break
-                end
-            end
-            prev_v_group = table.concat(temp_prev_v_chars)
-
-            local next_qual = get_ortho_vowel_quality_implication_from_char_or_group(next_v_group, true)
-            local prev_qual = get_ortho_vowel_quality_implication_from_char_or_group(prev_v_group, false)
-
-            local quality_determined = next_qual or prev_qual or "nonpalatal" -- Default to nonpalatal
-            -- Rule: if a consonant is between a slender vowel and a broad vowel, it's palatal (slender)
-            if next_qual == "broad" and prev_qual == "slender" then quality_determined = "slender" end
-
-            debug_print_minimal(string.format("DEBUG GEN_CONS: For '%s': next_v_group='%s'(%s), prev_v_group='%s'(%s) -> quality_determined='%s'",
-                c_capture, next_v_group, tostring(next_qual), prev_v_group, tostring(prev_qual), quality_determined))
+            -- [[FIX 2: Call the more robust quality determination function]]
+            local quality_determined_gc = determine_consonant_quality_ortho(ocs, omi.ortho_s, omi.ortho_e)
 
             local is_truly_initial_in_ortho = (omi.ortho_s == 1);
-            if omi.ortho_s == 2 and usub(ocs, 1, 1) == toNFC("ˈ") then is_truly_initial_in_ortho = true end
+            if omi.ortho_s == 2 and usub(ocs, 1, 1) == N("ˈ") then is_truly_initial_in_ortho = true end
 
-            local result_consonant
+            local result_consonant_gc
 
-            if is_truly_initial_in_ortho and quality_determined == "nonpalatal" then
-                if base == toNFC("n") then
-                    result_consonant = ZZZ_N_SNG_BRD_PHON
-                elseif base == toNFC("l") then
-                    result_consonant = ZZZ_L_SNG_BRD_PHON
-                elseif base == toNFC("s") then -- Initial broad 's'
-                    result_consonant = toNFC("s")
-                else -- Other initial broad consonants
-                    result_consonant = base
-                end
-            else -- Not initial OR is palatal
-                if base == toNFC("s") then
-                    result_consonant = quality_determined == 'slender' and toNFC("s'") or toNFC("s")
+            -- [[FIX 3: Restructured logic to handle all cases, not just initial non-palatal]]
+            if is_truly_initial_in_ortho and (quality_determined_gc == "broad" or quality_determined_gc == "nonpalatal") then
+                if base == N("n") then
+                    result_consonant_gc = ZZZ_N_SNG_BRD_PHON
+                elseif base == N("l") then
+                    result_consonant_gc = ZZZ_L_SNG_BRD_PHON
                 else
-                    result_consonant = quality_determined == 'slender' and base .. toNFC("'") or base
+                    -- It's an initial broad consonant, just return the base
+                    result_consonant_gc = base
+                end
+            else
+                -- This block now handles all other cases:
+                -- 1. All slender consonants (initial or not)
+                -- 2. All non-initial broad consonants
+                if base == N("s") then
+                    result_consonant_gc = quality_determined_gc == 'slender' and N("s'") or N("s")
+                else
+                    result_consonant_gc = quality_determined_gc == 'slender' and base .. N("'") or base
                 end
             end
-            debug_print_minimal(string.format("DEBUG GEN_CONS: Final output for '%s' -> '%s'", c_capture, result_consonant))
-            return result_consonant
+            debug_print_minimal("ConsonantResolution", string.format("DEBUG GEN_CONS: Final output for '%s' (ortho '%s') -> '%s'", c_capture, usub(ocs, omi.ortho_s, omi.ortho_e), result_consonant_gc))
+            return result_consonant_gc
         end
     }
 }
 
 
 irishPhonetics.rules_stage3_5_consonant_assimilation = {
-    { p = toNFC("(d')(f')"), r = toNFC("t'%2") },
+    { p = N("(d')(f')"), r = N("t'%2") },
 }
-irishPhonetics.rules_stage4_0_specific_ortho_to_temp_marker = { { p = toNFC("^(ˈ?(?:[^" .. ALL_SINGLE_PHONETIC_VOWEL_CHARS_STR .. "]*))a(" .. toNFC("MKR_AVOCMMEDR") .. ")(s[" .. ALL_SINGLE_PHONETIC_VOWEL_CHARS_STR .. "]?)"), r = "%1" .. toNFC("MKR_TEMP_CONN_AU") .. "%3" }, { p = toNFC("^(ˈ?(?:[^" .. ALL_SINGLE_PHONETIC_VOWEL_CHARS_STR .. "]*))MKR_EAVOCB(r[" .. ALL_SINGLE_PHONETIC_VOWEL_CHARS_STR .. "]?)"), r = "%1" .. toNFC("MKR_TEMP_CONN_AU") .. "%2" }, { p = toNFC("(" .. ANY_SHORT_VOWEL_PHONETIC_CHARS_STR .. "])(" .. toNFC("MKR_AVOCMMEDR") .. ")"), r = "%1" .. toNFC("MKR_VOC_AMH_MED_R") }, { p = toNFC("(" .. ANY_SHORT_VOWEL_PHONETIC_CHARS_STR .. "])(" .. toNFC("MKR_EAVOCB") .. ")"), r = "%1" .. toNFC("MKR_VOC_EABH_MED_R") }, { p = toNFC("^(ˈ?)(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)" .. "ea(" .. toNFC("MKR_EACHTBRDFX") .. ")$"), r = "%1%2" .. toNFC("MKR_EA_BRD_SHT_PRE_CHT") .. "%3" }, { p = toNFC("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)" .. "ea(" .. toNFC("MKR_CH") .. ")"), r = "%1" .. toNFC("MKR_EA_SLN_PRE_CH") .. "%2" }, { p = toNFC("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)" .. "ea(ŋ)"), r = function(
+irishPhonetics.rules_stage4_0_specific_ortho_to_temp_marker = { { p = N("^(ˈ?(?:[^" .. ALL_SINGLE_PHONETIC_VOWEL_CHARS_STR .. "]*))a(" .. N("MKR_AVOCMMEDR") .. ")(s[" .. ALL_SINGLE_PHONETIC_VOWEL_CHARS_STR .. "]?)"), r = "%1" .. N("MKR_TEMP_CONN_AU") .. "%3" }, { p = N("^(ˈ?(?:[^" .. ALL_SINGLE_PHONETIC_VOWEL_CHARS_STR .. "]*))MKR_EAVOCB(r[" .. ALL_SINGLE_PHONETIC_VOWEL_CHARS_STR .. "]?)"), r = "%1" .. N("MKR_TEMP_CONN_AU") .. "%2" }, { p = N("(" .. ANY_SHORT_VOWEL_PHONETIC_CHARS_STR .. "])(" .. N("MKR_AVOCMMEDR") .. ")"), r = "%1" .. N("MKR_VOC_AMH_MED_R") }, { p = N("(" .. ANY_SHORT_VOWEL_PHONETIC_CHARS_STR .. "])(" .. N("MKR_EAVOCB") .. ")"), r = "%1" .. N("MKR_VOC_EABH_MED_R") }, { p = N("^(ˈ?)(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)" .. "ea(" .. N("MKR_EACHTBRDFX") .. ")$"), r = "%1%2" .. N("MKR_EA_BRD_SHT_PRE_CHT") .. "%3" }, { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)" .. "ea(" .. N("MKR_CH") .. ")"), r = "%1" .. N("MKR_EA_SLN_PRE_CH") .. "%2" }, { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)" .. "ea(ŋ)"), r = function(
     full_match, c_part, ng_cap, o_context_str, original_match_info_tbl)
     local ortho_n_start_idx = original_match_info_tbl.ortho_e - ulen(ng_cap) + 1; local quality_of_n =
     determine_consonant_quality_ortho(o_context_str, ortho_n_start_idx, ortho_n_start_idx); if quality_of_n == "palatal" then return (c_part or "") ..
-        toNFC("MKR_EA_SLN_PRE_NG") .. ng_cap else return (c_part or "") .. toNFC("MKR_EA_BRD_PRE_NG") .. ng_cap end
+        N("MKR_EA_SLN_PRE_NG") .. ng_cap else return (c_part or "") .. N("MKR_EA_BRD_PRE_NG") .. ng_cap end
 end, use_original_context_for_rules = true },
-    { p = toNFC("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)" .. "ea(" .. ZZZ_N_STR_PAL_PHON .. ")$"), r = "%1" .. toNFC("MKR_EA_SLN_PRE_NN") .. "%2" },
-    { p = toNFC("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)" .. "ea(" .. ZZZ_N_STR_BRD_PHON .. ")$"), r = "%1" .. toNFC("MKR_EA_BRD_PRE_NN") .. "%2" },
-    { p = toNFC("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)" .. "ea(" .. ZZZ_N_STR_BRD_PHON .. ")([^'])"), r = "%1" .. toNFC("MKR_EA_BRD_PRE_NN") .. "%2%3" },
-    { p = toNFC("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)" .. "ea(r')"), r = "%1" .. toNFC("MKR_EA_SLN_PRE_RPRIME") .. "%2" }, { p = toNFC("((?:[" .. ANY_CONSONANT_PHONETIC_RAW_CHARS_STR .. "]'?)*)iu(" .. toNFC("MKR_CH") .. ")"), r = "%1" .. toNFC("MKR_IU_SLN_FIN_PRE_CH") .. "%2" }, { p = toNFC("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)" .. "ea(r)"), r = "%1" .. toNFC("MKR_EA_BRD_PRE_R") .. "%2" }, { p = toNFC("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)" .. "ea(n)$"), r = function(
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)" .. "ea(" .. ZZZ_N_STR_PAL_PHON .. ")$"), r = "%1" .. N("MKR_EA_SLN_PRE_NN") .. "%2" },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)" .. "ea(" .. ZZZ_N_STR_BRD_PHON .. ")$"), r = "%1" .. N("MKR_EA_BRD_PRE_NN") .. "%2" },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)" .. "ea(" .. ZZZ_N_STR_BRD_PHON .. ")([^'])"), r = "%1" .. N("MKR_EA_BRD_PRE_NN") .. "%2%3" },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)" .. "ea(r')"), r = "%1" .. N("MKR_EA_SLN_PRE_RPRIME") .. "%2" }, { p = N("((?:[" .. ANY_CONSONANT_PHONETIC_RAW_CHARS_STR .. "]'?)*)iu(" .. N("MKR_CH") .. ")"), r = "%1" .. N("MKR_IU_SLN_FIN_PRE_CH") .. "%2" }, { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)" .. "ea(r)"), r = "%1" .. N("MKR_EA_BRD_PRE_R") .. "%2" }, { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)" .. "ea(n)$"), r = function(
     full_match, c_part, n_cap, o_context_str, original_match_info_tbl)
     local n_quality = determine_consonant_quality_ortho(o_context_str,
         original_match_info_tbl.ortho_s + ulen(c_part or "") + 2,
         original_match_info_tbl.ortho_s + ulen(c_part or "") + 2); if n_quality == "palatal" then return (c_part or "") ..
-        toNFC("MKR_EA_SLN_PRE_N") .. (n_cap or "") else return (c_part or "") ..
-        toNFC("MKR_EA_BRD_PRE_N") .. (n_cap or "") end
-end, use_original_context_for_rules = true }, { p = toNFC("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)" .. "ea(n)([^" .. ALL_VOWELS_ORTHO_CHARS_STR .. "°%-bhfpgcdtmls" .. ANY_CONSONANT_PHONETIC_RAW_CHARS_STR .. "'])"), r = function(
+        N("MKR_EA_SLN_PRE_N") .. (n_cap or "") else return (c_part or "") ..
+        N("MKR_EA_BRD_PRE_N") .. (n_cap or "") end
+end, use_original_context_for_rules = true }, { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)" .. "ea(n)([^" .. ALL_VOWELS_ORTHO_CHARS_STR .. "°%-bhfpgcdtmls" .. ANY_CONSONANT_PHONETIC_RAW_CHARS_STR .. "'])"), r = function(
     full_match, c_part, n_cap, next_char_phon, o_context_str, original_match_info_tbl)
     local n_quality = determine_consonant_quality_ortho(o_context_str,
         original_match_info_tbl.ortho_s + ulen(c_part or "") + 2,
         original_match_info_tbl.ortho_s + ulen(c_part or "") + 2); if n_quality == "palatal" then return (c_part or "") ..
-        toNFC("MKR_EA_SLN_PRE_N") .. (n_cap or "") .. (next_char_phon or "") else return (c_part or "") ..
-        toNFC("MKR_EA_BRD_PRE_N") .. (n_cap or "") .. (next_char_phon or "") end
-end, use_original_context_for_rules = true }, { p = toNFC("io"), r = toNFC("MKR_IO_SHT_TRGT") }, }
+        N("MKR_EA_SLN_PRE_N") .. (n_cap or "") .. (next_char_phon or "") else return (c_part or "") ..
+        N("MKR_EA_BRD_PRE_N") .. (n_cap or "") .. (next_char_phon or "") end
+end, use_original_context_for_rules = true }, { p = N("io"), r = N("MKR_IO_SHT_TRGT") }, }
 irishPhonetics.rules_stage4_0_1_resolve_ch_marker = {
     {
-        p = toNFC("MKR_CH"),
+        p = N("MKR_CH"),
         r = function(full_match_marker, o_context_str, original_match_info_tbl)
             if not original_match_info_tbl or not original_match_info_tbl.ortho_s or not original_match_info_tbl.ortho_e then return
-                toNFC("x") end
+                N("x") end
 
             local ortho_s = original_match_info_tbl.ortho_s
             local ortho_e = original_match_info_tbl.ortho_e
@@ -971,13 +938,13 @@ irishPhonetics.rules_stage4_0_1_resolve_ch_marker = {
 
             if quality == "palatal" and is_medial then
                 -- Hickey (162): Medial palatal /xʲ/ can be debuccalised to /h/.
-                return toNFC("h")
+                return N("h")
             elseif quality == "palatal" then
                 -- Initial or final palatal <ch> is /ç/.
-                return toNFC("ç")
+                return N("ç")
             else
                 -- Broad <ch> is always /x/.
-                return toNFC("x")
+                return N("x")
             end
         end
     },
@@ -986,112 +953,112 @@ irishPhonetics.rules_stage4_0_1_resolve_ch_marker = {
 
 irishPhonetics.rules_stage4_1_vocmark_to_temp_marker = {}
 irishPhonetics.rules_stage4_2_long_vowels_ortho_to_temp_marker = {
-    { p = toNFC("ái"), r = toNFC("MKR_A_I_ACT_LNG_RSLV") },
-    { p = toNFC("éi"), r = toNFC("MKR_E_ACT_I_LNG") }, { p = toNFC("iú"), r = toNFC("MKR_I_U_SHT") }, { p = toNFC("á"), r = toNFC("MKR_A_ACT_LNG") }, { p = toNFC("é"), r = toNFC("MKR_E_ACT_LNG") }, { p = toNFC("í"), r = toNFC("MKR_I_ACT_LNG") }, { p = toNFC("ó"), r = toNFC("MKR_O_ACT_LNG") }, { p = toNFC("ú"), r = toNFC("MKR_U_ACT_LNG") }, { p = toNFC("MKR_AIACTLNG"), r = toNFC("MKR_A_I_ACT_LNG_RSLV") }, }
+    { p = N("ái"), r = N("MKR_A_I_ACT_LNG_RSLV") },
+    { p = N("éi"), r = N("MKR_E_ACT_I_LNG") }, { p = N("iú"), r = N("MKR_I_U_SHT") }, { p = N("á"), r = N("MKR_A_ACT_LNG") }, { p = N("é"), r = N("MKR_E_ACT_LNG") }, { p = N("í"), r = N("MKR_I_ACT_LNG") }, { p = N("ó"), r = N("MKR_O_ACT_LNG") }, { p = N("ú"), r = N("MKR_U_ACT_LNG") }, { p = N("MKR_AIACTLNG"), r = N("MKR_A_I_ACT_LNG_RSLV") }, }
 irishPhonetics.rules_stage4_3_diphthongs_ortho_to_temp_marker = {
-    { p = toNFC("MKR_EOITRIGOLNG"),                      r = toNFC("MKR_EOI_TRIG_O_LNG") }, { p = toNFC("MKR_EOITRIGOLNGACT"), r = toNFC("MKR_EOI_TRIG_O_LNG_ACT") },
-    { p = toNFC("(b)(ai)(" .. ZZZ_N_STR_PAL_PHON .. ")(e)"), r = function(fm, cap_b, cap_ai, cap_nnn,
+    { p = N("MKR_EOITRIGOLNG"),                      r = N("MKR_EOI_TRIG_O_LNG") }, { p = N("MKR_EOITRIGOLNGACT"), r = N("MKR_EOI_TRIG_O_LNG_ACT") },
+    { p = N("(b)(ai)(" .. ZZZ_N_STR_PAL_PHON .. ")(e)"), r = function(fm, cap_b, cap_ai, cap_nnn,
                                                                                           cap_e) return cap_b ..
-        toNFC("MKR_A_FRM_BAINNE") .. cap_nnn .. cap_e end },
-    { p = toNFC("éa"),                                   r = toNFC("MKR_EA_COMPOUND_LONG_E") },
-    { p = toNFC("ae"),                                   r = toNFC("MKR_AE_SEQ") }, { p = toNFC("ia"), r = toNFC("MKR_IA_DIPH") }, { p = toNFC("ua"), r = toNFC("MKR_UA_DIPH") }, { p = toNFC("ai"), r = toNFC("MKR_AI_DIPH") }, { p = toNFC("ei"), r = toNFC("MKR_EI_DIPH") }, { p = toNFC("oi"), r = toNFC("MKR_OI_DIPH") }, { p = toNFC("ui"), r = toNFC("MKR_UI_DIPH") }, { p = toNFC("au"), r = toNFC("MKR_AU_DIPH") }, { p = toNFC("ou"), r = toNFC("MKR_OU_DIPH") }, { p = toNFC("eo"), r = toNFC("MKR_EO_SEQ") }, }
+        N("MKR_A_FRM_BAINNE") .. cap_nnn .. cap_e end },
+    { p = N("éa"),                                   r = N("MKR_EA_COMPOUND_LONG_E") },
+    { p = N("ae"),                                   r = N("MKR_AE_SEQ") }, { p = N("ia"), r = N("MKR_IA_DIPH") }, { p = N("ua"), r = N("MKR_UA_DIPH") }, { p = N("ai"), r = N("MKR_AI_DIPH") }, { p = N("ei"), r = N("MKR_EI_DIPH") }, { p = N("oi"), r = N("MKR_OI_DIPH") }, { p = N("ui"), r = N("MKR_UI_DIPH") }, { p = N("au"), r = N("MKR_AU_DIPH") }, { p = N("ou"), r = N("MKR_OU_DIPH") }, { p = N("eo"), r = N("MKR_EO_SEQ") }, }
 irishPhonetics.rules_stage4_4_resolve_temp_vowel_markers = {
-    { p = toNFC("MKR_I_U_SHT"), r = toNFC("u") },
-    { p = toNFC("MKR_SUFFIX_LAINN"), r = toNFC("lən̠ʲ") },
+    { p = N("MKR_I_U_SHT"), r = N("u") },
+    { p = N("MKR_SUFFIX_LAINN"), r = N("lən̠ʲ") },
 
-    { p = toNFC("MKR_SUFFIX_OIRƏXTA"), r = toNFC("oːɾʲəxt̪ə") },
-    { p = toNFC("MKR_SUFFIX_IƏXTA"), r = toNFC("iəxt̪ə") },
-    { p = toNFC("MKR_SUFFIX_ƏX"), r = toNFC("əx") }, { p = toNFC("MKR_SUFFIX_IGH"), r = toNFC("iː") }, { p = toNFC("MKR_SUFFIX_A_II"), r = toNFC("iː") }, { p = toNFC("MKR_SUFFIX_ADH_VAR"), r = toNFC("ə") }, { p = toNFC("MKR_SUFFIX_ADH_CONN_UU"), r = toNFC("uː") }, { p = toNFC("MKR_SUFFIX_AALJ"), r = toNFC("ɑːlʲ") }, { p = toNFC("MKR_SUFFIX_UULJ"), r = toNFC("uːlʲ") }, { p = toNFC("MKR_SUFFIX_OOIRJ"), r = toNFC("oːɾʲ") }, { p = toNFC("MKR_SUFFIX_IINJ"), r = toNFC("iːnʲ") }, { p = toNFC("MKR_SUFFIX_ƏN_VERB"), r = toNFC("ən̪ˠ") }, { p = toNFC("MKR_SUFFIX_IIN_VERB"), r = toNFC("iːn̪ˠ") }, { p = toNFC("MKR_SUFFIX_UUNTJ"), r = toNFC("uːn̠ʲtʲ") },
-    { p = toNFC("MKR_SUFFIX_FIDIIS"), r = toNFC("hədʲiːʃ") }, { p = toNFC("MKR_SUFFIX_FIDH"), r = toNFC("iː") },
-    { p = toNFC("MKR_SUFFIX_FIMID"), r = toNFC("həmʲədʲ") }, { p = toNFC("MKR_SUFFIX_FIMIS"), r = toNFC("həmʲəʃ") },
-    { p = toNFC("MKR_SUFFIX_IIMID"), r = toNFC("iːmʲədʲ") },
-    { p = toNFC("MKR_SUFFIX_INN_VERB"), r = toNFC("ən̠ʲ") }, { p = toNFC("MKR_SUFFIX_MID_VERB"), r = toNFC("mʲədʲ") }, { p = toNFC("MKR_SUFFIX_OOS"), r = toNFC("oːsˠ") }, { p = toNFC("MKR_SUFFIX_OOFAA"), r = toNFC("oːhɑː") }, { p = toNFC("MKR_SUFFIX_OOIJ_VERB"), r = toNFC("oːj") },
-    { p = toNFC("MKR_SUFFIX_TAA_ACT"), r = toNFC("t̪ˠɑː") }, { p = toNFC("MKR_SUFFIX_TII_ACT"), r = toNFC("tʲiː") }, { p = toNFC("MKR_SUFFIX_FII_ACT"), r = toNFC("fʲiː") },
-    { p = toNFC("MKR_SUFFIX_IGTHE_CONN"), r = toNFC("ɪctʲçi") }, { p = toNFC("MKR_SUFFIX_IHƏ_GEN"), r = toNFC("ɪhə") },
-    { p = toNFC("MKR_EOI_TRIG_O_LNG"), r = toNFC("oː") }, { p = toNFC("MKR_EOI_TRIG_O_LNG_ACT"), r = toNFC("oː") },
-    { p = toNFC("MKR_EIDHCONNAI(#?)"), r = toNFC("ai%1") },
-    { p = toNFC("MKR_AV_VOC_SLENDER_(n̠ʲ|nʲ|l̠ʲ|lʲ|mʲ)"), r = function(m, pal_son) return toNFC("əu") ..
+    { p = N("MKR_SUFFIX_OIRƏXTA"), r = N("oːɾʲəxt̪ə") },
+    { p = N("MKR_SUFFIX_IƏXTA"), r = N("iəxt̪ə") },
+    { p = N("MKR_SUFFIX_ƏX"), r = N("əx") }, { p = N("MKR_SUFFIX_IGH"), r = N("iː") }, { p = N("MKR_SUFFIX_A_II"), r = N("iː") }, { p = N("MKR_SUFFIX_ADH_VAR"), r = N("ə") }, { p = N("MKR_SUFFIX_ADH_CONN_UU"), r = N("uː") }, { p = N("MKR_SUFFIX_AALJ"), r = N("ɑːlʲ") }, { p = N("MKR_SUFFIX_UULJ"), r = N("uːlʲ") }, { p = N("MKR_SUFFIX_OOIRJ"), r = N("oːɾʲ") }, { p = N("MKR_SUFFIX_IINJ"), r = N("iːnʲ") }, { p = N("MKR_SUFFIX_ƏN_VERB"), r = N("ən̪ˠ") }, { p = N("MKR_SUFFIX_IIN_VERB"), r = N("iːn̪ˠ") }, { p = N("MKR_SUFFIX_UUNTJ"), r = N("uːn̠ʲtʲ") },
+    { p = N("MKR_SUFFIX_FIDIIS"), r = N("hədʲiːʃ") }, { p = N("MKR_SUFFIX_FIDH"), r = N("iː") },
+    { p = N("MKR_SUFFIX_FIMID"), r = N("həmʲədʲ") }, { p = N("MKR_SUFFIX_FIMIS"), r = N("həmʲəʃ") },
+    { p = N("MKR_SUFFIX_IIMID"), r = N("iːmʲədʲ") },
+    { p = N("MKR_SUFFIX_INN_VERB"), r = N("ən̠ʲ") }, { p = N("MKR_SUFFIX_MID_VERB"), r = N("mʲədʲ") }, { p = N("MKR_SUFFIX_OOS"), r = N("oːsˠ") }, { p = N("MKR_SUFFIX_OOFAA"), r = N("oːhɑː") }, { p = N("MKR_SUFFIX_OOIJ_VERB"), r = N("oːj") },
+    { p = N("MKR_SUFFIX_TAA_ACT"), r = N("t̪ˠɑː") }, { p = N("MKR_SUFFIX_TII_ACT"), r = N("tʲiː") }, { p = N("MKR_SUFFIX_FII_ACT"), r = N("fʲiː") },
+    { p = N("MKR_SUFFIX_IGTHE_CONN"), r = N("ɪctʲçi") }, { p = N("MKR_SUFFIX_IHƏ_GEN"), r = N("ɪhə") },
+    { p = N("MKR_EOI_TRIG_O_LNG"), r = N("oː") }, { p = N("MKR_EOI_TRIG_O_LNG_ACT"), r = N("oː") },
+    { p = N("MKR_EIDHCONNAI(#?)"), r = N("ai%1") },
+    { p = N("MKR_AV_VOC_SLENDER_(n̠ʲ|nʲ|l̠ʲ|lʲ|mʲ)"), r = function(m, pal_son) return N("əu") ..
         pal_son end },
-    { p = toNFC("MKR_UVOCBFIN(#?)"), r = toNFC("uː%1") }, { p = toNFC("MKR_AACTLNGVOCMFIN(#?)"), r = toNFC("ɑːv%1") }, { p = toNFC("MKR_AVOCMMEDR(r)"), r = toNFC("MKR_TEMP_CONN_AU%1") }, { p = toNFC("MKR_EAVOCB(r)"), r = toNFC("MKR_TEMP_CONN_AU%1") }, { p = toNFC("MKR_AVOCDFIN(#?)"), r = toNFC("ə%1") }, { p = toNFC("MKR_EAVOCDFIN(#?)"), r = toNFC("uː%1") }, { p = toNFC("MKR_AGHAIDHVOCTRGT(#?)"), r = toNFC("əi%1") }, { p = toNFC("MKR_AVOCGFIN(#?)"), r = toNFC("ə%1") }, { p = toNFC("MKR_OVOCGFIN(#?)"), r = toNFC("ə%1") }, { p = toNFC("MKR_OVOCBFIN(#?)"), r = toNFC("oː%1") }, { p = toNFC("MKR_OVOCMFIN(#?)"), r = toNFC("oː%1") }, { p = toNFC("MKR_IVOCBFIN(#?)"), r = toNFC("iː%1") },
-    { p = toNFC("MKR_IVOCMMEDEFIN(#?)"), r = toNFC("ɪv'%1") }, { p = toNFC("MKR_IVOCMFIN(#?)"), r = toNFC("iː%1") },
-    { p = toNFC("MKR_IVOCDMEDEFIN(#?)"), r = toNFC("iː%1") }, { p = toNFC("MKR_UIVOCDMEDEFIN(#?)"), r = toNFC("iː%1") },
-    { p = toNFC("MKR_IVOCDFIN(#?)"), r = toNFC("iː%1") }, { p = toNFC("MKR_UIVOCDFIN(#?)"), r = toNFC("iː%1") },
-    { p = toNFC("MKR_AACTLNGVOCTHSILFIN(#?)"), r = toNFC("ɑː%1") }, { p = toNFC("MKR_AIDHFINSCHWA(#?)"), r = toNFC("ə%1") }, { p = toNFC("MKR_AIGHFINSCHWA(#?)"), r = toNFC("ə%1") }, { p = toNFC("MKR_AIDHFINVOC(#?)"), r = toNFC("ai%1") }, { p = toNFC("MKR_AIGHFINVOC(#?)"), r = toNFC("ai%1") },
-    { p = toNFC("MKR_EA_COMPOUND_LONG_E"), r = toNFC("eː") },
-    { p = toNFC("MKR_A_I_ACT_LNG_RSLV"), r = toNFC("ɑː") }, { p = toNFC("MKR_E_ACT_I_LNG"), r = toNFC("eː") }, { p = toNFC("MKR_I_ACT_U_LNG"), r = toNFC("uː") }, { p = toNFC("MKR_A_ACT_LNG"), r = toNFC("ɑː") }, { p = toNFC("MKR_E_ACT_LNG"), r = toNFC("eː") }, { p = toNFC("MKR_I_ACT_LNG"), r = toNFC("iː") }, { p = toNFC("MKR_O_ACT_LNG"), r = toNFC("oː") }, { p = toNFC("MKR_U_ACT_LNG"), r = toNFC("uː") }, { p = toNFC("MKR_AOLNG"), r = toNFC("iː") }, { p = toNFC("MKR_AOILNG"), r = toNFC("iː") }, { p = toNFC("MKR_OIACTLNG"), r = toNFC("oː") }, { p = toNFC("MKR_AE_SEQ"), r = toNFC("eː") }, { p = toNFC("MKR_EO_SEQ"), r = toNFC("oː") }, { p = toNFC("MKR_IA_DIPH"), r = toNFC("iə") }, { p = toNFC("MKR_UA_DIPH"), r = toNFC("ua") },
-    { p = toNFC("MKR_A_FRM_BAINNE"),                       r = toNFC("a") },
-    { p = toNFC("MKR_AI_DIPH(" .. ZZZ_N_STR_PAL_PHON .. ")$"), r = toNFC("a%1") },
-    { p = toNFC("MKR_AI_DIPH(nm')"),                       r = toNFC("a%1") },
-    { p = toNFC("MKR_AI_DIPH"),                            r = toNFC("ai") },
-    { p = toNFC("MKR_EI_DIPH"),                            r = toNFC("e") }, { p = toNFC("MKR_OI_DIPH(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*')"), r = toNFC("ɛ%1") }, { p = toNFC("MKR_OI_DIPH"), r = toNFC("ɔ") }, { p = toNFC("MKR_UI_DIPH"), r = toNFC("ɪ") }, { p = toNFC("MKR_AU_DIPH"), r = toNFC("au") }, { p = toNFC("MKR_OU_DIPH"), r = toNFC("ou") }, { p = toNFC("MKR_VOC_AMH_MED_R"), r = toNFC("MKR_TEMP_CONN_AU") }, { p = toNFC("MKR_VOC_EABH_MED_R"), r = toNFC("MKR_TEMP_CONN_AU") }, { p = toNFC("MKR_EA_PRE_BH_VOC"), r = toNFC("a") }, { p = toNFC("MKR_IO_SHT_TRGT"), r = toNFC("ɪ") },
-    { p = toNFC("MKR_EACHTBRDFX"),         r = toNFC("axt") },
-    { p = toNFC("MKR_EA_BRD_SHT_PRE_CHT"), r = toNFC("a") },
-    { p = toNFC("MKR_EA_SLN_PRE_CH"),      r = toNFC("æ") },
-    { p = toNFC("MKR_EA_SLN_PRE_NG"),      r = toNFC("æ") }, { p = toNFC("MKR_EA_BRD_PRE_NG"), r = toNFC("a") }, { p = toNFC("MKR_EA_SLN_PRE_NN"), r = toNFC("æ") }, { p = toNFC("MKR_EA_BRD_PRE_NN"), r = toNFC("a") }, { p = toNFC("MKR_EA_SLN_PRE_RPRIME"), r = toNFC("æ") }, { p = toNFC("MKR_EA_BRD_PRE_R"), r = toNFC("a") }, { p = toNFC("MKR_IU_SLN_FIN_PRE_CH"), r = toNFC("ʊ") }, { p = toNFC("MKR_EA_SLN_PRE_N"), r = toNFC("æ") }, { p = toNFC("MKR_EA_BRD_PRE_N"), r = toNFC("a") },
-    { p = toNFC("ea"), r = toNFC("a") },
+    { p = N("MKR_UVOCBFIN(#?)"), r = N("uː%1") }, { p = N("MKR_AACTLNGVOCMFIN(#?)"), r = N("ɑːv%1") }, { p = N("MKR_AVOCMMEDR(r)"), r = N("MKR_TEMP_CONN_AU%1") }, { p = N("MKR_EAVOCB(r)"), r = N("MKR_TEMP_CONN_AU%1") }, { p = N("MKR_AVOCDFIN(#?)"), r = N("ə%1") }, { p = N("MKR_EAVOCDFIN(#?)"), r = N("uː%1") }, { p = N("MKR_AGHAIDHVOCTRGT(#?)"), r = N("əi%1") }, { p = N("MKR_AVOCGFIN(#?)"), r = N("ə%1") }, { p = N("MKR_OVOCGFIN(#?)"), r = N("ə%1") }, { p = N("MKR_OVOCBFIN(#?)"), r = N("oː%1") }, { p = N("MKR_OVOCMFIN(#?)"), r = N("oː%1") }, { p = N("MKR_IVOCBFIN(#?)"), r = N("iː%1") },
+    { p = N("MKR_IVOCMMEDEFIN(#?)"), r = N("ɪv'%1") }, { p = N("MKR_IVOCMFIN(#?)"), r = N("iː%1") },
+    { p = N("MKR_IVOCDMEDEFIN(#?)"), r = N("iː%1") }, { p = N("MKR_UIVOCDMEDEFIN(#?)"), r = N("iː%1") },
+    { p = N("MKR_IVOCDFIN(#?)"), r = N("iː%1") }, { p = N("MKR_UIVOCDFIN(#?)"), r = N("iː%1") },
+    { p = N("MKR_AACTLNGVOCTHSILFIN(#?)"), r = N("ɑː%1") }, { p = N("MKR_AIDHFINSCHWA(#?)"), r = N("ə%1") }, { p = N("MKR_AIGHFINSCHWA(#?)"), r = N("ə%1") }, { p = N("MKR_AIDHFINVOC(#?)"), r = N("ai%1") }, { p = N("MKR_AIGHFINVOC(#?)"), r = N("ai%1") },
+    { p = N("MKR_EA_COMPOUND_LONG_E"), r = N("eː") },
+    { p = N("MKR_A_I_ACT_LNG_RSLV"), r = N("ɑː") }, { p = N("MKR_E_ACT_I_LNG"), r = N("eː") }, { p = N("MKR_I_ACT_U_LNG"), r = N("uː") }, { p = N("MKR_A_ACT_LNG"), r = N("ɑː") }, { p = N("MKR_E_ACT_LNG"), r = N("eː") }, { p = N("MKR_I_ACT_LNG"), r = N("iː") }, { p = N("MKR_O_ACT_LNG"), r = N("oː") }, { p = N("MKR_U_ACT_LNG"), r = N("uː") }, { p = N("MKR_AOLNG"), r = N("iː") }, { p = N("MKR_AOILNG"), r = N("iː") }, { p = N("MKR_OIACTLNG"), r = N("oː") }, { p = N("MKR_AE_SEQ"), r = N("eː") }, { p = N("MKR_EO_SEQ"), r = N("oː") }, { p = N("MKR_IA_DIPH"), r = N("iə") }, { p = N("MKR_UA_DIPH"), r = N("ua") },
+    { p = N("MKR_A_FRM_BAINNE"),                       r = N("a") },
+    { p = N("MKR_AI_DIPH(" .. ZZZ_N_STR_PAL_PHON .. ")$"), r = N("a%1") },
+    { p = N("MKR_AI_DIPH(nm')"),                       r = N("a%1") },
+    { p = N("MKR_AI_DIPH"),                            r = N("ai") },
+    { p = N("MKR_EI_DIPH"),                            r = N("e") }, { p = N("MKR_OI_DIPH(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*')"), r = N("ɛ%1") }, { p = N("MKR_OI_DIPH"), r = N("ɔ") }, { p = N("MKR_UI_DIPH"), r = N("ɪ") }, { p = N("MKR_AU_DIPH"), r = N("au") }, { p = N("MKR_OU_DIPH"), r = N("ou") }, { p = N("MKR_VOC_AMH_MED_R"), r = N("MKR_TEMP_CONN_AU") }, { p = N("MKR_VOC_EABH_MED_R"), r = N("MKR_TEMP_CONN_AU") }, { p = N("MKR_EA_PRE_BH_VOC"), r = N("a") }, { p = N("MKR_IO_SHT_TRGT"), r = N("ɪ") },
+    { p = N("MKR_EACHTBRDFX"),         r = N("axt") },
+    { p = N("MKR_EA_BRD_SHT_PRE_CHT"), r = N("a") },
+    { p = N("MKR_EA_SLN_PRE_CH"),      r = N("æ") },
+    { p = N("MKR_EA_SLN_PRE_NG"),      r = N("æ") }, { p = N("MKR_EA_BRD_PRE_NG"), r = N("a") }, { p = N("MKR_EA_SLN_PRE_NN"), r = N("æ") }, { p = N("MKR_EA_BRD_PRE_NN"), r = N("a") }, { p = N("MKR_EA_SLN_PRE_RPRIME"), r = N("æ") }, { p = N("MKR_EA_BRD_PRE_R"), r = N("a") }, { p = N("MKR_IU_SLN_FIN_PRE_CH"), r = N("ʊ") }, { p = N("MKR_EA_SLN_PRE_N"), r = N("æ") }, { p = N("MKR_EA_BRD_PRE_N"), r = N("a") },
+    { p = N("ea"), r = N("a") },
 }
 
 placeholder_creation_rules_stage4_5 = {
-    { p = toNFC("ɑu"), r = toNFC("MKR_PHON_AU_DIPH") }, { p = toNFC("ai"), r = toNFC("MKR_PHON_AI_DIPH") },
-    { p = toNFC("iə"), r = toNFC("MKR_PHON_IA_DIPH") }, { p = toNFC("ua"), r = toNFC("MKR_PHON_UA_DIPH") },
-    { p = toNFC("ou"), r = toNFC("MKR_PHON_OU_DIPH") }, { p = toNFC("ei"), r = toNFC("MKR_PHON_EI_DIPH") },
-    { p = toNFC("oi"), r = toNFC("MKR_PHON_OI_DIPH") }, { p = toNFC("ui"), r = toNFC("MKR_PHON_UI_DIPH") },
-    { p = toNFC("əu"), r = toNFC("MKR_PHON_SCHWA_U_DIPH") }, { p = toNFC("aw"), r = toNFC("MKR_PHON_AW_SEQ") },
-    { p = toNFC("əi"), r = toNFC("MKR_PHON_SCHWA_I_DIPH") },
-    { p = toNFC("ɑː"), r = toNFC("MKR_PHON_A_LONG") }, { p = toNFC("eː"), r = toNFC("MKR_PHON_E_LONG") },
-    { p = toNFC("iː"), r = toNFC("MKR_PHON_I_LONG") }, { p = toNFC("oː"), r = toNFC("MKR_PHON_O_LONG") },
-    { p = toNFC("uː"), r = toNFC("MKR_PHON_U_LONG") }, { p = toNFC("ɨː"), r = toNFC("MKR_PHON_Y_LONG") },
-    { p = toNFC("æː"), r = toNFC("MKR_PHON_AE_LONG") },
+    { p = N("ɑu"), r = N("MKR_PHON_AU_DIPH") }, { p = N("ai"), r = N("MKR_PHON_AI_DIPH") },
+    { p = N("iə"), r = N("MKR_PHON_IA_DIPH") }, { p = N("ua"), r = N("MKR_PHON_UA_DIPH") },
+    { p = N("ou"), r = N("MKR_PHON_OU_DIPH") }, { p = N("ei"), r = N("MKR_PHON_EI_DIPH") },
+    { p = N("oi"), r = N("MKR_PHON_OI_DIPH") }, { p = N("ui"), r = N("MKR_PHON_UI_DIPH") },
+    { p = N("əu"), r = N("MKR_PHON_SCHWA_U_DIPH") }, { p = N("aw"), r = N("MKR_PHON_AW_SEQ") },
+    { p = N("əi"), r = N("MKR_PHON_SCHWA_I_DIPH") },
+    { p = N("ɑː"), r = N("MKR_PHON_A_LONG") }, { p = N("eː"), r = N("MKR_PHON_E_LONG") },
+    { p = N("iː"), r = N("MKR_PHON_I_LONG") }, { p = N("oː"), r = N("MKR_PHON_O_LONG") },
+    { p = N("uː"), r = N("MKR_PHON_U_LONG") }, { p = N("ɨː"), r = N("MKR_PHON_Y_LONG") },
+    { p = N("æː"), r = N("MKR_PHON_AE_LONG") },
 }
 core_allophony_rules_for_stage4_5 = {
-    { p = toNFC("^(ˈ?)o(sp')"), r = "%1ɔ%2" },
-    { p = toNFC("(st')i"), r = "%1ʊ" },
-    { p = toNFC("MKR_PHON_Y_LONG"), r = toNFC("MKR_PHON_I_LONG") },
-    { p = toNFC("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "[']?)([ou])([kgxɣ])"), r = "%1ʊ%3" },
-    { p = toNFC("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])(a)(r)$"), r = "%1a%3" },
-    { p = toNFC("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])(a)(R)$"), r = "%1a%3" },
-    { p = toNFC("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])(a)(" .. BROAD_CONSONANT_PHONETIC_CLASS_NO_CAPTURE:gsub("[rR]", "") .. ")"), r = "%1ɑ%3" },
-    { p = toNFC("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])(a)(" .. BROAD_CONSONANT_PHONETIC_CLASS_NO_CAPTURE:gsub("[rR]", "") .. ")$"), r = "%1ɑ%3" },
-    { p = toNFC("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])(a)([^" .. ANY_CONSONANT_PHONETIC_RAW_CHARS_STR .. "rR]?)$"), r = "%1æ%3" },
-    { p = toNFC("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])(a)"), r = "%1æ" },
-    { p = toNFC("a"), r = toNFC("a") },
-    { p = toNFC("e"), r = toNFC("ɛ") },
-    { p = toNFC("i"), r = toNFC("ɪ") },
-    { p = toNFC("o"), r = toNFC("ʊ") },
-    { p = toNFC("u"), r = toNFC("ʊ") },
-    { p = toNFC("(v')([aæ])"), r = "%1%2" }, { p = toNFC("t(æ)"), r = "t'%1" }, { p = toNFC("l(MKR_PHON_I_LONG)"), r = "l'%1" }, { p = toNFC("d(l'MKR_PHON_I_LONG)"), r = "d'%1" }, { p = toNFC("n(iv')"), r = "n'%1" }, { p = toNFC("(d'a)(r)(h)(MKR_PHON_A_LONGɾ')"), r = "%1ɾˠ%4" }, { p = toNFC("(MKR_PHON_A_LONG)i(r)$"), r = "%1iɾ'" }, { p = toNFC("d(a)(r)"), r = "d'%1%2" }, { p = toNFC("k(a)(rt)"), r = "c%1%2" },
-    { p = toNFC("(MKR_PHON_I_LONGɔ)([" .. BROAD_CONSONANT_PHONETIC_CLASS_NO_CAPTURE .. "])"), r = "%1%2" },
-    { p = toNFC("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)([ɔʊʌ])(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])"), r = "%1ɛ%3" },
-    { p = toNFC("([ɾR]')i"), r = "%1ɛ" }, { p = toNFC("([ɾR])i"), r = "%1ɛ" },
-    { p = toNFC("([ɾR]')ɔ"), r = "%1ɔ" }, { p = toNFC("([ɾR])ɔ"), r = "%1ɔ" },
-    { p = toNFC("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*')(a)(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])"), r = "%1ɛ%3" },
-    { p = toNFC("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*')([ɔʊʌ])(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])"), r = "%1ɪ%3" },
-    { p = toNFC("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*')(e)(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])"), r = "%1ɛ%3" },
-    { p = toNFC("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*')(i)(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])"), r = "%1ɪ%3" },
-    { p = toNFC("l_neutral_"), r = toNFC("l") }, { p = toNFC("n_neutral_"), r = toNFC("n") },
+    { p = N("^(ˈ?)o(sp')"), r = "%1ɔ%2" },
+    { p = N("(st')i"), r = "%1ʊ" },
+    { p = N("MKR_PHON_Y_LONG"), r = N("MKR_PHON_I_LONG") },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "[']?)([ou])([kgxɣ])"), r = "%1ʊ%3" },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])(a)(r)$"), r = "%1a%3" },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])(a)(R)$"), r = "%1a%3" },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])(a)(" .. BROAD_CONSONANT_PHONETIC_CLASS_NO_CAPTURE:gsub("[rR]", "") .. ")"), r = "%1ɑ%3" },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])(a)(" .. BROAD_CONSONANT_PHONETIC_CLASS_NO_CAPTURE:gsub("[rR]", "") .. ")$"), r = "%1ɑ%3" },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])(a)([^" .. ANY_CONSONANT_PHONETIC_RAW_CHARS_STR .. "rR]?)$"), r = "%1æ%3" },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])(a)"), r = "%1æ" },
+    { p = N("a"), r = N("a") },
+    { p = N("e"), r = N("ɛ") },
+    { p = N("i"), r = N("ɪ") },
+    { p = N("o"), r = N("ʊ") },
+    { p = N("u"), r = N("ʊ") },
+    { p = N("(v')([aæ])"), r = "%1%2" }, { p = N("t(æ)"), r = "t'%1" }, { p = N("l(MKR_PHON_I_LONG)"), r = "l'%1" }, { p = N("d(l'MKR_PHON_I_LONG)"), r = "d'%1" }, { p = N("n(iv')"), r = "n'%1" }, { p = N("(d'a)(r)(h)(MKR_PHON_A_LONGɾ')"), r = "%1ɾˠ%4" }, { p = N("(MKR_PHON_A_LONG)i(r)$"), r = "%1iɾ'" }, { p = N("d(a)(r)"), r = "d'%1%2" }, { p = N("k(a)(rt)"), r = "c%1%2" },
+    { p = N("(MKR_PHON_I_LONGɔ)([" .. BROAD_CONSONANT_PHONETIC_CLASS_NO_CAPTURE .. "])"), r = "%1%2" },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)([ɔʊʌ])(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])"), r = "%1ɛ%3" },
+    { p = N("([ɾR]')i"), r = "%1ɛ" }, { p = N("([ɾR])i"), r = "%1ɛ" },
+    { p = N("([ɾR]')ɔ"), r = "%1ɔ" }, { p = N("([ɾR])ɔ"), r = "%1ɔ" },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*')(a)(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])"), r = "%1ɛ%3" },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*')([ɔʊʌ])(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])"), r = "%1ɪ%3" },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*')(e)(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])"), r = "%1ɛ%3" },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*')(i)(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])"), r = "%1ɪ%3" },
+    { p = N("l_neutral_"), r = N("l") }, { p = N("n_neutral_"), r = N("n") },
 }
 placeholder_restoration_rules_stage4_5 = {
-    { p = toNFC("MKR_PHON_A_LONG"), r = toNFC("ɑː") }, { p = toNFC("MKR_PHON_E_LONG"), r = toNFC("eː") },
-    { p = toNFC("MKR_PHON_I_LONG"), r = toNFC("iː") }, { p = toNFC("MKR_PHON_O_LONG"), r = toNFC("oː") },
-    { p = toNFC("MKR_PHON_U_LONG"), r = toNFC("uː") }, { p = toNFC("MKR_PHON_Y_LONG"), r = toNFC("ɨː") },
-    { p = toNFC("MKR_PHON_AE_LONG"), r = toNFC("æː") },
-    { p = toNFC("MKR_PHON_AU_DIPH"), r = toNFC("ɑu") }, { p = toNFC("MKR_PHON_AI_DIPH"), r = toNFC("ai") },
-    { p = toNFC("MKR_PHON_IA_DIPH"), r = toNFC("iə") }, { p = toNFC("MKR_PHON_UA_DIPH"), r = toNFC("ua") },
-    { p = toNFC("MKR_PHON_OU_DIPH"), r = toNFC("ou") }, { p = toNFC("MKR_PHON_EI_DIPH"), r = toNFC("ei") },
-    { p = toNFC("MKR_PHON_OI_DIPH"), r = toNFC("oi") }, { p = toNFC("MKR_PHON_UI_DIPH"), r = toNFC("ui") },
-    { p = toNFC("MKR_PHON_SCHWA_U_DIPH"), r = toNFC("əu") }, { p = toNFC("MKR_PHON_AW_SEQ"), r = toNFC("ɑu") },
-    { p = toNFC("MKR_PHON_SCHWA_I_DIPH"), r = toNFC("əi") },
+    { p = N("MKR_PHON_A_LONG"), r = N("ɑː") }, { p = N("MKR_PHON_E_LONG"), r = N("eː") },
+    { p = N("MKR_PHON_I_LONG"), r = N("iː") }, { p = N("MKR_PHON_O_LONG"), r = N("oː") },
+    { p = N("MKR_PHON_U_LONG"), r = N("uː") }, { p = N("MKR_PHON_Y_LONG"), r = N("ɨː") },
+    { p = N("MKR_PHON_AE_LONG"), r = N("æː") },
+    { p = N("MKR_PHON_AU_DIPH"), r = N("ɑu") }, { p = N("MKR_PHON_AI_DIPH"), r = N("ai") },
+    { p = N("MKR_PHON_IA_DIPH"), r = N("iə") }, { p = N("MKR_PHON_UA_DIPH"), r = N("ua") },
+    { p = N("MKR_PHON_OU_DIPH"), r = N("ou") }, { p = N("MKR_PHON_EI_DIPH"), r = N("ei") },
+    { p = N("MKR_PHON_OI_DIPH"), r = N("oi") }, { p = N("MKR_PHON_UI_DIPH"), r = N("ui") },
+    { p = N("MKR_PHON_SCHWA_U_DIPH"), r = N("əu") }, { p = N("MKR_PHON_AW_SEQ"), r = N("ɑu") },
+    { p = N("MKR_PHON_SCHWA_I_DIPH"), r = N("əi") },
 }
-connacht_au_to_schwa_u_shift_rule_stage4_5 = { p = toNFC("^(ˈ?[" ..
+connacht_au_to_schwa_u_shift_rule_stage4_5 = { p = N("^(ˈ?[" ..
 ANY_CONSONANT_PHONETIC_RAW_CHARS_STR .. "]*'?)(ɑu)([" .. ANY_CONSONANT_PHONETIC_RAW_CHARS_STR .. "]*'?)$"), r = function(
     full_match, pre_part, au_diph, post_part)
     if is_likely_monosyllable_phonetic_revised(full_match) then return (pre_part or "") ..
-        toNFC("əu") .. (post_part or "") end; return full_match
+        N("əu") .. (post_part or "") end; return full_match
 end }
-temp_conn_au_to_final_au_rule_stage4_5 = { p = toNFC("MKR_TEMP_CONN_AU"), r = toNFC("əu") }
+temp_conn_au_to_final_au_rule_stage4_5 = { p = N("MKR_TEMP_CONN_AU"), r = N("əu") }
 irishPhonetics.rules_stage4_5_2_connacht_specific_vowel_shifts = {
-    { p = toNFC("(oː)(nʲ)"), r = toNFC("uː%2") },
-    { p = toNFC("(oː)(" .. ZZZ_N_STR_PAL_PHON .. ")"), r = toNFC("uː%2") },
+    { p = N("(oː)(nʲ)"), r = N("uː%2") },
+    { p = N("(oː)(" .. ZZZ_N_STR_PAL_PHON .. ")"), r = N("uː%2") },
 }
 
 irishPhonetics.rules_stage4_5_contextual_allophony_on_phonetic = {}
@@ -1118,12 +1085,12 @@ process_vocalization_on_units_impl = function(parsed_units, phon_word_input, con
 
             if is_prev_vowel and (is_word_final or is_next_vowel) then
                 local new_phon = v_phon
-                if v_phon == toNFC("vˠ") or v_phon == toNFC("w") then
-                    new_phon = toNFC("əu")
-                elseif v_phon == toNFC("vʲ") or v_phon == toNFC("j") then
-                    new_phon = toNFC("iː")
-                elseif v_phon == toNFC("ɣ") then
-                    new_phon = toNFC("əi")
+                if v_phon == N("vˠ") or v_phon == N("w") then
+                    new_phon = N("əu")
+                elseif v_phon == N("vʲ") or v_phon == N("j") then
+                    new_phon = N("iː")
+                elseif v_phon == N("ɣ") then
+                    new_phon = N("əi")
                 end
 
                 if new_phon ~= v_phon then
@@ -1197,7 +1164,7 @@ process_disyllabic_raising_on_units_impl = function(parsed_units, phon_word_inpu
     if not parsed_units or #parsed_units < 2 then return false end
     local vowel_units_data, primary_stress_vowel_original_index, explicit_stress_mark_found = {}, -1, false
     for k, unit_data in ipairs(parsed_units) do
-        if unit_data.stress == toNFC("ˈ") then
+        if unit_data.stress == N("ˈ") then
             explicit_stress_mark_found = true; if k + 1 <= #parsed_units and parsed_units[k + 1].quality == "vowel" then
                 primary_stress_vowel_original_index =
                     k + 1
@@ -1228,10 +1195,10 @@ process_disyllabic_raising_on_units_impl = function(parsed_units, phon_word_inpu
     debug_print_minimal("Stage4_5_1_DisyllabicShortLongRaising", "V1='", v1_phon, "', C_after_V1_qual='",
         c_after_v1_quality, "', C_after_V1_phon='", c_after_v1_phon, "', V2='", v2_phon, "'")
     local new_v1_phon = v1_phon
-    if (v1_phon == toNFC("ɑ") or v1_phon == toNFC("ɔ") or v1_phon == toNFC("ʌ")) and c_after_v1_quality == "nonpalatal" then
-        new_v1_phon = toNFC("ʊ")
-    elseif (v1_phon == toNFC("ɛ") or v1_phon == toNFC("ɪ") or v1_phon == toNFC("i") or v1_phon == toNFC("e") or v1_phon == toNFC("ai")) and c_after_v1_quality == "palatal" then
-        new_v1_phon = toNFC("ɪ")
+    if (v1_phon == N("ɑ") or v1_phon == N("ɔ") or v1_phon == N("ʌ")) and c_after_v1_quality == "nonpalatal" then
+        new_v1_phon = N("ʊ")
+    elseif (v1_phon == N("ɛ") or v1_phon == N("ɪ") or v1_phon == N("i") or v1_phon == N("e") or v1_phon == N("ai")) and c_after_v1_quality == "palatal" then
+        new_v1_phon = N("ɪ")
     end
     if new_v1_phon ~= v1_phon then
         debug_print_minimal("Stage4_5_1_DisyllabicShortLongRaising", "Applying raising: V1 '", v1_phon, "' -> '",
@@ -1253,7 +1220,7 @@ process_unstressed_reduction_on_units_impl = function(parsed_units, phon_word_in
     if not parsed_units or #parsed_units == 0 then return false end
     local modified_in_pass = false
     local primary_stress_found, primary_stress_vowel_index = false, -1
-    for k, unit_data in ipairs(parsed_units) do if unit_data.stress == toNFC("ˈ") then if k + 1 <= #parsed_units and parsed_units[k + 1].quality == "vowel" then
+    for k, unit_data in ipairs(parsed_units) do if unit_data.stress == N("ˈ") then if k + 1 <= #parsed_units and parsed_units[k + 1].quality == "vowel" then
                 primary_stress_found = true; primary_stress_vowel_index = k + 1; break
             elseif unit_data.quality == "vowel" then
                 primary_stress_found = true; primary_stress_vowel_index = k; break
@@ -1267,15 +1234,15 @@ process_unstressed_reduction_on_units_impl = function(parsed_units, phon_word_in
     for k, unit_data in ipairs(parsed_units) do
         if unit_data.quality == "vowel" then
             local is_stressed = (k == primary_stress_vowel_index); local v_phon = unit_data.phon;
-            local is_eligible = not is_stressed and not umatch(v_phon, "ː$") and v_phon ~= toNFC("ə") and
-            v_phon ~= toNFC("i") and v_phon ~= toNFC("ʊ̽") and
+            local is_eligible = not is_stressed and not umatch(v_phon, "ː$") and v_phon ~= N("ə") and
+            v_phon ~= N("i") and v_phon ~= N("ʊ̽") and
             #parse_phonetic_string_to_units_for_epenthesis(v_phon) == 1
             if is_eligible then
                 local prec_c_qual, foll_c_qual, prec_c_unit_idx = "neutral", "neutral", -1
                 local prev_stressed_vowel_is_u_type = false
                 if primary_stress_vowel_index < k and primary_stress_vowel_index > 0 then
                     local stressed_v_phon = parsed_units[primary_stress_vowel_index].phon
-                    if stressed_v_phon == toNFC("uː") or stressed_v_phon == toNFC("ʊ") then
+                    if stressed_v_phon == N("uː") or stressed_v_phon == N("ʊ") then
                         prev_stressed_vowel_is_u_type = true
                     end
                 end
@@ -1291,21 +1258,21 @@ process_unstressed_reduction_on_units_impl = function(parsed_units, phon_word_in
                             parsed_units[next_actual_c_idx].quality end end
                 end
 
-                local reduced_v = toNFC("ə")
+                local reduced_v = N("ə")
                 if prev_stressed_vowel_is_u_type and (foll_c_qual == "nonpalatal" or (foll_c_qual == "neutral" and prec_c_qual == "nonpalatal")) then
                     if prec_c_unit_idx == primary_stress_vowel_index + 1 then
-                        reduced_v = toNFC("MKR_SCHWA_U_TINT")
+                        reduced_v = N("MKR_SCHWA_U_TINT")
                     end
                 elseif foll_c_qual == "palatal" then
-                    reduced_v = toNFC("i")
+                    reduced_v = N("i")
                 elseif foll_c_qual == "nonpalatal" then
-                    reduced_v = toNFC("ə")
+                    reduced_v = N("ə")
                 elseif prec_c_qual == "palatal" then
-                    reduced_v = toNFC("i")
+                    reduced_v = N("i")
                 end
 
-                if v_phon == toNFC("ɛ") and k > 1 and parsed_units[k - 1].phon == toNFC("v'") and k == #parsed_units then
-                    reduced_v = toNFC("ə")
+                if v_phon == N("ɛ") and k > 1 and parsed_units[k - 1].phon == N("v'") and k == #parsed_units then
+                    reduced_v = N("ə")
                 end
 
                 if reduced_v ~= unit_data.phon then
@@ -1320,11 +1287,11 @@ process_unstressed_reduction_on_units_impl = function(parsed_units, phon_word_in
 end
 local process_unstressed_reduction_on_units = memoize(process_unstressed_reduction_on_units_impl)
 
-irishPhonetics.rules_stage4_6_unstressed_vowel_reduction_specific_finals = { { p = toNFC("aí$"), r = toNFC("iː") }, { p = toNFC("eiə$"), r = toNFC("iː") }, { p = toNFC("iːə$"), r = toNFC("iː") }, }
-irishPhonetics.EPENTHESIS_TARGET_CLUSTERS_BROAD = { [toNFC("lk")] = true, [toNFC("lg")] = true, [toNFC("lb")] = true,
-    [toNFC("lv")] = true, [toNFC("rm")] = true, [toNFC("rx")] = true, [toNFC("rb")] = true, [toNFC("rg")] = true, }
-irishPhonetics.EPENTHESIS_TARGET_CLUSTERS_SLENDER = { [toNFC("lk")] = true, [toNFC("lf")] = true, [toNFC("rg")] = true,
-    [toNFC("rk")] = true, [toNFC("nm")] = true, }
+irishPhonetics.rules_stage4_6_unstressed_vowel_reduction_specific_finals = { { p = N("aí$"), r = N("iː") }, { p = N("eiə$"), r = N("iː") }, { p = N("iːə$"), r = N("iː") }, }
+irishPhonetics.EPENTHESIS_TARGET_CLUSTERS_BROAD = { [N("lk")] = true, [N("lg")] = true, [N("lb")] = true,
+    [N("lv")] = true, [N("rm")] = true, [N("rx")] = true, [N("rb")] = true, [N("rg")] = true, }
+irishPhonetics.EPENTHESIS_TARGET_CLUSTERS_SLENDER = { [N("lk")] = true, [N("lf")] = true, [N("rg")] = true,
+    [N("rk")] = true, [N("nm")] = true, }
 
 local function process_epenthesis_on_units(parsed_units, phon_word_input, context)
     local is_overall_monosyllable = is_likely_monosyllable_phonetic_revised(phon_word_input, parsed_units)
@@ -1357,9 +1324,9 @@ local function process_epenthesis_on_units(parsed_units, phon_word_input, contex
             local cluster_key = c1_base .. c2_base; local ep_v_insert = nil
             if is_v_short and is_c1_son and is_c2_valid then
                 if c1_qual == "palatal" and c2_qual == "palatal" then
-                    if irishPhonetics.EPENTHESIS_TARGET_CLUSTERS_SLENDER[cluster_key] then ep_v_insert = toNFC("i") end
+                    if irishPhonetics.EPENTHESIS_TARGET_CLUSTERS_SLENDER[cluster_key] then ep_v_insert = N("i") end
                 elseif c1_qual == "nonpalatal" and c2_qual == "nonpalatal" then
-                    if irishPhonetics.EPENTHESIS_TARGET_CLUSTERS_BROAD[cluster_key] then ep_v_insert = toNFC("ə") end
+                    if irishPhonetics.EPENTHESIS_TARGET_CLUSTERS_BROAD[cluster_key] then ep_v_insert = N("ə") end
                 end
             end
             if ep_v_insert then
@@ -1367,7 +1334,7 @@ local function process_epenthesis_on_units(parsed_units, phon_word_input, contex
                 unit_v.phon, unit_c1.phon, unit_c2.phon, " -> inserting ", ep_v_insert)
                 table.insert(new_units_build, unit_v); table.insert(new_units_build, unit_c1); table.insert(
                 new_units_build,
-                    { phon = ep_v_insert, stress = "", quality = (ep_v_insert == toNFC("i") and "palatal" or "nonpalatal") }); table
+                    { phon = ep_v_insert, stress = "", quality = (ep_v_insert == N("i") and "palatal" or "nonpalatal") }); table
                     .insert(new_units_build, unit_c2)
                 i = i + 3; modified_by_epenthesis = true
             else
@@ -1386,10 +1353,10 @@ irishPhonetics.rules_stage5_strong_sonorants_only = {}
 do
     local CPART_CAPTURE = CPART_CAPTURE_STRICT; local FINAL_CONS_CAPTURE = FINAL_CONSONANT_CAPTURE_STRICT
     local vowel_effects_map_ss_connacht = {
-        { input_v_class_str = VOWEL_A_CLASS_CAPTURE_STRICT, broad_lnm = toNFC("ɑː"), broad_r = toNFC("ɑː"), pal_lnm_N_target = toNFC("a"), pal_lnm_L_target = toNFC("a"), pal_lnm_M_target = toNFC("a"), pal_r = toNFC("a"), sonorant_triggers_special_diphthong = {} },
-        { input_v_class_str = VOWEL_E_I_CLASS_CAPTURE_STRICT, broad_lnm = toNFC("iː"), broad_r = toNFC("a"), pal_lnm_N_target = toNFC("iː"), pal_lnm_L_target = toNFC("iː"), pal_lnm_M_target = toNFC("iː"), pal_r = toNFC("əi"), sonorant_triggers_special_diphthong = {} },
-        { input_v_class_str = VOWEL_O_U_CLASS_CAPTURE_STRICT, broad_lnm = toNFC("uː"), broad_r = toNFC("ɔ"), pal_lnm_N_target = toNFC("iː"), pal_lnm_L_target = toNFC("oi"), pal_lnm_M_target = toNFC("uː"), pal_r = toNFC("ai"), sonorant_triggers_special_diphthong = { [ZZZ_L_STR_BRD_PHON] = toNFC("ɑu"), [ZZZ_L_SNG_BRD_PHON] = toNFC("ɑu") } },
-        { input_v_class_str = DIPHTHONG_AI_CAPTURE_STRICT, broad_lnm = toNFC("ɑː"), broad_r = toNFC("ɑː"), pal_lnm_N_target = toNFC("ai"), pal_lnm_L_target = toNFC("ai"), pal_lnm_M_target = toNFC("ai"), pal_r = toNFC("ɑː"), sonorant_triggers_special_diphthong = {} }
+        { input_v_class_str = VOWEL_A_CLASS_CAPTURE_STRICT, broad_lnm = N("ɑː"), broad_r = N("ɑː"), pal_lnm_N_target = N("a"), pal_lnm_L_target = N("a"), pal_lnm_M_target = N("a"), pal_r = N("a"), sonorant_triggers_special_diphthong = {} },
+        { input_v_class_str = VOWEL_E_I_CLASS_CAPTURE_STRICT, broad_lnm = N("iː"), broad_r = N("a"), pal_lnm_N_target = N("iː"), pal_lnm_L_target = N("iː"), pal_lnm_M_target = N("iː"), pal_r = N("əi"), sonorant_triggers_special_diphthong = {} },
+        { input_v_class_str = VOWEL_O_U_CLASS_CAPTURE_STRICT, broad_lnm = N("uː"), broad_r = N("ɔ"), pal_lnm_N_target = N("iː"), pal_lnm_L_target = N("oi"), pal_lnm_M_target = N("uː"), pal_r = N("ai"), sonorant_triggers_special_diphthong = { [ZZZ_L_STR_BRD_PHON] = N("ɑu"), [ZZZ_L_SNG_BRD_PHON] = N("ɑu") } },
+        { input_v_class_str = DIPHTHONG_AI_CAPTURE_STRICT, broad_lnm = N("ɑː"), broad_r = N("ɑː"), pal_lnm_N_target = N("ai"), pal_lnm_L_target = N("ai"), pal_lnm_M_target = N("ai"), pal_r = N("ɑː"), sonorant_triggers_special_diphthong = {} }
     }
 
     local function create_rules_for_specific_sonorant(rules_table, vowel_class_capture_str_arg,
@@ -1485,80 +1452,80 @@ end
 
 irishPhonetics.rules_stage6_diacritics = {
     
-        { p = toNFC("n(x)"), r = toNFC("nˠ%1") }, 
-        { p = toNFC("s$"), r = toNFC("sˠ") }, 
-        { p = toNFC("s(" .. CONSONANT_CLASS_NO_CAPTURE .. "[^'])"), r = toNFC("sˠ%1") }, 
-        { p = toNFC("s(" .. SINGLE_VOWEL_WITH_OPT_LONG_CAPTURE_STR .. ")"), r = toNFC("sˠ%1") }, 
+        { p = N("n(x)"), r = N("nˠ%1") }, 
+        { p = N("s$"), r = N("sˠ") }, 
+        { p = N("s(" .. CONSONANT_CLASS_NO_CAPTURE .. "[^'])"), r = N("sˠ%1") }, 
+        { p = N("s(" .. SINGLE_VOWEL_WITH_OPT_LONG_CAPTURE_STR .. ")"), r = N("sˠ%1") }, 
         
-        { p = toNFC("t$"), r = toNFC("t̪ˠ") }, 
-        { p = toNFC("t(" .. CONSONANT_CLASS_NO_CAPTURE .. "[^'])"), r = toNFC("t̪ˠ%1") }, 
-        { p = toNFC("t(" .. SINGLE_VOWEL_WITH_OPT_LONG_CAPTURE_STR .. ")"), r = toNFC("t̪ˠ%1") }, 
+        { p = N("t$"), r = N("t̪ˠ") }, 
+        { p = N("t(" .. CONSONANT_CLASS_NO_CAPTURE .. "[^'])"), r = N("t̪ˠ%1") }, 
+        { p = N("t(" .. SINGLE_VOWEL_WITH_OPT_LONG_CAPTURE_STR .. ")"), r = N("t̪ˠ%1") }, 
         
-        { p = toNFC("d$"), r = toNFC("d̪ˠ") }, 
-        { p = toNFC("d(" .. CONSONANT_CLASS_NO_CAPTURE .. "[^'])"), r = toNFC("d̪ˠ%1") }, 
-        { p = toNFC("d(" .. SINGLE_VOWEL_WITH_OPT_LONG_CAPTURE_STR .. ")"), r = toNFC("d̪ˠ%1") }, 
+        { p = N("d$"), r = N("d̪ˠ") }, 
+        { p = N("d(" .. CONSONANT_CLASS_NO_CAPTURE .. "[^'])"), r = N("d̪ˠ%1") }, 
+        { p = N("d(" .. SINGLE_VOWEL_WITH_OPT_LONG_CAPTURE_STR .. ")"), r = N("d̪ˠ%1") }, 
         
         -- Default broad n, l to just velarized. Add dental marker specifically if needed.
-        { p = toNFC("n$"), r = toNFC("nˠ") }, 
-        { p = toNFC("n(" .. CONSONANT_CLASS_NO_CAPTURE .. "[^'])"), r = toNFC("nˠ%1") }, 
-        { p = toNFC("n(" .. SINGLE_VOWEL_WITH_OPT_LONG_CAPTURE_STR .. ")"), r = toNFC("nˠ%1") }, 
+        { p = N("n$"), r = N("nˠ") }, 
+        { p = N("n(" .. CONSONANT_CLASS_NO_CAPTURE .. "[^'])"), r = N("nˠ%1") }, 
+        { p = N("n(" .. SINGLE_VOWEL_WITH_OPT_LONG_CAPTURE_STR .. ")"), r = N("nˠ%1") }, 
         
-        { p = toNFC("l$"), r = toNFC("lˠ") }, 
-        { p = toNFC("l(" .. CONSONANT_CLASS_NO_CAPTURE .. "[^'])"), r = toNFC("lˠ%1") }, 
-        { p = toNFC("l(" .. SINGLE_VOWEL_WITH_OPT_LONG_CAPTURE_STR .. ")"), r = toNFC("lˠ%1") }, 
+        { p = N("l$"), r = N("lˠ") }, 
+        { p = N("l(" .. CONSONANT_CLASS_NO_CAPTURE .. "[^'])"), r = N("lˠ%1") }, 
+        { p = N("l(" .. SINGLE_VOWEL_WITH_OPT_LONG_CAPTURE_STR .. ")"), r = N("lˠ%1") }, 
     
         -- Specific rule for dental n/l if needed (example, not fully implemented here)
-        -- { p = toNFC("(VOWEL_CONTEXT_FOR_DENTAL)(n)"), r = "%1n̪ˠ" },
+        -- { p = N("(VOWEL_CONTEXT_FOR_DENTAL)(n)"), r = "%1n̪ˠ" },
     
-        { p = toNFC("r$"), r = toNFC("ɾˠ") }, 
-        { p = toNFC("r(" .. CONSONANT_CLASS_NO_CAPTURE .. "[^'])"), r = toNFC("ɾˠ%1") }, 
-        { p = toNFC("r(" .. SINGLE_VOWEL_WITH_OPT_LONG_CAPTURE_STR .. ")"), r = toNFC("ɾˠ%1") }, 
+        { p = N("r$"), r = N("ɾˠ") }, 
+        { p = N("r(" .. CONSONANT_CLASS_NO_CAPTURE .. "[^'])"), r = N("ɾˠ%1") }, 
+        { p = N("r(" .. SINGLE_VOWEL_WITH_OPT_LONG_CAPTURE_STR .. ")"), r = N("ɾˠ%1") }, 
         
-        { p = toNFC("m$"), r = toNFC("mˠ") }, 
-        { p = toNFC("m(" .. CONSONANT_CLASS_NO_CAPTURE .. "[^'])"), r = toNFC("mˠ%1") }, 
-        { p = toNFC("m(" .. SINGLE_VOWEL_WITH_OPT_LONG_CAPTURE_STR .. ")"), r = toNFC("mˠ%1") }, 
+        { p = N("m$"), r = N("mˠ") }, 
+        { p = N("m(" .. CONSONANT_CLASS_NO_CAPTURE .. "[^'])"), r = N("mˠ%1") }, 
+        { p = N("m(" .. SINGLE_VOWEL_WITH_OPT_LONG_CAPTURE_STR .. ")"), r = N("mˠ%1") }, 
         
-        { p = toNFC("b$"), r = toNFC("bˠ") }, 
-        { p = toNFC("b(" .. CONSONANT_CLASS_NO_CAPTURE .. "[^'])"), r = toNFC("bˠ%1") }, 
-        { p = toNFC("b(" .. SINGLE_VOWEL_WITH_OPT_LONG_CAPTURE_STR .. ")"), r = toNFC("bˠ%1") }, 
+        { p = N("b$"), r = N("bˠ") }, 
+        { p = N("b(" .. CONSONANT_CLASS_NO_CAPTURE .. "[^'])"), r = N("bˠ%1") }, 
+        { p = N("b(" .. SINGLE_VOWEL_WITH_OPT_LONG_CAPTURE_STR .. ")"), r = N("bˠ%1") }, 
         
-        { p = toNFC("p$"), r = toNFC("pˠ") }, 
-        { p = toNFC("p(" .. CONSONANT_CLASS_NO_CAPTURE .. "[^'])"), r = toNFC("pˠ%1") }, 
-        { p = toNFC("p(" .. SINGLE_VOWEL_WITH_OPT_LONG_CAPTURE_STR .. ")"), r = toNFC("pˠ%1") }, 
+        { p = N("p$"), r = N("pˠ") }, 
+        { p = N("p(" .. CONSONANT_CLASS_NO_CAPTURE .. "[^'])"), r = N("pˠ%1") }, 
+        { p = N("p(" .. SINGLE_VOWEL_WITH_OPT_LONG_CAPTURE_STR .. ")"), r = N("pˠ%1") }, 
         
-        { p = toNFC("f$"), r = toNFC("fˠ") }, 
-        { p = toNFC("f(" .. CONSONANT_CLASS_NO_CAPTURE .. "[^'])"), r = toNFC("fˠ%1") }, 
-        { p = toNFC("f(" .. SINGLE_VOWEL_WITH_OPT_LONG_CAPTURE_STR .. ")"), r = toNFC("fˠ%1") }, 
+        { p = N("f$"), r = N("fˠ") }, 
+        { p = N("f(" .. CONSONANT_CLASS_NO_CAPTURE .. "[^'])"), r = N("fˠ%1") }, 
+        { p = N("f(" .. SINGLE_VOWEL_WITH_OPT_LONG_CAPTURE_STR .. ")"), r = N("fˠ%1") }, 
     
 }
 irishPhonetics.rules_stage7_final_cleanup = {
-    { p = ZZZ_N_STR_PAL_PHON, r = toNFC("n̠ʲ") }, { p = ZZZ_N_STR_BRD_PHON, r = toNFC("n̪ˠ") },
-    { p = ZZZ_L_STR_PAL_PHON, r = toNFC("l̠ʲ") }, { p = ZZZ_L_STR_BRD_PHON, r = toNFC("l̪ˠ") },
-    { p = ZZZ_N_SNG_BRD_PHON, r = toNFC("n̪ˠ") }, { p = ZZZ_L_SNG_BRD_PHON, r = toNFC("l̪ˠ") },
-    { p = toNFC("(n̠ʲ)t̪$"), r = "%1tʲ" }, { p = toNFC("(n̠ʲ)t̪(" .. CONSONANT_CLASS_NO_CAPTURE .. ")"), r = "%1tʲ%2" },
-    { p = toNFC("(lʲ)t̪$"), r = "%1tʲ" },
-    { p = toNFC("(ɾʲ)j$"), r = "%1h" },
-    { p = toNFC("j$"), r = toNFC("h") },
-    { p = toNFC("MKR_SCHWA_U_TINT"), r = toNFC("ʊ̽") },
-    { p = toNFC("(" .. ANY_CONSONANT_PHONETIC_RAW_CHARS_STR .. ")''"), r = "%1'" },
-    { p = toNFC("^st'"), r = toNFC("ʃtʲ") },
-    { p = toNFC("s'"), r = toNFC("ʃ") }, { p = toNFC("t'"), r = toNFC("tʲ") }, { p = toNFC("d'"), r = toNFC("dʲ") },
-    { p = toNFC("k'"), r = toNFC("c") }, { p = toNFC("g'"), r = toNFC("ɟ") },
-    { p = toNFC("l'"), r = toNFC("lʲ") }, { p = toNFC("n'"), r = toNFC("nʲ") },
-    { p = toNFC("R'"), r = toNFC("ɾʲ") }, { p = toNFC("r'"), r = toNFC("ɾʲ") },
-    { p = toNFC("f'"), r = toNFC("fʲ") }, { p = toNFC("v'"), r = toNFC("vʲ") },
-    { p = toNFC("b'"), r = toNFC("bʲ") }, { p = toNFC("p'"), r = toNFC("pʲ") },
-    { p = toNFC("M'"), r = toNFC("mʲ") }, { p = toNFC("m'"), r = toNFC("mʲ") },
-    { p = toNFC("h'"), r = toNFC("ç") },
-    { p = toNFC("L"), r = toNFC("lˠ") }, { p = toNFC("N"), r = toNFC("nˠ") },
-    { p = toNFC("R"), r = toNFC("ɾˠ") }, { p = toNFC("M"), r = toNFC("mˠ") },
-    { p = toNFC("h$"), r = "" }, { p = toNFC("#"), r = "" },
-    { p = toNFC("^%s*(.-)%s*$"), r = "%1" }, { p = toNFC("ˈə"), r = toNFC("ə") },
-    { p = toNFC(" "),            r = toNFC(" ") }, { p = toNFC("%-"), r = "" },
-    { p = toNFC("MKR_"), r = "" },
-    { p = toNFC("ZZZ"),  r = "" },
-    { p = toNFC("&"),    r = "" },
-    { p = toNFC("g"),    r = toNFC("ɡ") },
+    { p = ZZZ_N_STR_PAL_PHON, r = N("n̠ʲ") }, { p = ZZZ_N_STR_BRD_PHON, r = N("n̪ˠ") },
+    { p = ZZZ_L_STR_PAL_PHON, r = N("l̠ʲ") }, { p = ZZZ_L_STR_BRD_PHON, r = N("l̪ˠ") },
+    { p = ZZZ_N_SNG_BRD_PHON, r = N("n̪ˠ") }, { p = ZZZ_L_SNG_BRD_PHON, r = N("l̪ˠ") },
+    { p = N("(n̠ʲ)t̪$"), r = "%1tʲ" }, { p = N("(n̠ʲ)t̪(" .. CONSONANT_CLASS_NO_CAPTURE .. ")"), r = "%1tʲ%2" },
+    { p = N("(lʲ)t̪$"), r = "%1tʲ" },
+    { p = N("(ɾʲ)j$"), r = "%1h" },
+    { p = N("j$"), r = N("h") },
+    { p = N("MKR_SCHWA_U_TINT"), r = N("ʊ̽") },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_RAW_CHARS_STR .. ")''"), r = "%1'" },
+    { p = N("^st'"), r = N("ʃtʲ") },
+    { p = N("s'"), r = N("ʃ") }, { p = N("t'"), r = N("tʲ") }, { p = N("d'"), r = N("dʲ") },
+    { p = N("k'"), r = N("c") }, { p = N("g'"), r = N("ɟ") },
+    { p = N("l'"), r = N("lʲ") }, { p = N("n'"), r = N("nʲ") },
+    { p = N("R'"), r = N("ɾʲ") }, { p = N("r'"), r = N("ɾʲ") },
+    { p = N("f'"), r = N("fʲ") }, { p = N("v'"), r = N("vʲ") },
+    { p = N("b'"), r = N("bʲ") }, { p = N("p'"), r = N("pʲ") },
+    { p = N("M'"), r = N("mʲ") }, { p = N("m'"), r = N("mʲ") },
+    { p = N("h'"), r = N("ç") },
+    { p = N("L"), r = N("lˠ") }, { p = N("N"), r = N("nˠ") },
+    { p = N("R"), r = N("ɾˠ") }, { p = N("M"), r = N("mˠ") },
+    { p = N("h$"), r = "" }, { p = N("#"), r = "" },
+    { p = N("^%s*(.-)%s*$"), r = "%1" }, { p = N("ˈə"), r = N("ə") },
+    { p = N(" "),            r = N(" ") }, { p = N("%-"), r = "" },
+    { p = N("MKR_"), r = "" },
+    { p = N("ZZZ"),  r = "" },
+    { p = N("&"),    r = "" },
+    { p = N("g"),    r = N("ɡ") },
 }
 
 local function apply_rules_to_string_generic_impl(current_string_input, rules_to_apply_list, stage_name_str, mode_str,
@@ -1651,7 +1618,7 @@ apply_rules_to_string_generic = (apply_rules_to_string_generic_impl)
 
 
 function irishPhonetics.transcribe_single_word(orthographic_word_input)
-    local cleaned_ortho_word = toNFC(orthographic_word_input)
+    local cleaned_ortho_word = N(orthographic_word_input)
     -- PreProcess is now the first stage in the stages table,
     -- so we run it first to get the cleaned_ortho_word for lexical lookup
     -- and for original_ortho_for_context.
@@ -1686,15 +1653,15 @@ function irishPhonetics.transcribe_single_word(orthographic_word_input)
             if STAGE_DEBUG_ENABLED["ConsonantResolution"] then debug_print_minimal("  ConsonantResolution START (Proc): In=",
                     phon_word_in_stage3) end; local metathesis_phon_parts = {}; local meta_scan_offset = 1; while meta_scan_offset <= ulen(phon_word_in_stage3) do
                 local stress_marker = ""; local current_phon_char_for_meta = usub(phon_word_in_stage3, meta_scan_offset,
-                    meta_scan_offset); if current_phon_char_for_meta == toNFC("ˈ") then
-                    stress_marker = toNFC("ˈ"); meta_scan_offset = meta_scan_offset + 1; if meta_scan_offset > ulen(phon_word_in_stage3) then
+                    meta_scan_offset); if current_phon_char_for_meta == N("ˈ") then
+                    stress_marker = N("ˈ"); meta_scan_offset = meta_scan_offset + 1; if meta_scan_offset > ulen(phon_word_in_stage3) then
                         table.insert(metathesis_phon_parts, stress_marker); break
                     end; current_phon_char_for_meta = usub(phon_word_in_stage3, meta_scan_offset, meta_scan_offset)
-                end; local c_phon_base = current_phon_char_for_meta; local c_is_palatal = false; local n_phon_base = ""; local n_is_palatal = false; local advance_for_c = 1; if usub(phon_word_in_stage3, meta_scan_offset + 1, meta_scan_offset + 1) == toNFC("'") then
+                end; local c_phon_base = current_phon_char_for_meta; local c_is_palatal = false; local n_phon_base = ""; local n_is_palatal = false; local advance_for_c = 1; if usub(phon_word_in_stage3, meta_scan_offset + 1, meta_scan_offset + 1) == N("'") then
                     c_is_palatal = true; advance_for_c = 2
                 end; local n_phon_start_idx_in_phon = meta_scan_offset + advance_for_c; if n_phon_start_idx_in_phon <= ulen(phon_word_in_stage3) then
-                    n_phon_base = usub(phon_word_in_stage3, n_phon_start_idx_in_phon, n_phon_start_idx_in_phon); if usub(phon_word_in_stage3, n_phon_start_idx_in_phon + 1, n_phon_start_idx_in_phon + 1) == toNFC("'") then n_is_palatal = true end
-                end; local c_is_k_type = (c_phon_base == toNFC("k") or c_phon_base == toNFC("c")); local c_is_g_type = (c_phon_base == toNFC("g")); if ((c_is_k_type) and n_phon_base == toNFC("n")) or (c_is_g_type and n_phon_base == toNFC("n")) then if (meta_scan_offset == 1 and stress_marker == "") or (meta_scan_offset == (1 + ulen(stress_marker)) and stress_marker ~= "") then
+                    n_phon_base = usub(phon_word_in_stage3, n_phon_start_idx_in_phon, n_phon_start_idx_in_phon); if usub(phon_word_in_stage3, n_phon_start_idx_in_phon + 1, n_phon_start_idx_in_phon + 1) == N("'") then n_is_palatal = true end
+                end; local c_is_k_type = (c_phon_base == N("k") or c_phon_base == N("c")); local c_is_g_type = (c_phon_base == N("g")); if ((c_is_k_type) and n_phon_base == N("n")) or (c_is_g_type and n_phon_base == N("n")) then if (meta_scan_offset == 1 and stress_marker == "") or (meta_scan_offset == (1 + ulen(stress_marker)) and stress_marker ~= "") then
                         debug_print_minimal("ConsonantResolution", "Metathesis candidate found: ",
                             stress_marker ..
                             c_phon_base .. (c_is_palatal and "'" or "") .. n_phon_base .. (n_is_palatal and "'" or "")); local n_phon_end_idx_in_phon =
@@ -1703,9 +1670,9 @@ function irishPhonetics.transcribe_single_word(orthographic_word_input)
                             current_ortho_map_stage3); local quality_for_r; local n_ortho_actual_start_idx = ortho_s_n; local n_ortho_actual_end_idx =
                         ortho_s_n + ortho_len_n - 1; quality_for_r = determine_consonant_quality_ortho( -- This call might need to be removed if quality is fully handled in r
                         o_context_str_stage3, n_ortho_actual_start_idx, n_ortho_actual_end_idx); table.insert(
-                        metathesis_phon_parts, stress_marker .. c_phon_base .. (c_is_palatal and toNFC("'") or "")); if quality_for_r == "palatal" then
-                            table.insert(metathesis_phon_parts, toNFC("r'")) else table.insert(metathesis_phon_parts,
-                                toNFC("r")) end; meta_scan_offset = n_phon_end_idx_in_phon + 1
+                        metathesis_phon_parts, stress_marker .. c_phon_base .. (c_is_palatal and N("'") or "")); if quality_for_r == "palatal" then
+                            table.insert(metathesis_phon_parts, N("r'")) else table.insert(metathesis_phon_parts,
+                                N("r")) end; meta_scan_offset = n_phon_end_idx_in_phon + 1
                     else
                         table.insert(metathesis_phon_parts,
                             stress_marker ..
@@ -1716,7 +1683,7 @@ function irishPhonetics.transcribe_single_word(orthographic_word_input)
                         stress_marker .. usub(phon_word_in_stage3, meta_scan_offset, meta_scan_offset)); meta_scan_offset =
                     meta_scan_offset + 1
                 end
-            end; phon_word_in_stage3 = table.concat(metathesis_phon_parts); local multi_char_rules_stage3 = {}; local single_char_rule_data_stage3; for _, rule_data_loop in ipairs(irishPhonetics.rules_stage3_consonant_resolution) do if rule_data_loop.p ~= toNFC("([bcdfghkmprst])") then
+            end; phon_word_in_stage3 = table.concat(metathesis_phon_parts); local multi_char_rules_stage3 = {}; local single_char_rule_data_stage3; for _, rule_data_loop in ipairs(irishPhonetics.rules_stage3_consonant_resolution) do if rule_data_loop.p ~= N("([bcdfghkmprstln])") then
                     table.insert(multi_char_rules_stage3, rule_data_loop) else single_char_rule_data_stage3 =
                     rule_data_loop end end; local pass1_phonetic_parts_stage3 = {}; local pass1_scan_offset_stage3 = 1; while pass1_scan_offset_stage3 <= ulen(phon_word_in_stage3) do
                 local best_match_s_this_iter, best_match_e_this_iter, best_rule_this_iter_idx; local best_captures_this_iter = {}; local current_best_match_length_this_iter = -1; for rule_idx_loop, rule_data_loop in ipairs(multi_char_rules_stage3) do
@@ -1748,7 +1715,7 @@ function irishPhonetics.transcribe_single_word(orthographic_word_input)
                     else break end end
             end; phon_word_in_stage3 = table.concat(pass1_phonetic_parts_stage3); if single_char_rule_data_stage3 then
                 local pass2_phonetic_parts_stage3 = {}; local pass2_scan_offset_stage3 = 1; while pass2_scan_offset_stage3 <= ulen(phon_word_in_stage3) do
-                    local char_to_check = usub(phon_word_in_stage3, pass2_scan_offset_stage3, pass2_scan_offset_stage3); if char_to_check:match("^[bcdfghkmprst]$") or umatch(char_to_check, "^MKR_[LN]_SNG_BRD$") or umatch(char_to_check, "^MKR_[LN]_STR_PAL$") or umatch(char_to_check, "^MKR_[LN]_STR_BRD$") then
+                    local char_to_check = usub(phon_word_in_stage3, pass2_scan_offset_stage3, pass2_scan_offset_stage3); if char_to_check:match("^[lbcdfghkmprstn]$") or umatch(char_to_check, "^MKR_[LN]_SNG_BRD$") or umatch(char_to_check, "^MKR_[LN]_STR_PAL$") or umatch(char_to_check, "^MKR_[LN]_STR_BRD$") then
                         local original_ortho_s, original_ortho_len = get_original_indices_from_map(
                         pass2_scan_offset_stage3, pass2_scan_offset_stage3, current_ortho_map_stage3); local original_match_info = { ortho_s =
                         original_ortho_s, ortho_e = original_ortho_s + original_ortho_len - 1 }; local r_text =
@@ -1935,40 +1902,56 @@ function irishPhonetics.transcribe(orthographic_phrase)
     return table.concat(words, "")
 end
 
-local RUN_TESTS = not MINIMAL_DEBUG_ENABLED
-local CSV_FILE_NAME = "wiki_sample_for_llm.csv"
 
-if RUN_TESTS then
-    local words_to_test_focused = {
-        "Eabhrac", "Fhionlainn", "éabhlóideach", "ar chuma", "chonaic", "creidfead", "gníomhaíocht", "goilliúnach",
-        "shleamhnaigh", "ospidéal", "amharc", "dóibh", "Stiofáin", "Bhríd", "ceann", "dúnigh", "oíche", "aduaidh",
-        "bhuíochas", "Aoine", "Gaeil", "Cháit", "cnoic", "snasán" }
-    original_print_func("\n--- Running Focused Test Set for Connacht (Iteration 43 - CSV Targets) ---")
-    if debug_file then debug_file:write("\n--- Running Focused Test Set for Connacht (Iteration 43 - CSV Targets) ---\n") end
 
-    STAGE_DEBUG_ENABLED.Parser = false; STAGE_DEBUG_ENABLED.ParserSetup = false
+local RUN_DEFAULT_TESTS_IF_NO_INPUT = true
 
-    for _, word_or_phrase in ipairs(words_to_test_focused) do
-        local original = word_or_phrase
-        original_print_func("\n--- Transcribing:", original, "---")
-        if debug_file then debug_file:write(string.format("\n--- Transcribing: %s ---\n", original)) end
-        local transcribed = irishPhonetics.transcribe(original)
-        original_print_func(string.format("%-30s -> [%s]", original, transcribed))
-        if debug_file then debug_file:write(string.format("%-30s -> [%s]\n", original, transcribed)) end
+-- Check for command-line argument first
+local input = arg[1]
+local showDebug = arg[2] == "-d"
+if showDebug then MINIMAL_DEBUG_ENABLED = true 
+else MINIMAL_DEBUG_ENABLED=false
+end
+
+-- If no command-line argument, check if there's anything being piped in
+if not input then
+    -- io.stdin:seek("end") gets the current size of the stdin buffer.
+    -- If it's greater than 0, it means there's data waiting to be read (from a pipe).
+    -- If it's 0, it means the script was run without arguments and without a pipe.
+    if io.stdin:seek("end")  then
+        io.stdin:seek("set") -- Rewind the buffer to the beginning to read it
+        input = io.read("*a") -- Read all available input
     end
+end
+
+-- Now, decide what to do based on whether we have input or not
+if input then
+    -- Behavior 1 & 2: We have input from either an argument or a pipe
+    print(irishPhonetics.transcribe(N(input)))
 else
-    local input = arg[1] or io.read()
-    if input then
-        print(irishPhonetics.transcribe(toNFC(input)))
+    -- Behavior 3: No input was provided, so run the default tests if the flag is set
+    if RUN_DEFAULT_TESTS_IF_NO_INPUT then
+        local words_to_test_focused = {"Caitliceach",
+            "Eabhrac", "Fhionlainn", "éabhlóideach", "ar chuma", "chonaic", "creidfead", "gníomhaíocht", "goilliúnach",
+            "shleamhnaigh", "ospidéal", "amharc", "dóibh", "Stiofáin", "Bhríd", "ceann", "dúnigh", "oíche", "aduaidh",
+            "bhuíochas", "Aoine", "Gaeil", "Cháit", "cnoic", "snasán" }
+        original_print_func("\n--- Running Default Test Set (No Input Provided) ---")
+        if debug_file then debug_file:write("\n--- Running Default Test Set (No Input Provided) ---\n") end
+    
+        STAGE_DEBUG_ENABLED.Parser = false; STAGE_DEBUG_ENABLED.ParserSetup = false
+    
+        for _, word_or_phrase in ipairs(words_to_test_focused) do
+            local original = word_or_phrase
+            original_print_func("\n--- Transcribing:", original, "---")
+            if debug_file then debug_file:write(string.format("\n--- Transcribing: %s ---\n", original)) end
+            local transcribed = irishPhonetics.transcribe(original)
+            original_print_func(string.format("%-30s -> [%s]", original, transcribed))
+            if debug_file then debug_file:write(string.format("%-30s -> [%s]\n", original, transcribed)) end
+        end
     else
-        -- Fallback for testing if no command line arg is given
-        original_print_func("No command line argument provided. Running default test phrase.")
-        local test_phrase = "seo é an tástáil dheireanach"
-        original_print_func("\n--- Transcribing Default Test Phrase:", test_phrase, "---")
-        if debug_file then debug_file:write(string.format("\n--- Transcribing Default Test Phrase: %s ---\n", test_phrase)) end
-        local transcribed = irishPhonetics.transcribe(test_phrase)
-        original_print_func(string.format("%-30s -> [%s]", test_phrase, transcribed))
-        if debug_file then debug_file:write(string.format("%-30s -> [%s]\n", test_phrase, transcribed)) end
+        original_print_func("No input provided. To run tests, set RUN_DEFAULT_TESTS_IF_NO_INPUT to true.")
+        original_print_func("Usage: lua your_script.lua \"text to transcribe\"")
+        original_print_func("   or: echo \"text to transcribe\" | lua your_script.lua")
     end
 end
 

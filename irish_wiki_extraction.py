@@ -283,6 +283,8 @@ df[[
 1496, #df['match'].mean() == 75.38749819128925 
 
 1636, #75.38749819128925 #0.8988616991688039
+1685 #77.42656634351034 # 0.9034829995070771
+
 from fuzzywuzzy import fuzz
 import panphon.distance as D
 x = D.Distance()
