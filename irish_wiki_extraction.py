@@ -254,7 +254,7 @@ df[df.ipa.str.replace(r"[ˠʲˈ']", '', regex=True).str[0] != df.results.str.rep
 
 ws = df.word
 results = []
-for batch in [ws[i:i+50] for i in range(0,len(ws),50)]:
+for batch in [ws[i:i+100] for i in range(0,len(ws),100)]:
     with_spaces = batch[batch.str.split(' ').apply(len)>1]
     without_spaces = batch[batch.str.split(' ').apply(len)==1]
     results_no_spaces = get_transcription(' '.join(without_spaces)).split(' ')
@@ -264,6 +264,9 @@ for batch in [ws[i:i+50] for i in range(0,len(ws),50)]:
     final = pd.concat([no_space,space])
     results.append(final)
 df['results'] = pd.concat(results).results
+
+
+
 
 cleaned_ipa = df['ipa'].str.replace(r'[ˠʲˈ]', '', regex=True)
 cleaned_results = df['results'].str.replace(r'[ˠʲˈ]', '', regex=True)
@@ -285,6 +288,12 @@ df[[
 1636, #75.38749819128925 #0.8988616991688039
 1685 #77.42656634351034 # 0.9034829995070771
 
+1244 #75.6 #0.892177607417221
+1321 #76.48 #0.8961286407887433
+1339  #0.900 
+1356 # 0.9019 #77.848
+1360 #77.885 #
+1284 #79.08 # 0.906
 from fuzzywuzzy import fuzz
 import panphon.distance as D
 x = D.Distance()
@@ -292,13 +301,13 @@ df['match']= [
     0 if pd.isna(ipa) or pd.isna(res) or res == '' 
     else (fuzz.partial_ratio(res ,  ipa) )
     for ipa, res in zip(df['ipa'],  df['results'])
-]
+];df['match'].mean()
 df['match']= [
     0 if pd.isna(ipa) or pd.isna(res) or res == '' 
-    else (1 - x.dolgo_prime_distance_div_maxlen(res ,  ipa) if len(ipa.split(', '))==1 else 
-          1 - min([x.dolgo_prime_distance_div_maxlen(res ,  ipa_split) for ipa_split in ipa.split(', ')]))
+    else (1 - x.dolgo_prime_distance_div_maxlen(res ,  ipa) if len(ipa.replace(' ~ ',', ').split(', '))==1 else 
+          1 - min([x.dolgo_prime_distance_div_maxlen(res ,  ipa_split) for ipa_split in ipa.replace(' ~ ',', ').split(', ')]))
     for ipa, res in zip(df['ipa'],  df['results'])
-]
+];df['match'].mean()
 
 
 def dump_df(df, path='results.json'):
