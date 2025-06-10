@@ -83,6 +83,7 @@ else
         PreProcess = false,
         MarkDigraphsAndVocalisationTriggers = true,
         Stage2_5_MarkSuffixes = true,
+        Stage3_1_MarkerResolution=true,
         ConsonantResolution = true,
         Stage3_2_ApplyStress = true,
         Stage4_0_SpecificOrthoToTempMarker = true,
@@ -468,38 +469,44 @@ get_ortho_vowel_quality_implication_from_char_or_group_impl = function(
     v_char_or_group, is_for_preceding_consonant_context, following_cons_cluster)
     if not v_char_or_group or ulen(v_char_or_group) == 0 then return nil end
 
-    -- PRESERVED EXCEPTION: The special contextual rule for 'ea' is phonologically sound
-    -- and described by Hickey. It must be checked before the general rule.
-    if v_char_or_group == "ea" and is_for_preceding_consonant_context then
-        if following_cons_cluster then
-            -- Check for clusters that make 'ea' broad (e.g., before cht, nn, ll)
-            if umatch(following_cons_cluster, "^cht") or umatch(following_cons_cluster, "^nn") or
-                umatch(following_cons_cluster, "^ll") or umatch(following_cons_cluster, "^rr") or
-                umatch(following_cons_cluster, "^ng") then
-                debug_print_minimal("VowelQuality",
-                    "CONTEXTUAL 'ea': before '" .. following_cons_cluster .. "', implies broad.")
-                return "broad"
-            end
-        end
-        -- Default implication for 'ea' is slender for the preceding consonant.
-        debug_print_minimal("VowelQuality", "DEFAULT 'ea': implies slender.")
-        return "slender"
-    end
-
-    -- *** NEW CORRECTED LOGIC ***
-    -- This new logic correctly implements the "caol le caol..." principle.
-    -- It replaces the long list of incorrect digraph assumptions.
+    -- This function determines the quality a consonant should have *based on* the adjacent vowel group.
 
     if is_for_preceding_consonant_context then
-        -- For a PRECEDING consonant, only the FIRST character of the vowel group matters.
+        -- *** PRECEDING CONSONANT LOGIC ***
+
+        -- Digraphs that make the PRECEDING consonant SLENDER
+        if v_char_or_group == "eo" or v_char_or_group == "ia" or v_char_or_group == "ei" or v_char_or_group == "eu" then
+            return "slender"
+        end
+
+        -- Digraphs that make the PRECEDING consonant BROAD
+        if v_char_or_group == "ao" or v_char_or_group == "ua" or v_char_or_group == "ai" or v_char_or_group == "oi" or v_char_or_group == "ui" then
+            return "broad"
+        end
+
+        -- Special contextual rule for 'ea'
+        if v_char_or_group == "ea" then
+            if following_cons_cluster then
+                if umatch(following_cons_cluster, "^cht") or umatch(following_cons_cluster, "^nn") or
+                    umatch(following_cons_cluster, "^ll") or umatch(following_cons_cluster, "^rr") or
+                    umatch(following_cons_cluster, "^ng") then
+                    return "broad"
+                end
+            end
+            return "slender"
+        end
+
+        -- Fallback to the first letter for any other case
         local char_to_check = usub(v_char_or_group, 1, 1)
         if umatch(char_to_check, SLENDER_VOWELS_ORTHO_PATTERN) then
             return "slender"
         elseif umatch(char_to_check, BROAD_VOWELS_ORTHO_PATTERN) then
             return "broad"
         end
-    else -- This is for determining the quality of a FOLLOWING consonant.
-        -- For a FOLLOWING consonant, only the LAST character of the vowel group matters.
+
+    else
+        -- *** FOLLOWING CONSONANT LOGIC ***
+        -- This is simpler: it's always determined by the last letter of the vowel group.
         local char_to_check = usub(v_char_or_group, ulen(v_char_or_group), ulen(v_char_or_group))
         if umatch(char_to_check, SLENDER_VOWELS_ORTHO_PATTERN) then
             return "slender"
@@ -508,8 +515,7 @@ get_ortho_vowel_quality_implication_from_char_or_group_impl = function(
         end
     end
 
-    -- Fallback if no vowel is found in the group (should not happen with valid input)
-    return nil
+    return nil -- Fallback
 end
 
 get_ortho_vowel_quality_implication_from_char_or_group = memoize(
@@ -1356,6 +1362,19 @@ do
         -- Neutral Sonorants
         {p = N("l°"), r = N("l_neutral_")},
         {p = N("n°"), r = N("n_neutral_")},
+        {
+            p = N("c"), -- Find the orthographic 'c'
+            r = function(fm, ocs, omi)
+                -- 1. DECIDE: Check the quality from the original orthography
+                local quality = determine_consonant_quality_ortho(ocs, omi.ortho_s, omi.ortho_e)
+                -- 2. ACT: Immediately return the correct, unambiguous phonetic symbol
+                if quality == 'slender' then
+                    return N("k'") -- Return the IPA symbol for a PALATAL stop
+                else
+                    return N("k") -- Return the IPA symbol for a VELAR stop
+                end
+            end
+        }
     }
     irishPhonetics.rules_stage3_1_marker_resolution = rules
 end
@@ -2762,8 +2781,8 @@ irishPhonetics.rules_stage7_final_cleanup = {
     { p = N("t'"), r = N("tʲ") }, { p = N("d'"), r = N("dʲ") },
 
     { p = N("k'"), r = N("c") },
-    { p = N("c"), r = N("k") }
-    , { p = N("g'"), r = N("ɟ") },
+    
+    { p = N("g'"), r = N("ɟ") },
     { p = N("l'"), r = N("lʲ") }, { p = N("n'"), r = N("nʲ") },
     { p = N("R'"), r = N("ɾʲ") }, { p = N("r'"), r = N("ɾʲ") },
     { p = N("f'"), r = N("fʲ") }, { p = N("v'"), r = N("vʲ") },
