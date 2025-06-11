@@ -43,8 +43,6 @@ Th,,h,ç,0.0
 Toirdhealbhach,Connacht,ˈtʲɾʲɛl̪ˠax,ˈt̪ˠɛɾʲjalˠwəx,0.67
 Tír Eoghain,Munster; Connacht,tʲiːɾʲ ˈoːnʲ,ˈtʲiːɾʲ ˈɛəuinʲ,0.62
 Uaimh,,əˈn̪ˠuəvʲ,ˈʊaiː,0.6
-Uí,,iː,ˈuiː,0.5
-Uíbh,,iːvʲ,ˈuiːvʲ,0.67
 abhaile,Connacht,əˈwalʲə,ˈaʊailʲɛ,0.67
 acmhainn,Ulster; Connacht,ˈakuːn̠ʲ,ˈakwaən̠ʲ,0.67
 adhall,,ˈəiəl̪ˠ,ˈɑːl̪ˠ,0.5
@@ -91,16 +89,8 @@ bhfuil,,bˠilʲ,ˈwiːlʲ,0.67
 bhfuil,Ulster; Connacht,wɪlʲ,ˈwɪlˠ,1.0
 bhranda,,ˈvˠɾˠan̪ˠd̪ˠə,ˈwɾˠanˠa,0.67
 bhur,Connacht,ə,ˈwɔɾˠ,0.33
-bhuí,Ulster; Connacht,wiː,ˈwuiː,0.67
-bhuíoch,Ulster; Connacht,wiːx,ˈwuiːʊx,0.6
 both,,bˠɔ(h),ˈbˠʊç,0.67
 bpingin,Ulster; Connacht,bʲiːn̠ʲ,ˈbʲɪŋɪnʲ,0.6
-bruíon,,bˠɾˠiːnˠ,ˈbˠɾˠuiːʊnˠ,0.67
-buí,Munster; Connacht,bˠiː,ˈbˠuiː,0.67
-buíoch,Ulster; Connacht,bˠiːx,ˈbˠuiːʊx,0.6
-buíocha,,ˈbˠiːxə,ˈbˠuiːʊxa,0.67
-buíon,,bˠiːnˠ,ˈbˠuiːʊnˠ,0.6
-buíonna,,ˈbˠiːn̪ˠə,ˈbˠuiːʊn̪ˠa,0.67
 bíchearb,,ˈbʲiːçəɾˠəbˠ,ˈbʲiːxaɾˠbˠ,0.67
 cailc,,kalʲc,ˈkailʲic,0.67
 caisearbhán,Connacht,ˈkaʃəɾˠwaːn̪ˠ,ˈkaiʃæɾˠwɑːnˠ,0.89
@@ -163,14 +153,6 @@ comhartha,Galway; Connacht,ˈkuːɾˠə,ˈkʊwaɾˠça,0.67
 comhartha,Mayo; Connacht,ˈkõhəɾˠuː,ˈkʊwaɾˠça,0.83
 cuairt,Ulster; Connacht,kuːɾˠtʲ,ˈkʊaiɾʲtʲ,0.67
 cuairt,Munster; Connacht,kuəɾˠtʲ,ˈkʊaiɾˠt̪ˠ,0.83
-d'fhití,,ˈdʲitʲiː,ˈtʲfʲhɪtʲiː,0.67
-d'fhreagair,,ˈdʲɾʲaɡəɾʲ,ˈtʲfʲhɾʲɑɡaiɾʲ,0.67
-d'fhuaigh,Connacht,d̪ˠuə,ˈdʲfˠhuiː,0.6
-d'fhuaití,,ˈd̪ˠuətʲiː,ˈdʲfˠhʊaitʲiː,0.62
-d'fhulaing,,"ˈd̪ˠʊlˠən̠ʲ, ˈd̪ˠʊl̪ˠən̠ʲ",ˈdʲfˠhʊlˠaiŋ,0.62
-d'fháisc,,d̪ˠɑːʃc,ˈdʲfˠhɑːʃc,0.67
-d'fhás,Munster; Connacht,dˠɑːsˠ,ˈdʲfˠhɑːsˠ,0.6
-d'fhógair,Munster; Connacht,ˈd̪ˠoːɡəɾʲ,ˈdʲfˠhoːɡaiɾʲ,0.62
 d'ith,,dʲɪ(h),ˈdʲɪç,0.67
 dath,Ulster; Connacht,d̪ˠah,ˈd̪ˠaç,0.67
 dealbh,,ˈdʲalˠəvˠ,ˈdʲɑlw,0.6
@@ -229,13 +211,10 @@ ghníomh,Connacht,"jɾʲiːvˠ, ʝɾʲiːə̯vˠ",ˈjnʲiːoː,0.5
 ghníomhaíocht,Connacht,ˈɣɾˠiːwiəxt̪ˠ,ˈjnʲiːʊwɑːʊçt̪ˠ,0.5
 ghnó,Connacht,"ɣɾˠoː, ɣɾˠuː",ˈɣnˠoː,0.67
 ghuigh,,ɣiː,ˈɣuiː,0.67
-ghuí,,ɣiː,ˈɣuiː,0.67
 gníomh,Connacht,ɟɾʲiːvˠ,ˈɟnʲiːoː,0.5
 gníomh,Ulster; Connacht,ɟɾʲĩːw,ˈɡnˠiːoː,0.0
 gníomhaí,,ˈɡnʲiːwiː,ˈɟnʲiːʊwiː,0.67
 gríos,,ɡɾʲɪsˠ,ˈɟɾʲiːʊsˠ,0.6
-guí,,ɡiː,ˈɡuiː,0.67
-guíonna,,ˈɡiːn̪ˠə,ˈɡuiːʊn̪ˠa,0.67
 géagleabhair,,ˈɟeːɡl̠ʲəuɾʲ,ˈɟeːaɟlʲəuaiɾʲ,0.6
 h,,h,ˈ,0.0
 hainmneacha,,ˈhanʲəmʲnʲəxə,ˈhainʲmʲnʲæça,0.67
@@ -287,8 +266,6 @@ naomh,Connacht,n̪ˠiːvˠ,ˈnˠiːw,0.67
 naíonda,,ˈn̪ˠiːn̪ˠd̪ˠə,ˈnˠɑːʊnˠa,0.6
 nbhur,Connacht,nˠə,ˈnˠwʊɾˠ,0.5
 ngaoith,,ŋiːh,ˈŋiːç,0.67
-nguí,,ŋiː,ˈŋuiː,0.67
-nguíonna,,ˈŋiːn̪ˠə,ˈŋuiːʊn̪ˠa,0.67
 nigh,,nʲɪɟ,ˈnʲiː,0.67
 nigh,indicative; Ulster; past; analytic; Connacht,nʲiː,ˈnˠiː,1.0
 nigh,Ulster; imperative; Connacht,n̠ʲiː,ˈnˠiː,1.0
@@ -321,7 +298,7 @@ shiúil,,çuːlʲ,ˈhɪuːlʲ,0.5
 shiúl,,"çuːlˠ, çuːl̪ˠ",ˈhʊlˠ,0.67
 shrathnaigh,,"ˈ(h)ɾˠahnˠiː, ˈ(h)ɾˠahn̪ˠiː, ˈ(h)ɾˠʌhnˠi, ˈ(h)ɾˠʌhnˠə, ˈ(h)ɾˠʌhn̪ˠi, ˈ(h)ɾˠʌhn̪ˠə",ˈçɾˠaçnˠiː,0.67
 shuigh,Ulster; Connacht,hiː,ˈçuiː,0.5
-shuí,,hiː,ˈçuiː,0.5
+shuí,,hiː,ˈçiː,0.5
 shá,Munster; Connacht,hɑː,ˈçɑː,0.5
 shúil,,huːlʲ,ˈçuːlʲ,0.67
 smig,,ˈsˠmʲɪɟəd̪ˠ,ˈsˠmˠɪɟ,0.67
@@ -334,10 +311,8 @@ stiúideo,,ˈʃtʲuːdʲioː,ˈsˠt̪ˠuidʲoː,0.67
 suaimhneach,Connacht,ˈsˠiːmʲɾʲəx,ˈsˠʊaivʲnʲəx,0.5
 suaimhneas,Connacht,ˈsˠiːmʲnʲəsˠ,ˈsˠʊaivʲnʲɑsˠ,0.62
 suigh,Ulster; Connacht,sˠiː,ˈsˠuiː,0.67
-suí,,sˠiː,ˈsˠuiː,0.67
 sáith,Munster; Connacht,sˠɑː(h),ˈsˠɑːç,0.67
 séimh,,ʃeːvʲ,ˈʃeːiː,0.67
-tS,,"tʲ, t̪ˠ",ˈt̪ˠsˠ,0.5
 tabhair,Ulster; Connacht,ˈt̪ˠoːɾʲ,ˈt̪ˠaʊaiɾʲ,0.5
 tairbh,,ˈt̪ˠɑɾʲəvʲ,ˈt̪ˠaiɾʲvʲ,0.6
 tairbhe,,ˈt̪ˠaɾʲəvʲə,ˈt̪ˠaiɾʲvʲɛ,0.67
@@ -377,17 +352,7 @@ thóir,Munster; Connacht,hoːɾʲ,ˈçoːɾʲ,0.67
 thú,,huː,ˈçuː,0.5
 thúis,,huːʃ,ˈçuːɪʃ,0.67
 tnúth,Ulster; Connacht,t̪ˠɾˠuː,ˈt̪ˠnˠuːç,0.67
-ts,,"tʲ, t̪ˠ",ˈt̪ˠsˠ,0.5
-tseilbh,,ˈtʲɛlʲəvʲ,ˈtʲʃɛlʲvʲ,0.6
-tseilg,,ˈtʲɛlʲɪɟ,ˈtʲʃɛlʲɟ,0.6
-tsléibh,,tʲlʲeːvʲ,ˈtʲʃlʲeːɪvʲ,0.67
-tsnua,Ulster; Connacht,"t̪ˠɾˠũː, t̪ˠɾˠũːə",ˈt̪ˠsˠnˠua,0.4
-tsnámh,Connacht,t̪ˠɾˠɑ̃ːvˠ,ˈt̪ˠsˠnˠɑːv,0.6
-tsnámh,Munster; Connacht,t̪ˠn̪ˠɑːvˠ,ˈt̪ˠsˠnˠɑːv,0.8
-tsnátha,Connacht,"t̪ˠn̪ˠɑː, t̪ˠɾˠɑː",ˈt̪ˠsˠnˠɑːça,0.6
-tsá,Munster; Connacht,t̪ˠɑː,ˈt̪ˠsˠɑː,0.67
-tuí,,t̪ˠiː,ˈt̪ˠuiː,0.67
-tuíodóireacht,Connacht,ˈt̪ˠiːd̪ˠoːɾʲ,ˈt̪ˠuiːʊd̪ˠoːɾʲɑxt̪ˠ,0.5
+tuíodóireacht,Connacht,ˈt̪ˠiːd̪ˠoːɾʲ,ˈt̪ˠiːʊd̪ˠoːɾʲɑxt̪ˠ,0.56
 tá a fhios ag,,"t̪ˠaːsˠ eɟ, t̪ˠɑːsˠ eɟ",ˈt̪ˠɑː a ˈɪsˠ aɡ,0.57
 téigh,Ulster; Connacht,tʲeːj,ˈtʲeːiː,0.67
 téigh,Ulster; Connacht,tʲəi,ˈt̪ˠeːiː,1.0
@@ -399,8 +364,6 @@ uaimh,,uəvʲ,ˈʊaiː,0.67
 uainn,Connacht,"wen̠ʲ, wæn̠ʲ",ˈuaən̠ʲ,0.5
 uath,,uə(h),ˈuaç,0.67
 umhal,Connacht,"uːlˠ, uːl̪ˠ",ˈʊwalˠ,0.5
-uí,,iː,ˈuiː,0.5
-uíbh,,iːvʲ,ˈuiːvʲ,0.67
 vác,Connacht,wɑːk,ˈvɑːk,0.67
 yé,,jeː,ˈyeː,0.5
 Éabha,Ulster; Connacht,ˈeːwə,ˈeːaua,0.5

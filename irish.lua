@@ -267,6 +267,7 @@ local PHONETIC_TRIE = build_phonetic_trie()
 local lexical_exceptions_connacht = {
     [N("ar")] = N("ɛɾʲ"), -- Keep if this is the desired general pronunciation for 'ar'
     [N("ach")] = N("əx"),
+    [N("bhur")] = N("ə"),
     [N("am")] = N("əmˠ"),
     -- [N("air")] = N("ɛɾʲ"), -- 'air' is often context-dependent, consider if this is always right
     [N("car")] = N("kɑɾˠ"),
@@ -333,6 +334,7 @@ local UNSTRESSED_WORDS_AND_SUFFIXES = {
     ["-fí"] = true,
     ["-tá"] = true,
     ["-ím"] = true,
+    ["bhur"] = true,
     ["-óidh"] = true,
     ["-ithe"] = true,
     ["-aimid"] = true,
@@ -1354,6 +1356,64 @@ do
     local rules = {
 
         {
+            p = N("MKR_CH"),
+            r = function(fm, ocs, omi)
+                -- This function correctly resolves lenited 'ch'.
+        
+                -- Robustly find the start of the next vowel group after the 'ch'
+                local scan_idx = omi.ortho_e + 1
+                
+                -- Step 1: Skip over any consonants that are part of the initial cluster (e.g., the 'n' in 'chnáimh')
+                while scan_idx <= ulen(ocs) do
+                    local char = usub(ocs, scan_idx, scan_idx)
+                    if umatch(char, "[" .. CONSONANTS_ORTHO_CHARS_STR .. "]") then
+                        scan_idx = scan_idx + 1
+                    else
+                        break -- Found a vowel or end of string
+                    end
+                end
+        
+                -- Step 2: Now that we're at the vowel, extract the full vowel group
+                local next_v_group = ""
+                while scan_idx <= ulen(ocs) do
+                    local char = usub(ocs, scan_idx, scan_idx)
+                    if umatch(char, ALL_VOWELS_ORTHO_PATTERN) then
+                        next_v_group = next_v_group .. char
+                        scan_idx = scan_idx + 1
+                    else
+                        break -- Stop when we hit the next consonant
+                    end
+                end
+        
+                -- Step 3: Extract the following consonant cluster for the 'ea' rule context
+                local following_cons_cluster = ""
+                while scan_idx <= ulen(ocs) do
+                    local char = usub(ocs, scan_idx, scan_idx)
+                    if umatch(char, "[" .. CONSONANTS_ORTHO_CHARS_STR .. "]") then
+                        following_cons_cluster = following_cons_cluster .. char
+                        scan_idx = scan_idx + 1
+                    else
+                        break
+                    end
+                end
+        
+                -- Use your existing, powerful quality determination function
+                local quality = get_ortho_vowel_quality_implication_from_char_or_group(next_v_group, true, following_cons_cluster)
+                
+                debug_print_minimal("ConsonantResolution", string.format("Resolving <ch> in '%s'. Found vowel group: '%s'. Determined quality -> %s",
+                    ocs, next_v_group, tostring(quality)))
+        
+                if quality == 'slender' then
+                    return N("ç")
+                else
+                    -- If quality is broad or nil (e.g., word ends in 'ch'), default to broad.
+                    return N("x")
+                end
+            end
+        },
+
+
+        {
             p = N("MKR_PAST_DFH"),
             r = function(fm, ocs, omi)
                 -- This function correctly models the past tense d'fh- prefix.
@@ -1378,10 +1438,25 @@ do
         -- Eclipsis
 
         {
-            p = N("MKR_URUF"),
+            p = N("MKR_URUF"), -- This marker represents orthographic "bhf"
             r = function(fm, ocs, omi)
-                return resolve_lenited_consonant(N("v'"), N("w"), fm, ocs, omi,
-                    { can_be_w = true })
+                -- The 'f' is silent. The 'bh' is pronounced as a lenited 'b'.
+                -- We need to determine the quality of this lenited 'b' based on
+                -- the vowel that FOLLOWS the "bhf" sequence.
+                -- omi.ortho_e points to the 'f' of "bhf". We check the character after it.
+                local quality = determine_consonant_quality_ortho(ocs, omi.ortho_e + 1, omi.ortho_e + 1)
+                
+                if quality == 'slender' then
+                    -- Slender context: bhf -> /vʲ/ (internal representation 'v'')
+                    return N("v'")
+                else
+                    -- Broad context: bhf -> /vˠ/ (internal representation 'v')
+                    -- The further weakening to [w] before a vowel in Connacht
+                    -- should be handled by a LATER, specific rule if desired,
+                    -- or by the existing resolve_lenited_consonant logic if called appropriately.
+                    -- For now, the core sound is /v/.
+                    return N("v")
+                end
             end
         },
         {
@@ -1474,6 +1549,9 @@ do
         {
             p = N("MKR_TH"),
             r = function(fm, ocs, omi) -- The special dissimilation rule
+                if omi.ortho_e == ulen(ocs) then -- If it's word final
+                    return N("h") -- Or "" if you prefer silent final th
+                end
                 if not omi or not omi.ortho_s or not omi.ortho_e then return N("h") end
                 local next_v_group = ""
                 local scan_idx = omi.ortho_e + 1
@@ -1557,28 +1635,59 @@ irishPhonetics.rules_stage4_0_specific_ortho_to_temp_marker = {
     p = N("^(ˈ?)(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)" .. "ea(" ..
         N("MKR_EACHTBRDFX") .. ")$"),
     r = "%1%2" .. N("MKR_EA_BRD_SHT_PRE_CHT") .. "%3"
-}, {
+}, -- In your rules table, REPLACE the existing MKR_CH rule with this one.
+{
     p = N("MKR_CH"),
-    r = function(fm, ocs, omi_ch)
-        if not omi_ch or not omi_ch.ortho_s or not omi_ch.ortho_e then
-            debug_print_minimal("Stage4_0_1", "MKR_CH: Missing omi_ch, defaulting to x.")
-            return N("x")
+    r = function(fm, ocs, omi)
+        -- This function correctly resolves lenited 'ch'.
+
+        -- Robustly find the start of the next vowel group after the 'ch'
+        local scan_idx = omi.ortho_e + 1
+        
+        -- Step 1: Skip over any consonants that are part of the initial cluster (e.g., the 'n' in 'chnáimh')
+        while scan_idx <= ulen(ocs) do
+            local char = usub(ocs, scan_idx, scan_idx)
+            if umatch(char, "[" .. CONSONANTS_ORTHO_CHARS_STR .. "]") then
+                scan_idx = scan_idx + 1
+            else
+                break -- Found a vowel or end of string
+            end
         end
 
-        -- Use our robust quality determination function.
-        local quality_ch = determine_consonant_quality_ortho(ocs, omi_ch.ortho_s, omi_ch.ortho_e)
+        -- Step 2: Now that we're at the vowel, extract the full vowel group
+        local next_v_group = ""
+        while scan_idx <= ulen(ocs) do
+            local char = usub(ocs, scan_idx, scan_idx)
+            if umatch(char, ALL_VOWELS_ORTHO_PATTERN) then
+                next_v_group = next_v_group .. char
+                scan_idx = scan_idx + 1
+            else
+                break -- Stop when we hit the next consonant
+            end
+        end
 
-        debug_print_minimal("Stage4_0_1_Resolve_CH_Marker", string.format(
-            "Resolving <ch> in '%s'. Determined quality: %s", ocs, quality_ch))
+        -- Step 3: Extract the following consonant cluster for the 'ea' rule context
+        local following_cons_cluster = ""
+        while scan_idx <= ulen(ocs) do
+            local char = usub(ocs, scan_idx, scan_idx)
+            if umatch(char, "[" .. CONSONANTS_ORTHO_CHARS_STR .. "]") then
+                following_cons_cluster = following_cons_cluster .. char
+                scan_idx = scan_idx + 1
+            else
+                break
+            end
+        end
 
-        -- Apply the correct phonetic realization based on quality.
-        if quality_ch == "slender" then
-            -- Slender 'ch' is phonetically [ç].
-            -- The weakening to [h] (as in 'cheana') is a further process that can be added later if needed,
-            -- or handled via lexical exception. For now, [ç] is the correct phonemic target.
+        -- Use your existing, powerful quality determination function
+        local quality = get_ortho_vowel_quality_implication_from_char_or_group(next_v_group, true, following_cons_cluster)
+        
+        debug_print_minimal("ConsonantResolution", string.format("Resolving <ch> in '%s'. Found vowel group: '%s'. Determined quality -> %s",
+            ocs, next_v_group, tostring(quality)))
+
+        if quality == 'slender' then
             return N("ç")
-        else -- quality_ch is "broad" or "nonpalatal"
-            -- Broad 'ch' is phonetically [x].
+        else
+            -- If quality is broad or nil (e.g., word ends in 'ch'), default to broad.
             return N("x")
         end
     end
@@ -1674,6 +1783,7 @@ irishPhonetics.rules_stage4_0_specific_ortho_to_temp_marker = {
     use_original_context_for_rules = true
 }, { p = N("io"), r = N("MKR_IO_SHT_TRGT") }
 }
+    -- REPLACE your existing rules_stage4_0_1_resolve_ch_marker with this:
 irishPhonetics.rules_stage4_0_1_resolve_ch_marker = {
     {
         p = N("MKR_CH"),
@@ -1683,102 +1793,69 @@ irishPhonetics.rules_stage4_0_1_resolve_ch_marker = {
                 return N("x")
             end
 
-            debug_print_minimal("Stage4_0_1", string.format("MKR_CH: ocs='%s', omi_ch.ortho_s=%d, omi_ch.ortho_e=%d",
-                ocs, omi_ch.ortho_s, omi_ch.ortho_e)) -- ADD THIS DEBUG
-
-            local next_v_group_ch = ""
-            local scan_idx_next = omi_ch.ortho_e + 1
-            local temp_scan_idx_next_ch = scan_idx_next
-            while temp_scan_idx_next_ch <= ulen(ocs) do
-                local char_next = usub(ocs, temp_scan_idx_next_ch, temp_scan_idx_next_ch)
-                if umatch(char_next, ALL_VOWELS_ORTHO_PATTERN) then
-                    break
-                elseif umatch(char_next, "[" .. CONSONANTS_ORTHO_CHARS_STR .. "]") then
-                    temp_scan_idx_next_ch = temp_scan_idx_next_ch + 1
+            -- *** START OF ROBUST VOWEL SCANNER (from previous correct answer) ***
+            local scan_idx = omi_ch.ortho_e + 1
+            
+            -- Step 1: Skip over any consonants that are part of the initial cluster
+            while scan_idx <= ulen(ocs) do
+                local char = usub(ocs, scan_idx, scan_idx)
+                if umatch(char, "[" .. CONSONANTS_ORTHO_CHARS_STR .. "]") then
+                    scan_idx = scan_idx + 1
                 else
-                    break
-                end
-            end
-            while temp_scan_idx_next_ch <= ulen(ocs) do
-                local char_next = usub(ocs, temp_scan_idx_next_ch, temp_scan_idx_next_ch)
-                if umatch(char_next, ALL_VOWELS_ORTHO_PATTERN) then
-                    next_v_group_ch = next_v_group_ch .. char_next; temp_scan_idx_next_ch = temp_scan_idx_next_ch + 1
-                else
-                    break
+                    break -- Found a vowel or end of string
                 end
             end
 
-            local prev_v_group_ch = ""
-            local scan_idx_prev = omi_ch.ortho_s - 1
-            local temp_prev_v_chars_ch = {}
-            local temp_scan_idx_prev_ch = scan_idx_prev
-            while temp_scan_idx_prev_ch >= 1 do
-                local char_prev = usub(ocs, temp_scan_idx_prev_ch, temp_scan_idx_prev_ch)
-                if umatch(char_prev, ALL_VOWELS_ORTHO_PATTERN) then
-                    break
-                elseif umatch(char_prev, "[" .. CONSONANTS_ORTHO_CHARS_STR .. "]") or char_prev == N("ˈ") then -- Consider stress marker here
-                    temp_scan_idx_prev_ch = temp_scan_idx_prev_ch - 1
+            -- Step 2: Extract the full vowel group
+            local next_v_group = ""
+            while scan_idx <= ulen(ocs) do
+                local char = usub(ocs, scan_idx, scan_idx)
+                if umatch(char, ALL_VOWELS_ORTHO_PATTERN) then
+                    next_v_group = next_v_group .. char
+                    scan_idx = scan_idx + 1
                 else
-                    break
+                    break -- Stop when we hit the next consonant
                 end
             end
-            while temp_scan_idx_prev_ch >= 1 do
-                local char_prev = usub(ocs, temp_scan_idx_prev_ch, temp_scan_idx_prev_ch)
-                if umatch(char_prev, ALL_VOWELS_ORTHO_PATTERN) then
-                    table.insert(temp_prev_v_chars_ch, 1, char_prev); temp_scan_idx_prev_ch = temp_scan_idx_prev_ch - 1
-                else
-                    break
-                end
-            end
-            prev_v_group_ch = table.concat(temp_prev_v_chars_ch)
 
-            local prev_qual_ch = get_ortho_vowel_quality_implication_from_char_or_group(prev_v_group_ch, false)
-            local next_qual_ch = get_ortho_vowel_quality_implication_from_char_or_group(next_v_group_ch, true)
-
-            local quality_ch
-            if next_qual_ch == "slender" then
-                quality_ch = "slender"
-            elseif next_qual_ch == "broad" then
-                if prev_qual_ch == "slender" then
-                    quality_ch = "slender"
+            -- Step 3: Extract the following consonant cluster for the 'ea' rule context
+            local following_cons_cluster = ""
+            while scan_idx <= ulen(ocs) do
+                local char = usub(ocs, scan_idx, scan_idx)
+                if umatch(char, "[" .. CONSONANTS_ORTHO_CHARS_STR .. "]") then
+                    following_cons_cluster = following_cons_cluster .. char
+                    scan_idx = scan_idx + 1
                 else
-                    quality_ch = "broad"
+                    break
                 end
-            elseif prev_qual_ch == "slender" then
-                quality_ch = "slender"
-            elseif prev_qual_ch == "broad" then
-                quality_ch = "broad"
-            else
-                quality_ch = "nonpalatal"
             end
+            -- *** END OF ROBUST VOWEL SCANNER ***
+
+            local quality_ch = get_ortho_vowel_quality_implication_from_char_or_group(next_v_group, true, following_cons_cluster)
+            
+            debug_print_minimal("Stage4_0_1_Resolve_CH_Marker",
+                string.format("Resolving <ch> in '%s'. Found vowel group: '%s'. Determined quality -> %s",
+                ocs, next_v_group, tostring(quality_ch)))
 
             -- Determine if 'ch' is phonetically initial in the original orthographic word
             local is_phonetically_initial_ch = false
-            if omi_ch.ortho_s == 1 then -- Starts at the very first character of the original word
+            if omi_ch.ortho_s == 1 then
                 is_phonetically_initial_ch = true
-                -- Check if ocs itself starts with a stress marker AND omi_ch.ortho_s is 2
-                -- This means the 'ch' is the first actual segment after an initial stress marker.
             elseif omi_ch.ortho_s == 2 and usub(ocs, 1, 1) == N("ˈ") then
                 is_phonetically_initial_ch = true
             end
-            debug_print_minimal("Stage4_0_1_Resolve_CH_Marker",
-                string.format(">>>> MKR_CH DEBUG: ocs = '%s', omi_ch.ortho_s = %s, omi_ch.ortho_e = %s",
-                    ocs, tostring(omi_ch.ortho_s), tostring(omi_ch.ortho_e)))
 
-            debug_print_minimal("Stage4_0_1_Resolve_CH_Marker",
-                string.format(
-                    "Resolving <ch> in '%s'. PrevV='%s'(%s), NextV='%s'(%s) -> Quality: %s. IsPhoneticallyInitial: %s",
-                    ocs, prev_v_group_ch, tostring(prev_qual_ch), next_v_group_ch, tostring(next_qual_ch), quality_ch,
-                    tostring(is_phonetically_initial_ch)))
-
-            if quality_ch == "slender" then
-                return is_phonetically_initial_ch and N("ç") or
-                    N("h") -- If initial slender -> ç, else (medial slender) -> h
-            else           -- broad or nonpalatal
+            if quality_ch == 'slender' then
+                -- Hickey II.1.9.9.1: Medial /xj/ can debuccalise to /h/ or delete.
+                -- For simplicity and general Connacht, initial slender ch is /ç/, medial is /h/.
+                return is_phonetically_initial_ch and N("ç") or N("h")
+            else
+                -- If quality is broad or nil (e.g., word ends in 'ch'), it's /x/.
                 return N("x")
             end
         end
     }
+
 }
 
 irishPhonetics.rules_stage4_1_vocmark_to_temp_marker = {}
@@ -1847,7 +1924,7 @@ irishPhonetics.rules_stage4_4_resolve_temp_vowel_markers = {
     { p = N("MKR_SUFFIX_IHƏ_GEN"), r = N("ɪhə") },
     { p = N("MKR_EOI_TRIG_O_LNG"), r = N("oː") },
     { p = N("MKR_EOI_TRIG_O_LNG_ACT"), r = N("oː") },
-    { p = N("MKR_EIDHCONNAI(#?)"), r = N("ai%1") }, {
+    { p = N("MKR_EIDHCONNAI(#?)"), r = N("ei%1") }, {
     p = N("^(MKR_AV_VOC_SLENDER_)(.+)"), -- Captures the prefix and the sonorant part
     r = function(m, prefix, pal_son)
         return N("əu") .. pal_son
@@ -1974,6 +2051,13 @@ placeholder_creation_rules_stage4_5 = {
     { p = N("æː"), r = N("MKR_PHON_AE_LONG") }
 }
 core_allophony_rules_for_stage4_5 = {
+    {
+        -- This pattern matches a broad 'v' (i.e., not followed by a ' marker)
+        -- that is at the beginning of a word (or after a stress marker)
+        -- and is followed by a vowel.
+        p = N("^(ˈ?)v([" .. ALL_SINGLE_PHONETIC_VOWEL_CHARS_STR .. "])"),
+        r = N("%1w%2")
+    },
     { p = N("^(ˈ?)o(sp')"), r = "%1ɔ%2" }, { p = N("(st')i"), r = "%1ʊ" },
     { p = N("MKR_PHON_Y_LONG"), r = N("MKR_PHON_I_LONG") }, {
     p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "[']?)([ou])([kgxɣ])"),
