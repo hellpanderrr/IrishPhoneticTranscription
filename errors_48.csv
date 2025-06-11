@@ -19,36 +19,25 @@
 85,Aoine an Chéasta,Ulster; Connacht,ˌiːnʲə ˈçeːsˠt̪ˠə,ˈiːnʲɛ anˠ ˈçeːasˠt̪ˠa,0.7
 90,Ard-Fheis,,ˈɑːɾˠd̪ˠ ˈɛɕ,ˈaɾˠdfʲhɛʃ,0.5714285714285714
 92,Baile Brigín,Connacht,"ˌbˠalə ˈbʲɾʲɪɟiːnʲ, ˌbˠælə ˈbʲɾʲɪɟiːnʲ, ˌbˠɑːlʲə ˈbʲɾʲɪɟiːnʲ",ˈbˠailʲɛ ˈbʲɾʲɪɟiːnʲ,0.9090909090909091
-93,Baile Meánach,Connacht,ˌbˠalʲə ˈmʲɑːnˠəx,ˈbˠailʲɛ ˈmʲɛɑːnˠəx,0.8181818181818181
 94,Baile Meánach,Munster; Connacht,ˌbˠalʲə ˈmʲɑːn̪ˠəx,ˈbˠailʲɛ ˈmʲɛɑːnˠəx,0.8181818181818181
+93,Baile Meánach,Connacht,ˌbˠalʲə ˈmʲɑːnˠəx,ˈbˠailʲɛ ˈmʲɛɑːnˠəx,0.8181818181818181
 95,Baile Nua na hArda,Connacht,ˌbˠalʲə ˌn̪ˠuː n̪ˠə ˈhɑːɾˠd̪ˠə,ˈbˠailʲɛ ˈnˠua ˈnˠa ˈhaɾˠd̪ˠa,0.8666666666666667
 96,Baile na Mainistreach,Munster; Connacht,ˌbˠalʲə n̪ˠə ˈmˠanʲəʃtʲɾʲəx,ˈbˠailʲɛ ˈnˠa ˈmˠainʲɪʃtʲɾʲəx,0.8823529411764706
-97,Baile Átha Cliath,Munster; Connacht,ˌbʲlʲɑː ˈclʲiə,ˈbˠailʲɛ ˈɑːça ˈklʲiəç,0.5454545454545454
+97,Baile Átha Cliath,Munster; Connacht,ˌbʲlʲɑː ˈclʲiə,ˈbˠailʲɛ ˈɑːça ˈclʲiəç,0.6363636363636364
 98,Baile Átha Luain,Munster; Connacht,ˌbʲlʲɑː ˈl̪ˠuənʲ,ˈbˠailʲɛ ˈɑːça ˈlˠʊainʲ,0.5833333333333333
 106,Bh,,"vʲ, w",w,1.0
-107,Bhaile Átha Cliath,Munster; Connacht,ˌvʲlʲɑː ˈclʲiə,ˈwailʲɛ ˈɑːça ˈklʲiəç,0.4545454545454546
+107,Bhaile Átha Cliath,Munster; Connacht,ˌvʲlʲɑː ˈclʲiə,ˈwailʲɛ ˈɑːça ˈclʲiəç,0.5454545454545454
 108,Bhrasaíl,,vˠɾˠaˈsˠiːlʲ,ˈwɾˠasˠɑːlʲ,0.8333333333333334
 121,Béal Feirste,,"ˌbʲeːlˠ ˈfʲɛɾˠʃtʲə, ˌbʲeːl̪ˠ ˈfʲɛɾˠʃtʲə",ˈbʲeːalˠ ˈfʲɛɾʲʃtʲɛ,0.9
 139,Ceallach,Connacht,ˈcal̪ˠəx,ˈkal̪ˠəx,0.8
-140,Ceanada,,ˈcanˠəd̪ˠə,ˈkɑnˠad̪ˠa,0.8333333333333334
-141,Ceatharlach,Connacht,ˈcɑːɾˠl̪ˠəx,ˈkæçaɾˠlˠəx,0.7142857142857143
-142,Ceatharlach,Munster; Connacht,ˈcahəɾˠl̪ˠəx,ˈkaçaɾˠlˠəx,0.75
-143,Ceilteach,Connacht,ˈcɛl̠ʲtʲəx,ˈkɛlʲtʲəx,0.8333333333333334
 148,Chiribeas,,ˈxɪɾʲəˌbas,ˈçɪɾʲɪbʲɑsˠ,0.8571428571428572
-150,Cholm Cille,Ulster; Connacht,"ˌxɔlˠəmˈcɪl̠ʲə, ˌxɔl̪ˠəmˈcɪl̠ʲə",ˈxʊlˠmˠ ˈkɪl̠ʲɛ,0.7777777777777778
+150,Cholm Cille,Ulster; Connacht,"ˌxɔlˠəmˈcɪl̠ʲə, ˌxɔl̪ˠəmˈcɪl̠ʲə",ˈxʊlˠmˠ ˈcɪl̠ʲɛ,0.8888888888888888
 153,Cháit,Munster; Connacht,xɑːtʲ,ˈçɑːtʲ,0.6666666666666667
-155,Cian,,ˈciənˠ,ˈkiənˠ,0.75
-156,Ciarraí,,ˈciəɾˠiː,ˈkiəɾˠiː,0.8
-157,Ciarán,Connacht,ˈciəɾˠɑːnˠ,ˈkiəɾˠɑːnˠ,0.8333333333333334
-158,Cillian,Ulster; Connacht,ˈcɪl̠ʲiənˠ,ˈkɪl̠ʲiənˠ,0.8333333333333334
-159,Cincís,Connacht,ˈcɪɲciːʃ,ˈkɪnʲkiːʃ,0.6666666666666667
+160,Cireabaití,,ˈkɪɾʲəˌbatiː,ˈcɪɾʲɑbˠaitʲiː,0.7777777777777778
+161,Ciribeas,,ˈkɪɾʲəˌbas,ˈcɪɾʲɪbʲɑsˠ,0.8571428571428572
 163,Cloch na Blarnan,Munster; Connacht,ˌklˠɔx n̪ˠə ˈbˠlˠɑːɾˠn̪ˠənˠ,ˈklˠʊx ˈnˠa ˈbˠlˠaɾˠnˠanˠ,1.0
 164,Clocha Liatha,Ulster; Connacht,"n̪ˠə ˌklˠɔxə ˈl̠ʲiəhə, n̪ˠə ˌkl̪ˠɔxə ˈl̠ʲiəhə",ˈklˠʊxa ˈlʲiəça,0.75
-165,Cléire,,ˈclʲeːɾʲə,ˈklʲeːɾʲɛ,0.8
-168,Colm Cille,Ulster; Connacht,"ˌkɔlˠəmˈcɪl̠ʲə, ˌkɔl̪ˠəmˈcɪl̠ʲə",ˈkʊlˠmˠ ˈkɪl̠ʲɛ,0.7777777777777778
-175,Críost,,cɾʲiːsˠt̪ˠ,ˈkɾʲiːʊsˠt̪ˠ,0.6666666666666667
-176,Críostaí,Connacht,ˈcɾʲiːsˠt̪ˠiː,ˈkɾʲiːʊsˠt̪ˠiː,0.7142857142857143
-182,Céadaoin,Connacht,ˈceːd̪ˠiːnʲ,ˈkeːad̪ˠiːnʲ,0.6666666666666667
+168,Colm Cille,Ulster; Connacht,"ˌkɔlˠəmˈcɪl̠ʲə, ˌkɔl̪ˠəmˈcɪl̠ʲə",ˈkʊlˠmˠ ˈcɪl̠ʲɛ,0.8888888888888888
 185,Cúil Raithin,,ˌkuːlʲ ˈɾˠahənʲ,ˈkuːlʲ ˈɾˠaihɪnʲ,0.8888888888888888
 186,Daidí na Nollag,,ˌd̪ˠadʲiː n̪ˠə ˈnˠɔl̪ˠəɡ,ˈd̪ˠɪdʲiː ˈnˠa ˈnˠʊl̪ˠaɡ,1.0
 192,Dh,,"j, ɟ, ɣ",ɣ,1.0
@@ -62,8 +51,8 @@
 217,Dún Dealgan,Ulster; Connacht,"ˌd̪ˠuːnˠ ˈdʲalˠəɡənˠ, ˌd̪ˠuːn̠ʲ ˈdʲalˠəɡənˠ, ˌd̪ˠuːn̠ʲ ˈdʲal̪ˠəɡən̪ˠ",ˈd̪ˠuːnˠ ˈdʲɑlˠɡanˠ,0.9
 218,Dún Dealgan,Ulster; Munster; Connacht,ˌd̪ˠuːn̪ˠ ˈdʲal̪ˠəɡən̪ˠ,ˈd̪ˠuːnˠ ˈdʲɑlˠɡanˠ,0.9
 226,Eochaidh,Connacht,ˈɔxiː,ˈoːxiː,1.0
-227,Eoghan,Connacht,oːnˠ,ˈɛəunˠ,0.5
 228,Eoghan,Munster; Connacht,oːn̪ˠ,ˈɛəunˠ,0.5
+227,Eoghan,Connacht,oːnˠ,ˈɛəunˠ,0.5
 243,Fine Gael,,ˌfʲɪnʲə ˈɡeːlˠ,ˈfʲɪnʲɛ ˈɡeːlʲ,1.0
 274,Gh,,"j, ɟ, ɣ",ɣ,1.0
 282,Iarmhí,Ulster; Connacht,əˌn̠ʲiəɾˠˈvʲiː,ˈiəɾʲvʲiː,0.7142857142857143
@@ -72,10 +61,10 @@
 290,Inis Meáin,,ˌɪnʲəʃ ˈmʲɑːnʲ,ˈɪnʲɪʃ ˈmʲɛɑːnʲ,0.875
 294,Iúil,,uːlʲ,ˈɪuːlʲ,0.6666666666666667
 295,Iúr,Ulster; Connacht,ən̠ʲˈtʲuːɾˠ,ˈɔɾˠ,0.4
-301,Leitir Ceanainn,Ulster; Connacht,"ˌl̠ʲɛtʲəɾʲ ˈcanˠən̠ʲ, ˌl̠ʲɛtʲəɾʲ ˈcan̪ˠən̠ʲ",ˈlʲɛtʲɪɾʲ ˈkɑnˠaən̠ʲ,0.8181818181818181
+301,Leitir Ceanainn,Ulster; Connacht,"ˌl̠ʲɛtʲəɾʲ ˈcanˠən̠ʲ, ˌl̠ʲɛtʲəɾʲ ˈcan̪ˠən̠ʲ",ˈlʲɛtʲɪɾʲ ˈcɑnˠaən̠ʲ,0.9090909090909091
 306,Loch Garman,,"ˌl̪ˠɔx ˈɡaɾˠəmˠənˠ, ˌl̪ˠɔx ˈɡaɾˠəmˠən̪ˠ",ˈlˠʊx ˈɡaɾˠmˠanˠ,0.9
-309,Luan Cásca,Connacht,ˌl̪ˠuənˠ ˈkɑːsˠkə,ˈlˠuanˠ ˈkɑːsˠka,1.0
 310,Luan Cásca,Munster; Connacht,ˌl̪ˠuən̪ˠ ˈkɑːsˠkə,ˈlˠuanˠ ˈkɑːsˠka,1.0
+309,Luan Cásca,Connacht,ˌl̪ˠuənˠ ˈkɑːsˠkə,ˈlˠuanˠ ˈkɑːsˠka,1.0
 312,Lá Fhéile,,ˌl̪ˠɑː ˈeːlʲə,ˈlˠɑː ˈeːlʲɛ,1.0
 313,Lá Fhéile Pádraig,,ˌl̪ˠɑː ˌeːlʲə ˈpˠɑːɾˠɪc,ˈlˠɑː ˈeːlʲɛ ˈpˠɑːd̪ˠɾˠaiɟ,0.8333333333333334
 323,Meán Fómhair,,ˌmʲɑːn̪ˠ ˈfoːwəɾʲ,ˈmʲɛɑːnˠ ˈfˠoːwaiɾʲ,0.8
@@ -95,7 +84,7 @@
 427,Shamhain,Connacht,"həunʲ, ˈhɑvˠən",ˈçəuinʲ,0.75
 428,Sheoirse,Munster; Connacht,ˈçoːɾˠʃə,ˈhoːɾʲʃɛ,0.8
 429,Sheáin,Munster; Connacht,"çɑːnʲ, çɑ̃ːnʲ",ˈhɛɑːnʲ,0.5
-439,Sord Cholm Cille,Connacht,"ˌsˠauɾˠd̪ˠ xɔlˠəm ˈcɪl̠ʲə, ˌsˠauɾˠd̪ˠ xɔl̪ˠəm ˈcɪl̠ʲə",ˈsˠɔɾˠd̪ˠ ˈxʊlˠmˠ ˈkɪl̠ʲɛ,0.7857142857142857
+439,Sord Cholm Cille,Connacht,"ˌsˠauɾˠd̪ˠ xɔlˠəm ˈcɪl̠ʲə, ˌsˠauɾˠd̪ˠ xɔl̪ˠəm ˈcɪl̠ʲə",ˈsˠɔɾˠd̪ˠ ˈxʊlˠmˠ ˈcɪl̠ʲɛ,0.8571428571428572
 444,Stiofáin,Connacht,ˈʃtʲʊfˠɑːnʲ,ˈsˠt̪ˠɪfˠɑːnʲ,1.0
 445,Stiofán,Connacht,"ˈʃtʲʊfˠɑːnˠ, ˈʃtʲʊfˠɑːn̪ˠ",ˈsˠt̪ˠɪfˠɑːnˠ,1.0
 455,Th,,h,ç,0.0
@@ -120,16 +109,16 @@
 504,abhna,,ˈoːn̪ˠə,ˈaʊnˠa,0.75
 505,abhras,,ˈəuɾˠəsˠ,ˈaʊɾˠasˠ,1.0
 512,abú,,əˈbˠuː,ˈabˠuː,1.0
-524,acústaic,,əˈkuːsˠt̪ˠɪc,ˈakuːsˠt̪ˠaik,0.75
+524,acústaic,,əˈkuːsˠt̪ˠɪc,ˈakuːsˠt̪ˠaic,0.875
 525,ad,,əd̪ˠ,ad̪ˠ,1.0
 526,adamh,Munster; Connacht,ˈɑd̪ˠəvˠ,ˈad̪ˠɑu,0.75
-527,adhairc,,"ˈəiəɾʲc, ˈəiɾʲc",ˈaiɪɾʲk,0.8
+527,adhairc,,"ˈəiəɾʲc, ˈəiɾʲc",ˈaiɪɾʲc,1.0
 528,adhall,,ˈəiəl̪ˠ,ˈɑːl̪ˠ,0.5
 529,adharc,Connacht,ˈai(ə)ɾˠk,ˈɑːrk,0.6
 530,adharca,,ˈəi(ə)ɾˠkə,ˈaiɾˠka,0.8333333333333334
 531,adhlacóir,Connacht,ˈəil̪ˠəkoːɾʲ,ˈaɣlˠakoːɾʲ,0.8571428571428572
-532,adhlaic,Connacht,"ˈɑːl̪ˠəc, ˈəil̪ˠəc",ˈaɣlˠaik,0.5
-533,adhnaic,Connacht,ˈəin̪ˠəc,ˈaɣnˠaik,0.5
+532,adhlaic,Connacht,"ˈɑːl̪ˠəc, ˈəil̪ˠəc",ˈaɣlˠaic,0.6666666666666667
+533,adhnaic,Connacht,ˈəin̪ˠəc,ˈaɣnˠaic,0.6666666666666667
 534,aduaidh,Ulster; Connacht,"əˈd̪ˠuə, əˈd̪ˠuəj",ˈad̪ˠuiː,1.0
 543,ag,,"ə, əɟ, əɡ, ɛɟ, ɪɟ",aɡ,1.0
 546,agaibh,Aran; Connacht,ˈɑɡiː,ˈaɡaɪvʲ,0.6
@@ -138,17 +127,16 @@
 555,agam,Mayo; Connacht,ˈuɡəmˠ,ˈaɡamˠ,1.0
 558,agat,Galway; Connacht,ˈɑː(ɡə)t̪ˠ,ˈaɡat̪ˠ,1.0
 559,agat,Mayo; Connacht,ˈuɡəd̪ˠ,ˈaɡat̪ˠ,1.0
-565,aici,Connacht,"ˈɛciː, ˈɛcə",ˈaikɪ,0.5
-566,aicise,,ˈɛcɪʃə,ˈaikɪʃɛ,0.6666666666666667
-568,aicmí,,ˈacmʲiː,ˈɪkmʲiː,0.75
+565,aici,Connacht,"ˈɛciː, ˈɛcə",ˈaicɪ,0.75
+566,aicise,,ˈɛcɪʃə,ˈaicɪʃɛ,0.8333333333333334
+568,aicmí,,ˈacmʲiː,ˈɪcmʲiː,1.0
 569,aidhmeannas,,ˈəimʲən̪ˠəsˠ,ˈaimʲæn̪ˠasˠ,1.0
 572,aige,Connacht,ˈeɟ(ə),ˈaiɟɛ,0.75
 573,aiges,,ˈɛɟɪsˠ,ˈaiɟɛʃ,0.8
 584,ainmhí,Connacht,ˈanʲəvʲiː,ˈɪnʲvʲiː,0.8
 590,air,,aɾʲ,ˈɑːɾʲ,1.0
-592,airc,,aɾʲc,ˈɑːɾʲk,0.6666666666666667
 594,airdí,,ˈaːɾˠdʲiː,ˈɪɾʲdʲiː,1.0
-600,airleacan,,ˈɑːɾˠl̠ʲəkənˠ,ˈaiɾʲlʲækanˠ,0.875
+600,airleacan,,ˈɑːɾˠl̠ʲəkənˠ,ˈaiɾʲlʲɑkanˠ,0.875
 601,airne,Munster; Connacht,ˈɑːɾˠn̠ʲə,ˈaiɾʲnʲɛ,0.8
 603,airnéis,,"ˈaːɾˠn̠ʲeʃ, ˈaːɾˠn̠ʲæʃ, ˈaːɾˠn̠ʲɛʃ, ˈʌɾˠn̠ʲæʃ",ˈɪɾʲnʲeːʃ,1.0
 604,airnéis,Connacht,ˈɑːɾˠn̠ʲeːʃ,ˈaiɾˠnˠeːsˠ,0.8333333333333334
@@ -160,11 +148,11 @@
 640,amach,,əˈmˠax,ˈamˠəx,1.0
 641,amach is amach,,əˈmˠax əsˠ əˈmˠax,ˈamˠəx ɪʃ ˈamˠəx,1.0
 652,amha,,ˈawə,əu,0.6666666666666667
-653,amhairc,Connacht,ˈafˠɪɾʲc,əuiɾʲk,0.6
+653,amhairc,Connacht,ˈafˠɪɾʲc,əuiɾʲc,0.8
 654,amharc,,ˈaːfˠɾˠək,ˈəuɾˠək,0.8
 656,amhráin,Connacht,ˈoːɾˠɑːnʲ,əuɾˠɑːnʲ,0.8
-657,amhrán,Connacht,"ˈoːɾˠɑːnˠ, ˈoːɾˠɑːn̪ˠ",əuɾˠɑːnˠ,0.8
 658,amhrán,Aran; also; Connacht,ˈɑːɾˠɑːnˠ,əuɾˠɑːnˠ,0.8
+657,amhrán,Connacht,"ˈoːɾˠɑːnˠ, ˈoːɾˠɑːn̪ˠ",əuɾˠɑːnˠ,0.8
 659,amháin,Connacht,əˈwɑːnʲ,ˈɑuɑːnʲ,0.75
 661,amú,,əˈmˠuː,ˈamˠuː,1.0
 662,an,,"ə.nˠ-, ə.n̠ʲ-, ə.n̪ˠ-, ə, ənˠ",anˠ,1.0
@@ -173,8 +161,8 @@
 665,ana-,,ˈɑn̪ˠə,ˈanˠa,1.0
 666,anagheairid,,ɑnɑˈjaɾʲədʲ,ˈanˠajaiɾʲɪdʲ,0.8888888888888888
 671,aneas,Connacht,əˈn̠ʲasˠ,ˈanʲɑsˠ,1.0
-676,anocht,Connacht,əˈnˠɔxt̪ˠ,ˈanˠʊxt̪ˠ,1.0
 677,anocht,Munster; Connacht,əˈn̪ˠɔxt̪ˠ,ˈanˠʊxt̪ˠ,1.0
+676,anocht,Connacht,əˈnˠɔxt̪ˠ,ˈanˠʊxt̪ˠ,1.0
 678,anoir,Connacht,əˈn̪ˠɛɾʲ,ˈanˠɛɾʲ,1.0
 680,anois,Connacht,əˈnʲiʃ,ˈanˠɛʃ,1.0
 683,ansiúd,,ən̪ˠˈʃuːd̪ˠ,ˈanʲʃʊd̪ˠ,1.0
@@ -186,7 +174,7 @@
 704,aonaid,,ˈeːnˠədʲ,ˈiːnˠaidʲ,0.8
 706,aonghuthach,Connacht,ˈeːn̪ˠˌɣʊhəx,ˈiːŋhʊçəx,0.7142857142857143
 707,aonmhac,Ulster; Connacht,"ˈeːnˠˌwak, ˈeːn̪ˠˌwak",ˈiːnˠwak,1.0
-708,aonraic,,ˈeːn̪ˠɾˠɪc,ˈiːnˠɾˠaik,0.6666666666666667
+708,aonraic,,ˈeːn̪ˠɾˠɪc,ˈiːnˠɾˠaic,0.8333333333333334
 715,ar a fhad,,əɾʲˈad̪ˠ,ɛɾʲ a ˈad̪ˠ,0.8
 716,ar a laghad,Munster; Connacht,ˌɛɾʲəˈl̪ˠəid̪ˠ,ɛɾʲ a ˈlˠaid̪ˠ,1.0
 722,ar bith,,"əˈbʲɪ(h), ɛɾʲˈbʲɪ(h)",ɛɾʲ ˈbʲɪç,0.8
@@ -221,7 +209,7 @@
 895,bearna bhaoil,,ˌbʲɑːɾˠn̪ˠə ˈwiːlʲ,ˈbʲæɾˠnˠa ˈwiːlʲ,1.0
 935,bh,,"vʲ, w",w,1.0
 936,bhF,,"vʲ, w",w,1.0
-939,bhFrainc,,vˠɾˠaɲc,ˈwɾˠainʲk,0.5
+939,bhFrainc,,vˠɾˠaɲc,ˈwɾˠainʲc,0.6666666666666667
 940,bhFranc,,ˈvˠɾˠaŋk,ˈwɾˠank,0.8
 957,bheanna,,ˈvʲan̪ˠə,ˈwan̪ˠa,0.75
 958,bhearr,Munster; Connacht,vʲɑːɾˠ,ˈwɑːɾˠ,0.6666666666666667
@@ -236,19 +224,13 @@
 1057,bhur,Connacht,ə,ˈwɔɾˠ,0.33333333333333337
 1416,caidhp bháis,Connacht,ˌkaipʲ ˈwɑːʃ,ˈkaipʲ ˈwɑːʃ,1.0
 1529,carr patróil,Connacht,ˌkɑːɾˠ ˈpat̪ˠɾˠoːl̠ʲ,ˈkɑːɾˠ ˈpˠat̪ˠɾˠoːlʲ,1.0
-1564,ceachartha,,ˈcaxəɾˠə,ˈkæçaɾˠça,0.6666666666666667
+1540,cart,,kɑɾˠt̪ˠ,ˈcɑːɾˠt̪ˠ,0.75
 1565,ceacht,,caxt̪ˠ,ˈkaxt̪ˠ,0.75
 1566,ceachta,,ˈcaxt̪ˠə,ˈkaxt̪ˠa,0.8
 1567,ceachtanna,,ˈcaxt̪ˠən̪ˠə,ˈkaxt̪ˠan̪ˠa,0.8571428571428572
 1568,ceachtar,,"ˈcaxt̪ˠəɾˠ, ˈcæxt̪ˠəɾˠ, ˈcaht̪ˠəɾˠ",ˈkaxt̪ˠaɾˠ,0.8333333333333334
-1569,cead,,cad̪ˠ,ˈkɑd̪ˠ,0.6666666666666667
-1570,ceada,,ˈcad̪ˠə,ˈkɑd̪ˠa,0.75
-1571,cealg,Ulster; Connacht,ˈcalˠəɡ,ˈkɑlˠəɡ,0.8
-1572,cealg,Ulster; Munster; Connacht,ˈcal̪ˠəɡ,ˈkalˠəɡ,0.8
-1573,cealgaire,,ˈcalˠəɡəɾʲə,ˈkɑlˠɡaiɾʲɛ,0.625
 1574,cealla,,ˈcal̪ˠə,ˈkal̪ˠa,0.75
 1575,ceallach,Connacht,ˈcal̪ˠəx,ˈkal̪ˠəx,0.8
-1576,ceamara,,ˈcamˠəɾˠə,ˈkɑmˠaɾˠa,0.8333333333333334
 1577,ceangail,,ˈcaŋ(ɡ)əlʲ,ˈkaŋailʲ,0.6666666666666667
 1578,ceangal,Ulster; Connacht,"ˈcaŋ(ɡ)əlˠ, ˈcaŋ(ɡ)əl̪ˠ",ˈkaŋalˠ,0.6666666666666667
 1579,ceanna,,ˈcan̪ˠə,ˈkan̪ˠa,0.75
@@ -260,63 +242,16 @@
 1585,ceannasach,Munster; Connacht,ˈcan̪ˠəsˠəx,ˈkan̪ˠasˠəx,0.8571428571428572
 1586,ceannasaí,Connacht,ˈcan̪ˠəsˠiː,ˈkan̪ˠasˠiː,0.8333333333333334
 1587,ceannaím,Connacht,ˈcan̪ˠiːmʲ,ˈkan̪ˠɑːmʲ,0.8
-1588,ceantar,,ˈcan̪ˠt̪ˠəɾˠ,ˈkɑnˠt̪ˠaɾˠ,0.8333333333333334
-1589,ceap,,capˠ,ˈkɑpˠ,0.6666666666666667
-1590,ceapaire,,ˈcapˠəɾʲə,ˈkɑpˠaiɾʲɛ,0.7142857142857143
-1591,ceaptar,,ˈcapˠt̪ˠəɾˠ,ˈkɑpˠt̪ˠaɾˠ,0.8333333333333334
-1592,ceaptha,Connacht,ˈcapˠiː,ˈkɑpˠça,0.75
-1593,cearc,,caɾˠk,ˈkɑːrk,0.75
-1594,cearc ghoir,,ˈcaɾˠk ˈɣɪɾʲ,ˈkɑːrk ˈɣəiɾʲ,0.75
-1595,cearca,,ˈcaɾˠkə,ˈkæɾˠka,0.8
-1596,ceard,,"caːɾˠd̪ˠ, cɑːɾˠd̪ˠ",ˈkɑːɾˠd̪ˠ,0.75
-1597,cearnóg,Connacht,ˈcɑːɾˠn̪ˠoːɡ,ˈkæɾˠnˠoːɡ,0.8333333333333334
-1598,cearnóga,Connacht,ˈcɑːɾˠn̪ˠoːɡə,ˈkæɾˠnˠoːɡa,0.8571428571428572
-1599,cearnóige,Connacht,ˈcɑːɾˠn̪ˠoːɟə,ˈkæɾˠnˠoːɟɛ,0.8571428571428572
 1600,cearr,Munster; Connacht,cɑːɾˠ,ˈkɑːɾˠ,0.6666666666666667
-1601,ceart,,"caɾˠt̪ˠ, cæːɾˠt̪ˠ",ˈkɑːɾˠt̪ˠ,0.75
-1602,cearta,,ˈcaɾˠt̪ˠə,ˈkæɾˠt̪ˠa,0.8
-1603,ceas,,casˠ,ˈkɑsˠ,0.6666666666666667
-1604,ceatha,,ˈcahə,ˈkæça,0.5
-1605,ceathair,,ˈcahəɾʲ,ˈkæçaiɾʲ,0.6
-1606,ceathair déag,,"dje ˈcahəɾʲ, ˈcahəɾʲ jeːɡ",ˈkæçaiɾʲ ˈdʲeːaɡ,0.5555555555555556
-1607,ceathrair,,ˈcahɾˠəɾʲ,ˈkæçɾˠaiɾʲ,0.6666666666666667
-1608,ceil,,cɛlʲ,ˈkiːlʲ,0.6666666666666667
-1609,ceilg,,ˈcɛlʲɪɟ,ˈkiːlʲɟ,0.6
-1610,ceilim,Munster; Connacht,ˈcelʲəmʲ,ˈkɛlʲɪmʲ,0.8
-1611,ceilp,,cɛlʲpʲ,ˈkiːlʲpʲ,0.75
-1612,ceilpe,,ˈcɛlʲpʲə,ˈkɛlʲpʲɛ,0.8
-1613,ceilt,Ulster; Connacht,cɛl̠ʲtʲ,ˈkiːlʲtʲ,0.75
-1614,ceilte,,ˈcɛlʲtʲə,ˈkɛlʲtʲɛ,0.8
-1615,ceimic,,ˈcɛmʲɪc,ˈkɛmʲɪk,0.6
-1616,ceintiméadar,Connacht,ˈcɛn̠ʲtʲəmʲeːd̪ˠəɾˠ,ˈkɛnʲtʲɪmʲeːadʲæɾˠ,0.8181818181818181
-1617,ceirbreach,Munster; Connacht,ˈcɛɾʲəbʲɾʲəx,ˈkɛɾʲbʲɾʲəx,0.75
-1619,ceird,Cois-Fharraige; Connacht,caiɾˠdʲ,ˈkaɾˠd̪ˠ,0.6
-1620,ceird,Mayo; Connacht,ceɾˠdʲ ~ coɾˠdʲ,ˈkaɾˠd̪ˠ,0.75
-1621,ceirnín,Connacht,ˈcɛɾˠn̠ʲiːnʲ,ˈkɪɾʲnʲiːnʲ,0.8333333333333334
-1622,ceirt,,cɛɾˠtʲ,ˈkəiɾʲtʲ,0.6
-1623,ceist,,cɛʃtʲ,ˈkɛʃtʲ,0.75
-1624,ceiste,,ˈcɛʃtʲə,ˈkɛʃtʲɛ,0.8
-1625,ceisteach,Munster; Connacht,ˈcɛʃtʲəx,ˈkɛʃtʲəx,0.8333333333333334
-1626,ceithre,,ˈcɛɾʲə,ˈkɛhɾʲɛ,0.6
-1627,ceithre,Connacht,ˈçɛɾʲə,ˈkɛhɾˠɛ,0.6
-1628,ceo,Munster; Connacht,coː,ˈkoː,0.5
-1629,ceoch,Munster; Connacht,coːx,ˈkoːç,0.33333333333333337
-1630,ceoil,Munster; Connacht,coːlʲ,ˈkoːlʲ,0.6666666666666667
-1632,ceol,Connacht,coːlˠ,ˈkoːlˠ,0.6666666666666667
-1633,ceol,Munster; Connacht,coːl̪ˠ,ˈkoːlˠ,0.6666666666666667
-1634,ceolchoirm,,ˈcoːlˠˌxɞɾʲəmʲ,ˈkoːlˠçɛɾʲmʲ,0.625
-1635,ceolmhar,Connacht,ˈcoːl̪ˠwəɾˠ,ˈkoːlˠwaɾˠ,0.8333333333333334
-1636,ceoltóir,Connacht,ˈcoːl̪ˠt̪ˠoːɾʲ,ˈkoːlˠt̪ˠoːɾʲ,0.8333333333333334
-1637,ceonna,,ˈcoːn̪ˠə,ˈkoːn̪ˠa,0.75
-1638,ceárta,Connacht,ˈcɑːɾˠt̪ˠə,ˈkɛɑːɾˠt̪ˠa,0.6666666666666667
-1639,ceártaí,Connacht,ˈcɑːɾˠt̪ˠiː,ˈkɛɑːɾˠt̪ˠiː,0.6666666666666667
+1606,ceathair déag,,"dje ˈcahəɾʲ, ˈcahəɾʲ jeːɡ",ˈcæçaiɾʲ ˈdʲeːaɡ,0.6666666666666667
+1618,ceird,Aran; Connacht,kaiɾʲdʲ,ˈcəiɾʲdʲ,0.8
+1627,ceithre,Connacht,ˈçɛɾʲə,ˈcɛhɾˠɛ,0.6
 1641,cha,,ha(ː),ˈxa,0.5
 1646,chairde,Munster; Connacht,ˈxɑːɾˠdʲə,ˈçaiɾʲdʲɛ,0.8
 1647,chais,,xaʃ,ˈçaiʃ,0.6666666666666667
 1678,cheana,,"ˈhanˠə, ˈhan̪ˠə",ˈçanˠa,0.75
 1679,cheannach,Connacht,ˈçan̪ˠəx,ˈxan̪ˠəx,0.8
 1689,cheird,Aran; Connacht,xaiɾʲdʲ,ˈçəiɾʲdʲ,0.8
-1701,chic,,çɪc,ˈxɪk,0.33333333333333337
 1707,chip,,çɪpʲ,ˈxɪpʲ,0.6666666666666667
 1709,chirt,,çɪɾˠtʲ,ˈxəiɾʲtʲ,0.6
 1710,chis,,çɪʃ,ˈxɪʃ,0.6666666666666667
@@ -327,7 +262,7 @@
 1727,choil,,xɛlʲ,ˈçiːlʲ,0.6666666666666667
 1729,choir,,xɛɾʲ,ˈçəiɾʲ,0.6666666666666667
 1730,choire,,ˈxɛɾʲə,ˈçɛɾʲɛ,0.75
-1738,chonaic,Mayo; Connacht,ˈhanʲic,ˈxʊnˠaik,0.5
+1738,chonaic,Mayo; Connacht,ˈhanʲic,ˈxʊnˠaic,0.6666666666666667
 1751,chruit,,xɾˠɪtʲ,ˈçɾˠɪtʲ,0.75
 1754,chráis,,xɾˠɑːʃ,ˈçɾˠɑːʃ,0.75
 1755,chuain,,"xuənʲ, xuːnʲ",ˈçʊainʲ,0.75
@@ -336,7 +271,7 @@
 1769,chuig,,xɪɟ,ˈçɪɟ,0.6666666666666667
 1770,chuimhnigh,Connacht,ˈxivʲnʲiː,ˈçɪvʲnʲiː,0.8
 1774,chuir,,xɪɾʲ,ˈçəiɾʲ,0.6666666666666667
-1775,chuir i dtaisce,,ˌxɪɾʲ əˈd̪ˠaʃcɪ,ˈçəiɾʲ ɪ ˈd̪ˠaiʃkɛ,0.7
+1775,chuir i dtaisce,,ˌxɪɾʲ əˈd̪ˠaʃcɪ,ˈçəiɾʲ ɪ ˈd̪ˠaiʃcɛ,0.8
 1776,chuireas,,ˈxɪɾʲəsˠ,ˈçɪɾʲɑsˠ,0.8
 1777,chuiris,,ˈxɪɾʲəʃ,ˈçɪɾʲɪʃ,0.8
 1787,cháiliúil,Connacht,ˈxɑːlʲuːlʲ,ˈçɑːlʲɪuːlʲ,0.6
@@ -346,164 +281,13 @@
 1803,chír,,ˈçiːɾʲ,ˈxiːɾʲ,0.6666666666666667
 1814,chúig,,xuːɟ,ˈçuːɪɟ,0.6666666666666667
 1816,chúis,,xuːʃ,ˈçuːɪʃ,0.6666666666666667
-1821,ciabh,Munster; Connacht,ciəvˠ,ˈkɪaʊ,0.5
-1822,ciach,,ciəx,ˈkiəx,0.75
-1823,ciall,,ciəl̪ˠ,ˈkiəl̪ˠ,0.75
-1824,cialla,,ˈciəl̪ˠə,ˈkiəl̪ˠa,0.8
-1825,cian,,ciənˠ,ˈkiənˠ,0.75
-1826,ciar,,ciəɾˠ,ˈkiəɾˠ,0.75
-1827,ciardhuibhe,,ˈciəɾˠɣɪvʲə,ˈkiəɾˠɣɪvʲɛ,0.875
-1828,ciaróg,Connacht,ˈciəɾˠoːɡ,ˈkiəɾˠoːɡ,0.8333333333333334
-1829,cibeal,,"ˈcɪbʲəlˠ, ˈcɪbʲəl̪ˠ",ˈkɪbʲɑlˠ,0.8
-1830,cibé,,cɪˈbʲeː,ˈkɪbʲeː,0.75
-1831,cic,,cɪc,ˈkɪk,0.33333333333333337
-1832,ciceáil,Connacht,ˈcɪcaːlʲ,ˈkɪkɛɑːlʲ,0.5
-1833,ciclipéid,Connacht,ˈcɪclʲɪpʲeːdʲ,ˈkɪklʲɪpʲeːdʲ,0.75
-1834,cigil,,ˈcɪɟɪlʲ,ˈkɪɟɪlʲ,0.8
-1835,cigilt,,ˈcɪɟɪlʲtʲ,ˈkɪɟɪlʲtʲ,0.8333333333333334
-1836,cigire,,ˈcɪɟɪɾʲə,ˈkɪɟɪɾʲɛ,0.8333333333333334
-1837,cileagram,,ˈcɪlʲəɡɾˠamˠ,ˈkɪlʲɑɡɾˠamˠ,0.875
-1838,ciliméadar,Connacht,"ˈcɪlʲəmʲed̪ˠəɾˠ, ˈcɪlʲəmʲeːd̪ˠəɾˠ",ˈkɪlʲɪmʲeːadʲæɾˠ,0.8
-1839,cille,,ˈcɪl̠ʲə,ˈkɪl̠ʲɛ,0.75
-1840,cillín,Connacht,ˈcɪlʲiːnʲ,ˈkɪl̠ʲiːnʲ,0.8
-1841,cime,,ˈcɪmʲə,ˈkɪmʲɛ,0.75
-1842,cineál,Connacht,ˈcɪnˠɑːlˠ,ˈkɪnʲɛɑːlˠ,0.6666666666666667
-1843,cineálta,Connacht,ˈcɪnˠɑːl̪ˠt̪ˠə,ˈkɪnʲɛɑːlˠt̪ˠa,0.75
-1844,cinneadhtheoiric,Munster; Connacht,ˈcɪn̠ʲəˌhoːɾʲəc,ˈkɪn̠ʲajhoːɾʲɪk,0.7
-1845,cinnigí,Connacht,ˈcɪn̠ɪɟiː,ˈkɪn̠ʲɪɟiː,0.8333333333333334
-1846,cinnire,,ˈcɪn̠ʲəɾʲə,ˈkɪn̠ʲɪɾʲɛ,0.8333333333333334
-1850,cion,Mayo; Connemara; Connacht,cunˠ,ˈkɪnˠ,0.6666666666666667
-1849,cion,Cois-Fharraige; Connacht,cin̪ˠ,ˈkɪnˠ,0.6666666666666667
-1847,cion,Connacht,cɞnˠ,ˈkɪnˠ,0.6666666666666667
-1848,cion,Aran; Connacht,cinˠ,ˈkɪnˠ,0.6666666666666667
-1851,ciorcal,,ˈciɾˠkəlˠ,ˈkɪɾˠkalˠ,0.8333333333333334
-1852,ciotach,Connacht,ˈcɪt̪ˠəx,ˈkɪt̪ˠəx,0.8
-1853,cip,,cɪpʲ,ˈkɪpʲ,0.6666666666666667
-1854,cipín,Ulster; Connacht,ˈcɪpʲiːnʲ,ˈkɪpʲiːnʲ,0.8
-1855,circ,,cɪɾʲc,ˈkəiɾʲk,0.4
-1856,circe,,ˈcɪɾʲcə,ˈkɪɾʲkɛ,0.6
-1857,cirt,,cɪɾˠtʲ,ˈkəiɾʲtʲ,0.6
-1858,cirte,,ˈcɨ̞ɾˠtʲə,ˈkɪɾʲtʲɛ,0.8
-1859,cis,,cɪʃ,ˈkɪʃ,0.6666666666666667
-1860,cise,,ˈcɪʃə,ˈkɪʃɛ,0.75
-1861,ciseal,,ˈcɪʃəlˠ,ˈkɪʃɑlˠ,0.8
-1862,ciseanna,,ˈcɪʃən̪ˠə,ˈkɪʃæn̪ˠa,0.8333333333333334
-1863,ciseáin,Connacht,ˈcɪʃɑːnʲ,ˈkɪʃɛɑːnʲ,0.6666666666666667
-1864,ciseán,Ulster; Connacht,"ˈcɪʃɑːnˠ, ˈcɪʃɑːn̪ˠ",ˈkɪʃɛɑːnˠ,0.6666666666666667
-1865,ciste,,ˈcɪʃtʲə,ˈkɪʃtʲɛ,0.8
-1866,cisteanach,Munster; Connacht,ˈciʃtʲən̪ˠəx,ˈkɪʃtʲɑnˠəx,0.875
-1867,cistin,,ˈcɪʃtʲənʲ,ˈkɪʃtʲɪnʲ,0.8333333333333334
-1868,cistine,,ˈcɪʃtʲɪnʲə,ˈkɪʃtʲɪnʲɛ,0.8571428571428572
-1869,cistineacha,,ˈcɪʃtʲɪnʲəxə,ˈkɪʃtʲɪnʲæça,0.7777777777777778
-1870,citeal,,ˈcɪtʲəlˠ,ˈkɪtʲɑlˠ,0.8
-1871,ciumhais,,"cuːsˠ, cuːʃ, cũːsˠ",ˈkɪʊwaiʃ,0.2857142857142857
-1872,ciumhaise,,ˈcuːʃə,ˈkɪʊwaiʃɛ,0.375
-1873,ciumhaiseanna,,ˈcuːʃən̪ˠə,ˈkɪʊwaiʃæn̪ˠa,0.5
-1874,ciú,,cuː,ˈkʊ,0.5
-1875,ciúin,,cuːnʲ,ˈkuinʲ,0.5
-1876,ciúine,,ˈcuːnʲə,ˈkuinʲɛ,0.6
-1877,ciúnas,,ˈcuːnˠəsˠ,ˈkʊnˠasˠ,0.8
 1895,cleacht,,clʲaxt̪ˠ,ˈklˠaxt̪ˠ,0.8
-1896,cleas,,clʲasˠ,ˈklʲɑsˠ,0.75
-1897,cleasach,Munster; Connacht,ˈclʲasˠəx,ˈklʲɑsˠəx,0.8333333333333334
-1898,cleasaí,Connacht,ˈclʲasˠiː,ˈklʲʊsˠiː,0.8
-1899,cleite,,ˈclʲɛtʲə,ˈklʲɛtʲɛ,0.8
-1900,cleith,,clʲɛ(h),ˈklʲɛç,0.5
-1901,cleithire,,ˈclʲɛhəɾʲə,ˈklʲɛhɪɾʲɛ,0.8571428571428572
-1902,cliabhán,Connacht,"ˈclʲiəwɑːnˠ, ˈclʲiəwɑːn̪ˠ",ˈklʲɪaʊɑːnˠ,0.7142857142857143
-1903,cliath,,clʲiə,ˈklʲiəç,0.75
-1904,clibirt,,ˈclʲɪbʲəɾˠtʲ,ˈklʲɪbʲɪɾʲtʲ,0.8571428571428572
-1905,clibín,Ulster; Connacht,ˈclʲɪbʲiːnʲ,ˈklʲɪbʲiːnʲ,0.8333333333333334
-1906,clismirt,,"ˈclʲiʃmʲəɾˠtʲ, ˈclʲɨsˠmˠəɾˠtʲ, ˈɟlʲɨsˠmˠəɾˠtʲ",ˈklʲɪʃmʲɪɾʲtʲ,0.875
-1907,cliste,,ˈcʲlʲɪʃtʲə,ˈklʲɪʃtʲɛ,0.8333333333333334
-1941,clé,,clʲeː,ˈklʲeː,0.6666666666666667
-1942,cléibh,,"clʲeːvʲ, clʲɛi̯vʲ",ˈklʲeːɪvʲ,0.6
-1943,cléireach,Munster; Connacht,ˈclʲeːɾʲəx,ˈklʲeːɾʲəx,0.8333333333333334
-1944,clí,,clʲiː,ˈklʲiː,0.6666666666666667
-1955,cneas,Ulster; Connacht,cɾʲasˠ,ˈknʲɑsˠ,0.5
-1956,cneasta,Ulster; Connacht,ˈcɾʲasˠt̪ˠə,ˈknʲɑsˠt̪ˠa,0.6666666666666667
-2087,creach,,cɾʲax,ˈkɾʲəx,0.75
-2088,crean,,cɾʲanˠ,ˈkɾʲɑnˠ,0.75
-2089,creid,Munster; Connacht,cɾʲɛdʲ,ˈkɾʲɛdʲ,0.75
-2090,creidfead,,ˈcɾʲɛtʲəd̪ˠ,ˈkɾʲɛtʲfʲɑd̪ˠ,0.7142857142857143
-2091,creidim,Munster; Connacht,ˈcɾʲɛdʲəmʲ,ˈkɾʲɛdʲɪmʲ,0.8333333333333334
-2092,creidmheach,Connacht,ˈcɾʲedʲvʲəx,ˈkɾʲɛdʲvʲəx,0.8571428571428572
-2093,creidmheas,,ˈcɾʲɛdʲˌvʲasˠ,ˈkɾʲɛdʲvʲasˠ,0.8571428571428572
-2094,creig,,cɾʲɛɟ,ˈkɾʲɛɟ,0.75
-2095,criadh,,cɾʲiə,ˈkɾʲiə,0.75
-2097,crith,,"cɾʲi(h), cɾʲiç",ˈkɾʲɪç,0.6666666666666667
-2098,critheann,,"ˈcrʲɪhən̪ˠ, ˈcrʲɪçən̪ˠ",ˈkɾʲɪhən̪ˠ,0.8333333333333334
-2099,crithim,Munster; Connacht,ˈcɾʲɪhəmʲ,ˈkɾʲɪhɪmʲ,0.8333333333333334
-2100,critic,,ˈcɾʲɪtʲɪc,ˈkɾʲɪtʲɪk,0.6666666666666667
-2101,critice,,ˈcɾʲɪtʲɪcɪ,ˈkɾʲɪtʲɪkɛ,0.7142857142857143
-2150,cré,,cɾʲeː,ˈkɾʲeː,0.6666666666666667
-2151,créacht,,cɾʲeːxt̪ˠ,ˈkɾʲeːaçt̪ˠ,0.6
-2152,créatúir,Connacht,"ˈcɾʲeːt̪ˠuɾʲ, ˈcɾʲeːt̪ˠuːɾʲ",ˈkɾʲeːat̪ˠuːɪɾʲ,0.625
-2153,créatúr,Connacht,ˈcɾʲeːt̪ˠuːɾˠ,ˈkɾʲeːat̪ˠuːɾˠ,0.7142857142857143
-2154,crích,,cɾʲiːç,ˈkɾʲiːx,0.5
-2155,crín,,cɾʲiːnʲ,ˈkɾʲiːnʲ,0.75
-2156,críoch,,cɾʲiːx,ˈkɾʲiːʊç,0.5
-2157,críochnaigh,Connacht,"ˈcɾʲiəxn̪ˠiː, ˈcɾʲiəxn̪ˠə",ˈkɾʲiːʊxnˠiː,0.8571428571428572
-2158,críochnaithe,,ˈcɾʲiːxn̪ˠɪhɪ,ˈkɾʲiːʊxnˠaɪhə,0.7
-2159,críochnaím,Connacht,ˈcɾʲiəxn̪ˠiːmʲ,ˈkɾʲiːʊxnˠɑːmʲ,0.875
-2160,críon,,cɾʲiːnˠ,ˈkɾʲiːʊnˠ,0.6
-2161,críonna,Munster; Connacht,ˈcɾʲiːn̪ˠə,ˈkɾʲiːʊn̪ˠa,0.6666666666666667
-2197,cuir i dtaisce,,ˌkɪɾʲ əˈd̪ˠaʃcɪ,ˈkəiɾʲ ɪ ˈd̪ˠaiʃkɛ,0.7272727272727273
+2096,criostal,,ˈkɾˠɪsˠt̪ˠəlˠ,ˈcɾʲɪsˠt̪ˠalˠ,0.8571428571428572
+2197,cuir i dtaisce,,ˌkɪɾʲ əˈd̪ˠaʃcɪ,ˈkəiɾʲ ɪ ˈd̪ˠaiʃcɛ,0.8181818181818181
 2198,cuir i gcás,,ˌkɪɾʲ ə ˈɡɑːsˠ,ˈkəiɾʲ ɪ ˈɡɑːsˠ,0.875
 2258,cál ceannann,Munster; Connacht,ˌkɑːlˠ ˈcan̪ˠən̪ˠ,ˈkɑːlˠ ˈkan̪ˠən̪ˠ,0.875
-2268,cé,,ceː,ˈkeː,0.5
-2269,cé go,,ˈceːɡə,ˈkeː ɡʊ,0.75
-2270,cé gur,,ˈceːɡəɾˠ,ˈkeː ˈɡɔɾˠ,0.8
-2271,cé mhéad,,ceːˈvʲeːd̪ˠ,ˈkeː ˈvʲeːad̪ˠ,0.6666666666666667
-2272,cé na,,ˈceːnˠə,ˈkeː ˈnˠa,0.75
-2273,cé nach,,ˈceː n̪ˠax,ˈkeː ˈnˠəx,0.8
-2274,céachta,,ˈceːx.t̪ˠə,ˈkeːaçt̪ˠa,0.6
-2275,céad,Ulster; Connacht,ceːd̪ˠ,ˈkeːad̪ˠ,0.5
-2276,céad mháta,Connacht,ceːd̪ˠ ˈwɑːt̪ˠə,ˈkeːad̪ˠ ˈwɑːt̪ˠa,0.75
-2277,céad míle fáilte,,ceːd̪ˠ ˈmʲiːlʲə ˈfˠaːlʲtʲə,ˈkeːad̪ˠ ˈmʲiːlʲɛ ˈfˠɑːlʲtʲɛ,0.8461538461538461
-2278,céadfach,Connacht,ˈceːd̪ˠfˠəx,ˈkeːad̪ˠfˠəx,0.7142857142857143
-2279,céadta,Ulster; Connacht,ˈceːt̪ˠə,ˈkeːad̪ˠa,0.6
-2280,céanna,Ulster; Connacht,ˈceːn̪ˠə,ˈkeːan̪ˠa,0.6
-2281,céard,,ceːɾˠd̪ˠ,ˈkeːaɾˠd̪ˠ,0.6
-2282,céas,Ulster; Connacht,ceːsˠ,ˈkeːasˠ,0.5
-2283,céasta,Ulster; Connacht,ˈceːsˠt̪ˠə,ˈkeːasˠt̪ˠa,0.6666666666666667
-2284,céibh,,ceːvʲ,ˈkeːɪvʲ,0.5
-2285,céibhe,,ˈceːvʲə,ˈkeːɪvʲɛ,0.6
-2286,céid,,ceːdʲ,ˈkeːdʲ,0.6666666666666667
-2287,céide,,ˈceːdʲə,ˈkeːdʲɛ,0.75
-2288,céile,,ˈceːlʲə,ˈkeːlʲɛ,0.75
-2289,céille,,ˈceːl̠ʲə,ˈkeːl̠ʲɛ,0.75
-2290,céilí,,ˈceːlʲiː,ˈkeːlʲiː,0.75
-2291,céilíoch,Connacht,ˈceːlʲiːəx,ˈkeːlʲiːʊç,0.6666666666666667
-2292,céim,,"ceːmʲ, cɛi̯mʲ",ˈkeːmʲ,0.6666666666666667
-2293,céir,,ceːɾʲ,ˈkeːɾʲ,0.6666666666666667
-2294,cén,,ceːnˠ,ˈkeːnʲ,0.6666666666666667
-2295,cén chaoi a bhfuil tú,,ceː(nˠ)xiː ˈwɪlʲ t̪ˠuː,ˈkeːnʲ ˈxiː a ˈwiːlʲ ˈt̪ˠuː,0.8181818181818181
-2296,cén fáth,Connacht,ceːnˠ ˈfˠɑː,ˈkeːnʲ ˈfˠɑː,0.8
-2297,cén uair,,ceːˈn̪ˠuəɾʲ,ˈkeːnʲ ˈʊaiɾʲ,0.7142857142857143
-2298,cén áit,,ceːˈn̪ˠɑːtʲ,ˈkeːnʲ ˈɑːtʲ,0.8
-2299,cér,,ceːɾˠ,ˈkeːɾʲ,0.6666666666666667
-2300,cérb,,ceːɾˠbˠ,ˈkeːɾʲbʲ,0.75
-2301,cérbh,,ceːɾˠvˠ,ˈkeːɾʲvʲ,0.75
-2302,cíb,,ˈciːbʲ,ˈkiːbʲ,0.6666666666666667
-2303,cíche,,ˈciːçə,ˈkiːxɛ,0.5
-2304,cíd,,ˈciːdʲ,ˈkiːdʲ,0.6666666666666667
-2305,cím,,ˈciːmʲ,ˈkiːmʲ,0.6666666666666667
-2306,címíd,,ˈciːmʲiːdʲ,ˈkiːmʲiːdʲ,0.8
-2307,cíobhaí,Ulster; Connacht,ˈciːwiː,ˈkiːʊwiː,0.6
-2308,cíoch,,ciəx,ˈkiːʊç,0.5
-2309,cíocrach,Connacht,ˈciːkɾˠəx,ˈkiːʊkɾˠəx,0.7142857142857143
-2310,cíocras,,ˈciːkɾˠəsˠ,ˈkiːʊkɾˠasˠ,0.7142857142857143
-2311,cíonn,,ciːn̪ˠ,ˈkiːn̪ˠ,0.6666666666666667
-2312,cíor,,ciːɾˠ,ˈkiːʊɾˠ,0.5
-2313,cíor thuathail,,cɪəɾˠ hʊəhɪlʲ,ˈkiːʊɾˠ ˈçuaçailʲ,0.7
-2314,cíora,,ˈciːɾˠə,ˈkiːʊɾˠa,0.6
-2315,cíos,,ciːsˠ,ˈkiːʊsˠ,0.5
-2316,círe,,ˈciːɾʲə,ˈkiːɾʲɛ,0.75
-2317,císte,,ˈciːʃtʲə,ˈkiːʃtʲɛ,0.8
-2318,cítear,,ˈciːtʲəɾˠ,ˈkiːtʲæɾˠ,0.8
 2340,cú faoil,,ˌkuː ˈfˠiːlʲ,ˈkuː ˈfˠiːlʲ,1.0
-2376,d'fheicinn,Ulster; Connacht,ˈdʲɛcɪn̠ʲ,ˈtʲfʲhɛkən̠ʲ,0.5714285714285714
+2376,d'fheicinn,Ulster; Connacht,ˈdʲɛcɪn̠ʲ,ˈtʲfʲhɛcən̠ʲ,0.7142857142857143
 2377,d'fhití,,ˈdʲitʲiː,ˈtʲfʲhɪtʲiː,0.6666666666666667
 2378,d'fhreagair,,ˈdʲɾʲaɡəɾʲ,ˈtʲfʲhɾʲɑɡaiɾʲ,0.6666666666666667
 2379,d'fhreastail,,ˈdʲɾʲasˠt̪ˠəlʲ,ˈtʲfʲhɾʲɑsˠt̪ˠailʲ,0.7
@@ -516,9 +300,9 @@
 2933,ealaín,Connacht,ˈɑːlˠiːnʲ,ˈalˠaiːnʲ,0.8
 2937,ear,,aɾˠ,ˈɑːɾˠ,1.0
 2938,earc,,aɾˠk,ˈɑːrk,1.0
-2947,easpag,Aran; Connacht,ˈæsˠpˠəɡ,ˈasˠpˠaɡ,1.0
 2946,easpag,Connacht,"ˈæsˠpˠoːɡ, ˈaːsˠpˠək",ˈasˠpˠaɡ,1.0
-2954,eicínt,,"əˈciːn̠ʲtʲ, əˈciːn̠ʲtʲʃ",ˈɪkiːnʲtʲ,0.8
+2947,easpag,Aran; Connacht,ˈæsˠpˠəɡ,ˈasˠpˠaɡ,1.0
+2954,eicínt,,"əˈciːn̠ʲtʲ, əˈciːn̠ʲtʲʃ",ˈɪciːnʲtʲ,1.0
 2956,eil,,ɛlʲ,ˈiːlʲ,1.0
 2958,eim,,ɛmʲ,ˈiːmʲ,1.0
 2959,ein,,ɛnʲ,ˈiːnʲ,1.0
@@ -530,8 +314,8 @@
 3120,fhearr,,aːɾˠ,ˈɑːɾˠ,1.0
 3136,fhir,,ɪɾʲ,əiɾʲ,0.6666666666666667
 3137,fhiáin,Connacht,ˈiːɑːnʲ,ˈɪɑːnʲ,1.0
-3141,fhocal,Munster; Connacht,ˈɔkəl̪ˠ,ˈʊkalˠ,1.0
 3140,fhocal,Connacht,ˈɔkəlˠ,ˈʊkalˠ,1.0
+3141,fhocal,Munster; Connacht,ˈɔkəl̪ˠ,ˈʊkalˠ,1.0
 3146,fhréimh,,rʲeːvʲ,ˈɾʲeːiː,0.6666666666666667
 3148,fhuaire,,ˈuəɾʲə,ˈʊaiɾʲɛ,0.8
 3154,fhuáil,,ˈuːaːlʲ,ˈʊɑːlʲ,1.0
@@ -594,7 +378,7 @@
 4001,i ndiaidh,Connacht,"əˈn̠ʲeːj, əˈn̠ʲiə",ɪ ˈnʲɪiː,1.0
 4003,i ndán,Connacht,əˈn̪ˠɑːnˠ,ɪ ˈnˠɑːnˠ,1.0
 4004,i ndán,Munster; Connacht,əˈn̪ˠɑːn̪ˠ,ɪ ˈnˠɑːnˠ,1.0
-4005,i ndísc,,əˈn̠ʲiːʃc,ɪ ˈnʲiːʃk,0.8
+4005,i ndísc,,əˈn̠ʲiːʃc,ɪ ˈnʲiːʃc,1.0
 4006,i ngar,,əˈŋaɾˠ,ɪ ˈŋɑːɾˠ,1.0
 4007,i ngeall ar,Connacht,"əˈɲiəl̪ˠ eɾʲ, əˈɲul̪ˠ eɾʲ",ɪ ˈŋɑːl̪ˠ ɛɾʲ,1.0
 4008,i ngeall ar,Galway; Connacht,əˈɲɑːl̪ˠ eɾʲ,ɪ ˈŋɑːl̪ˠ ɛɾʲ,1.0
@@ -611,12 +395,12 @@
 4052,imithe,Connacht,"ˈimʲi, ˈimʲɪçə",ˈɪmʲɪhə,0.8
 4053,imithe,Cois-Fharraige; Aran; Connacht,ˈimʲiː,ˈɪmˠɪhə,0.6
 4054,imithe,Mayo; Connacht,əˈmʲiçə,ˈɪmˠɪhə,0.8
-4055,imleacán,Connacht,ˈimʲlʲəkɑːnˠ,ˈɪmʲlʲækɑːnˠ,1.0
+4055,imleacán,Connacht,ˈimʲlʲəkɑːnˠ,ˈɪmʲlʲɑkɑːnˠ,1.0
 4058,imreas,Connacht,ˈimʲɾʲəsˠ,ˈɪmʲɾʲɑsˠ,1.0
 4060,imím,Connacht,ˈimʲiːmʲ,ˈɪmʲiːmʲ,1.0
 4061,in aghaidh,Ulster; Connacht,əˈn̪ˠəi,ˈiːnʲ ˈaɣiː,0.8
-4062,in aice,Ulster; Connacht,əˈn̪ˠacɪ,ˈiːnʲ ˈaikɛ,0.6666666666666667
-4063,in aice le,,əˈn̪ˠacɪlʲə,ˈiːnʲ ˈaikɛ lʲɛ,0.75
+4062,in aice,Ulster; Connacht,əˈn̪ˠacɪ,ˈiːnʲ ˈaicɛ,0.8333333333333334
+4063,in aice le,,əˈn̪ˠacɪlʲə,ˈiːnʲ ˈaicɛ lʲɛ,0.875
 4064,in ainneoin,Connacht,əˈn̪ˠan̠ʲoːnʲ,ˈiːnʲ ˈain̠ʲoːnʲ,0.8571428571428572
 4066,in éindí,Connacht,"ə ˈn̠ʲeːn̠ʲdʲi, ə ˈn̠ʲeːn̠ʲdʲiː",ˈiːnʲ ˈeːnʲiː,0.8333333333333334
 4067,in éindí le,Connacht,ə ˈn̠ʲeːn̠ʲdʲiː lʲə,ˈiːnʲ ˈeːnʲiː lʲɛ,0.875
@@ -667,11 +451,11 @@
 4141,iógart,,ˈjoː.ɡˠʊɾˠt̪ˠ,ˈɪoːɡaɾˠt̪ˠ,0.8333333333333334
 4142,iúr,,uːɾˠ,ˈɔɾˠ,1.0
 4143,jé,,d͡ʒeː,ˈjeː,0.5
-4280,lig do scíth,,ˌl̠ʲɪɟ də ˈʃciː,ˈlʲɪɟ d̪ˠʊ ˈʃkiːç,0.875
+4280,lig do scíth,,ˌl̠ʲɪɟ də ˈʃciː,ˈlʲɪɟ d̪ˠʊ ˈʃciːç,1.0
 4330,lom láithreach,Connacht,ˌlˠɔmˠ ˈl̪ˠɑːɾʲəx,ˈlˠuːmˠ ˈlˠɑːhɾʲəx,0.8888888888888888
 4375,lá féile,,ˌl̪ˠɑː ˈfʲeːlʲə,ˈlˠɑː ˈfʲeːlʲɛ,1.0
 4384,láithreach baill,Connacht,ˌl̪ˠɑːɾʲəx ˈbˠɑl̠ʲ,ˈlˠɑːhɾʲəx ˈbˠail̠ʲ,0.8
-4385,láithreach stairiúil,Connacht,ˌl̪ˠɑːɾʲʲəx ˈsˠtˠaɾʲuːlʲ,ˈlˠɑːhɾʲəx ˈsˠt̪ˠaiɾʲɪuːlʲ,0.7857142857142857
+4385,láithreach stairiúil,Connacht,ˌl̪ˠɑːɾʲəx ˈsˠtˠaɾʲuːlʲ,ˈlˠɑːhɾʲəx ˈsˠt̪ˠaiɾʲɪuːlʲ,0.7857142857142857
 4454,mac léinn,,ˌmˠak ˈl̠ʲeːn̠ʲ,ˈmˠak ˈlʲeːən̠ʲ,0.8571428571428572
 4455,mac tíre,,ˌmˠak ˈtʲiːɾʲə,ˈmˠak ˈtʲiːɾʲɛ,1.0
 4466,maide briste,,ˌmˠædʲə ˈbʲɾʲɪʃtʲə,ˈmˠaidʲɛ ˈbʲɾʲɪʃtʲɛ,0.9090909090909091
@@ -710,8 +494,8 @@
 5099,oileáin,Connacht,ˈɪlʲɑːnʲ,ˈɛlʲɛɑːnʲ,0.8
 5100,oileán,Connacht,"ˈɪlʲɑːnˠ, ˈɪlʲɑːn̪ˠ",ˈɛlʲɛɑːnˠ,0.8
 5101,oileánach,Connacht,ˈɪlʲɑːnˠəx,ˈɛlʲɛɑːnˠəx,0.8571428571428572
-5103,oilfidh,,"ˈɛlʲ(h)ɪɟ, ˈɪlʲ(h)ɪɟ",ˈɪlʲiː,0.6
 5104,oilfidh,Ulster; Connacht,"ˈɛlʲ(h)ə, ˈɪlʲ(h)ə",ˈɪlʲiː,0.75
+5103,oilfidh,,"ˈɛlʲ(h)ɪɟ, ˈɪlʲ(h)ɪɟ",ˈɪlʲiː,0.6
 5107,oinniún,Connacht,ˈin̠ʲuːnˠ,ˈɔn̠ʲʊnˠ,1.0
 5108,oireacht,Munster; Connacht,ˈeɾʲəxt̪ˠ,ˈɛɾʲɑxt̪ˠ,1.0
 5111,oirnis,,ˈəuɾʲn̠ʲəʃ,ˈɛɾʲnʲɪʃ,0.8333333333333334
@@ -721,7 +505,7 @@
 5115,ola,,ˈɔlˠə,ˈʊlˠa,1.0
 5116,olann,Ulster; Connacht,"ˈɔlˠən̪ˠ, ˈɔl̪ˠən̪ˠ",ˈʊlˠən̪ˠ,1.0
 5117,olaí,,ˈɔlˠiː,ˈɪlʲiː,1.0
-5118,olc,,"ol̪ˠk, ɔlˠk, ɔl̪ˠk",ˈʊlk,1.0
+5118,olc,,"ol̪ˠk, ɔlˠk, ɔl̪ˠk",ˈʊlˠək,0.75
 5119,olca,Munster; Connacht,ˈɔlˠkə,ˈʊlˠka,1.0
 5120,olla,Munster; Connacht,ˈɔl̪ˠə,ˈʊl̪ˠa,1.0
 5121,ollaimh,,ˈɔl̪ˠəvʲ,ˈʊl̪ˠaiː,0.75
@@ -740,7 +524,7 @@
 5135,oráiste,Connacht,ˈɔɾˠɑːʃtʲə,ˈʊɾˠɑːʃtʲɛ,1.0
 5136,oráistí,,"oˈrɑːʃtʲiː, ˈorɑːʃtʲiː",ˈʊɾˠɑːʃtʲiː,1.0
 5137,os,Munster; Connacht,ɔsˠ,ʊsˠ,1.0
-5138,os cionn,Connacht,oːsˠˈciən̪ˠ,ʊsˠ ˈkiːn̪ˠ,0.6666666666666667
+5138,os cionn,Connacht,oːsˠˈciən̪ˠ,ʊsˠ ˈciːn̪ˠ,0.8333333333333334
 5139,os coinne,,əsˠˈkɪn̠ʲə,ʊsˠ ˈkɔn̠ʲɛ,1.0
 5140,os comhair,Connacht,əsˠˈkuːɾʲ,ʊsˠ ˈkʊwaiɾʲ,0.625
 5141,osa,,ˈɔsˠə,ˈʊsˠa,1.0
@@ -805,13 +589,13 @@
 5994,sréin,,"sˠɾˠeːnʲ, ʂ(ɽ)eːnʲ",ˈʃɾʲeːnʲ,1.0
 6009,stiall,,ʃtʲiəl̪ˠ,ˈsˠt̪ˠiəl̪ˠ,1.0
 6010,stiúideo,,ˈʃtʲuːdʲioː,ˈsˠt̪ˠuidʲoː,0.6666666666666667
-6037,stéic,,ˈʃtʲeːc,ˈsˠt̪ˠeːk,0.75
+6037,stéic,,ˈʃtʲeːc,ˈsˠt̪ˠeːc,1.0
 6038,stéig,,ˈʃtʲeːɟ,ˈsˠt̪ˠeːɟ,1.0
 6060,suíomh gréasáin,Connacht,ˌsˠiːw ˈɟɾʲeːsˠɑːnʲ,ˈsˠuiːoː ˈɟɾʲeːasˠɑːnʲ,0.7272727272727273
 6230,teach pobail,Munster; Connacht,ˌtʲax ˈpˠɔbˠəlʲ,ˈtʲəx ˈpˠʊbˠailʲ,0.8888888888888888
 6231,teach ósta,Munster; Connacht,ˌtʲax ˈoːsˠt̪ˠə,ˈtʲəx ˈoːsˠt̪ˠa,1.0
 6236,teagasc,,"c, k",ˈtʲɑɡask,0.16666666666666663
-6260,teoiric chinnteoireachta,Connacht,ˌtʲoːɾʲəc ˈçɪn̠ʲtʲoːɾʲəxt̪ˠ,ˈtʲoːɾʲɪk ˈçɪn̠ʲtʲoːɾʲəxt̪əaa,0.75
+6260,teoiric chinnteoireachta,Connacht,ˌtʲoːɾʲəc ˈçɪn̠ʲtʲoːɾʲəxt̪ˠ,ˈtʲoːɾʲɪc ˈçɪn̠ʲtʲoːɾʲəxt̪əaa,0.8125
 6266,th,,h,ç,0.0
 6267,th',,h,ç',0.0
 6268,thae,,heː,ˈçeː,0.5
@@ -858,7 +642,7 @@
 6331,thuigeas,,ˈhɪɟəsˠ,ˈçɪɟɑsˠ,0.8
 6332,thuilleamar,,ˈhɪl̠ʲəmˠəɾˠ,ˈçɪl̠ʲamˠaɾˠ,0.8571428571428572
 6333,thuilleamaí,Ulster; Connacht,ˈhɪl̠ʲəmˠiː,ˈçɪl̠ʲamˠiː,0.8333333333333334
-6334,thuiscint,,ˈhɪʃcɪn̠ʲtʲ,ˈçɪʃkɪnʲtʲ,0.7142857142857143
+6334,thuiscint,,ˈhɪʃcɪn̠ʲtʲ,ˈçɪʃcɪnʲtʲ,0.8571428571428572
 6335,thur,Munster; Connacht,hʊɾˠ,ˈçɔɾˠ,0.6666666666666667
 6336,thura,Munster; Connacht,ˈhʊɾˠə,ˈçʊɾˠa,0.75
 6337,thusa,,ˈhusˠə,ˈçʊsˠa,0.75
@@ -888,7 +672,7 @@
 6671,ucht,Connacht,ɔxt̪ˠ,ˈʊxt̪ˠ,1.0
 6674,uileag,,"əˈlʲɞɡ, əˈlʲʊɡ",ˈɪlʲɑɡ,1.0
 6684,uirlis,,ˈuːɾˠl̠ʲəʃ,ˈɪɾʲlʲɪʃ,1.0
-6686,uisce,,"ˈiʃcə, ˈiʃcɪ",ˈɪʃkɛ,0.75
+6686,uisce,,"ˈiʃcə, ˈiʃcɪ",ˈɪʃcɛ,1.0
 6690,ultach,Connacht,ˈul̪ˠt̪ˠəx,ˈʊlˠt̪ˠəx,1.0
 6691,um,,ʊmˠ,uːmˠ,1.0
 6693,umhal,Connacht,"uːlˠ, uːl̪ˠ",ˈʊwalˠ,0.5
@@ -904,7 +688,7 @@
 6715,vóta,Connacht,ˈwoːt̪ˠə,ˈvoːt̪ˠa,0.75
 6717,yé,,jeː,ˈyeː,0.5
 6719,Áine,,ˈaːnʲə,ˈɑːnʲɛ,1.0
-6736,Íosa Críost,,ˌiːsˠə ˈcɾʲiːsˠt̪ˠ,ˈiːʊsˠa ˈkɾʲiːʊsˠt̪ˠ,0.7
+6736,Íosa Críost,,ˌiːsˠə ˈcɾʲiːsˠt̪ˠ,ˈiːʊsˠa ˈcɾʲiːʊsˠt̪ˠ,0.8
 6742,Ó Cathasaigh,,ˈkahəsˠiː,oː ˈkaçasˠiː,0.6666666666666667
 6756,áinsí,Connacht,ˈaːn̠ʲʃiː,ˈɑːnʲʃiː,1.0
 6757,áinsíoch,Connacht,ˈaːn̠ʲʃiəx,ˈɑːnʲʃiːʊç,0.8333333333333334

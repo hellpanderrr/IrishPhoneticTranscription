@@ -6,134 +6,94 @@ word,tags,ipa,results,match
 -igh,Ulster; Connacht,j,ˈiː,0.0
 -ithe,,"i(ː)ʃtʲə, iː",ɪhə,0.5
 -íos,,iːsˠ,ˈiːʊsˠ,0.67
--ófaí,,oːhiː,ˈoːfʲiː,0.67
+-ófaí,,oːhiː,ˈoːfˠiː,0.67
 -óidh,Connacht,oː(j),oː,0.5
 -óinn,,oːn̠ʲ,ˈoːən̠ʲ,0.67
 Airméanach,,ˈaɾʲəmʲeːnˠəx,ˈaiɾʲmʲeːanˠəx,0.67
-Airméin,,ˈaɾʲəmʲeːnʲ,ˈaiɾʲmʲeːnʲ,0.67
-Albain,,"ˈalˠəbˠənʲ, ˈal̪ˠəbˠənʲ",ˈalʲbʲainʲ,0.67
-Albain Nua,,ˈalˠəbˠə ˈn̪ˠuə,ˈalʲbʲainʲ ˈn̪ˠua,0.67
+Albain,,"ˈalˠəbˠənʲ, ˈal̪ˠəbˠənʲ",ˈalˠbˠainʲ,0.67
+Albain Nua,,ˈalˠəbˠə ˈn̪ˠuə,ˈalˠbˠainʲ ˈnˠua,0.67
 Aodh,,"eː, iː",ˈiːɣ,0.5
 Aodhagán,Connacht,"ˈiːɡɑːnˠ, ˈiːɡɑːn̪ˠ",ˈiːɣaɡɑːnˠ,0.67
-Ard-Fheis,,ˈɑːɾˠd̪ˠ ˈɛɕ,ˈaɾˠdfʲçɛʃ,0.67
-Baile Átha Cliath,Munster; Connacht,ˌbʲlʲɑː ˈclʲiə,ˈbˠailʲɛ ˈɑːha ˈclʲiə,0.58
-Baile Átha Luain,Munster; Connacht,ˌbʲlʲɑː ˈl̪ˠuənʲ,ˈbˠailʲɛ ˈɑːha ˈl̪ˠʊainʲ,0.54
-Bhaile Átha Cliath,Munster; Connacht,ˌvʲlʲɑː ˈclʲiə,ˈvʲailʲɛ ˈɑːha ˈclʲiə,0.58
+Ard-Fheis,,ˈɑːɾˠd̪ˠ ˈɛɕ,ˈaɾˠdfʲhɛʃ,0.57
+Baile Átha Cliath,Munster; Connacht,ˌbʲlʲɑː ˈclʲiə,ˈbˠailʲɛ ˈɑːça ˈclʲiəç,0.64
+Baile Átha Luain,Munster; Connacht,ˌbʲlʲɑː ˈl̪ˠuənʲ,ˈbˠailʲɛ ˈɑːça ˈlˠʊainʲ,0.58
+Bhaile Átha Cliath,Munster; Connacht,ˌvʲlʲɑː ˈclʲiə,ˈwailʲɛ ˈɑːça ˈclʲiəç,0.55
 Cháit,Munster; Connacht,xɑːtʲ,ˈçɑːtʲ,0.67
-Danmhairge,,ˈd̪ˠanwəɾʲəɟə,ˈd̪ˠanʲvʲaiɾʲɟɛ,0.67
-Dubhghall,,ˈd̪ˠʊwəl̪ˠ,ˈd̪ˠʊvˠɣal̪ˠ,0.67
+Cóbh,,koːvˠ,ˈkoːw,0.67
 Eibhlín,Connacht,ˈɛvʲəlʲiːnʲ,ˈɛɪvʲlʲiːnʲ,0.67
-Eochaidh,Connacht,ˈɔxiː,ˈoːhiː,0.67
-Eoghan,Connacht,oːnˠ,ˈoːɣanˠ,0.5
-Eoghan,Munster; Connacht,oːn̪ˠ,ˈoːɣanˠ,0.5
-Fionnabhair,,ˈfʲɪn̪ˠuːɾʲ,ˈfʲɪn̪ˠavʲaiɾʲ,0.62
+Eoghan,Connacht,oːnˠ,ˈɛəunˠ,0.5
+Eoghan,Munster; Connacht,oːn̪ˠ,ˈɛəunˠ,0.5
+Fionnabhair,,ˈfʲɪn̪ˠuːɾʲ,ˈfʲɪn̪ˠaʊaiɾʲ,0.62
 Haváis,,"haˈwaːɪʃ, ˈhawaːɪʃ",ˈhavɑːʃ,0.67
 Iúil,,uːlʲ,ˈɪuːlʲ,0.67
 Iúr,Ulster; Connacht,ən̠ʲˈtʲuːɾˠ,ˈɔɾˠ,0.4
-Laighin,,l̪ˠəinʲ,ˈl̪ˠaijɪnʲ,0.67
-Laoghaire,Ulster; Connacht,ˈl̪ˠiːɾʲə,ˈl̪ˠiːjaiɾʲɛ,0.57
-Micheál,,ˈmʲɪçaːlˠ,ˈmʲɪhɛɑːlˠ,0.67
-Mumhain,,mˠuːnʲ,ˈmˠʊvʲainʲ,0.5
-Mumhan,,mˠuːnˠ,ˈmˠʊvˠanˠ,0.6
-Méabh,Connacht,mʲeːw,ˈmʲeːavˠ,0.5
-Nás,Munster; Connacht,ə(n̪ˠ)ˈn̪ˠɑːsˠ,ˈn̪ˠɑːsˠ,0.6
+Laighin,,l̪ˠəinʲ,ˈlˠaijɪnʲ,0.67
+Laoghaire,Ulster; Connacht,ˈl̪ˠiːɾʲə,ˈlʲiːɣaiɾʲɛ,0.57
+Micheál,,ˈmʲɪçaːlˠ,ˈmʲɪxɛɑːlˠ,0.67
+Mumhain,,mˠuːnʲ,ˈmˠʊwainʲ,0.5
+Mumhan,,mˠuːnˠ,ˈmˠʊwanˠ,0.6
+Méabh,Connacht,mʲeːw,ˈmʲeːaʊ,0.5
+Nás,Munster; Connacht,ə(n̪ˠ)ˈn̪ˠɑːsˠ,ˈnˠɑːsˠ,0.6
 Ruadhán,Connacht,ˈɾˠuːɑːnˠ,ˈɾˠuaɣɑːnˠ,0.67
 Róimh,,ˈɾˠõːvʲ,ˈɾˠoːvʲ,0.67
-Sh,,h,,0.0
-Sheáin,Munster; Connacht,"çɑːnʲ, çɑ̃ːnʲ",ˈç'ɛɑːnʲ,0.67
+Sh,,h,ç,0.0
+Sheáin,Munster; Connacht,"çɑːnʲ, çɑ̃ːnʲ",ˈhɛɑːnʲ,0.5
 Tadhg,Munster; Connacht,t̪ˠai(ə)ɡ,ˈt̪ˠaɣɡ,0.6
-Th,,h,,0.0
-Toirdhealbhach,Connacht,ˈtʲɾʲɛl̪ˠax,ˈt̪ˠɛɾʲjalvˠəx,0.67
-Tír Eoghain,Munster; Connacht,tʲiːɾʲ ˈoːnʲ,ˈtʲiːɾʲ ˈoːjainʲ,0.62
+Th,,h,ç,0.0
+Toirdhealbhach,Connacht,ˈtʲɾʲɛl̪ˠax,ˈt̪ˠɛɾʲjalˠwəx,0.67
+Tír Eoghain,Munster; Connacht,tʲiːɾʲ ˈoːnʲ,ˈtʲiːɾʲ ˈɛəuinʲ,0.62
 Uaimh,,əˈn̪ˠuəvʲ,ˈʊaiː,0.6
 Uí,,iː,ˈuiː,0.5
 Uíbh,,iːvʲ,ˈuiːvʲ,0.67
-abhaile,Connacht,əˈwalʲə,ˈavʲailʲɛ,0.67
-abhaill,,ˈəuwəl̠ʲ,ˈavʲail̠ʲ,0.6
-achainí,Connacht,ˈaxənʲiː,ˈahainʲiː,0.67
-acmhainn,Ulster; Connacht,ˈakuːn̠ʲ,ˈacvʲaən̠ʲ,0.5
-acmhainneach,Connacht,ˈakuːn̠ʲəx,ˈacvʲain̠ʲəx,0.62
-adhlaic,Connacht,"ˈɑːl̪ˠəc, ˈəil̪ˠəc",ˈajlʲaic,0.67
-adhnaic,Connacht,ˈəin̪ˠəc,ˈajnʲaic,0.67
+abhaile,Connacht,əˈwalʲə,ˈaʊailʲɛ,0.67
+acmhainn,Ulster; Connacht,ˈakuːn̠ʲ,ˈakwaən̠ʲ,0.67
+adhall,,ˈəiəl̪ˠ,ˈɑːl̪ˠ,0.5
+adharc,Connacht,ˈai(ə)ɾˠk,ˈɑːrk,0.6
+adhlaic,Connacht,"ˈɑːl̪ˠəc, ˈəil̪ˠəc",ˈaɣlˠaic,0.67
+adhnaic,Connacht,ˈəin̪ˠəc,ˈaɣnˠaic,0.67
 aeir,,eːɾʲ,ˈeːɪɾʲ,0.67
-agaibh,Connacht,"ˈaɡiː, ˈoɡiː, ˈuɡiː",ˈaɟæɪvʲ,0.4
-agaibh,Aran; Connacht,ˈɑɡiː,ˈaɟæɪvʲ,0.4
-agaibh,Cois-Fharraige; Connacht,ˈaːɡiː,ˈaɟæɪvʲ,0.4
-agaibh,Mayo; Connacht,əɡiː,ˈaɟæɪvʲ,0.4
-againne,,ˈaɡən̠ʲə,ˈaɟain̠ʲɛ,0.67
-agair,,ˈaɡəɾʲ,ˈaɟaiɾʲ,0.6
-aghaidh,Aran; Connacht,ai,ˈajiː,0.67
-aichear,,ˈaçəɾˠ,ˈaihaɾˠ,0.6
+agaibh,Connacht,"ˈaɡiː, ˈoɡiː, ˈuɡiː",ˈaɡaɪvʲ,0.6
+agaibh,Aran; Connacht,ˈɑɡiː,ˈaɡaɪvʲ,0.6
+agaibh,Cois-Fharraige; Connacht,ˈaːɡiː,ˈaɡaɪvʲ,0.6
+agaibh,Mayo; Connacht,əɡiː,ˈaɡaɪvʲ,0.6
+aghaidh,Aran; Connacht,ai,ˈaɣiː,0.67
+aidiacht,Connacht,ˈadʲiəxt̪ˠ,ˈaidʲiəçt̪ˠ,0.67
 aigéad,Connacht,ˈaɟeːd̪ˠ,ˈaiɟeːad̪ˠ,0.67
 aigéan,,aɟeːnˠ,ˈaiɟeːanˠ,0.67
 ail,,alʲ,ˈailʲ,0.67
 ailm,,ˈa.lʲəmʲ,ˈailʲmʲ,0.5
 ain-,,anʲ,ˈainʲ,0.67
-ainmfhocal,,ˈanʲəmʲˌɔkəl̪ˠ,ˈainʲmʲfʲçʊkalˠ,0.67
-ainmhí,Connacht,ˈanʲəvʲiː,ˈainʲvʲiː,0.6
+ainmfhocal,,ˈanʲəmʲˌɔkəl̪ˠ,ˈainʲmʲfʲhʊkalˠ,0.6
+ainmneacha,,ˈanʲəmʲnʲəxə,ˈainʲmʲnʲæça,0.62
 aip,,apʲ,ˈaipʲ,0.67
 airc,,aɾʲc,ˈaiɾʲic,0.6
 airgead,,"ˈaɾʲəɟəd̪ˠ, ˈæɾʲəɟəd̪ˠ, ˈɑɾʲəɟəd̪ˠ",ˈaiɾʲɟɑd̪ˠ,0.67
 airgid,,ˈaɾʲəɟədʲ,ˈaiɾʲɟɪdʲ,0.67
 ais,,aʃ,ˈaiʃ,0.67
-aischuir,,ˈaʃˌxɪrʲ,ˈaiʃhɪɾʲ,0.67
+aischuir,,ˈaʃˌxɪrʲ,ˈaiʃçɪɾʲ,0.6
 ait,Ulster; Munster; Connacht,atʲ,ˈaitʲ,0.67
-amha,,ˈawə,ˈavˠa,0.67
-anglais,,"ˈaŋɡlˠəʃ, ˈaŋɡl̪ˠəʃ",ˈaŋlʲaiʃ,0.67
-anmain,,ˈanˠəmˠənʲ,ˈanʲmʲainʲ,0.67
+aithreacha,,ˈahɾʲəxə,ˈaihɾʲæça,0.67
+amha,,ˈawə,əu,0.67
+anglais,,"ˈaŋɡlˠəʃ, ˈaŋɡl̪ˠəʃ",ˈaŋlˠaiʃ,0.67
+anmain,,ˈanˠəmˠənʲ,ˈanˠmˠainʲ,0.67
 ar chor ar bith,,ə ˌxɔɾˠ əˈbʲɪ(h),ɛɾʲ ˈxɔɾˠ ɛɾʲ ˈbʲɪç,0.67
-arbhar,Ulster; Connacht,ˈaɾˠ(ə)wəɾˠ,ˈarvˠaɾˠ,0.67
-armais,,ˈaɾˠ(ə)mˠəʃ,ˈaɾʲmʲaiʃ,0.67
-ascaill,,"ˈasˠkəl̠ʲ, ˈasˠkəl̪ˠ, ˈæsˠkəl̠ʲ, ˈɑsˠkəlʲ, ˈɑsˠkəl̠ʲ",ˈaʃcail̠ʲ,0.67
-ath-,,ah,ˈa,0.5
+armais,,ˈaɾˠ(ə)mˠəʃ,ˈaɾˠmˠaiʃ,0.67
+ath-,,ah,ˈaç,0.5
+b'fhearr,,bʲɑːɾˠ,ˈbʲfʲhaɾˠ,0.6
+badhbh,,bˠəivˠ,ˈbˠaɣw,0.5
 beirbhiughadh,Connacht,ˈbʲɛɾʲuː,ˈbʲɛɾʲvʲɪʊɣə,0.5
-bhFrainc,,vˠɾˠaɲc,ˈwɾʲainʲc,0.67
-bhain,,"wanʲ, wɪnʲ",ˈvʲainʲ,0.5
-bhainc,Ulster; Connacht,waɲc,ˈvʲainʲc,0.6
-bhainne,Ulster; Connacht,ˈwan̠ʲə,ˈvʲain̠ʲɛ,0.6
-bhaint,,"ˈwan̠ʲtʲ, ˈwɪn̠ʲtʲ",ˈvʲainʲtʲ,0.6
-bhairéad,Connacht,ˈwaɾʲeːd̪ˠ,ˈvʲaiɾʲeːad̪ˠ,0.57
-bhaist,Ulster; Connacht,waʃtʲ,ˈvʲaiʃtʲ,0.6
-bhan,Ulster; Connacht,"wanˠ, wan̪ˠ",ˈvˠanˠ,0.67
-bharr,Connacht,wˠɑːɾˠ,ˈvˠaɾˠ,0.67
+bhFrainc,,vˠɾˠaɲc,ˈwɾˠainʲc,0.67
+bhearr,Munster; Connacht,vʲɑːɾˠ,ˈwɑːɾˠ,0.67
 bheidh,Ulster; Connacht,vʲɛj,ˈvʲai,0.67
 bheifeá,,ˈvʲɛhɑː,ˈvʲɛfʲɛɑː,0.6
 bheith,,vʲɛ(h),ˈvʲɛç,0.67
-bhfeadh,Connacht,vʲa,ˈwə,0.5
-bhfear,,vʲaɾˠ,ˈwɑːɾˠ,0.67
-bhfearthainn,Ulster; Kerry; Cork; Connacht,ˈvʲaɾˠhən̠ʲ,ˈwæɾʲçæən̠ʲ,0.67
-bhfeicfinn,Ulster; Connacht,ˈvʲɛcɪn̠ʲ,ˈwɛcfʲən̠ʲ,0.67
-bhfeighil,,vʲəilʲ,ˈwɛjɪlʲ,0.6
-bhfeirm,,ˈvʲɛɾʲəmʲ,ˈwəiɾʲmʲ,0.4
-bhfeis,,vʲɛʃ,ˈwɛʃ,0.67
-bhfeoil,Munster; Connacht,vʲoːlʲ,ˈwoːlʲ,0.67
-bhfiarthaí,,ˈvʲiəɾˠhiː,ˈwiəɾʲçiː,0.67
-bhfiche,Ulster; Connacht,ˈvʲɪçə,ˈwɪhɛ,0.5
-bhfichidí,Connacht,ˈvʲɪçɪdʲiː,ˈwɪhɪdʲiː,0.67
-bhfir,,vʲɪɾʲ,ˈwəiɾʲ,0.5
-bhfréimh,,vʲrʲeːvʲ,ˈwɾʲeːiː,0.5
 bhfuil,,bˠilʲ,ˈwiːlʲ,0.67
-bhfuil,Ulster; Connacht,wɪlʲ,ˈwiːlʲ,1.0
-bhféar,Ulster; Connacht,vʲeːɾˠ,ˈweːaɾˠ,0.5
-bhfís,,vʲiːʃ,ˈwiːʃ,0.67
-bhlais,Connacht,"wlˠaʃ, wl̪ˠaʃ",ˈvʲlʲaiʃ,0.6
-bhláth,Connacht,"wlˠɑː, wl̪ˠɑː",ˈvˠlˠɑː,0.67
-bhod,Ulster; Connacht,wɔd̪ˠ,ˈvˠʊd̪ˠ,0.67
-bhog,Connacht,wɔɡ,ˈvˠʊɡ,0.67
-bhoid,Ulster; Connacht,wɪdʲ,ˈvʲɛdʲ,0.67
-bhuail,Ulster; Connacht,wuəlʲ,ˈvˠʊailʲ,0.6
-bhuel,Ulster; Munster; Connacht,wɛlʲ,ˈvˠʊɛlʲ,0.5
-bhun,Connacht,wʊnˠ,ˈvˠʊnˠ,0.67
-bhur,Connacht,ə,ˈvˠʊɾˠ,0.33
-bhuí,Ulster; Connacht,wiː,ˈvˠuiː,0.33
-bhuíoch,Ulster; Connacht,wiːx,ˈvˠuiːʊx,0.4
-bhád,Connacht,wɑːd̪ˠ,ˈvˠɑːd̪ˠ,0.67
-bháis,Connacht,wɑːʃ,ˈvʲɑːʃ,0.67
-bhán,Ulster; Connacht,"waːnˠ, wɑːnˠ",ˈvˠɑːnˠ,0.67
-bhíobhair,,ˈvʲiːwəɾʲ,ˈvʲiːʊvʲaiɾʲ,0.57
-bhó,Connacht,woː,ˈvˠoː,0.5
-bláthach,Connacht,"ˈbˠlˠɑːx, ˈbˠl̪ˠɑːx",ˈbˠlˠɑːhəx,0.67
-both,,bˠɔ(h),ˈbˠʊ,0.67
+bhfuil,Ulster; Connacht,wɪlʲ,ˈwɪlˠ,1.0
+bhranda,,ˈvˠɾˠan̪ˠd̪ˠə,ˈwɾˠanˠa,0.67
+bhur,Connacht,ə,ˈwɔɾˠ,0.33
+bhuí,Ulster; Connacht,wiː,ˈwuiː,0.67
+bhuíoch,Ulster; Connacht,wiːx,ˈwuiːʊx,0.6
+both,,bˠɔ(h),ˈbˠʊç,0.67
 bpingin,Ulster; Connacht,bʲiːn̠ʲ,ˈbʲɪŋɪnʲ,0.6
 bruíon,,bˠɾˠiːnˠ,ˈbˠɾˠuiːʊnˠ,0.67
 buí,Munster; Connacht,bˠiː,ˈbˠuiː,0.67
@@ -141,343 +101,282 @@ buíoch,Ulster; Connacht,bˠiːx,ˈbˠuiːʊx,0.6
 buíocha,,ˈbˠiːxə,ˈbˠuiːʊxa,0.67
 buíon,,bˠiːnˠ,ˈbˠuiːʊnˠ,0.6
 buíonna,,ˈbˠiːn̪ˠə,ˈbˠuiːʊn̪ˠa,0.67
-bíchearb,,ˈbʲiːçəɾˠəbˠ,ˈbʲiːhaɾˠbˠ,0.67
+bíchearb,,ˈbʲiːçəɾˠəbˠ,ˈbʲiːxaɾˠbˠ,0.67
 cailc,,kalʲc,ˈkailʲic,0.67
-caisearbhán,Connacht,ˈkaʃəɾˠwaːn̪ˠ,ˈkaiʃærvˠɑːnˠ,0.78
-caisearbhán,Mayo; Connacht,ˈkaʃl̠ʲəwaːnˠ,ˈkaiʃærvˠɑːnˠ,0.67
+caisearbhán,Connacht,ˈkaʃəɾˠwaːn̪ˠ,ˈkaiʃæɾˠwɑːnˠ,0.89
+caisearbhán,Mayo; Connacht,ˈkaʃl̠ʲəwaːnˠ,ˈkaisˠaɾˠwɑːnˠ,0.67
 caith,Connacht,ka,ˈkaiç,0.67
-caithfidh,Connacht,kaː,ˈkɪçiː,0.67
-caithfidh,Aran; Connacht,ˈkafʲə,ˈkɪçiː,0.75
-caithfidh,Cois-Fharraige; Connacht,ka,ˈkɪçiː,0.67
-caithfidh,Mayo; Connacht,ˈkɑihə,ˈkɪçiː,0.6
-carbhat,Connacht,kɑɾˠəˈwɑt̪ˠə,ˈkarvˠat̪ˠ,0.62
-cath,,"ka(h), kɑ(h), ˈkahə, ˈkæhə, ˈkɑhə",ˈka,0.67
-ceathair déag,,"dje ˈcahəɾʲ, ˈcahəɾʲ jeːɡ",ˈcɑçaiɾʲ ˈdʲeːaɡ,0.67
+caithfidh,Connacht,kaː,ˈkaihiː,0.4
+caithfidh,Aran; Connacht,ˈkafʲə,ˈkaihiː,0.6
+caithfidh,Cois-Fharraige; Connacht,ka,ˈkaihiː,0.4
+caithfidh,Mayo; Connacht,ˈkɑihə,ˈkaihiː,1.0
+caomh,Connacht,kiːvˠ,ˈkiːw,0.67
+carraig,Munster; Connacht,"ˈkaɾˠɪɟ, ˈkɑɾˠɪɟ",ˈkaɾˠaiɟ,0.83
+carraig,Cois-Fharraige; Munster; Connacht,ˈkaːɾˠɪɟ,ˈkaɾˠaiɡ,0.67
+cath,,"ka(h), kɑ(h), ˈkahə, ˈkæhə, ˈkɑhə",ˈkaç,0.67
+ceangail,,ˈcaŋ(ɡ)əlʲ,ˈkaŋailʲ,0.67
+ceangal,Ulster; Connacht,"ˈcaŋ(ɡ)əlˠ, ˈcaŋ(ɡ)əl̪ˠ",ˈkaŋalˠ,0.67
+cearr,Munster; Connacht,cɑːɾˠ,ˈkɑːɾˠ,0.67
+ceathair déag,,"dje ˈcahəɾʲ, ˈcahəɾʲ jeːɡ",ˈcæçaiɾʲ ˈdʲeːaɡ,0.67
+ceithre,,ˈcɛɾʲə,ˈcɛhɾʲɛ,0.8
+ceithre,Connacht,ˈçɛɾʲə,ˈcɛhɾˠɛ,0.6
 cha,,ha(ː),ˈxa,0.5
-chaill,Connacht,"xal̠ʲ, xɑːl̠ʲ",ˈçail̠ʲ,0.67
 chais,,xaʃ,ˈçaiʃ,0.67
-chaith,Connacht,xa,ˈçaiç,0.5
-chaoi,,xiː,ˈçiː,0.5
-chaoil,,xiːlʲ,ˈçiːlʲ,0.67
-chath,,xah,ˈxa,0.67
-chiumhais,,çuːʃ,ˈçɪʊvʲaiʃ,0.33
+chaith,Connacht,xa,ˈxaiç,0.67
+chath,,xah,ˈxaç,0.67
+cheatha,,ˈçahə,ˈçaça,0.67
+chip,,çɪpʲ,ˈxɪpʲ,0.67
+chirt,,çɪɾˠtʲ,ˈxəiɾʲtʲ,0.6
+chis,,çɪʃ,ˈxɪʃ,0.67
+chiumhais,,çuːʃ,ˈxɪʊwaiʃ,0.29
 chiúin,,çuːnʲ,ˈçuinʲ,0.67
-chnáimh,Ulster; Connacht,xɾˠɑːvʲ,ˈçnʲɑːiː,0.25
+chneasta,Ulster; Connacht,ˈçɾʲasˠt̪ˠə,ˈxnʲɑsˠt̪ˠa,0.67
+chnáimh,Ulster; Connacht,xɾˠɑːvʲ,ˈxnˠɑːiː,0.5
 choil,,xɛlʲ,ˈçiːlʲ,0.67
 choir,,xɛɾʲ,ˈçəiɾʲ,0.67
-chomhair,Munster; Connacht,xoːɾʲ,ˈxʊvʲaiɾʲ,0.5
-chonaic,Aran; Connacht,ˈxɞn̪ˠic,ˈxɛnʲaic,0.83
-chonaic,Cois-Fharraige; Connacht,ˈxaːnʲic ~ ˈhaːnʲic ~ ˈxinʲic ~ ˈxaːɲc,ˈxɛnʲaic,0.83
-chonaic,Mayo; Connacht,ˈhanʲic,ˈxɛnʲaic,0.67
-chroí,,xɾˠiː,ˈçɾʲoiː,0.33
+chomhair,Munster; Connacht,xoːɾʲ,ˈxʊwaiɾʲ,0.5
+chonaic,Aran; Connacht,ˈxɞn̪ˠic,ˈxʊnˠaic,0.83
+chonaic,Cois-Fharraige; Connacht,ˈxaːnʲic ~ ˈhaːnʲic ~ ˈxinʲic ~ ˈxaːɲc,ˈxʊnˠaic,0.83
+chonaic,Mayo; Connacht,ˈhanʲic,ˈxʊnˠaic,0.67
 chugham,,xuːmˠ,ˈxʊɣamˠ,0.6
+chuid,,xɪdʲ,ˈçɪdʲ,0.67
+chuig,,xɪɟ,ˈçɪɟ,0.67
+chuir,,xɪɾʲ,ˈçəiɾʲ,0.67
 cháiliúil,Connacht,ˈxɑːlʲuːlʲ,ˈçɑːlʲɪuːlʲ,0.6
 cháin,Munster; Connacht,xɑːnʲ,ˈçɑːnʲ,0.67
 chéad,,çeːd̪ˠ,ˈçeːad̪ˠ,0.67
 chéibh,,ˈçeːvʲ,ˈçeːɪvʲ,0.67
-chóir,Munster; Connacht,xoːɾʲ,ˈçoːɾʲ,0.67
-ciumhais,,"cuːsˠ, cuːʃ, cũːsˠ",ˈcɪʊvʲaiʃ,0.43
-ciumhaise,,ˈcuːʃə,ˈcɪʊvʲaiʃɛ,0.5
-ciumhaiseanna,,ˈcuːʃən̪ˠə,ˈcɪʊvʲaiʃæn̪ˠa,0.6
-cnuimhe,,ˈknˠevʲə,ˈkɾˠʊɪvʲɛ,0.67
-cnó Brasaíleach,,kno:,ˈkɾˠoː ˈbˠɾˠaʃɑːlʲəx,0.18
-cogain,Munster; Connacht,ˈkɔɡənʲ,ˈkɛɟainʲ,0.67
-coisreacaim,,ˈkʌʃtʲɾʲakəmʲ,ˈkɛʃɾʲɑcaimʲ,0.67
-colbha,Connacht,ˈkɔlˠəvˠ,ˈkʊlvˠa,0.6
-comhair,Connacht,kuːɾʲ,ˈkʊvʲaiɾʲ,0.5
-comhairle,Connacht,ˈkuːɾʲlʲə,ˈkʊvʲaiɾʲlʲɛ,0.62
-comhartha,Connacht,ˈkohəɾˠə,ˈkʊvˠaɾˠha,0.71
-comhartha,Galway; Connacht,ˈkuːɾˠə,ˈkʊvˠaɾˠha,0.57
-comhartha,Mayo; Connacht,ˈkõhəɾˠuː,ˈkʊvˠaɾˠha,0.57
+chíd,,ˈçiːdʲ,ˈxiːdʲ,0.67
+chím,,çiːmʲ,ˈxiːmʲ,0.67
+chír,,ˈçiːɾʲ,ˈxiːɾʲ,0.67
+chúig,,xuːɟ,ˈçuːɪɟ,0.67
+chúis,,xuːʃ,ˈçuːɪʃ,0.67
+ciumhais,,"cuːsˠ, cuːʃ, cũːsˠ",ˈcɪʊwaiʃ,0.43
+ciumhaise,,ˈcuːʃə,ˈcɪʊwaiʃɛ,0.5
+ciumhaiseanna,,ˈcuːʃən̪ˠə,ˈcɪʊwaiʃæn̪ˠa,0.6
+cnó Brasaíleach,,kno:,ˈknˠoː ˈbˠɾˠasˠɑːlʲəx,0.27
+colbha,Connacht,ˈkɔlˠəvˠ,ˈkʊlˠwa,0.6
+comhair,Connacht,kuːɾʲ,ˈkʊwaiɾʲ,0.5
+comhairle,Connacht,ˈkuːɾʲlʲə,ˈkʊwaiɾʲlʲɛ,0.62
+comhartha,Connacht,ˈkohəɾˠə,ˈkʊwaɾˠça,1.0
+comhartha,Galway; Connacht,ˈkuːɾˠə,ˈkʊwaɾˠça,0.67
+comhartha,Mayo; Connacht,ˈkõhəɾˠuː,ˈkʊwaɾˠça,0.83
 cuairt,Ulster; Connacht,kuːɾˠtʲ,ˈkʊaiɾʲtʲ,0.67
-cuairt,Munster; Connacht,kuəɾˠtʲ,ˈkʊaiɾʲtʲ,0.83
-cíobhaí,Ulster; Connacht,ˈciːwiː,ˈciːʊvʲiː,0.6
-d'fhreagair,,ˈdʲɾʲaɡəɾʲ,ˈtʲfʲçɾʲɑɟaiɾʲ,0.62
+cuairt,Munster; Connacht,kuəɾˠtʲ,ˈkʊaiɾˠt̪ˠ,0.83
+d'fhití,,ˈdʲitʲiː,ˈtʲfʲhɪtʲiː,0.67
+d'fhreagair,,ˈdʲɾʲaɡəɾʲ,ˈtʲfʲhɾʲɑɡaiɾʲ,0.67
 d'fhuaigh,Connacht,d̪ˠuə,ˈdʲfˠhuiː,0.6
 d'fhuaití,,ˈd̪ˠuətʲiː,ˈdʲfˠhʊaitʲiː,0.62
-d'fhulaing,,"ˈd̪ˠʊlˠən̠ʲ, ˈd̪ˠʊl̪ˠən̠ʲ",ˈdʲfˠhɛlʲaiŋ,0.62
-d'fhágfaí,,ˈd̪ˠɑːkfˠiː,ˈdʲfˠhɑːɟfʲiː,0.57
+d'fhulaing,,"ˈd̪ˠʊlˠən̠ʲ, ˈd̪ˠʊl̪ˠən̠ʲ",ˈdʲfˠhʊlˠaiŋ,0.62
+d'fháisc,,d̪ˠɑːʃc,ˈdʲfˠhɑːʃc,0.67
 d'fhás,Munster; Connacht,dˠɑːsˠ,ˈdʲfˠhɑːsˠ,0.6
-d'fhógair,Munster; Connacht,ˈd̪ˠoːɡəɾʲ,ˈdʲfˠhoːɟaiɾʲ,0.5
+d'fhógair,Munster; Connacht,ˈd̪ˠoːɡəɾʲ,ˈdʲfˠhoːɡaiɾʲ,0.62
 d'ith,,dʲɪ(h),ˈdʲɪç,0.67
-daichead,Ulster; Connacht,ˈd̪ˠa.çəd̪ˠ,ˈd̪ˠaihad̪ˠ,0.67
-dath,Ulster; Connacht,d̪ˠah,ˈd̪ˠa,0.67
-dearbhú,Ulster; Connacht,ˈdʲaɾˠəwuː,ˈdʲærvˠuː,0.67
+dath,Ulster; Connacht,d̪ˠah,ˈd̪ˠaç,0.67
+dealbh,,ˈdʲalˠəvˠ,ˈdʲɑlw,0.6
+deoch,,"dʲox, dʲɔx",ˈdʲoːç,0.67
 deá-,Connacht,dʲɑː,ˈdʲɛɑː,0.67
-dhath,,ɣa(h),ˈɣa,0.67
-dheacair,,ˈjakəɾʲ,ˈjacaiɾʲ,0.67
+dhath,,ɣa(h),ˈɣaç,0.67
 dheá-,Connacht,jɑː,ˈjɛɑː,0.67
-dhíobháil,Connacht,ˈjiːwɑːlʲ,ˈjiːʊvʲɑːlʲ,0.67
 do,,"d̪ˠɔ, d̪ˠə",d̪ˠʊ,1.0
 do,Connacht,ɡə,d̪ˠʊ,0.5
-dtiocfainn,,dʲʊkən̠ʲ,ˈdʲɪcfʲæən̠ʲ,0.57
 dtí,,dʲiː,ˈdʲtʲiː,0.67
 dáimh,Munster; Connacht,d̪ˠɑːvʲ,ˈd̪ˠɑːiː,0.67
-déanamh,,"ˈdʲa(ː)nˠuː, ˈdʲia̯n̪ˠə, ˈdʲiːnˠuː",ˈdʲeːanˠavˠ,0.67
-déarfainn,,ˈdʲeːɾˠ(h)ən̠ʲ,ˈdʲeːaɾʲfʲæən̠ʲ,0.62
+déanamh,,"ˈdʲa(ː)nˠuː, ˈdʲia̯n̪ˠə, ˈdʲiːnˠuː",ˈdʲeːanˠɑu,0.67
+déarfainn,,ˈdʲeːɾˠ(h)ən̠ʲ,ˈdʲeːaɾˠfˠaən̠ʲ,0.62
 déarfá,,ˈdʲeːɾˠ(h)ɑː,ˈdʲeːaɾˠfˠɑː,0.67
-díchiall,Connacht,"ˈdʲiːˌceːl̠ʲə, ˈdʲiːˌçeːl̠ʲə",ˈdʲiːhiəl̪ˠ,0.5
-díograis,,ˈdʲiːɡɾˠəʃ,ˈdʲiːɛɟɾʲaiʃ,0.62
-díomhaoin,Connacht,ˈdʲiːwiːnʲ,ˈdʲiːʊvʲiːnʲ,0.67
-dúiche,,ˈd̪ˠuːçə,ˈd̪ˠuːɪhɛ,0.6
+díchiall,Connacht,"ˈdʲiːˌceːl̠ʲə, ˈdʲiːˌçeːl̠ʲə",ˈdʲiːçiəl̪ˠ,0.67
 dúigh,Ulster; Connacht,d̪ˠuːj,ˈd̪ˠuːiː,0.67
 eitleáin,Connacht,ˈɛtʲ(ə)lʲɑːnʲ,ˈɛtʲlʲɛɑːnʲ,0.67
 eitleán,Connacht,ˈɛtʲ(ə)lʲɑːnˠ,ˈɛtʲlʲɛɑːnˠ,0.67
-eochair,,ˈɔxəɾʲ,ˈoːhaiɾʲ,0.6
 ex,,ɛksˠ,ˈɛx,0.67
-facais,,ˈfˠakəʃ,ˈfˠacaiʃ,0.67
 faigh,,fˠəi,ˈfˠiː,0.67
 faigheann,Connacht,fˠɑːn̪ˠ,ˈfˠaijən̪ˠ,0.5
 faighfeá,,ˈfˠaiɑː,ˈfˠaijfʲɛɑː,0.57
 faighteá,,ˈfˠɑtʲɑː,ˈfˠaijtʲɛɑː,0.57
-fathach,Connacht,"ˈfˠahəx, ˈfˠaːx",ˈfˠahəx,1.0
-fathach,Cois-Fharraige; Connacht,ˈfˠax,ˈfˠahəx,0.6
-feadha,Munster; Connacht,fʲɑː,ˈfʲɑɣa,0.5
+feadha,Munster; Connacht,fʲɑː,ˈfʲai,0.67
 feirm,,ˈfʲɛɾʲəmʲ,ˈfʲəiɾʲmʲ,0.6
 feith,,fʲɛh,ˈfʲɛç,0.67
 feoigh,Ulster; Connacht,fʲɔːj,ˈfʲoːiː,0.67
 feá,Connacht,fʲɑː,ˈfʲɛɑː,0.67
-fheadha,Munster; Connacht,ɑː,ˈaɣa,0.33
-fhiacail,,ˈiəkəlʲ,ˈiəcailʲ,0.67
-fhiche,Ulster; Connacht,ˈɪçə,ˈɪhɛ,0.67
+fheadha,Munster; Connacht,ɑː,ˈai,0.5
 fhir,,ɪɾʲ,əiɾʲ,0.67
-fhlaith,,"lˠa, lˠah",ˈlʲaiç,0.67
-fhraoigh,Ulster; Connacht,ɾˠiː,ˈɾʲiːiː,0.67
-fhreagair,,ˈɾʲaɡəɾʲ,ˈɾʲɑɟaiɾʲ,0.67
+fhlaith,,"lˠa, lˠah",ˈlˠaiç,0.67
+fhraoigh,Ulster; Connacht,ɾˠiː,ˈɾˠiːiː,0.67
 fhréimh,,rʲeːvʲ,ˈɾʲeːiː,0.67
-fhéadaim,Munster; Connacht,ˈeːd̪ˠəmʲ,ˈeːadʲaimʲ,0.67
+fhéadaim,Munster; Connacht,ˈeːd̪ˠəmʲ,ˈeːad̪ˠaimʲ,0.67
 fhéar,,eːɾˠ,ˈeːaɾˠ,0.67
 fhéin,,heːnʲ,ˈeːnʲ,0.67
-ficheall,Connacht,fʲiːl̪ˠ,ˈfʲɪhal̪ˠ,0.6
-ficheall,Munster; Connacht,ˈfʲɪhəl̪ˠ,ˈfʲɪhal̪ˠ,1.0
+fhómhair,Connacht,ˈoːvˠəɾʲ,ˈoːwaiɾʲ,0.6
+ficheall,Connacht,fʲiːl̪ˠ,ˈfʲɪxal̪ˠ,0.6
+ficheall,Munster; Connacht,ˈfʲɪhəl̪ˠ,ˈfˠɪçal̪ˠ,0.8
 fiodh,,fʲɪ,ˈfʲɪɣ,0.67
-focail,Munster; Connacht,ˈfˠɔkəlʲ,ˈfˠɛcailʲ,0.67
-folmha,,ˈfˠɔl̪ˠəwə,ˈfˠʊlvˠa,0.67
-fágaim,Munster; Connacht,ˈfˠɑːɡəmʲ,ˈfˠɑːɟaimʲ,0.67
+foshruth,,ˈfˠɔ(h)rˠʊ(h),ˈfˠʊçɾˠʊç,0.67
+fréamhshamhail,,ˈfʲɾʲeːvˠ.hawəlʲ,ˈfʲɾʲeːɑuçəuilʲ,0.67
 fáidh,Connacht,fˠɑːj,ˈfˠɑːiː,0.67
-féachaint,Ulster; Connacht,ˈfʲeːxɪn̠ʲtʲ,ˈfʲeːahainʲtʲ,0.62
 féith,,fʲeː(h),ˈfʲeːç,0.67
-fíormhaith,,ˈfʲiːɾʲˌwãiç,ˈfʲiːɛɾʲvʲaiç,0.57
-fógair,Munster; Connacht,ˈfˠoːɡəɾʲ,ˈfˠoːɟaiɾʲ,0.67
 gach uile,Cois-Fharraige; Aran; Mayo; Connacht,ˈxilʲə,ˈɡəx ˈɪlʲɛ,0.67
 gach uile,Aran; uncommon; Connacht,ˈxɯlʲə(corresponding to the form,ˈɡəx ˈɪlʲɛ,0.2
+gadhar,Munster; Connacht,"ˈɡai(ə)ɾˠ, ˈɡəi(ə)ɾˠ",ˈɡɑːɾˠ,0.6
 gairge,,ˈɡaɾʲɪɟə,ˈɡaiɾʲɟɛ,0.67
 gairme,,ˈɡaɾʲəmʲə,ˈɡaiɾʲmʲɛ,0.67
-gamhain,,ˈɡãuənʲ,ˈɡavʲainʲ,0.67
 gaoith,,ɡiːh,ˈɡiːç,0.67
+geallaim,Connacht,"ˈɟaːl̪ˠəmʲ, ˈɟɑːl̪ˠəmʲ",ˈɡal̪ˠaimʲ,0.67
+gearraim,Connacht,ˈɟaːɾˠəmʲ,ˈɡaɾˠaimʲ,0.67
 gha,,ɣa(h),ˈɣa,0.67
-ghaibh,,ɣavʲ,ˈjaɪvʲ,0.5
-ghair,,ɣaɾʲ,ˈjɑːɾʲ,0.67
-ghairid,,ˈɣaɾʲədʲ,ˈjaiɾʲɪdʲ,0.67
-ghais,,ɣaʃ,ˈjaiʃ,0.5
-ghaiscíoch,Connacht,ˈɣaʃciːx,ˈjaiʃciːʊx,0.62
-ghaiscíocha,Connacht,ˈɣaʃciːxə,ˈjaiʃciːʊxa,0.67
-ghlais,,ɣlˠaʃ,ˈjlʲaiʃ,0.6
+gheall,Mayo; Connacht,jal̪ˠ,ˈɣɑːl̪ˠ,0.67
 ghníomh,Connacht,"jɾʲiːvˠ, ʝɾʲiːə̯vˠ",ˈjnʲiːoː,0.5
-ghníomhaíocht,Connacht,ˈɣɾˠiːwiəxt̪ˠ,ˈjnʲiːʊvˠɑːʊxt̪ˠ,0.56
+ghníomhaíocht,Connacht,ˈɣɾˠiːwiəxt̪ˠ,ˈjnʲiːʊwɑːʊçt̪ˠ,0.5
 ghnó,Connacht,"ɣɾˠoː, ɣɾˠuː",ˈɣnˠoː,0.67
-ghoib,,ɣɪbʲ,ˈjɛbʲ,0.67
-ghoid,Connacht,ɣɞdʲ,ˈjɛdʲ,0.67
-ghoir,Connacht,ˈɣɛɾʲ,ˈjəiɾʲ,0.5
 ghuigh,,ɣiː,ˈɣuiː,0.67
 ghuí,,ɣiː,ˈɣuiː,0.67
-glacfaidh,,ˈɡlˠakə,ˈɡlˠacfʲiː,0.67
-gníomh,Connacht,ɟɾʲiːvˠ,ˈɟɾʲiːoː,0.75
-gníomh,Ulster; Connacht,ɟɾʲĩːw,ˈɟɾʲiːoː,0.5
-gníomhaí,,ˈɡnʲiːwiː,ˈɟɾʲiːʊvʲiː,0.33
-go raibh maith agaibh,,"ɡərəmˠəˈhaɡəvʲ, ɡərəˈmˠahəɡəvʲ",ɡʊ ˈɾˠaɪvʲ ˈmˠaiç ˈaɟæɪvʲ,0.64
+gníomh,Connacht,ɟɾʲiːvˠ,ˈɟnʲiːoː,0.5
+gníomh,Ulster; Connacht,ɟɾʲĩːw,ˈɡnˠiːoː,0.0
+gníomhaí,,ˈɡnʲiːwiː,ˈɟnʲiːʊwiː,0.67
 gríos,,ɡɾʲɪsˠ,ˈɟɾʲiːʊsˠ,0.6
 guí,,ɡiː,ˈɡuiː,0.67
 guíonna,,ˈɡiːn̪ˠə,ˈɡuiːʊn̪ˠa,0.67
 géagleabhair,,ˈɟeːɡl̠ʲəuɾʲ,ˈɟeːaɟlʲəuaiɾʲ,0.6
 h,,h,ˈ,0.0
-heach,,hax,ˈçəx,0.67
-heich,,hɛç,ˈçɛ,0.5
-hÍ,,hiː,ˈçiː,0.5
-hé,,heː,ˈçeː,0.5
-héag,Ulster; Connacht,heːɡ,ˈçeːaɡ,0.67
-héin,,heːnʲ,ˈçeːnʲ,0.67
-héis,,heːʃ,ˈçeːʃ,0.67
-i bhfeighil,,əˈvʲəilʲ,ɪ ˈwɛjɪlʲ,0.67
+hainmneacha,,ˈhanʲəmʲnʲəxə,ˈhainʲmʲnʲæça,0.67
+i gceann,,ɟɨ̞n̪ˠ,ɪ ˈɡən̪ˠ,0.5
 imithe,Connacht,"ˈimʲi, ˈimʲɪçə",ˈɪmʲɪhə,0.8
-imithe,Cois-Fharraige; Aran; Connacht,ˈimʲiː,ˈɪmʲɪhə,0.6
-imithe,Mayo; Connacht,əˈmʲiçə,ˈɪmʲɪhə,0.8
+imithe,Cois-Fharraige; Aran; Connacht,ˈimʲiː,ˈɪmˠɪhə,0.6
+imithe,Mayo; Connacht,əˈmʲiçə,ˈɪmˠɪhə,0.8
 ith,,i(h),ˈɪç,0.5
 jé,,d͡ʒeː,ˈjeː,0.5
-labhair,Munster; Connacht,"l̪ˠauɾʲ, l̪ˠəuɾʲ",ˈl̪ˠavʲaiɾʲ,0.67
-lachain,,ˈl̪ˠaxənʲ,ˈl̪ˠahainʲ,0.67
-le haghaidh,,lʲɛˈhiː,lʲɛ ˈhajiː,0.67
-le haghaidh,Connacht,lʲəˈhəi̯,lʲɛ ˈhajiː,0.83
-le haghaidh,Cois-Fharraige; Connacht,lʲəi̯,lʲɛ ˈhajiː,0.5
+labhair,Munster; Connacht,"l̪ˠauɾʲ, l̪ˠəuɾʲ",ˈlˠaʊaiɾʲ,0.67
+le haghaidh,,lʲɛˈhiː,lʲɛ ˈhaɣiː,0.67
+le haghaidh,Connacht,lʲəˈhəi̯,lʲɛ ˈhaɣiː,0.67
+le haghaidh,Cois-Fharraige; Connacht,lʲəi̯,lʲɛ ˈhaɣiː,0.5
 leabhair,Connacht,l̠ʲəuɾʲ,ˈlʲəuaiɾʲ,0.67
-leagaim,,ˈl̠ʲaɡəmʲ,ˈlʲɑɟaimʲ,0.67
-leath,,lʲæx,ˈlʲɑ,0.67
-leath,Connacht,l̠ʲah,ˈlʲɑ,0.67
+leamh,Connacht,ˈl̠ʲavˠ,ˈlʲəu,0.67
+leath,,lʲæx,ˈlʲæç,0.67
+leath,Connacht,l̠ʲah,ˈlˠaç,0.67
 leith,Munster; Connacht,l̠ʲɛh,ˈlʲɛç,0.67
 leomh,Ulster; Connacht,l̠ʲow,ˈlʲɛoː,0.67
 leá,Connacht,l̠ʲɑː,ˈlʲɛɑː,0.67
-lonnaithe,Connacht,ˈl̪ˠɔn̪ˠiː,ˈl̪ˠʊn̪ˠaɪhə,0.57
-luaidhe,,ˈl̪ˠuː.iː,ˈl̪ˠʊaiːɛ,0.6
-luaidhim,,l̪ˠuəmʲ,ˈl̪ˠʊaijɪmʲ,0.57
-láimh,,"l̪ˠɑːvʲ, l̪ˠɑ̃ːvʲ",ˈl̪ˠɑːiː,0.67
-lúth,,l̪ˠuː(h),ˈl̪ˠuː,0.67
+lonnaithe,Connacht,ˈl̪ˠɔn̪ˠiː,ˈlˠʊn̪ˠaɪhə,0.57
+luaidhe,,ˈl̪ˠuː.iː,ˈlˠʊaiɛ,0.6
+luaidhim,,l̪ˠuəmʲ,ˈlˠʊaiɪmʲ,0.67
+láimh,,"l̪ˠɑːvʲ, l̪ˠɑ̃ːvʲ",ˈlˠɑːiː,0.67
+lúth,,l̪ˠuː(h),ˈlˠuːç,0.67
 mairbh,Ulster; Connacht,ˈmˠaɾʲəvʲ,ˈmˠaiɾʲvʲ,0.6
 mairc,,mˠaɾʲc,ˈmˠaiɾʲic,0.67
 mbeidh,Ulster; Connacht,mʲɛj,ˈmʲai,0.67
 meabhair,Munster; Connacht,mʲauɾʲ,ˈmʲəuaiɾʲ,0.67
-meacain,,ˈmʲakənʲ,ˈmʲɑcainʲ,0.67
 meaingeal,,ˈmæɲɟəl,ˈmʲaiŋalˠ,0.67
-meath,,mʲa(h),ˈmʲɑ,0.67
+meath,,mʲa(h),ˈmʲæç,0.67
 meá,,"æ(h), ɑː",ˈmʲɛɑː,0.33
-meá,Connacht,mʲɑː,ˈmʲɛɑː,0.67
-meá,Munster; Connacht,mʲæh,ˈmʲɛɑː,0.67
-mhac,Ulster; Connacht,wak,ˈvˠak,0.67
-mhaidin,Connacht,ˈwadʲənʲ,ˈvʲaidʲɪnʲ,0.67
-mhaige,Ulster; Connacht,ˈwæɟɪ,ˈvʲaiɟɛ,0.6
-mhair,Ulster; Connacht,waɾʲ,ˈvʲaiɾʲ,0.5
-mhairbh,Ulster; Connacht,ˈwarʲəvʲ,ˈvʲaiɾʲvʲ,0.4
-mhaith,Connacht,"wa, wah",ˈvʲaiç,0.33
-mhaithe,Ulster; Connacht,ˈwahə,ˈvʲaɪhə,0.6
-mhaithe,dated; Ulster; Connacht,ˈwãhə,ˈvʲaɪhə,0.4
-mhall,Connacht,wɑːl̪ˠ,ˈvˠal̪ˠ,0.67
-mhall,Ulster; Connacht,wal̪ˠ,ˈvˠal̪ˠ,0.67
-mhaoil,Ulster; Connacht,wiːlʲ,ˈvʲiːlʲ,0.67
-mhaoin,Ulster; Connacht,wiːnʲ,ˈvʲiːnʲ,0.67
-mhaol,Ulster; Connacht,wiːlˠ,ˈvˠiːlˠ,0.67
-mharbh,Connacht,ˈwarˠuː,ˈvˠarvˠ,0.5
+meá,Connacht,mʲɑː,ˈmˠɛɑː,0.67
+meá,Munster; Connacht,mʲæh,ˈmˠɛɑː,0.67
+mhairbh,Ulster; Connacht,ˈwarʲəvʲ,ˈwaiɾʲvʲ,0.6
+mhaith,Connacht,"wa, wah",ˈwaiç,0.67
+mhaithe,Ulster; Connacht,ˈwahə,ˈwaɪhə,0.8
+mhaithe,dated; Ulster; Connacht,ˈwãhə,ˈwaɪhə,0.6
 mheabhair,Connacht,vʲəuɾʲ,ˈvʲəuaiɾʲ,0.67
-mhná,Connacht,vˠɾˠɑː,ˈvˠnˠɑː,0.67
-mhol,Connacht,wɔlˠ,ˈvˠʊlˠ,0.67
-mholainn,Ulster; Connacht,ˈwɔlˠən̠ʲ,ˈvˠɛlʲæən̠ʲ,0.67
-mhuir,Ulster; Connacht,wɪɾʲ,ˈvˠɪɾʲ,0.67
-mhá,Connacht,wɑː,ˈvˠɑː,0.5
-mháthair,Connacht,ˈwɑːhəɾʲ,ˈvˠɑːçaiɾʲ,0.6
-mhóir,Connacht,woːɾʲ,ˈvʲoːɾʲ,0.67
-mhór,Ulster; Connacht,woːɾˠ,ˈvˠoːɾˠ,0.67
-mhún,Ulster; Connacht,"wuːnˠ, wuːn̪ˠ",ˈvˠuːnˠ,0.67
-morgtha,,ˈmˠɔɾˠəkə,ˈmˠʊɾˠɡha,0.67
+mhná,Connacht,vˠɾˠɑː,ˈwnˠɑː,0.33
+máithreacha,Connacht,ˈmˠɑːɾʲəxə,ˈmˠɑːhɾʲæça,0.67
+máithreacha,Galway; Connacht,ˈmˠɑːɾʲəxiː,ˈmˠɑːhɾˠaxa,0.86
+máithreacha,Mayo; Connacht,ˈmˠaːɾʲhəxiː,ˈmˠɑːhɾˠaxa,1.0
 máthair,Connacht,ˈmˠãːhəɾʲ,ˈmˠɑːçaiɾʲ,0.6
-máthair,Cois-Fharraige; Connacht,ˈmˠɑːɾʲ,ˈmˠɑːçaiɾʲ,0.6
-máthair,Munster; Connacht,ˈmˠɑːhəɾʲ,ˈmˠɑːçaiɾʲ,0.8
-múchaim,Munster; Connacht,ˈmˠuːxəmʲ,ˈmˠuːhaimʲ,0.67
-naíonda,,ˈn̪ˠiːn̪ˠd̪ˠə,ˈn̪ˠɑːʊnˠa,0.6
-nbhur,Connacht,nˠə,ˈn̪ˠvˠʊɾˠ,0.5
+máthair,Cois-Fharraige; Connacht,ˈmˠɑːɾʲ,ˈmˠɑːçaiɾˠ,0.6
+máthair,Munster; Connacht,ˈmˠɑːhəɾʲ,ˈmˠɑːçaiɾˠ,0.8
+n-ainmneacha,,ˈn̪ˠanʲəmʲnʲəxə,ˈnainʲmʲnʲæça,0.67
+naomh,Connacht,n̪ˠiːvˠ,ˈnˠiːw,0.67
+naíonda,,ˈn̪ˠiːn̪ˠd̪ˠə,ˈnˠɑːʊnˠa,0.6
+nbhur,Connacht,nˠə,ˈnˠwʊɾˠ,0.5
 ngaoith,,ŋiːh,ˈŋiːç,0.67
-nglacfaidh,,ˈŋlˠakə,ˈŋlˠacfʲiː,0.67
 nguí,,ŋiː,ˈŋuiː,0.67
 nguíonna,,ˈŋiːn̪ˠə,ˈŋuiːʊn̪ˠa,0.67
 nigh,,nʲɪɟ,ˈnʲiː,0.67
-nigh,indicative; Ulster; past; analytic; Connacht,nʲiː,ˈnʲiː,1.0
-nigh,Ulster; imperative; Connacht,n̠ʲiː,ˈnʲiː,1.0
+nigh,indicative; Ulster; past; analytic; Connacht,nʲiː,ˈnˠiː,1.0
+nigh,Ulster; imperative; Connacht,n̠ʲiː,ˈnˠiː,1.0
 nighe,Munster; Connacht,n̠ʲiː,ˈnʲɪjɛ,0.5
 nimh,Connacht,n̠ʲɪvʲ,ˈnʲiː,0.67
-nua,Ulster; Connacht,n̪ˠuː,ˈn̪ˠua,0.67
-oilfidh,,"ˈɛlʲ(h)ɪɟ, ˈɪlʲ(h)ɪɟ",ˈɛlʲiː,0.6
-oilfidh,Ulster; Connacht,"ˈɛlʲ(h)ə, ˈɪlʲ(h)ə",ˈɛlʲiː,0.75
-os comhair,Connacht,əsˠˈkuːɾʲ,ʊsˠ ˈkʊvʲaiɾʲ,0.62
-oscail,,ˈɔsˠkəlʲ,ˈɛʃcailʲ,0.67
-phingin,Ulster; Connacht,fʲiːn̠ʲ,ˈfʲ'ɪŋɪnʲ,0.6
+nua,Ulster; Connacht,n̪ˠuː,ˈnˠua,0.67
+oilfidh,,"ˈɛlʲ(h)ɪɟ, ˈɪlʲ(h)ɪɟ",ˈɪlʲiː,0.6
+oilfidh,Ulster; Connacht,"ˈɛlʲ(h)ə, ˈɪlʲ(h)ə",ˈɪlʲiː,0.75
+os comhair,Connacht,əsˠˈkuːɾʲ,ʊsˠ ˈkʊwaiɾʲ,0.62
+phingin,Ulster; Connacht,fʲiːn̠ʲ,ˈfʲɪŋɪnʲ,0.6
 pingin,Ulster; Connacht,pʲiːn̠ʲ,ˈpʲɪŋɪnʲ,0.6
 pingine,Ulster; Connacht,pʲiːn̠ʲə,ˈpʲɪŋɪnʲɛ,0.67
 pinginí,Ulster; Connacht,ˈpʲiːn̠ʲiː,ˈpʲɪŋɪnʲiː,0.67
-pleidhc,,ˈpləik,ˈpʲlʲɛjc,0.6
-plúchfaidh,,"ˈpˠlˠuːxə, ˈpˠl̪ˠuːxə",ˈpˠlˠuːhfʲiː,0.67
-pógfaidh,Munster; Connacht,ˈpˠoːkə,ˈpˠoːɟfʲiː,0.6
-rabhais,,"ɾˠauʃ, ɾˠaɯi̯ʃ",ˈɾˠavʲaiʃ,0.67
-ramhair,,ɾˠəurʲ,ˈɾˠavʲaiɾʲ,0.67
-reath,,ɾˠa(h),ˈɾʲɑ,0.67
+rabhais,,"ɾˠauʃ, ɾˠaɯi̯ʃ",ˈɾˠaʊaiʃ,0.67
+reath,,ɾˠa(h),ˈɾʲæç,0.67
 righin,,ɾˠiːnʲ,ˈɾʲɪjɪnʲ,0.6
-righin,Connacht,"ɾˠainʲ, ɾˠəinʲ",ˈɾʲɪjɪnʲ,0.8
+righin,Connacht,"ɾˠainʲ, ɾˠəinʲ",ˈɾˠɪjɪnˠ,0.8
 roimh,,ɾˠɪvʲ,ˈɾˠoiː,0.67
-roth,,ɾˠɔ(h),ˈɾˠʊ,0.67
-rugais,,ˈɾˠʊɡəʃ,ˈɾˠɛɟaiʃ,0.67
+roth,,ɾˠɔ(h),ˈɾˠʊç,0.67
+ríomhaire,,ˈɾˠiːvˠəɾʲə,ˈɾʲiːʊwaiɾʲɛ,0.62
 ríomhleabhar,Connacht,ˈɾʲiːwˌlʲəuɾˠ,ˈɾʲiːʊvʲlʲəuaɾˠ,0.67
 saighead,,sˠəid̪ˠ,ˈsˠaijad̪ˠ,0.67
-scairt,,sˠkaɾˠtʲ,ˈʃcaiɾʲtʲ,0.67
-scairt ascaille,,ˈsˠkaɾˠtʲ ˈasˠkəl̠ʲə,ˈʃcaiɾʲtʲ ˈaʃcail̠ʲɛ,0.69
-scaití,Connacht,ˈsˠkatʲiː,ˈʃcaitʲiː,0.67
-seachain,,ˈʃaxənʲ,ˈʃæhainʲ,0.67
-seobh,,ʃɔw,ˈʃɛoː,0.67
+sealbh,,ˈʃalˠəvˠ,ˈʃɑlw,0.6
+sealbha,,ˈʃalˠəvˠə,ˈʃɑlˠwa,0.67
 seó,,ʃoː,ˈʃɛoː,0.67
-sh,,h,,0.0
-sheaicéad,Connacht,ˈhaceːd̪ˠ,ˈç'aiceːad̪ˠ,0.67
-sheal,,"ˈhalˠ, ˈhal̪ˠ",ˈç'alˠ,0.67
-shean,,hanˠ,ˈç'anˠ,0.67
-shil,Munster; Connacht,hɪlʲ,ˈç'ɪlʲ,0.67
-shir,,hɪɾʲ,ˈç'ɪɾʲ,0.67
-shiúil,,çuːlʲ,ˈç'ɪuːlʲ,0.67
-shleamhain,Ulster; Connacht,ˈ(h)lʲãuwənʲ,ˈçlʲævʲainʲ,0.5
-shleamhna,,"ˈ(h)lʲãunˠə, ˈ(h)lʲãun̪ˠə",ˈçlʲævˠnˠa,0.6
-shlí,Ulster; Connacht,ˈ(h)l̠ʲiː,ˈçlʲiː,0.67
-shníomh,Ulster; Connacht,(h)nʲiːw,ˈçnʲiːoː,0.5
-shuigh,Ulster; Connacht,hiː,ˈhuiː,0.67
-shuí,,hiː,ˈhuiː,0.67
-shé,,heː,ˈç'eː,0.5
-shéan,,heːnˠ,ˈç'eːanˠ,0.67
-shéid,,heːdʲ,ˈç'eːdʲ,0.67
-shíl,,hiːlʲ,ˈç'iːlʲ,0.67
-shín,,hiːnʲ,ˈç'iːnʲ,0.67
-shíolmhar,Ulster; Connacht,"ˈhiːlˠwəɾˠ, ˈhiːl̪ˠwəɾˠ",ˈç'iːʊlvˠaɾˠ,0.67
-smig,,ˈsˠmʲɪɟəd̪ˠ,ˈʃmʲɪɟ,0.67
-smig,Ulster; Connacht,sˠmʲiɟ,ˈʃmʲɪɟ,1.0
-snátha,Connacht,sˠn̪ˠɑː,ˈsˠnˠɑːha,0.6
-socair,,ˈsˠɔkəɾʲ,ˈsˠɛcaiɾʲ,0.67
-sothuigthe,,ˈsˠɔˌhɪcɪ,ˈsˠʊhɪɪctʲçɪçɛ,0.67
-stiúideo,,ˈʃtʲuːdʲioː,ˈʃtʲuidʲoː,0.67
+sh,,h,ç,0.0
+shaoil,Ulster; Connacht,hiːlʲ,ˈçiːlʲ,0.67
+sheol,,"çɔːlˠ, çɔːl̪ˠ",ˈhoːlˠ,0.67
+shiúil,,çuːlʲ,ˈhɪuːlʲ,0.5
+shiúl,,"çuːlˠ, çuːl̪ˠ",ˈhʊlˠ,0.67
+shrathnaigh,,"ˈ(h)ɾˠahnˠiː, ˈ(h)ɾˠahn̪ˠiː, ˈ(h)ɾˠʌhnˠi, ˈ(h)ɾˠʌhnˠə, ˈ(h)ɾˠʌhn̪ˠi, ˈ(h)ɾˠʌhn̪ˠə",ˈçɾˠaçnˠiː,0.67
+shuigh,Ulster; Connacht,hiː,ˈçuiː,0.5
+shuí,,hiː,ˈçuiː,0.5
+shá,Munster; Connacht,hɑː,ˈçɑː,0.5
+shúil,,huːlʲ,ˈçuːlʲ,0.67
+smig,,ˈsˠmʲɪɟəd̪ˠ,ˈsˠmˠɪɟ,0.67
+smig,Ulster; Connacht,sˠmʲiɟ,ˈsˠmˠɪɟ,1.0
+soitheach,Connacht,"sˠaix, ˈsˠəihəx",ˈsˠɔhəx,0.83
+soitheach,Galway; Connacht,sˠeːx,ˈsˠɔhəx,0.6
+soitheach,Mayo; Connacht,ˈsˠeçəx,ˈsˠɔhəx,0.8
+sothuigthe,,ˈsˠɔˌhɪcɪ,ˈsˠʊçɪɪctʲçɪhɛ,0.56
+stiúideo,,ˈʃtʲuːdʲioː,ˈsˠt̪ˠuidʲoː,0.67
 suaimhneach,Connacht,ˈsˠiːmʲɾʲəx,ˈsˠʊaivʲnʲəx,0.5
 suaimhneas,Connacht,ˈsˠiːmʲnʲəsˠ,ˈsˠʊaivʲnʲɑsˠ,0.62
 suigh,Ulster; Connacht,sˠiː,ˈsˠuiː,0.67
 suí,,sˠiː,ˈsˠuiː,0.67
-sábh,Connacht,sˠɑːw,ˈsˠɑːvˠ,0.67
 sáith,Munster; Connacht,sˠɑː(h),ˈsˠɑːç,0.67
 séimh,,ʃeːvʲ,ˈʃeːiː,0.67
 tS,,"tʲ, t̪ˠ",ˈt̪ˠsˠ,0.5
-tabhair,Ulster; Connacht,ˈt̪ˠoːɾʲ,ˈt̪ˠavʲaiɾʲ,0.5
-tacair,,"ˈt̪ˠakəɾʲ, ˈt̪ˠɑkəɾʲ",ˈt̪ˠacaiɾʲ,0.67
-tagaim,,ˈt̪ˠaɡəmʲ,ˈt̪ˠaɟaimʲ,0.67
-tagair,,"ˈt̪ˠaɡəɾʲ, ˈt̪ˠɑɡəɾʲ",ˈt̪ˠaɟaiɾʲ,0.67
+tabhair,Ulster; Connacht,ˈt̪ˠoːɾʲ,ˈt̪ˠaʊaiɾʲ,0.5
 tairbh,,ˈt̪ˠɑɾʲəvʲ,ˈt̪ˠaiɾʲvʲ,0.6
 tairbhe,,ˈt̪ˠaɾʲəvʲə,ˈt̪ˠaiɾʲvʲɛ,0.67
-talamh,Connacht,ˈt̪ˠɑlˠ(h)ə,ˈt̪ˠalˠavˠ,0.6
-talamh,Cois-Fharraige; Connacht,ˈt̪ˠaːl̪ˠə,ˈt̪ˠalˠavˠ,0.8
-talamh,Galway; Connacht,ˈt̪ˠalˠə,ˈt̪ˠalˠavˠ,0.8
-talamh,Mayo; Connacht,ˈt̪ˠalˠuː,ˈt̪ˠalˠavˠ,0.8
-taobh,Connacht,t̪ˠiːvˠ,ˈt̪ˠiːvˠ,1.0
-taobh,Ulster; Connacht,t̪ˠiːw,ˈt̪ˠiːvˠ,0.67
-tchí,,tʲiː,ˈtʲhiː,0.67
-tchíthear,,ˈtʲihəɾˠ,ˈtʲhiːçæɾˠ,0.6
+taobh,Connacht,t̪ˠiːvˠ,ˈt̪ˠiːw,0.67
+taobh,Ulster; Connacht,t̪ˠiːw,ˈt̪ˠiːw,1.0
+tchí,,tʲiː,ˈtʲxiː,0.67
 te,,tʲe(h),ˈtʲɛ,0.67
 teagasc,,"c, k",ˈtʲɑɡask,0.17
-teagasc,Connacht,ˈtʲaɡəsˠ,ˈtʲɑɡask,0.83
-teagmhaigh,Connacht,"ˈtʲaɡwiː, ˈtʲaɡwə",ˈtʲɑɟvʲiː,0.6
+teagasc,Connacht,ˈtʲaɡəsˠ,ˈt̪ˠaɡask,0.83
 teith,,tʲɛ(h),ˈtʲɛç,0.67
-th,,h,,0.0
-th',,h,ç,0.0
-thairbhe,,ˈhaɾʲəvʲə,ˈhaiɾʲvʲɛ,0.67
-the,,hɛ,ˈçɛ,0.5
-theach,,hax,ˈçəx,0.67
-theas,,hasˠ,ˈçɑsˠ,0.67
-thig,,hiɟ,ˈçɪɟ,0.67
-thigh,Ulster; Connacht,hiː,ˈçiː,0.5
-thinn,Connacht,hiːn̠ʲ,ˈçən̠ʲ,0.67
-thinn,Ulster; Connacht,hɪn̠ʲ,ˈçən̠ʲ,0.67
-thiocfainn,,hʊkən̠ʲ,ˈçɪcfʲæən̠ʲ,0.33
-thit,,hitʲ,ˈçɪtʲ,0.67
-threo,Munster; Connacht,hɾʲoː,ˈçɾʲoː,0.67
-thrí,,hɾʲiː,ˈçɾʲiː,0.67
-thugainn,,ˈhʊɡən̠ʲ,ˈhɛɟæən̠ʲ,0.67
-théas,,heːsˠ,ˈçeːasˠ,0.67
-théid,,"heːdʲ, hei̯dʲ",ˈçeːdʲ,0.67
-théigh,Ulster; Connacht,heːj,ˈçeːiː,0.33
-thíos,,hiːsˠ,ˈçiːʊsˠ,0.67
-thír,,hiːɾʲ,ˈçiːɾʲ,0.67
-tiocfaid,,ˈtʲʊkədʲ,ˈtʲɪcfʲaidʲ,0.57
-tiocfaimid,,ˈtʲʊkəmʲədʲ,ˈtʲɪcfʲaimʲədʲ,0.67
-tiocfair,,ˈtʲʊkəɾʲ,ˈtʲɪcfʲaiɾʲ,0.57
-tnúth,Ulster; Connacht,t̪ˠɾˠuː,ˈt̪ˠnˠuː,0.67
-tochail,,ˈt̪ˠɔxəlʲ,ˈt̪ˠʊhailʲ,0.67
-tochais,,ˈt̪ˠɔxəʃ,ˈt̪ˠʊhaiʃ,0.67
-togair,Munster; Connacht,ˈt̪ˠɔɡəɾʲ,ˈt̪ˠɛɟaiɾʲ,0.67
+th,,h,ç,0.0
+th',,h,ç',0.0
+thae,,heː,ˈçeː,0.5
+thair,,haɾʲ,ˈçɑːɾʲ,0.67
+thairbhe,,ˈhaɾʲəvʲə,ˈçaiɾʲvʲɛ,0.67
+thais,,haʃ,ˈçaiʃ,0.67
+thar,,haɾˠ,ˈçɑːɾˠ,0.67
+tharainn,,"ˈhaɾˠən̠ʲ, ˈhɑɾˠən̠ʲ",ˈçaɾˠaən̠ʲ,0.6
+tharainne,,"ˈhaɾˠən̠ʲə, ˈhɑɾˠən̠ʲə",ˈçaɾˠain̠ʲɛ,0.67
+theo,,çoː,ˈhoː,0.5
+thiocfas,,ˈçukəsˠ,ˈhɪkfˠasˠ,0.67
+thláith,Connacht,(h)lˠɑː,ˈçlˠɑːç,0.67
+thoir,,"heɾʲ, hɨɾʲ",ˈçəiɾʲ,0.67
+thor,,hɔɾˠ,ˈçɔɾˠ,0.67
+thraoith,,ˈhɾˠiː,ˈçɾˠiːç,0.67
+thrá,Munster; Connacht,hɾˠɑː,ˈçɾˠɑː,0.67
+thráigh,Connacht,hɾˠɑː,ˈçɾˠɑːiː,0.67
+thua,,huə,ˈçua,0.67
+thug,Munster; Connacht,ˈhuɡ,ˈçʊɡ,0.67
+thugainn,,ˈhʊɡən̠ʲ,ˈçʊɡaən̠ʲ,0.6
+thuig,,hɪɟ,ˈçɪɟ,0.67
+thur,Munster; Connacht,hʊɾˠ,ˈçɔɾˠ,0.67
+thángthas,,ˈhaːnəkəs,ˈçɑːŋçasˠ,0.57
+théigh,Ulster; Connacht,heːj,ˈheːiː,0.67
+thóg,,hoːɡ,ˈçoːɡ,0.67
+thóir,Munster; Connacht,hoːɾʲ,ˈçoːɾʲ,0.67
+thú,,huː,ˈçuː,0.5
+thúis,,huːʃ,ˈçuːɪʃ,0.67
+tnúth,Ulster; Connacht,t̪ˠɾˠuː,ˈt̪ˠnˠuːç,0.67
 ts,,"tʲ, t̪ˠ",ˈt̪ˠsˠ,0.5
 tseilbh,,ˈtʲɛlʲəvʲ,ˈtʲʃɛlʲvʲ,0.6
 tseilg,,ˈtʲɛlʲɪɟ,ˈtʲʃɛlʲɟ,0.6
@@ -485,49 +384,46 @@ tsléibh,,tʲlʲeːvʲ,ˈtʲʃlʲeːɪvʲ,0.67
 tsnua,Ulster; Connacht,"t̪ˠɾˠũː, t̪ˠɾˠũːə",ˈt̪ˠsˠnˠua,0.4
 tsnámh,Connacht,t̪ˠɾˠɑ̃ːvˠ,ˈt̪ˠsˠnˠɑːv,0.6
 tsnámh,Munster; Connacht,t̪ˠn̪ˠɑːvˠ,ˈt̪ˠsˠnˠɑːv,0.8
-tsnátha,Connacht,"t̪ˠn̪ˠɑː, t̪ˠɾˠɑː",ˈt̪ˠsˠnˠɑːha,0.5
+tsnátha,Connacht,"t̪ˠn̪ˠɑː, t̪ˠɾˠɑː",ˈt̪ˠsˠnˠɑːça,0.6
 tsá,Munster; Connacht,t̪ˠɑː,ˈt̪ˠsˠɑː,0.67
-tugaim,Munster; Connacht,ˈt̪ˠʊɡəmʲ,ˈt̪ˠɛɟaimʲ,0.67
 tuí,,t̪ˠiː,ˈt̪ˠuiː,0.67
-tuíodóireacht,Connacht,ˈt̪ˠiːd̪ˠoːɾʲ,ˈt̪ˠuiːɛdʲoːɾʲɑxt̪ˠ,0.5
+tuíodóireacht,Connacht,ˈt̪ˠiːd̪ˠoːɾʲ,ˈt̪ˠuiːʊd̪ˠoːɾʲɑxt̪ˠ,0.5
 tá a fhios ag,,"t̪ˠaːsˠ eɟ, t̪ˠɑːsˠ eɟ",ˈt̪ˠɑː a ˈɪsˠ aɡ,0.57
 téigh,Ulster; Connacht,tʲeːj,ˈtʲeːiː,0.67
-téigh,Ulster; Connacht,tʲəi,ˈtʲeːiː,1.0
-tógaim,Munster; Connacht,ˈt̪ˠoːɡəmʲ,ˈt̪ˠoːɟaimʲ,0.67
+téigh,Ulster; Connacht,tʲəi,ˈt̪ˠeːiː,1.0
 uafás,Connacht,ˈuːhɑːsˠ,ˈuafˠɑːsˠ,0.6
 uaigh,Connacht,uəç,ˈuiː,1.0
 uaigh,Mayo; Connacht,uəj,ˈuiː,0.67
 uaigh,Waterford; Munster; Galway; Connacht,uə,ˈuiː,1.0
 uaimh,,uəvʲ,ˈʊaiː,0.67
 uainn,Connacht,"wen̠ʲ, wæn̠ʲ",ˈuaən̠ʲ,0.5
-uath,,uə(h),ˈua,0.67
-uathlathaí,Connacht,ˈuəlˠəhiː,ˈuahlˠaçiː,0.67
-umhal,Connacht,"uːlˠ, uːl̪ˠ",ˈʊvˠalˠ,0.5
-uncail,,ˈʊŋkəlʲ,ˈɛnʲcailʲ,0.67
-urchóid,Connacht,ˈɔɾˠəxoːdʲ,ˈɛɾʲhoːdʲ,0.67
+uath,,uə(h),ˈuaç,0.67
+umhal,Connacht,"uːlˠ, uːl̪ˠ",ˈʊwalˠ,0.5
 uí,,iː,ˈuiː,0.5
 uíbh,,iːvʲ,ˈuiːvʲ,0.67
 vác,Connacht,wɑːk,ˈvɑːk,0.67
 yé,,jeː,ˈyeː,0.5
-Éabha,Ulster; Connacht,ˈeːwə,ˈeːavˠa,0.5
+Éabha,Ulster; Connacht,ˈeːwə,ˈeːaua,0.5
+Ó Cathasaigh,,ˈkahəsˠiː,oː ˈkaçasˠiː,0.67
 áibhirseoir,,ˈɑːɾɕoːɾʲ,ˈɑːɪvʲɪɾʲʃoːɾʲ,0.5
 áith,Munster; Connacht,ɑː(h),ˈɑːç,0.5
 áitithe,Connacht,ˈɑːtʲiː,ˈɑːtʲɪhə,0.6
-áitithe,Munster; Connacht,ˈɑːtʲɪhə,ˈɑːtʲɪhə,1.0
+áitithe,Munster; Connacht,ˈɑːtʲɪhə,ˈɑːt̪ˠɪhə,1.0
+átha,,ˈaːhə,ˈɑːça,0.67
 éad,Ulster; Connacht,eːd̪ˠ,ˈeːad̪ˠ,0.67
-éadtualaing,,ˈeːd̪ˠɔlən,ˈeːad̪ˠualʲaiŋ,0.67
+éadtualaing,,ˈeːd̪ˠɔlən,ˈeːad̪ˠualˠaiŋ,0.67
 éag,Ulster; Connacht,"eːɡ, ɛə̯ɡ",ˈeːaɡ,0.67
-éagaoin,Connacht,ˈeːɡiːnʲ,ˈeːaɟiːnʲ,0.6
+éagrábhadh,Connacht,ˈeːkɾˠɑːvˠ,ˈeːaɡɾˠɑːwə,0.57
 éan,Ulster; Connacht,"eːnˠ, eːn̪ˠ",ˈeːanˠ,0.67
 éar,,eːɾˠ,ˈeːaɾˠ,0.67
 éilítear,Connacht,ˈeːlʲiːɾʲ,ˈeːlʲiːtʲæɾˠ,0.67
-íocaim,,ˈiːkəmʲ,ˈiːɛcaimʲ,0.5
+íocaim,,ˈiːkəmʲ,ˈiːʊkaimʲ,0.67
 íocfad,,ˈiːkəd̪ˠ,ˈiːʊkfˠad̪ˠ,0.67
-íocfaidh,,ˈiːkə,ˈiːɪcfʲiː,0.4
+íocfaidh,,ˈiːkə,ˈiːʊkfˠiː,0.6
 íosfad,,ˈiːsˠəd̪ˠ,ˈiːʊsˠfˠad̪ˠ,0.67
-íosfaidh,,"ˈiːsˠiː, ˈiːsˠə, ˈiːsˠɪɟ",ˈiːɪʃfʲiː,0.6
-íoth,,iː,ˈiːʊ,0.5
-ógfhear,,ˈoːɡˌaɾˠ,ˈoːɟfʲçæɾˠ,0.6
+íosfaidh,,"ˈiːsˠiː, ˈiːsˠə, ˈiːsˠɪɟ",ˈiːʊsˠfˠiː,0.6
+íoth,,iː,ˈiːʊç,0.5
+ógfhear,,ˈoːɡˌaɾˠ,ˈoːɟfʲhaɾˠ,0.5
 ógh,,oː,ˈoːɣ,0.5
 úim,,uːmʲ,ˈuːɪmʲ,0.67
 úir,,uːɾʲ,ˈuːɪɾʲ,0.67
