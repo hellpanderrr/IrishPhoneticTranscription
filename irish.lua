@@ -1,3 +1,4 @@
+
 -- irish_phonetics_43_lua_p_strict.lua
 -- Determine the directory of the current script
 local function getScriptDirectory()
@@ -104,7 +105,7 @@ else
         Parser = false,
         ParserSetup = false,
         LexicalLookup = false,
-        Performance = false
+        Performance = true
     }
 end
 
@@ -915,6 +916,15 @@ irishPhonetics.rules_stage1_preprocess = {
         end
     }, { p = N("%s+"), r = " " }, { p = N("�"), r = "" }
 }
+irishPhonetics.rules_stage1_5_ortho_cluster_simplification = {
+    { p = N("chn"), r = N("chr") },   -- e.g., chnáimh -> chráimh
+    { p = N("ghn"), r = N("ghr") },   -- e.g., ghníomh -> ghríomh
+    { p = N("tn"),  r = N("tr") },    -- e.g., tnúth -> trúth
+    { p = N("mhn"), r = N("mhr") },   -- e.g., mhná -> mhrá
+    { p = N("dhg"), r = N("g") },     -- e.g., Tadhg -> Tag
+    { p = N("mhth"),r = N("r") },     -- e.g., comhartha -> corartha
+    { p = N("bhth"),r = N("r") }      -- Similar simplification pattern
+}
 irishPhonetics.rules_stage2_mark_digraphs_and_vocalisation_triggers = {
     {
         p = N("^(d'fh)"), -- Match d'fh only at the beginning of a word
@@ -962,7 +972,9 @@ irishPhonetics.rules_stage2_mark_digraphs_and_vocalisation_triggers = {
             return ulen(a .. bh_mh .. pal_son)
         end
     },
-    { p = N("abh"),  r = N("MKR_ABH_VOC"), ortho_len = 3 },
+
+    { p = N("(" .. ALL_VOWELS_ORTHO_PATTERN .. ")(bh)(" .. ALL_VOWELS_ORTHO_PATTERN .. ")"), r = N("%1MKR_BH_INTERVOCALIC%3"), ortho_len = 2 },
+    { p = N("abh"), r = N("MKR_ABH_VOC"), ortho_len = 3 }, -- Existing rule as fallback
 
     {
         p = N("eidh(#?)$"),
@@ -980,11 +992,15 @@ irishPhonetics.rules_stage2_mark_digraphs_and_vocalisation_triggers = {
     p = N("ámh(#?)$"),
     r = function(m, c1) return N("MKR_AACTLNGVOCMFIN") .. (c1 or "") end,
     ortho_len = 3
-}, { p = N("eabh"), r = N("MKR_EAVOCB"), ortho_len = 4 }, {
+}, { p = N("eabh"), r = N("MKR_EAVOCB"), ortho_len = 4 }, 
+{
     p = N("amh(r)"),
     r = function(m, c1) return N("MKR_AVOCMMEDR") .. c1 end,
     ortho_len = 3
-}, {
+
+}, 
+
+{
     p = N("adh(#?)$"),
     r = function(m, c1) return N("MKR_AVOCDFIN") .. (c1 or "") end,
     ortho_len = 3
@@ -1163,6 +1179,13 @@ end
 
 
 irishPhonetics.rules_stage2_5_mark_suffixes = {
+    { p = N("(faidh)(#?)$"), r = function(fm, sfx, b) return N("MKR_SUFFIX_FAIDH") .. (b or "") end, ortho_len_func = function(fm, sfx, b) return ulen(sfx) end },
+{ p = N("(fad)(#?)$"),   r = function(fm, sfx, b) return N("MKR_SUFFIX_FAD") .. (b or "") end,   ortho_len_func = function(fm, sfx, b) return ulen(sfx) end },
+    {
+    p = N("(fas)(#?)$"),
+    r = function(fm, sfx, b) return N("MKR_SUFFIX_FAS") .. (b or "") end,
+    ortho_len_func = function(fm, sfx, b) return ulen(sfx) end
+},
     {
         p = N("([" .. CONSONANTS_ORTHO_CHARS_STR .. "])(lainn)(#?)$"),
         r = function(fm, c1, sfx, b)
@@ -1355,6 +1378,8 @@ irishPhonetics.rules_stage3_1_marker_resolution = {}
 do
     local rules = {
 
+{ p = N("MKR_BH_INTERVOCALIC"), r = N("w") }, -- Realizes as the consonant [w]
+
         {
             p = N("MKR_CH"),
             r = function(fm, ocs, omi)
@@ -1525,51 +1550,64 @@ do
         { p = N("MKR_PH"), r = function(fm, ocs, omi) return resolve_lenited_consonant(N("f'"), N("f"), fm, ocs, omi) end },
         {
             p = N("MKR_SH"),
-            r = function(fm, ocs, omi) -- The special dissimilation rule
-                if not omi or not omi.ortho_s or not omi.ortho_e then return N("h") end
-                local next_v_group = ""
+            r = function(fm, ocs, omi)
+                if not omi or not omi.ortho_e then return N("h") end
                 local scan_idx = omi.ortho_e + 1
+                local next_v_group = ""
+                while scan_idx <= ulen(ocs) do
+                    local char = usub(ocs, scan_idx, scan_idx)
+                    if umatch(char, "[" .. CONSONANTS_ORTHO_CHARS_STR .. "]") then
+                        scan_idx = scan_idx + 1
+                    else
+                        break
+                    end
+                end
                 while scan_idx <= ulen(ocs) do
                     local char = usub(ocs, scan_idx, scan_idx)
                     if umatch(char, ALL_VOWELS_ORTHO_PATTERN) then
                         next_v_group = next_v_group .. char
-                    elseif umatch(char, "[" .. CONSONANTS_ORTHO_CHARS_STR .. "]") then else
+                        scan_idx = scan_idx + 1
+                    else
                         break
                     end
-                    scan_idx = scan_idx + 1
                 end
-                local is_phonetically_front = false
-                if next_v_group ~= "" then
-                    local first_char = usub(next_v_group, 1, 1)
-                    if umatch(first_char, "[eiéí]") or usub(next_v_group, 1, 2) == "ea" then is_phonetically_front = true end
+                local quality = get_ortho_vowel_quality_implication_from_char_or_group(next_v_group, true)
+                if quality == 'slender' then
+                    return N("h")
+                else -- broad or nil
+                    return N("ç")
                 end
-                if is_phonetically_front then return N("h") else return N("ç") end
             end
         },
         {
             p = N("MKR_TH"),
-            r = function(fm, ocs, omi) -- The special dissimilation rule
-                if omi.ortho_e == ulen(ocs) then -- If it's word final
-                    return N("h") -- Or "" if you prefer silent final th
-                end
-                if not omi or not omi.ortho_s or not omi.ortho_e then return N("h") end
-                local next_v_group = ""
+            r = function(fm, ocs, omi)
+                if not omi or not omi.ortho_e then return N("h") end
                 local scan_idx = omi.ortho_e + 1
+                local next_v_group = ""
+                while scan_idx <= ulen(ocs) do
+                    local char = usub(ocs, scan_idx, scan_idx)
+                    if umatch(char, "[" .. CONSONANTS_ORTHO_CHARS_STR .. "]") then
+                        scan_idx = scan_idx + 1
+                    else
+                        break
+                    end
+                end
                 while scan_idx <= ulen(ocs) do
                     local char = usub(ocs, scan_idx, scan_idx)
                     if umatch(char, ALL_VOWELS_ORTHO_PATTERN) then
                         next_v_group = next_v_group .. char
-                    elseif umatch(char, "[" .. CONSONANTS_ORTHO_CHARS_STR .. "]") then else
+                        scan_idx = scan_idx + 1
+                    else
                         break
                     end
-                    scan_idx = scan_idx + 1
                 end
-                local is_phonetically_front = false
-                if next_v_group ~= "" then
-                    local first_char = usub(next_v_group, 1, 1)
-                    if umatch(first_char, "[eiéí]") or usub(next_v_group, 1, 2) == "ea" then is_phonetically_front = true end
+                local quality = get_ortho_vowel_quality_implication_from_char_or_group(next_v_group, true)
+                if quality == 'slender' then
+                    return N("h")
+                else -- broad or nil
+                    return N("ç")
                 end
-                if is_phonetically_front then return N("h") else return N("ç") end
             end
         },
         -- Strong Sonorants
@@ -1860,16 +1898,28 @@ irishPhonetics.rules_stage4_0_1_resolve_ch_marker = {
 
 irishPhonetics.rules_stage4_1_vocmark_to_temp_marker = {}
 irishPhonetics.rules_stage4_2_long_vowels_ortho_to_temp_marker = {
+      -- NEW: High-priority rules for long vowel digraphs to prevent hiatus errors.
+    -- These must run before the single-letter rules.
+    { p = N("éa"), r = N("MKR_E_ACT_LNG"), ortho_len = 2 },
+    { p = N("ío"), r = N("MKR_I_ACT_LNG"), ortho_len = 2 },
+    -- CORRECTED RULE for "iú": It now correctly maps to the long 'u' marker.
+    { p = N("iú"), r = N("MKR_U_ACT_LNG"), ortho_len = 2 },
+    { p = N("ae"), r = N("MKR_E_ACT_LNG"), ortho_len = 2 },
+    { p = N("eo"), r = N("MKR_O_ACT_LNG"), ortho_len = 2 },
+    { p = N("uí"), r = N("MKR_UI_LONG"),   ortho_len = 2 },
+    { p = N("úi"), r = N("MKR_U_ACT_LNG"),   ortho_len = 2 },
+
+
+    -- Existing rules for other digraphs and single accented vowels
     { p = N("ái"), r = N("MKR_A_I_ACT_LNG_RSLV") },
     { p = N("éi"), r = N("MKR_E_ACT_I_LNG") },
-    { p = N("iú"), r = N("MKR_I_U_SHT") }, { p = N("á"), r = N("MKR_A_ACT_LNG") },
-    { p = N("uí"), r = N("MKR_UI_LONG"), ortho_len = 2 },
-
-    { p = N("é"),            r = N("MKR_E_ACT_LNG") },
-    { p = N("í"),            r = N("MKR_I_ACT_LNG") },
-    { p = N("ó"),            r = N("MKR_O_ACT_LNG") },
-    { p = N("ú"),            r = N("MKR_U_ACT_LNG") },
+    { p = N("á"),  r = N("MKR_A_ACT_LNG") },
+    { p = N("é"),  r = N("MKR_E_ACT_LNG") },
+    { p = N("í"),  r = N("MKR_I_ACT_LNG") },
+    { p = N("ó"),  r = N("MKR_O_ACT_LNG") },
+    { p = N("ú"),  r = N("MKR_U_ACT_LNG") },
     { p = N("MKR_AIACTLNG"), r = N("MKR_A_I_ACT_LNG_RSLV") }
+    -- NOTE: The incorrect rule for "iú" -> "MKR_I_U_SHT" has been removed and replaced above.
 }
 irishPhonetics.rules_stage4_3_diphthongs_ortho_to_temp_marker = {
     { p = N("MKR_EOITRIGOLNG"),    r = N("MKR_EOI_TRIG_O_LNG") },
@@ -1880,15 +1930,17 @@ irishPhonetics.rules_stage4_3_diphthongs_ortho_to_temp_marker = {
     end
 }, { p = N("éa"), r = N("MKR_EA_COMPOUND_LONG_E") },
     { p = N("ae"), r = N("MKR_AE_SEQ") }, { p = N("ia"), r = N("MKR_IA_DIPH") },
-    { p = N("ua"), r = N("MKR_UA_DIPH") }, { p = N("ai"), r = N("MKR_AI_DIPH") },
+    { p = N("ua"), r = N("MKR_UA_DIPH") }, { p = N("ai"),
+    r = N("MKR_AI_DIPH") },
     { p = N("ei"), r = N("MKR_EI_DIPH") }, { p = N("oi"), r = N("MKR_OI_DIPH") },
     { p = N("ui"), r = N("MKR_UI_DIPH") }, { p = N("au"), r = N("MKR_AU_DIPH") },
     { p = N("ou"), r = N("MKR_OU_DIPH") }, { p = N("eo"), r = N("MKR_EO_SEQ") }
 }
 irishPhonetics.rules_stage4_4_resolve_temp_vowel_markers = {
+    { p = N("MKR_SUFFIX_FAIDH"), r = N("ə") }, -- or [iː] for some dialects
+    { p = N("MKR_SUFFIX_FAD"),   r = N("əd̪ˠ") },
     { p = N("MKR_ABH_VOC"), r = N("au") },
-
-    { p = N("MKR_I_U_SHT"), r = N("u") },
+    { p = N("MKR_SUFFIX_FAS"), r = N("həsˠ") },
     { p = N("MKR_SUFFIX_LAINN"), r = N("lən̠ʲ") },
     { p = N("MKR_EOBH_VOCALIZING"), r = N("ɔw") },
 
@@ -1975,7 +2027,12 @@ irishPhonetics.rules_stage4_4_resolve_temp_vowel_markers = {
     { p = N("MKR_A_FRM_BAINNE"), r = N("a") },
     { p = N("MKR_AI_DIPH(" .. ZZZ_N_STR_PAL_PHON .. ")$"), r = N("a%1") },
     { p = N("MKR_AI_DIPH(nm')"), r = N("a%1") },
-    { p = N("MKR_AI_DIPH"), r = N("ai") }, { p = N("MKR_EI_DIPH"), r = N("e") }, {
+   
+    { p = N("MKR_AI_DIPH"), r = N("a") },
+
+    { p = N("MKR_EI_DIPH"), r = N("e") }, -- Similarly, 'ei' often represents /e/ or /ɛ/.
+
+    {
     p = N("MKR_OI_DIPH(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*')"),
     r = N("ɛ%1")
 }, { p = N("MKR_OI_DIPH"), r = N("ɔ") },
@@ -1989,7 +2046,7 @@ irishPhonetics.rules_stage4_4_resolve_temp_vowel_markers = {
     { p = N("MKR_VOC_EABH_MED_R"), r = N("MKR_TEMP_CONN_AU") },
     { p = N("MKR_EA_PRE_BH_VOC"), r = N("a") },
     { p = N("MKR_IO_SHT_TRGT"), r = N("ɪ") },
-    { p = N("MKR_EACHTBRDFX"), r = N("axt") },
+    { p = N("MKR_EACHTBRDFX"), r = N("əxt") },
     { p = N("MKR_EA_BRD_SHT_PRE_CHT"), r = N("a") },
     { p = N("MKR_EA_SLN_PRE_CH"), r = N("æ") },
     { p = N("MKR_EA_SLN_PRE_NG"), r = N("æ") },
@@ -2220,95 +2277,66 @@ irishPhonetics.rules_stage4_5_contextual_allophony_on_phonetic = {
 
 }
 local process_vocalization_on_units_impl
-process_vocalization_on_units_impl = function(parsed_units, phon_word_input,
-                                              context)
-    if not parsed_units or #parsed_units < 2 then return false, parsed_units end -- Return original if no change
+process_vocalization_on_units_impl = function(parsed_units, phon_word_input, context)
+    if not parsed_units or #parsed_units < 2 then return false, parsed_units end
+
+    -- This map defines the Vowel+Fricative -> NewVowel transformations.
+    -- It is the core logic for this procedural stage.
+    local vocalization_map = {
+        -- Broad contexts (V + [w] or [ɣ])
+        [N("o") .. N("w")] = N("oː"),   -- e.g., comhair -> co(mh)air -> [koːrʲ]
+        [N("ʊ") .. N("w")] = N("uː"),   -- e.g., from omh/obh
+        [N("a") .. N("w")] = N("əu"),   -- e.g., amhras -> [əuɾˠəsˠ]
+        [N("a") .. N("ɣ")] = N("ai"),   -- e.g., adharc -> [airk]
+        [N("ʊ") .. N("ɣ")] = N("uː"),   -- e.g., chugham -> [xuːmˠ]
+
+        -- Slender contexts (V + [vʲ] or [j])
+        [N("ɛ") .. N("j")] = N("eː"),   -- e.g., théigh -> [heːj]
+        [N("ɪ") .. N("vʲ")] = N("iː"),  -- e.g., nimh -> [nʲiː]
+        [N("a") .. N("vʲ")] = N("ai")    -- e.g., saibhir -> [saiwɾʲ] (w is a variant)
+        -- Note: The output can be a diphthong or a long vowel.
+    }
+
     local modified_in_pass = false
     local new_units_build = {}
     local i = 1
     while i <= #parsed_units do
         local current_unit = parsed_units[i]
-        local next_unit = (i < #parsed_units) and parsed_units[i + 1] or nil
 
-        local v_phon = current_unit.phon
-        -- Check if current_unit.type is 'consonant' before trying to match fricatives
-        local is_v_fric = false
-        if current_unit.type == "consonant" then
-            is_v_fric = umatch(v_phon, "^[vjɣwˠ]")
-        end
+        if i > 1 and current_unit.type == "consonant" then
+            local prev_unit = new_units_build[#new_units_build] -- Get the last unit added
+            if prev_unit and prev_unit.type == "vowel" then
+                local fricative_to_check = current_unit.phon
+                -- Normalize w to vˠ for lookup consistency if needed, but direct match is better
+                if fricative_to_check == N("w") then fricative_to_check = N("vˠ") end
 
-        if is_v_fric and i > 1 then
-            local prev_unit = parsed_units[i - 1]
-            -- Ensure prev_unit exists and is a vowel
-            local is_prev_vowel = (prev_unit and prev_unit.type == "vowel") -- Changed .quality to .type
-            local is_next_vowel = next_unit and (next_unit.type == "vowel") -- Changed .quality to .type
-            local is_word_final = (i == #parsed_units)
+                local lookup_key = prev_unit.phon .. fricative_to_check
+                local replacement_vowel = vocalization_map[lookup_key]
 
-            if is_prev_vowel and (is_word_final or is_next_vowel) then
-                local new_phon_segment = v_phon       -- What the fricative itself might become
-                local replacement_action =
-                "modify_fricative"                    -- "modify_fricative", "replace_sequence", "delete_fricative"
-                local combined_replacement_phon = nil -- For "replace_sequence"
+                if replacement_vowel then
+                    debug_print_minimal("Stage4_4_1_VocalizeLenitedFricatives",
+                        "PROCEDURAL Vocalization: Replacing '",
+                        prev_unit.phon .. current_unit.phon, "' with '",
+                        replacement_vowel, "'")
 
-                if v_phon == N("vˠ") or v_phon == N("w") then
-                    combined_replacement_phon = N("əu")
-                    replacement_action = "replace_sequence"
-                elseif v_phon == N("vʲ") or v_phon == N("j") then
-                    -- [[FIX: For Vowel + slender v/j -> iː, this is often correct for -ibh, -imh, -igh, -idh]]
-                    -- However, ensure this doesn't overgeneralize.
-                    -- For now, let's assume this is generally intended.
-                    combined_replacement_phon = N("iː")
-                    replacement_action = "replace_sequence"
-                elseif v_phon == N("ɣ") then
-                    -- [[FIX: Specific handling for ɣ]]
-                    if prev_unit.phon == N("iː") then
-                        -- If preceded by iː (likely from ao, aoi), the ɣ is often just absorbed/deleted
-                        -- without changing iː to əi.
-                        new_phon_segment = "" -- Effectively delete the ɣ
-                        replacement_action = "delete_fricative"
-                    elseif prev_unit.phon == N("a") or prev_unit.phon == N("ɑ") or prev_unit.phon == N("ə") then -- e.g. aghaidh, adhaidh
-                        combined_replacement_phon = N("ai") -- or əi depending on desired output
-                        replacement_action = "replace_sequence"
-                    else
-                        -- Default vocalization for other V+ɣ might be əi, but this needs care
-                        combined_replacement_phon = N("əi")
-                        replacement_action = "replace_sequence"
-                    end
-                end
-
-                if replacement_action ~= "modify_fricative" or new_phon_segment ~= v_phon then
-                    if replacement_action == "replace_sequence" then
-                        debug_print_minimal("Stage4_4_1_VocalizeLenitedFricatives",
-                            "PROCEDURAL Vocalization: Replacing '",
-                            prev_unit.phon .. v_phon, "' with '",
-                            combined_replacement_phon, "'")
-                        table.remove(new_units_build) -- remove previous vowel
-                        table.insert(new_units_build, {
-                            phon = combined_replacement_phon,
-                            stress = prev_unit.stress, -- Keep stress from original vowel
-                            type = "vowel"
-                        })
-                        modified_in_pass = true
-                        i = i + 1 -- Skip the fricative that was consumed
-                        goto continue_vocalization_loop
-                    elseif replacement_action == "delete_fricative" then
-                        debug_print_minimal("Stage4_4_1_VocalizeLenitedFricatives",
-                            "PROCEDURAL Vocalization: Deleting fricative '",
-                            v_phon, "' after '", prev_unit.phon, "'")
-                        -- The fricative (current_unit) is simply not added to new_units_build
-                        modified_in_pass = true
-                        i = i + 1 -- Skip the deleted fricative
-                        goto continue_vocalization_loop
-                    end
+                    -- Modify the last unit added (the vowel) instead of removing and re-adding
+                    prev_unit.phon = replacement_vowel
+                    -- We have now consumed the current fricative, so we skip it.
+                    i = i + 1
+                    modified_in_pass = true
+                    goto continue_vocalization_loop -- Skip adding the fricative
                 end
             end
         end
+
+        -- If no rule applied, just add the current unit
         table.insert(new_units_build, current_unit)
         i = i + 1
         ::continue_vocalization_loop::
     end
 
     if modified_in_pass then
+        -- The function now returns a boolean and the modified table
         return true, new_units_build
     else
         return false, parsed_units -- Return original if no change
@@ -2505,7 +2533,6 @@ local function get_following_consonant_quality(all_units, vowel_idx)
     return "neutral"
 end
 
-local process_unstressed_reduction_on_units_impl
 -- Replace the existing process_unstressed_reduction_on_units_impl with this one.
 local process_unstressed_reduction_on_units_impl
 function process_unstressed_reduction_on_units_impl(phonetic_units, original_ortho_word)
@@ -2606,21 +2633,32 @@ irishPhonetics.rules_stage4_6_unstressed_vowel_reduction_specific_finals = {
     { p = N("iːə$"), r = N("iː") }
 }
 irishPhonetics.EPENTHESIS_TARGET_CLUSTERS_BROAD = {
-    [N("lk")] = true,
+    -- Sonorant + Voiced Stop (Heterorganic)
+    [N("rg")] = true,
+    [N("rb")] = true,
     [N("lg")] = true,
     [N("lb")] = true,
+    -- Sonorant + Voiced Fricative
     [N("lv")] = true,
+    -- Sonorant + Sonorant
     [N("rm")] = true,
-    [N("rx")] = true,
-    [N("rb")] = true,
-    [N("rg")] = true
+    [N("rn")] = true, -- Though often simplified, can trigger epenthesis
+    [N("lm")] = true
+    -- NOTE: Clusters with voiceless stops like 'lk', 'rk', 'rp' are intentionally OMITTED.
 }
 irishPhonetics.EPENTHESIS_TARGET_CLUSTERS_SLENDER = {
-    [N("lk")] = true,
-    [N("lf")] = true,
+    -- Sonorant + Voiced Stop (Heterorganic)
     [N("rg")] = true,
-    [N("rk")] = true,
+    [N("rb")] = true,
+    -- Sonorant + Voiced Fricative
+    [N("lv")] = true,
+    [N("rv")] = true,
+    -- Sonorant + Sonorant
+    [N("rm")] = true,
+    [N("rn")] = true,
+    [N("lm")] = true,
     [N("nm")] = true
+    -- NOTE: Clusters with voiceless stops like 'lk', 'rk', 'rp' are intentionally OMITTED.
 }
 
 local function process_epenthesis_on_units(parsed_units, phon_word_input,
@@ -3008,6 +3046,8 @@ irishPhonetics.rules_stage6_diacritics = {
 
 }
 irishPhonetics.rules_stage7_final_cleanup = {
+    { p = N("([ɑeiou]ː)[ɣçh]$"), r = N("%1") }, -- Delete final h/ç/ɣ after a long vowel
+
     { p = ZZZ_N_STR_PAL_PHON, r = N("n̠ʲ") },
     { p = ZZZ_N_STR_BRD_PHON, r = N("n̪ˠ") },
     { p = ZZZ_L_STR_PAL_PHON, r = N("l̠ʲ") },
@@ -3470,7 +3510,7 @@ function irishPhonetics.transcribe_single_word(orthographic_word_input)
     local current_word_phonetic
     local ortho_map = {}
 
-    -- Stage 1: PreProcess
+    -- Stage 1: PreProcess (Initial Cleaning)
     current_word_phonetic, ortho_map = apply_rules_to_string_generic(
         initial_cleaned_ortho_word,
         irishPhonetics.rules_stage1_preprocess,
@@ -3483,10 +3523,26 @@ function irishPhonetics.transcribe_single_word(orthographic_word_input)
         debug_print_minimal("PreProcess", "  END: Out=", current_word_phonetic)
     end
 
-    if not current_word_phonetic or current_word_phonetic == "" then return "" end
-    local original_ortho_for_context = current_word_phonetic
+    -- *** NEW: STAGE 1.5 - ORTHOGRAPHIC CLUSTER SIMPLIFICATION ***
+    -- This stage runs directly on the orthography before any phonetic conversion.
+    local processed_ortho_word = current_word_phonetic
+    local stage_name_1_5 = "Stage1_5_Ortho_Cluster_Simplification"
+    if STAGE_DEBUG_ENABLED[stage_name_1_5] then
+        debug_print_minimal(stage_name_1_5, "  START: In=", processed_ortho_word)
+    end
+    for _, rule in ipairs(irishPhonetics.rules_stage1_5_ortho_cluster_simplification) do
+        processed_ortho_word = ugsub(processed_ortho_word, rule.p, rule.r)
+    end
+    if STAGE_DEBUG_ENABLED[stage_name_1_5] then
+        debug_print_minimal(stage_name_1_5, "  END: Out=", processed_ortho_word)
+    end
+    -- The result of this stage becomes the new orthographic context for all subsequent stages.
+    local original_ortho_for_context = processed_ortho_word
 
-    -- Lexical Lookup
+
+    if not current_word_phonetic or current_word_phonetic == "" then return "" end
+
+    -- Lexical Lookup (uses the *original* cleaned word for matching)
     local exception_key_direct = current_word_phonetic
     local exception_key_no_apostrophe = ugsub(current_word_phonetic, "^'", "")
     if lexical_exceptions_connacht[exception_key_direct] then
@@ -4013,6 +4069,7 @@ else
             -- (though the current errors might be from rules before map degradation)
             "Gaedhilge" -- Expected: ˈɡeːlʲɟə, Script: ˈɟeːjɪlʲɟɛ
         }
+        words_to_test_focused_from_errors = {"thua","thug","thugainn","thuig","thur","thángthas","théigh","thóg","thóir","thú","thúis","tuíodóireacht","tá a fhios ag","téigh","téigh","uafás","uaigh","uaigh","uaigh","uaimh","uainn","uath","umhal","veigeán","vác","yé","Ó Cathasaigh","áibhirseoir","áith","áitithe","áitithe","átha","éagrábhadh","éilítear","ógfhear","úth",}
 
         original_print_func(
             "\n--- Running Default Test Set (No Input Provided) ---")
@@ -4049,3 +4106,4 @@ else
 end
 
 return irishPhonetics
+

@@ -295,7 +295,11 @@ df[[
 1360 #77.885 #
 1284 #79.08 # 0.906
 1381 #79.936 #0.919
-1403 #80.05 #0.92
+1403 #80.05 #0.9222
+1440 #80.20 #0.924
+1497  #79.884 #0.9271
+1771  #80.69 #0.9394223797573743
+1774 #80.68 #0.9394
 from fuzzywuzzy import fuzz
 import panphon.distance as D
 x = D.Distance()
@@ -319,4 +323,5 @@ json.dump(df[df.ipa.str.replace(r"[ˠʲˈ']", '', regex=True).str[0] != df.resul
 
 df[df.ipa.str.replace(r"[ˠʲˈ']", '', regex=True).str[0] != df.results.str.replace(r"[ˠʲˈ']", '', regex=True).str[0]].sample(1000).sort_values('word').to_csv('errors_42.csv')
 
+df.dropna(subset='ipa').groupby('word').filter(lambda x:x.match.min()<0.7).round(2).to_csv('errors.csv',index=False)
 

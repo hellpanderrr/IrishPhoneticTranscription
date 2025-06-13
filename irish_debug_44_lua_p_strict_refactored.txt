@@ -1,0 +1,41 @@
+﻿
+--- Running Default Test Set (No Input Provided) ---
+
+--- Transcribing: sheol ---
+    MIN_DBG (PreProcess):   END: Out=	sheol
+    MIN_DBG (PreProcess): Start of main stages loop. Input to OrthoClusterSimplification: [sheol]
+    MIN_DBG (OrthoClust):   OrthoClusterSimplification START: In=	sheol	 Map size: 	0
+    MIN_DBG (OrthoClust):  END: Out=	sheol	 Map size: 	0
+    MIN_DBG (Stage2_5_M):   Stage2_5_MarkSuffixes START: In=	sheol	 Map size: 	0
+    MIN_DBG (Stage2_5_M):  END: Out=	sheol	 Map size: 	5
+    MIN_DBG (Stage2_5_M): Af. Stage2_5_MarkSuffixes: [sheol]
+    MIN_DBG (MarkDigrap):   MarkDigraphsAndVocalisationTriggers START: In=	sheol	 Map size: 	5
+    MIN_DBG (MarkDigrap):  END: Out=	MKR_SHMKR_EO_VOWELl	 Map size: 	3
+    MIN_DBG (MarkDigrap): Af. MarkDigraphsAndVocalisationTriggers: [MKR_SHMKR_EO_VOWELl]
+    MIN_DBG (Stage3_1_M):   Stage3_1_MarkerResolution START: In=	MKR_SHMKR_EO_VOWELl	 Map size: 	3
+    MIN_DBG (ConsonantR): Resolving <sh> in 'sheol'. Found vowel group: 'eo'. Determined quality -> slender
+    MIN_DBG (Stage3_1_M):  END: Out=	hMKR_EO_VOWELl	 Map size: 	3
+    MIN_DBG (Stage3_1_M): Af. Stage3_1_MarkerResolution: [hMKR_EO_VOWELl]
+    MIN_DBG (ConsonantR): DEBUG DETERMINE_C_QUAL (Fallback): For 'l' in 'sheol' (idx 5): next_v_group=''(nil), prev_v_group='eo'(broad) -> broad
+    MIN_DBG (Stage3_2_A):   ApplyStress START: In=	hMKR_EO_VOWELl	 (Original Ortho: '	sheol	') Map size: 	3
+    MIN_DBG (Stage3_2_A): ApplyStress: Adding stress to '	ˈhMKR_EO_VOWELl	'.
+    MIN_DBG (Stage3_2_A): Ortho map updated after stress application. Old map size: 3 -> New map size: 4
+    MIN_DBG (Stage3_2_A):  END: Out=	ˈhMKR_EO_VOWELl	 Map size: 	4
+    MIN_DBG (Stage3_2_A): Af. Stage3_2_ApplyStress: [ˈhMKR_EO_VOWELl]
+    MIN_DBG (Stage4_0_S):   Stage4_0_SpecificOrthoToTempMarker START: In=	ˈhMKR_EO_VOWELl	 Map size: 	4
+    MIN_DBG (Stage4_0_S):  END: Out=	ˈhMKR_EO_VOWELl	 Map size: 	4
+    MIN_DBG (Stage4_0_1):   Stage4_0_1_Resolve_CH_Marker START: In=	ˈhMKR_EO_VOWELl	 Map size: 	4
+    MIN_DBG (Stage4_0_1):  END: Out=	ˈhMKR_EO_VOWELl	 Map size: 	4
+    MIN_DBG (Stage4_1_V):   Stage4_1_VocmarkToTempMarker START: In=	ˈhMKR_EO_VOWELl	 Map size: 	4
+    MIN_DBG (Stage4_1_V):  END: Out=	ˈhMKR_EO_VOWELl	 Map size: 	4
+    MIN_DBG (Stage4_2_L):   Stage4_2_LongVowelsOrthoToTempMarker START: In=	ˈhMKR_EO_VOWELl	 Map size: 	4
+    MIN_DBG (Stage4_2_L):  END: Out=	ˈhMKR_EO_VOWELl	 Map size: 	4
+    MIN_DBG (Stage4_3_D):   Stage4_3_DiphthongsOrthoToTempMarker START: In=	ˈhMKR_EO_VOWELl	 Map size: 	4
+    MIN_DBG (Stage4_3_D):  END: Out=	ˈhMKR_EO_VOWELl	 Map size: 	4
+    MIN_DBG (Stage4_4_R):   Stage4_4_ResolveTempVowelMarkers START: In=	ˈhMKR_EO_VOWELl	 Map size: 	4
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	MKR_EO_VOWEL	' APPLIED to '	ˈhMKR_EO_VOWELl	' -> '	ˈhoːl	' (	1	x)
+    MIN_DBG (Stage4_4_R): WARN: Ortho map may be misaligned after iterative_gsub. Rebuilding basic map for stage: Stage4_4_ResolveTempVowelMarkers
+    MIN_DBG (Stage4_4_R):  END: Out=	ˈhoːl	 Map size: 	1
+    MIN_DBG (Stage4_4_R): Af. Stage4_4_ResolveTempVowelMarkers: [ˈhoːl]
+    MIN_DBG (Stage4_4_1):   Stage4_4_1_VocalizeLenitedFricatives START (Proc Helper): In=	ˈhoːl
+    MIN_DBG (Stage4_4_1):  END (no change by unit_processor): Out=	ˈhoːl
