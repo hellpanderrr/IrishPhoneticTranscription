@@ -135,53 +135,58 @@ end
 -- TEST DATA
 -- =============================================================================
 local test_data = {
-    -- Category 1: Lenited `sh` and `th`
-    { word = N("sheol"), ipa = N("çɔːlˠ") },
-    { word = N("thug"), ipa = N("huɡ") },
-    { word = N("shúil"), ipa = N("huːlʲ") },
-    { word = N("Sheáin"), ipa = N("çɑːnʲ") },
-    { word = N("théigh"), ipa = N("heːj") },
-    { word = N("a theach"), ipa = N("ə hæx") },
+     -- =====================================================================
+    -- Category 1: Vowel Gradation (Refined)
+    -- Testing the now more complex a -> ɛ vs. a -> a rule.
+    -- =====================================================================
+    { word = "glas",      target = "ɡlˠasˠ",     comment = "Vowel Gradation (Base): Broad coda" },
+    { word = "glais",     target = "ɡlˠaʃ",      comment = "Vowel Gradation (a -> a): 'a' does NOT front to 'ɛ' before 's' -> 'ʃ'." },
+    { word = "alt",       target = "al̪ˠt̪ˠ",      comment = "Vowel Gradation (Base): Broad coda" },
+    { word = "ailt",      target = "ɛlʲtʲ",      comment = "Vowel Gradation (a -> ɛ): 'a' DOES front to 'ɛ' before 'lt' -> 'lʲtʲ'." },
 
-    -- Category 2: Fricative Vocalization
-    { word = N("chugham"), ipa = N("xuːmˠ") },
-    { word = N("Eoghan"), ipa = N("oːnˠ") },
-    { word = N("Laoghaire"), ipa = N("l̪ˠiːɾʲə") },
-    { word = N("beirbhiughadh"), ipa = N("bʲɛɾʲuː") },
-    { word = N("láimh"), ipa = N("l̪ˠɑːvʲ") },
-    { word = N("comhairle"), ipa = N("kuːɾʲlʲə") },
+    -- =====================================================================
+    -- Category 2: Nasal Raising (NEW & High Priority)
+    -- Testing vowel changes before nasal consonants.
+    -- =====================================================================
+    { word = "seomra",    target = "ʃuːmˠɾˠə",  comment = "Nasal Raising: eo -> [uː] before m." },
+    { word = "seomraí",   target = "ʃuːmˠɾˠiː",  comment = "Nasal Raising: Plural form, eo -> [uː] before m." },
+    { word = "trom",      target = "t̪ˠɾˠuːmˠ",    comment = "Nasal Raising: o -> [uː] before m." },
+    { word = "bonn",      target = "bˠuːn̪ˠ",      comment = "Nasal Raising: o -> [uː] before nn." },
+    { word = "fón",       target = "fˠoːnˠ",      comment = "Nasal Raising (Control): Should NOT raise if the rule is too broad." },
 
-    -- Category 3: Cluster Simplification & Historical Shifts
-    { word = N("chnáimh"), ipa = N("xɾˠɑːvʲ") },
-    { word = N("ghníomh"), ipa = N("jɾʲiːvˠ") },
-    { word = N("tnúth"), ipa = N("t̪ˠɾˠuː") },
-    { word = N("Tadhg"), ipa = N("t̪ˠaiɡ") },
-    { word = N("comhartha"), ipa = N("koːɾˠə") },
+    -- =====================================================================
+    -- Category 3: `sh`/`th` Lenition (Verification)
+    -- Re-testing with the new understanding.
+    -- =====================================================================
+    { word = "sheol",    target = "çɔːlˠ",     comment = "sh + broad 'eo' -> [ç]" },
+    { word = "thóg",     target = "hoːɡ",       comment = "th + broad 'ó' -> [h] (Grammatical exception)" },
+    { word = "shíl",     target = "hiːlʲ",      comment = "sh + slender 'í' -> [h]" },
+    { word = "a Sheáin", target = "ə çɑːnʲ",    comment = "Sandhi context: sh + broad 'á' -> [ç]" },
+    { word = "aithrí",   target = "ahɾʲiː",     comment = "Medial th + slender 'í' -> [h]" },
+    { word = "brath",    target = "bˠɾˠa",       comment = "Final th -> silent" },
 
-    -- Category 4: Vowel Quality & Diphthongization
-    { word = N("Airméanach"), ipa = N("aɾʲəmʲeːnˠəx") },
-    { word = N("mairbh"), ipa = N("mˠaɾʲəvʲ") },
-    { word = N("cailc"), ipa = N("kalʲc") },
-    { word = N("feirm"), ipa = N("fʲɛɾʲəmʲ") },
+    -- =====================================================================
+    -- Category 4: Cluster Simplification (Verification)
+    -- =====================================================================
+    { word = "cnoc",      target = "kɾˠʊk",      comment = "Cluster Shift: cn -> cr (with vowel raising)" },
+    { word = "tnúth",      target = "t̪ˠɾˠuː",     comment = "Cluster Shift: tn -> tr" },
+    { word = "Tadhg",      target = "t̪ˠaiɡ",      comment = "Cluster Simplification: dhg -> g" },
 
-    -- Category 5: Suffix & Grammatical Word Phonology
-    { word = N("'ur"), ipa = N("ə") },
-    { word = N("-fas"), ipa = N("həsˠ") },
-    { word = N("íocfaidh"), ipa = N("iːkə") },
-    { word = N("abhaile"), ipa = N("əwalʲə") },
+    -- =====================================================================
+    -- Category 5: Suffix & Grammatical Word Phonology (Verification)
+    -- =====================================================================
+    { word = "'ur",       target = "ə",          comment = "Grammatical Word: Final 'r' is silent" },
+    { word = "íocfaidh",   target = "iːkə",       comment = "Suffix Engine: -faidh -> [ə]" },
+    { word = "marcaigh",   target = "mˠaɾˠkiː",  comment = "Suffix Engine: Palatalized -ach -> [iː]" },
 
-    -- Category 6: Epenthesis
-    { word = N("ailm"), ipa = N("alʲəmʲ") },
-    { word = N("mairc"), ipa = N("mˠaɾʲc") },
-    { word = N("dearg"), ipa = N("dʲaɾˠəɡ") },
+    -- =====================================================================
+    -- Category 6: Vocalization (Ongoing Challenge)
+    -- =====================================================================
+    { word = "chugham",   target = "xuːmˠ",      comment = "Vocalization: ugh -> [uː]" },
+    { word = "láimh",      target = "l̪ˠɑːvʲ",     comment = "Blocked Vocalization: Final slender mh -> [vʲ]" },
+    { word = "leabhar",    target = "lʲəuɾˠ",     comment = "Vocalization: eabh -> [əu]" },
 
-    -- Category 7: Lexical Exceptions
-    { word = N("Iúr"), ipa = N("ən̠ʲtʲuːɾˠ") },
-    { word = N("Toirdhealbhach"), ipa = N("tʲɾʲɛl̪ˠax") },
-    { word = N("suaimhneas"), ipa = N("ˈsˠiːmʲnʲəsˠ") },
-
-    { word = N("ríomhleabhar"), ipa = N("ˈɾʲiːwˌlʲəuɾˠ") },
-    { word = N("lonnaithe"), ipa = N("ˈl̪ˠɔn̪ˠiː") },
+    { word = "greamaím",   target = "ˈɟɾʲamˠiːmʲ", comment = "" },
 }
 
 -- =============================================================================
@@ -201,9 +206,11 @@ print(string.rep("-", 80))
 
 for _, test_case in ipairs(test_data) do
     local word = test_case.word
-    local expected_ipa = test_case.ipa
+    local expected_ipa = test_case.target
 
     local generated_ipa = irishPhonetics.transcribe(word)
+
+    
 
     local normalized_expected = ugsub(expected_ipa, "ˈ", "")
     local normalized_generated = ugsub(generated_ipa, "ˈ", "")

@@ -254,16 +254,20 @@ df[df.ipa.str.replace(r"[ˠʲˈ']", '', regex=True).str[0] != df.results.str.rep
 
 ws = df.word
 results = []
-for batch in [ws[i:i+100] for i in range(0,len(ws),100)]:
+for batch in [ws[i:i+1] for i in range(0,len(ws),1)]:
     with_spaces = batch[batch.str.split(' ').apply(len)>1]
     without_spaces = batch[batch.str.split(' ').apply(len)==1]
     results_no_spaces = get_transcription(' '.join(without_spaces)).split(' ')
     results_spaces = [get_transcription(i) for i in with_spaces]
-    no_space = pd.concat([without_spaces,pd.Series(results_no_spaces,index=without_spaces.index,name='results')],axis=1)
+    if len(without_spaces) == 0:
+        space = pd.concat([with_spaces,pd.Series(results_spaces,index=with_spaces.index,name='results')],axis=1)
+        results.append(space)
+        continue
+    no_space = pd.concat([without_spaces,pd.Series(results_no_spaces,index=without_spaces,name='results')],axis=1)
     space = pd.concat([with_spaces,pd.Series(results_spaces,index=with_spaces.index,name='results')],axis=1)
     final = pd.concat([no_space,space])
     results.append(final)
-df['results'] = pd.concat(results).results
+df['results'] = pd.concat(results).results.dropna().values
 
 
 
@@ -300,14 +304,17 @@ df[[
 1497  #79.884 #0.9271
 1771  #80.69 #0.9394223797573743
 1774 #80.68 #0.9394
+2312 #81.99 #0.9286 --nans
+2321 #83.07  # 0.941
 from fuzzywuzzy import fuzz
 import panphon.distance as D
-x = D.Distance()
+
 df['match']= [
     0 if pd.isna(ipa) or pd.isna(res) or res == '' 
     else (fuzz.partial_ratio(res ,  ipa) )
     for ipa, res in zip(df['ipa'],  df['results'])
 ];df['match'].mean()
+x = D.Distance()
 df['match']= [
     0 if pd.isna(ipa) or pd.isna(res) or res == '' 
     else (1 - x.dolgo_prime_distance_div_maxlen(res ,  ipa) if len(ipa.replace(' ~ ',', ').split(', '))==1 else 
@@ -325,3 +332,4 @@ df[df.ipa.str.replace(r"[ˠʲˈ']", '', regex=True).str[0] != df.results.str.rep
 
 df.dropna(subset='ipa').groupby('word').filter(lambda x:x.match.min()<0.7).round(2).to_csv('errors.csv',index=False)
 
+df.to_csv('match.csv')
