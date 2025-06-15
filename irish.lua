@@ -43,73 +43,9 @@ local ulower, usub, ulen, ufind, umatch, ugsub, ugmatch, N = ustring_lib.lower,
     ustring_lib.gmatch,
     ustring_lib.toNFC
 
--- Debug output file setup
-local debug_file_path = "irish_debug_43_lua_p_strict.txt"
-local debug_file = io.open(debug_file_path, "w")
-if debug_file then
-    debug_file:write("\239\187\191")
-else
-    original_print("WARN: Could not open debug_file " .. debug_file_path)
-end
-local original_print_func = print
 
--- Debug Flags
-MINIMAL_DEBUG_ENABLED = false
-if MINIMAL_DEBUG_ENABLED then
-    STAGE_DEBUG_ENABLED = {
-        PreProcess = false,
-        MarkDigraphsAndVocalisationTriggers = false,
-        Stage2_5_MarkSuffixes = false,
-        ConsonantResolution = false,
-        Stage4_0_SpecificOrthoToTempMarker = false,
-        Stage4_0_1_Resolve_CH_Marker = false,
-        Stage4_1_VocmarkToTempMarker = false,
-        Stage4_2_LongVowelsOrthoToTempMarker = false,
-        Stage4_3_DiphthongsOrthoToTempMarker = false,
-        Stage4_4_ResolveTempVowelMarkers = false,
-        Stage4_4_1_VocalizeLenitedFricatives = false,
-        Stage4_5_ContextualAllophonyOnPhonetic = false,
-        Stage4_5_1_DisyllabicShortLongRaising = false,
-        Stage4_5_2_ConnachtSpecificVowelShifts = false,
-        Nasalization = false,
-        Stage4_6_UnstressedVowelReduction_Procedural = false,
-        EpenthesisAndStrongSonorants = false,
-        Diacritics = false,
-        FinalCleanup = false,
-        Parser = false,
-        ParserSetup = false,
-        LexicalLookup = false,
-        Performance = false
-    }
-else
-    STAGE_DEBUG_ENABLED = {
-        PreProcess = false,
-        MarkDigraphsAndVocalisationTriggers = true,
-        Stage2_5_MarkSuffixes = true,
-        Stage3_1_MarkerResolution = true,
-        ConsonantResolution = true,
-        Stage3_2_ApplyStress = true,
-        Stage4_0_SpecificOrthoToTempMarker = true,
-        Stage4_0_1_Resolve_CH_Marker = true,
-        Stage4_1_VocmarkToTempMarker = true,
-        Stage4_2_LongVowelsOrthoToTempMarker = true,
-        Stage4_3_DiphthongsOrthoToTempMarker = true,
-        Stage4_4_ResolveTempVowelMarkers = true,
-        Stage4_4_1_VocalizeLenitedFricatives = true,
-        Stage4_5_ContextualAllophonyOnPhonetic = true,
-        Stage4_5_1_DisyllabicShortLongRaising = true,
-        Stage4_5_2_ConnachtSpecificVowelShifts = true,
-        Nasalization = true,
-        Stage4_6_UnstressedVowelReduction_Procedural = true,
-        EpenthesisAndStrongSonorants = true,
-        Diacritics = true,
-        FinalCleanup = true,
-        Parser = false,
-        ParserSetup = false,
-        LexicalLookup = false,
-        Performance = false
-    }
-end
+
+
 
 print = function(...)
     local msg = table.concat({ ... }, "\t")
@@ -323,65 +259,7 @@ local lexical_exceptions_connacht = {
 
 }
 
-local UNSTRESSED_WORDS_AND_SUFFIXES = {
-    ["'un"] = true,
-    ["un"] = true,
-    ["'ur"] = true,
-    ["ur"] = true,
-    ["-as"] = true,
-    ["-sa"] = true,
-    ["-se"] = true,
-    ["-ne"] = true,
-    ["-na"] = true,
-    ["-im"] = true,
-    ["-fas"] = true,
-    ["-fá"] = true,
-    ["-fí"] = true,
-    ["-tá"] = true,
-    ["-ím"] = true,
-    ["bhur"] = true,
-    ["-óidh"] = true,
-    ["-ithe"] = true,
-    ["-aimid"] = true,
-    ["-aíonn"] = true,
-    ["-idís"] = true, -- Added from new JSON
-    ["a"] = true,
-    ["a'"] = true,
-    ["a-"] = true,
-    ["ab"] = true,
-    ["ach"] = true,
-    ["ad"] = true,
-    ["ag"] = true,
-    ["an"] = true,
-    ["ar"] = true,
-    ["as"] = true,
-    ["ba"] = true,
-    ["bh"] = true,
-    ["bhf"] = true,
-    ["ch"] = true,
-    ["de"] = true,
-    ["do"] = true,
-    ["dh"] = true,
-    ["dh'"] = true,
-    ["go"] = true,
-    ["gh"] = true,
-    ["i"] = true,
-    ["is"] = true,
-    ["le"] = true,
-    ["mar"] = true,
-    ["mh"] = true,
-    ["ní"] = true,
-    ["níl"] = true,
-    ["os"] = true,
-    ["ó"] = true,
-    ["ph"] = true,
-    ["sa"] = true,
-    ["se"] = true,
-    ["sh"] = true,
-    ["th"] = true,
-    ["th'"] = true,
-    ["um"] = true
-}
+local UNSTRESSED_WORDS_AND_SUFFIXES={["'un"]=true,["un"]=true,["'ur"]=true,["ur"]=true,["-as"]=true,["-sa"]=true,["-se"]=true,["-ne"]=true,["-na"]=true,["-im"]=true,["-fas"]=true,["-fá"]=true,["-fí"]=true,["-tá"]=true,["-ím"]=true,["bhur"]=true,["-óidh"]=true,["-ithe"]=true,["-aimid"]=true,["-aíonn"]=true,["-idís"]=true,["a"]=true,["a'"]=true,["a-"]=true,["ab"]=true,["ach"]=true,["ad"]=true,["ag"]=true,["an"]=true,["ar"]=true,["as"]=true,["ba"]=true,["bh"]=true,["bhf"]=true,["ch"]=true,["de"]=true,["do"]=true,["dh"]=true,["dh'"]=true,["go"]=true,["gh"]=true,["i"]=true,["is"]=true,["le"]=true,["mar"]=true,["mh"]=true,["ní"]=true,["níl"]=true,["os"]=true,["ó"]=true,["ph"]=true,["sa"]=true,["se"]=true,["sh"]=true,["th"]=true,["th'"]=true,["um"]=true}
 
 local function get_original_indices_from_map(phon_s_target, phon_e_target, current_map)
     if not current_map or #current_map == 0 or phon_s_target <= 0 then
@@ -2139,112 +2017,100 @@ placeholder_creation_rules_stage4_5 = {
     { p = N("æː"), r = N("MKR_PHON_AE_LONG") }
 }
 core_allophony_rules_for_stage4_5 = {
-
-    -- It looks for a long 'o' followed by a nasal consonant.
-    -- NEW: Nasal Raising Rules (Strict Lua 5.1 Patterns)
-    -- These rules must be at the top to run before general vowel rules.
     -- =====================================================================
+    -- NEW: Nasal Raising Rules (High Priority)
+    -- These rules handle the raising and lengthening of vowels before nasals.
+    -- =====================================================================
+
+    -- Case 1: /ɔ/ (from 'o') or /ʌ/ (from 'o'/'u') before broad 'm' -> [uː]
+    -- Example: trom -> [t̪ˠɾˠuːmˠ]
     {
-        p = N("(oː)(m['ˠ]?)"), -- Case 1: Long /oː/ before /m/
-        r = N("uː%2")         -- Result: [uː] + the original m
+        p = N("([ɔʌ])(mˠ)"), -- Matches ɔ or ʌ before a broad m
+        r = N("uː%2")
     },
+
+    -- Case 2: /ɔ/ or /ʌ/ before broad 'nn' (represented by our marker) -> [uː]
+    -- Example: donn -> [d̪ˠuːn̪ˠ]
     {
-        p = N("(ʊ)(m['ˠ]?)"),  -- Case 2: Short /ʊ/ (from u/o) before /m/
-        r = N("uː%2")         -- Result: [uː] + the original m
+        p = N("([ɔʌ])(" .. ZZZ_N_STR_BRD_PHON .. ")"),
+        r = N("uː%2")
     },
+
+    -- Case 3: /a/ before broad 'nn' or 'm' -> [ɑː]
+    -- Example: crann -> [kɾˠɑːn̪ˠ], am -> [ɑːmˠ] (in some contexts)
     {
-        p = N("(ʌ)(m['ˠ]?)"),  -- Case 3: Short /ʌ/ (from u/o) before /m/
-        r = N("uː%2")         -- Result: [uː] + the original m
-    },
-    -- You can add similar rules for raising before 'n' if needed, e.g.:
-     --{ p = N("(oː)(n['ˠ]?)"), r = N("uː%2") },
-    -- NEW: Specific Vowel Gradation Rules (a -> ɛ)
-    -- These handle cases like 'ailt' while leaving 'glais' untouched.
-    -- Each rule targets a specific cluster known to cause this fronting.
-     {
-        p = N("(a)(l't')"), -- Matches 'a' before slender 'lt'
-        r = N("ɛ%2")
-    },
-    {
-        p = N("(a)(r'd')"), -- Matches 'a' before slender 'rd'
-        r = N("ɛ%2")
-    },
-    {
-        p = N("(a)(l'c)"),  -- Matches 'a' before slender 'lc'
-        r = N("ɛ%2")
+        p = N("(a)(mˠ)"),
+        r = N("ɑː%2")
     },
     {
-        p = N("(a)(r'c)"),  -- Matches 'a' before slender 'rc'
-        r = N("ɛ%2")
+        p = N("(a)(" .. ZZZ_N_STR_BRD_PHON .. ")"),
+        r = N("ɑː%2")
     },
-    -- Add other specific clusters here as you identify them from data.
-    -- For example, if 'a' before 'n't'' also becomes 'ɛ':
-    -- { p = N("(a)(n't')"), r = N("ɛ%2") },
+
+    -- Case 4: /a/ before broad 'ng' -> [au] diphthong
+    -- Example: teanga -> [tʲaŋə] -> [tʲauŋə]
     {
-        -- This pattern matches a broad 'v' (i.e., not followed by a ' marker)
-        -- that is at the beginning of a word (or after a stress marker)
-        -- and is followed by a vowel.
-        p = N("^(ˈ?)v([" .. ALL_SINGLE_PHONETIC_VOWEL_CHARS_STR .. "])"),
-        r = N("%1w%2")
+        p = N("(a)(ŋ)"),
+        r = N("au%2")
     },
-    { p = N("^(ˈ?)o(sp')"), r = "%1ɔ%2" }, { p = N("(st')i"), r = "%1ʊ" },
-    { p = N("MKR_PHON_Y_LONG"), r = N("MKR_PHON_I_LONG") }, {
-    p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "[']?)([ou])([kgxɣ])"),
-    r = "%1ʊ%3"
-},
+
+    -- =====================================================================
+    -- Existing Allophony Rules (Now run after Nasal Raising)
+    -- =====================================================================
+
+    -- Vowel Gradation (a -> ɛ) before specific slender clusters
+    { p = N("(a)(l't')"), r = N("ɛ%2") },
+    { p = N("(a)(r'd')"), r = N("ɛ%2") },
+    { p = N("(a)(l'c)"),  r = N("ɛ%2") },
+    { p = N("(a)(r'c)"),  r = N("ɛ%2") },
+
+    -- Broad 'v' (from bh/mh) vocalization to 'w'
+    { p = N("^(ˈ?)vˠ([" .. ALL_SINGLE_PHONETIC_VOWEL_CHARS_STR .. "])"), r = N("%1w%2") },
+
+    -- Specific contextual rules
+    { p = N("^(ˈ?)o(sp')"), r = "%1ɔ%2" },
+    { p = N("(st')i"), r = "%1ʊ" },
+    { p = N("MKR_PHON_Y_LONG"), r = N("MKR_PHON_I_LONG") },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "[']?)([ou])([kgxɣ])"), r = "%1ʊ%3" },
     { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])(a)(r)$"), r = "%1a%3" },
     { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])(a)(R)$"), r = "%1a%3" },
-    {
-        p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])(a)(" ..
-            BROAD_CONSONANT_PHONETIC_CLASS_NO_CAPTURE:gsub("[rR]", "") ..
-            ")"),
-        r = "%1ɑ%3"
-    }, {
-    p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])(a)(" ..
-        BROAD_CONSONANT_PHONETIC_CLASS_NO_CAPTURE:gsub("[rR]", "") ..
-        ")$"),
-    r = "%1ɑ%3"
-}, {
-    p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])(a)([^" ..
-        ANY_CONSONANT_PHONETIC_RAW_CHARS_STR .. "rR]?)$"),
-    r = "%1æ%3"
-}, { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])(a)"), r = "%1æ" },
-    { p = N("a"),                                                r = N("a") }, { p = N("e"), r = N("ɛ") },
-    { p = N("i"), r = N("ɪ") }, { p = N("o"), r = N("ʊ") },
-    { p = N("u"), r = N("ʊ") }, { p = N("(v')([aæ])"), r = "%1%2" },
-    { p = N("t(æ)"),                 r = "t'%1" }, { p = N("l(MKR_PHON_I_LONG)"), r = "l'%1" },
-    { p = N("d(l'MKR_PHON_I_LONG)"), r = "d'%1" }, { p = N("n(iv')"), r = "n'%1" },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])(a)(" .. BROAD_CONSONANT_PHONETIC_CLASS_NO_CAPTURE:gsub("[rR]", "") .. ")"), r = "%1ɑ%3" },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])(a)(" .. BROAD_CONSONANT_PHONETIC_CLASS_NO_CAPTURE:gsub("[rR]", "") .. ")$"), r = "%1ɑ%3" },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])(a)([^" .. ANY_CONSONANT_PHONETIC_RAW_CHARS_STR .. "rR]?)$"), r = "%1æ%3" },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])(a)"), r = "%1æ" },
+
+    -- Default short vowel realizations (these are now fallbacks)
+    { p = N("a"), r = N("a") },
+    { p = N("e"), r = N("ɛ") },
+    { p = N("i"), r = N("ɪ") },
+    { p = N("o"), r = N("ɔ") }, -- Default for 'o' is now ɔ
+    { p = N("u"), r = N("ʊ") }, -- Default for 'u' is ʊ
+
+    -- Other specific rules
+    { p = N("(v')([aæ])"), r = "%1%2" },
+    { p = N("t(æ)"), r = "t'%1" },
+    { p = N("l(MKR_PHON_I_LONG)"), r = "l'%1" },
+    { p = N("d(l'MKR_PHON_I_LONG)"), r = "d'%1" },
+    { p = N("n(iv')"), r = "n'%1" },
     { p = N("(d'a)(r)(h)(MKR_PHON_A_LONGɾ')"), r = "%1ɾˠ%4" },
     { p = N("(MKR_PHON_A_LONG)i(r)$"), r = "%1iɾ'" },
-    { p = N("d(a)(r)"), r = "d'%1%2" }, { p = N("k(a)(rt)"), r = "c%1%2" }, {
-    p = N("(MKR_PHON_I_LONGɔ)([" ..
-        BROAD_CONSONANT_PHONETIC_CLASS_NO_CAPTURE .. "])"),
-    r = "%1%2"
-}, {
-    p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)([ɔʊʌ])(" ..ANY_CONSONANT_PHONETIC_PATTERN .. "['])"),
-    r = "%1ɛ%3"
-}, { p = N("([ɾR]')i"), r = "%1ɛ" }, { p = N("([ɾR])i"), r = "%1ɛ" },
-    { p = N("([ɾR]')ɔ"), r = "%1ɔ" }, { p = N("([ɾR])ɔ"), r = "%1ɔ" }, {
-    p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*')(a)(" ..
-        ANY_CONSONANT_PHONETIC_PATTERN .. "['])"),
-    r = "%1ɛ%3"
-}, {
-    p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*')([ɔʊʌ])(" ..
-        ANY_CONSONANT_PHONETIC_PATTERN .. "['])"),
-    r = "%1ɪ%3"
-}, {
-    p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*')(e)(" ..
-        ANY_CONSONANT_PHONETIC_PATTERN .. "['])"),
-    r = "%1ɛ%3"
-}, {
-    p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*')(i)(" ..
-        ANY_CONSONANT_PHONETIC_PATTERN .. "['])"),
-    r = "%1ɪ%3"
-}, { p = N("l_neutral_"), r = N("l") }, { p = N("n_neutral_"), r = N("n") },
-{ p = N("(MKR_PHON_O_LONG)(n[']?)"), r = N("uː%2") }
-
-,
+    { p = N("d(a)(r)"), r = "d'%1%2" },
+    { p = N("k(a)(rt)"), r = "c%1%2" },
+    { p = N("(MKR_PHON_I_LONGɔ)([" .. BROAD_CONSONANT_PHONETIC_CLASS_NO_CAPTURE .. "])"), r = "%1%2" },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*'?)([ɔʊʌ])(" ..ANY_CONSONANT_PHONETIC_PATTERN .. "['])"), r = "%1ɛ%3" },
+    { p = N("([ɾR]')i"), r = "%1ɛ" },
+    { p = N("([ɾR])i"), r = "%1ɛ" },
+    { p = N("([ɾR]')ɔ"), r = "%1ɔ" },
+    { p = N("([ɾR])ɔ"), r = "%1ɔ" },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*')(a)(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])"), r = "%1ɛ%3" },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*')([ɔʊʌ])(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])"), r = "%1ɪ%3" },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*')(e)(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])"), r = "%1ɛ%3" },
+    { p = N("(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "*')(i)(" .. ANY_CONSONANT_PHONETIC_PATTERN .. "['])"), r = "%1ɪ%3" },
+    { p = N("l_neutral_"), r = N("l") },
+    { p = N("n_neutral_"), r = N("n") },
+    { p = N("(MKR_PHON_O_LONG)(n[']?)"), r = N("uː%2") }
 }
+
 placeholder_restoration_rules_stage4_5 = {
     { p = N("MKR_PHON_A_LONG"), r = N("ɑː") },
     { p = N("MKR_PHON_E_LONG"), r = N("eː") },
@@ -2641,7 +2507,6 @@ end
 
 -- Replace your existing process_unstressed_reduction_on_units_impl function with this one.
 
-local process_unstressed_reduction_on_units_impl
 process_unstressed_reduction_on_units_impl = function(parsed_units, phon_word_input, context)
     if not parsed_units or #parsed_units < 2 then return false, parsed_units end
 
@@ -2655,11 +2520,13 @@ process_unstressed_reduction_on_units_impl = function(parsed_units, phon_word_in
         local unit = parsed_units[i]
         if unit.type == "vowel" then
             syllable_count = syllable_count + 1
-            if i > 1 and parsed_units[i-1].phon == "ˈ" then
+            -- Check for preceding stress marker
+            if i > 1 and parsed_units[i-1].type == "stress" then
                 stressed_vowel_index = i
             end
         end
     end
+    -- If no explicit stress marker was found, assume first vowel is stressed.
     if stressed_vowel_index == -1 then
         for i = 1, #parsed_units do
             if parsed_units[i].type == "vowel" then
@@ -2668,6 +2535,7 @@ process_unstressed_reduction_on_units_impl = function(parsed_units, phon_word_in
             end
         end
     end
+    -- If still no vowel or only one syllable, no reduction is needed.
     if stressed_vowel_index == -1 or syllable_count <= 1 then
         return false, parsed_units
     end
@@ -2676,6 +2544,7 @@ process_unstressed_reduction_on_units_impl = function(parsed_units, phon_word_in
     for i = 1, #parsed_units do
         local current_unit = parsed_units[i]
         if current_unit.type == "vowel" and i ~= stressed_vowel_index then
+            -- Check if it's a short vowel that needs neutralizing
             if not umatch(current_unit.phon, "ː") and umatch(current_unit.phon, SHORT_VOWELS_TO_NEUTRALIZE_PATTERN) then
                 debug_print_minimal("Stage4_6_U", "NEUTRALIZE: Reducing unstressed '", current_unit.phon, "' to 'ə'")
                 current_unit.phon = N("ə")
@@ -2685,42 +2554,26 @@ process_unstressed_reduction_on_units_impl = function(parsed_units, phon_word_in
     end
 
     if not modified_in_pass then
-        return false, parsed_units
+        return false, parsed_units -- No short unstressed vowels were found to neutralize
     end
 
     -- == STEP B: REALIZE 'ə' as its correct allophone ([ə] or [ɪ]) based on context ==
     for i = 1, #parsed_units do
         local current_unit = parsed_units[i]
         if current_unit.phon == N("ə") then
-            -- *** NEW, CRITICAL OVERRIDE FOR FINAL -e ***
-            -- Check if this schwa is the absolute last unit in the word.
-            if i == #parsed_units then
-                debug_print_minimal("Stage4_6_U", "ALLOPHONY (Final -e Override): Realizing final 'ə' as 'ə'.")
-                current_unit.phon = N("ə") -- Force it to be broad schwa
-                goto continue_allophony_loop -- Skip the regular context check
-            end
-
-            -- Refined logic: If EITHER flanking consonant is slender, the vowel becomes [ɪ].
-            local prec_c_is_slender = false
-            if i > 1 and parsed_units[i-1].type == "consonant" and umatch(parsed_units[i-1].phon, "'") then
-                prec_c_is_slender = true
-            end
-
-            local foll_c_is_slender = false
-            if i < #parsed_units and parsed_units[i+1].type == "consonant" and umatch(parsed_units[i+1].phon, "'") then
-                foll_c_is_slender = true
-            end
+            -- Determine quality of flanking consonants
+            local prec_c_quality = get_preceding_consonant_quality(parsed_units, i)
+            local foll_c_quality = get_following_consonant_quality(parsed_units, i)
 
             -- Apply the allophonic change
-            if prec_c_is_slender or foll_c_is_slender then
-                debug_print_minimal("Stage4_6_U", "ALLOPHONY: Realizing medial 'ə' as 'ɪ' in slender context.")
+            if prec_c_quality == "palatal" or foll_c_quality == "palatal" then
+                debug_print_minimal("Stage4_6_U", "ALLOPHONY: Realizing 'ə' as 'ɪ' in slender context.")
                 current_unit.phon = N("ɪ")
             else
                 debug_print_minimal("Stage4_6_U", "ALLOPHONY: 'ə' remains 'ə' in broad context.")
-                -- No change needed, it's already 'ə'
+                -- No change needed, it's already the broad allophone 'ə'
             end
         end
-        ::continue_allophony_loop::
     end
 
     return true, parsed_units
@@ -3603,7 +3456,100 @@ apply_rules_to_string_generic_impl = function(current_string_input,
 end
 apply_rules_to_string_generic = apply_rules_to_string_generic_impl
 -- apply_rules_to_string_generic = memoize(apply_rules_to_string_generic_impl) -- Memoization with table return (map) needs careful handling or custom memoize function. For now, disable for this complex function.
+local function process_contextual_allophony_procedurally(phon_word)
+    local parsed_units = parse_phonetic_string_to_units_for_epenthesis(phon_word)
+    if not parsed_units or #parsed_units == 0 then return phon_word end
 
+    local modified_in_pass = false
+    local i = 1
+    while i <= #parsed_units do
+        local unit = parsed_units[i]
+        local rule_applied = false
+
+        if unit.type == "vowel" then
+            -- =====================================================================
+            -- BLOCK 1: NASAL RAISING (Highest Priority)
+            -- =====================================================================
+            if i < #parsed_units then
+                local next_unit = parsed_units[i+1]
+                if next_unit.type == "consonant" and umatch(next_unit.phon, "^[mˠn̪ˠŋ]") then
+                    local original_vowel = unit.phon
+                    local nasal = next_unit.phon
+                    local new_vowel = original_vowel
+
+                    if (original_vowel == "ɔ" or original_vowel == "ʊ") and (nasal == "mˠ" or nasal == "n̪ˠ") then
+                        new_vowel = "uː" -- trom, bonn
+                    elseif original_vowel == "a" and (nasal == "mˠ" or nasal == "n̪ˠ") then
+                        new_vowel = "ɑː" -- crann, am
+                    elseif original_vowel == "a" and nasal == "ŋ" then
+                        new_vowel = "au" -- teanga
+                    elseif original_vowel == "oː" and (nasal == "mˠ" or nasal == "nˠ" or nasal == "n̪ˠ") then
+                        new_vowel = "uː" -- fón, seomra
+                    end
+
+                    if new_vowel ~= original_vowel then
+                        debug_print_minimal("Stage4_5", "NASAL RAISING: Applying '", original_vowel, "+", nasal, "' -> '", new_vowel, "'")
+                        unit.phon = new_vowel
+                        modified_in_pass = true
+                        rule_applied = true
+                    end
+                end
+            end
+
+            -- =====================================================================
+            -- BLOCK 2: VOWEL GRADATION (Assimilation to Coda)
+            -- =====================================================================
+            if not rule_applied and i < #parsed_units then
+                local next_unit = parsed_units[i+1]
+                if next_unit.type == "consonant" then
+                    if unit.phon == "a" and umatch(next_unit.phon, "[lɾ][ʲ']t[ʲ']") then
+                        debug_print_minimal("Stage4_5", "VOWEL GRADATION: 'a' -> 'ɛ' before slender cluster 'lt'")
+                        unit.phon = "ɛ"
+                        modified_in_pass = true
+                        rule_applied = true
+                    end
+                end
+            end
+
+            -- =====================================================================
+            -- BLOCK 3: SHORT LOW /a/ ALLOPHONY (Assimilation to Onset)
+            -- =====================================================================
+            if not rule_applied and unit.phon == "a" and i > 1 then
+                local prev_unit = parsed_units[i-1]
+                if prev_unit.type == "consonant" and prev_unit.quality == "palatal" then
+                    debug_print_minimal("Stage4_5", "ONSET ALLOPHONY: 'a' -> 'æ' after slender consonant")
+                    unit.phon = "æ"
+                    modified_in_pass = true
+                    rule_applied = true
+                end
+            end
+
+            -- =====================================================================
+            -- BLOCK 4: R-LOWERING
+            -- =====================================================================
+            if not rule_applied and unit.phon == "ɪ" then
+                local is_near_r = false
+                if i > 1 and umatch(parsed_units[i-1].phon, "[ɾR]") then is_near_r = true end
+                if i < #parsed_units and umatch(parsed_units[i+1].phon, "[ɾR]") then is_near_r = true end
+                if is_near_r then
+                    debug_print_minimal("Stage4_5", "R-LOWERING: 'ɪ' -> 'ɛ' near /r/")
+                    unit.phon = "ɛ"
+                    modified_in_pass = true
+                    rule_applied = true
+                end
+            end
+        end
+        i = i + 1
+    end
+
+    if modified_in_pass then
+        local rebuilt_parts = {}
+        for _, u in ipairs(parsed_units) do table.insert(rebuilt_parts, u.phon) end
+        return table.concat(rebuilt_parts)
+    else
+        return phon_word
+    end
+end
 function irishPhonetics.transcribe_single_word(orthographic_word_input)
     
 
@@ -3810,27 +3756,53 @@ function irishPhonetics.transcribe_single_word(orthographic_word_input)
             is_procedural_stage = true,
             func = function(phon_word, o_context, current_map)
                 if STAGE_DEBUG_ENABLED["Stage4_5_ContextualAllophonyOnPhonetic"] then
-                    debug_print_minimal(
-                        "Stage4_5_ContextualAllophonyOnPhonetic", "  START: In=", phon_word)
+                    debug_print_minimal("Stage4_5_ContextualAllophonyOnPhonetic", "  START: In=", phon_word)
                 end
                 local temp_phon, temp_map = phon_word, current_map
+        
+                -- Step 1: Replace phonetic vowels with temporary, unique markers.
+                -- This prevents rules from misfiring on parts of diphthongs.
                 temp_phon, temp_map = apply_rules_to_string_generic(temp_phon, placeholder_creation_rules_stage4_5,
-                    "Stage4_5_P1", "iterative_gsub", o_context, temp_map);
-
-                temp_phon, temp_map = apply_rules_to_string_generic(temp_phon, core_allophony_rules_for_stage4_5,
-                    "Stage4_5_P2", "iterative_gsub", o_context, temp_map);
+                    "Stage4_5_P1_PlaceholderCreation", "iterative_gsub", o_context, temp_map);
+        
+                -- Step 2: Resolve basic orthographic markers to phonetic vowels.
+                -- This is where 'o' becomes 'ɔ', 'u' becomes 'ʊ', etc.
+                -- This is a simplified version of your original core_allophony_rules, focusing on defaults.
+                local default_vowel_rules = {
+                    { p = N("a"), r = N("a") },
+                    { p = N("e"), r = N("ɛ") },
+                    { p = N("i"), r = N("ɪ") },
+                    { p = N("o"), r = N("ɔ") },
+                    { p = N("u"), r = N("ʊ") },
+                }
+                temp_phon, temp_map = apply_rules_to_string_generic(temp_phon, default_vowel_rules,
+                    "Stage4_5_P2_DefaultVowels", "iterative_gsub", o_context, temp_map);
+        
+                -- Step 3: Call the NEW procedural function to handle all context-sensitive allophony.
+                -- This function understands phonetic units and precedence.
+                debug_print_minimal("Stage4_5", "  Calling procedural allophony on: ", temp_phon)
+                temp_phon = process_contextual_allophony_procedurally(temp_phon)
+                debug_print_minimal("Stage4_5", "  Result from procedural allophony: ", temp_phon)
+                -- Note: The map is now considered approximate after this step.
+                if ulen(temp_phon) > 0 then
+                     temp_map = {{ phon_s = 1, phon_e = ulen(temp_phon), ortho_s = 1, ortho_e = ulen(o_context), name = "s45_proc_rebuild" }}
+                else
+                     temp_map = {}
+                end
+        
+                -- Step 4: Restore the placeholder markers back to their final phonetic forms.
                 temp_phon, temp_map = apply_rules_to_string_generic(temp_phon, placeholder_restoration_rules_stage4_5,
-                    "Stage4_5_P3", "iterative_gsub", o_context, temp_map);
-
+                    "Stage4_5_P3_PlaceholderRestoration", "iterative_gsub", o_context, temp_map);
+        
+                -- Step 5 (Optional but kept from original): Connacht-specific diphthong shift.
                 temp_phon, temp_map = apply_rules_to_string_generic(temp_phon,
-                    { connacht_au_to_schwa_u_shift_rule_stage4_5 }, "Stage4_5_P4", "single_pass_priority_match",
+                    { connacht_au_to_schwa_u_shift_rule_stage4_5 }, "Stage4_5_P4_ConnachtShift", "single_pass_priority_match",
                     o_context, temp_map);
-
                 temp_phon, temp_map = apply_rules_to_string_generic(temp_phon, { temp_conn_au_to_final_au_rule_stage4_5 },
-                    "Stage4_5_P5", "single_pass_priority_match", o_context, temp_map);
+                    "Stage4_5_P5_ConnachtShiftRestore", "single_pass_priority_match", o_context, temp_map);
+        
                 if STAGE_DEBUG_ENABLED["Stage4_5_ContextualAllophonyOnPhonetic"] then
-                    debug_print_minimal(
-                        "Stage4_5_ContextualAllophonyOnPhonetic", " END: Out=", temp_phon)
+                    debug_print_minimal("Stage4_5_ContextualAllophonyOnPhonetic", " END: Out=", temp_phon)
                 end
                 return temp_phon, temp_map
             end
@@ -4079,6 +4051,72 @@ else
     MINIMAL_DEBUG_ENABLED = false
 end
 
+-- Debug Flags
+if MINIMAL_DEBUG_ENABLED then
+    -- Debug output file setup
+    local debug_file_path = "irish_debug_43_lua_p_strict.txt"
+    debug_file = io.open(debug_file_path, "w")
+    if debug_file then
+        debug_file:write("\239\187\191")
+    else
+        original_print("WARN: Could not open debug_file " .. debug_file_path)
+    end
+    local original_print_func = print
+    STAGE_DEBUG_ENABLED = {
+        PreProcess = false,
+        MarkDigraphsAndVocalisationTriggers = true,
+        Stage2_5_MarkSuffixes = true,
+        Stage3_1_MarkerResolution = true,
+        ConsonantResolution = true,
+        Stage3_2_ApplyStress = true,
+        Stage4_0_SpecificOrthoToTempMarker = true,
+        Stage4_0_1_Resolve_CH_Marker = true,
+        Stage4_1_VocmarkToTempMarker = true,
+        Stage4_2_LongVowelsOrthoToTempMarker = true,
+        Stage4_3_DiphthongsOrthoToTempMarker = true,
+        Stage4_4_ResolveTempVowelMarkers = true,
+        Stage4_4_1_VocalizeLenitedFricatives = true,
+        Stage4_5_ContextualAllophonyOnPhonetic = true,
+        Stage4_5_1_DisyllabicShortLongRaising = true,
+        Stage4_5_2_ConnachtSpecificVowelShifts = true,
+        Nasalization = true,
+        Stage4_6_UnstressedVowelReduction_Procedural = true,
+        EpenthesisAndStrongSonorants = true,
+        Diacritics = true,
+        FinalCleanup = true,
+        Parser = false,
+        ParserSetup = false,
+        LexicalLookup = false,
+        Performance = false
+    }
+else
+    STAGE_DEBUG_ENABLED = {
+        PreProcess = false,
+        MarkDigraphsAndVocalisationTriggers = false,
+        Stage2_5_MarkSuffixes = false,
+        ConsonantResolution = false,
+        Stage4_0_SpecificOrthoToTempMarker = false,
+        Stage4_0_1_Resolve_CH_Marker = false,
+        Stage4_1_VocmarkToTempMarker = false,
+        Stage4_2_LongVowelsOrthoToTempMarker = false,
+        Stage4_3_DiphthongsOrthoToTempMarker = false,
+        Stage4_4_ResolveTempVowelMarkers = false,
+        Stage4_4_1_VocalizeLenitedFricatives = false,
+        Stage4_5_ContextualAllophonyOnPhonetic = false,
+        Stage4_5_1_DisyllabicShortLongRaising = false,
+        Stage4_5_2_ConnachtSpecificVowelShifts = false,
+        Nasalization = false,
+        Stage4_6_UnstressedVowelReduction_Procedural = false,
+        EpenthesisAndStrongSonorants = false,
+        Diacritics = false,
+        FinalCleanup = false,
+        Parser = false,
+        ParserSetup = false,
+        LexicalLookup = false,
+        Performance = false
+    }
+    
+end
 -- If no command-line argument, check if there's anything being piped in
 if not input then
     -- io.stdin:seek("end") gets the current size of the stdin buffer.
@@ -4093,7 +4131,7 @@ end
 -- Now, decide what to do based on whether we have input or not
 if input then
     -- Behavior 1 & 2: We have input from either an argument or a pipe
-    print(irishPhonetics.transcribe(N(input)))
+    original_print_func(irishPhonetics.transcribe(N(input)))
 else
     -- Behavior 3: No input was provided, so run the default tests if the flag is set
     if RUN_DEFAULT_TESTS_IF_NO_INPUT then

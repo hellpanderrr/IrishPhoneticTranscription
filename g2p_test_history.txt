@@ -1,22 +1,25 @@
 --SUMMARY--
-timestamp:Sun Jun 15 12:39:02 2025
-total_distance:22
-average_distance:0.88
+total_distance:32
+average_distance:1.1428571428571
+timestamp:Sun Jun 15 16:00:39 2025
 --WORDS--
 'ur|əɾˠ|2
+Gaedhlaing|ˈɡeːjlʲəəŋ|5
+Gaelach|ˈɡeːlʲəx|2
 Tadhg|ˈt̪ˠaɡ|1
 a Sheáin|a ˈhɛɑːnʲ|3
-ailt|ˈɛlʲtʲ|0
+ailt|ˈalʲtʲ|1
 aithrí|ˈahɾʲiː|0
 alt|ˈalˠt̪ˠ|1
 bonn|ˈbˠuːn̪ˠ|0
 brath|ˈbˠɾˠaç|1
 chugham|ˈxuːəmˠ|1
-cnoc|ˈkɾˠʊk|0
-fón|ˈfˠʊːnˠ|1
+cnoc|ˈkɾˠɔk|1
+dugaire|ˈd̪ˠʊɡɪɾʲə|1
+fón|ˈfˠoːnˠ|0
 glais|ˈɡlˠaʃ|0
 glas|ˈɡlˠasˠ|0
-greamaím|ˈɟɾʲʊmˠɑːmʲ|2
+greamaím|ˈɟɾʲæmˠɑːmʲ|2
 leabhar|ˈlʲəuəɾˠ|1
 láimh|ˈlˠɑːiː|3
 marcaigh|ˈmˠaɾˠkiː|0
@@ -26,5 +29,5 @@ sheol|ˈhoːlˠ|2
 shíl|ˈhiːlʲ|0
 thóg|ˈçoːɡ|1
 tnúth|ˈt̪ˠɾˠuː|0
-trom|ˈt̪ˠɾˠʊːmˠ|1
+trom|ˈt̪ˠɾˠɔmˠ|2
 íocfaidh|ˈiːkə|0

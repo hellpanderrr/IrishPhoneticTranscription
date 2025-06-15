@@ -308,6 +308,7 @@ df[[
 2312 #81.99 #0.9286 --nans
 2321 #83.07  # 0.941
 2533 #83.70 #0.9415
+2884  #84.81 #0.9413
 from fuzzywuzzy import fuzz
 import panphon.distance as D
 

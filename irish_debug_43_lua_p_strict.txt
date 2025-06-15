@@ -1,1 +1,73 @@
-﻿ˈʊnˠkɪlʲ
+﻿    MIN_DBG (Stage2_5_M):   Stage2_5_MarkSuffixes START: In=	gaelach	 Map size: 	0
+    MIN_DBG (Stage2_5_M):  END: Out=	gaelMKR_SUFFIX_ƏX	 Map size: 	5
+    MIN_DBG (Stage2_5_M): Af. Stage2_5_MarkSuffixes: [gaelMKR_SUFFIX_ƏX]
+    MIN_DBG (MarkDigrap):   MarkDigraphsAndVocalisationTriggers START: In=	gaelMKR_SUFFIX_ƏX	 Map size: 	5
+    MIN_DBG (MarkDigrap):  END: Out=	gaelMKR_SUFFIX_ƏX	 Map size: 	5
+    MIN_DBG (Stage3_1_M):   Stage3_1_MarkerResolution START: In=	gaelMKR_SUFFIX_ƏX	 Map size: 	5
+    MIN_DBG (Stage3_1_M):  END: Out=	gaelMKR_SUFFIX_ƏX	 Map size: 	5
+    MIN_DBG (ConsonantR): OVERRIDE (Initial C): For 'g', next_v_group 'ae' with following cons 'l' implies -> broad
+    MIN_DBG (ConsonantR): DEBUG DETERMINE_C_QUAL (Fallback): For 'l' in 'gaelach' (idx 4): next_v_group='a'(broad), prev_v_group='ae'(slender) -> slender
+    MIN_DBG (Stage3_2_A):   ApplyStress START: In=	gael'MKR_SUFFIX_ƏX	 (Original Ortho: '	gaelach	') Map size: 	1
+    MIN_DBG (Stage3_2_A): ApplyStress: Adding stress to '	ˈgael'MKR_SUFFIX_ƏX	'.
+    MIN_DBG (Stage3_2_A): Ortho map updated after stress application. Old map size: 1 -> New map size: 2
+    MIN_DBG (Stage3_2_A):  END: Out=	ˈgael'MKR_SUFFIX_ƏX	 Map size: 	2
+    MIN_DBG (Stage3_2_A): Af. Stage3_2_ApplyStress: [ˈgael'MKR_SUFFIX_ƏX]
+    MIN_DBG (Stage4_0_S):   Stage4_0_SpecificOrthoToTempMarker START: In=	ˈgael'MKR_SUFFIX_ƏX	 Map size: 	2
+    MIN_DBG (Stage4_0_S):  END: Out=	ˈgael'MKR_SUFFIX_ƏX	 Map size: 	2
+    MIN_DBG (Stage4_0_1):   Stage4_0_1_Resolve_CH_Marker START: In=	ˈgael'MKR_SUFFIX_ƏX	 Map size: 	2
+    MIN_DBG (Stage4_0_1):  END: Out=	ˈgael'MKR_SUFFIX_ƏX	 Map size: 	2
+    MIN_DBG (Stage4_1_V):   Stage4_1_VocmarkToTempMarker START: In=	ˈgael'MKR_SUFFIX_ƏX	 Map size: 	2
+    MIN_DBG (Stage4_1_V):  END: Out=	ˈgael'MKR_SUFFIX_ƏX	 Map size: 	2
+    MIN_DBG (Stage4_2_L):   Stage4_2_LongVowelsOrthoToTempMarker START: In=	ˈgael'MKR_SUFFIX_ƏX	 Map size: 	2
+    MIN_DBG (Stage4_2_L):  END: Out=	ˈgMKR_E_ACT_LNGl'MKR_SUFFIX_ƏX	 Map size: 	2
+    MIN_DBG (Stage4_2_L): Af. Stage4_2_LongVowelsOrthoToTempMarker: [ˈgMKR_E_ACT_LNGl'MKR_SUFFIX_ƏX]
+    MIN_DBG (Stage4_3_D):   Stage4_3_DiphthongsOrthoToTempMarker START: In=	ˈgMKR_E_ACT_LNGl'MKR_SUFFIX_ƏX	 Map size: 	2
+    MIN_DBG (Stage4_3_D):  END: Out=	ˈgMKR_E_ACT_LNGl'MKR_SUFFIX_ƏX	 Map size: 	2
+    MIN_DBG (Stage4_4_R):   Stage4_4_ResolveTempVowelMarkers START: In=	ˈgMKR_E_ACT_LNGl'MKR_SUFFIX_ƏX	 Map size: 	2
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	MKR_SUFFIX_ƏX	' APPLIED to '	ˈgMKR_E_ACT_LNGl'MKR_SUFFIX_ƏX	' -> '	ˈgMKR_E_ACT_LNGl'əx	' (	1	x)
+    MIN_DBG (Stage4_4_R): Iter.gsub: Rule '	MKR_E_ACT_LNG	' APPLIED to '	ˈgMKR_E_ACT_LNGl'əx	' -> '	ˈgeːl'əx	' (	1	x)
+    MIN_DBG (Stage4_4_R): WARN: Ortho map may be misaligned after iterative_gsub. Rebuilding basic map for stage: Stage4_4_ResolveTempVowelMarkers
+    MIN_DBG (Stage4_4_R):  END: Out=	ˈgeːl'əx	 Map size: 	1
+    MIN_DBG (Stage4_4_R): Af. Stage4_4_ResolveTempVowelMarkers: [ˈgeːl'əx]
+    MIN_DBG (Stage4_4_1):   Stage4_4_1_VocalizeLenitedFricatives START (Proc Helper): In=	ˈgeːl'əx
+    MIN_DBG (Stage4_4_1):   Loop 1: Current unit: 'ˈ'
+    MIN_DBG (Stage4_4_1):     new_units_build before: 
+    MIN_DBG (Stage4_4_1):     new_units_build after add: ˈ
+    MIN_DBG (Stage4_4_1):   Loop 2: Current unit: 'g'
+    MIN_DBG (Stage4_4_1):     new_units_build before: ˈ
+    MIN_DBG (Stage4_4_1):     new_units_build after add: ˈg
+    MIN_DBG (Stage4_4_1):   Loop 3: Current unit: 'eː'
+    MIN_DBG (Stage4_4_1):     new_units_build before: ˈg
+    MIN_DBG (Stage4_4_1):     new_units_build after add: ˈgeː
+    MIN_DBG (Stage4_4_1):   Loop 4: Current unit: 'l''
+    MIN_DBG (Stage4_4_1):     new_units_build before: ˈgeː
+    MIN_DBG (Stage4_4_1):     new_units_build after add: ˈgeːl'
+    MIN_DBG (Stage4_4_1):   Loop 5: Current unit: 'ə'
+    MIN_DBG (Stage4_4_1):     new_units_build before: ˈgeːl'
+    MIN_DBG (Stage4_4_1):     new_units_build after add: ˈgeːl'ə
+    MIN_DBG (Stage4_4_1):   Loop 6: Current unit: 'x'
+    MIN_DBG (Stage4_4_1):     new_units_build before: ˈgeːl'ə
+    MIN_DBG (Stage4_4_1):     new_units_build after add: ˈgeːl'əx
+    MIN_DBG (Stage4_4_1):  END (no change by unit_processor): Out=	ˈgeːl'əx
+    MIN_DBG (Stage4_5_C):   START: In=	ˈgeːl'əx
+    MIN_DBG (Stage4_5_C):  END: Out=	ˈgeːl'əx
+    MIN_DBG (Stage4_5_1):   Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=	ˈgeːl'əx
+    MIN_DBG (Stage4_5_1):  END (no change by unit_processor): Out=	ˈgeːl'əx
+    MIN_DBG (Stage4_5_2):   Stage4_5_2_ConnachtSpecificVowelShifts START: In=	ˈgeːl'əx	 Map size: 	1
+    MIN_DBG (Stage4_5_2):  END: Out=	ˈgeːl'əx	 Map size: 	1
+    MIN_DBG (Nasalizati):   Nasalization START (Proc Helper): In=	ˈgeːl'əx
+    MIN_DBG (Nasalizati): NO.
+    MIN_DBG (Nasalizati):  END (no change by unit_processor): Out=	ˈgeːl'əx
+    MIN_DBG (Stage4_6_U):   START (Outer): In=	ˈgeːl'əx
+    MIN_DBG (Epenthesis):   START (Proc): In=	ˈgeːl'əx
+    MIN_DBG (Epenthesis): After procedural epenthesis: 	ˈgeːl'əx
+    MIN_DBG (Epenthesis): After strong sonorant rules: 	ˈgeːl'əx
+    MIN_DBG (Epenthesis):  END (Proc): Out=	ˈgeːl'əx
+    MIN_DBG (Diacritics):   Diacritics START: In=	ˈgeːl'əx	 Map size: 	1
+    MIN_DBG (Diacritics):  END: Out=	ˈgeːl'əx	 Map size: 	1
+    MIN_DBG (FinalClean):   FinalCleanup START: In=	ˈgeːl'əx	 Map size: 	1
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	l'	' APPLIED to '	ˈgeːl'əx	' -> '	ˈgeːlʲəx	' (	1	x)
+    MIN_DBG (FinalClean): Iter.gsub: Rule '	g	' APPLIED to '	ˈgeːlʲəx	' -> '	ˈɡeːlʲəx	' (	1	x)
+    MIN_DBG (FinalClean): WARN: Ortho map may be misaligned after iterative_gsub. Rebuilding basic map for stage: FinalCleanup
+    MIN_DBG (FinalClean):  END: Out=	ˈɡeːlʲəx	 Map size: 	1
+    MIN_DBG (FinalClean): Af. FinalCleanup: [ˈɡeːlʲəx]

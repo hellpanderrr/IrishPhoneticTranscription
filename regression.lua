@@ -189,6 +189,9 @@ local test_data = {
     { word = "greamaím",   target = "ˈɟɾʲamˠiːmʲ", comment = "" },
 
     { word = "dugaire",    target = "d̪ˠʊɡəɾʲə", comment = "e reduction to schwa in final position in slender context" },
+
+    { word = "Gaelach",    target = "ˈɡeːl̪ˠəx", comment = "" },
+    { word = "Gaedhlaing", target = "ˈɡeːlɪɲ", comment = "" },
 }
 
 -- =============================================================================
