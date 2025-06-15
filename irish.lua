@@ -2639,86 +2639,88 @@ local function get_following_consonant_quality(all_units, vowel_idx)
     return "neutral"
 end
 
+-- Replace your existing process_unstressed_reduction_on_units_impl function with this one.
+
 local process_unstressed_reduction_on_units_impl
 process_unstressed_reduction_on_units_impl = function(parsed_units, phon_word_input, context)
     if not parsed_units or #parsed_units < 2 then return false, parsed_units end
 
-    -- Define all short, non-schwa vowels that are targets for reduction.
-    -- This pattern identifies vowels that will be neutralized to schwa.
     local SHORT_VOWELS_TO_NEUTRALIZE_PATTERN = N("[aæɑɔeɛiɪuʊʌ]")
-
     local modified_in_pass = false
-    local stress_found = false
+    local stressed_vowel_index = -1
     local syllable_count = 0
-    local first_vowel_processed = false
 
-    -- First pass to count syllables to handle monosyllable check
+    -- First pass to count syllables and find the primary stress index accurately.
     for i = 1, #parsed_units do
-        if parsed_units[i].type == "vowel" then
+        local unit = parsed_units[i]
+        if unit.type == "vowel" then
             syllable_count = syllable_count + 1
+            if i > 1 and parsed_units[i-1].phon == "ˈ" then
+                stressed_vowel_index = i
+            end
         end
     end
-
-    if syllable_count <= 1 then
-        return false, parsed_units -- Do not reduce vowels in monosyllabic words
+    if stressed_vowel_index == -1 then
+        for i = 1, #parsed_units do
+            if parsed_units[i].type == "vowel" then
+                stressed_vowel_index = i
+                break
+            end
+        end
+    end
+    if stressed_vowel_index == -1 or syllable_count <= 1 then
+        return false, parsed_units
     end
 
     -- == STEP A: NEUTRALIZE all unstressed short vowels to 'ə' ==
     for i = 1, #parsed_units do
         local current_unit = parsed_units[i]
-
-        if current_unit.phon == "ˈ" then
-            stress_found = true
-            goto continue_neutralization_loop
-        end
-
-        if current_unit.type == "vowel" then
-            if first_vowel_processed then -- Any vowel after the first is unstressed
-                if umatch(current_unit.phon, "ː") then
-                elseif umatch(current_unit.phon, SHORT_VOWELS_TO_NEUTRALIZE_PATTERN) then
-                    debug_print_minimal("Stage4_6_U", "NEUTRALIZE: Reducing '", current_unit.phon, "' to 'ə'")
-                    current_unit.phon = N("ə")
-                    modified_in_pass = true
-                end
+        if current_unit.type == "vowel" and i ~= stressed_vowel_index then
+            if not umatch(current_unit.phon, "ː") and umatch(current_unit.phon, SHORT_VOWELS_TO_NEUTRALIZE_PATTERN) then
+                debug_print_minimal("Stage4_6_U", "NEUTRALIZE: Reducing unstressed '", current_unit.phon, "' to 'ə'")
+                current_unit.phon = N("ə")
+                modified_in_pass = true
             end
-            first_vowel_processed = true
         end
-        ::continue_neutralization_loop::
     end
 
     if not modified_in_pass then
-        return false, parsed_units -- No changes made, exit early
+        return false, parsed_units
     end
 
     -- == STEP B: REALIZE 'ə' as its correct allophone ([ə] or [ɪ]) based on context ==
     for i = 1, #parsed_units do
         local current_unit = parsed_units[i]
         if current_unit.phon == N("ə") then
-            local context_is_slender = false
-
-            -- Check following consonant first (most influential in closed syllables)
-            if i < #parsed_units and parsed_units[i+1].type == "consonant" then
-                if umatch(parsed_units[i+1].phon, "'") then
-                    context_is_slender = true
-                end
+            -- *** NEW, CRITICAL OVERRIDE FOR FINAL -e ***
+            -- Check if this schwa is the absolute last unit in the word.
+            if i == #parsed_units then
+                debug_print_minimal("Stage4_6_U", "ALLOPHONY (Final -e Override): Realizing final 'ə' as 'ə'.")
+                current_unit.phon = N("ə") -- Force it to be broad schwa
+                goto continue_allophony_loop -- Skip the regular context check
             end
 
-            -- If context is not yet slender, check preceding consonant (most influential in open syllables)
-            if not context_is_slender and i > 1 and parsed_units[i-1].type == "consonant" then
-                if umatch(parsed_units[i-1].phon, "'") then
-                    context_is_slender = true
-                end
+            -- Refined logic: If EITHER flanking consonant is slender, the vowel becomes [ɪ].
+            local prec_c_is_slender = false
+            if i > 1 and parsed_units[i-1].type == "consonant" and umatch(parsed_units[i-1].phon, "'") then
+                prec_c_is_slender = true
+            end
+
+            local foll_c_is_slender = false
+            if i < #parsed_units and parsed_units[i+1].type == "consonant" and umatch(parsed_units[i+1].phon, "'") then
+                foll_c_is_slender = true
             end
 
             -- Apply the allophonic change
-            if context_is_slender then
-                debug_print_minimal("Stage4_6_U", "ALLOPHONY: Realizing 'ə' as 'ɪ' in slender context.")
+            if prec_c_is_slender or foll_c_is_slender then
+                debug_print_minimal("Stage4_6_U", "ALLOPHONY: Realizing medial 'ə' as 'ɪ' in slender context.")
                 current_unit.phon = N("ɪ")
             else
-                debug_print_minimal("Stage4_6_U", "ALLOPHONY: Realizing 'ə' as 'ə' in broad context.")
+                debug_print_minimal("Stage4_6_U", "ALLOPHONY: 'ə' remains 'ə' in broad context.")
                 -- No change needed, it's already 'ə'
             end
         end
+        ::continue_allophony_loop::
     end
 
     return true, parsed_units
@@ -3871,13 +3873,13 @@ function irishPhonetics.transcribe_single_word(orthographic_word_input)
             func = function(phon_word, o_context, current_map)
                 if STAGE_DEBUG_ENABLED["Stage4_6_UnstressedVowelReduction_Procedural"] then
                     debug_print_minimal(
-                        "Stage4_6_U", "  START (Outer): In=", phon_word)
+                        "Stage4_6_UnstressedVowelReduction_Procedural", "  START (Outer): In=", phon_word)
                 end
                 local parsed_units_for_mono_check = parse_phonetic_string_to_units_for_epenthesis(phon_word)
                 if is_likely_monosyllable_phonetic_revised(phon_word, parsed_units_for_mono_check) then
-                    debug_print_minimal("Stage4_6_U", "Word '", phon_word, "' is monosyllabic, SKIPPING.");
+                    debug_print_minimal("Stage4_6_UnstressedVowelReduction_Procedural", "Word '", phon_word, "' is monosyllabic, SKIPPING.");
                     if STAGE_DEBUG_ENABLED["Stage4_6_U"] then
-                        debug_print_minimal("Stage4_6_U",
+                        debug_print_minimal("Stage4_6_UnstressedVowelReduction_Procedural",
                             "  END (monosyllable): Out=", phon_word)
                     end
                     return phon_word, current_map

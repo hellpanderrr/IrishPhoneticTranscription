@@ -187,6 +187,8 @@ local test_data = {
     { word = "leabhar",    target = "lʲəuɾˠ",     comment = "Vocalization: eabh -> [əu]" },
 
     { word = "greamaím",   target = "ˈɟɾʲamˠiːmʲ", comment = "" },
+
+    { word = "dugaire",    target = "d̪ˠʊɡəɾʲə", comment = "e reduction to schwa in final position in slender context" },
 }
 
 -- =============================================================================

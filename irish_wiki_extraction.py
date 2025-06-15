@@ -269,8 +269,9 @@ for batch in [ws[i:i+1] for i in range(0,len(ws),1)]:
     results.append(final)
 df['results'] = pd.concat(results).results.dropna().values
 
-
-
+from multiprocessing.dummy import Pool
+pool = Pool(6)
+df['results'] = pool.map(get_transcription, df.word)
 
 cleaned_ipa = df['ipa'].str.replace(r'[ˠʲˈ]', '', regex=True)
 cleaned_results = df['results'].str.replace(r'[ˠʲˈ]', '', regex=True)
@@ -306,6 +307,7 @@ df[[
 1774 #80.68 #0.9394
 2312 #81.99 #0.9286 --nans
 2321 #83.07  # 0.941
+2533 #83.70 #0.9415
 from fuzzywuzzy import fuzz
 import panphon.distance as D
 

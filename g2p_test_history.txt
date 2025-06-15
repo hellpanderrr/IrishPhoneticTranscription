@@ -1,7 +1,7 @@
 --SUMMARY--
-average_distance:0.88
-timestamp:Sat Jun 14 15:26:21 2025
+timestamp:Sun Jun 15 12:39:02 2025
 total_distance:22
+average_distance:0.88
 --WORDS--
 'ur|əɾˠ|2
 Tadhg|ˈt̪ˠaɡ|1
