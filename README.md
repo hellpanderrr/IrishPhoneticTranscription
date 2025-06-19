@@ -133,34 +133,34 @@ The debug output is written to `irish_debug_43_lua_p_strict.txt`.
 lua regression.lua
 | Word | Expected IPA | Generated IPA | Distance |
 | -------- | ------- | ------- | ------- |
-| glas | ˈɡlˠasˠ | ˈɡlˠasˠ | 0 |
-| glais | ˈɡlˠaʃ | ˈɡlˠaʃ | 0 |
-| alt | ˈalˠt̪ˠ | ˈalˠt̪ˠ | 1 |
-| ailt | ˈɛlʲtʲ | ˈɛlʲtʲ | 0 |
-| seomra | ˈʃoːmˠɾˠə | ˈʃoːmˠɾˠə | 1 |
-| seomraí | ˈʃoːmˠɾˠiː | ˈʃoːmˠɾˠiː | 1 |
-| trom | ˈt̪ˠɾˠɔmˠ | ˈt̪ˠɾˠɔmˠ | 2 |
-| bonn | ˈbˠuːn̪ˠ | ˈbˠuːn̪ˠ | 0 |
-| fón | ˈfˠuːnˠ | ˈfˠuːnˠ | 1 |
-| sheol | ˈhoːlˠ | ˈhoːlˠ | 2 |
-| thóg | ˈçoːɡ | ˈçoːɡ | 1 |
-| shíl | ˈhiːlʲ | ˈhiːlʲ | 0 |
-| a Sheáin | a ˈhɛɑːnʲ | a ˈhɛɑːnʲ | 3 |
-| aithrí | ˈahɾʲiː | ˈahɾʲiː | 0 |
-| brath | ˈbˠɾˠaç | ˈbˠɾˠaç | 1 |
-| cnoc | ˈkɾˠʊk | ˈkɾˠʊk | 0 |
-| tnúth | ˈt̪ˠɾˠuː | ˈt̪ˠɾˠuː | 0 |
-| Tadhg | ˈt̪ˠaɡ | ˈt̪ˠaɡ | 1 |
-| 'ur | əɾˠ | əɾˠ | 2 |
-| íocfaidh | ˈiːkə | ˈiːkə | 0 |
-| marcaigh | ˈmˠaɾˠkiː | ˈmˠaɾˠkiː | 0 |
-| chugham | ˈxuːəmˠ | ˈxuːəmˠ | 1 |
-| láimh | ˈlˠɑːiː | ˈlˠɑːiː | 3 |
-| leabhar | ˈlʲəuəɾˠ | ˈlʲəuəɾˠ | 1 |
-| greamaím | ˈɟɾʲʊmˠɑːmʲ | ˈɟɾʲʊmˠɑːmʲ | 2 |
-| dugaire | ˈd̪ˠʊɡɪɾʲə | ˈd̪ˠʊɡɪɾʲə | 1 |
-| Gaelach | ˈɡeːlʲəx | ˈɡeːlʲəx | 2 |
-| Gaedhlaing | ˈɡeːjlʲəŋ | ˈɡeːjlʲəŋ | 4 |
+|glas|ɡlˠasˠ|ˈɡlˠasˠ|0
+|glais|ɡlˠaʃ|ˈɡlˠaʃ|0
+|alt|al̪ˠt̪ˠ|ˈalˠt̪ˠ|1
+|ailt|ɛlʲtʲ|ˈɛlʲtʲ|0
+|seomra|ʃuːmˠɾˠə|ˈʃoːmˠɾˠə|1
+|seomraí|ʃuːmˠɾˠiː|ˈʃoːmˠɾˠiː|1
+|trom|t̪ˠɾˠuːmˠ|ˈt̪ˠɾˠɔmˠ|2
+|bonn|bˠuːn̪ˠ|ˈbˠuːn̪ˠ|0
+|fón|fˠoːnˠ|ˈfˠuːnˠ|1
+|sheol|çɔːlˠ|ˈhoːlˠ|2
+|thóg|hoːɡ|ˈçoːɡ|1
+|shíl|hiːlʲ|ˈhiːlʲ|0
+|aSheáin|əçɑːnʲ|aˈhɛɑːnʲ|3
+|aithrí|ahɾʲiː|ˈahɾʲiː|0
+|brath|bˠɾˠa|ˈbˠɾˠaç|1
+|cnoc|kɾˠʊk|ˈkɾˠʊk|0
+|tnúth|t̪ˠɾˠuː|ˈt̪ˠɾˠuː|0
+|Tadhg|t̪ˠaiɡ|ˈt̪ˠaɡ|1
+|'ur|ə|əɾˠ|2
+|íocfaidh|iːkə|ˈiːkə|0
+|marcaigh|mˠaɾˠkiː|ˈmˠaɾˠkiː|0
+|chugham|xuːmˠ|ˈxuːəmˠ|1
+|láimh|l̪ˠɑːvʲ|ˈlˠɑːiː|3
+|leabhar|lʲəuɾˠ|ˈlʲəuəɾˠ|1
+|greamaím|ˈɟɾʲamˠiːmʲ|ˈɟɾʲʊmˠɑːmʲ|2
+|dugaire|d̪ˠʊɡəɾʲə|ˈd̪ˠʊɡɪɾʲə|1
+|Gaelach|ˈɡeːl̪ˠəx|ˈɡeːlʲəx|2
+|Gaedhlaing|ˈɡeːlɪɲ|ˈɡeːjlʲəŋ|4
 
 ## Current accuracy
 Average Levenstein edit distance (from fuzzywuzzy.partial_ratio, 0-100 normalized): 84.81
