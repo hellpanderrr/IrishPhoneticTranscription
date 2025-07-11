@@ -163,6 +163,8 @@ lua regression.lua
 |Gaedhlaing|ˈɡeːlɪɲ|ˈɡeːjlʲəŋ|4
 
 ## Current accuracy
-Average Levenstein edit distance (from fuzzywuzzy.partial_ratio, 0-100 normalized): 84.81
+See last 2 columns in [results.csv](results.csv)
 
-Average phonetic distance, (edit distance between dolgopolsky' equivalence classes, from panphon.distance.dolgo_prime_distance_div_maxlen, 0-1 normalized): 0.9413
+Average Levenstein edit distance (from `fuzzywuzzy.partial_ratio`, 0-100 normalized, 100 is full match): 84.81
+
+Average phonetic distance, (edit distance between dolgopolsky' equivalence classes, from `panphon.distance.dolgo_prime_distance_div_maxlen`, 0-1 normalized, 1 is full match): 0.9413
