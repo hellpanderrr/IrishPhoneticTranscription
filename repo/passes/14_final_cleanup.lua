@@ -1,10 +1,6 @@
 -- Pass #14: Final cleanup and diacritics.
--- 1. Remove final silent mutated fricatives (th, dh, gh) with vowel concatenation
--- 2. Add ç after vowel before final broad th
--- 3. Delete final ç/ɣ/h after long vowels
--- 4. Unstressed final devoicing: slender g [ɟ] -> [c]
--- 5. ch + s -> tʃ sandhi
--- 6. Remove empty tokens and normalize
+-- Handles final silent mutated fricatives (th, dh, gh) and
+-- deletion of final ç/ɣ/h after long vowels.
 
 local S = require("passes._shared")
 
@@ -33,15 +29,13 @@ return {
       end
     end
 
-    -- Step 2: Delete final ç/ɣ/h after long vowels
+    -- Step 2: Delete final ç/ɣ/h after long vowels (production rule: ([ɑeiou]ː)[ɣçh]$ → %1)
     for i, token in ipairs(tokens) do
       if token.type == "vowel" and is_long_vowel_phon(token.phon) then
-        -- Check next token for ç/ɣ/h that should be deleted
         local next_t = tokens[i + 1]
         if next_t and next_t.phon then
           local ph = next_t.phon
           if ph == "ç" or ph == "ɣ" or ph == "h" then
-            -- Only if this is the last non-empty token
             local has_further_content = false
             for j = i + 2, #tokens do
               if tokens[j].phon and tokens[j].phon ~= "" then
@@ -56,39 +50,6 @@ return {
         end
       end
     end
-
-    -- Step 3: Unstressed final devoicing (Connacht/Ulster rule)
-    -- Word-final slender g [ɟ] in unstressed syllable -> [c]
-    for i = #tokens, 1, -1 do
-      if tokens[i].phon == "ɟ" then
-        -- Check if this is truly the last non-empty token
-        local is_final = true
-        for j = i + 1, #tokens do
-          if tokens[j].phon and tokens[j].phon ~= "" then
-            is_final = false
-            break
-          end
-        end
-        if is_final then
-          -- Check preceding vowel is unstressed
-          local prev_vowel = S.find_preceding_vowel(tokens, i)
-          if prev_vowel and not prev_vowel.stress then
-            tokens[i].phon = "c"
-          end
-        end
-        break
-      end
-    end
-
-    -- Step 4: ch + s -> tʃ sandhi
-    for i = 1, #tokens - 1 do
-      if tokens[i].phon == "x" and tokens[i + 1].ortho == "s" then
-        tokens[i].phon = "tʃ"
-        tokens[i + 1].phon = ""
-      end
-    end
-
-    -- Step 5: (removed — slender coda diacritics are handled by polarity-based consonant mapping in pass #9)
 
     return tokens
   end,
