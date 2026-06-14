@@ -1,0 +1,215 @@
+-- Shared data and utilities for all passes.
+
+local core = require("irish_core")
+local N = core.N
+local ulen = core.ulen
+local usub = core.usub
+local umatch = core.umatch
+
+local _shared = {}
+
+-- Character classes
+_shared.SLENDER_VOWELS_ORTHO = "eéií"
+_shared.BROAD_VOWELS_ORTHO = "aáoóuú"
+_shared.ALL_VOWELS_ORTHO = _shared.SLENDER_VOWELS_ORTHO .. _shared.BROAD_VOWELS_ORTHO
+_shared.SHORT_VOWELS_ORTHO = "aeiou"
+_shared.CONSONANTS_ORTHO = "bcdfghlmnprst"
+_shared.STRESS_MARK = "ˈ"
+_shared.SILENT_MUTATED_FINALS = { th = true, dh = true, gh = true }
+_shared.INITIAL_CLUSTER_SHIFTS = {
+    cn = { "c", "r" },
+    gn = { "g", "r" },
+    mn = { "m", "r" },
+    tn = { "t", "r" },
+}
+_shared.VOWEL_DIGRAPHS = {
+    ["ao"] = true, ["eo"] = true, ["ea"] = true, ["ae"] = true,
+    ["ai"] = true, ["oi"] = true, ["ui"] = true, ["ua"] = true,
+    ["ái"] = true, ["éa"] = true, ["ío"] = true, ["óí"] = true, ["aí"] = true,
+}
+_shared.DIALECTS = {
+    connacht = { ao = "eː", ai = "ai", ea = "a", eo = "oː", ["ío"] = "iː" },
+    munster  = { ao = "eː", ai = "ai", ea = "a", eo = "oː", ["ío"] = "iː" },
+    ulster   = { ao = "iː", ai = "ai", ea = "a", eo = "oː", ["ío"] = "iː" },
+}
+_shared.KNOWN_PREFIXES = {
+    ["an"] = true, droch = true, ["do"] = true, dea = true,
+    sean = true, ath = true, ["fo"] = true, frith = true,
+    idir = true, ["in"] = true, so = true, tras = true,
+    ban = true, cam = true, fionn = true, leas = true,
+    comh = true,
+}
+
+function _shared.is_vowel_char(ch)
+    return umatch(ch, "[" .. _shared.ALL_VOWELS_ORTHO .. "]") ~= nil
+end
+
+function _shared.is_slender_vowel_char(ch)
+    return umatch(ch, "[" .. _shared.SLENDER_VOWELS_ORTHO .. "]") ~= nil
+end
+
+function _shared.is_broad_vowel_char(ch)
+    return umatch(ch, "[" .. _shared.BROAD_VOWELS_ORTHO .. "]") ~= nil
+end
+
+function _shared.is_short_vowel_char(ch)
+    return umatch(ch, "[" .. _shared.SHORT_VOWELS_ORTHO .. "]") ~= nil
+end
+
+function _shared.is_consonant_char(ch)
+    return umatch(ch, "[" .. _shared.CONSONANTS_ORTHO .. "]") ~= nil
+end
+
+function _shared.is_short_vowel(token)
+    if not token or token.type ~= "vowel" then return false end
+    local ortho = token.ortho
+    for i = 1, ulen(ortho) do
+        if not _shared.is_short_vowel_char(usub(ortho, i, i)) then
+            return false
+        end
+    end
+    return true
+end
+
+function _shared.normalize_ortho(word)
+    return core.ulower(N(word or ""))
+end
+
+function _shared.make_token(ortho, token_type, s, e)
+    return {
+        ortho = ortho,
+        phon = ortho,
+        type = token_type,
+        palatal = nil,
+        broad = nil,
+        slender = nil,
+        is_mutated = false,
+        mutation = nil,
+        ortho_indices = { s, e },
+        stress = false,
+        source = "lexeme",
+        is_voiceless = false,
+        is_epenthetic = false,
+    }
+end
+
+function _shared.set_polarity(token, value)
+    token.palatal = value
+    token.slender = value == true or nil
+    token.broad = value == false or nil
+end
+
+function _shared.vowel_has_slender_trace(vowel)
+    if not vowel then return false end
+    return vowel.ortho:match("[ií]") ~= nil
+end
+
+function _shared.vowel_polarity(vowel, direction)
+    if not vowel then return nil end
+    if vowel.ortho == "ai" then
+        return direction == "prev" and true or false
+    end
+    if vowel.ortho == "ae" then
+        return direction == "prev" and false or true
+    end
+    if vowel.ortho == "ea" or vowel.ortho == "éa" then
+        return direction == "prev" and false or true
+    end
+    if vowel.ortho == "eo" then return false end
+    if vowel.ortho == "ao" or vowel.ortho == "aoi" or
+       vowel.ortho == "aí" or vowel.ortho == "ái" or
+       vowel.ortho == "ua" or vowel.ortho == "oi" or
+       vowel.ortho == "ui" then return false end
+    if vowel.ortho == "eoi" or vowel.ortho == "ío" then return true end
+    local last = usub(vowel.ortho, ulen(vowel.ortho), ulen(vowel.ortho))
+    if _shared.is_slender_vowel_char(last) then return true end
+    if _shared.is_broad_vowel_char(last) then return false end
+    return nil
+end
+
+function _shared.palatal_consonant(token, slender, broad)
+    if token.palatal == true then return slender end
+    if token.palatal == false then return broad end
+    return broad
+end
+
+function _shared.is_vocalizable_fricative(token)
+    return token and (token.ortho == "bh" or token.ortho == "mh" or
+                     token.ortho == "dh" or token.ortho == "gh")
+end
+
+function _shared.is_slender_coda_pair(tokens, i)
+    local c1 = tokens[i]; local c2 = tokens[i + 1]
+    return c1 and c2 and c1.type == "cons" and c2.type == "cons" and
+        ((c1.ortho == "l" and c2.ortho == "t") or (c1.ortho == "r" and c2.ortho == "t"))
+end
+
+function _shared.is_sonorant(token)
+    return token and token.type == "cons" and
+        (token.ortho == "l" or token.ortho == "n" or token.ortho == "r" or token.ortho == "m")
+end
+
+function _shared.is_voiced_obstruent(token)
+    return token and token.type == "cons" and
+        (token.ortho == "b" or token.ortho == "d" or token.ortho == "g")
+end
+
+function _shared.clone_token(token)
+    local copy = {}
+    for k, v in pairs(token) do
+        if type(v) == "table" then
+            local nested = {}
+            for nk, nv in pairs(v) do nested[nk] = nv end
+            copy[k] = nested
+        else
+            copy[k] = v
+        end
+    end
+    return copy
+end
+
+function _shared.clone_tokens(tokens)
+    local copy = {}
+    for i, token in ipairs(tokens) do copy[i] = _shared.clone_token(token) end
+    return copy
+end
+
+function _shared.count_vowel_tokens(tokens)
+    local count = 0
+    for _, token in ipairs(tokens) do
+        if token.type == "vowel" then count = count + 1 end
+    end
+    return count
+end
+
+function _shared.vowel_token_index(tokens)
+    for i, token in ipairs(tokens) do
+        if token.type == "vowel" then return i end
+    end
+    return nil
+end
+
+function _shared.find_preceding_vowel(tokens, i)
+    for j = i - 1, 1, -1 do
+        if tokens[j].type == "vowel" then return tokens[j] end
+    end
+    return nil
+end
+
+function _shared.is_stressed_vowel(token)
+    return token and token.type == "vowel" and token.stress
+end
+
+-- Lookup tables: eclipsis -> base consonant
+_shared.ECLIPSIS_MAP = {
+    mb = { phon = "mˠ" },
+    gc = { phon = "ɡ" },
+    dt = { phon = "d̪ˠ" },
+    bp = { phon = "bˠ" },
+    ng = { phon = "ŋ" },
+    ngl = { phon = "ŋ" },
+    nn = { phon = "n̪ˠ" },
+    bpr = { phon = "bˠ" },
+}
+
+return _shared
