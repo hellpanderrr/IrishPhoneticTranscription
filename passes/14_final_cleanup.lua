@@ -85,6 +85,22 @@ return {
       end
     end
 
+    -- Step 6: /rʲ/ word-final assibilation (Hickey Ch.2)
+    -- In some dialects, slender /rʲ/ → [ʃ] at word end
+    for i = #tokens, 1, -1 do
+      if tokens[i].type == "cons" and tokens[i].phon == "ɾʲ" then
+        local is_final = true
+        for j = i + 1, #tokens do
+          if tokens[j].phon and tokens[j].phon ~= "" then is_final = false; break end
+        end
+        if is_final then
+          tokens[i].phon = "ʃ"
+          tokens[i].source = "assibilation"
+        end
+        break
+      end
+    end
+
     return tokens
   end,
 }
