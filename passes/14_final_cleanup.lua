@@ -7,6 +7,8 @@
 local S = require("passes._shared")
 local ustring = require("ustring.ustring")
 local ugsub = ustring.gsub
+local usub = ustring.sub
+local umatch = ustring.match
 
 local function strip_trailing_fricative(phon)
   if not phon then return phon end
@@ -99,6 +101,63 @@ return {
         end
         break
       end
+    end
+
+    -- Step 7: Consonant aspiration (Fuaimeanna 3.5.1)
+    -- Word-initial voiceless stops aspirate [ʰ] except after /s/.
+    for i, token in ipairs(tokens) do
+      if token.type ~= "cons" or not token.phon then goto continue end
+      local phon = token.phon
+      local is_voiceless_stop = phon == "pʲ" or phon == "pˠ" or phon == "p" or
+                                phon == "tʲ" or phon == "t̪ˠ" or phon == "t" or
+                                phon == "c" or phon == "k"
+      if not is_voiceless_stop then goto continue end
+
+      -- After /s/ blocks aspiration
+      local prev = tokens[i - 1]
+      if prev and prev.type == "cons" and prev.phon and
+         (prev.phon == "sˠ" or prev.phon == "ʃ") then
+        goto continue
+      end
+
+      -- Aspirate word-initially (most reliable case)
+      if i == 1 or (prev and prev.phon == "") then
+        token.phon = phon .. "ʰ"
+      end
+
+      ::continue::
+    end
+
+    -- Step 8: Glide insertion (sleamhnóga) (Fuaimeanna 3.5.3)
+    -- Palatal C + back V → [j] glide appended to consonant
+    -- Broad C + front vowel → [w] glide
+    -- Uses ustring functions for correct UTF-8 character extraction.
+    for i, token in ipairs(tokens) do
+      if token.type ~= "cons" then goto continue end
+      if token.phon == "" then goto continue end
+      if token.source == "strong_sonorant" then goto continue end
+      local next = tokens[i + 1]
+      if not next or next.type ~= "vowel" then goto continue end
+      local vphon = next.phon
+      if not vphon or vphon == "" then goto continue end
+
+      -- Get first IPA character (strip length mark)
+      local vfirst = ugsub(vphon, "ː", "")
+      vfirst = usub(vfirst, 1, 1)
+
+      if token.palatal == true then
+        -- Palatal C before back vowel → j-glide
+        if vfirst and umatch(vfirst, "[aɑoɔuʊ]") then
+          token.phon = token.phon .. "j"
+        end
+      elseif token.palatal == false then
+        -- Broad C before front vowel → w-glide
+        if vfirst and umatch(vfirst, "[eɛiɪ]") then
+          token.phon = token.phon .. "w"
+        end
+      end
+
+      ::continue::
     end
 
     return tokens
