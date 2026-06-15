@@ -27,12 +27,12 @@ _shared.VOWEL_DIGRAPHS = {
     ["ao"] = true, ["eo"] = true, ["ea"] = true, ["ae"] = true,
     ["ai"] = true, ["oi"] = true, ["ui"] = true, ["ua"] = true,
     ["ái"] = true, ["éa"] = true, ["ío"] = true, ["óí"] = true, ["aí"] = true,
-    ["ei"] = true,
+    ["ei"] = true, ["éi"] = true,
 }
 _shared.DIALECTS = {
     connacht = {
-        ao = "iː", ai = "ai", ea = "a", eo = "oː", ["ío"] = "iː",
-        oi = "ɔi", ui = "ʊi", ua = "uə", ia = "iə", ["éi"] = "eː",
+        ao = "iː", ai = "a", ea = "a", eo = "oː", ["ío"] = "iː",
+        oi = "ɔ", ui = "ʊ", ua = "uə", ia = "iə", ["éi"] = "eː",
         short = { a = "a", o = "ɔ", u = "ʊ", i = "ɪ", e = "ɛ" },
         long  = { a = "ɑː", o = "oː", u = "uː", i = "iː", e = "eː" },
         diphthong = {},

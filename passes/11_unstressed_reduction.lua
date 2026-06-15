@@ -55,6 +55,11 @@ return {
       if token.is_epenthetic then goto continue end
       local phon = token.phon
       if not phon or phon == "" then goto continue end
+
+      -- Must not reduce vowel before another vowel — it's part of a VV diphthong
+      local next_token = tokens[i + 1]
+      if next_token and next_token.type == "vowel" then goto continue end
+
       if SHORT_VOWELS[phon] then
         token.phon = "ə"
       end

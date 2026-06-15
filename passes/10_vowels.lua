@@ -47,7 +47,7 @@ return {
         elseif ortho == "ua" then token.phon = dv.ua
         elseif ortho == "ia" then token.phon = dv.ia
         elseif ortho == "éi" then token.phon = dv["éi"]
-        elseif ortho == "éa" then token.phon = dv.ea
+        elseif ortho == "éa" then token.phon = "eː"
         elseif ortho == "ío" then token.phon = dv["ío"]
         elseif ortho == "eoi" then token.phon = dv.eo
         elseif ortho == "aí" or ortho == "ái" then token.phon = "ɑː"
