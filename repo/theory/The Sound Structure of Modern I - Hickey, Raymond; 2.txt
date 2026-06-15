@@ -1,0 +1,623 @@
+Here is a detailed, structurally optimized summary of the first part of the document (Part I: Introduction, encompassing the Historical Background and Dialects of Irish). 
+
+This summary is specifically tailored for an LLM to extract **Grapheme-to-Phoneme (G2P)** rules, phonological contexts, orthographic history, and dialectal variations necessary for building a highly accurate Irish phonetic engine.
+
+---
+
+# Core Summary: Part I – Historical Background & Dialectal Phonetics
+
+## 1. Historical & Orthographic Context for G2P
+To accurately map modern Irish spelling to phonemes, an LLM must understand that Modern Irish orthography is deeply historical. The spelling often reflects older phonological stages rather than a direct 1-to-1 modern phonetic mapping.
+
+*   **Lenition & Fricativization:** Stemming from Primitive/Old Irish, intervocalic consonants were weakened. Voiced stops fricativized (e.g., *gh, dh* $\rightarrow$ /ɣ/ and *bh, mh* $\rightarrow$ /v/). Over time, these fricatives were absorbed into preceding vowels, causing vowel lengthening or diphthongization.
+*   **Vowel Coloring (Affection):** Old Irish developed a system where vowel height was influenced by the vowel in the following syllable. Because unstressed syllables were later lost (apocope/syncope), the phonetic weight of grammatical information shifted to the consonants, creating the **palatal (slender) vs. non-palatal (broad)** consonant distinction that dictates modern Irish phonology. 
+*   **1948 Orthographic Reform:** Modern spelling can camouflage historical G2P triggers. For example, the modern word *saol* (/si:lɣ/ "life") was historically spelled *saoghal*. The silent `gh` (/ɣ/) was intervocalic, and its loss caused the surrounding vowels to merge into a long monophthong. The engine must treat sequences like `<ao>` as historical remnants of these mergers.
+
+## 2. Dialectal Architecture
+Modern Irish exists as a continuum broken into three primary dialect groups. A robust G2P engine must support parameterization for these three dialects, as their phonetic realizations of identical graphemes diverge significantly:
+1.  **Northern Irish (Ulster/Donegal):** Characterized by initial stress, shortening of post-initial long vowels, fronting of back vowels, and affrication of palatal stops.
+2.  **Western Irish (Connacht/Galway/Mayo):** Characterized by initial stress, retention of short+long vowel sequences, and distinct vowel lengthening before certain sonorants.
+3.  **Southern Irish (Munster/Kerry/Cork/Waterford):** Characterized by variable word stress (attracted to non-initial long vowels) and heavy diphthongization before sonorants.
+
+## 3. Explicit G2P Mapping Rules by Dialect (Section 2.3)
+
+### A. Vowel Realizations
+*   **The `<AO>` Grapheme:**
+    *   **Rule:** Yields a long front monophthong. The consonant *preceding* it is always non-palatal (velarized/broad), giving the vowel a retracted quality.
+    *   **Northern:** /i:/ (often retracted to [ɯː] or [λː] in Donegal).
+    *   **Western:** /i:/ (sometimes lowered to /e:/ in formal contexts).
+    *   **Southern:** /e:/.
+    *   *Exceptions:* Some words trigger a diphthong /ai/ (e.g., *faoileán* $\rightarrow$ /failjɑ:nɣ/).
+*   **Stressed Vowels before Syllable-Final Sonorants (L, N, R, M):**
+    *   **Southern:** Triggers diphthongization (e.g., *am* $\rightarrow$ /au/).
+    *   **Western:** Triggers vowel lengthening (e.g., *am* $\rightarrow$ /ɑ:/).
+    *   **Northern:** Retains the short vowel (e.g., *am* $\rightarrow$ /a/).
+*   **Unconditioned Long Vowels:**
+    *   **Northern Shift:** `<á>` is heavily fronted to [æ:] or [ε:]. Mid-back vowels `<eo, ó>` are lowered (e.g., *bróg* $\rightarrow$ [brɔ:g]).
+*   **Final Unstressed Short Vowels (e.g., `<a, e, i, o, u>` at the end of words):**
+    *   **Southern & Western:** Reduced to schwa [ə] (e.g., *teanga*).
+    *   **Northern:** Realized as a long [iː] in many regions.
+*   **Long Vowels from Vocalized Fricatives:**
+    *   **Rule:** `<agh, adh, abh, amh>`: The fricative moves from the coda to the nucleus, creating a long vowel or diphthong.
+    *   *agh/adh* usually yields /ai/.
+    *   *abh/amh* usually yields /au/ (especially in Southern Irish).
+
+### B. Consonant Realizations
+*   **Coronal Palatal Stops (tj, dj):**
+    *   **Northern:** Realized as affricates [tʃ] and [dʒ].
+    *   **Western:** Realized as palatal stops [tj, dj].
+    *   **Southern:** Realized as alveolar stops [t, d].
+*   **The Fricative `<ch>` /x/:**
+    *   **Northern:** In pre-consonantal coda positions (like `cht`), it shifts to [r] (e.g., *ocht* $\rightarrow$ [art]). In word-final positions, it frequently disappears completely. 
+    *   **Western/Southern:** Retained as a velar fricative [x].
+*   **The Fricative `<bh/mh>` /v/ (before a non-palatal vowel):**
+    *   **Northern & Western:** Shifts to the approximant [w] (e.g., *bhog* $\rightarrow$ [wʌg]).
+    *   **Southern:** Retains labiodental friction [v] (e.g., *bhog* $\rightarrow$ [vʌg]).
+*   **Sonorant Distinctions (N, L):**
+    *   **Northern & Western:** Maintain a complex 3-way distinction: Velarized (non-palatal), Alveolar, and Palatal.
+    *   **Southern:** Maintains only a 2-way distinction (Palatal vs. Non-palatal/velarized) with no distinct neutral alveolar form.
+*   **Velar Stops in Post-Nasal Position (e.g., `ng`):**
+    *   **Western (Cois Fharraige):** The stop is deleted, leaving only the nasal [ŋ].
+    *   **Northern & Southern:** Retain the stop [ŋg].
+
+### C. Prosody and Stress (Crucial for Vowel Reduction Mapping)
+*   **Northern:** Strict initial stress. Post-initial long vowels are subject to extreme shortening (e.g., *scadán* $\rightarrow$ /ˡskadanɣ/).
+*   **Western:** Strict initial stress. If a word has a short first vowel and long second vowel, the short initial vowel is raised to /ʊ/, but the short-long rhythm remains intact.
+*   **Southern:** Variable stress. Long vowels or heavy syllables (like `-ach`) in non-initial syllables *attract* primary stress (e.g., *cailín* $\rightarrow$ [kaˡlji:nj]).
+
+## 4. Implications for G2P System Architecture
+To utilize this document effectively, your G2P engine should be programmed with the following sequential pipeline:
+1.  **Syllabification & Stress Assignment:** Apply dialect-specific stress rules first, as this dictates whether a vowel is fully realized, reduced to schwa [ə], shortened, or if it triggers final-syllable diphthongization.
+2.  **Palatality Tagging:** Evaluate the vowels flanking the consonants. Tag consonants as [+palatal] (slender, near `e/i`) or [-palatal] (broad, near `a/o/u`). 
+3.  **Historical Digraph/Trigraph Resolution:** Parse `<bh/mh/gh/dh>` and `<ao/aoi>`. Apply the dialect-specific rules to determine if they become fricatives, glides [w], or are absorbed into the vowel to create length/diphthongs.
+4.  **Sonorant Coda Checks:** Check if short vowels precede `ll, nn, m, rr, rd, rn`. If so, apply the dialectal divergence route (South $\rightarrow$ Diphthong, West $\rightarrow$ Long Vowel, North $\rightarrow$ Short Vowel).
+Here is the structurally optimized summary of **Chapter II: The Phonological Framework**. 
+
+This section is the core of the document's phonological theory. It provides the exact environmental triggers, assimilation rules, and phonotactic constraints required to write the algorithmic rule-set for an Irish G2P (Grapheme-to-Phoneme) engine.
+
+---
+
+# Core Summary: Part II – The Phonological Framework
+
+## 1. The Master Rule: Palatal vs. Non-Palatal (Polarity)
+The entire Irish consonant system is built on "polarity": every consonant (except `/h/`) exists as a pair—**Palatal** (slender, transcribed with superscript $^j$) and **Non-Palatal** (broad, strongly velarized, transcribed with superscript $^ɣ$).
+
+### G2P Application for Polarity:
+*   **Vowel-Driven Assignment:** The G2P engine must first scan the orthographic vowels flanking a consonant to assign its polarity. `e/i` = [+palatal], `a/o/u` = [-palatal].
+*   **Secondary Palatals (Labials `P, B, M, F, V`):**
+    *   Before *front* vowels, labials exhibit no on-glide (e.g., *mé* $\rightarrow$ `[mje:]`).
+    *   Before *back* vowels, palatal labials exhibit a distinct `[j]` off-glide (e.g., *mion* $\rightarrow$ `[mjʌnɣ]`).
+    *   Non-palatal labials before front vowels exhibit a velar glide `[w]` or `[ɯ]` (e.g., *buí* $\rightarrow$ `[bɯi:]`).
+*   **Primary Palatals (Coronals & Velars):**
+    *   Involve actual tongue-to-palate contact.
+    *   **Northern dialect alert:** Palatal coronals `/tj, dj/` assibilate to affricates `[tʃ, dʒ]`.
+
+## 2. Consonant Realizations & Contextual Rules
+
+### A. Stops
+*   **Final Devoicing:** In Western and Northern Irish, a palatal velar stop `/gj/` is devoiced to `[kj]` when it occurs at the end of an *unstressed* syllable (e.g., *Nollaig* $\rightarrow$ `[ˡnɣʌlɣɪkj]`).
+*   **Voiced Velars in Southern Irish:** The historical final `/ɪj/` (often spelled `-igh`) closes into a voiced velar stop `[gj]` (e.g., *rachaidh* $\rightarrow$ `[ˡræçɪgj]`).
+
+### B. Fricatives
+*   **Sibilants (`S`):** Irish lacks voiced sibilants (`z, ʒ`). Non-palatal `s` is `[s]`; palatal `sj` is `[ʃ]`.
+*   **The Glottal `/h/`:**
+    *   When intervocalic and unstressed, `/h/` is frequently **deleted**, causing the preceding vowel to lengthen and absorb the syllable (e.g., *bóthar* $\rightarrow$ `[bo:r]`).
+    *   When palatal `/sj/` or `/tj/` is lenited to `/h/` before a back/low vowel, it is realized as the palatal fricative `[ç]` (e.g., *thiocfadh* $\rightarrow$ `[çʌkəx]`).
+*   **Velar Fricatives (`/x/, /ɣ/`):** 
+    *   In the North, word-medial `/x/` (spelled `ch`) often weakens to `[h]`, and word-final `/x/` disappears completely. Before a `/t/`, it becomes `[r]` (e.g., *ocht* $\rightarrow$ `[art]`).
+
+### C. Sonorants (L, N, R, M)
+*   **The 3-Way Distinction (North/West):** `L` and `N` have three phonetic states: strongly palatal `[nj, lj]`, strongly velarized `[nɣ, lɣ]`, and neutral alveolar `[n, l]`. Southern Irish only uses a 2-way distinction.
+*   **R-sounds:** Palatal `/rj/` in word-final position often assibilates to a voiceless fricative `[ʃ]` (West) or `[ʂ]` (e.g., *foclóir* $\rightarrow$ `[fʌklo:ʂ]`).
+*   **Nasal Assimilation:** Dental nasals retract to velar `[ŋ]` before velar stops (`c, g`).
+
+## 3. Vowel Gradation (Nucleus Assimilation)
+In Irish, the quality of a **short vowel** is dictated strictly by the polarity of the consonant in the **coda** (the end) of its syllable, rather than the onset.
+
+### G2P Application for Short Vowels:
+*   **If Coda is [+palatal]:** The short vowel pulls front/high (`[ɪ]` or `[ε]`).
+*   **If Coda is [-palatal]:** The short vowel pulls back/low (`[ʌ]` or `[a]`).
+*   *Example:* *olc* (broad coda) $\rightarrow$ `[ʌlɣk]`. *oilc* (slender coda) $\rightarrow$ `[εljkj]`.
+*   **Nasal Raising:** Short mid-vowels raise before nasals (`/o/` $\rightarrow$ `[u]`, `/e/` $\rightarrow$ `[i]`), e.g., *trom* $\rightarrow$ `[tru:m]`.
+
+## 4. Epenthesis (Svarabhakti Vowel Insertion)
+This is a highly predictable phonetic rule critical for G2P accuracy. An epenthetic vowel (usually a short schwa `[ə]` or `[ɪ]`) is automatically inserted to break up specific, phonotactically illegal consonant clusters.
+
+### G2P Algorithm for Epenthesis:
+Insert a vowel **IF** all of the following conditions are met:
+1.  The cluster occurs in the coda of a **short, stressed syllable**.
+2.  The cluster consists of **Sonorant** (`l, n, r`) + **Voiced Obstruent/Fricative** (`b, bh, v, m, g, gh`).
+3.  The two consonants are **heterorganic** (made at different places of articulation).
+    *   *Triggers Epenthesis:* *borb* (`r` + `b`) $\rightarrow$ `[bʌrəb]`, *seilbh* (`l` + `bh`) $\rightarrow$ `[ʃεljɪvj]`.
+    *   *Blocks Epenthesis:* *ord* (`r` + `d` are homorganic coronals $\rightarrow$ no insertion); *olc* (`l` + `c` voiceless stop $\rightarrow$ no insertion); *téarma* (long vowel preceding $\rightarrow$ no insertion).
+4.  **Vowel Selection:** Insert `[ɪ]` if the cluster is palatal; insert `[ə]` if the cluster is non-palatal.
+
+## 5. Metathesis
+Irish occasionally swaps the order of consonants to optimize syllable structure (usually moving a sonorant closer to the vowel).
+*   **G2P Note:** This is mostly lexicalized today. The G2P should handle words like *trasna* (pronounced `[tarsnə]`) or *Béarla* (pronounced `[be:lɣrə]`) via dictionary exceptions rather than algorithmic rules, as the engine cannot safely predict which words trigger metathesis.
+
+## 6. Syllable & Stress Algorithms (Expanded)
+Chapter II confirms the stress paradigms outlined in Chapter I with precise phonotactic triggers:
+
+### G2P Stress Assignment Logic:
+*   **North & West:** Stress is fixed on the **1st syllable**. Unstressed vowels reduce to `[ə]` (or `[ɪ]` if flanked by palatals).
+*   **South (Munster) Algorithm:**
+    1.  Scan the word for long vowels or diphthongs.
+    2.  If a long vowel exists in the 2nd or 3rd syllable, **shift primary stress** to that vowel (e.g., *cailín* $\rightarrow$ `[kaˡlji:nj]`).
+    3.  If the word contains the suffix `-ach` or `-acht` `/ax(t)/` in the 2nd syllable, **shift stress** to that suffix (e.g., *portach* $\rightarrow$ `[pʌrˡtax]`).
+        *   *Exception to #3:* Stress will *not* shift to `-ach` if the onset of that syllable is highly sonorous (like `r, l, h`), e.g., *ocrach* remains initial-stressed.
+    4.  If both the 1st and 2nd syllables have long vowels, keep stress on the 1st syllable to avoid a metrical clash.
+Here is the structurally optimized summary of **Chapter III: The Morphonology of Irish**. 
+
+For a G2P engine, this section is indispensable. It dictates how grammatical context actively alters the phonetic realization of both the beginnings of words (Initial Mutations) and the ends of words (Terminal Palatalization/Depalatalization). 
+
+---
+
+# Core Summary: Part III – The Morphonology of Irish
+
+## 1. The G2P Architecture of Initial Mutations
+Irish words possess "Base" (citation) forms that are dynamically altered at their left margins (word-initial) depending on the syntactic environment. The G2P engine must recognize these mutations as predictable phonological shifts, primarily **Lenition** (fricativization) and **Nasalization** (voicing/nasal assimilation).
+
+### A. Lenition (Séimhiú)
+Lenition fundamentally weakens a consonant by turning stops into fricatives. 
+*   **G2P Rule Mapping:**
+    *   `p` $\rightarrow$ `[f]`
+    *   `b` and `m` $\rightarrow$ `[v]` (or `[w]` in North/West before broad vowels) -> *Note: `b` and `m` merge.*
+    *   `c` (k) $\rightarrow$ `[x]` (or palatal `[ç]`)
+    *   `g` and `d` $\rightarrow$ `[ɣ]` (or palatal `[j]`) -> *Note: `g` and `d` merge. The dental `d` shifts place of articulation to a velar `ɣ`.*
+    *   `s` and `t` $\rightarrow$ `[h]` (or palatal `[ç]` before front vowels) -> *Note: `s` and `t` merge.*
+    *   `f` $\rightarrow$ **Ø (Zero/Deleted)** -> *Note: The `f` becomes completely silent.*
+
+### B. Nasalization / Eclipsis (Urú)
+Nasalization occurs in two tiers depending on the voicing of the target consonant:
+1.  **Voiceless Stops become Voiced:**
+    *   `p` $\rightarrow$ `[b]`
+    *   `t` $\rightarrow$ `[d]`
+    *   `c` (k) $\rightarrow$ `[g]`
+    *   `f` $\rightarrow$ `[v]` (Spelled `bhf`)
+2.  **Voiced Stops become Homorganic Nasals:**
+    *   `b` $\rightarrow$ `[m]`
+    *   `d` $\rightarrow$ `[n]`
+    *   `g` $\rightarrow$ `[ŋ]` (Spelled `ng`)
+
+*   **Exceptions/Blocks:** Coronal sonorants (`l, n, r, m`) generally resist both lenition and nasalization in modern orthography/phonology. 
+
+## 2. Consonant Prefixation (Prothesis)
+Alongside mutations, Irish injects specific consonants to the front of vowel-initial (and sometimes `s`-initial) words based on grammatical gender, case, or tense. The G2P must treat these prefixes as part of the word's onset.
+
+*   **Prefix `h` (e.g., *a haois* "her age"):**
+    *   Structurally equivalent to "zero mutation" for vowel-initial words. It attaches directly to the vowel nucleus without a hyphen. 
+*   **Prefix `t` (e.g., *an t-arán* "the bread", *an tslí* "the way"):**
+    *   Attached to vowel-initial masculine nouns (nominative).
+    *   Attached to `s`-initial feminine nouns (nominative), but **ONLY** if the `s` is followed by a vowel or a sonorant (`l, n, r`).
+    *   *G2P Constraint:* The sequence `ts` in this context (`tslí`, `tseachtain`) is pronounced simply as `[t]`. The `t` fully overrides/replaces the `s`.
+*   **Prefix `d'` (e.g., *d'fhág* "left", *d'imigh* "went"):**
+    *   Used as a past-tense marker before vowels and before `f` (because `f` lenites to zero in the past tense, leaving a vowel-initial sound). The `d` becomes the phonetic onset.
+
+## 3. Base Margin Alteration (Terminal Palatalization)
+Irish morphology heavily relies on altering the right margin (coda) of a word to signal grammatical case (e.g., Genitive) or number (e.g., Plural).
+
+*   **Palatalization as an Inflection:** A broad (velarized) final consonant becomes slender (palatalized). E.g., *cnoc* $\rightarrow$ *cnoic*.
+*   **Depalatalization as an Inflection:** A slender final consonant becomes broad. E.g., *beoir* $\rightarrow$ *beorach*.
+*   **G2P Impact (Nucleus Assimilation):** As established in Chapter II, this terminal polarity shift forces the preceding short vowel to alter its trajectory (Vowel Gradation). The G2P must map the orthographic vowel changes (e.g., `o` $\rightarrow$ `oi`) not as new independent vowels, but as the nucleus assimilating to the new palatal coda.
+
+## 4. Advanced Palatalization Mechanics (The Russian Typological Comparison)
+The text compares Irish to Russian to highlight how the G2P engine should handle secondary articulations (glides).
+
+### A. Labials (P, B, M, F, V)
+Because the tongue is not used to form labials, palatalization is achieved via secondary lip-tensing and glides.
+*   **Palatal Labial + Back Vowel:** Requires a distinct `[j]` off-glide.
+    *   *Example:* *peann* $\rightarrow$ `[pjɑ:nɣ]`.
+*   **Non-Palatal (Broad) Labial + Front Vowel:** Requires a distinct velar `[w]` or `[ɯ]` glide to protect the broad consonant from the front vowel.
+    *   *Example:* *buí* $\rightarrow$ `[bɯi:]`.
+
+### B. The Grapheme `<AO>`
+*   Phonologically identical in behavior to the Russian vowel `[ɨ]` (ы). 
+*   It is a highly retracted vowel that **only** occurs after a non-palatal (broad) consonant. It acts as an absolute phonetic barrier, ensuring the preceding consonant remains velarized. 
+*   *Example:* *saol* $\rightarrow$ `[si:lɣ]`.
+
+### C. Primary Palatals (Velars & Coronals)
+*   **Velars (`c, g`):** In Irish, palatal velars (`kj, gj`) do *not* assibilate into affricates (unlike Italian or Slavic). They remain true stops `[c, ɟ]`.
+*   **Coronals (`t, d`):** As noted in previous sections, palatal coronals (`tj, dj`) *do* assibilate to `[tʃ, dʒ]`, but this is highly prevalent only in Northern (Ulster) dialects.
+
+## 5. Mergers & Boundary Sandhi
+*   **Compound Lenition:** When two words are combined, the second element is typically lenited (e.g., *dubh* + *fluich* $\rightarrow$ *dubhfhluich*).
+*   **Homorganic Blocking:** If the final consonant of the first word and the initial consonant of the second word are made at the same place of articulation (homorganic), **lenition is blocked**. 
+    *   *Example:* *ceann* + *dána* $\rightarrow$ *ceanndána* (Not *ceanndhána*).
+*   **Double Fricative Ban:** Irish phonotactics strictly prohibit two fricatives in sequence. If a mutation or compound would create a fricative-fricative cluster, one is deleted, devoiced, or altered.
+*Note: Part IV of the original text ("Typological Viewpoints") is absent from the provided document excerpts. Therefore, this summary covers the next and final major section provided:* **Part V: Appendixes**. 
+
+This section acts as a master reference guide. It systematizes the phonological inventories, transcription standards, and lexical sets, making it a highly structured "cheat sheet" for finalizing the G2P engine's rule-set and handling training data.
+
+---
+
+# Core Summary: Part V – Appendixes (System Inventories & Standards)
+
+## 1. The Standardized Consonant Inventory & Pairwise Notation
+For computational efficiency, the text advocates for a **pairwise notation system**. Because almost every consonant in Irish exists as a pair (Palatal vs. Non-Palatal), the G2P engine should process consonants as abstract cover symbols (uppercase) that are subsequently assigned palatality (`j` or `ɣ`) based on flanking vowels. 
+
+**Rule of Mutation Invisibility:** Initial mutations apply equally to both members of a pair. The polarity (palatality/velarization) remains constant during a mutation. 
+
+**The Pairwise Mapping Table:**
+*   **Labials:**
+    *   **P:** `/p/` (broad) vs. `/pj/` (slender)
+    *   **B:** `/b/` vs. `/bj/`
+    *   **M:** `/m/` vs. `/mj/`
+    *   **F:** `/f/` vs. `/fj/`
+    *   **V:** `/v/` vs. `/vj/`
+*   **Coronals:**
+    *   **T:** `/t/` vs. `/tj/` (assibilates to `tʃ` in North)
+    *   **D:** `/d/` vs. `/dj/` (assibilates to `dʒ` in North)
+    *   **S:** `/s/` vs. `/sj/` (`[ʃ]`)
+*   **Velars:**
+    *   **K:** `/k/` vs. `/kj/` (`[c]`)
+    *   **G:** `/g/` vs. `/gj/` (`[ɟ]`)
+    *   **X:** `/x/` (broad `ch`) vs. `/xj/` (slender `ch`, realized as `[ç]`)
+    *   **ɣ:** `/ɣ/` (broad `gh/dh`) vs. `/ɣj/` (slender `gh/dh`, realized as `[j]`)
+*   **Sonorants:**
+    *   **N:** `/nɣ/` (velarized) vs. `/nj/` (palatal)
+    *   **L:** `/lɣ/` (velarized) vs. `/lj/` (palatal)
+    *   **R:** `/r/` (broad tap/trill) vs. `/rj/` (slender tap/fricative)
+*   **Non-Paired:**
+    *   **ŋ:** Velar nasal (occurs in mutations like `ng-`).
+    *   **h:** Glottal fricative (no palatal counterpart).
+
+## 2. The Standardized Vowel Inventory & Lexical Sets
+The G2P engine must recognize that short vowels in Irish are heavily centralized and highly susceptible to the polarity of their surrounding consonants. Long vowels are stable. The text uses "Lexical Sets" (keyword standardizations) to map these.
+
+### A. Short Vowels (Centralized)
+*   **/ɪ/** (High-front): Keyword **FIOS**. Occurs before/after palatals. 
+*   **/ε/** (Mid-front): Keyword **TE**.
+*   **/a/** (Low-front/central): Keyword **SLACHT**. Backs to `[a]` near broad consonants; fronts to `[æ]` near slender consonants.
+*   **/ʌ/** (Mid-back unrounded): Keyword **COR**. Represents orthographic `o` or `u` in broad environments. 
+    *   *Contextual variants:* Raises to `[ʊ]` before velar stops (e.g., *rug*). Retains a rounded `[ɔ]` in Northern Irish before liquids (*olc*).
+*   **/ə/** (Schwa): Keyword **BALLA**. The default unstressed vowel.
+
+### B. Long Vowels (Stable)
+*   **/i:/** Keyword **LÍON**
+*   **/e:/** Keyword **MÉ**
+*   **/ɑ:/** Keyword **TÁ** (Fronts to `[æ:]` or `[ε:]` in Northern Irish)
+*   **/o:/** Keyword **BÓ**
+*   **/u:/** Keyword **CÚ**
+
+### C. Diphthongs
+*   **/ai/** Keyword **AGHAIDH**
+*   **/au/** Keyword **CABHAIR**
+*   **/iə/** (Centring): Keyword **BIA**
+*   **/uə/** (Centring): Keyword **CRUA**
+
+## 3. Parsing Training Data: Traditional vs. IPA Transcription
+If the G2P engine is trained on historical or traditional Celticist linguistic datasets (e.g., Wagner, de Bhaldraithe), it must map legacy notation to standard IPA.
+
+*   **Traditional Palatality (The Prime):** Older texts use a prime mark ` ' ` to denote slender/palatal. The engine must map `C'` to `Cj`.
+*   **Traditional Sonorants (Uppercase):** Older texts use uppercase letters to denote "tense" (strongly polarized) sonorants vs. lowercase for "lax" (neutral) sonorants.
+    *   `N'` or `L'` = Strongly palatal `[nj]`, `[lj]`
+    *   `N` or `L` = Strongly velarized (broad) `[nɣ]`, `[lɣ]`
+    *   `n'` or `l'` = Weakly palatal `[nj]`, `[lj]`
+    *   `n` or `l` = Neutral alveolar `[n]`, `[l]`
+
+## 4. Cross-Linguistic Parameters (Scottish Gaelic)
+If the engine needs to process Scottish Gaelic (which shares the Q-Celtic orthographic and mutational framework with Irish), several major rule-toggles must be flipped:
+
+1.  **Stop Voicing $\rightarrow$ Aspiration:** Scottish Gaelic has lost the true voiced/voiceless distinction in stops (`b/p`, `d/t`, `g/c`). The G2P must map these to non-aspirated vs. aspirated (or pre-aspirated in codas). E.g., a written `c` in a coda may be pronounced `[hk]`.
+2.  **The `<AO>` Vowel:** While Irish maps `<ao>` to `/i:/` or `/e:/` (with broad consonant boundaries), Scottish Gaelic maps it to a high back unrounded vowel **`/ɯ:/`**.
+3.  **Loss of Geminates $\rightarrow$ Diphthongs:** Like Southern Irish, Scottish Gaelic lost historical double sonorants (`ll, nn, m`) and compensated by lengthening or diphthongizing the preceding vowel (e.g., *meall* $\rightarrow$ `/mjaul/`).
+4.  **Word-Internal `h`:** Scottish Gaelic frequently retains a pronounced `[h]` where Old Irish had a `/θ/` (e.g., *fitheach* $\rightarrow$ `/fi(h)əx/`), which Irish usually deletes or absorbs.
+In distilling a 435-page highly technical linguistic document into structured summaries, I abstracted several granular, edge-case mechanics to maintain readability. However, for building a **production-grade Irish G2P (Grapheme-to-Phoneme) engine**, these "minor" processes and deep phonotactic rules are absolutely critical, as they govern how vowels and consonants behave dynamically in connected speech and suffixation.
+
+Here is what was missed or compressed in the previous summaries that you must feed into your G2P logic:
+
+### 1. Vowel Gradation Algorithms (The "Umlaut" Effect)
+While I mentioned that changing a consonant’s polarity (broad $\leftrightarrow$ slender) alters the adjacent short vowel, the text provides the **exact algorithmic shifts** for this "Vowel Gradation." When a word changes grammatical case (e.g., Nominative to Genitive), the short vowel shifts its height/frontness based on the new coda.
+
+Your G2P needs these specific mapping rules:
+*   **`/ʌ/` $\rightarrow$ `/ɪ/`:** e.g., *cnoc* `/krʌk/` $\rightarrow$ *cnoic* `/krɪkj/`
+*   **`/a/` $\rightarrow$ `/ɪ/`:** e.g., *mac* `/mak/` $\rightarrow$ *mic* `/mɪkj/`
+*   **`/ʌ/` $\rightarrow$ `/ε/`:** e.g., *olc* `/ʌlɣk/` $\rightarrow$ *oilc* `/εljkj/`
+*   **`/a/` $\rightarrow$ `/ε/`:** e.g., *glas* `/glɣas/` $\rightarrow$ *glais* `/glɣεsj/`
+
+### 2. Suffixation Nullifies Sonorant Vowel-Lengthening
+In Chapter I/II, the rule was established that short vowels lengthen or diphthongize before heavy sonorants (`ll, nn, m, rr`). However, the text later specifies a critical structural exception: **This lengthening ONLY happens in monosyllabic words.**
+*   If a suffix is added, making the word polysyllabic, the sonorant is resyllabified (becoming the onset of the next syllable), and the vowel **remains short**.
+*   *G2P Example:* 
+    *   *peann* (pen) $\rightarrow$ `[pjɑːnɣ]` (Vowel lengthens before `nn`).
+    *   *peanna* (pens) $\rightarrow$ `[pjanɣə]` (Suffix `-a` is added; vowel reverts to short `[a]`).
+
+### 3. Vowel Elision Hierarchy (Connected Speech Sandhi)
+For a text-to-speech (TTS) or G2P engine handling full sentences, the text outlines strict rules for what happens when two vowels collide across a word boundary (`V # V $\rightarrow$ V`). Vowels do not just merge randomly; they follow a strict **Elision Hierarchy**:
+1.  **`/ə/` (Schwa):** Most likely to be deleted.
+2.  **Other Short Vowels (`/ɪ/, /ε/, /a/, /ʌ/`):** Deleted if colliding with a long vowel.
+3.  **Long Vowels:** Least likely to be deleted.
+*   *G2P Example:* *ba iontach* $\rightarrow$ `[b(ə)i:nɣtəx]` (The short `a` in *ba* reduces to schwa and is completely elided by the long `io` `[i:]` in *iontach*).
+
+### 4. The Two Sub-Classes of "S" (`S1` vs `S2`)
+The sibilant `s` is the most flexible consonant in Irish, but the G2P engine must treat it as two completely different phonological entities depending on what consonant follows it:
+*   **`S1` (Occurs before vowels or sonorants `l, n, r`):** **CAN** be lenited to `/h/` (e.g., *sráid* $\rightarrow$ *shráid* `[h]`).
+*   **`S2` (Occurs before stops `p, t, k` or `m`):** **CANNOT** be lenited (e.g., *smig* $\rightarrow$ *an smig*, never *an shmig*).
+    *   *Further exception:* `S` normally palatalizes to `[ʃ]` before palatal consonants, but **`S2` does not palatalize before labials**. Therefore, *sméar* (blackberry) is pronounced `[smje:r]`, NOT `*[ʃmje:r]`.
+
+### 5. Internal Lenition in Compound Words
+Initial mutations (lenition/eclipsis) don't just happen at the beginning of isolated words; they happen **inside** compound words at the boundary of the `[Modifier] + [Head]`. 
+*   *G2P Rule:* The first consonant of the second element is automatically lenited.
+    *   *Example:* *dubh* (black) + *fliuch* (wet) $\rightarrow$ *dubhfhluich* (very wet).
+*   *The "Homorganic" Exception:* If the final consonant of the Modifier and the first consonant of the Head are made at the same place in the mouth (e.g., both are dentals/coronals), **lenition is blocked**.
+    *   *Example:* *ceann* + *dána* $\rightarrow$ *ceanndána* (NOT *ceanndhána*). 
+
+### 6. Metathesis (Consonant Swapping)
+The text dedicates 20 pages to metathesis, which I previously reduced to a single bullet point. The G2P engine needs to know that Irish naturally swaps consonants to avoid phonotactically illegal codas, especially in loanwords.
+*   **`ks` $\rightarrow$ `sk`:** English *box* becomes Irish *bosca* (`[bʌskə]`).
+*   **`r` + sonorant $\rightarrow$ sonorant + `r`:** *Béarla* (English language) is often pronounced `[be:lɣrə]` (swapping the `r` and `l`).
+*   While a G2P engine cannot easily predict metathesis on the fly, it must have a dictionary-lookup module to catch words ending in `-rla`, `-sna` (*trasna* $\rightarrow$ `[tarsnə]`), and English loanwords containing affricates or `x`.
+
+### 7. Affricates in Loanwords
+The text explicitly notes that modern Irish allows the English affricate `[dʒ]` in recent loanwords (*jeep* $\rightarrow$ `[dʒi:p]`), but historically, Irish devoiced and metathesized these. 
+*   *G2P Rule for older loans:* Words borrowed historically with a final affricate swap and devoice to `[sjtjə]`.
+    *   *Example:* English *page* $\rightarrow$ Irish *páiste* (`[pɑ:sjtjə]`). English *baggage* $\rightarrow$ Irish *bagáiste*.
+
+
+To make your G2P engine truly state-of-the-art, we need to dig into the **micro-phonotactics and trace effects** buried deep in the text. These are the highly specific, low-level phonetic adjustments that native speakers make unconsciously, but which standard dictionary lookups usually fail to capture.
+
+Here is the remaining "hidden" rule-set extracted from the document, crucial for algorithmic G2P precision:
+
+### 1. "Phantom" Palatalization (Trace Features)
+When a consonant is deleted by lenition (specifically `fh` $\rightarrow$ Ø), the G2P engine cannot simply delete the consonant and move on. The document states that the **palatal feature [j] survives the deletion** and latches onto the preceding consonant (Forward Assimilation).
+*   **G2P Rule:** If `fh` (slender) is deleted, force the preceding consonant (even across a word boundary) to become palatal.
+*   *Example:* *an-fhiúntach* ("very worthwhile"). The `fh` `/fj/` is deleted, but its palatal nature forces the `n` in *an-* to become slender `[nj]`. Result: `[anj u:nɣtəx]`.
+
+### 2. Epenthetic Vowel "Coloring"
+When the engine inserts an epenthetic (svarabhakti) vowel to break up an illegal consonant cluster (like `rbh`, `lm`, `lg`), it cannot just default to a schwa `[ə]`. The vowel must adopt the polarity of the cluster.
+*   **G2P Rule:** 
+    *   If the cluster is **broad/non-palatal**, insert `[ə]`.
+    *   If the cluster is **slender/palatal**, insert `[ɪ]`.
+*   *Example:* 
+    *   *tarbh* (broad) $\rightarrow$ `[tarəv]`
+    *   *tairbh* (slender) $\rightarrow$ `[tεrjɪvj]`
+
+### 3. Micro-Vowel Shifts: R-Lowering and Nasal-Raising
+The G2P engine must adjust vowel heights based on neighboring consonants (specifically `R` and Nasals), independent of standard broad/slender rules.
+*   **R-Lowering:** A slender `/r/` causes high front vowels (`ɪ`, `e`) to drop to a mid-front `[ε]`.
+    *   *Example:* *tirim* (dry) $\rightarrow$ `[tjεrjɪmj]` (not `*[tjɪrjɪmj]`).
+*   **Nasal-Raising:** Nasals (`m, n, ng`) pull preceding mid-vowels UP into high vowels. `o` raises to `u`; `e` raises to `i`.
+    *   *Example 1:* *seomra* (room) $\rightarrow$ `[ʃu:mɹə]` (not `*[ʃo:mɹə]`).
+    *   *Example 2:* *trom* (heavy) $\rightarrow$ `[tru:m]`.
+
+### 4. Unstressed Syllable Reduction: `[ə]` vs `[ɪ]`
+While the engine knows to reduce unstressed vowels, it must systematically choose between `[ə]` and `[ɪ]` based on the coda of that specific syllable.
+*   **G2P Rule:** In closed unstressed syllables, if the final consonant is **palatal**, the reduced vowel is `[ɪ]`. If it is **non-palatal**, it is `[ə]`.
+*   *Example:* 
+    *   *ocras* (hunger - broad coda) $\rightarrow$ `[ʌkrəs]`
+    *   *ocrais* (hunger.GEN - slender coda) $\rightarrow$ `[ʌkrɪʃ]`
+
+### 5. Highly Specific Word-Final Devoicing
+The document notes that Irish does not have blanket word-final devoicing (like German or Russian), but it has a very specific trigger for **Velar Stops** (`g` $\rightarrow$ `k`).
+*   **G2P Rule:** Devoicing ONLY applies to **palatal velars** (`gj`) in **unstressed** syllables. Broad velars do not devoice.
+*   *Example:* 
+    *   *Pádraig* (unstressed slender final) $\rightarrow$ `[pɑ:rɪkj]` (pronounced with a `k` sound).
+    *   *Nollaig* (unstressed slender final) $\rightarrow$ `[ˡnɣʌlɣɪkj]`.
+    *   *bolg* (broad final) $\rightarrow$ `[bʌlɣəg]` (remains voiced `g`).
+
+### 6. Syllabic Consonants (Southern Dialect Specifics)
+If you are programming dialectal toggles, Southern Irish handles homorganic (same mouth position) stop+nasal clusters differently than the rest of the country.
+*   **G2P Rule (South Only):** Instead of inserting an epenthetic vowel between a `d/t` and an `n`, the `n` becomes a syllabic consonant `[ṇ]`.
+*   *Example:* *maidin* (morning).
+    *   West/North: `[madjɪnj]`
+    *   South: `[madjņj]`
+
+### 7. Vowel Shifting Before "Long Low" Vowels
+The text highlights a peculiar, long-distance vowel assimilation present in Western Irish where a short vowel in the first syllable anticipates a long low vowel in the next syllable.
+*   **G2P Rule:** A short `a` or `o` in the first syllable is raised to `[ʊ]` or `[ɪ]` if the second syllable contains a long `[ɑ:]`.
+*   *Example:* 
+    *   *coláiste* (college) $\rightarrow$ `[kʊlɣɑ:sjtjə]`
+    *   *caisleán* (castle) $\rightarrow$ `[kɪsjlja:nɣ]` (or `[kʊ...]`)
+
+### Summary for Engine Logic
+If you implement these into your G2P pipeline, the order of operations should be:
+1. **Apply Deletions & Trace Features** (Handle `fh` $\rightarrow$ Ø, map `[+palatal]` to previous consonant).
+2. **Apply Base Vowels** (Including long-distance anticipatory shifts like *coláiste*).
+3. **Apply Neighbor Effects** (R-lowering, Nasal-raising).
+4. **Resolve Epenthesis** (Insert `ə` or `ɪ` based on cluster polarity).
+5. **Apply Reductions & Devoicing** (Schwa vs. `ɪ`, and unstressed `g` $\rightarrow$ `k`).
+
+
+To squeeze every last drop of phonological logic out of this document for your G2P engine, we must look at the **deep-level orthographic mappings, sonorant substitutions, and dialectal exceptions** that the text outlines. 
+
+These are the highly specific rules that separate a basic dictionary-lookup engine from a true algorithmic Irish phonetic transcriber. 
+
+Here is the final tier of "deep cut" G2P rules extracted from the text:
+
+### 1. The Diphthongization Matrix (Vocalized Fricatives)
+Irish orthography is littered with silent `gh`, `dh`, `bh`, and `mh`. When these occur in the middle or end of a syllable, the G2P must convert them into specific diphthongs based on the preceding vowel. The text provides a hard rule-set for this:
+*   **Target `/au/` (Back Diphthong):** 
+    *   **Rule:** The sequences **`-abh, -amh, -odh, -ogh`** convert to `/au/`.
+    *   *Examples:* *samhradh* $\rightarrow$ `[saurə]`, *cabhair* $\rightarrow$ `[kaurj]`, *foghlaim* $\rightarrow$ `[faulɪmj]`.
+*   **Target `/ai/` (Front Diphthong):**
+    *   **Rule:** The sequences **`-adh, -agh`** convert to `/ai/`.
+    *   *Examples:* *radharc* $\rightarrow$ `[rairk]`, *aghaidh* $\rightarrow$ `[aɪ]`.
+*   *Note for Northern Irish:* Northern dialects often resist this diphthongization, resolving them to long vowels instead (e.g., `-amh` $\rightarrow$ `/o:/` or `/au/`; `-agh/-adh` $\rightarrow$ `[ε:]`).
+
+### 2. The "Sonorant Shift" (`N` $\rightarrow$ `R`)
+In Western and Northern dialects, an initial cluster consisting of a stop + `n` is phonetically illegal. The engine must automatically rewrite the `n` as an `r`.
+*   **G2P Rule:** Word-initial `cn-`, `gn-`, and `mn-` are pronounced `kr-`, `gr-`, and `mr-`.
+*   *Examples:* 
+    *   *cnoc* (hill) $\rightarrow$ `[krʌk]` (NOT `*[knʌk]`)
+    *   *mná* (women) $\rightarrow$ `[mrɑ:]`
+    *   *gnó* (business) $\rightarrow$ `[gro:]`
+
+### 3. Fricative Subsitutions & Deletions (`ch` and `th`)
+The graphemes `ch` (`/x/`) and `th` (`/h/`) behave erratically based on their position in the word. Your engine must parse their position before assigning a phoneme.
+*   **Word-Final `th` is Silent:** 
+    *   **Rule:** `th` at the end of a word = Ø. 
+    *   *Example:* *brath* $\rightarrow$ `[bra]`
+*   **Word-Medial `th` = `[h]`:** 
+    *   *Example:* *othar* $\rightarrow$ `[ˡʌhər]`
+*   **The `[f]` Shift (Dialectal):** In some common words in the West/North, `ch` and `th` harden into a labial fricative `[f]`.
+    *   *Examples:* *cluiche* (game) $\rightarrow$ `[klɪfjə]`; *leathuaire* $\rightarrow$ `[ljæfu:rjə]`.
+
+### 4. Southern Stress Shift BLOCKER
+Earlier, we noted that Southern (Munster) Irish shifts stress to the second syllable if it contains `-ach`. However, the text details a brilliant phonotactic exception that your engine must implement to prevent mispronunciations.
+*   **G2P Rule (Munster):** Stress shifts to the `-ach` suffix **UNLESS** the onset of that syllable is a highly sonorous consonant (specifically `r`, `l`, `n`, or `h`). If it is a sonorant, the stress remains on the 1st syllable.
+    *   *Shifts (Onset is a stop/fricative):* *portach* $\rightarrow$ `[pʌrˡtax]`, *oideachas* $\rightarrow$ `[ʌˡdjaxəs]`
+    *   *Blocked (Onset is a sonorant):* *ocrach* $\rightarrow$ `[ˡʌkrəx]`, *fathach* $\rightarrow$ `[ˡfahəx]`, *misneach* $\rightarrow$ `[mɪsjˡnjax]`
+
+### 5. Labial Fricative Vocalization (`v` $\rightarrow$ `u:`)
+When a broad `/v/` (spelled `bh` or `mh`) follows a short central/back vowel (`ʌ` or `ə`) in an unstressed or final position, it loses its friction entirely and turns into a long vowel.
+*   **G2P Rule:** `/ʌ/` or `/ə/` + broad `v` (at word end) $\rightarrow$ `[u:]`.
+*   *Examples:* 
+    *   *subh* (jam) $\rightarrow$ `[su:]`
+    *   *marbh* (dead) $\rightarrow$ `[maru:]` (or `[marəv]`)
+    *   *tarbh* (bull) $\rightarrow$ `[taru:]` (or `[tarəv]`)
+
+### 6. Assibilation of Final "R"
+Irish R-sounds have a unique phonetic signature when they are palatal (slender) and sit at the end of a word or syllable.
+*   **G2P Rule:** Slender `/rj/` in word-final position (or before a pause) devoices and assibilates into a "sh"-like fricative: `[ʃ]` or the retroflex `[ʂ]`. 
+*   **If it follows a palatal labial (`bj, mj, pj`):** It voices into a `[ʐ]`.
+    *   *Examples:* 
+        *   *foclóir* $\rightarrow$ `[fʌklo:ʂ]`
+        *   *b'fhéidir* $\rightarrow$ `[bje:djɪʂ]`
+        *   *breá* $\rightarrow$ `[bjʐɑ:]`
+
+### 7. Palatal Non-Assimilation (The `ch` Exemption)
+Generally, Irish consonant clusters must agree in polarity (both broad or both slender). However, the broad velar fricative `/x/` (`ch`) is stubbornly immune to palatal assimilation.
+*   **G2P Rule:** Do not palatalize `[x]` even if it is followed by a slender consonant. Consequently, do not apply vowel-fronting to the vowel preceding it.
+    *   *Example:* *boichte* (poorer). The `t` is slender (`tj`), but the `ch` (`x`) remains broad. Therefore, the cluster is `[xtj]`. Because the `x` blocks the palatalization from reaching the vowel, the vowel remains the back/central `[ʌ]`, yielding `[bʌxtjə]` (NOT `*[bɪxjtjə]`).
+
+### 8. English Loanword Disyllabification
+If your G2P engine processes text containing integrated English loanwords, it needs a canonicalization rule for older borrowings.
+*   **G2P Rule:** Monosyllabic English words often receive a final schwa `[ə]` in Irish to satisfy phonotactics. English word-final affricates (`/dʒ/`, `/tʃ/`) are metathesized to `[sjtjə]`.
+    *   *Examples:* *box* $\rightarrow$ *bosca* (`[bʌskə]`); *room* $\rightarrow$ *seomra*; *page* $\rightarrow$ *páiste* (`[pɑ:sjtjə]`); *college* $\rightarrow$ *coláiste* (`[kʌlɣɑ:sjtjə]`).
+This represents the absolute deepest layer of phonological mechanics extracted from the text. These are the **"Ultimate Edge-Cases and Syntax-Level Overrides"** that separate a passable G2P engine from a truly native-sounding phonetic synthesizer. 
+
+If you are building a production-grade engine, you must implement these highly specific, often counter-intuitive rules as your final processing tier.
+
+---
+
+### 1. The Suffix vs. Compound Vowel Length Constraint
+We established earlier that short vowels naturally lengthen before heavy sonorants (`nn`, `ll`, `m`), but revert to short vowels if a suffix is added (e.g., *peann* `[pjɑ:nɣ]` $\rightarrow$ *peanna* `[pjanɣə]`). 
+However, the text introduces a critical structural bypass: **Compounding does NOT trigger this shortening.**
+*   **G2P Rule:** The engine must parse the morphological boundary. If the boundary is a suffix `+`, the vowel shortens. If the boundary is a compound word `#`, the vowel stays long.
+    *   *Suffix:* *ceann* + *as* $\rightarrow$ *ceannas* `[kjanɣəs]` (Short `a`).
+    *   *Compound:* *ceann* + *chluiche* $\rightarrow$ *ceannchluiche* `[kjɑ:nɣxalɣɪçə]` (Long `ɑ:` is retained).
+
+### 2. The Western `/o:g/` Palatalization Anomaly
+Normally, the polarity (broad/slender) of a final consonant is dictated by the preceding vowel. A broad vowel like `ó` should yield a broad `g` `[g]`. But Western Irish contains a massive exception to this rule.
+*   **G2P Rule (West):** Any word ending in the sequence `/o:g/` automatically forces the final `g` to become **palatal** `[gj]`, defying the back vowel.
+    *   *Standard:* *ciotóg* $\rightarrow$ `[kjɪto:g]`
+    *   *Western G2P:* *ciotóg* $\rightarrow$ `[kjɪto:gj]`
+    *   *Western G2P:* *sióg* $\rightarrow$ `[ʃi:o:gj]`
+
+### 3. The Verbal Adjective (Past Participle) `-tha / -te` Override
+A naive G2P engine will read the suffix `-tha` and transcribe it as `[hə]`. The text reveals that in Western and Northern Irish, this suffix completely changes its phonetic realization to serve as a grammatical marker.
+*   **G2P Rule (West/North):** The unstressed terminal suffix of a verbal adjective (past participle) `-tha` or `-ta` is pronounced as a long `[i:]`.
+    *   *fághta* (left) $\rightarrow$ `[fɑ:ki:]` (NOT `*[fɑ:kə]`).
+    *   *tógtha* (taken) $\rightarrow$ `[to:ki:]` (NOT `*[to:kə]`).
+    *   *sciobtha* (quick) $\rightarrow$ `[sjkjʌpi:]`.
+
+### 4. Epenthetic `[b]` in Prepositional Pronouns
+In Western Irish, the engine must inject a phantom consonant at the end of specific 3rd-person plural prepositional pronouns. This is a phonetic closure rule entirely absent from the orthography.
+*   **G2P Rule (West):** Add an epenthetic `[b]` to the end of plural prepositional pronouns ending in `u` or `o`.
+    *   *acu* (at them) $\rightarrow$ `[akʌb]`
+    *   *leo* (with them) $\rightarrow$ `[ljo:b]`
+    *   *fúthu* (under them) $\rightarrow$ `[fu:b]`
+
+### 5. "Ghost" Palatalization from the Definite Article (`an`)
+Normally, the article *an* ends in a broad `n` `[nɣ]`. However, due to historical vowel shifts ("Akzentumsprung"), certain words that *currently* begin with back vowels used to begin with front vowels. The article *an* still "remembers" this history and palatalizes before them.
+*   **G2P Rule:** Create a dictionary lookup for words like *iomarca* and *easair*. When preceded by the article *an*, the `n` must be palatalized to `[nj]`, even though the next sound is a back/central vowel.
+    *   *an easair* $\rightarrow$ `[ənj asərj]`
+    *   *an iomarca* $\rightarrow$ `[ənj ʌmərkə]`
+
+### 6. Sentence-Level Procope & Glottal Stops `[?]`
+In natural, connected speech, Irish heavily reduces unstressed initial syllables (Procope). When an initial syllable is completely deleted, it leaves behind a measurable **glottal stop `[?]`** that the TTS engine must render to sound authentic.
+*   **G2P Rule:** If an unstressed initial syllable (like *tai-* in *taispeáin*) is dropped in fast speech, replace it with `[?]` before the surviving consonant cluster.
+    *   *taispeáin* (show) $\rightarrow$ `[?spjɑ:nj]`
+    *   *caithfimid na rudaí sin a athrú* $\rightarrow$ `[... ˡ?æ ˡ?æru:]` (The *a* particles reduce to glottal clicks).
+
+### 7. Syntactic Deletion of the Interrogative `An`
+If you are generating speech from raw text, the engine must handle the interrogative particle *An* (which triggers eclipsis/nasalization on the following verb). In colloquial speech, the word *An* is physically deleted, but the mutation it caused remains as the sole acoustic cue of a question.
+*   **G2P Rule:** When parsing a question starting with *An* + [Eclipsed Verb], delete the acoustic realization of *An* but keep the eclipsis.
+    *   *Text:* "An dtuigeann sé an cheist?"
+    *   *Naive G2P:* `[ən dɪgjənɣ...]`
+    *   *Native G2P:* `[dɪgjənɣ ʃe: ə çεʃtj]` (The `An` is deleted; the sentence starts immediately with the eclipsed `d` `[d]`).
+
+### 8. The Sub-Vocalic Diphthong Shift (`o/u` $\rightarrow$ `ai/au`)
+Because of the heavy reliance on syllable codas, the text notes cases where the short vowels `/ʌ/` (spelled `o` or `u`) are forced into complex diphthongs when squeezed between palatal/non-palatal boundaries during suffixation (Syncope). 
+*   **G2P Rule:** When syncope removes a vowel, dragging a short `o/u` into a new cluster with a palatal sonorant, it sparks a diphthong.
+    *   *obair* (work) $\rightarrow$ `/ʌbər/`
+    *   *oibre* (work.GEN) $\rightarrow$ `[aɪbjrjə]` (The `/ʌ/` shifts all the way to the front diphthong `[aɪ]` because the `b` and `r` became slender upon syncope). 
+    *   *reamhar* (fat) $\rightarrow$ `/rjaur/`
+    *   *reimhre* (fatter) $\rightarrow$ `[rjaivjrjə]`
+
+### 9. Northern "O" Preservation Before Liquids
+While standard rules merge short `o` and `u` into `[ʌ]`, Northern Irish retains a distinct `[ɔ]` in one highly specific environment.
+*   **G2P Rule (North):** If orthographic `o` is followed by a liquid (`l, r, lɣ, rɣ`), do not reduce it to `[ʌ]`. Keep it as `[ɔ]`.
+    *   *olc* (evil) $\rightarrow$ `[ɔlɣk]` (South/West uses `[ʌlɣk]`)
+    *   *cor* (turn) $\rightarrow$ `[kɔr]` (South/West uses `[kʌr]`)
+
+This represents the absolute bedrock of the provided text—the final layer of **micro-phonetic sandhi, structural exceptions, and fossilized anomalies**. If your G2P engine incorporates these rules, it will surpass standard dictionary-based transcription and capture the authentic, fluid reality of spoken Irish.
+
+Here is the final set of advanced algorithms and edge-case parameters for your G2P engine:
+
+### 1. Advanced Consonant Sandhi: The `[x] + [sj] $\rightarrow$ [tʃ]` Rule
+Irish strictly prohibits two fricatives from occurring in sequence (the "Double Fricative Ban"). We previously noted that one is usually deleted. However, when a verb ending in the broad velar fricative `ch` (`/x/`) meets a pronoun beginning with a slender `s` (`/sj/`), a highly specific fusion occurs.
+*   **G2P Rule:** Word-final `ch` + Word-initial `sé/sí/sibh` $\rightarrow$ fuses into the affricate **`[tʃ]`**.
+*   *Examples:*
+    *   *tiocfadh sé* (he would come): `/tjʌkəx/` + `/sje:/` $\rightarrow$ `[tjʌkətʃe:]`
+    *   *bhíodh sé* (he used to be): `/vji:x/` + `/sje:/` $\rightarrow$ `[vji:tʃe:]`
+
+### 2. Consonant Epenthesis (Stop Insertion)
+We covered *vowel* epenthesis (inserting schwa between a sonorant and a stop, like *tarbh* $\rightarrow$ `[tarəv]`). However, the text also details **Consonant Epenthesis**. When two highly sonorous consonants (like `n` and `r`) are forced together across a syllable boundary, Irish phonotactics insert a phantom coronal stop (`t` or `d`) to bridge them.
+*   **G2P Rule:** If `n` or `l` is immediately followed by `r`, insert a homorganic stop (`t` or `d`) between them.
+*   *Examples:*
+    *   *banrán* (grumbling) $\rightarrow$ `[bɑ:nɣ.trɑ:nɣ]` (Phantom `t` inserted).
+    *   *anró* (hardship) $\rightarrow$ `[anɣ.tro:]`.
+    *   *malrach* (youngster) $\rightarrow$ `[malɣ.drəx]` (Phantom `d` inserted).
+
+### 3. The "Neutral" Sonorant Assignment (`[n]` and `[l]`)
+We established that Northern/Western dialects have a 3-way distinction for `L` and `N` (Strongly Broad, Strongly Slender, and Neutral). The G2P engine needs the exact phonotactic trigger for when to output the "Neutral" alveolar `[n]` and `[l]` instead of the polarized versions (`[nɣ]` or `[nj]`).
+*   **G2P Rule:** Neutral `[n]` and `[l]` **never** occur at the beginning of a word. They **only** occur intervocalically, immediately following a *short, stressed vowel* and preceding an *unstressed vowel*.
+    *   *duine* (person) $\rightarrow$ `[dɪnjə]` (Neutral `n`).
+    *   *baile* (town) $\rightarrow$ `[baljə]` (Neutral `l`).
+    *   *(Contrast with word-initial):* *neart* $\rightarrow$ `[njart]` (Strongly palatal).
+
+### 4. Vowel Lengthening Likelihood Hierarchy (Western Irish)
+In Western Irish, short vowels lengthen before heavy sonorant codas (`nn`, `ll`, `m`). However, the engine should treat this not as a binary rule, but as a **probability hierarchy** based on the specific vowel, as there is natural variation.
+*   **Tier 1: Low Vowels (Categorical/100%):** Low vowels *always* lengthen. 
+    *   *crann* $\rightarrow$ `[krɑ:nɣ]`
+*   **Tier 2: High Front Vowels (Highly Probable/90%):** High front vowels almost always lengthen.
+    *   *im* $\rightarrow$ `[i:mj]`
+*   **Tier 3: Mid-High Back Vowels (Variable/50%):** Short `o/u` before `nn/ll/m` fluctuates wildly, even within the same speaker.
+    *   *tonn* (wave) $\rightarrow$ `[tʌnɣ]` OR `[tu:nɣ]`. Your engine can safely map this to either, but `[ʌ]` is safer for broader consistency.
+
+### 5. Fossilized Permanent Lenition
+Initial mutation is usually driven by syntax (e.g., following a possessive pronoun). However, a small set of highly frequent grammatical words underwent lenition historically and became "frozen" in that state. 
+*   **G2P Rule:** Create a hardcoded exception dictionary for these words so the engine never outputs their unlenited orthographic root:
+    *   *chun* (to/towards) $\rightarrow$ `[xʌnɣ]` (Never `[k...]`)
+    *   *chomh* (as) $\rightarrow$ `[xo:]`
+    *   *thú* (you - object pronoun) $\rightarrow$ `[hu:]` (Contrasts with subject *tú* `[tu:]`)
+    *   *dhom/dhuit* (to me/to you - spoken variants of *dom/duit*) $\rightarrow$ `[ɣʌm]`, `[ɣɪtj]`.
+
+### 6. Assibilation of `[h]` After `[r]`
+In specific Northwestern dialects (like Erris/Mayo and parts of Donegal), the glottal fricative `[h]` undergoes a radical shift when it follows an `[r]`. The `r` causes the `h` to retract and harden into a "sh" sound `[ʃ]`.
+*   **G2P Rule (Northwest toggle):** `r` + `th` (`[h]`) $\rightarrow$ `[rʃ]`.
+    *   *gearrtha* (cut) $\rightarrow$ `[gja:rʃi:]` (Standard is `[gja:rhə]`).
+    *   *threibh* (tribe - lenited) $\rightarrow$ `[ʃrjevj]`.
+
+### 7. The "Akzentumsprung" (Accent Jump) Exceptions
+There is a tiny class of words that look like they begin with a back vowel, but they trigger a palatal (slender) mutation on preceding words (like the article *an*). This is because historically, the stress "jumped" from a front vowel to a back vowel, but the palatal ghost remained.
+*   **G2P Rule:** Hardcode these specific words to force preceding consonants to become slender:
+    *   *iúl* (knowledge) $\rightarrow$ *an t-iúl* must have a slender `t`.
+    *   *iúr* (yew) $\rightarrow$ *an t-iúr* must have a slender `t` (e.g., `[ənj tj u:r]`).
+
+### 8. Modern Youth Speech & English Interference (Sociolinguistic Toggles)
+If your engine aims to model contemporary/younger speakers, the text notes the infiltration of English phonotactics into modern Irish.
+*   **The Retroflex `[ɻ]`:** Traditional Irish `r` is a tapped/velarized `[ɹ]` or `[rɣ]`. Modern youth speakers, influenced by Hiberno-English, map word-final broad `r` to the English retroflex `[ɻ]`.
+    *   *Traditional:* *leor* $\rightarrow$ `[ljo:rɣ]`
+    *   *Modern/Youth:* *leor* $\rightarrow$ `[ljo:ɻ]`
+*   **Voiced Sibilants (`z` and `ʒ`):** Traditional Irish strictly devoices English loanwords containing `z` or `ʒ` (e.g., *zoo* $\rightarrow$ `[su:]`). Modern speakers, however, retain the English voiced sibilants in technical terms or code-switched names.
+    *   *G2P Rule:* If the word is flagged as a modern loan (e.g., *ózón*), allow `[o:zo:nɣ]`.
+
+### 9. Phonaesthetic "S" Prefixation
+Irish sometimes adds an unetymological `s-` to the beginning of words to convey a negative, messy, or pejorative meaning. This `s` behaves as part of the root.
+*   **G2P Concept:** The engine must treat the `s` in these specific words as a permanent onset, not an applied mutation. 
+    *   *glugaí* (flabby person) $\rightarrow$ *sglugaí*
+    *   *liobar* (tatter) $\rightarrow$ *sliobar*
+    *   *cabiteir* $\rightarrow$ *scabhaitéir* (blackguard)
