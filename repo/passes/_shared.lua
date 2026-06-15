@@ -5,6 +5,7 @@ local N = core.N
 local ulen = core.ulen
 local usub = core.usub
 local umatch = core.umatch
+local ugsub = core.ugsub
 
 local _shared = {}
 

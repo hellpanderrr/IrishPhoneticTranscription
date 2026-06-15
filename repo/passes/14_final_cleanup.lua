@@ -5,11 +5,14 @@
 -- 4. ch + s -> tʃ sandhi
 
 local S = require("passes._shared")
+local core = require("irish_core")
+local ugsub = core.ugsub
 
 local function strip_trailing_fricative(phon)
   if not phon then return phon end
   -- Match pattern: long vowel + ç/ɣ/h at end
-  return phon:gsub("([ɑeiou]ː)[ɣçh]$", "%1")
+  -- Use ugsub (UTF-8-aware) not plain gsub — ː, ç, ɣ are multi-byte
+  return ugsub(phon, "([ɑeiou]ː)[ɣçh]$", "%1")
 end
 
 return {
