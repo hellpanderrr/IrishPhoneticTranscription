@@ -30,13 +30,25 @@ return {
       if need_resolve then
         if next and next.type == "cons" and next.ortho == "dh" and
            (ortho == "a" or ortho == "ai" or ortho == "á" or ortho == "aí") then
+          -- Only raise to long vowel when stressed. Unstressed suffix -adh
+          -- (verb endings) should keep a short vowel so reduction can apply
+          -- (producing u/ə/tʲ as the final syllable, not ɑː).
           if ortho == "aí" then token.phon = "ɑːiː"
-          else token.phon = "ɑː" end
+          elseif token.stress then token.phon = "ɑː" end
         elseif ortho == "aoi" then token.phon = "iː"
         elseif ortho == "ao" then token.phon = dv.ao
         elseif ortho == "eo" then token.phon = dv.eo
         elseif ortho == "ea" then token.phon = dv.ea
         elseif ortho == "ae" then token.phon = "eː"
+        elseif ortho == "ai" then token.phon = dv.ai
+        elseif ortho == "oi" then token.phon = dv.oi
+        elseif ortho == "ui" then token.phon = dv.ui
+        elseif ortho == "ua" then token.phon = dv.ua
+        elseif ortho == "ia" then token.phon = dv.ia
+        elseif ortho == "éi" then token.phon = dv["éi"]
+        elseif ortho == "éa" then token.phon = dv.ea
+        elseif ortho == "ío" then token.phon = dv["ío"]
+        elseif ortho == "eoi" then token.phon = dv.eo
         elseif ortho == "aí" or ortho == "ái" then token.phon = "ɑː"
         elseif ortho == "óí" or ortho == "ó" then token.phon = (dv.long and dv.long.o) or "oː"
         elseif ortho == "ú" then token.phon = (dv.long and dv.long.u) or "uː"
@@ -49,6 +61,11 @@ return {
         elseif ortho == "e" then token.phon = (dv.short and dv.short.e) or "ɛ"
         elseif ortho == "a" then token.phon = (dv.short and dv.short.a) or "a"
         end
+      end
+
+      -- Unstressed ai → short a so reduction can produce ə
+      if ortho == "ai" and not token.stress and token.phon == "ai" then
+        token.phon = "a"
       end
 
       -- /x/ palatal non-assimilation: blocks vowel fronting

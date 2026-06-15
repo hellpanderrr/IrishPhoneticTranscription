@@ -1,43 +1,46 @@
--- Pass #3: Handle eclipsis markers (mb, gc, bpr, dt, ngc, ngl).
--- Eclipsis is a spelling phenomenon: the orthographic sequence resolves
--- to a single base consonant phoneme. Run before cluster_simplify and
--- mutated_fricatives so they see the resolved form.
+-- Pass #3: Handle eclipsis clusters.
+-- Word-initial eclipsis: mb→m, gc→g, dt→d, bp→b, nd→n, nn→n, ng→ŋ, bhf→bh
+-- Collapse two-consonant cluster by silencing the eclipsed consonant.
+-- The surviving consonant retains its polarity for later consonant resolution.
 
 local S = require("passes._shared")
-
-local ECLIPSIS_MAP = {
-  mb  = { phon = "mˠ" },
-  gc  = { phon = "ɡ" },
-  dt  = { phon = "d̪ˠ" },
-  bp  = { phon = "bˠ" },
-  ngc = { phon = "ŋ" },  -- eclipsis of c -> ng
-  ngl = { phon = "ŋ" },  -- eclipsis of l -> ng
-  bpr = { phon = "bˠ" }, -- eclipsis of p -> b
-  ["mbF"] = { phon = "" }, -- eclipsis of f -> m -> silent in initial
-  ["bF"]  = { phon = "" },  -- eclipsis of f -> b -> silent
-  nn  = { phon = "n̪ˠ" },
-}
 
 return {
   name = "eclipsis",
   writes_context = false,
 
   run = function(tokens, context)
-    for i, token in ipairs(tokens) do
-      if token.is_mutated and token.mutation == "eclipsis" then
-        local entry = ECLIPSIS_MAP[token.ortho]
-        if entry then
-          token.phon = entry.phon
-          -- Mark the ortho to its base consonant so later passes use the right form
-          if token.ortho == "gc" then token.ortho = "g"
-          elseif token.ortho == "dt" then token.ortho = "d"
-          elseif token.ortho == "bp" or token.ortho == "bpr" then token.ortho = "b"
-          elseif token.ortho == "mb" then token.ortho = "m"
-          elseif token.ortho == "ngc" or token.ortho == "ngl" then token.ortho = "ng"
-          end
-        end
-      end
+    if #tokens < 2 then return tokens end
+
+    local t1, t2 = tokens[1], tokens[2]
+    if not t1 or not t2 then return tokens end
+    if t1.type ~= "cons" or t2.type ~= "cons" then return tokens end
+
+    -- Two-consonant eclipsis clusters at word start
+    local pair = t1.ortho .. t2.ortho
+    local TWO_CONS_ECLIPSIS = {
+      mb = true, gc = true, dt = true, bp = true, nd = true, nn = true,
+    }
+    if TWO_CONS_ECLIPSIS[pair] then
+      t2.phon = ""
+      t2.source = "eclipsis_silenced"
+      return tokens
     end
+
+    -- Three-consonant eclipsis: bhf (bh + f)
+    if #tokens >= 3 and t1.ortho == "bh" and t2.ortho == "f" then
+      t2.phon = ""
+      t2.source = "eclipsis_silenced"
+      return tokens
+    end
+
+    -- Single-token ng at word start is eclipsis of g → ŋ
+    if t1.ortho == "ng" and t1.type == "cons" then
+      -- Ensure broad polarity for eclipsis ng (ŋ is always velar)
+      S.set_polarity(t1, false)
+      return tokens
+    end
+
     return tokens
   end,
 }

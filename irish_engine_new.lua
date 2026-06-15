@@ -68,12 +68,32 @@ local function tokenize_word(word)
   return tokens
 end
 
--- Render output: concatenate phon fields, prepend stress mark
+-- Render output: place stress mark before the syllable onset
+-- IPA convention: ˈCV, not CˈV
 local function render_output(tokens)
+  -- Pre-process: move stress from vowel to preceding onset consonant(s)
+  for i = #tokens, 1, -1 do
+    if tokens[i].type == "vowel" and tokens[i].stress then
+      local onset_start = i
+      for j = i - 1, 1, -1 do
+        local t = tokens[j]
+        if t.type == "cons" and t.phon and t.phon ~= "" then
+          onset_start = j
+        else
+          break
+        end
+      end
+      if onset_start < i then
+        tokens[i].stress = false
+        tokens[onset_start].stress = true
+      end
+    end
+  end
+
   local parts = {}
   for _, token in ipairs(tokens) do
     if token.phon and token.phon ~= "" then
-      if token.type == "vowel" and token.stress then
+      if token.stress then
         table.insert(parts, S.STRESS_MARK)
       end
       table.insert(parts, token.phon)

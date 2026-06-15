@@ -29,10 +29,16 @@ return {
           vowel.phon = "əu"
         end
       elseif fricative.ortho == "dh" or fricative.ortho == "gh" then
-        if is_slender then
-          vowel.phon = "əi"
-        elseif vowel.ortho == "a" or vowel.ortho == "o" or vowel.ortho == "u" then
-          vowel.phon = "ai"
+        if vowel.stress then
+          -- Stressed: produce diphthong
+          if is_slender then
+            vowel.phon = "əi"
+          elseif vowel.ortho == "a" or vowel.ortho == "o" or vowel.ortho == "u" then
+            vowel.phon = "ai"
+          end
+        else
+          -- Unstressed a/dh, o/dh, u/dh → ə (for subsequent reduction)
+          vowel.phon = "ə"
         end
       end
 
