@@ -27,6 +27,7 @@ _shared.VOWEL_DIGRAPHS = {
     ["ao"] = true, ["eo"] = true, ["ea"] = true, ["ae"] = true,
     ["ai"] = true, ["oi"] = true, ["ui"] = true, ["ua"] = true,
     ["ái"] = true, ["éa"] = true, ["ío"] = true, ["óí"] = true, ["aí"] = true,
+    ["ei"] = true,
 }
 _shared.DIALECTS = {
     connacht = {
