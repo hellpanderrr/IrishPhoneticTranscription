@@ -9,70 +9,54 @@ return {
   writes_context = false,
 
   run = function(tokens, context)
-    local dialect_values = S.DIALECTS[context.dialect] or S.DIALECTS.connacht
+    local dv = S.DIALECTS[context.dialect] or S.DIALECTS.connacht
 
     for i, token in ipairs(tokens) do
       if token.type ~= "vowel" then goto continue end
-      if token.is_epenthetic then goto continue end  -- skip epenthetic vowels
+      if token.is_epenthetic then goto continue end
 
       local ortho = token.ortho
       local next = tokens[i + 1]
       local prev = tokens[i - 1]
 
-      -- Only apply default mapping if not already modified by an earlier pass
-      if token.phon == ortho or token.phon == nil or token.phon == "" then
+      -- Guard: only resolve if vowel wasn't modified by earlier passes.
+      -- phon == ortho means unresolved.
+      -- For 'a' where phon 'a' == ortho 'a', check source flag.
+      local need_resolve = (token.phon == ortho or token.phon == nil or token.phon == "")
+      if ortho == "a" and token.phon == "a" and token.source == "lexeme" then
+        need_resolve = true
+      end
+
+      if need_resolve then
         if next and next.type == "cons" and next.ortho == "dh" and
            (ortho == "a" or ortho == "ai" or ortho == "á" or ortho == "aí") then
           if ortho == "aí" then token.phon = "ɑːiː"
           else token.phon = "ɑː" end
         elseif ortho == "aoi" then token.phon = "iː"
-        elseif ortho == "ao" then token.phon = dialect_values.ao
-        elseif ortho == "eo" then token.phon = dialect_values.eo
-        elseif ortho == "ea" then token.phon = dialect_values.ea
+        elseif ortho == "ao" then token.phon = dv.ao
+        elseif ortho == "eo" then token.phon = dv.eo
+        elseif ortho == "ea" then token.phon = dv.ea
         elseif ortho == "ae" then token.phon = "eː"
         elseif ortho == "aí" or ortho == "ái" then token.phon = "ɑː"
-        elseif ortho == "óí" or ortho == "ó" then token.phon = "oː"
-        elseif ortho == "ú" then token.phon = "uː"
-        elseif ortho == "í" then token.phon = "iː"
-        elseif ortho == "é" then token.phon = "eː"
-        elseif ortho == "á" then token.phon = "ɑː"
-        elseif ortho == "o" then token.phon = "ɔ"
-        elseif ortho == "u" then token.phon = "ʊ"
-        elseif ortho == "i" then token.phon = "ɪ"
-        elseif ortho == "e" then token.phon = "ɛ"
-        elseif ortho == "a" then token.phon = "a"
+        elseif ortho == "óí" or ortho == "ó" then token.phon = (dv.long and dv.long.o) or "oː"
+        elseif ortho == "ú" then token.phon = (dv.long and dv.long.u) or "uː"
+        elseif ortho == "í" then token.phon = (dv.long and dv.long.i) or "iː"
+        elseif ortho == "é" then token.phon = (dv.long and dv.long.e) or "eː"
+        elseif ortho == "á" then token.phon = (dv.long and dv.long.a) or "ɑː"
+        elseif ortho == "o" then token.phon = (dv.short and dv.short.o) or "ɔ"
+        elseif ortho == "u" then token.phon = (dv.short and dv.short.u) or "ʊ"
+        elseif ortho == "i" then token.phon = (dv.short and dv.short.i) or "ɪ"
+        elseif ortho == "e" then token.phon = (dv.short and dv.short.e) or "ɛ"
+        elseif ortho == "a" then token.phon = (dv.short and dv.short.a) or "a"
         end
       end
 
-      -- Nasal raising (only if vowel wasn't already overridden to non-ortho value)
-      if token.phon == ortho or token.phon == nil or token.phon == "" then
-        local is_broad_nasal = next and next.type == "cons" and
-            (next.ortho == "nn" or next.ortho == "ng") and
-            (next.palatal == false or next.palatal == nil)
-        local is_geminate_n = next and next.type == "cons" and next.ortho == "n" and
-            tokens[i + 2] and tokens[i + 2].type == "cons" and tokens[i + 2].ortho == "n"
-
-        if is_broad_nasal or is_geminate_n then
-          if ortho == "o" or ortho == "ó" or ortho == "u" then
-            token.phon = "uː"
-          end
-        end
-      end
-
-      -- Broad o default (only if not already nasal-raised)
-      if ortho == "o" and next and next.type == "cons" and next.palatal == false then
-        if token.phon == ortho or token.phon == nil or token.phon == "" then
-          token.phon = "ɔ"
-        end
-      end
-
-      -- ío
-      if ortho == "ío" and (token.phon == ortho or token.phon == nil or token.phon == "") then
-        token.phon = "iː"
-      end
+      -- /x/ palatal non-assimilation: blocks vowel fronting
+      -- bocht → bˠɔxt̪ˠ, NOT *bˠɪxʲtʲə
+      local has_x_block = next and next.type == "cons" and next.ortho == "ch"
 
       -- Contextual: consonant polarity affects vowel quality
-      if next and next.type == "cons" then
+      if next and next.type == "cons" and not has_x_block then
         if next.palatal == true and (ortho == "o" or ortho == "u") then
           token.phon = "ɪ"
         elseif next.palatal == true and ortho == "a" and not token.stress then
