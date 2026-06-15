@@ -29,9 +29,9 @@ _shared.VOWEL_DIGRAPHS = {
     ["ái"] = true, ["éa"] = true, ["ío"] = true, ["óí"] = true, ["aí"] = true,
 }
 _shared.DIALECTS = {
-    connacht = { ao = "eː", ai = "ai", ea = "a", eo = "oː", ["ío"] = "iː" },
+    connacht = { ao = "iː", ai = "ai", ea = "a", eo = "oː", ["ío"] = "iː" },
     munster  = { ao = "eː", ai = "ai", ea = "a", eo = "oː", ["ío"] = "iː" },
-    ulster   = { ao = "iː", ai = "ai", ea = "a", eo = "oː", ["ío"] = "iː" },
+    ulster   = { ao = "iː", ai = "ai", ea = "a", eo = "ɔː", ["ío"] = "iː" },
 }
 _shared.KNOWN_PREFIXES = {
     ["an"] = true, droch = true, ["do"] = true, dea = true,
