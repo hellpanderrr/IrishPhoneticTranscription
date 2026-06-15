@@ -10,17 +10,23 @@ return {
 
   run = function(tokens, context)
     local vowel_count = S.count_vowel_tokens(tokens)
-
     context.vowel_count = vowel_count
     if vowel_count == 0 then return tokens end
 
-    -- Build ortho string for UNSTRESSED check
-    local ortho = ""
+    -- Split tokens into word segments at space/apostrophe boundaries
+    local segments = {}
+    local current = {}
     for _, t in ipairs(tokens) do
-      if t.ortho and t.ortho ~= "" then ortho = ortho .. t.ortho end
+      if t.type == "boundary" then
+        if #current > 0 then table.insert(segments, current) end
+        current = {}
+      else
+        table.insert(current, t)
+      end
     end
+    if #current > 0 then table.insert(segments, current) end
+    if #segments == 0 then return tokens end
 
-    -- Check for known unstressed words/suffixes (before monosyllable check)
     local UNSTRESSED = {
       ["'un"]=true,["un"]=true,["'ur"]=true,["ur"]=true,["-as"]=true,["-sa"]=true,
       ["-se"]=true,["-ne"]=true,["-na"]=true,["-im"]=true,["-fas"]=true,["-fá"]=true,
@@ -36,79 +42,91 @@ return {
       ["níl"]=true,["os"]=true,["ó"]=true,["ph"]=true,["na"]=true,["sa"]=true,["se"]=true,["sh"]=true,
       ["th"]=true,["th'"]=true,["um"]=true,
     }
-    if UNSTRESSED[ortho] then return tokens end
 
-    if vowel_count == 1 then
-      context.is_monosyllabic = true
-      context.stress_index = nil
-      -- Don't set token.stress for monosyllables — render_output uses this to add ˈ
-      return tokens
-    end
+    -- Process each word segment independently.
+    local seg_is_monosyllabic = false
+    local seg_root_vowel_count = 0
+    for _, seg in ipairs(segments) do
+      -- Build ortho for this segment for UNSTRESSED check
+      local ortho = ""
+      for _, t in ipairs(seg) do
+        if t.ortho and t.ortho ~= "" then ortho = ortho .. t.ortho end
+      end
 
-    -- Check for unstressed prefix by looking at first consonant+next segment pairs
-    local has_prefix = false
-    if S.count_vowel_tokens(tokens) >= 2 and tokens[1].type == "cons" then
-      local next2 = tokens[2]
-      if next2 and (next2.type == "vowel" or next2.type == "cons") then
-        local key = tokens[1].ortho .. tokens[2].ortho
-        if S.KNOWN_PREFIXES[key] then
-          has_prefix = true
+      local seg_vc = S.count_vowel_tokens(seg)
+
+      if UNSTRESSED[ortho] then
+        if seg_vc == 1 then seg_is_monosyllabic = true end
+        goto next_seg
+      end
+
+      if seg_vc <= 1 then
+        if #segments == 1 then seg_is_monosyllabic = true end
+        goto next_seg
+      end
+
+      -- Prefix check for this segment
+      local has_prefix = false
+      if seg_vc >= 2 and seg[1].type == "cons" and seg[2] and
+         (seg[2].type == "vowel" or seg[2].type == "cons") then
+        local key = seg[1].ortho .. seg[2].ortho
+        if S.KNOWN_PREFIXES[key] then has_prefix = true end
+      end
+
+      -- Find stress position
+      local stress_index = S.vowel_token_index(seg)
+      if not stress_index then goto next_seg end
+
+      -- Stress adjustments (same as before)
+      if stress_index > 1 and seg[stress_index - 1].type == "cons" and
+         seg[stress_index - 2] and seg[stress_index - 2].type == "cons" and
+         (seg[stress_index - 1].ortho == "r" or seg[stress_index - 1].ortho == "l") then
+        stress_index = stress_index - 1
+      end
+      if seg[stress_index].ortho == "e" and stress_index > 1 and
+         seg[stress_index - 1].type == "cons" and
+         (seg[stress_index - 1].ortho == "g" or seg[stress_index - 1].ortho == "l") then
+        stress_index = stress_index - 1
+      elseif seg[stress_index].ortho == "e" and stress_index > 1 and
+             seg[stress_index - 1].type == "vowel" and
+             seg[stress_index - 1].ortho == "a" then
+        stress_index = stress_index - 1
+      end
+      if seg[stress_index].ortho == "a" and stress_index > 1 and
+         seg[stress_index - 1].type == "cons" and
+         seg[stress_index - 1].ortho == "g" then
+        stress_index = stress_index - 1
+      end
+
+      -- Mark stress in the original tokens array
+      local found = 0
+      for _, orig_t in ipairs(tokens) do
+        if orig_t == seg[stress_index] then
+          orig_t.stress = true
+          break
         end
       end
-    end
 
-    local stress_index = S.vowel_token_index(tokens)
-    if not stress_index then return tokens end
-
-    -- Stress adjustment: initial cluster with r/l pulls stress left
-    if stress_index > 1 and tokens[stress_index - 1].type == "cons" and
-       tokens[stress_index - 2] and tokens[stress_index - 2].type == "cons" and
-       (tokens[stress_index - 1].ortho == "r" or tokens[stress_index - 1].ortho == "l") then
-      stress_index = stress_index - 1
-    end
-
-    -- ge/le initial clusters
-    if tokens[stress_index].ortho == "e" and stress_index > 1 and
-       tokens[stress_index - 1].type == "cons" and
-       (tokens[stress_index - 1].ortho == "g" or tokens[stress_index - 1].ortho == "l") then
-      stress_index = stress_index - 1
-    elseif tokens[stress_index].ortho == "e" and stress_index > 1 and
-           tokens[stress_index - 1].type == "vowel" and
-           tokens[stress_index - 1].ortho == "a" then
-      stress_index = stress_index - 1
-    end
-
-    -- a after g
-    if tokens[stress_index].ortho == "a" and stress_index > 1 and
-       tokens[stress_index - 1].type == "cons" and
-       tokens[stress_index - 1].ortho == "g" then
-      stress_index = stress_index - 1
-    end
-
-    -- Compute root_vowel_count (vowels after prefix)
-    if has_prefix then
-      context.root_vowel_count = 0
-      local in_prefix = true
-      for i, t in ipairs(tokens) do
-        if in_prefix and t.type == "cons" and i <= 4 then
-          -- still in prefix region
-        elseif in_prefix then
-          in_prefix = false
-          if t.type == "vowel" then context.root_vowel_count = context.root_vowel_count + 1 end
-        elseif t.type == "vowel" then
-          context.root_vowel_count = context.root_vowel_count + 1
+      -- Compute root_vowel_count for the first segment
+      if #segments == 1 and has_prefix then
+        local in_prefix = true
+        for _, t in ipairs(seg) do
+          if in_prefix and t.type == "cons" then
+            -- still in prefix
+          elseif in_prefix then
+            in_prefix = false
+            if t.type == "vowel" then seg_root_vowel_count = seg_root_vowel_count + 1 end
+          elseif t.type == "vowel" then
+            seg_root_vowel_count = seg_root_vowel_count + 1
+          end
         end
+        if seg_root_vowel_count <= 1 then seg_is_monosyllabic = true end
       end
-      if context.root_vowel_count <= 1 then
-        -- Prefix + short root: treat as effectively monosyllabic for sonorant rules
-        context.is_monosyllabic = true
-      end
-    else
-      context.root_vowel_count = vowel_count
+
+      ::next_seg::
     end
 
-    context.stress_index = stress_index
-    tokens[stress_index].stress = true
+    context.is_monosyllabic = seg_is_monosyllabic
     return tokens
   end,
 }

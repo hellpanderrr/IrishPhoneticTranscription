@@ -33,7 +33,7 @@ local function tokenize_word(word)
       i = i + 3
     elseif digraph == "bh" or digraph == "mh" or digraph == "ch" or
            digraph == "dh" or digraph == "gh" or digraph == "ph" or
-           digraph == "sh" or digraph == "th" then
+           digraph == "sh" or digraph == "th" or digraph == "fh" then
       local token = S.make_token(digraph, "cons", i, i + 1)
       token.is_mutated = true
       token.mutation = "lenition"
