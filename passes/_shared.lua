@@ -29,9 +29,51 @@ _shared.VOWEL_DIGRAPHS = {
     ["ái"] = true, ["éa"] = true, ["ío"] = true, ["óí"] = true, ["aí"] = true,
 }
 _shared.DIALECTS = {
-    connacht = { ao = "iː", ai = "ai", ea = "a", eo = "oː", ["ío"] = "iː" },
-    munster  = { ao = "eː", ai = "ai", ea = "a", eo = "oː", ["ío"] = "iː" },
-    ulster   = { ao = "iː", ai = "ai", ea = "a", eo = "ɔː", ["ío"] = "iː" },
+    connacht = {
+        ao = "iː", ai = "ai", ea = "a", eo = "oː", ["ío"] = "iː",
+        short = { a = "a", o = "ɔ", u = "ʊ", i = "ɪ", e = "ɛ" },
+        long  = { a = "ɑː", o = "oː", u = "uː", i = "iː", e = "eː" },
+        diphthong = {},
+        r_lowering_trigger = true,
+        anticipatory_raising = true,
+        vowel_gradation = {
+            a = { broad = "a", slender = "ɛ" },
+            o = { broad = "ɔ", slender = "ɔ" },
+            u = { broad = "ʊ", slender = "ʊ" },
+            i = { broad = "ɪ", slender = "ɪ" },
+            e = { broad = "ɛ", slender = "ɛ" },
+        },
+    },
+    munster  = {
+        ao = "eː", ai = "ai", ea = "a", eo = "oː", ["ío"] = "iː",
+        short = { a = "a", o = "ɔ", u = "ʊ", i = "ɪ", e = "ɛ" },
+        long  = { a = "ɑː", o = "oː", u = "uː", i = "iː", e = "eː" },
+        diphthong = {},
+        r_lowering_trigger = true,
+        anticipatory_raising = false,
+        vowel_gradation = {
+            a = { broad = "a", slender = "ɛ" },
+            o = { broad = "ɔ", slender = "ɔ" },
+            u = { broad = "ʊ", slender = "ʊ" },
+            i = { broad = "ɪ", slender = "ɪ" },
+            e = { broad = "ɛ", slender = "ɛ" },
+        },
+    },
+    ulster   = {
+        ao = "iː", ai = "ai", ea = "a", eo = "ɔː", ["ío"] = "iː",
+        short = { a = "a", o = "ɔ", u = "ʊ", i = "ɪ", e = "ɛ" },
+        long  = { a = "ɑː", o = "oː", u = "uː", i = "iː", e = "eː" },
+        diphthong = {},
+        r_lowering_trigger = true,
+        anticipatory_raising = false,
+        vowel_gradation = {
+            a = { broad = "a", slender = "ɛ" },
+            o = { broad = "ɔ", slender = "ɔ" },
+            u = { broad = "ʊ", slender = "ʊ" },
+            i = { broad = "ɪ", slender = "ɪ" },
+            e = { broad = "ɛ", slender = "ɛ" },
+        },
+    },
 }
 _shared.KNOWN_PREFIXES = {
     ["an"] = true, droch = true, ["do"] = true, dea = true,

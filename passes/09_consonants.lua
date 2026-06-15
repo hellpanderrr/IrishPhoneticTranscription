@@ -10,6 +10,9 @@ return {
   run = function(tokens, context)
     for i, token in ipairs(tokens) do
       if token.type ~= "cons" then goto continue end
+      -- Skip tokens already silenced or vocalized by earlier passes
+      if token.phon == "" then goto continue end
+      if token.source == "vocalized" then goto continue end
 
       local prev = tokens[i - 1]
 
@@ -51,9 +54,15 @@ return {
       elseif token.ortho == "bhf" then
         token.phon = "w"
       elseif token.ortho == "s" then
+        -- s before p/t/k: check polarity. If the following consonant
+        -- is broad, s stays broad. Only palatalize s before a slender p/t/k.
         local next = tokens[i + 1]
-        if next and (next.ortho == "p" or next.ortho == "t" or next.ortho == "k") then
-          token.phon = "ʃ"
+        if next and (next.ortho == "p" or next.ortho == "t" or next.ortho == "c") then
+          if next.palatal == true then
+            token.phon = "ʃ"
+          else
+            token.phon = "sˠ"
+          end
         elseif token.palatal == true then
           token.phon = "ʃ"
         else
