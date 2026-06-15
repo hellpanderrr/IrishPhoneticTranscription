@@ -31,6 +31,7 @@ _shared.VOWEL_DIGRAPHS = {
 _shared.DIALECTS = {
     connacht = {
         ao = "iː", ai = "ai", ea = "a", eo = "oː", ["ío"] = "iː",
+        oi = "ɔi", ui = "ʊi", ua = "uə", ia = "iə", ["éi"] = "eː",
         short = { a = "a", o = "ɔ", u = "ʊ", i = "ɪ", e = "ɛ" },
         long  = { a = "ɑː", o = "oː", u = "uː", i = "iː", e = "eː" },
         diphthong = {},
@@ -46,6 +47,7 @@ _shared.DIALECTS = {
     },
     munster  = {
         ao = "eː", ai = "ai", ea = "a", eo = "oː", ["ío"] = "iː",
+        oi = "ɔi", ui = "ʊi", ua = "uə", ia = "iə", ["éi"] = "eː",
         short = { a = "a", o = "ɔ", u = "ʊ", i = "ɪ", e = "ɛ" },
         long  = { a = "ɑː", o = "oː", u = "uː", i = "iː", e = "eː" },
         diphthong = {},
@@ -61,6 +63,7 @@ _shared.DIALECTS = {
     },
     ulster   = {
         ao = "iː", ai = "ai", ea = "a", eo = "ɔː", ["ío"] = "iː",
+        oi = "ɔi", ui = "ʊi", ua = "uə", ia = "iə", ["éi"] = "eː",
         short = { a = "a", o = "ɔ", u = "ʊ", i = "ɪ", e = "ɛ" },
         long  = { a = "ɑː", o = "oː", u = "uː", i = "iː", e = "eː" },
         diphthong = {},
