@@ -5,8 +5,8 @@
 -- 4. ch + s -> tʃ sandhi
 
 local S = require("passes._shared")
-local core = require("irish_core")
-local ugsub = core.ugsub
+local ustring = require("ustring.ustring")
+local ugsub = ustring.gsub
 
 local function strip_trailing_fricative(phon)
   if not phon then return phon end

@@ -1,11 +1,11 @@
 -- Shared data and utilities for all passes.
 
-local core = require("irish_core")
-local N = core.N
-local ulen = core.ulen
-local usub = core.usub
-local umatch = core.umatch
-local ugsub = core.ugsub
+local ustring = require("ustring.ustring")
+local N = ustring.toNFC
+local ulen = ustring.len
+local usub = ustring.sub
+local umatch = ustring.match
+local ugsub = ustring.gsub
 
 local _shared = {}
 
@@ -73,7 +73,7 @@ function _shared.is_short_vowel(token)
 end
 
 function _shared.normalize_ortho(word)
-    return core.ulower(N(word or ""))
+    return ustring.lower(N(word or ""))
 end
 
 function _shared.make_token(ortho, token_type, s, e)

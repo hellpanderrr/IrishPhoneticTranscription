@@ -4,11 +4,10 @@
 
 local S = require("passes._shared")
 local passes = require("passes.init")
-
-local irish_core = require("irish_core")
-local ulen = irish_core.ulen
-local usub = irish_core.usub
-local umatch = irish_core.umatch
+local ustring = require("ustring.ustring")
+local ulen = ustring.len
+local usub = ustring.sub
+local umatch = ustring.match
 
 -- Tokenizer: splits orthographic word into tokens
 local function tokenize_word(word)
