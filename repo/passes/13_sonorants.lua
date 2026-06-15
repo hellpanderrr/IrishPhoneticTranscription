@@ -1,6 +1,10 @@
--- Pass #13: Strong sonorants.
--- Vowel lengthening/diphthongization before strong sonorants (nn, ll).
--- Restricted to monosyllables or word-final positions.
+-- Pass #13: Strong sonorants (Hickey Ch.2, Fuaimeanna 5.1).
+-- Vowel lengthening/diphthongization before strong sonorants (nn, ll, rr, mm).
+-- These geminate in spelling but tokenize as individual cons tokens.
+-- Also handles consonant side: sets geminate sonorants to broad and silences
+-- the second of the pair. peann → pʲaːnˠ, not pʲanʲnʲ.
+-- Restricted to monosyllables or word-final position.
+-- Runs after vowel resolution (#15).
 
 local S = require("passes._shared")
 
@@ -13,38 +17,50 @@ return {
       return tokens
     end
 
-    -- Find the last consonant (checking for strong sonorant in word-final position)
-    local last_cons = nil
-    local last_idx = 0
-    for i = #tokens, 1, -1 do
-      if tokens[i].type == "cons" then
-        last_cons = tokens[i]
-        last_idx = i
-        break
-      end
+    -- Find consecutive identical sonorants at word end (nn, ll, rr, mm)
+    local last_idx = #tokens
+    local penult = tokens[last_idx - 1]
+    local last = tokens[last_idx]
+
+    if not penult or not last then return tokens end
+    if penult.type ~= "cons" or last.type ~= "cons" then return tokens end
+    if penult.ortho ~= last.ortho then return tokens end
+    if penult.ortho ~= "n" and penult.ortho ~= "l" and
+       penult.ortho ~= "r" and penult.ortho ~= "m" then return tokens end
+
+    -- Override phon directly (consonants pass already ran).
+    -- Strong sonorants are inherently broad/velarized in Irish.
+    if penult.ortho == "n" then
+      penult.phon = "n̪ˠ"
+    elseif penult.ortho == "l" then
+      penult.phon = "lˠ"
+    elseif penult.ortho == "r" then
+      penult.phon = "ɾˠ"
+    elseif penult.ortho == "m" then
+      penult.phon = "mˠ"
     end
+    penult.source = "strong_sonorant"
+    last.phon = ""
+    last.source = "strong_sonorant"
 
-    if not last_cons then return tokens end
-
-    local is_strong_sonorant = last_cons.ortho == "nn" or last_cons.ortho == "ll" or
-                               last_cons.ortho == "rr" or last_cons.ortho == "mm"
-
-    if not is_strong_sonorant then return tokens end
-
-    -- Find the vowel before this sonorant (must be the vowel immediately preceding)
-    local prev_vowel = tokens[last_idx - 1]
+    -- Find the vowel before this geminate sonorant
+    local prev_vowel = tokens[last_idx - 2]
     if not prev_vowel or prev_vowel.type ~= "vowel" then return tokens end
 
-    -- Only modify if vowel hasn't been modified by earlier passes
-    if prev_vowel.phon ~= prev_vowel.ortho then return tokens end
-
     local ortho = prev_vowel.ortho
-    if ortho == "a" then
+    -- Handle digraphs: ea → aː before strong sonorant
+    if ortho == "ea" then
+      prev_vowel.phon = "aː"
+      prev_vowel.source = "sonorant_lengthening"
+    elseif ortho == "a" then
       prev_vowel.phon = "ɑː"
+      prev_vowel.source = "sonorant_lengthening"
     elseif ortho == "o" then
       prev_vowel.phon = "oː"
+      prev_vowel.source = "sonorant_lengthening"
     elseif ortho == "u" then
       prev_vowel.phon = "uː"
+      prev_vowel.source = "sonorant_lengthening"
     end
 
     return tokens
