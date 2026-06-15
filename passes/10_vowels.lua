@@ -40,6 +40,7 @@ return {
         elseif ortho == "eo" then token.phon = dv.eo
         elseif ortho == "ea" then token.phon = dv.ea
         elseif ortho == "ae" then token.phon = "eː"
+        elseif ortho == "ei" then token.phon = "ɛ"
         elseif ortho == "ai" then token.phon = dv.ai
         elseif ortho == "oi" then token.phon = dv.oi
         elseif ortho == "ui" then token.phon = dv.ui
@@ -63,9 +64,15 @@ return {
         end
       end
 
-      -- Unstressed ai → short a so reduction can produce ə
-      if ortho == "ai" and not token.stress and token.phon == "ai" then
-        token.phon = "a"
+      -- Unstressed diphthong digraphs → short vowels so reduction can produce ə
+      if not token.stress then
+        if ortho == "ai" and token.phon == "ai" then
+          token.phon = "a"
+        elseif ortho == "oi" and token.phon == "ɔi" then
+          token.phon = "ɔ"
+        elseif ortho == "ui" and token.phon == "ʊi" then
+          token.phon = "ʊ"
+        end
       end
 
       -- /x/ palatal non-assimilation: blocks vowel fronting

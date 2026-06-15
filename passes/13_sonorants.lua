@@ -13,54 +13,51 @@ return {
   writes_context = false,
 
   run = function(tokens, context)
-    if not context.is_monosyllabic then
-      return tokens
-    end
+    -- First pass: handle consecutive identical sonorants ANYWHERE in the word.
+    -- This handles both geminate clusters (medium, carraig) and
+    -- word-final geminates (peann, mall).
+    for i = 1, #tokens - 1 do
+      local first = tokens[i]
+      local second = tokens[i + 1]
+      if first.type ~= "cons" or second.type ~= "cons" then goto next_pair end
+      if first.ortho ~= second.ortho then goto next_pair end
+      if first.ortho ~= "n" and first.ortho ~= "l" and
+         first.ortho ~= "r" and first.ortho ~= "m" then goto next_pair end
 
-    -- Find consecutive identical sonorants at word end (nn, ll, rr, mm)
-    local last_idx = #tokens
-    local penult = tokens[last_idx - 1]
-    local last = tokens[last_idx]
+      -- Merge geminate sonorants: first becomes broad, second silenced.
+      -- Strong sonorants are inherently broad/velarized in Irish.
+      if first.ortho == "n" then first.phon = "n̪ˠ"
+      elseif first.ortho == "l" then first.phon = "lˠ"
+      elseif first.ortho == "r" then first.phon = "ɾˠ"
+      elseif first.ortho == "m" then first.phon = "mˠ"
+      end
+      first.source = "strong_sonorant"
+      second.phon = ""
+      second.source = "strong_sonorant"
 
-    if not penult or not last then return tokens end
-    if penult.type ~= "cons" or last.type ~= "cons" then return tokens end
-    if penult.ortho ~= last.ortho then return tokens end
-    if penult.ortho ~= "n" and penult.ortho ~= "l" and
-       penult.ortho ~= "r" and penult.ortho ~= "m" then return tokens end
+      -- Vowel lengthening before geminate sonorants only in monosyllables.
+      -- (e.g., peann → pʲɑːn̪ˠ, but mallacht doesn't lengthen)
+      if context.is_monosyllabic then
+        local prev_vowel = tokens[i - 1]
+        if prev_vowel and prev_vowel.type == "vowel" then
+          local ortho = prev_vowel.ortho
+          if ortho == "ea" then
+            prev_vowel.phon = "aː"
+            prev_vowel.source = "sonorant_lengthening"
+          elseif ortho == "a" then
+            prev_vowel.phon = "ɑː"
+            prev_vowel.source = "sonorant_lengthening"
+          elseif ortho == "o" then
+            prev_vowel.phon = "oː"
+            prev_vowel.source = "sonorant_lengthening"
+          elseif ortho == "u" then
+            prev_vowel.phon = "uː"
+            prev_vowel.source = "sonorant_lengthening"
+          end
+        end
+      end
 
-    -- Override phon directly (consonants pass already ran).
-    -- Strong sonorants are inherently broad/velarized in Irish.
-    if penult.ortho == "n" then
-      penult.phon = "n̪ˠ"
-    elseif penult.ortho == "l" then
-      penult.phon = "lˠ"
-    elseif penult.ortho == "r" then
-      penult.phon = "ɾˠ"
-    elseif penult.ortho == "m" then
-      penult.phon = "mˠ"
-    end
-    penult.source = "strong_sonorant"
-    last.phon = ""
-    last.source = "strong_sonorant"
-
-    -- Find the vowel before this geminate sonorant
-    local prev_vowel = tokens[last_idx - 2]
-    if not prev_vowel or prev_vowel.type ~= "vowel" then return tokens end
-
-    local ortho = prev_vowel.ortho
-    -- Handle digraphs: ea → aː before strong sonorant
-    if ortho == "ea" then
-      prev_vowel.phon = "aː"
-      prev_vowel.source = "sonorant_lengthening"
-    elseif ortho == "a" then
-      prev_vowel.phon = "ɑː"
-      prev_vowel.source = "sonorant_lengthening"
-    elseif ortho == "o" then
-      prev_vowel.phon = "oː"
-      prev_vowel.source = "sonorant_lengthening"
-    elseif ortho == "u" then
-      prev_vowel.phon = "uː"
-      prev_vowel.source = "sonorant_lengthening"
+      ::next_pair::
     end
 
     return tokens

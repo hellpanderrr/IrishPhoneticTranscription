@@ -5,6 +5,8 @@
 -- (like mh→vʲ) are detected, then silenced with their iː appended to the vowel.
 
 local S = require("passes._shared")
+local ustring = require("ustring.ustring")
+local ulen = ustring.len
 
 return {
   name = "vowel_adjunct",
@@ -17,6 +19,12 @@ return {
       if vowel.type ~= "vowel" or fricative.type ~= "cons" then goto continue end
 
       if fricative.ortho == "mh" then
+        -- Skip if vowel is a trigraph (aoi, eoi) — resolved entirely by pass 10
+        if ulen(vowel.ortho) >= 3 then goto continue end
+        -- Skip if fricative is followed by another consonant (syllable onset, not coda)
+        local next_after = i + 2 <= #tokens and tokens[i + 2] or nil
+        if next_after and next_after.type == "cons" then goto continue end
+
         if fricative.palatal == true then
           vowel.phon = vowel.phon .. "iː"
         elseif vowel.ortho == "ái" or vowel.ortho == "á" then

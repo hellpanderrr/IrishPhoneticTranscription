@@ -19,31 +19,31 @@ return {
       end
 
       local is_slender = vowel.ortho == "e" or vowel.ortho == "i" or vowel.ortho == "ea"
+      local was_vocalized = false
 
       if vowel.ortho == "ea" and (fricative.ortho == "bh" or fricative.ortho == "mh") then
-        vowel.phon = "əu"
+        vowel.phon = "əu"; was_vocalized = true
       elseif fricative.ortho == "bh" or fricative.ortho == "mh" then
         if is_slender then
-          vowel.phon = "əi"
+          vowel.phon = "əi"; was_vocalized = true
         elseif vowel.ortho == "a" or vowel.ortho == "o" or vowel.ortho == "u" then
-          vowel.phon = "əu"
+          vowel.phon = "əu"; was_vocalized = true
         end
       elseif fricative.ortho == "dh" or fricative.ortho == "gh" then
         if vowel.stress then
-          -- Stressed: produce diphthong
           if is_slender then
-            vowel.phon = "əi"
+            vowel.phon = "əi"; was_vocalized = true
           elseif vowel.ortho == "a" or vowel.ortho == "o" or vowel.ortho == "u" then
-            vowel.phon = "ai"
+            vowel.phon = "ai"; was_vocalized = true
           end
         else
-          -- Unstressed a/dh, o/dh, u/dh → ə (for subsequent reduction)
-          vowel.phon = "ə"
+          vowel.phon = "ə"; was_vocalized = true
         end
       end
 
-      -- Note: fricative is NOT silenced here. Let pass #9 resolve it,
-      -- then pass #9b may silence it if needed.
+      if was_vocalized then
+        fricative.phon = ""
+      end
 
       ::continue::
     end
