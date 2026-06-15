@@ -13,18 +13,14 @@ return {
 
     context.vowel_count = vowel_count
     if vowel_count == 0 then return tokens end
-    if vowel_count == 1 then
-      context.is_monosyllabic = true
-      context.stress_index = nil
-      -- Don't set token.stress for monosyllables — render_output uses this to add ˈ
-      return tokens
-    end
 
-    -- Check for known unstressed words/suffixes
+    -- Build ortho string for UNSTRESSED check
     local ortho = ""
     for _, t in ipairs(tokens) do
       if t.ortho and t.ortho ~= "" then ortho = ortho .. t.ortho end
     end
+
+    -- Check for known unstressed words/suffixes (before monosyllable check)
     local UNSTRESSED = {
       ["'un"]=true,["un"]=true,["'ur"]=true,["ur"]=true,["-as"]=true,["-sa"]=true,
       ["-se"]=true,["-ne"]=true,["-na"]=true,["-im"]=true,["-fas"]=true,["-fá"]=true,
@@ -35,12 +31,19 @@ return {
       ["-eáil"]=true,["-ail"]=true,["-eal"]=true,["-ógra"]=true,["-úint"]=true,
       ["-aint"]=true,a=true,["a'"]=true,["a-"]=true,["ab"]=true,ach=true,["ad"]=true,
       ["ag"]=true,["an"]=true,["ar"]=true,["as"]=true,["ba"]=true,["bh"]=true,["bhf"]=true,
-      ["ch"]=true,de=true,["do"]=true,["dh"]=true,["dh'"]=true,["go"]=true,["gh"]=true,
+      ["am"]=true,["ch"]=true,de=true,["do"]=true,["dh"]=true,["dh'"]=true,["go"]=true,["gh"]=true,
       ["i"]=true,["is"]=true,["le"]=true,["mar"]=true,["mh"]=true,["ní"]=true,
-      ["níl"]=true,["os"]=true,["ó"]=true,["ph"]=true,["sa"]=true,["se"]=true,["sh"]=true,
+      ["níl"]=true,["os"]=true,["ó"]=true,["ph"]=true,["na"]=true,["sa"]=true,["se"]=true,["sh"]=true,
       ["th"]=true,["th'"]=true,["um"]=true,
     }
     if UNSTRESSED[ortho] then return tokens end
+
+    if vowel_count == 1 then
+      context.is_monosyllabic = true
+      context.stress_index = nil
+      -- Don't set token.stress for monosyllables — render_output uses this to add ˈ
+      return tokens
+    end
 
     -- Check for unstressed prefix by looking at first consonant+next segment pairs
     local has_prefix = false

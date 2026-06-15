@@ -128,10 +128,9 @@ return {
       ::continue::
     end
 
-    -- Step 8: Glide insertion (sleamhnóga) (Fuaimeanna 3.5.3)
-    -- Palatal C + back V → [j] glide appended to consonant
-    -- Broad C + front vowel → [w] glide
-    -- Uses ustring functions for correct UTF-8 character extraction.
+    -- Step 8: Conservative glide insertion (sleamhnóga) (Fuaimeanna 3.5.3)
+    -- Only insert [j] after palatal C when followed by back rounded vowels (ɔ, o, u, ʊ).
+    -- Broad C + front V → [w] is not productive; removed as it produced ~1000 false positives.
     for i, token in ipairs(tokens) do
       if token.type ~= "cons" then goto continue end
       if token.phon == "" then goto continue end
@@ -140,21 +139,16 @@ return {
       if not next or next.type ~= "vowel" then goto continue end
       local vphon = next.phon
       if not vphon or vphon == "" then goto continue end
+      if token.palatal ~= true then goto continue end
 
       -- Get first IPA character (strip length mark)
       local vfirst = ugsub(vphon, "ː", "")
       vfirst = usub(vfirst, 1, 1)
 
-      if token.palatal == true then
-        -- Palatal C before back vowel → j-glide
-        if vfirst and umatch(vfirst, "[aɑoɔuʊ]") then
-          token.phon = token.phon .. "j"
-        end
-      elseif token.palatal == false then
-        -- Broad C before front vowel → w-glide
-        if vfirst and umatch(vfirst, "[eɛiɪ]") then
-          token.phon = token.phon .. "w"
-        end
+      -- Palatal C before back rounded vowel → j-glide
+      -- NOT for a/ɑ (which commonly follow palatal C without glide)
+      if vfirst and umatch(vfirst, "[oɔuʊ]") then
+        token.phon = token.phon .. "j"
       end
 
       ::continue::
