@@ -163,10 +163,12 @@ function _shared.vowel_polarity(vowel, direction)
         if direction == "prev" then return false else return true end
     end
     if vowel.ortho == "eo" then return false end
-    if vowel.ortho == "ao" or vowel.ortho == "aoi" or
-       vowel.ortho == "aí" or vowel.ortho == "ái" or
+    if vowel.ortho == "ao" or
        vowel.ortho == "ua" or vowel.ortho == "oi" or
        vowel.ortho == "ui" then return false end
+    if vowel.ortho == "aoi" or vowel.ortho == "aí" or vowel.ortho == "ái" then
+        if direction == "prev" then return true else return false end
+    end
     if vowel.ortho == "eoi" or vowel.ortho == "ío" then return true end
     local last = usub(vowel.ortho, ulen(vowel.ortho), ulen(vowel.ortho))
     if _shared.is_slender_vowel_char(last) then return true end
@@ -257,6 +259,30 @@ _shared.ECLIPSIS_MAP = {
     ngl = { phon = "ŋ" },
     nn = { phon = "n̪ˠ" },
     bpr = { phon = "bˠ" },
+}
+
+_shared.FUNCTION_WORDS_OVERRIDE = {
+  i   = { "ə" },         -- preposition "in"
+  a   = { "ə" },         -- possessive/particle
+  ["a'"] = { "ə" },      -- variant of "a"
+  ag  = { "ə", "ɡ" },    -- "at"
+  ar  = { "ə", "ɾˠ" },   -- "on" (broad r default)
+  ["do"]  = { "d̪ˠ", "ɔ" },    -- "to/for"
+  de  = { "dʲ", "ə" },   -- "of/from"
+  na  = { "n̪ˠ", "ə" },    -- plural article
+  sa  = { "sˠ", "ə" },    -- "in the" (sing.)
+  ba  = { "bˠ", "ə" },    -- conditional copula
+  as  = { "a", "sˠ" },    -- "out of"
+  le  = { "lʲ", "ə" },   -- "with"
+  mar = { "mˠ", "ə", "ɾˠ" }, -- "as/like"
+  go  = { "ɡ", "ə" },    -- "to" / "that" particle
+  se  = { "ʃ", "ɛ" },    -- unstressed "he/it"
+  ["o"]   = { "oː" },        -- "ó" — "from"
+  ["ni"]  = { "nʲ", "iː" },  -- "ní" -- "not" / "daughter"
+  is  = { "ə", "sˠ" },   -- "and" / copula
+  ach = { "a", "x" },    -- "but"
+  bhur = { "w", "ə", "ɾˠ" }, -- "your" (pl.)
+  an  = { "ə", "nˠ" },   -- article "the" (masc. nom.)
 }
 
 return _shared
