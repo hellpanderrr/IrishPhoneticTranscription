@@ -157,10 +157,10 @@ function _shared.vowel_polarity(vowel, direction)
         return direction == "prev" and true or false
     end
     if vowel.ortho == "ae" then
-        return direction == "prev" and false or true
+        if direction == "prev" then return false else return true end
     end
     if vowel.ortho == "ea" or vowel.ortho == "éa" then
-        return direction == "prev" and false or true
+        if direction == "prev" then return false else return true end
     end
     if vowel.ortho == "eo" then return false end
     if vowel.ortho == "ao" or vowel.ortho == "aoi" or

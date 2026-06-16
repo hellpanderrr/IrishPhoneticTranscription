@@ -52,9 +52,17 @@ return {
       local polarity = S.vowel_polarity(next_vowel)
       if polarity == nil then polarity = S.vowel_polarity(prev_vowel, "prev") end
 
+      -- Sonorant polarity: when no vowel context, check next consonant
       local sonorants = { l = true, n = true, r = true, m = true }
-      if sonorants[token.ortho] and prev_vowel and S.vowel_has_slender_trace(prev_vowel) then
-        polarity = true
+      if sonorants[token.ortho] and not polarity then
+        local next_cons = nil
+        for k = i + 1, #tokens do
+          if tokens[k].type == "cons" then next_cons = tokens[k]; break end
+          if tokens[k].type == "vowel" then break end
+        end
+        if next_cons and next_cons.palatal ~= nil then
+          polarity = next_cons.palatal
+        end
       end
 
       S.set_polarity(token, polarity)
