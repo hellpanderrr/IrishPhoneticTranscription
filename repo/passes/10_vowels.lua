@@ -19,6 +19,9 @@ return {
       local next = tokens[i + 1]
       local prev = tokens[i - 1]
 
+      -- Check if this vowel is the first element of a VV pair (split digraph).
+      local is_digraph_first = next and next.type == "vowel"
+
       -- Guard: only resolve if vowel wasn't modified by earlier passes.
       -- phon == ortho means unresolved.
       -- For 'a' where phon 'a' == ortho 'a', check source flag.
@@ -26,6 +29,12 @@ return {
       if ortho == "a" and token.phon == "a" and token.source == "lexeme" then
         need_resolve = true
       end
+
+      -- Skip need_resolve for vowels that are the first element of a VV pair.
+      -- These are part of a split digraph (ia, io, iu, ei, oi, etc.).
+      -- The dialect digraph resolution will set the correct phoneme.
+      -- Without this guard, standalone i→ɪ, o→ɔ etc. would overwrite the digraph result.
+      if is_digraph_first then need_resolve = false end
 
       if need_resolve then
         if next and next.type == "cons" and next.ortho == "dh" and
@@ -40,6 +49,11 @@ return {
         elseif ortho == "eo" then token.phon = dv.eo
         elseif ortho == "ea" then token.phon = dv.ea
         elseif ortho == "ae" then token.phon = "eː"
+        elseif ortho == "a" and next and next.type == "vowel" and next.ortho == "e" then
+          -- ae digraph: resolve a+e → eː, silence the e token
+          token.phon = "eː"
+          next.phon = ""
+          next.source = "ae_digraph_resolved"
         elseif ortho == "ei" then token.phon = "ɛ"
         elseif ortho == "ai" then token.phon = dv.ai
         elseif ortho == "oi" then token.phon = dv.oi
@@ -87,7 +101,7 @@ return {
       local has_x_block = next and next.type == "cons" and next.ortho == "ch"
 
       -- Contextual: consonant polarity affects vowel quality
-      if next and next.type == "cons" and not has_x_block then
+      if next and next.type == "cons" and not has_x_block and not is_digraph_first then
         if next.palatal == true and (ortho == "o" or ortho == "u") then
           token.phon = "ɪ"
         elseif next.palatal == true and ortho == "a" and not token.stress then
