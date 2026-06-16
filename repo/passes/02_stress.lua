@@ -61,6 +61,14 @@ return {
       end
 
       if seg_vc <= 1 then
+        if #segments > 1 then
+          for _, t in ipairs(seg) do
+            if t.type == "vowel" then
+              t.stress = true
+              break
+            end
+          end
+        end
         if #segments == 1 then seg_is_monosyllabic = true end
         goto next_seg
       end

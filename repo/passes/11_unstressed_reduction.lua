@@ -60,6 +60,15 @@ return {
       local next_token = tokens[i + 1]
       if next_token and next_token.type == "vowel" then goto continue end
 
+      -- For 2-vowel words: short vowels in non-final syllable keep full quality
+      if context.vowel_count == 2 and SHORT_VOWELS[phon] then
+        local has_later_vowel = false
+        for j = i + 1, #tokens do
+          if tokens[j].type == "vowel" then has_later_vowel = true; break end
+        end
+        if has_later_vowel then goto continue end
+      end
+
       if SHORT_VOWELS[phon] then
         token.phon = "ə"
       end
