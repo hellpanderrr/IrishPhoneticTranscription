@@ -162,7 +162,9 @@ function _shared.vowel_polarity(vowel, direction)
     if vowel.ortho == "ea" or vowel.ortho == "éa" then
         if direction == "prev" then return false else return true end
     end
-    if vowel.ortho == "eo" then return false end
+    if vowel.ortho == "eo" then
+        if direction == "prev" then return false else return true end
+    end
     if vowel.ortho == "ao" or
        vowel.ortho == "ua" or vowel.ortho == "oi" or
        vowel.ortho == "ui" then return false end
@@ -283,6 +285,7 @@ _shared.FUNCTION_WORDS_OVERRIDE = {
   ach = { "a", "x" },    -- "but"
   bhur = { "w", "ə", "ɾˠ" }, -- "your" (pl.)
   an  = { "ə", "nˠ" },   -- article "the" (masc. nom.)
+  reo = { "ɾˠ", "oː" }, -- "frost/death" — r before eo stays broad
 }
 
 return _shared
