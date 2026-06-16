@@ -41,6 +41,15 @@ return {
       ["i"]=true,["is"]=true,["le"]=true,["mar"]=true,["mh"]=true,["ní"]=true,
       ["níl"]=true,["os"]=true,["ó"]=true,["ph"]=true,["na"]=true,["sa"]=true,["se"]=true,["sh"]=true,
       ["th"]=true,["th'"]=true,["um"]=true,
+      -- Prepositional pronouns (should not carry lexical stress)
+      agam=true,agat=true,againn=true,agaibh=true,acu=true,
+      dom=true,duit=true,["dúinn"]=true,daoibh=true,["dóibh"]=true,
+      liom=true,leat=true,linn=true,libh=true,leo=true,
+      orm=true,ort=true,orainn=true,oraibh=true,orthu=true,
+      ["fúm"]=true,["fút"]=true,["fúinn"]=true,["fúibh"]=true,["fúthu"]=true,
+      chugam=true,chugat=true,chugainn=true,chugaibh=true,chuige=true,
+      uaim=true,uait=true,uainn=true,uaibh=true,uathu=true,
+      ["faoi"]=true,["fearacht"]=true,["trí"]=true,["trína"]=true,
     }
 
     -- Process each word segment independently.
@@ -85,11 +94,14 @@ return {
       local stress_index = S.vowel_token_index(seg)
       if not stress_index then goto next_seg end
 
-      -- Stress adjustments (same as before)
+      -- Stress adjustments: move stress to start of onset cluster
       if stress_index > 1 and seg[stress_index - 1].type == "cons" and
          seg[stress_index - 2] and seg[stress_index - 2].type == "cons" and
          (seg[stress_index - 1].ortho == "r" or seg[stress_index - 1].ortho == "l") then
-        stress_index = stress_index - 1
+        -- Scan back through onset cluster to find the start
+        while stress_index > 1 and seg[stress_index - 1].type == "cons" do
+          stress_index = stress_index - 1
+        end
       end
       if seg[stress_index].ortho == "e" and stress_index > 1 and
          seg[stress_index - 1].type == "cons" and

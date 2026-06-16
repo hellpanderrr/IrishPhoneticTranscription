@@ -91,9 +91,24 @@ local function render_output(tokens)
   end
 
   local parts = {}
-  for _, token in ipairs(tokens) do
+  for i, token in ipairs(tokens) do
     if token.phon and token.phon ~= "" then
-      if token.stress then
+      if token.stress and token.type == "cons" then
+        -- IPA convention: ˈCV not CˈV — stress mark goes before entire onset.
+        -- Check if an earlier consonant is also part of this onset cluster.
+        local onset_start = i
+        for j = i - 1, 1, -1 do
+          if tokens[j].type == "cons" and tokens[j].phon and tokens[j].phon ~= "" then
+            onset_start = j
+          else
+            break
+          end
+        end
+        -- Only emit stress mark on the true onset start
+        if onset_start == i then
+          table.insert(parts, S.STRESS_MARK)
+        end
+      elseif token.stress then
         table.insert(parts, S.STRESS_MARK)
       end
       table.insert(parts, token.phon)
