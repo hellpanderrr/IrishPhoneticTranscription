@@ -116,6 +116,81 @@ return {
       ::continue::
     end
 
+    -- Step 9: Function word overrides — replace ALL phonemes with hardcoded IPA.
+    -- Must be the very last step so no further rules touch these tokens.
+    -- Split tokens into word segments so function words inside multi-word phrases are caught.
+    local fw_segments = {}
+    local fw_current = {}
+    for _, t in ipairs(tokens) do
+      if t.type == "boundary" then
+        if #fw_current > 0 then table.insert(fw_segments, fw_current) end
+        fw_current = {}
+      else
+        table.insert(fw_current, t)
+      end
+    end
+    if #fw_current > 0 then table.insert(fw_segments, fw_current) end
+
+    for _, seg in ipairs(fw_segments) do
+      if #seg == 0 then goto next_fw_seg end
+      -- Build normalized ortho for lookup
+      local seg_ortho = ""
+      for _, t in ipairs(seg) do
+        if t.ortho then seg_ortho = seg_ortho .. t.ortho end
+      end
+      if seg_ortho == "" then goto next_fw_seg end
+
+      -- Use simple lowercased lookup (normalize_ortho strips accents)
+      local lookup_word = ustring.lower(seg_ortho)
+      local fw_ipa = S.FUNCTION_WORDS_OVERRIDE[lookup_word]
+      if fw_ipa then
+        local override_idx = 1
+        for _, t in ipairs(seg) do
+          if fw_ipa[override_idx] then
+            t.phon = fw_ipa[override_idx]
+            t.stress = false
+          end
+          override_idx = override_idx + 1
+        end
+        -- Also silence any trailing apostrophe boundary (e.g., "a'" -> ə not ə')
+        local next_boundary = tokens[seg[#seg].ortho_indices[2] + 1] or {}
+        if next_boundary.type == "boundary" and next_boundary.ortho == "'" then
+          next_boundary.phon = ""
+        end
+      end
+      ::next_fw_seg::
+    end
+
+    -- Step 10: Downgrade stress in multi-word phrases.
+    -- Primary stress on the first content word, secondary stress on subsequent content words.
+    -- Function words (overridden above) already have stress=false.
+    if #fw_segments > 1 then
+      local content_word_idx = 0
+      local current_pos = 1
+      for _, seg in ipairs(fw_segments) do
+        -- Check if this segment was overridden by function word rules
+        local seg_ortho = ""
+        for _, t in ipairs(seg) do
+          if t.ortho then seg_ortho = seg_ortho .. t.ortho end
+        end
+        local lookup_word = ustring.lower(seg_ortho)
+        local is_function_word = S.FUNCTION_WORDS_OVERRIDE[lookup_word] ~= nil
+
+        if not is_function_word then
+          content_word_idx = content_word_idx + 1
+          if content_word_idx > 1 then
+            -- Downgrade primary stress in this segment to secondary (no stress mark)
+            -- Secondary stress is currently not rendered; removing it entirely
+            -- is closer to the expected IPA format.
+            for _, t in ipairs(seg) do
+              t.stress = false
+            end
+          end
+        end
+        current_pos = current_pos + #seg + 1
+      end
+    end
+
     return tokens
   end,
 }

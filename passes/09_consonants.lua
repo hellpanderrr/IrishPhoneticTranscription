@@ -26,7 +26,24 @@ return {
         end
       elseif token.ortho == "ch" then
         if token.palatal == true then
-          token.phon = i == 1 and "ç" or "h"
+          -- Hickey: slender ch after front vowel ortho -> c, after back vowel -> h
+          -- Word-initial slender ch -> c,
+          local prev_v = tokens[i - 1]
+          if prev_v and prev_v.type == "vowel" then
+            -- Check ortho for front vowel: i, e, i, e
+            -- Use byte matching since these are multi-byte in UTF-8.
+            local b1 = (prev_v.ortho:byte(1) or 0)
+            local b2 = (prev_v.ortho:byte(2) or 0)
+            if b1 == 0x69 or b1 == 0x65 then
+              token.phon = "\xc3\xa7"  -- i or e
+            elseif b1 == 0xC3 and (b2 == 0xAD or b2 == 0xA9) then
+              token.phon = "\xc3\xa7"  -- i or e
+            else
+              token.phon = "h"
+            end
+          else
+            token.phon = "\xc3\xa7"
+          end
         else
           token.phon = "x"
         end

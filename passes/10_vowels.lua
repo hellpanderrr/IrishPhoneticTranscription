@@ -50,7 +50,14 @@ return {
         elseif ortho == "éa" then token.phon = "eː"
         elseif ortho == "ío" then token.phon = dv["ío"]
         elseif ortho == "eoi" then token.phon = dv.eo
-        elseif ortho == "aí" or ortho == "ái" then token.phon = "ɑː"
+        elseif ortho == "aí" or ortho == "ái" then
+          -- Word-final -aí/-ái -> iː (Connacht pattern: GPC/PC)
+          local next_t = tokens[i + 1]
+          if next_t and next_t.type == "cons" then
+            token.phon = "a"  -- medial: resolve a+i short, reduction will handle
+          else
+            token.phon = "iː"  -- word-final: aí -> iː
+          end
         elseif ortho == "óí" or ortho == "ó" then token.phon = (dv.long and dv.long.o) or "oː"
         elseif ortho == "ú" then token.phon = (dv.long and dv.long.u) or "uː"
         elseif ortho == "í" then token.phon = (dv.long and dv.long.i) or "iː"
