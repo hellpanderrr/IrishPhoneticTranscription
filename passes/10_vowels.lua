@@ -22,6 +22,15 @@ return {
       -- Check if this vowel is the first element of a VV pair (split digraph).
       local is_digraph_first = next and next.type == "vowel"
 
+      -- Handle ae digraph (split as a + e) BEFORE need_resolve guard.
+      -- Resolve a+e → eː, silence the e token.
+      if ortho == "a" and is_digraph_first and next.ortho == "e" then
+        token.phon = "eː"
+        next.phon = ""
+        next.source = "ae_digraph_resolved"
+        goto continue
+      end
+
       -- Guard: only resolve if vowel wasn't modified by earlier passes.
       -- phon == ortho means unresolved.
       -- For 'a' where phon 'a' == ortho 'a', check source flag.
@@ -31,10 +40,13 @@ return {
       end
 
       -- Skip need_resolve for vowels that are the first element of a VV pair.
-      -- These are part of a split digraph (ia, io, iu, ei, oi, etc.).
+      -- These are part of a split digraph (ia, io, iu, etc.).
       -- The dialect digraph resolution will set the correct phoneme.
       -- Without this guard, standalone i→ɪ, o→ɔ etc. would overwrite the digraph result.
-      if is_digraph_first then need_resolve = false end
+      -- Exempt known digraph orthos (ae, ea, ai, etc.) which need need_resolve.
+      if is_digraph_first and not S.VOWEL_DIGRAPHS[ortho] then
+        need_resolve = false
+      end
 
       if need_resolve then
         if next and next.type == "cons" and next.ortho == "dh" and
@@ -49,11 +61,6 @@ return {
         elseif ortho == "eo" then token.phon = dv.eo
         elseif ortho == "ea" then token.phon = dv.ea
         elseif ortho == "ae" then token.phon = "eː"
-        elseif ortho == "a" and next and next.type == "vowel" and next.ortho == "e" then
-          -- ae digraph: resolve a+e → eː, silence the e token
-          token.phon = "eː"
-          next.phon = ""
-          next.source = "ae_digraph_resolved"
         elseif ortho == "ei" then token.phon = "ɛ"
         elseif ortho == "ai" then token.phon = dv.ai
         elseif ortho == "oi" then token.phon = dv.oi
