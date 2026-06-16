@@ -87,48 +87,10 @@ return {
       end
     end
 
-    -- Step 6: /rʲ/ word-final assibilation (Hickey Ch.2)
-    -- In some dialects, slender /rʲ/ → [ʃ] at word end
-    for i = #tokens, 1, -1 do
-      if tokens[i].type == "cons" and tokens[i].phon == "ɾʲ" then
-        local is_final = true
-        for j = i + 1, #tokens do
-          if tokens[j].phon and tokens[j].phon ~= "" then is_final = false; break end
-        end
-        if is_final then
-          tokens[i].phon = "ʃ"
-          tokens[i].source = "assibilation"
-        end
-        break
-      end
-    end
+    -- Step 6 removed: rʲ → ʃ assibilation (Hickey Ch.2)
+    -- 503 words produced ʃ incorrectly, only 54 expected it
 
-    -- Step 7: Consonant aspiration (Fuaimeanna 3.5.1)
-    -- Word-initial voiceless stops aspirate [ʰ] except after /s/.
-    for i, token in ipairs(tokens) do
-      if token.type ~= "cons" or not token.phon then goto continue end
-      local phon = token.phon
-      local is_voiceless_stop = phon == "pʲ" or phon == "pˠ" or phon == "p" or
-                                phon == "tʲ" or phon == "t̪ˠ" or phon == "t" or
-                                phon == "c" or phon == "k"
-      if not is_voiceless_stop then goto continue end
-
-      -- After /s/ blocks aspiration
-      local prev = tokens[i - 1]
-      if prev and prev.type == "cons" and prev.phon and
-         (prev.phon == "sˠ" or prev.phon == "ʃ") then
-        goto continue
-      end
-
-      -- Aspirate word-initially (most reliable case)
-      if i == 1 or (prev and prev.phon == "") then
-        token.phon = phon .. "ʰ"
-      end
-
-      ::continue::
-    end
-
-    -- Step 8: Conservative glide insertion (sleamhnóga) (Fuaimeanna 3.5.3)
+    -- Step 8:*  (was 7: aspiration removed — dataset doesn't use ʰ
     -- Only insert [j] after palatal C when followed by back rounded vowels (ɔ, o, u, ʊ).
     -- Broad C + front V → [w] is not productive; removed as it produced ~1000 false positives.
     for i, token in ipairs(tokens) do
