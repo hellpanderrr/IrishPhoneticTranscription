@@ -69,6 +69,15 @@ return {
         if has_later_vowel then goto continue end
       end
 
+      -- Don't reduce ɪ after palatal c/ɟ (preserves Irish slender vowel quality)
+      if phon == "ɪ" then
+        local prev_t = tokens[i - 1]
+        if prev_t and prev_t.type == "cons" and
+           (prev_t.phon == "c" or prev_t.phon == "ɟ") then
+          goto continue
+        end
+      end
+
       if SHORT_VOWELS[phon] then
         token.phon = "ə"
       end

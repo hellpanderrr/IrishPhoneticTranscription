@@ -22,6 +22,25 @@ return {
       -- Check if this vowel is the first element of a VV pair (split digraph).
       local is_digraph_first = next and next.type == "vowel"
 
+      -- Silencing standalone i when it's a palatalization marker.
+      -- Pattern: vowel + i + consonant => i is always a palatal marker.
+      -- The consonant already gets palatal=true from the polarity pass.
+      if ortho == "i" and next and next.type == "cons" and prev and prev.type == "vowel" then
+        token.phon = ""
+        token.source = "palatal_marker_silenced"
+        goto continue
+      end
+
+      -- Silencing i before u (palatalization marker in iú/iu patterns).
+      -- Pattern: i + u => i is a palatalization marker, u carries the vowel.
+      -- E.g., siúl → ʃuːlˠ, fiú → fʲuː
+      if ortho == "i" and next and next.type == "vowel" and
+         (next.ortho == "u" or next.ortho == "ú") then
+        token.phon = ""
+        token.source = "palatal_marker_silenced"
+        goto continue
+      end
+
       -- Handle ae digraph (split as a + e) BEFORE need_resolve guard.
       -- Resolve a+e → eː, silence the e token.
       if ortho == "a" and is_digraph_first and next.ortho == "e" then
@@ -62,6 +81,7 @@ return {
         elseif ortho == "ea" then token.phon = dv.ea
         elseif ortho == "ae" then token.phon = "eː"
         elseif ortho == "ei" then token.phon = "ɛ"
+        elseif ortho == "ai" and not next then token.phon = "iː"  -- word-final -aí
         elseif ortho == "ai" then token.phon = dv.ai
         elseif ortho == "oi" then token.phon = dv.oi
         elseif ortho == "ui" then token.phon = dv.ui
@@ -71,8 +91,16 @@ return {
         elseif ortho == "éa" then token.phon = "eː"
         elseif ortho == "ío" then token.phon = dv["ío"]
         elseif ortho == "eoi" then token.phon = dv.eo
-        elseif ortho == "aí" or ortho == "ái" then
-          -- Word-final -aí/-ái -> iː (Connacht pattern: GPC/PC)
+        elseif ortho == "ái" then
+          -- ái: stressed long a + slender ending → ɑː (Connacht)
+          local next_t = tokens[i + 1]
+          if next_t and next_t.type == "cons" then
+            token.phon = "ɑː"  -- medial: sráid → sˠɾˠɑːdʲ
+          else
+            token.phon = "iː"  -- word-final
+          end
+        elseif ortho == "aí" or (ortho == "ai" and not next) then
+          -- aí: unstressed variant → word-final iː, medial short a
           local next_t = tokens[i + 1]
           if next_t and next_t.type == "cons" then
             token.phon = "a"  -- medial: resolve a+i short, reduction will handle
@@ -93,7 +121,8 @@ return {
       end
 
       -- Unstressed diphthong digraphs → short vowels so reduction can produce ə
-      if not token.stress then
+      -- Skip if phon already resolved to a long vowel (e.g. word-final -aí → iː)
+      if not token.stress and token.phon ~= "iː" and token.phon ~= "ɑːiː" then
         if ortho == "ai" and token.phon == "ai" then
           token.phon = "a"
         elseif ortho == "oi" and token.phon == "ɔi" then
@@ -120,6 +149,12 @@ return {
         elseif next.palatal == false and ortho == "e" and not token.stress then
           token.phon = "ə"
         end
+      end
+
+      -- oi before palatal consonant: front to ɛ (not back ɔ)
+      -- goilim → ɡɛlʲəmʲ, foide → fˠɛdʲə, coire → kɛɾʲə
+      if ortho == "oi" and next and next.type == "cons" and next.palatal == true then
+        token.phon = "ɛ"
       end
 
       -- dh triggers raising
