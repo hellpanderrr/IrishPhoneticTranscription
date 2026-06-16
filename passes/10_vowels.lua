@@ -157,6 +157,12 @@ return {
         token.phon = "ɛ"
       end
 
+      -- ui before palatal consonant: front to ɪ (not back ʊ)
+      -- muiníneach → mˠɪnʲiːnʲəx, cuireann → kɪɾʲən̪ˠ
+      if ortho == "ui" and next and next.type == "cons" and next.palatal == true then
+        token.phon = "ɪ"
+      end
+
       -- dh triggers raising
       if next and next.type == "cons" and next.ortho == "dh" then
         if ortho == "o" or ortho == "u" then
