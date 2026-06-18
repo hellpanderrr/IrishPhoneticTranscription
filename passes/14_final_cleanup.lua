@@ -144,17 +144,29 @@ return {
     -- Step 9: Function word overrides — replace ALL phonemes with hardcoded IPA.
     -- Must be the very last step so no further rules touch these tokens.
     -- Split tokens into word segments so function words inside multi-word phrases are caught.
+    -- Track segment token-index ranges and the boundary that follows each segment
+    -- so Step 10 can blank inter-word boundaries for proclitic + content fusions.
     local fw_segments = {}
     local fw_current = {}
-    for _, t in ipairs(tokens) do
+    local seg_ranges = {}  -- { {start=i, stop=j, boundary=k}, ... }
+    local fw_current_start = nil
+    for idx, t in ipairs(tokens) do
       if t.type == "boundary" then
-        if #fw_current > 0 then table.insert(fw_segments, fw_current) end
+        if #fw_current > 0 then
+          table.insert(fw_segments, fw_current)
+          table.insert(seg_ranges, { start = fw_current_start, stop = idx - 1, boundary = idx })
+        end
         fw_current = {}
+        fw_current_start = idx + 1
       else
+        if fw_current_start == nil then fw_current_start = idx end
         table.insert(fw_current, t)
       end
     end
-    if #fw_current > 0 then table.insert(fw_segments, fw_current) end
+    if #fw_current > 0 then
+      table.insert(fw_segments, fw_current)
+      table.insert(seg_ranges, { start = fw_current_start, stop = #tokens, boundary = nil })
+    end
 
     for _, seg in ipairs(fw_segments) do
       if #seg == 0 then goto next_fw_seg end
@@ -186,33 +198,128 @@ return {
       ::next_fw_seg::
     end
 
-    -- Step 10: Downgrade stress in multi-word phrases.
-    -- Primary stress on the first content word, secondary stress on subsequent content words.
-    -- Function words (overridden above) already have stress=false.
+    -- Step 9b: Proclitic cliticization. Certain function words fuse with the
+    -- following content word — the expected IPA has no space between them
+    -- (e.g. "i gceart" -> əˈɟaɾˠt̪ˠ, "go dtí" -> ɡəˈdʲiː, "faoi deara" ->
+    -- fˠiːˈdʲaɾˠə). Mark the inter-word boundary as cliticized so render_output
+    -- suppresses the space. The boundary token itself is preserved so the
+    -- onset-walk in render_output still treats it as a word break (preventing
+    -- the function word's coda consonant from being adopted as the content
+    -- word's onset).
+    local PROCLITICS = {
+      ["i"] = true, ["go"] = true, ["ar"] = true, ["faoi"] = true,
+      ["de"] = true, ["a"] = true,
+      -- "ó" excluded: mixes cliticization ("ó dheas" fuses) with non-cliticization
+      -- ("ó shin", "Ó Briain" keep space). Net negative.
+      ["cén"] = true, ["cá"] = true, ["cé"] = true,             -- interrogatives
+      ["cen"] = true, ["ca"] = true, ["ce"] = true,             -- (unaccented fallback)
+      ["ní"] = true, ["ni"] = true,                             -- "ní"
+    }
+    if #fw_segments >= 2 then
+      for si = 1, #fw_segments - 1 do
+        local seg = fw_segments[si]
+        local seg_ortho = ""
+        for _, t in ipairs(seg) do
+          if t.ortho then seg_ortho = seg_ortho .. t.ortho end
+        end
+        local lookup = ustring.lower(seg_ortho)
+        if PROCLITICS[lookup] then
+          -- Check that the next segment is a content word (not a function word).
+          local next_seg = fw_segments[si + 1]
+          local next_ortho = ""
+          for _, t in ipairs(next_seg) do
+            if t.ortho then next_ortho = next_ortho .. t.ortho end
+          end
+          local next_lookup = ustring.lower(next_ortho)
+          if not S.FUNCTION_WORDS_OVERRIDE[next_lookup] then
+            local range = seg_ranges[si]
+            if range and range.boundary then
+              -- Blank the boundary's phon (suppress space) but keep the token
+              -- as type "boundary" so render_output's onset walk still stops
+              -- here — the function word's coda consonant must not be adopted
+              -- as the content word's onset.
+              tokens[range.boundary].phon = ""
+            end
+          end
+        end
+      end
+    end
+
+    -- Step 10: Reassign stress in multi-word phrases.
+    -- Empirically (analysis of 212 multi-word benchmark entries with ≥2 content
+    -- words), the dominant Connacht pattern is: primary ˈ on the LAST content
+    -- word, secondary ˌ on the FIRST content word. Single content words keep
+    -- their primary stress. Function words remain unstressed (set above).
     if #fw_segments > 1 then
-      local content_word_idx = 0
-      local current_pos = 1
+      -- Collect content-word segments (those not overridden as function words).
+      local content_segs = {}
       for _, seg in ipairs(fw_segments) do
-        -- Check if this segment was overridden by function word rules
         local seg_ortho = ""
         for _, t in ipairs(seg) do
           if t.ortho then seg_ortho = seg_ortho .. t.ortho end
         end
         local lookup_word = ustring.lower(seg_ortho)
         local is_function_word = S.FUNCTION_WORDS_OVERRIDE[lookup_word] ~= nil
-
         if not is_function_word then
-          content_word_idx = content_word_idx + 1
-          if content_word_idx > 1 then
-            -- Downgrade primary stress in this segment to secondary (no stress mark)
-            -- Secondary stress is currently not rendered; removing it entirely
-            -- is closer to the expected IPA format.
-            for _, t in ipairs(seg) do
-              t.stress = false
+          table.insert(content_segs, seg)
+        end
+      end
+
+      if #content_segs >= 2 then
+        -- For each content segment, remember which vowel pass 02 stressed.
+        local stressed_vowel = {}
+        for ci, seg in ipairs(content_segs) do
+          for _, t in ipairs(seg) do
+            if t.stress and t.type == "vowel" then
+              stressed_vowel[ci] = t
+              break
             end
           end
         end
-        current_pos = current_pos + #seg + 1
+        -- Clear all existing stress in content segments.
+        for _, seg in ipairs(content_segs) do
+          for _, t in ipairs(seg) do
+            t.stress = false
+            t.secondary = false
+          end
+        end
+        -- First content word: secondary stress (on pass 02's chosen vowel, or
+        -- first vowel). Skip if the first content word is monosyllabic — those
+        -- typically take no stress at all in this position (e.g. numerals +
+        -- "déag", "Ó Briain", "Sinn Féin", "Dé hAoine").
+        local first_seg_vowel_count = 0
+        for _, t in ipairs(content_segs[1]) do
+          if t.type == "vowel" then first_seg_vowel_count = first_seg_vowel_count + 1 end
+        end
+        if first_seg_vowel_count >= 2 then
+          local first_v = stressed_vowel[1]
+          if not first_v then
+            for _, t in ipairs(content_segs[1]) do
+              if t.type == "vowel" then first_v = t; break end
+            end
+          end
+          if first_v then first_v.secondary = true end
+        end
+        -- Last content word: primary stress, except for enclitics like
+        -- "déag"/"dhéag" (the "-teen" suffix) which take no stress at all
+        -- (e.g. "trí déag" -> tʲɾʲiː dʲeːɡ, "dó dhéag" -> d̪ˠoː jeːɡ).
+        local last_seg = content_segs[#content_segs]
+        local last_ortho = ""
+        for _, t in ipairs(last_seg) do
+          if t.ortho then last_ortho = last_ortho .. t.ortho end
+        end
+        local last_lookup = ustring.lower(last_ortho)
+        local suppress_last_stress = (last_lookup == "déag" or last_lookup == "dhéag"
+          or last_lookup == "deag" or last_lookup == "dheag")
+        if not suppress_last_stress then
+          local last_v = stressed_vowel[#content_segs]
+          if not last_v then
+            for _, t in ipairs(last_seg) do
+              if t.type == "vowel" then last_v = t; break end
+            end
+          end
+          if last_v then last_v.stress = true end
+        end
       end
     end
 

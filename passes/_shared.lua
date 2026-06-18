@@ -16,6 +16,7 @@ _shared.ALL_VOWELS_ORTHO = _shared.SLENDER_VOWELS_ORTHO .. _shared.BROAD_VOWELS_
 _shared.SHORT_VOWELS_ORTHO = "aeiou"
 _shared.CONSONANTS_ORTHO = "bcdfghlmnprst"
 _shared.STRESS_MARK = "ˈ"
+_shared.SECONDARY_STRESS_MARK = "ˌ"
 _shared.SILENT_MUTATED_FINALS = { th = true, dh = true, gh = true }
 _shared.INITIAL_CLUSTER_SHIFTS = {
     cn = { "c", "r" },

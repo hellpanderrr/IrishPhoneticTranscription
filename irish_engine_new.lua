@@ -71,21 +71,35 @@ end
 -- Render output: place stress mark before the syllable onset
 -- IPA convention: ˈCV, not CˈV
 local function render_output(tokens)
-  -- Pre-process: move stress from vowel to preceding onset consonant(s)
+  -- Pre-process: move stress from vowel to preceding onset consonant(s).
+  -- Handles both primary (`stress`) and secondary (`secondary`) stress.
+  -- The onset walk skips tokens with empty phon that are NOT boundaries
+  -- (e.g. silenced final fricatives) but stops at boundary tokens so function
+  -- words' codas are not adopted as content words' onsets.
   for i = #tokens, 1, -1 do
-    if tokens[i].type == "vowel" and tokens[i].stress then
+    if tokens[i].type == "vowel" and (tokens[i].stress or tokens[i].secondary) then
       local onset_start = i
       for j = i - 1, 1, -1 do
         local t = tokens[j]
         if t.type == "cons" and t.phon and t.phon ~= "" then
           onset_start = j
+        elseif t.type == "boundary" then
+          break
+        elseif t.phon == nil or t.phon == "" then
+          -- skip silenced non-boundary tokens
         else
           break
         end
       end
       if onset_start < i then
-        tokens[i].stress = false
-        tokens[onset_start].stress = true
+        if tokens[i].stress then
+          tokens[i].stress = false
+          tokens[onset_start].stress = true
+        end
+        if tokens[i].secondary then
+          tokens[i].secondary = false
+          tokens[onset_start].secondary = true
+        end
       end
     end
   end
@@ -98,8 +112,13 @@ local function render_output(tokens)
         -- Check if an earlier consonant is also part of this onset cluster.
         local onset_start = i
         for j = i - 1, 1, -1 do
-          if tokens[j].type == "cons" and tokens[j].phon and tokens[j].phon ~= "" then
+          local t = tokens[j]
+          if t.type == "cons" and t.phon and t.phon ~= "" then
             onset_start = j
+          elseif t.type == "boundary" then
+            break
+          elseif t.phon == nil or t.phon == "" then
+            -- skip
           else
             break
           end
@@ -110,6 +129,26 @@ local function render_output(tokens)
         end
       elseif token.stress then
         table.insert(parts, S.STRESS_MARK)
+      elseif token.secondary and token.type == "cons" then
+        -- Secondary stress: mirror the onset-start logic.
+        local onset_start = i
+        for j = i - 1, 1, -1 do
+          local t = tokens[j]
+          if t.type == "cons" and t.phon and t.phon ~= "" then
+            onset_start = j
+          elseif t.type == "boundary" then
+            break
+          elseif t.phon == nil or t.phon == "" then
+            -- skip
+          else
+            break
+          end
+        end
+        if onset_start == i then
+          table.insert(parts, S.SECONDARY_STRESS_MARK)
+        end
+      elseif token.secondary then
+        table.insert(parts, S.SECONDARY_STRESS_MARK)
       end
       table.insert(parts, token.phon)
     end
