@@ -61,7 +61,14 @@ return {
       end
     end
 
-    -- Step 4: Unstressed final devoicing (Connacht/Ulster)
+    -- Step 4: Unstressed final devoicing (Connacht/Ulster) — TIGHTENED
+    -- Devoice slender g [ɟ] -> [c] ONLY when preceded by schwa [ə]. Empirical
+    -- analysis of the benchmark: of 39 slender-g-final words the rule fired on,
+    -- 33 were over-devoiced (exp keeps ɟ: cúig, tréig, bróig, smig, etc.) and
+    -- only 6 were correct — all 6 had schwa before the final g (Nollaig,
+    -- coisrig, oifig, aisig, ráinig, Lá Fhéile Pádraig). Restricting to the
+    -- schwa context keeps the legitimate devoicing while not touching full-vowel
+    -- cases (ɪ, eː, oː, a, uː, uə, etc.) where ɟ is preserved.
     for i = #tokens, 1, -1 do
       if tokens[i].phon == "ɟ" then
         local is_final = true
@@ -70,7 +77,8 @@ return {
         end
         if is_final then
           local prev_vowel = S.find_preceding_vowel(tokens, i)
-          if prev_vowel and not prev_vowel.stress then
+          if prev_vowel and not prev_vowel.stress
+             and prev_vowel.phon and prev_vowel.phon:match("ə") then
             tokens[i].phon = "c"
           end
         end
