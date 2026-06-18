@@ -1,8 +1,9 @@
 -- Pass #14: Final cleanup and diacritics.
--- 1. Remove final silent mutated fricatives (th, dh, gh) — append ç for th
--- 2. Strip trailing ç/ɣ/h from vowels that have a long phon (matches production rule)
+-- 1. Remove final silent mutated fricatives (th, dh, gh)
+-- 2. Strip trailing ç/ɣ/h from vowels that have a long phon
 -- 3. Unstressed final devoicing: slender g [ɟ] -> [c] (Hickey Ch.2)
 -- 4. ch + s -> tʃ sandhi
+-- 5. Devoice b/d/g before th: b+th→p, d+th→t, g+th→k
 
 local S = require("passes._shared")
 local ustring = require("ustring.ustring")
@@ -29,9 +30,6 @@ return {
         local prev = tokens[#tokens - 1]
         if prev and prev.type == "vowel" then
           prev.source = "vowel_before_silent_fricative"
-          if last.ortho == "th" then
-            prev.phon = prev.phon .. "ç"
-          end
         end
         last.phon = ""
       end
@@ -87,6 +85,28 @@ return {
       end
     end
 
+    -- Step 6: Devoice b/d/g before th — b+th→p, d+th→t, g+th→k, silence th
+    -- Handles verbal adjective forms: fágtha→kə, scuabtha→pˠə, lúbtha→pˠə
+    for i = 1, #tokens - 1 do
+      local c = tokens[i]
+      local next_t = tokens[i + 1]
+      if c.type ~= "cons" then goto dev_continue end
+      if not next_t or next_t.ortho ~= "th" then goto dev_continue end
+      if next_t.phon ~= "h" then goto dev_continue end
+
+      -- Devoice the consonant
+      if c.phon == "bˠ" then c.phon = "pˠ"
+      elseif c.phon == "bʲ" then c.phon = "pʲ"
+      elseif c.phon == "d̪ˠ" then c.phon = "t̪ˠ"
+      elseif c.phon == "dʲ" then c.phon = "tʲ"
+      elseif c.phon == "ɡ" then c.phon = "k"
+      elseif c.phon == "ɟ" then c.phon = "c"
+      end
+      next_t.phon = ""
+
+      ::dev_continue::
+    end
+
     -- Step 6 removed: rʲ → ʃ assibilation (Hickey Ch.2)
     -- 503 words produced ʃ incorrectly, only 54 expected it
 
@@ -110,7 +130,12 @@ return {
       -- Palatal C before back rounded vowel → j-glide
       -- NOT for a/ɑ (which commonly follow palatal C without glide)
       if vfirst and umatch(vfirst, "[oɔuʊ]") then
-        token.phon = token.phon .. "j"
+        -- Skip j-glide when vowel orthography starts with e (eo/eó digraph)
+        -- because the e already marks palatal quality before the rounded vowel.
+        local vorrho = next.ortho or ""
+        if not umatch(usub(vorrho, 1, 1), "[eé]") then
+          token.phon = token.phon .. "j"
+        end
       end
 
       ::continue::
