@@ -15,45 +15,16 @@ return {
   run = function(tokens, context)
     local dv = S.DIALECTS[context.dialect] or S.DIALECTS.connacht
     if not dv.anticipatory_raising then return tokens end
-    if not context.vowel_count or context.vowel_count < 2 then return tokens end
-
-    for i, token in ipairs(tokens) do
-      if token.type ~= "vowel" then goto continue end
-      -- Skip if already modified by a prior pass (e.g. r_lowering, vowel_gradation)
-      if token.source ~= "lexeme" then goto continue end
-      local ortho = token.ortho
-      if ortho ~= "a" and ortho ~= "o" then goto continue end
-
-      -- Check: is this vowel in the first syllable?
-      -- Scan backwards: if there's another vowel before this, not first syllable
-      local is_first = true
-      for j = i - 1, 1, -1 do
-        if tokens[j].type == "vowel" or tokens[j].type == "boundary" then
-          is_first = false; break
-        end
-      end
-      if not is_first then goto continue end
-
-      -- Check if a later vowel orthographically contains a long á
-      -- (maps to long [aː] after vowel resolution). Check for á, ái, etc.
-      for j = i + 1, #tokens do
-        if tokens[j].type == "vowel" then
-          local o = tokens[j].ortho
-          if o and (o == "á" or o == "ái" or o == "aí") then
-            if ortho == "a" then
-              token.phon = "ɪ"
-              token.source = "anticipatory_raising"
-            elseif ortho == "o" then
-              token.phon = "ʊ"
-              token.source = "anticipatory_raising"
-            end
-            break
-          end
-        end
-      end
-
-      ::continue::
-    end
+    -- Disabled: measured against the 6593-word Connacht benchmark, this rule
+    -- raises the first-syllable vowel (a->I, o->U) in 141 candidate words but
+    -- matches the expected IPA in only 11 of them; the other 130 expect an
+    -- unraised vowel (boscai->bOs ki:, bothan->bOhA:n, Poncan->pONkA:n,
+    -- scolaireacht->skOl..., balle->bAl i:). Disabling is net +103 exact
+    -- (110 improved, 7 regressed). The 7 regressions (Tomas, droman, troman,
+    -- amhain, fomhuirean, gabhaltas, Tomaisin) are lexically unpredictable --
+    -- even the o+m/n+a context splits 4/4 -- so no narrow guard recovers them
+    -- cleanly. The original raising body is in git history (commit bca02b6);
+    -- re-enable only with a lexical list.
     return tokens
   end,
 }

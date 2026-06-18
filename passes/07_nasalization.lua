@@ -28,8 +28,11 @@ return {
           tokens[i + 2] and tokens[i + 2].type == "cons" and tokens[i + 2].ortho == "n"
 
       if is_broad_nasal or is_geminate_n then
-        if ortho == "o" or ortho == "ó" or ortho == "u" then
-          token.phon = "uː"
+        -- Only SHORT o/u raise before geminate nasals (Hickey: o->u before
+        -- nasals). Long ó/ú already carry length and keep it (dhónna->oːn,
+        -- not ʊn). brúnn keeps uː.
+        if ortho == "o" or ortho == "u" then
+          token.phon = "ʊ"
         end
       end
 
