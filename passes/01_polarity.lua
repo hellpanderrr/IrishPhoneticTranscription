@@ -52,6 +52,18 @@ return {
       local polarity = S.vowel_polarity(next_vowel)
       if polarity == nil then polarity = S.vowel_polarity(prev_vowel, "prev") end
 
+      -- Narrow exception: a final lenited fricative (th/sh/fh/ch/ph) following
+      -- oi/ui should stay BROAD. The slender trace of these digraphs normally
+      -- propagates to a following consonant, but a final silent/quiet lenited
+      -- fricative historically colors the vowel broadly (croith /kɾˠɔh/,
+      -- sruith /sɾˠʊh/). Letting it go slender front-raises the vowel.
+      if token.is_mutated and i == #tokens and not next_vowel and prev_vowel and
+         (prev_vowel.ortho == "oi" or prev_vowel.ortho == "ui") and
+         (token.ortho == "th" or token.ortho == "sh" or token.ortho == "fh" or
+          token.ortho == "ch" or token.ortho == "ph") then
+        polarity = false
+      end
+
       -- Sonorant polarity: when no vowel context, check next consonant
       local sonorants = { l = true, n = true, r = true, m = true }
       if sonorants[token.ortho] and not polarity then
