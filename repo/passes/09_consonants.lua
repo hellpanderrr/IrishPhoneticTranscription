@@ -48,12 +48,26 @@ return {
           token.phon = "x"
         end
       elseif token.ortho == "sh" then
-        token.phon = "h"
+        local word_initial = (prev == nil) or (prev.type == "boundary")
+        local nxt = tokens[i + 1]
+        -- Word-initial slender sh -> ç before back rounded vowel (eo).
+        if word_initial and token.palatal == true and nxt and nxt.type == "vowel" and nxt.ortho == "eo" then
+          token.phon = "\xc3\xa7"  -- ç
+        else
+          token.phon = "h"
+        end
       elseif token.ortho == "th" then
         if i == #tokens then
           token.phon = ""
         else
-          token.phon = "h"
+          local word_initial = (prev == nil) or (prev.type == "boundary")
+          local nxt = tokens[i + 1]
+          -- Word-initial slender th -> ç before back rounded vowel (eo).
+          if word_initial and token.palatal == true and nxt and nxt.type == "vowel" and nxt.ortho == "eo" then
+            token.phon = "\xc3\xa7"  -- ç
+          else
+            token.phon = "h"
+          end
         end
       elseif token.ortho == "dh" or token.ortho == "gh" then
         local next = tokens[i + 1]
