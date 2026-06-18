@@ -167,8 +167,13 @@ function _shared.vowel_polarity(vowel, direction)
         if direction == "prev" then return false else return true end
     end
     if vowel.ortho == "ao" or
-       vowel.ortho == "ua" or vowel.ortho == "oi" or
-       vowel.ortho == "ui" then return false end
+       vowel.ortho == "ua" then return false end
+    -- oi/ui end in i (slender) but start with a broad vowel: like ai, they
+    -- propagate slender to a FOLLOWING consonant (prev) and broad to a
+    -- PRECEDING consonant (next/default).
+    if vowel.ortho == "oi" or vowel.ortho == "ui" then
+        return direction == "prev" and true or false
+    end
     if vowel.ortho == "aoi" or vowel.ortho == "aí" or vowel.ortho == "ái" then
         if direction == "prev" then return true else return false end
     end
