@@ -20,7 +20,29 @@ return {
         if token.palatal == true then
           token.phon = "vʲ"
         elseif token.palatal == false then
-          token.phon = "w"
+          -- Word-initial broad bh/mh before a consonant cluster: historically /vˠ/
+          -- in Connacht before broad sonorant (r/l) + short vowel "a" (not "ai"),
+          -- or before "n". Otherwise /w/ before vowels and other contexts.
+          local word_initial = (prev == nil) or (prev.type == "boundary")
+          if word_initial then
+            local nxt = tokens[i + 1]
+            if nxt and nxt.type == "cons" and nxt.ortho == "n" then
+              token.phon = "vˠ"
+            elseif nxt and nxt.type == "cons" and (nxt.ortho == "r" or nxt.ortho == "l") then
+              -- Check the vowel after the sonorant: short "a" (not "ai") -> vˠ
+              local vowel_after = tokens[i + 2]
+              if vowel_after and vowel_after.type == "vowel" and
+                 vowel_after.ortho == "a" then
+                token.phon = "vˠ"
+              else
+                token.phon = "w"
+              end
+            else
+              token.phon = "w"
+            end
+          else
+            token.phon = "w"
+          end
         else
           token.phon = "vˠ"
         end

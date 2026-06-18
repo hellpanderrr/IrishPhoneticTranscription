@@ -50,6 +50,42 @@ return {
           end
           table.insert(new_tokens, epenthetic)
         end
+
+      -- Also handle l+bh/mh cluster: insert epenthetic schwa and change bh/mh -> vˠ/vʲ
+      -- e.g. dealbh -> dʲalˠəvˠ, colbha -> kɔlˠəvˠə
+      -- Only when bh/mh is word-final or followed by the final vowel (no more consonants after).
+      elseif tokens[i] and tokens[i].ortho == "l" and tokens[i + 1] and
+             (tokens[i + 1].ortho == "bh" or tokens[i + 1].ortho == "mh") then
+        local prev_vowel = S.find_preceding_vowel(tokens, i)
+        -- Check that bh/mh is word-final or followed only by a final vowel
+        local bh_idx = i + 1
+        local after_bh = tokens[bh_idx + 1]
+        local is_final = after_bh == nil or after_bh.type == "boundary"
+        local is_final_vowel = after_bh and after_bh.type == "vowel" and
+          S.is_short_vowel(after_bh) and
+          (tokens[bh_idx + 2] == nil or tokens[bh_idx + 2].type == "boundary")
+        -- Condition: preceding vowel is short AND bh/mh is at word end or before final vowel
+        if prev_vowel and S.is_short_vowel(prev_vowel) and (is_final or is_final_vowel) then
+          -- Insert epenthetic schwa
+          local epenthetic = S.clone_token(tokens[i])
+          epenthetic.type = "vowel"
+          epenthetic.phon = "ə"
+          epenthetic.is_epenthetic = true
+          epenthetic.stress = false
+          epenthetic.source = "epenthesis"
+          if tokens[i].palatal == true then
+            epenthetic.ortho = "i"
+          else
+            epenthetic.ortho = "a"
+          end
+          table.insert(new_tokens, epenthetic)
+          -- Change bh/mh from w to vˠ (broad) or vʲ (slender)
+          if tokens[i + 1].palatal == true then
+            tokens[i + 1].phon = "vʲ"
+          else
+            tokens[i + 1].phon = "vˠ"
+          end
+        end
       end
 
       i = i + 1
