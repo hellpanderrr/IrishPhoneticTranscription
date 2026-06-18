@@ -175,7 +175,24 @@ return {
         if prev.palatal == true then
           if token.phon == "ə" then token.phon = "ɪ" end
         elseif prev.palatal == false then
-          if token.phon == "ɪ" and not token.stress then token.phon = "ə" end
+          -- Don't back an ɪ to ə when the following consonant is slender and
+          -- word-final: the slender offglide survives a broad onset
+          -- (fuil /fˠɪlʲ/, duit /d̪ˠɪtʲ/, muic /mˠɪc/, muid /mˠɪdʲ/).
+          if token.phon == "ɪ" and not token.stress then
+            local keep_i = false
+            if next and next.type == "cons" and next.palatal == true and next.phon ~= "" then
+              local wf = true
+              for j = i + 2, #tokens do
+                local t = tokens[j]
+                if t.type == "boundary" then break end
+                if (t.type == "cons" or t.type == "vowel") and t.phon and t.phon ~= "" then
+                  wf = false; break
+                end
+              end
+              if wf then keep_i = true end
+            end
+            if not keep_i then token.phon = "ə" end
+          end
         end
       end
 
