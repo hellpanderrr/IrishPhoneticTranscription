@@ -19,6 +19,23 @@ return {
       local next = tokens[i + 1]
       local prev = tokens[i - 1]
 
+      -- Stressed 'io' immediately followed by 'm' collapses to [ʊ] (Summary
+      -- Ch.1 5.2.3: /ʊ/ from <io> in stressed syllable, e.g. iomarca,
+      -- piocadh). Covers the iom- prefix (iomlan, iompar, iomra, iomrall,
+      -- iomad, iomaire, iomas, hiomlan) and liom- (liomog). The following o
+      -- is silenced. Does not apply when stress is non-initial (iomanaiocht
+      -- -> ə'mɑːn..., i is unstressed) -- guarded by token.stress on the i.
+      if ortho == "i" and token.stress and
+         next and next.type == "vowel" and next.ortho == "o" and
+         tokens[i + 2] and tokens[i + 2].type == "cons" and tokens[i + 2].ortho == "m" then
+        token.phon = "\xca\x8a"  -- ʊ
+        token.source = "io_m_collapse"
+        next.phon = ""
+        next.source = "io_m_collapse"
+        next.is_epenthetic = true  -- keep pass-10 need_resolve from re-resolving o
+        goto continue
+      end
+
       -- Check if this vowel is the first element of a VV pair (split digraph).
       local is_digraph_first = next and next.type == "vowel"
 
