@@ -78,6 +78,23 @@ return {
         end
       end
 
+      -- Word-final unstressed ɛ after a slender palatal stop (c, ɟ):
+      -- keep ɪ instead of reducing to ə. The slender offglide survives before
+      -- these consonants (glice /ɟlʲɪcɪ/, gaige /ɡaɟɪ/). Does NOT apply to
+      -- th/ch (tithe, síthe, cíche want ə) — those are too mixed.
+      -- Only applies to a TRUE word-final vowel (next token is boundary/end).
+      if phon == "ɛ" then
+        local prev_t = tokens[i - 1]
+        local nxt = tokens[i + 1]
+        local word_final = (nxt == nil) or (nxt.type == "boundary")
+        if word_final and prev_t and prev_t.type == "cons" and
+           prev_t.palatal == true and
+           (prev_t.phon == "c" or prev_t.phon == "ɟ") then
+          token.phon = "ɪ"
+          goto continue
+        end
+      end
+
       if SHORT_VOWELS[phon] then
         token.phon = "ə"
       end
