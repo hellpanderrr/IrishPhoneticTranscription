@@ -144,6 +144,15 @@ return {
           token.phon = S.palatal_consonant(token, "lʲ", "lˠ")
         end
       elseif token.ortho == "r" then
+        -- Connacht: r before a following s/t is broad ɾˠ regardless of vowel
+        -- context (rt/rs resist palatalization). Seoirse /ʃoːɾˠʃə/, cuirtear
+        -- /kɪɾˠtʲəɾˠ/, abairt /abˠəɾˠtʲ/, Máirtín /mˠɑːɾˠtʲiːnʲ/.
+        local next_c = tokens[i + 1]
+        local force_broad = next_c and next_c.type == "cons" and
+          (next_c.ortho == "s" or next_c.ortho == "t")
+        if force_broad then
+          token.palatal = false
+        end
         if token.is_voiceless then
           token.phon = S.palatal_consonant(token, "r̥", "ɾˠ")
         else
