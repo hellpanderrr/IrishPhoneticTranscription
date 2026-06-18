@@ -95,6 +95,27 @@ return {
         end
       end
 
+      -- Unstressed 'ui' before a word-final slender consonant: keep ɪ, not ə.
+      -- The ui digraph ends in slender i; before a final slender cons the
+      -- offglide survives (cruit /kɾˠɪtʲ/, diúraic /dʲuːɾˠɪc/).
+      if token.ortho == "ui" then
+        local nxt = tokens[i + 1]
+        if nxt and nxt.type == "cons" and nxt.palatal == true and nxt.phon ~= "" then
+          local word_final_cons = true
+          for j = i + 2, #tokens do
+            local t = tokens[j]
+            if t.type == "boundary" then break end
+            if (t.type == "cons" or t.type == "vowel") and t.phon and t.phon ~= "" then
+              word_final_cons = false; break
+            end
+          end
+          if word_final_cons then
+            token.phon = "ɪ"
+            goto continue
+          end
+        end
+      end
+
       if SHORT_VOWELS[phon] then
         token.phon = "ə"
       end
