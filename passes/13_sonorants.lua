@@ -102,6 +102,45 @@ return {
       ::next_son::
     end
 
+    -- Phase 1b: Strip dental from word-final broad n when preceding vowel is
+    -- LONG and UNSTRESSED. Distribution: ~125 words want nˠ vs ~93 want n̪ˠ
+    -- in this context (net +41 exact). Word-final = no following non-boundary
+    -- token with non-empty phon.
+    for i = 1, #tokens do
+      local token = tokens[i]
+      if token.type ~= "cons" then goto next_strip end
+      if token.ortho ~= "n" then goto next_strip end
+      if not token.phon or token.phon == "" then goto next_strip end
+      if not has_dental(token.phon) then goto next_strip end
+
+      local is_final = true
+      for j = i + 1, #tokens do
+        local t = tokens[j]
+        if t.type == "boundary" then break end
+        if (t.type == "cons" or t.type == "vowel") and t.phon and t.phon ~= "" then
+          is_final = false; break
+        end
+      end
+      if not is_final then goto next_strip end
+
+      local prev_v
+      for j = i - 1, 1, -1 do
+        if tokens[j].type == "vowel" then prev_v = tokens[j]; break end
+        if tokens[j].type == "boundary" then break end
+        if tokens[j].type == "cons" and tokens[j].phon and tokens[j].phon ~= "" then break end
+      end
+      if not prev_v then goto next_strip end
+
+      local pv_phon = prev_v.phon or ""
+      local is_long = pv_phon:find("ː", 1, true) ~= nil
+      local is_stressed = prev_v.stress or false
+      if is_long and not is_stressed then
+        token.phon = "nˠ"
+      end
+
+      ::next_strip::
+    end
+
     -- Phase 2: Handle consecutive identical sonorants (geminate ll, nn, rr, mm).
     for i = 1, #tokens - 1 do
       local first = tokens[i]
