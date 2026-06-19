@@ -67,21 +67,9 @@ return {
         goto next_son
       end
 
-      -- Determine broad or slender from preceding vowel
-      local is_broad = true
-      for j = i - 1, 1, -1 do
-        if tokens[j].type == "vowel" then
-          local vp = tokens[j].phon
-          if vp and vp ~= "" and vp ~= "ə" then
-            is_broad = not is_front_vowel_phon(vp)
-          end
-          break
-        elseif tokens[j].type == "cons" and
-               tokens[j].phon and tokens[j].phon ~= "" then
-          break
-        end
-      end
-
+      -- Determine broad or slender from token palatal flag (pass 01)
+      local is_broad = not token.palatal
+      if token.broad ~= nil then is_broad = token.broad end
       -- Check what follows
       local followed_by_cons = next_t and next_t.type == "cons" and
         next_t.phon and next_t.phon ~= "" and
@@ -151,8 +139,7 @@ return {
          first.ortho ~= "r" and first.ortho ~= "m" then goto next_pair end
 
       local prev_vowel = tokens[i - 1]
-      local is_slender = prev_vowel and prev_vowel.type == "vowel" and
-        is_front_vowel_phon(prev_vowel.phon)
+      local is_slender = first.palatal == true
 
       -- Determine what follows the entire geminate pair
       local after_pair = tokens[i + 2]

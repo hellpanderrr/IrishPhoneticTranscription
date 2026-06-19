@@ -10,6 +10,26 @@ local REDUCTION_EXCEPTIONS = {
   ar = true, as = true, im = true,
 }
 
+-- Words where word-final -e after c/ɟ should reduce to ə, NOT stay as ɪ.
+-- Most -e after slender c/ɟ keeps ɪ (glice, gaige, pice, lice), but these
+-- lexical exceptions follow regular reduction to ə.
+local FINAL_E_C_G_EXCEPTIONS = {
+  ["farraige"] = true, ["fharraige"] = true, ["bhfarraige"] = true,
+  ["peige"] = true, ["boige"] = true,
+  ["craice"] = true, ["circe"] = true, ["coirce"] = true,
+  ["chirce"] = true, ["déirce"] = true,
+  ["uisce"] = true,
+  ["tuige"] = true,
+  ["cailce"] = true, ["lige"] = true,
+}
+
+-- Words where ɪ after c/ɟ (from vowel resolution) should still reduce to ə.
+-- The after-c/ɟ guard normally protects ɪ in this context, but these words
+-- need regular reduction (airgid → airged, eiscir → eiscər).
+local AFTER_C_G_GUARD_EXCEPTIONS = {
+  ["airgid"] = true, ["eiscir"] = true,
+}
+
 local SHORT_VOWELS = { ["a"] = true, ["e"] = true, ["i"] = true, ["o"] = true, ["u"] = true,
                        ["ɛ"] = true, ["ɪ"] = true, ["ɔ"] = true, ["ʊ"] = true }
 
@@ -69,12 +89,17 @@ return {
         if has_later_vowel then goto continue end
       end
 
-      -- Don't reduce ɪ after palatal c/ɟ (preserves Irish slender vowel quality)
+      -- Don't reduce ɪ after palatal c/ɟ (preserves Irish slender vowel quality).
+      -- A few lexical exceptions (airgid, eiscir) need regular reduction.
       if phon == "ɪ" then
         local prev_t = tokens[i - 1]
         if prev_t and prev_t.type == "cons" and
            (prev_t.phon == "c" or prev_t.phon == "ɟ") then
-          goto continue
+          local exc = false
+          if context.word_ortho then
+            if AFTER_C_G_GUARD_EXCEPTIONS[context.word_ortho:lower()] then exc = true end
+          end
+          if not exc then goto continue end
         end
       end
 
@@ -95,8 +120,8 @@ return {
 
       -- Word-final unstressed ɛ after a slender palatal stop (c, ɟ):
       -- keep ɪ instead of reducing to ə. The slender offglide survives before
-      -- these consonants (glice /ɟlʲɪcɪ/, gaige /ɡaɟɪ/). Does NOT apply to
-      -- th/ch (tithe, síthe, cíche want ə) — those are too mixed.
+      -- these consonants (glice /ɟlʲɪcɪ/, gaige /ɡaɟɪ/).
+      -- Some lexical exceptions (farraige, Peige, uisce, etc.) need ə instead.
       -- Only applies to a TRUE word-final vowel (next token is boundary/end).
       if phon == "ɛ" then
         local prev_t = tokens[i - 1]
@@ -105,8 +130,16 @@ return {
         if word_final and prev_t and prev_t.type == "cons" and
            prev_t.palatal == true and
            (prev_t.phon == "c" or prev_t.phon == "ɟ") then
-          token.phon = "ɪ"
-          goto continue
+          -- Check lexical exceptions (lowercased to match table keys)
+          local exc = false
+          if context.word_ortho then
+            local w = context.word_ortho:lower()
+            if FINAL_E_C_G_EXCEPTIONS[w] then exc = true end
+          end
+          if not exc then
+            token.phon = "ɪ"
+            goto continue
+          end
         end
       end
 

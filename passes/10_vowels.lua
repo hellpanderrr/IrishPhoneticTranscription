@@ -155,6 +155,7 @@ return {
         end
       end
 
+
       -- Unstressed diphthong digraphs → short vowels so reduction can produce ə
       -- Skip if phon already resolved to a long vowel (e.g. word-final -aí → iː)
       if not token.stress and token.phon ~= "iː" and token.phon ~= "ɑːiː" then
@@ -217,6 +218,30 @@ return {
       if next and next.type == "cons" and next.ortho == "dh" then
         if ortho == "o" or ortho == "u" then
           token.phon = "uː"
+        end
+      end
+
+      -- Word-ending patterns: set no_reduce or restore_i on vowels that should survive reduction
+      if not token.stress then
+        local w = context.word_ortho
+        if w then
+          -- Ends in "ig" (orthographic -g): aisig, oifig, rainig
+          if w:match("[^r]ig$") and next and next.type == "cons" and next.phon == "ɟ" then
+            token.restore_i = true
+          end
+          -- Ends in "aic": Afraic, aonraic, diuraic
+          if w:match("aic$") and ortho == "ai" and next and next.type == "cons" and next.phon == "c" then
+            token.phon = "ɪ"; token.no_reduce = true
+          end
+          -- Ends in "is" (consonant + is): Inis, Peirsis, Soirbis
+          if not w:match("[aeéiíoóuú]is$") and w:match("is$") and
+             ortho == "i" and next and next.type == "cons" and next.palatal == true then
+            token.restore_i = true
+          end
+          -- Contains "-aithe" (verbal adjective suffix): scealaithe, athruithe
+          if w:match("aithe$") and ortho == "ai" then
+            token.restore_i = true
+          end
         end
       end
 

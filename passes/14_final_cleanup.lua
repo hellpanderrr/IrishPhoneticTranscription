@@ -86,7 +86,15 @@ return {
       end
     end
 
-    -- Step 5: ch + s -> tʃ sandhi
+
+    -- Step 4b: Restore unstressed vowels from restore_i: ? back to ?
+    for _, token in ipairs(tokens) do
+      if token.restore_i and token.phon == "ə" then
+        token.phon = "ɪ"
+      end
+    end
+
+    -- Step 5: ch + s ->> tʃ sandhi
     for i = 1, #tokens - 1 do
       if tokens[i].phon == "x" and tokens[i + 1].ortho == "s" then
         tokens[i].phon = "tʃ"; tokens[i + 1].phon = ""
@@ -149,7 +157,32 @@ return {
       ::continue::
     end
 
-    -- Step 9: Function word overrides — replace ALL phonemes with hardcoded IPA.
+    -- Step 8b: Convert diphthong-final u to w before a following vowel.
+    -- When bh/mh vocalization produces "?u" before another vowel
+    -- (e.g. -abhair, -abhach), the u offglide should become w.
+    -- Must scan past silent tokens (vocalized bh/mh with empty phon) to
+    -- find the next real vowel token.
+    for i, token in ipairs(tokens) do
+      if token.type ~= "vowel" then goto uw_c end
+      local p = token.phon
+      if not p or p == "" then goto uw_c end
+      if #p > 1 and p:sub(-1) == "u" then
+        -- Scan forward past silent tokens to find next vowel
+        local nx = nil
+        for j = i + 1, #tokens do
+          local t = tokens[j]
+          if t.type == "vowel" then nx = t; break end
+          if t.type ~= "cons" then break end
+          if t.phon and t.phon ~= "" then break end  -- non-silent cons blocks
+        end
+        if nx and nx.phon and nx.phon ~= "" then
+          token.phon = p:sub(1,-2) .. "w"
+        end
+      end
+      ::uw_c::
+    end
+
+    -- Step 9: Function word overridess — replace ALL phonemes with hardcoded IPA.
     -- Must be the very last step so no further rules touch these tokens.
     -- Split tokens into word segments so function words inside multi-word phrases are caught.
     -- Track segment token-index ranges and the boundary that follows each segment
