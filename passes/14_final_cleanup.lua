@@ -94,6 +94,22 @@ return {
       end
     end
 
+    -- Step 4c: Lexical ɪ→i overrides (after reduction so pass 11 doesn't re-reduce)
+    -- Words where short i should be full i even in unstressed/monosyllabic positions.
+    -- Also handles u→palatal→ɪ and oi→m→ɪ cases.
+    if context.word_ortho then
+      local w = context.word_ortho:lower()
+      for _, token in ipairs(tokens) do
+        if token.phon == "ɪ" then
+          if w == "gaeilic" or w == "nis" or w == "minic" or
+             w == "cluife" or w == "cluifí" or
+             (w == "roimis" and token.ortho == "oi") then
+            token.phon = "i"
+          end
+        end
+      end
+    end
+
     -- Step 5: ch + s ->> tʃ sandhi
     for i = 1, #tokens - 1 do
       if tokens[i].phon == "x" and tokens[i + 1].ortho == "s" then

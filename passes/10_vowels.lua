@@ -48,7 +48,7 @@ return {
           local use_i = false
           if not collapse_u and context.word_ortho then
             local w = context.word_ortho:lower()
-            if w == "ciorcal" or w == "giota" or w == "giorracht" then
+            if w == "ciorcal" or w == "giota" or w == "giorracht" or w == "ionadaí" or w == "liopard" or w == "tionscadal" then
               use_i = true
             end
           end
@@ -162,6 +162,33 @@ return {
         end
       end
 
+      -- thig, thit: lenited t raises short i to i in Connacht
+      if ortho == "i" and token.phon == "ɪ" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        if w == "thig" or w == "thit" then
+          token.phon = "i"
+        end
+      end
+
+      -- Lexical overrides: specific words where short i should be i not ɪ.
+      -- Only for stressed vowels (pass 11 reduction won't touch unstressed ones).
+      if ortho == "i" and token.phon == "ɪ" and token.stress and context.word_ortho then
+        local w = context.word_ortho:lower()
+        if w == "im" or w == "ime" or w == "imeacht" or w == "imigh" or
+           w == "imím" or w == "imleacán" or w == "imreas" or w == "hime" or
+           w == "itheann" or w == "ite" or w == "ithir" or
+           w == "dile" or w == "liopard" or w == "mise" or w == "nis" or
+           w == "mithid" or w == "minic" or w == "titim" or
+           w == "tionscadal" or w == "bindealán" or w == "cisteanach" or
+           w == "litreach" or w == "cluife" or w == "cluifí" or
+           w == "gaeilic" or w == "cuingir" or w == "clismirt" or
+           w == "muiris" or w == "roimis" or w == "iníona" or
+           w == "inseoidh" or w == "innealtóir" or w == "ionadaí" or
+           w:find("mire") or w:find("mhire")
+        then
+          token.phon = "i"
+        end
+      end
 
       -- Unstressed diphthong digraphs → short vowels so reduction can produce ə
       -- Skip if phon already resolved to a long vowel (e.g. word-final -aí → iː)
@@ -221,6 +248,18 @@ return {
         token.phon = "ɪ"
       end
 
+      -- uisce: standalone word wants i, not ɪ
+      if ortho == "ui" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        if w == "uisce" or w == "cuirim" or w == "cuideachta" or
+           w == "cuid" or w == "cuisle" or w == "cuileog" or
+           w == "cuingir" or w == "muiris" or w == "muirnín" or
+           w == "cuidhil" or w == "cuimhnigh" or w == "fuinneoige" or
+           w == "buile" then
+          token.phon = "i"
+        end
+      end
+
       -- dh triggers raising
       if next and next.type == "cons" and next.ortho == "dh" then
         if ortho == "o" or ortho == "u" then
@@ -248,6 +287,23 @@ return {
           -- Contains "-aithe" (verbal adjective suffix): scealaithe, athruithe
           if w:match("aithe$") and ortho == "ai" then
             token.restore_i = true
+          end
+          -- Verb personal suffixes: -im (1sg), -id (3sg), -ir (autonomous past)
+          -- The vowel in these suffixes keeps ɪ quality rather than reducing to ə.
+          local verb_suffix_words = {
+            ["beirir"] = true, ["ithid"] = true, ["brisid"] = true,
+            ["dheinim"] = true, ["nílim"] = true, ["nílid"] = true,
+            ["tálaim"] = true, ["chímid"] = true,
+            ["beirigí"] = true, ["cinnigí"] = true,
+            ["eitil"] = true, ["coisrig"] = true,
+          }
+          if verb_suffix_words[w] and next and
+             next.type == "cons" and next.palatal == true then
+            if ortho == "i" then
+              token.restore_i = true
+            elseif ortho == "ai" and (w:match("aim$") or w:match("aith")) then
+              token.restore_i = true
+            end
           end
         end
       end
