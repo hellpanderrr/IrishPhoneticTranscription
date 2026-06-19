@@ -36,10 +36,11 @@ return {
         local prev_vowel = S.find_preceding_vowel(tokens, i)
         -- Condition: preceding vowel is stressed AND short
         if prev_vowel and prev_vowel.stress and S.is_short_vowel(prev_vowel) then
-          -- Insert epenthetic vowel matching the preceding consonant polarity
+          -- Insert epenthetic vowel (always ə initially)
+          -- Lexical overrides: feirge/deirge expect ɪ instead.
           local epenthetic = S.clone_token(tokens[i])
           epenthetic.type = "vowel"
-          epenthetic.phon = "ə"
+          epenthetic.phon = "\xc9\x99"  -- ə
           epenthetic.is_epenthetic = true
           epenthetic.stress = false
           epenthetic.source = "epenthesis"
@@ -47,6 +48,12 @@ return {
             epenthetic.ortho = "i"
           else
             epenthetic.ortho = "a"
+          end
+          if context.word_ortho and epenthetic.ortho == "i" then
+            local w = context.word_ortho:lower()
+            if w == "feirge" or w == "deirge" or w == "gairge" then
+              epenthetic.phon = "\xc9\xaa"  -- ɪ
+            end
           end
           table.insert(new_tokens, epenthetic)
         end
