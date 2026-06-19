@@ -94,27 +94,13 @@ return {
       local stress_index = S.vowel_token_index(seg)
       if not stress_index then goto next_seg end
 
-      -- Stress adjustments: move stress to start of onset cluster
-      if stress_index > 1 and seg[stress_index - 1].type == "cons" and
-         seg[stress_index - 2] and seg[stress_index - 2].type == "cons" and
-         (seg[stress_index - 1].ortho == "r" or seg[stress_index - 1].ortho == "l") then
-        -- Scan back through onset cluster to find the start
-        while stress_index > 1 and seg[stress_index - 1].type == "cons" do
-          stress_index = stress_index - 1
-        end
-      end
+      -- Stress stays on the vowel. render_output moves the stress mark to the
+      -- onset consonant for IPA rendering. Shifting to consonant here
+      -- causes incorrect vowel reduction (unstressed vowels get reduced to ə).
+      -- ae digraph: stress on a (vowel), not e (vowel)
       if seg[stress_index].ortho == "e" and stress_index > 1 and
-         seg[stress_index - 1].type == "cons" and
-         (seg[stress_index - 1].ortho == "g" or seg[stress_index - 1].ortho == "l") then
-        stress_index = stress_index - 1
-      elseif seg[stress_index].ortho == "e" and stress_index > 1 and
              seg[stress_index - 1].type == "vowel" and
              seg[stress_index - 1].ortho == "a" then
-        stress_index = stress_index - 1
-      end
-      if seg[stress_index].ortho == "a" and stress_index > 1 and
-         seg[stress_index - 1].type == "cons" and
-         seg[stress_index - 1].ortho == "g" then
         stress_index = stress_index - 1
       end
 
