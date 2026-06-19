@@ -1,5 +1,4 @@
 -- Pass #8: Vowel gradation before slender codas.
--- Before lt/rt -> [ɛ]
 -- Before slender ng -> [ɪ]
 -- Before slender nn -> [ɪ]
 
@@ -20,18 +19,9 @@ return {
       end
 
       local next = tokens[i + 1]
-      local next2 = tokens[i + 2]
-
-      -- Before lt/rt (slender coda pair)
-      if next and next.type == "cons" and next2 and next2.type == "cons" and
-         ((next.ortho == "l" and next2.ortho == "t") or
-          (next.ortho == "r" and next2.ortho == "t")) then
-        if token.ortho == "ai" or token.ortho == "a" then
-          token.phon = "ɛ"
-        end
 
       -- Before ng
-      elseif next and next.type == "cons" and next.ortho == "ng" then
+      if next and next.type == "cons" and next.ortho == "ng" then
         token.phon = "ɪ"
       end
 
