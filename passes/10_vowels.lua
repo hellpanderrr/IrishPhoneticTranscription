@@ -305,6 +305,47 @@ return {
               token.restore_i = true
             end
           end
+          -- Word-final unstressed -e after slender cons → keep ɪ
+          -- (specific words where reduction to ə would be wrong)
+          local final_e_keep_i = {
+            ["tithe"] = true, ["dtithe"] = true, ["thithe"] = true,
+            ["beiche"] = true, ["áitithe"] = true,
+          }
+          if final_e_keep_i[w] and ortho == "e" then
+            local nxt_t = tokens[i + 1]
+            local word_final = (nxt_t == nil) or (nxt_t.type == "boundary")
+            if word_final then
+              token.restore_i = true
+            end
+          end
+          -- Medial unstressed 'i' in specific words → keep ɪ
+          -- Handles split digraph residue (feirge, deirge) and other patterns.
+          if ortho == "i" and next and next.type == "cons" then
+            if w == "feirge" or w == "deirge" or w == "oifige" or
+               w == "cistine" or w == "cistineacha" or
+               w == "coisin" or
+               w == "airgeadúla" or w == "reiligiún" or
+               w == "tuairisc" or w == "tuairisceoir" or
+               w == "traidisiún"
+            then
+              token.restore_i = true
+            end
+          end
+          -- Medial unstressed 'ai' → keep ɪ (carraigín, féachaint, malaicít)
+          if ortho == "ai" and next and next.type == "cons" then
+            if w == "carraigín" or w == "féachaint" or w == "malaicít" or
+               w == "Sprantais"
+            then
+              token.restore_i = true
+            end
+          end
+          -- Unstressed 'ui' before slender cons → keep ɪ
+          -- Overrides over-reduction in athruithe, ciardhuibhe, etc.
+          if ortho == "ui" and next and next.type == "cons" and next.palatal == true then
+            if w == "athruithe" or w == "hathruithe" or w == "ciardhuibhe" then
+              token.restore_i = true
+            end
+          end
         end
       end
 
