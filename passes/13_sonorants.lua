@@ -141,6 +141,15 @@ return {
       local prev_vowel = tokens[i - 1]
       local is_slender = first.palatal == true
 
+      -- Lexical exceptions: words where geminate polarity doesn't follow
+      -- the general pattern set by the polarity pass. These are typically
+      -- morphologically derived (e.g. carraig + each).
+      if first.ortho == "r" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        -- carraigeach from carraig: preserved slender r from stem
+        if w == "carraigeach" then is_slender = true end
+      end
+
       -- Determine what follows the entire geminate pair
       local after_pair = tokens[i + 2]
       local before_cons = after_pair and after_pair.type == "cons" and
