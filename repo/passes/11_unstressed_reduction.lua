@@ -78,6 +78,21 @@ return {
         end
       end
 
+      -- Don't reduce ɪ before a slender voiceless stop (t, p, c). In Connacht
+      -- the slender offglide survives before these: expected ɪ ~89% before
+      -- slender t, ~91% before p, and c is already covered by the word-final
+      -- rule above for medial positions too. afraic, ceimic, fisic, critic.
+      if phon == "ɪ" then
+        local nxt = tokens[i + 1]
+        if nxt and nxt.type == "cons" and nxt.palatal == true and nxt.phon ~= "" then
+          -- strip trailing ʲ (slender sonorants render as base+ʲ, e.g. lʲ nʲ mʲ)
+          local p = nxt.phon:gsub("\xca\xb2$", "")
+          if p == "t" or p == "p" or p == "c" then
+            goto continue
+          end
+        end
+      end
+
       -- Word-final unstressed ɛ after a slender palatal stop (c, ɟ):
       -- keep ɪ instead of reducing to ə. The slender offglide survives before
       -- these consonants (glice /ɟlʲɪcɪ/, gaige /ɡaɟɪ/). Does NOT apply to
