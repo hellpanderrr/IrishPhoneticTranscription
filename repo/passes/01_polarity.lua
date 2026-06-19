@@ -32,6 +32,14 @@ return {
       end
     end
 
+    -- Word-initial r is always broad (ɾˠ) in Connacht, regardless of the
+    -- following vowel. rí /ɾˠiː/, ré /ɾˠeː/, reacht /ɾˠaxt̪ˠ/. Set this
+    -- before the main loop so it isn't overridden by the next-vowel scan.
+    if #tokens >= 1 and tokens[1].type == "cons" and tokens[1].ortho == "r"
+       and tokens[1].palatal == nil then
+      S.set_polarity(tokens[1], false)
+    end
+
     -- Main polarity assignment for all consonants
     for i, token in ipairs(tokens) do
       if token.type ~= "cons" then goto continue end
