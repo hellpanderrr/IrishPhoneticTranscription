@@ -32,24 +32,31 @@ return {
          tokens[i + 2] and tokens[i + 2].type == "cons" then
         local c2 = tokens[i + 2]
         local c3 = tokens[i + 3]
-        local collapse = false
+        local collapse_u = false
         if c2.ortho == "m" then
-          collapse = true
+          collapse_u = true
         elseif c2.ortho == "c" then
           -- tiocf- (c followed by f) or word-final pioc/phioc
-          collapse = (c3 and c3.type == "cons" and c3.ortho == "f") or
+          collapse_u = (c3 and c3.type == "cons" and c3.ortho == "f") or
                      (c3 == nil or c3.type == "boundary")
         elseif c2.ortho == "f" then
-          collapse = true
+          collapse_u = true
         elseif c2.ortho == "bh" then
-          collapse = true
+          collapse_u = true
         end
-        if collapse then
-          token.phon = "\xca\x8a"  -- ʊ
+        if collapse_u or c2.type == "cons" then
+          local use_i = false
+          if not collapse_u and context.word_ortho then
+            local w = context.word_ortho:lower()
+            if w == "ciorcal" or w == "giota" or w == "giorracht" then
+              use_i = true
+            end
+          end
+          token.phon = collapse_u and "\xca\x8a" or (use_i and "i" or "\xc9\xaa")
           token.source = "io_collapse"
           next.phon = ""
           next.source = "io_collapse"
-          next.is_epenthetic = true  -- keep pass-10 need_resolve from re-resolving o
+          next.is_epenthetic = true
           goto continue
         end
       end
