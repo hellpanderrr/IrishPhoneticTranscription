@@ -13,7 +13,7 @@
        and the 'ustring' library.
     2. To keep the output clean, it is recommended to set MINIMAL_DEBUG_ENABLED = true
        in your main G2P script before running this test.
-    3. Run from the command line: lua test_g2p.lua
+    3. Run from the command line: lua regression.lua
 ]]
 
 -- Require the G2P script as a library
@@ -194,6 +194,33 @@ local test_data = {
     { word = "Gaedhlaing", target = "ˈɡeːlɪɲ", comment = "" },
 }
 
+-- Creates a left-aligned, space-padded string by calculating the VISUAL width.
+-- It does this by removing common zero-width combining diacritics before measuring.
+-- This function is UTF-8 aware.
+-- @param str The string to pad.
+-- @param width The desired final column width.
+-- @return The padded string.
+--
+local function pad_utf8(str, width)
+    -- This pattern removes the most common zero-width combining marks found in
+    -- Irish orthography (fada) and the generated IPA (quality/stress markers).
+    -- Unicode ranges can be added for more completeness if needed.
+    local zero_width_diacritics = "[´`^~¨˛ˇˈˈ ̪´´´]" -- Includes fada, gravis, stress, quality markers etc.
+
+    local stripped_str = ugsub(str, zero_width_diacritics, "")
+    local visual_len = ulen(stripped_str)
+
+    if visual_len >= width then
+        return str
+    end
+    
+    local padding_needed = width - visual_len
+    -- Handle potential negative padding if stripping made it seem shorter than it is
+    if padding_needed < 0 then padding_needed = 0 end
+    
+    local padding = string.rep(" ", padding_needed)
+    return str .. padding
+end
 -- =============================================================================
 -- TEST RUNNER
 -- =============================================================================
@@ -209,13 +236,25 @@ print("\n--- Running Irish G2P Regression Test ---\n")
 print(string.format("%-20s | %-25s | %-25s | %s", "Word", "Expected IPA", "Generated IPA", "Distance"))
 print(string.rep("-", 80))
 
+-- Column widths for manual formatting
+local COL_WIDTH_WORD = 20
+local COL_WIDTH_EXPECTED = 30 -- Increased width to accommodate long IPA
+local COL_WIDTH_GENERATED = 30 -- Increased width to accommodate long IPA
+
+print("\n--- Running Irish G2P Regression Test ---\n")
+-- Print a manually formatted header
+local header = pad_utf8("Word", COL_WIDTH_WORD) .. " | " ..
+               pad_utf8("Expected IPA", COL_WIDTH_EXPECTED) .. " | " ..
+               pad_utf8("Generated IPA", COL_WIDTH_GENERATED) .. " | " ..
+               "Distance"
+print(header)
+print(string.rep("-", ulen(header) + 2)) -- Use ulen for accurate line length
+
 for _, test_case in ipairs(test_data) do
     local word = test_case.word
     local expected_ipa = test_case.target
 
     local generated_ipa = irishPhonetics.transcribe(word)
-
-    
 
     local normalized_expected = ugsub(expected_ipa, "ˈ", "")
     local normalized_generated = ugsub(generated_ipa, "ˈ", "")
@@ -223,14 +262,21 @@ for _, test_case in ipairs(test_data) do
     local distance = levenshtein(normalized_expected, normalized_generated)
     total_distance = total_distance + distance
 
-    -- Store current result for comparison and saving
     current_results[word] = {
         ipa = generated_ipa,
         distance = distance,
         target = expected_ipa,
     }
 
-    print(string.format("%-20s | %-25s | %-25s | %d", word, expected_ipa, generated_ipa, distance))
+    -- THIS IS THE KEY CHANGE: Build the line using the new UTF-8 aware padding function
+    local line_parts = {}
+    table.insert(line_parts, pad_utf8(word, COL_WIDTH_WORD))
+    table.insert(line_parts, pad_utf8(expected_ipa, COL_WIDTH_EXPECTED))
+    table.insert(line_parts, pad_utf8(generated_ipa, COL_WIDTH_GENERATED))
+    table.insert(line_parts, string.format("%d", distance))
+
+    -- Join with a consistent separator for clean columns
+    print(table.concat(line_parts, " | "))
 end
 
 print(string.rep("-", 80))
