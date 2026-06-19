@@ -189,7 +189,22 @@ return {
       -- oi before palatal consonant: front to ɛ (not back ɔ)
       -- goilim → ɡɛlʲəmʲ, foide → fˠɛdʲə, coire → kɛɾʲə
       if ortho == "oi" and next and next.type == "cons" and next.palatal == true then
-        token.phon = "ɛ"
+        if next.ortho == "n" or next.ortho == "m" or next.ortho == "t" then
+          token.phon = "ɪ"
+        elseif (next.ortho == "b" or next.ortho == "p" or next.ortho == "d" or next.ortho == "g" or next.ortho == "c") then
+          -- Word-final: check nothing substantial follows
+          local wf = true
+          for j = i + 2, #tokens do
+            local t2 = tokens[j]
+            if t2.type == "boundary" then break end
+            if (t2.type == "cons" or t2.type == "vowel") and t2.phon and t2.phon ~= "" then
+              wf = false; break
+            end
+          end
+          if wf then token.phon = "ɪ" else token.phon = "ɛ" end
+        else
+          token.phon = "ɛ"
+        end
       end
 
       -- ui before palatal consonant: front to ɪ (not back ʊ)
