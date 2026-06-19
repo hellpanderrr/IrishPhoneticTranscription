@@ -14,7 +14,7 @@ local REDUCTION_EXCEPTIONS = {
 -- Most -e after slender c/ɟ keeps ɪ (glice, gaige, pice, lice), but these
 -- lexical exceptions follow regular reduction to ə.
 local FINAL_E_C_G_EXCEPTIONS = {
-  ["farraige"] = true, ["fharraige"] = true, ["bhfarraige"] = true,
+  ["farraige"] = true, ["bhfarraige"] = true,
   ["peige"] = true, ["boige"] = true,
   ["craice"] = true, ["circe"] = true, ["coirce"] = true,
   ["chirce"] = true, ["déirce"] = true,
