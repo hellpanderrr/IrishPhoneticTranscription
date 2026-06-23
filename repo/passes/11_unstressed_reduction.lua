@@ -21,6 +21,7 @@ local FINAL_E_C_G_EXCEPTIONS = {
   ["uisce"] = true,
   ["tuige"] = true,
   ["cailce"] = true, ["lige"] = true,
+	  ["gairge"] = true,
 }
 
 -- Words where ɪ after c/ɟ (from vowel resolution) should still reduce to ə.
@@ -28,6 +29,7 @@ local FINAL_E_C_G_EXCEPTIONS = {
 -- need regular reduction (airgid → airged, eiscir → eiscər).
 local AFTER_C_G_GUARD_EXCEPTIONS = {
   ["airgid"] = true, ["eiscir"] = true,
+	  ["feicim"] = true, ["fáiscim"] = true,
 }
 
 local SHORT_VOWELS = { ["a"] = true, ["e"] = true, ["i"] = true, ["o"] = true, ["u"] = true,
@@ -113,7 +115,13 @@ return {
           -- strip trailing ʲ (slender sonorants render as base+ʲ, e.g. lʲ nʲ mʲ)
           local p = nxt.phon:gsub("\xca\xb2$", "")
           if p == "t" or p == "p" or p == "c" then
-            goto continue
+            -- Lexical exceptions: words where ɪ should still reduce to ə
+            -- uiliteoir: second vowel ɪ before slender t should be ə
+            local exc = false
+            if context.word_ortho then
+              if context.word_ortho:lower() == "uiliteoir" then exc = true end
+            end
+            if not exc then goto continue end
           end
         end
       end

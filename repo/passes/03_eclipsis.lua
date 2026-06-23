@@ -46,9 +46,15 @@ return {
         end
       end
 
-      -- Single-token ng at word start is eclipsis of g → ŋ
+      -- Single-token ng at word start: eclipsis of g → ŋ/ɲ depending on following vowel
       if t1.type == "cons" and t1.ortho == "ng" then
-        S.set_polarity(t1, false)
+        -- Scan forward to find the next vowel to determine polarity
+        local next_vowel = nil
+        for j = i + 1, #tokens do
+          if tokens[j].type == "vowel" then next_vowel = tokens[j]; break end
+        end
+        local polarity = next_vowel and S.vowel_polarity(next_vowel) or false
+        S.set_polarity(t1, polarity)
         i = i + 1
         goto continue
       end

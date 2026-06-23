@@ -52,14 +52,19 @@ return {
           -- Word-initial slender ch -> c,
           local prev_v = tokens[i - 1]
           if prev_v and prev_v.type == "vowel" then
-            -- Check ortho for front vowel: i, e, i, e
-            -- Use byte matching since these are multi-byte in UTF-8.
+            -- Check ortho for front vowel: simple i/e/í/é or digraphs
+            -- ending in i (ai/aoi/ei/oi/ui etc. - palatal offglide = front context)
             local b1 = (prev_v.ortho:byte(1) or 0)
             local b2 = (prev_v.ortho:byte(2) or 0)
             if b1 == 0x69 or b1 == 0x65 then
               token.phon = "\xc3\xa7"  -- i or e
             elseif b1 == 0xC3 and (b2 == 0xAD or b2 == 0xA9) then
-              token.phon = "\xc3\xa7"  -- i or e
+              token.phon = "\xc3\xa7"  -- í or é
+            elseif prev_v.ortho == "ai" or prev_v.ortho == "aoi" or
+                   prev_v.ortho == "ei" or prev_v.ortho == "oi" or
+                   prev_v.ortho == "ui" or prev_v.ortho == "aí" or
+                   prev_v.ortho == "oí" or prev_v.ortho == "uí" then
+              token.phon = "\xc3\xa7"  -- front-vowel digraphs
             else
               token.phon = "h"
             end
@@ -70,10 +75,29 @@ return {
           token.phon = "x"
         end
       elseif token.ortho == "sh" then
-        local word_initial = (prev == nil) or (prev.type == "boundary")
+        -- Connacht: slender sh before back rounded vowel -> ç.
+        -- shiúl /çuːlˠ/, Sheoirse /çoːɾˠʃə/
+        -- Otherwise: slender sh before front vowels -> h.
+        -- shé /heː/, shín /hiːnʲ/, ó shin /oː hɪnʲ/
         local nxt = tokens[i + 1]
-        -- Word-initial slender sh -> ç before back rounded vowel (eo).
-        if word_initial and token.palatal == true and nxt and nxt.type == "vowel" and nxt.ortho == "eo" then
+        local is_back_rounded = false
+        if token.palatal == true and nxt and nxt.type == "vowel" then
+          if nxt.ortho == "eo" or nxt.ortho == "eoi" then
+            is_back_rounded = true
+          elseif nxt.ortho == "u" or nxt.ortho == "ú" then
+            is_back_rounded = true
+          elseif nxt.ortho == "o" or nxt.ortho == "ó" then
+            is_back_rounded = true
+          elseif nxt.ortho == "i" then
+            -- Palatal marker "i" before back vowel (iú, io)
+            local nnxt = tokens[i + 2]
+            if nnxt and nnxt.type == "vowel" and
+               (nnxt.ortho == "ú" or nnxt.ortho == "u" or nnxt.ortho == "o" or nnxt.ortho == "ó") then
+              is_back_rounded = true
+            end
+          end
+        end
+        if is_back_rounded then
           token.phon = "\xc3\xa7"  -- ç
         else
           token.phon = "h"
@@ -152,6 +176,19 @@ return {
           (next_c.ortho == "s" or next_c.ortho == "t")
         if force_broad then
           token.palatal = false
+        end
+        -- Lexical override: r before slender s/t should be slender in specific words
+        if context.word_ortho and next_c and next_c.palatal == true then
+          local w = context.word_ortho:lower()
+          local slender_r_words = {
+            ["mairteoil"] = true, ["deirtí"] = true, ["abairtí"] = true,
+            peirsis = true, abairte = true, peirsil = true,
+            peirs = true, deirtear = true,
+            bhfuiltear = true, fuiltear = true, beirtear = true,
+          }
+          if slender_r_words[w] then
+            token.palatal = true
+          end
         end
         if token.is_voiceless then
           token.phon = S.palatal_consonant(token, "r̥", "ɾˠ")
