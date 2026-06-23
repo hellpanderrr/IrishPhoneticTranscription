@@ -251,15 +251,18 @@ return {
       if not next_t or next_t.ortho ~= "th" then goto dev_continue end
       if next_t.phon ~= "h" then goto dev_continue end
 
-      -- Devoice the consonant
-      if c.phon == "bˠ" then c.phon = "pˠ"
-      elseif c.phon == "bʲ" then c.phon = "pʲ"
-      elseif c.phon == "d̪ˠ" then c.phon = "t̪ˠ"
-      elseif c.phon == "dʲ" then c.phon = "tʲ"
-      elseif c.phon == "ɡ" then c.phon = "k"
-      elseif c.phon == "ɟ" then c.phon = "c"
+      -- Devoice the consonant: b+th→p, d+th→t, g+th→k, then silence th
+      -- Hickey §2.6.3: th assimilates to the voicing of the preceding consonant
+      -- and then the cluster is devoiced. Only fires when devoicing actually occurs.
+      local devoiced = false
+      if c.phon == "bˠ" then c.phon = "pˠ"; devoiced = true
+      elseif c.phon == "bʲ" then c.phon = "pʲ"; devoiced = true
+      elseif c.phon == "d̪ˠ" then c.phon = "t̪ˠ"; devoiced = true
+      elseif c.phon == "dʲ" then c.phon = "tʲ"; devoiced = true
+      elseif c.phon == "ɡ" then c.phon = "k"; devoiced = true
+      elseif c.phon == "ɟ" then c.phon = "c"; devoiced = true
       end
-      next_t.phon = ""
+      if devoiced then next_t.phon = "" end
 
       ::dev_continue::
     end
