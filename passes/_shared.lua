@@ -276,6 +276,7 @@ _shared.FUNCTION_WORDS_OVERRIDE = {
   ag  = { "ə", "ɡ" },    -- "at"
   ar  = { "ɛ", "ɾʲ" },   -- "on" (Connacht: palatal r, open e)
   ["do"]  = { "d̪ˠ", "ɔ" },    -- "to/for"
+  mo  = { "mˠ", "ə" },    -- "my"
   de  = { "dʲ", "ə" },   -- "of/from"
   na  = { "n̪ˠ", "ə" },    -- plural article
   sa  = { "sˠ", "ə" },    -- "in the" (sing.)
