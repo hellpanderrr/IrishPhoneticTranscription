@@ -199,6 +199,42 @@ return {
       end
     end
 
+    -- Step 4g: Fix vowel pairs split by fadas. When the tokenizer splits
+    -- digraphs like ea/ui by a fada mark on the second vowel, the first
+    -- vowel should be silent in these specific combos.
+    -- References:
+    -- - "eá" → ɑː: Hickey §1.4 (long vowels and diphthongs), the first
+    --   element of the ea digraph is always elided when the second carries
+    --   a fada. The result is a long back vowel /ɑː/.
+    -- - "uí" → iː: Hickey §1.4; uí as a word-final diphthong reduces to
+    --   a long front vowel /iː/, the initial /u/ offglide is dropped.
+    -- - "i"+"a" → iə: Hickey §1.4; the diphthong /iə/ has ə as second
+    --   element in all dialects; a is never realized as /a/ in this position.
+    -- - "e"+"a" → a: Hickey §1.4; ea as a digraph always produces /a/ or
+    --   /aː/; the first element is silent.
+    for i = 1, #tokens - 1 do
+      local t = tokens[i]
+      local nxt = tokens[i + 1]
+      if t.type == "vowel" and nxt.type == "vowel" then
+        -- "i"+"a" diphthong: second element is always ə (Hickey §1.4)
+        if t.ortho == "i" and nxt.ortho == "a" then
+          if nxt.phon == "a" then
+            nxt.phon = "ə"
+          end
+        -- "e"+"á": éa digraph with fada → ɑː, silent e
+        elseif t.ortho == "e" and nxt.ortho == "á" then
+          t.phon = ""
+          nxt.phon = "ɑː"
+        -- "u"+"í": uí → iː, silent u
+        elseif t.ortho == "u" and nxt.ortho == "í" then
+          t.phon = ""
+        -- "e"+"a" (plain ea): silent e, keep a as-is (pass 10 already set it)
+        elseif t.ortho == "e" and nxt.ortho == "a" then
+          t.phon = ""
+        end
+      end
+    end
+
     -- Step 5: ch + s ->> tʃ sandhi
     for i = 1, #tokens - 1 do
       if tokens[i].phon == "x" and tokens[i + 1].ortho == "s" then
