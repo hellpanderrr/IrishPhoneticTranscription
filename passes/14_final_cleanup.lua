@@ -69,8 +69,13 @@ return {
     -- coisrig, oifig, aisig, ráinig, Lá Fhéile Pádraig). Restricting to the
     -- schwa context keeps the legitimate devoicing while not touching full-vowel
     -- cases (ɪ, eː, oː, a, uː, uə, etc.) where ɟ is preserved.
+    -- Lexical exceptions: tháinig and easpaig keep ɟ despite schwa-final-ɪ context.
+    local KEEP_DEV = { ["tháinig"] = true, ["easpaig"] = true }
     for i = #tokens, 1, -1 do
       if tokens[i].phon == "ɟ" then
+        if context.word_ortho and KEEP_DEV[context.word_ortho:lower()] then
+          goto devoice_skip
+        end
         local is_final = true
         for j = i + 1, #tokens do
           if tokens[j].phon and tokens[j].phon ~= "" then is_final = false; break end
@@ -85,6 +90,7 @@ return {
         break
       end
     end
+    ::devoice_skip::
 
 
     -- Step 4b: Restore unstressed vowels from restore_i: ? back to ?
