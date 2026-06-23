@@ -131,8 +131,8 @@ return {
       elseif token.ortho == "bhf" then
         token.phon = "w"
       elseif token.ortho == "s" then
-        -- s before p/t/k: check polarity. If the following consonant
-        -- is broad, s stays broad. Only palatalize s before a slender p/t/k.
+        -- s before p/t/k/m: check polarity. If the following consonant
+        -- is broad, s stays broad. Only palatalize s before a slender p/t/k/m.
         local next = tokens[i + 1]
         if next and (next.ortho == "p" or next.ortho == "t" or next.ortho == "c") then
           if next.palatal == true then
@@ -140,6 +140,8 @@ return {
           else
             token.phon = "sˠ"
           end
+        elseif next and next.ortho == "m" then
+          token.phon = "sˠ"
         elseif token.palatal == true then
           token.phon = "ʃ"
         else
