@@ -373,6 +373,17 @@ return {
     -- word, secondary ˌ on the FIRST content word. Single content words keep
     -- their primary stress. Function words remain unstressed (set above).
     if #fw_segments > 1 then
+	-- Lexical stress override: these phrases keep default stress (primary on
+	-- first content word, no secondary) instead of the default reassignment.
+	-- These are typically noun+adjective compounds and name phrases.
+	local STRESS_OVERRIDE_FIRST_PRIMARY = {
+	  ["fianna fáil"] = true, ["madra uisce"] = true, ["uisce beatha"] = true,
+	  ["duine fásta"] = true, ["portaireacht bhéil"] = true,
+	  ["tuaisceart éireann"] = true, ["oide faoistine"] = true,
+	  ["pocaire gaoithe"] = true, ["imeartas focal"] = true,
+	}
+	
+
       -- Collect content-word segments (those not overridden as function words).
       local content_segs = {}
       for _, seg in ipairs(fw_segments) do
@@ -387,6 +398,19 @@ return {
         end
       end
 
+	-- Build phrase ortho for stress override lookup
+	local phrase_ortho = ""
+	for ci, seg in ipairs(content_segs) do
+	  local seg_ortho = ""
+	  for _, t in ipairs(seg) do
+	    if t.ortho then seg_ortho = seg_ortho .. t.ortho end
+	  end
+	  if ci > 1 then phrase_ortho = phrase_ortho .. " " end
+	  phrase_ortho = phrase_ortho .. ustring.lower(seg_ortho)
+	end
+
+	-- Skip stress reassignment for lexically-specified phrases (keep pass 02 default)
+	if not STRESS_OVERRIDE_FIRST_PRIMARY[phrase_ortho] then
       if #content_segs >= 2 then
         -- For each content segment, remember which vowel pass 02 stressed.
         local stressed_vowel = {}
@@ -442,6 +466,7 @@ return {
           end
           if last_v then last_v.stress = true end
         end
+      end
       end
     end
 
