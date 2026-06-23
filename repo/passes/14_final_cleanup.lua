@@ -168,6 +168,37 @@ return {
       end
     end
 
+    -- Step 4f: -igh endings: restore ə → iː (imperative verbs, adjectives).
+    -- Words ending in -igh have the final vowel reduced to ə by pass 11, but
+    -- benchmark expects iː (e.g. beirigh→ˈbʲɛɾʲiː, suigh→sˠiː, istigh→əʃˈtʲiː).
+    -- Not all -igh words want iː (Corcaigh→ˈkɔɾˠkə, brostaigh→ˈbˠɾˠʊsˠt̪ˠə).
+    local IGH_RESTORE = {
+      ["beirigh"]=true, ["bligh"]=true, ["bhligh"]=true,
+      ["suigh"]=true, ["shuigh"]=true, ["igh"]=true, ["nigh"]=true,
+      ["righ"]=true, ["ligh"]=true, ["tigh"]=true, ["thigh"]=true,
+      ["dtigh"]=true, ["dúigh"]=true, ["éiligh"]=true,
+      ["áirigh"]=true, ["doiligh"]=true, ["toiligh"]=true,
+      ["thoiligh"]=true, ["fraoigh"]=true, ["fhraoigh"]=true,
+      ["deasaigh"]=true, ["feisigh"]=true, ["bogaigh"]=true,
+      ["bunaigh"]=true, ["cuimhnigh"]=true, ["oibrigh"]=true,
+      ["Shligigh"]=true, ["istigh"]=true,
+      ["airbheartaigh"]=true, ["taoisigh"]=true, ["taobhaigh"]=true,
+      ["gairmiúlaigh"]=true, ["díghalraigh"]=true,
+      ["fréamhshamhaltaigh"]=true, ["Ó Cathasaigh"]=true,
+    }
+    if context.word_ortho then
+      local w = context.word_ortho:lower()
+      if IGH_RESTORE[w] then
+        local last_vowel = nil
+        for _, token in ipairs(tokens) do
+          if token.type == "vowel" then last_vowel = token end
+        end
+        if last_vowel and last_vowel.phon == "ə" then
+          last_vowel.phon = "iː"
+        end
+      end
+    end
+
     -- Step 5: ch + s ->> tʃ sandhi
     for i = 1, #tokens - 1 do
       if tokens[i].phon == "x" and tokens[i + 1].ortho == "s" then
