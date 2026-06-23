@@ -61,14 +61,7 @@ return {
       end
     end
 
-    -- Step 4: Restore unstressed vowels from restore_i (BEFORE devoicing).
-    for _, token in ipairs(tokens) do
-      if token.restore_i and token.phon == "ə" then
-        token.phon = "ɪ"
-      end
-    end
-
-    -- Step 4a: Unstressed final devoicing (Connacht/Ulster) — TIGHTENED
+    -- Step 4: Unstressed final devoicing (Connacht/Ulster) — TIGHTENED
     -- Devoice slender g [ɟ] -> [c] ONLY when preceded by schwa [ə]. Empirical
     -- analysis of the benchmark: of 39 slender-g-final words the rule fired on,
     -- 33 were over-devoiced (exp keeps ɟ: cúig, tréig, bróig, smig, etc.) and
@@ -93,6 +86,13 @@ return {
       end
     end
 
+
+    -- Step 4b: Restore unstressed vowels from restore_i: ? back to ?
+    for _, token in ipairs(tokens) do
+      if token.restore_i and token.phon == "ə" then
+        token.phon = "ɪ"
+      end
+    end
 
     -- Step 4c: Lexical ɪ→i overrides (after reduction so pass 11 doesn't re-reduce)
     -- Words where short i should be full i even in unstressed/monosyllabic positions.
@@ -157,24 +157,6 @@ return {
             if nxt and nxt.ortho == "m" then
               token.phon = "a"
             end
-          end
-        end
-      end
-    end
-
-
-    -- Step 4f: Lexical overrides for specific phonological patterns.
-    if context.word_ortho then
-      local w = context.word_ortho:lower()
-      for _, token in ipairs(tokens) do
-        if token.type == "vowel" then
-          -- dubhach: ubh vocalization gives əw, expected ʊw
-          if w == "dubhach" and token.ortho == "u" and token.phon == "əu" then
-            token.phon = "ʊu"
-          end
-          -- domlas: o before broad m raises to u in expected
-          if w == "domlas" and token.ortho == "o" and token.phon == "ɔ" then
-            token.phon = "u"
           end
         end
       end
@@ -402,34 +384,6 @@ return {
         end
       end
     end
-
-
-    -- Step 9c: Post-function-word overrides for specific multi-word phrases.
-    -- These override function word phons after Step 9 has applied the generic
-    -- FUNCTION_WORDS_OVERRIDE, for specific phrases needing different quality.
-    if context.word_ortho then
-      local ar_phrases = {
-        ["ar bís"] = true, ["ar nós"] = true, ["ar dtús"] = true,
-      }
-      local w = context.word_ortho:lower()
-      if ar_phrases[w] then
-        -- Override "ar" from ʜɾʲ to əɾˠ
-        -- The schwa+broad r matches expected Connacht for these formulaic phrases.
-        -- "ar" tokenizes as two tokens: "a" (vowel) and "r" (cons).
-        for _, token in ipairs(tokens) do
-          if token.ortho == "a" then
-            token.phon = "ə"
-          end
-          if token.ortho == "r" then
-            token.phon = "ɾˠ"
-            token.palatal = false
-            token.broad = true
-            token.slender = nil
-          end
-        end
-      end
-    end
-
 
     -- Step 10: Reassign stress in multi-word phrases.
     -- Empirically (analysis of 212 multi-word benchmark entries with ≥2 content
