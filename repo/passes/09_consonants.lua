@@ -199,7 +199,34 @@ return {
           token.phon = S.palatal_consonant(token, "ɾʲ", "ɾˠ")
         end
       elseif token.ortho == "f" then
-        token.phon = S.palatal_consonant(token, "fʲ", "fˠ")
+        -- Future-tense suffix -fidh/-faidh: f between consonant and (i|ai)+dh → context rule.
+        -- After obstruent (c/t/d/g/s/ch/x): f elides (∅). After sonorant (l/n/r): f → h.
+        local prev = tokens[i - 1]
+        local next1 = tokens[i + 1]
+        local next2 = tokens[i + 2]
+        -- Match -fidh (f + i + dh) or -faidh (f + ai + dh)
+        local suffix_f = prev and prev.type == "cons" and prev.phon and prev.phon ~= ""
+          and next1 and next1.type == "vowel"
+          and ((next1.ortho == "i" and next2 and next2.ortho == "dh")
+            or (next1.ortho == "ai" and next2 and next2.ortho == "dh"))
+        if suffix_f then
+          local pp = prev.phon
+          local is_obstruent = false
+          for ch in pp:gmatch(".") do
+            if ch == "k" or ch == "g" or ch == "p" or ch == "t"
+              or ch == "d" or ch == "b" or ch == "s" or ch == "x"
+              or ch == "f" or ch == "v" or ch == "h" or ch == "ʃ" then
+              is_obstruent = true; break
+            end
+          end
+          if is_obstruent then
+            token.phon = ""
+          else
+            token.phon = "h"
+          end
+        else
+          token.phon = S.palatal_consonant(token, "fʲ", "fˠ")
+        end
       elseif token.ortho == "b" then
         token.phon = S.palatal_consonant(token, "bʲ", "bˠ")
       elseif token.ortho == "m" then
