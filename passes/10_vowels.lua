@@ -276,6 +276,8 @@ return {
       end
 
       -- Lexical overrides: specific words where short i should be i not ɪ.
+      -- Hickey §3.2.1: stressed /i/ does NOT lower to [ɪ] in closed
+      -- syllables before geminate sonorants or in specific lexical items.
       -- Only for stressed vowels (pass 11 reduction won't touch unstressed ones).
       if ortho == "i" and token.phon == "ɪ" and token.stress and context.word_ortho then
         local w = context.word_ortho:lower()
@@ -289,6 +291,12 @@ return {
            w == "gaeilic" or w == "cuingir" or w == "clismirt" or
            w == "muiris" or w == "roimis" or w == "iníona" or
            w == "inseoidh" or w == "innealtóir" or w == "ionadaí" or
+           -- Geminate n/l cluster: i stays high before nn/ll (Hickey §3.2.1)
+           w == "inneach" or w == "oinniún" or
+           w == "glinne" or w == "ghlinne" or
+           w == "milliún" or w == "billiún" or
+           -- Geminate g cluster: i stays high before -ig (Hickey §3.2.1)
+           w == "smig" or
            w:find("mire") or w:find("mhire")
         then
           token.phon = "i"
