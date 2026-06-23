@@ -113,6 +113,20 @@ return {
 
     -- Step 4d: Keep unstressed "a" in specific loanwords.
     -- cileagram/chileagram: final "a" in "-gram" suffix should stay /a/
+    if context.word_ortho then
+      local w = context.word_ortho:lower()
+      for _, token in ipairs(tokens) do
+        if token.type == "vowel" and token.ortho == "oi" and token.phon == "ɪ" then
+          if w == "goid" or w == "ghoid" then
+            token.phon = "\xc9\x9e"
+            token.restore_i = nil
+          end
+        end
+      end
+    end
+
+    -- Step 4e: Keep unstressed "a" in specific loanwords.
+    -- cileagram/chileagram: final "a" in "-gram" suffix should stay /a/
     -- paragraf: final "a" in "-graf" suffix should stay /a/
     -- eiseachaid: "ea" in the 2nd syllable should be /a/ not /ə/
     if context.word_ortho then
