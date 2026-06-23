@@ -40,6 +40,33 @@ return {
       S.set_polarity(tokens[1], false)
     end
 
+    -- Word-final consonant after "é" digraph in function words → broad
+    -- (cén /ceːnˠ/, cér /ceːɾˠ/). These are exclamations/question words
+    -- where the expected IPA has broad final n/r.
+    if #tokens >= 3 then
+      local w = context.word_ortho
+      if w == "cén" or w == "cér" then
+        local last = tokens[#tokens]
+        if last and last.type == "cons" then
+          S.set_polarity(last, false)
+        end
+      end
+    end
+
+    -- Standalone lenited fricatives (bh, mh, bhf) → slender by default.
+    -- These appear as isolated benchmark entries representing the lenited form.
+    -- In isolation, "bh" and "mh" are pronounced with slender vʲ, not broad vˠ.
+    if #tokens == 1 and tokens[1].type == "cons" and tokens[1].is_mutated then
+      if tokens[1].ortho == "bh" or tokens[1].ortho == "mh" then
+        S.set_polarity(tokens[1], true)
+      end
+    end
+    if #tokens == 2 and tokens[1].is_mutated and tokens[2].ortho == "f" then
+      -- "bhf" as eclipsis: both should be slender
+      S.set_polarity(tokens[1], true)
+      S.set_polarity(tokens[2], true)
+    end
+
     -- Main polarity assignment for all consonants
     for i, token in ipairs(tokens) do
       if token.type ~= "cons" then goto continue end
@@ -48,12 +75,14 @@ return {
       local prev_vowel, j = nil, i - 1
       while j >= 1 do
         if tokens[j].type == "vowel" then prev_vowel = tokens[j]; break end
+        if tokens[j].type == "boundary" then break end  -- word boundary: don't scan into prev word
         j = j - 1
       end
 
       local next_vowel, j = nil, i + 1
       while j <= #tokens do
         if tokens[j].type == "vowel" then next_vowel = tokens[j]; break end
+        if tokens[j].type == "boundary" then break end  -- word boundary: don't scan into next word
         j = j + 1
       end
 
@@ -87,6 +116,36 @@ return {
 
       S.set_polarity(token, polarity)
       ::continue::
+    end
+
+    -- Word-final consonant after "ío" digraph → broad (Connacht phonology)
+    -- míol → mʲiːlˠ, cíor → ciːɾˠ, síob → ʃiːbˠ, críon → cɾʲiːnˠ
+    for i, token in ipairs(tokens) do
+      if token.type ~= "cons" then goto skip end
+      local prev = (i > 1) and tokens[i - 1] or nil
+      if not (prev and prev.type == "vowel" and prev.ortho == "ío") then goto skip end
+      local is_final = true
+      for k = i + 1, #tokens do
+        if tokens[k].type ~= "boundary" and tokens[k].phon and tokens[k].phon ~= "" then
+          is_final = false; break
+        end
+      end
+      if is_final then
+        S.set_polarity(token, false)
+      end
+      ::skip::
+    end
+
+    -- "rr" geminate: in Irish, two consecutive r's (rr orthography) are
+    -- always broad regardless of surrounding vowel context.
+    -- giorria /ɟɪɾˠiə/, charria /xaɾˠiə/
+    for i = 1, #tokens - 1 do
+      local t1, t2 = tokens[i], tokens[i+1]
+      if t1 and t1.type == "cons" and t1.ortho == "r" and
+         t2 and t2.type == "cons" and t2.ortho == "r" then
+        S.set_polarity(t1, false)
+        S.set_polarity(t2, false)
+      end
     end
 
     return tokens

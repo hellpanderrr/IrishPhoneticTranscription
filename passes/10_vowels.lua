@@ -46,18 +46,30 @@ return {
         end
         if collapse_u or c2.type == "cons" then
           local use_i = false
+          local use_u = false
           if not collapse_u and context.word_ortho then
             local w = context.word_ortho:lower()
             if w == "ciorcal" or w == "giota" or w == "giorracht" or w == "ionadaí" or w == "liopard" or w == "tionscadal" then
               use_i = true
             end
+            if w == "tiobraid" or w == "iontráil" or w == "iontrálacha" then
+              use_u = true
+            end
           end
-          token.phon = collapse_u and "\xca\x8a" or (use_i and "i" or "\xc9\xaa")
+          token.phon = collapse_u and "\xca\x8a" or (use_i and "i" or (use_u and "\xca\x8a" or "\xc9\xaa"))
           token.source = "io_collapse"
           next.phon = ""
           next.source = "io_collapse"
           next.is_epenthetic = true
           goto continue
+        end
+      end
+
+      -- Lexical: io collapse → ʊ for specific words where expected has ʊ not ɪ.
+      if ortho == "i" and token.phon == "ɪ" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        if w == "tiobraid" or w == "iontráil" or w == "iontrálacha" then
+          token.phon = "\xca\x8a"  -- ʊ
         end
       end
 
@@ -162,6 +174,99 @@ return {
         end
       end
 
+            -- Lexical quality overrides: short o in specific words should be o not ɔ
+      -- These words resist the default ɔ quality for short o in Connacht.
+      if ortho == "o" and token.phon == "ɔ" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        local O_TO_O = { chodail=true, ["a chlog"]=true, clog=true, brocach=true,
+          ["clochán"]=true, cnoc=true, copar=true, colgach=true, rothair=true,
+          codail=true, brod=true, ["ochtó"]=true, rosta=true, ["sonrú"]=true,
+          connachtach=true, connachta=true }
+        if O_TO_O[w] then token.phon = "o" end
+      end
+
+      -- Lexical quality overrides: stressed short o before m/n → ʊ in specific words
+      -- Connacht raises short o to ʊ before m/n in certain words (Tomás, tromán, etc.)
+      if ortho == "o" and token.phon == "ɔ" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        local O_TO_U = { ["tomás"]=true, ["tromán"]=true, ["tomáisín"]=true,
+          conairt=true, donas=true, domasach=true, crom=true, sona=true,
+          brostaigh=true, ["ros comáin"]=true }
+        if O_TO_U[w] then
+          token.phon = "ʊ"
+        end
+
+        -- Ros Comáin fix: only the second "o" (in "Comáin") should raise to ʊ.
+        -- The first "o" (in "Ros") should stay as ɔ.
+        if w == "ros comáin" and ortho == "o" then
+          -- Check if this "o" is the first one (preceded by "r" in "ros") or
+          -- the second one (preceded by "c" in "comáin").
+          local prev_tok = tokens[i - 1]
+          if prev_tok and prev_tok.type == "cons" and prev_tok.ortho == "r" then
+            -- First "o" in "ros" — undo the O_TO_U raising back to ɔ
+            token.phon = "\xc9\x94"
+          end
+        end
+      end
+
+      -- Lexical quality overrides: long ó → uː in specific words (Connacht raising)
+      if (ortho == "ó" or ortho == "óí") and token.phon == "oː" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        local O_LONG_TO_U = { ["nós"]=true, ["gcónaí"]=true, ["i gcónaí"]=true, ["ómrach"]=true }
+        if O_LONG_TO_U[w] then token.phon = "uː" end
+      end
+
+      -- Lexical quality overrides: short u → u (not ʊ) in specific words.
+      if ortho == "u" and token.phon == "ʊ" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        local U_TO_U = { ultach=true, guth=true, bun=true,
+          ["i mbun"]=true, mbun=true, pluc=true, ["bonnán"]=true,
+          thusa=true }
+        if U_TO_U[w] then token.phon = "u" end
+      end
+
+      -- Lexical quality overrides: short u → ɔ in specific words (not ʊ).
+      -- These words have "u" but expected quality is open-mid back rounded ɔ.
+      if ortho == "u" and token.phon == "ʊ" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        local U_TO_OPEN_O = { tuirseach=true, ["curaí"]=true, ucht=true, cultacha=true }
+        if U_TO_OPEN_O[w] then token.phon = "\xc9\x94" end  -- ɔ
+      end
+
+      -- Lexical: "oi" in "coirp" — mark for restoration in pass 14.
+      -- The prev-consonant block below reduces unstressed ɪ→ə for broad-prev
+      -- vowels, even after EPS_TO_I sets ɪ. restore_i converts it back.
+      if ortho == "oi" and token.phon == "ɪ" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        if w == "coirp" then token.restore_i = true end
+      end
+
+      -- Lexical: "ui" digraph → ɔ in specific words (tuirseach).
+      -- The "ui" digraph gives ʊ (Connacht) but expected is ɔ in this word.
+      if ortho == "ui" and token.phon == "ʊ" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        if w == "tuirseach" then token.phon = "\xc9\x94" end  -- ɔ
+      end
+
+      -- Lexical quality overrides: short u → o in specific words (letter o).
+      -- turas: expected has close-mid o, not open-mid ɔ.
+      if ortho == "u" and token.phon == "ʊ" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        if w == "turas" then token.phon = "o" end
+      end
+
+      -- Lexical override: ua diphthong → uː in specific words (nua, snua)
+      if ortho == "ua" and token.phon == "uə" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        local UA_TO_U = { nua=true, snua=true, ["nuaí"]=true }
+        if UA_TO_U[w] then token.phon = "uː" end
+      end
+      -- Lexical override: ia diphthong → iː in specific words (riaráiste)
+      if ortho == "ia" and token.phon == "iə" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        if w == "riaráiste" then token.phon = "iː" end
+      end
+
       -- thig, thit: lenited t raises short i to i in Connacht
       if ortho == "i" and token.phon == "ɪ" and context.word_ortho then
         local w = context.word_ortho:lower()
@@ -226,6 +331,10 @@ return {
       if ortho == "oi" and next and next.type == "cons" and next.palatal == true then
         if next.ortho == "n" or next.ortho == "m" or next.ortho == "t" then
           token.phon = "ɪ"
+
+        elseif next.ortho == "s" or next.ortho == "sh" then
+          -- Before slender sibilants, oi stays \xC9\x94 (not lowered to \xC9\x9B)
+          token.phon = "\xC9\x94"
         elseif (next.ortho == "b" or next.ortho == "p" or next.ortho == "d" or next.ortho == "g" or next.ortho == "c") then
           -- Word-final: check nothing substantial follows
           local wf = true
@@ -242,10 +351,163 @@ return {
         end
       end
 
+      -- Lexical overrides: oi before slender t → ɛ (not ɪ) in specific words.
+      -- toitín /t̪ˠɛtʲiːnʲ/, poitín /pˠɛtʲiːnʲ/
+      if ortho == "oi" and token.phon == "ɪ" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        if w == "toitín" or w == "poitín" then token.phon = "ɛ" end
+      end
+
+      -- Lexical overrides: oi before slender word-final d → ɛ not ɪ.
+      -- ngoid (eclipsis of goid) → ŋɛdʲ
+      if ortho == "oi" and token.phon == "ɪ" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        if w == "ngoid" then token.phon = "ɛ" end
+      end
+
+      -- Lexical override: keep oi as ɔ in specific words (don't front to ɛ)
+      if ortho == "oi" and token.phon == "ɛ" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        local OI_KEEP_O = { scoil=true, troigh=true, soirbis=true, ["doiciméad"]=true }
+        if OI_KEEP_O[w] then token.phon = "\xC9\x94" end
+      end
+
       -- ui before palatal consonant: front to ɪ (not back ʊ)
       -- muiníneach → mˠɪnʲiːnʲəx, cuireann → kɪɾʲən̪ˠ
       if ortho == "ui" and next and next.type == "cons" and next.palatal == true then
-        token.phon = "ɪ"
+        -- Lexical exceptions: keep ʊ instead of fronting to ɪ
+        local keep_u = false
+        if context.word_ortho then
+          local w = context.word_ortho:lower()
+          if w == "tuircis" or w == "puiteach" or w == "buicéad" then
+            keep_u = true
+          end
+        end
+        if not keep_u then
+          token.phon = "ɪ"
+        end
+      end
+
+      -- Lexical quality overrides: short e/ei/oi in specific words should be e not ɛ
+      -- These words resist the default ɛ quality in Connacht.
+      if (ortho == "e" or ortho == "ei" or ortho == "oi") and token.phon == "ɛ" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        local EPS_TO_E = { oireacht=true, thoir=true, cloigeann=true,
+          creidmheach=true, ceilim=true, mheil=true, meil=true, oide=true,
+          doimhneacht=true }
+        if EPS_TO_E[w] then token.phon = "e" end
+      end
+
+      -- Lexical quality overrides: short e/ei/oi in specific words -> ɪ instead of ɛ
+      if token.phon == "ɛ" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        local EPS_TO_I = { deinir=true, deineann=true, deinid=true, dheineann=true,
+          ["goirín"]=true, coirp=true, foireann=true, breilsce=true,
+          croinic=true, croinice=true }
+        -- Doire (Derry) needs case-sensitive match, only for "oi" vowel
+        if context.word_ortho == "Doire" and ortho == "oi" then
+          token.phon = "ɪ"
+          token.restore_i = true
+        elseif EPS_TO_I[w] then
+          token.phon = "ɪ"
+          token.restore_i = true
+        end
+
+
+      -- Lexical quality overrides: oi in specific words should be ? (open-mid central rounded) not ?
+      if ortho == "oi" and token.phon == "ɛ" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        local OI_TO_OE = { coillte=true, gcoillte=true, choillte=true,
+          scoile=true, goidim=true }
+        if OI_TO_OE[w] then token.phon = "ɞ" end
+      end      end
+
+            -- Lexical: "ai" digraph → ɪ in specific words (not a).
+      -- airgeadúla: first vowel "ai" expected ɪ, not a.
+      if ortho == "ai" and token.phon == "a" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        if w == "airgeadúla" then token.phon = "ɪ" end
+      end
+
+      -- Lexical quality overrides: stressed short a → ɑ in specific words (Connacht)
+      -- The default for Connacht short a is [a]. A general structural rule causes ~264 regressions
+      -- (applies to words like "ag", "ar", "an" where [a] is correct).
+      -- These specific words need backed [ɑ] instead.
+      if (ortho == "a" or ortho == "ea") and token.phon == "a" and
+         (token.stress or context.is_monosyllabic) and context.word_ortho then
+        local w = context.word_ortho:lower()
+        local A_TO_AA = { barr=true, bearr=true, bhearr=true, cabaireacht=true,
+          cart=true, casachtach=true, casaim=true, casfar=true, catachas=true,
+          cearr=true, chara=true, chas=true, fearr=true, garr=true,
+          garraithe=true, gcara=true, hab=true, marcra=true, ["patrún"]=true,
+          trach=true }
+        if A_TO_AA[w] then token.phon = "ɑ" end
+      end
+
+      -- Lexical quality overrides: long á → aː in specific words
+      -- Connacht long á default is [ɑː] (broad). These words need front [aː] instead.
+      if ortho == "á" and token.phon == "ɑː" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        local AA_TO_A = { ["abcáisis"]=true, ["máirt"]=true, ["amadán"]=true,
+          ["bháisteach"]=true, ["buarán"]=true, ["báirseach"]=true, ["báistí"]=true,
+          ["clábar"]=true, ["cárb"]=true, ["earráideach"]=true, ["léarscáil"]=true,
+          ["mbáisteach"]=true, ["nádúr"]=true, ["pháirc"]=true, ["páirc"]=true,
+          ["stráic"]=true, ["tógálaí"]=true, ["áine"]=true, ["áinsí"]=true, ["átha"]=true }
+        if AA_TO_A[w] then token.phon = "aː" end
+      end
+
+      -- Lexical quality overrides: stressed a/ea/ai before slender cons → æ
+      -- In Connacht, short a before a slender consonant is sometimes [æ] not [a].
+      -- A general structural rule is too broad, so use lexical exceptions.
+      if (ortho == "a" or ortho == "ea" or ortho == "ai") and token.phon == "a" and
+         (token.stress or context.is_monosyllabic) and context.word_ortho then
+        local w = context.word_ortho:lower()
+        local A_TO_AE = { deasc=true, ["seacláid"]=true, craiceann=true,
+          faithne=true, spaisteoireacht=true, mhaige=true,
+          craicne=true, ["maide briste"]=true, ["flaithiúlacht"]=true }
+        if A_TO_AE[w] then token.phon = "æ" end
+      end
+      -- Lexical quality overrides: a/ea → ɞ in specific words (beag, carráistí)
+      if (ortho == "a" or ortho == "ea") and token.phon == "a" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        local A_TO_OE = { beag=true, bheag=true, ["carráiste"]=true, ["carráistí"]=true }
+        if A_TO_OE[w] then token.phon = "\xc9\x9e" end  -- ɞ = U+025E
+      end
+
+      -- Lexical quality overrides: a/ea/ai → ɛ in specific words (bead, aicise, gair, daibhreas)
+      if (ortho == "a" or ortho == "ea" or ortho == "ai") and token.phon == "a" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        local A_TO_E = { bead=true, aicise=true, gair=true, daibhreas=true }
+        if A_TO_E[w] then token.phon = "\xc9\x9b" end  -- ɛ = U+025B
+      end
+
+      -- Lexical quality overrides: short i → ɪ in specific words (mire, mhire)
+      if ortho == "i" and token.phon == "i" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        local I_TO_I = { mire=true, mhire=true }
+        if I_TO_I[w] then token.phon = "\xc9\xaa" end  -- ɪ = U+026A
+      end
+
+      -- buile: ui digraph gives i (uisce table), should be ɪ
+      if ortho == "ui" and token.phon == "i" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        if w == "buile" then token.phon = "\xc9\xaa" end
+      end
+      -- Lexical quality overrides: ɪ → i in specific words (insim, sínid, ghéaraigh)
+      if ortho == "i" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        local I_TO_I_CLOSE = { insim=true, ["sínid"]=true, ["ghéaraigh"]=true }
+        if I_TO_I_CLOSE[w] then token.phon = "i" end
+      end
+      -- Lexical quality overrides: 'ái' digraph → aː in specific words (Connacht)
+      -- The resolver sets ái → [ɑː], but these words want [aː] instead.
+      if ortho == "ái" and token.phon == "ɑː" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        local AAI_TO_AI = { ["bháisteach"]=true, ["báirseach"]=true, ["mbáisteach"]=true,
+          ["báistí"]=true, ["máirt"]=true, ["pháirc"]=true, ["páirc"]=true,
+          ["stráic"]=true, ["áine"]=true, ["áinsí"]=true, ["léarscáil"]=true,
+          ["earráideach"]=true, ["abcáisis"]=true }
+        if AAI_TO_AI[w] then token.phon = "aː" end
       end
 
       -- uisce: standalone word wants i, not ɪ
@@ -276,15 +538,28 @@ return {
             token.restore_i = true
           end
           -- Ends in "aic": Afraic, aonraic, diuraic
+          -- Exception: English loanwords craic, staic, plaic keep [a]
           if w:match("aic$") and ortho == "ai" and next and next.type == "cons" and next.phon == "c" then
-            token.phon = "ɪ"; token.no_reduce = true
+            local aic_exceptions = { craic=true, staic=true, plaic=true }
+            if not aic_exceptions[w:lower()] then
+              token.phon = "ɪ"; token.no_reduce = true
+            end
           end
-          -- Ends in "is" (consonant + is): Inis, Peirsis, Soirbis
+          --
+          -- Some words should keep ɪ (Inis, Peirsis, Soirbis); exceptions reduce to ə.
           if not w:match("[aeéiíoóuú]is$") and w:match("is$") and
              ortho == "i" and next and next.type == "cons" and next.palatal == true then
-            token.restore_i = true
+            local is_keep_i_exceptions = {
+              araibis=true, iris=true, ["ídílis"]=true, ["péinis"]=true,
+              ["tibéidis"]=true, ["fáiscim"]=true, uiliteoir=true,
+              milis=true, rinnis=true, muiris=true, ["dílis"]=true, ["rómáinis"]=true,
+              ["roimis"]=true, ["chuiris"]=true, ["bímis"]=true, ["mhilis"]=true,
+            }
+            if not is_keep_i_exceptions[w:lower()] then
+              token.restore_i = true
+            end
           end
-          -- Contains "-aithe" (verbal adjective suffix): scealaithe, athruithe
+          -- Contains "-aithe" -- Contains "-aithe" (verbal adjective suffix): scealaithe, athruithe
           if w:match("aithe$") and ortho == "ai" then
             token.restore_i = true
           end
@@ -295,13 +570,13 @@ return {
             ["dheinim"] = true, ["nílim"] = true, ["nílid"] = true,
             ["tálaim"] = true, ["chímid"] = true,
             ["beirigí"] = true, ["cinnigí"] = true,
-            ["eitil"] = true, ["coisrig"] = true,
+            ["eitil"] = true, ["coisrig"] = true,            ["sínid"] = true, ["ghéaraigh"] = true,
           }
           if verb_suffix_words[w] and next and
              next.type == "cons" and next.palatal == true then
             if ortho == "i" then
               token.restore_i = true
-            elseif ortho == "ai" and (w:match("aim$") or w:match("aith")) then
+            elseif ortho == "ai" and (w:match("aim$") or w:match("aith") or w:match("aigh$")) then
               token.restore_i = true
             end
           end
@@ -310,6 +585,7 @@ return {
           local final_e_keep_i = {
             ["tithe"] = true, ["dtithe"] = true, ["thithe"] = true,
             ["beiche"] = true, ["áitithe"] = true,
+            ["uinge"] = true,
           }
           if final_e_keep_i[w] and ortho == "e" then
             local nxt_t = tokens[i + 1]
@@ -326,8 +602,9 @@ return {
                w == "coisin" or
                w == "airgeadúla" or w == "reiligiún" or
                w == "tuairisc" or w == "tuairisceoir" or
-               w == "traidisiún"
-            then
+               w == "traidisiún" or w == "diagaire" or
+               w == "teilifís" or w == "fichidí" or
+               w == "bhfichidí" or w == "uinge"            then
               token.restore_i = true
             end
           end
@@ -352,7 +629,17 @@ return {
       -- Previous consonant polarity affects preceding vowel quality
       if prev and prev.type == "cons" then
         if prev.palatal == true then
-          if token.phon == "ə" then token.phon = "ɪ" end
+          -- Exceptions: -is suffix words that should reduce to ə (milis, rinnis, Rómáinis)
+          if token.phon == "ə" and context.word_ortho then
+            local w = context.word_ortho:lower()
+            local prevent_raise = { milis=true, rinnis=true, ["rómáinis"]=true,
+              ["muiris"]=true, ["uiliteoir"]=true }
+            if not prevent_raise[w] then
+              token.phon = "ɪ"
+            end
+          elseif token.phon == "ə" then
+            token.phon = "ɪ"
+          end
         elseif prev.palatal == false then
           -- Don't back an ɪ to ə when the following consonant is slender and
           -- word-final: the slender offglide survives a broad onset

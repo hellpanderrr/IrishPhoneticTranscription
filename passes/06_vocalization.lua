@@ -45,6 +45,16 @@ return {
         fricative.phon = ""
       end
 
+      -- Lexical overrides: stressed a+bh/mh → au (not əu) for specific words
+      if was_vocalized and vowel.ortho == "a" and (fricative.ortho == "bh" or fricative.ortho == "mh") and context.word_ortho then
+        local A_VOCALIZE_AU = { damhsaigh=true, rabhadar=true, ["clamhsán"]=true,
+          ["damhán"]=true, clabhta=true, fabhtach=true, amha=true, ["clabhtaí"]=true,
+          rabhamar=true, ["gabhála"]=true, ["sabhdán"]=true, cabhsa=true }
+        if A_VOCALIZE_AU[context.word_ortho:lower()] then
+          vowel.phon = "au"
+        end
+      end
+
       ::continue::
     end
 

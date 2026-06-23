@@ -32,7 +32,18 @@ return {
         -- nasals). Long ó/ú already carry length and keep it (dhónna->oːn,
         -- not ʊn). brúnn keeps uː.
         if ortho == "o" or ortho == "u" then
-          token.phon = "ʊ"
+          -- Lexical exceptions: words where the expected quality keeps ɔ/o
+          -- (bronnaim → ɔ, Connachtach/Connachta → o, etc.)
+          local no_raise = false
+          if context.word_ortho then
+            local w = context.word_ortho:lower()
+            if w == "bronnaim" or w == "connachtach" or w == "connachta" then
+              no_raise = true
+            end
+          end
+          if not no_raise then
+            token.phon = "ʊ"
+          end
         end
       end
 

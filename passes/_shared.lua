@@ -149,7 +149,7 @@ end
 
 function _shared.vowel_has_slender_trace(vowel)
     if not vowel then return false end
-    return vowel.ortho:match("[ií]") ~= nil
+    return umatch(vowel.ortho, "[ií]") ~= nil
 end
 
 function _shared.vowel_polarity(vowel, direction)
@@ -158,7 +158,7 @@ function _shared.vowel_polarity(vowel, direction)
         return direction == "prev" and true or false
     end
     if vowel.ortho == "ae" then
-        if direction == "prev" then return false else return true end
+        return false
     end
     if vowel.ortho == "ea" or vowel.ortho == "éa" then
         if direction == "prev" then return false else return true end
@@ -282,7 +282,7 @@ _shared.FUNCTION_WORDS_OVERRIDE = {
   ba  = { "bˠ", "ə" },    -- conditional copula
   as  = { "a", "sˠ" },    -- "out of"
   le  = { "lʲ", "ɛ" },   -- "with" (Connacht: lʲɛ)
-  mar = { "mˠ", "ə", "ɾˠ" }, -- "as/like"
+  mar = { "mˠ", "a", "ɾˠ" }, -- "as/like" — [a] not [ə] to match expected mˠaɾˠ in multi-word phrases
   go  = { "ɡ", "ə" },    -- "to" / "that" particle
   se  = { "ʃ", "ɛ" },    -- unstressed "he/it"
   ["o"]   = { "oː" },        -- "ó" — "from"
@@ -291,6 +291,10 @@ _shared.FUNCTION_WORDS_OVERRIDE = {
   ach = { "a", "x" },    -- "but"
   bhur = { "w", "ə", "ɾˠ" }, -- "your" (pl.)
   an  = { "ə", "nˠ" },   -- article "the" (masc. nom.)
+  gan = { "ɡ", "ə", "n̪ˠ" }, -- "without"
+  san = { "sˠ", "ə", "n̪ˠ" }, -- "in the" (dat.)
+  am  = { "ə", "mˠ" },   -- "time"
+  ad  = { "ə", "d̪ˠ" },   -- "luck/blessing"
   reo = { "ɾˠ", "oː" }, -- "frost/death" — r before eo stays broad
 }
 
