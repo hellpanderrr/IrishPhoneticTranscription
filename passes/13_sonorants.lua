@@ -157,22 +157,16 @@ return {
 
       if first.ortho == "n" then
         if is_slender then
-          if before_cons then
-            first.phon = "n̠ʲ"  -- postalveolar
-          else
-            first.phon = "nʲ"  -- palatalized
-          end
+          -- Geminate slender nn is ALWAYS postalveolar (n̠ʲ) in Irish
+          first.phon = "n̠ʲ"
         else
           -- Geminate broad n always dental
           first.phon = "n̪ˠ"
         end
       elseif first.ortho == "l" then
         if is_slender then
-          if before_cons then
-            first.phon = "l̠ʲ"  -- postalveolar
-          else
-            first.phon = "lʲ"  -- palatalized
-          end
+          -- Geminate slender ll is ALWAYS postalveolar (l̠ʲ) in Irish
+          first.phon = "l̠ʲ"
         else
           -- Geminate broad l: dental before cons, velarized otherwise
           if before_cons then
