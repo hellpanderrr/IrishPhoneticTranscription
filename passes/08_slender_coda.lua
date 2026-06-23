@@ -20,8 +20,9 @@ return {
 
       local next = tokens[i + 1]
 
-      -- Before ng
-      if next and next.type == "cons" and next.ortho == "ng" then
+      -- Before ng: only apply to simple vowels (single orthographic character),
+      -- not digraphs (ai, ea, etc.) which pass 10 resolves.
+      if next and next.type == "cons" and next.ortho == "ng" and #token.ortho == 1 then
         token.phon = "ɪ"
       end
 

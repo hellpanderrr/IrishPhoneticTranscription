@@ -103,8 +103,42 @@ return {
         if token.phon == "ɪ" then
           if w == "gaeilic" or w == "nis" or w == "minic" or
              w == "cluife" or w == "cluifí" or
+             w == "sínid" or w == "ghéaraigh" or
              (w == "roimis" and token.ortho == "oi") then
             token.phon = "i"
+          end
+        end
+      end
+    end
+
+    -- Step 4d: Keep unstressed "a" in specific loanwords.
+    -- cileagram/chileagram: final "a" in "-gram" suffix should stay /a/
+    -- paragraf: final "a" in "-graf" suffix should stay /a/
+    -- eiseachaid: "ea" in the 2nd syllable should be /a/ not /ə/
+    if context.word_ortho then
+      local w = context.word_ortho:lower()
+      if w == "eiseachaid" then
+        for _, token in ipairs(tokens) do
+          if token.type == "vowel" and token.phon == "ə" and token.ortho == "ea" then
+            token.phon = "a"
+          end
+        end
+      elseif w == "paragraf" then
+        for i, token in ipairs(tokens) do
+          if token.type == "vowel" and token.phon == "ə" and token.ortho == "a" then
+            local nxt = tokens[i + 1]
+            if nxt and nxt.ortho == "f" then
+              token.phon = "a"
+            end
+          end
+        end
+      elseif w == "cileagram" or w == "chileagram" then
+        for i, token in ipairs(tokens) do
+          if token.type == "vowel" and token.phon == "ə" and token.ortho == "a" then
+            local nxt = tokens[i + 1]
+            if nxt and nxt.ortho == "m" then
+              token.phon = "a"
+            end
           end
         end
       end
@@ -137,6 +171,37 @@ return {
       next_t.phon = ""
 
       ::dev_continue::
+    end
+
+    -- Step 6b: Devoice g before f/t/s -- regressive devoicing assimilation.
+    for i = 1, #tokens - 1 do
+      local c = tokens[i]
+      local next_t = tokens[i + 1]
+      if c.type ~= "cons" then goto dev2_continue end
+      if c.phon ~= "ɡ" then goto dev2_continue end
+      if next_t.type ~= "cons" then goto dev2_continue end
+      local np = next_t.phon
+      if np == "fˠ" or np == "fʲ" or np == "t̪ˠ" or np == "tʲ" then
+        c.phon = "k"
+      end
+      ::dev2_continue::
+    end
+
+    -- Step 6c: Word-final broad g -> k for lexically-specified words (easpag)
+    if context.word_ortho then
+      local w = context.word_ortho:lower()
+      if w == "easpag" then
+        for i = #tokens, 1, -1 do
+          if tokens[i].phon == "ɡ" then
+            local is_final = true
+            for j = i + 1, #tokens do
+              if tokens[j].phon and tokens[j].phon ~= "" then is_final = false; break end
+            end
+            if is_final then tokens[i].phon = "k" end
+            break
+          end
+        end
+      end
     end
 
     -- Step 6 removed: rʲ → ʃ assibilation (Hickey Ch.2)

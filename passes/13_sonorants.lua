@@ -195,11 +195,14 @@ return {
         local pv = tokens[i - 1]
         if pv and pv.type == "vowel" then
           local ortho = pv.ortho
-          if ortho == "ea" then
-            pv.phon = "aː"
-            pv.source = "sonorant_lengthening"
-          elseif ortho == "a" then
-            pv.phon = "aː"
+          if ortho == "ea" or ortho == "a" then
+            -- Preserve existing quality (a or ɑ set by vowel pass), just add length
+            local c1 = usub(pv.phon, 1, 1)
+            if c1 == "ɑ" then
+              pv.phon = "ɑː"
+            else
+              pv.phon = "aː"
+            end
             pv.source = "sonorant_lengthening"
           elseif ortho == "o" then
             pv.phon = "oː"

@@ -34,7 +34,8 @@ return {
       elseif fricative.ortho == "bh" and fricative.palatal == false and
              (vowel.ortho == "á" or vowel.ortho == "aí" or vowel.ortho == "ai") then
         if vowel.ortho == "aí" then
-          vowel.phon = "ɑːiː"
+          local dv = S.DIALECTS[context.dialect] or S.DIALECTS.connacht
+          vowel.phon = (dv.long and dv.long.a or "aː") .. "iː"
         else
           vowel.phon = vowel.phon .. "iː"
         end
