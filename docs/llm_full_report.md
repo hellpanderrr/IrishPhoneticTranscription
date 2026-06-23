@@ -316,30 +316,43 @@ long  = { a = "aː", ... },  -- was "ɑː"
 
 ## 8. Actionable Next Steps
 
-### Priority 1: a/ɑ Quality Swap (structural, ~216 errors)
+### Priority 1: a/ɑ Quality Swap — TESTED AND REJECTED
 
-Edit `_shared.lua` Connacht dialect:
-```lua
-short = { a = "ɑ", ... },
-long  = { a = "aː", ... },
-```
-Then run benchmark, check for regressions. Expected: +100-200 exact matches.
+**Test result**: 0 gains, 1290 regressions. Changing `short.a = "ɑ"` in the dialect definition affects ALL `a` tokens including unstressed ones that should be ə or a. The fix requires a more nuanced approach: only apply ɑ to stressed `a` while keeping unstressed `a` as-is. This requires modifying pass 10 to check stress before applying vowel quality, which is a larger refactor.
 
-### Priority 2: Stress on Monosyllabic Words (~225 errors)
+**Verdict**: Not worth pursuing until a stress-aware vowel quality system is implemented.
 
-Investigate pass 02 (`02_stress.lua`) to understand why monosyllabic words get stress marks. Fix: suppress stress on monosyllabic content words.
+### Priority 2: Monosyllabic Stress Suppression — TESTED AND REJECTED
 
-### Priority 3: l̠ Velarized l (~106 errors)
+**Test result**: 935 currently-correct words would break. The benchmark expects stress on most monosyllabic words (1561 out of 1850 monosyllabic entries have stress in expected IPA). Removing stress from monosyllabic output is incorrect.
 
-Add a rule in pass 09 to map l → l̠ in broad contexts.
+**Verdict**: The 225 "stress errors" are actually content mismatches, not pure stress issues. Low ROI.
 
-### Priority 4: o→u before broad m (~148 errors)
+### Priority 3: l̠ Velarized l (~106 errors) — UNTESTED
 
-Add to pass 10: if ortho == "o" and next consonant is broad m, then phon = "u".
+Add a rule in pass 09 to map l → l̠ in broad contexts. This is a structural change that could fix ~100 errors. Worth testing.
 
-### Priority 5: Remaining i/ɪ quality gaps (~20-30 errors)
+### Priority 4: o→u before broad m — TESTED AND REJECTED
 
-Add restore_i words or fix rule in pass 10.
+**Test result**: Only 4 errors total (domlas, comrádaí, lom láithreach, dromán). Not worth a general rule — lexical overrides are sufficient.
+
+### Priority 5: Remaining i/ɪ quality gaps (~20-30 errors) — UNTESTED
+
+Add restore_i words or fix rule in pass 10. This is the most promising remaining structural fix.
+
+### Priority 6: Consonant quality (v/w confusion, ç/h confusion) — UNTESTED
+
+~256 errors involving v↔w, ç↔h, x↔ɣ. These are rule-level issues in pass 09 that could be fixed with targeted corrections.
+
+### Honest Assessment
+
+The engine is at 50.83% with 3,242 wrong words. The remaining errors are harder to fix structurally:
+- Most high-impact structural fixes (a/ɑ, stress, o→u) fail when tested
+- The remaining gaps are mostly multi-character errors and phonological irregularities
+- Lexical exception tables are the most reliable way to improve accuracy
+- Each fix yields ~2-5 exact matches, not the +100-200 promised by structural changes
+
+**Realistic next steps**: Focus on lexical exceptions for specific word patterns (restore_i gaps, consonant quality fixes) rather than broad structural changes.
 
 ---
 
