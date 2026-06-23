@@ -239,6 +239,24 @@ function _shared.count_vowel_tokens(tokens)
     return count
 end
 
+-- Count syllables (not vowel tokens): adjacent vowel tokens count as 1 syllable.
+-- ia, ea, ua, io → 1 syllable. ai, oi → already single token from VOWEL_DIGRAPHS.
+function _shared.count_syllables(tokens)
+    local count = 0
+    local in_vowel_seq = false
+    for _, token in ipairs(tokens) do
+        if token.type == "vowel" then
+            if not in_vowel_seq then
+                count = count + 1
+                in_vowel_seq = true
+            end
+        elseif token.type ~= "unknown" then
+            in_vowel_seq = false
+        end
+    end
+    return count
+end
+
 function _shared.vowel_token_index(tokens)
     for i, token in ipairs(tokens) do
         if token.type == "vowel" then return i end

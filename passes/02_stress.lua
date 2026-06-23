@@ -9,7 +9,7 @@ return {
   writes_context = true,
 
   run = function(tokens, context)
-    local vowel_count = S.count_vowel_tokens(tokens)
+    local vowel_count = S.count_syllables(tokens)
     context.vowel_count = vowel_count
     if vowel_count == 0 then return tokens end
 
@@ -62,7 +62,7 @@ return {
         if t.ortho and t.ortho ~= "" then ortho = ortho .. t.ortho end
       end
 
-      local seg_vc = S.count_vowel_tokens(seg)
+      local seg_vc = S.count_syllables(seg)
 
       if UNSTRESSED[ortho] then
         if seg_vc == 1 then seg_is_monosyllabic = true end
