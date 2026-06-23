@@ -117,7 +117,8 @@ return {
         end
       elseif token.ortho == "dh" or token.ortho == "gh" then
         local next = tokens[i + 1]
-        if i == #tokens or (next and next.type == "cons") then
+        if i == #tokens then
+          -- Word-final dh/gh: silent
           token.phon = ""
         elseif token.palatal == true then
           token.phon = "j"
