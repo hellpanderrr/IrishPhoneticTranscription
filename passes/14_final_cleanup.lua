@@ -249,6 +249,8 @@ return {
 
     -- Step 6: Devoice b/d/g before th — b+th→p, d+th→t, g+th→k, silence th
     -- Handles verbal adjective forms: fágtha→kə, scuabtha→pˠə, lúbtha→pˠə
+    -- Also silences th after ANY obstruent (incl. c, ch, p, f, s) — the default
+    -- medial th outcome is h in V_th contexts but silent in C_th clusters.
     for i = 1, #tokens - 1 do
       local c = tokens[i]
       local next_t = tokens[i + 1]
@@ -258,16 +260,21 @@ return {
 
       -- Devoice the consonant: b+th→p, d+th→t, g+th→k, then silence th
       -- Hickey §2.6.3: th assimilates to the voicing of the preceding consonant
-      -- and then the cluster is devoiced. Only fires when devoicing actually occurs.
-      local devoiced = false
-      if c.phon == "bˠ" then c.phon = "pˠ"; devoiced = true
-      elseif c.phon == "bʲ" then c.phon = "pʲ"; devoiced = true
-      elseif c.phon == "d̪ˠ" then c.phon = "t̪ˠ"; devoiced = true
-      elseif c.phon == "dʲ" then c.phon = "tʲ"; devoiced = true
-      elseif c.phon == "ɡ" then c.phon = "k"; devoiced = true
-      elseif c.phon == "ɟ" then c.phon = "c"; devoiced = true
+      -- and then the cluster is devoiced.
+      local phon = c.phon
+      if phon == "bˠ" then c.phon = "pˠ"; next_t.phon = ""
+      elseif phon == "bʲ" then c.phon = "pʲ"; next_t.phon = ""
+      elseif phon == "d̪ˠ" then c.phon = "t̪ˠ"; next_t.phon = ""
+      elseif phon == "dʲ" then c.phon = "tʲ"; next_t.phon = ""
+      elseif phon == "ɡ" then c.phon = "k"; next_t.phon = ""
+      elseif phon == "ɟ" then c.phon = "c"; next_t.phon = ""
+      -- Silence th after already-voiceless obstruents (c, k, p, t, ch, f, x, s)
+      -- Hickey §2.6.3: th after any obstruent is silent in consonant clusters.
+      elseif phon == "c" or phon == "k" or phon == "pˠ" or phon == "pʲ"
+          or phon == "t̪ˠ" or phon == "tʲ" or phon == "x" or phon == "fˠ"
+          or phon == "fʲ" then
+        next_t.phon = ""
       end
-      if devoiced then next_t.phon = "" end
 
       ::dev_continue::
     end
