@@ -1,0 +1,682 @@
+{
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\.claude\\settings.local.json": {
+    "mtime": 1781444399.8068566,
+    "ast_hash": "f6794ee9e595a8e1e64bc6eea94a6174",
+    "semantic_hash": "f6794ee9e595a8e1e64bc6eea94a6174"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\.cursor\\mcp.json": {
+    "mtime": 1782174053.4529479,
+    "ast_hash": "530e09091f70741cf5dabf9b6fd6a600",
+    "semantic_hash": "530e09091f70741cf5dabf9b6fd6a600"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\.mcp.json": {
+    "mtime": 1782174053.4518895,
+    "ast_hash": "530e09091f70741cf5dabf9b6fd6a600",
+    "semantic_hash": "530e09091f70741cf5dabf9b6fd6a600"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\.remember\\tmp\\last-ndc.ts": {
+    "mtime": 1781940325.6299386,
+    "ast_hash": "ab43c2e08d4d46fbab593788bb0451c7",
+    "semantic_hash": "ab43c2e08d4d46fbab593788bb0451c7"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\.remember\\tmp\\last-save.json": {
+    "mtime": 1781940513.2790174,
+    "ast_hash": "19ae194b5a9861ecf710bed90b26b422",
+    "semantic_hash": "19ae194b5a9861ecf710bed90b26b422"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_add_i_to_i_close.py": {
+    "mtime": 1781938755.9473977,
+    "ast_hash": "a1acac81a110064b0afd878adfaf7236",
+    "semantic_hash": "a1acac81a110064b0afd878adfaf7236"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_analyze_lev1.lua": {
+    "mtime": 1781857364.41032,
+    "ast_hash": "34651c15a85d65efb3fd415af81130cd",
+    "semantic_hash": "34651c15a85d65efb3fd415af81130cd"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_apply_a_fix.py": {
+    "mtime": 1781882279.116363,
+    "ast_hash": "f291b9b257306b6d5a9b6bc63829f8d3",
+    "semantic_hash": "f291b9b257306b6d5a9b6bc63829f8d3"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_benchmark.lua": {
+    "mtime": 1781938022.462211,
+    "ast_hash": "e0c420012d60536333cac96284addfea",
+    "semantic_hash": "e0c420012d60536333cac96284addfea"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_check_three.lua": {
+    "mtime": 1782174100.7987237,
+    "ast_hash": "ccc275907c7115f29dc962ed73dfffd7",
+    "semantic_hash": "ccc275907c7115f29dc962ed73dfffd7"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_debug_cen.lua": {
+    "mtime": 1781939972.0066395,
+    "ast_hash": "c35b871b3abd1d783098f05525b5b2f6",
+    "semantic_hash": "c35b871b3abd1d783098f05525b5b2f6"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_debug_ch.lua": {
+    "mtime": 1781940424.6506307,
+    "ast_hash": "0b873febcda242b3609334e877d85c9d",
+    "semantic_hash": "0b873febcda242b3609334e877d85c9d"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_debug_diag.lua": {
+    "mtime": 1782174021.7720425,
+    "ast_hash": "209a1765e746f6cae881b9a4be155469",
+    "semantic_hash": "209a1765e746f6cae881b9a4be155469"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_debug_fails.lua": {
+    "mtime": 1781941170.393098,
+    "ast_hash": "2619ffa6019f8838ccda76e77c7657ab",
+    "semantic_hash": "2619ffa6019f8838ccda76e77c7657ab"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_debug_fear.lua": {
+    "mtime": 1781940202.9137673,
+    "ast_hash": "af30dbd0b1d176c14bc675dea3607b0c",
+    "semantic_hash": "af30dbd0b1d176c14bc675dea3607b0c"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_debug_ghea.lua": {
+    "mtime": 1781939583.7259538,
+    "ast_hash": "e54fe0ddecd1a12f01cc0888746f5fd1",
+    "semantic_hash": "e54fe0ddecd1a12f01cc0888746f5fd1"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_debug_giorria.lua": {
+    "mtime": 1781940351.3898554,
+    "ast_hash": "ecee635ce52543cb625406dd0d221f24",
+    "semantic_hash": "ecee635ce52543cb625406dd0d221f24"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_debug_gram.lua": {
+    "mtime": 1781940844.067865,
+    "ast_hash": "cbb64fdd995b77c1518cd766cbc66cb4",
+    "semantic_hash": "cbb64fdd995b77c1518cd766cbc66cb4"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_debug_gram2.lua": {
+    "mtime": 1781940925.2954414,
+    "ast_hash": "dd7f843bfa9b40918300ed70039a0296",
+    "semantic_hash": "dd7f843bfa9b40918300ed70039a0296"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_debug_more.lua": {
+    "mtime": 1781939772.8946524,
+    "ast_hash": "c04b2ff8083331e7adbb49dfd11c218e",
+    "semantic_hash": "c04b2ff8083331e7adbb49dfd11c218e"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_debug_polarity.lua": {
+    "mtime": 1781940089.9337108,
+    "ast_hash": "833f42d097dca1fb9c50da351311964c",
+    "semantic_hash": "833f42d097dca1fb9c50da351311964c"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_debug_shcheck.lua": {
+    "mtime": 1781940769.5142152,
+    "ast_hash": "99e78c587c6fe86b61f80444e2446ddd",
+    "semantic_hash": "99e78c587c6fe86b61f80444e2446ddd"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_debug_shiul.lua": {
+    "mtime": 1781940653.165706,
+    "ast_hash": "8e43b296497b12f3a04bbc0aa5a13ed6",
+    "semantic_hash": "8e43b296497b12f3a04bbc0aa5a13ed6"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_debug_sinid.lua": {
+    "mtime": 1781939295.7461166,
+    "ast_hash": "cb9ffa9b795406fa0890ce724cebd165",
+    "semantic_hash": "cb9ffa9b795406fa0890ce724cebd165"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_debug_toitin.lua": {
+    "mtime": 1781940981.3236752,
+    "ast_hash": "9c22f39dfa9e447bd3e312b170a63229",
+    "semantic_hash": "9c22f39dfa9e447bd3e312b170a63229"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_debug_trace.lua": {
+    "mtime": 1781939723.2696815,
+    "ast_hash": "0c6c490210da83f90b03483b0365a5d3",
+    "semantic_hash": "0c6c490210da83f90b03483b0365a5d3"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_debug_uinge.lua": {
+    "mtime": 1781939792.0760622,
+    "ast_hash": "8fe99548127cba98e7a59ba1345958b8",
+    "semantic_hash": "8fe99548127cba98e7a59ba1345958b8"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_debug_verify.lua": {
+    "mtime": 1781939659.371886,
+    "ast_hash": "13d33cad6bdfa77a8439a11d286ece92",
+    "semantic_hash": "13d33cad6bdfa77a8439a11d286ece92"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_debug_verify2.lua": {
+    "mtime": 1781939823.6202016,
+    "ast_hash": "dffa8e29051ed7deb50048687f7880d3",
+    "semantic_hash": "dffa8e29051ed7deb50048687f7880d3"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_dolgo_score.py": {
+    "mtime": 1781857038.3532295,
+    "ast_hash": "6a8a291d6f135d67c5c15239ffb97f8a",
+    "semantic_hash": "6a8a291d6f135d67c5c15239ffb97f8a"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_fix_buckets.lua": {
+    "mtime": 1781937476.3597033,
+    "ast_hash": "7569d8b038b8ea304f23a1bf140ffa9d",
+    "semantic_hash": "7569d8b038b8ea304f23a1bf140ffa9d"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_fix_escapes.lua": {
+    "mtime": 1781937544.604895,
+    "ast_hash": "7da40f14652e5a36521d49c7c94f0b20",
+    "semantic_hash": "7da40f14652e5a36521d49c7c94f0b20"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_fix_file.py": {
+    "mtime": 1781938213.51264,
+    "ast_hash": "a845f201906d16198eb0019285197992",
+    "semantic_hash": "a845f201906d16198eb0019285197992"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_fix_schwa_i.lua": {
+    "mtime": 1781937495.137744,
+    "ast_hash": "ad199b61ba3ff0b3a10c96651826ff96",
+    "semantic_hash": "ad199b61ba3ff0b3a10c96651826ff96"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_gen_base.lua": {
+    "mtime": 1781927210.7389324,
+    "ast_hash": "5720ec3ce36d6c1289b060aa42a3bac6",
+    "semantic_hash": "5720ec3ce36d6c1289b060aa42a3bac6"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_gen_bench.lua": {
+    "mtime": 1781938011.018815,
+    "ast_hash": "1f700b94b1c0e3e71024c9d4457563f3",
+    "semantic_hash": "1f700b94b1c0e3e71024c9d4457563f3"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_lev1.lua": {
+    "mtime": 1781939943.363579,
+    "ast_hash": "721a417f144b697fec7390c467893b71",
+    "semantic_hash": "721a417f144b697fec7390c467893b71"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_test_new_fixes.lua": {
+    "mtime": 1781937526.9324973,
+    "ast_hash": "ac4b6fac395dd2fde749fd5375a33914",
+    "semantic_hash": "ac4b6fac395dd2fde749fd5375a33914"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\analyze_deep.py": {
+    "mtime": 1781353961.200785,
+    "ast_hash": "0bbca9c44466bff4a8279c2a4402b842",
+    "semantic_hash": "0bbca9c44466bff4a8279c2a4402b842"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\analyze_errors.py": {
+    "mtime": 1781595451.953135,
+    "ast_hash": "bccd3b788aaa9598ef39143edc0201ed",
+    "semantic_hash": "bccd3b788aaa9598ef39143edc0201ed"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\analyze_mismatches.py": {
+    "mtime": 1781391363.3493264,
+    "ast_hash": "0684509a6fd5d35ae32fba34f55b7595",
+    "semantic_hash": "0684509a6fd5d35ae32fba34f55b7595"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\analyze_overreduce.lua": {
+    "mtime": 1781610940.8660183,
+    "ast_hash": "550eea3267629a5d1835f3b85e4745bd",
+    "semantic_hash": "550eea3267629a5d1835f3b85e4745bd"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\analyze_sonorant.lua": {
+    "mtime": 1781610514.3748438,
+    "ast_hash": "2d9d851b3b820bf45d86c8d2805e5c62",
+    "semantic_hash": "2d9d851b3b820bf45d86c8d2805e5c62"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\analyze_vowel_red.lua": {
+    "mtime": 1781610741.3317327,
+    "ast_hash": "1d41f6218ca01bad39c2dc863351361a",
+    "semantic_hash": "1d41f6218ca01bad39c2dc863351361a"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\archive\\compare_engine.lua": {
+    "mtime": 1781463392.533692,
+    "ast_hash": "e7bb1ee582c59e7090407c4c97df74ed",
+    "semantic_hash": "e7bb1ee582c59e7090407c4c97df74ed"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\archive\\irish.lua": {
+    "mtime": 1781423918.0286767,
+    "ast_hash": "be89770fd66d6db32fdec7dfc851ba51",
+    "semantic_hash": "be89770fd66d6db32fdec7dfc851ba51"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\archive\\irish_core.lua": {
+    "mtime": 1781390533.4106207,
+    "ast_hash": "f88583011f1328a0d42212ab9099882f",
+    "semantic_hash": "f88583011f1328a0d42212ab9099882f"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\archive\\irish_engine.lua": {
+    "mtime": 1781357222.2944293,
+    "ast_hash": "ab467e3230eb845c997c578cd3f81646",
+    "semantic_hash": "ab467e3230eb845c997c578cd3f81646"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\archive\\irish_main.lua": {
+    "mtime": 1781344264.6931293,
+    "ast_hash": "c6470c4b1b3a6d467ec072e35c961372",
+    "semantic_hash": "c6470c4b1b3a6d467ec072e35c961372"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\archive\\irish_processors.lua": {
+    "mtime": 1781344241.5653694,
+    "ast_hash": "d9c95668faaa75db385fc516b272e106",
+    "semantic_hash": "d9c95668faaa75db385fc516b272e106"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\archive\\irish_rules.lua": {
+    "mtime": 1781370932.1149547,
+    "ast_hash": "2f50e054d4acb85a1a0355135f9da8de",
+    "semantic_hash": "2f50e054d4acb85a1a0355135f9da8de"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\archive\\irish_rules_data.lua": {
+    "mtime": 1781427259.3658667,
+    "ast_hash": "be89770fd66d6db32fdec7dfc851ba51",
+    "semantic_hash": "be89770fd66d6db32fdec7dfc851ba51"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\archive\\irish_rules_data_append.lua": {
+    "mtime": 1781427191.6221635,
+    "ast_hash": "a7a83dbda4e2a90238155299e9811221",
+    "semantic_hash": "a7a83dbda4e2a90238155299e9811221"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\archive\\irish_rules_data_backup.lua": {
+    "mtime": 1781427269.0647523,
+    "ast_hash": "f760b2f7b0cf018cab66ee5908ae6737",
+    "semantic_hash": "f760b2f7b0cf018cab66ee5908ae6737"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\archive\\irish_rules_monolith.lua": {
+    "mtime": 1781358458.292544,
+    "ast_hash": "fb402c69b1c421e407921c2f1445d934",
+    "semantic_hash": "fb402c69b1c421e407921c2f1445d934"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\archive\\regression.lua": {
+    "mtime": 1763834775.2188923,
+    "ast_hash": "7be507e7cb35fe79163fbeb1d887acbf",
+    "semantic_hash": "7be507e7cb35fe79163fbeb1d887acbf"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\archive\\regression_extended.lua": {
+    "mtime": 1781424108.5546403,
+    "ast_hash": "bd16db07fea9e93929345e58c4ce60dc",
+    "semantic_hash": "bd16db07fea9e93929345e58c4ce60dc"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\archive\\regression_new.lua": {
+    "mtime": 1781502707.8142612,
+    "ast_hash": "0f105266ef25512cefe4a178a9777df4",
+    "semantic_hash": "0f105266ef25512cefe4a178a9777df4"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\archive\\regression_sample.lua": {
+    "mtime": 1781512983.8614125,
+    "ast_hash": "ba3675016630e59d29ab09e4fa5e739d",
+    "semantic_hash": "ba3675016630e59d29ab09e4fa5e739d"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\archive\\test_compare.lua": {
+    "mtime": 1781359156.6279993,
+    "ast_hash": "a30a4391baae970ea7aacc121ab6e27a",
+    "semantic_hash": "a30a4391baae970ea7aacc121ab6e27a"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\archive\\test_compare2.lua": {
+    "mtime": 1781359164.2883713,
+    "ast_hash": "c33b76afc9498812887b24844afc2256",
+    "semantic_hash": "c33b76afc9498812887b24844afc2256"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\archive\\test_refactored.lua": {
+    "mtime": 1781359125.7664032,
+    "ast_hash": "959d43474a887bdc296b01c8f04e35fb",
+    "semantic_hash": "959d43474a887bdc296b01c8f04e35fb"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\archive\\test_refactored2.lua": {
+    "mtime": 1781359132.717229,
+    "ast_hash": "dea22e85e8d8ec0ff2e1bfa7c5631992",
+    "semantic_hash": "dea22e85e8d8ec0ff2e1bfa7c5631992"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\archive\\validate_extraction.lua": {
+    "mtime": 1781471384.9699185,
+    "ast_hash": "8fadecbd13b6d630aff357175e1c34ae",
+    "semantic_hash": "8fadecbd13b6d630aff357175e1c34ae"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\bench_run.lua": {
+    "mtime": 1781811674.7924218,
+    "ast_hash": "5c74ba57527097d8f5771efbe8091f68",
+    "semantic_hash": "5c74ba57527097d8f5771efbe8091f68"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\categorize_diff.lua": {
+    "mtime": 1781595252.678558,
+    "ast_hash": "684f34448c7aeb316520358c565b383d",
+    "semantic_hash": "684f34448c7aeb316520358c565b383d"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\categorize_errors.lua": {
+    "mtime": 1781610458.1612358,
+    "ast_hash": "5254e43a7b1b27092842c84726f75dee",
+    "semantic_hash": "5254e43a7b1b27092842c84726f75dee"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\compare_sonorants.lua": {
+    "mtime": 1781610606.9058967,
+    "ast_hash": "4eb98b60f19e2e5eeeae749c2a8f6ee1",
+    "semantic_hash": "4eb98b60f19e2e5eeeae749c2a8f6ee1"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\deep_analysis.py": {
+    "mtime": 1781595520.1460545,
+    "ast_hash": "95e4cafb2d20362b976fbe375f33dbac",
+    "semantic_hash": "95e4cafb2d20362b976fbe375f33dbac"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\deep_analysis2.py": {
+    "mtime": 1781605475.322748,
+    "ast_hash": "6d5d370558a75aa738cee05a2bedae7f",
+    "semantic_hash": "6d5d370558a75aa738cee05a2bedae7f"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\engine_compare.lua": {
+    "mtime": 1781594686.098788,
+    "ast_hash": "44d9d60a5696a0d9cc16b0383e105bf9",
+    "semantic_hash": "44d9d60a5696a0d9cc16b0383e105bf9"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\error_analysis.lua": {
+    "mtime": 1781594659.776734,
+    "ast_hash": "4808e6a0fa56cafaabfecfafad9113d4",
+    "semantic_hash": "4808e6a0fa56cafaabfecfafad9113d4"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\fresh_compare.lua": {
+    "mtime": 1781595690.1587646,
+    "ast_hash": "5444c39e0eb44525da1798478282dc99",
+    "semantic_hash": "5444c39e0eb44525da1798478282dc99"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\gen_results.lua": {
+    "mtime": 1781605431.979532,
+    "ast_hash": "e1da2d4c2c640ef2581321776d8516aa",
+    "semantic_hash": "e1da2d4c2c640ef2581321776d8516aa"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\irish.lua": {
+    "mtime": 1781514826.69468,
+    "ast_hash": "6ce972a0235a0a94a45a375ff097a161",
+    "semantic_hash": "6ce972a0235a0a94a45a375ff097a161"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\irish_engine_new.lua": {
+    "mtime": 1781815570.2139802,
+    "ast_hash": "cf07725012ec87bcabe59a29b9149bd4",
+    "semantic_hash": "cf07725012ec87bcabe59a29b9149bd4"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\mono_compare.lua": {
+    "mtime": 1781594745.2423112,
+    "ast_hash": "32ace8dc32991f30e78d2173fa8f0af9",
+    "semantic_hash": "32ace8dc32991f30e78d2173fa8f0af9"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\mono_compare2.lua": {
+    "mtime": 1781594979.0713012,
+    "ast_hash": "bed7834ec4f0179d403636b5b39308b4",
+    "semantic_hash": "bed7834ec4f0179d403636b5b39308b4"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\passes\\01_polarity.lua": {
+    "mtime": 1781940527.0320852,
+    "ast_hash": "d69b4bcf20a5b18053ffa8bbc2109794",
+    "semantic_hash": "d69b4bcf20a5b18053ffa8bbc2109794"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\passes\\02_stress.lua": {
+    "mtime": 1781883447.005039,
+    "ast_hash": "5678703861cc4e92a3939369a03e6a91",
+    "semantic_hash": "5678703861cc4e92a3939369a03e6a91"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\passes\\03_eclipsis.lua": {
+    "mtime": 1781938352.4624128,
+    "ast_hash": "3dd3445ea2a08e4bd59ee3a32b6056a8",
+    "semantic_hash": "3dd3445ea2a08e4bd59ee3a32b6056a8"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\passes\\04_cluster_simplify.lua": {
+    "mtime": 1781463273.0481293,
+    "ast_hash": "2ffd24a7836cb2ac4b8ec22a7a001a5a",
+    "semantic_hash": "2ffd24a7836cb2ac4b8ec22a7a001a5a"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\passes\\05_mutated_fricatives.lua": {
+    "mtime": 1781463299.3344717,
+    "ast_hash": "9d7223df9dbe5578c0defa998948a311",
+    "semantic_hash": "9d7223df9dbe5578c0defa998948a311"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\passes\\06_vocalization.lua": {
+    "mtime": 1781938352.4634771,
+    "ast_hash": "a955667476a151178e75b7821613dcfe",
+    "semantic_hash": "a955667476a151178e75b7821613dcfe"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\passes\\06d_anticipatory_raising.lua": {
+    "mtime": 1781820767.9743674,
+    "ast_hash": "23efdb961605e4b2d15f021489a9309f",
+    "semantic_hash": "23efdb961605e4b2d15f021489a9309f"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\passes\\07_nasalization.lua": {
+    "mtime": 1781938352.4640286,
+    "ast_hash": "ee6f297a29b9d81f755a24edf7a2b9b2",
+    "semantic_hash": "ee6f297a29b9d81f755a24edf7a2b9b2"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\passes\\08_slender_coda.lua": {
+    "mtime": 1781938352.465099,
+    "ast_hash": "9cac79b2fedfaa967ec59ab21ebb8f0d",
+    "semantic_hash": "9cac79b2fedfaa967ec59ab21ebb8f0d"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\passes\\09_consonants.lua": {
+    "mtime": 1781940742.830751,
+    "ast_hash": "7b97a003cb5e3fce1851311bd57f76a9",
+    "semantic_hash": "7b97a003cb5e3fce1851311bd57f76a9"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\passes\\09b_vowel_adjunct.lua": {
+    "mtime": 1781938601.8018537,
+    "ast_hash": "31132d9e17bf0d46cd16b377569c846f",
+    "semantic_hash": "31132d9e17bf0d46cd16b377569c846f"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\passes\\10_vowels.lua": {
+    "mtime": 1781941040.1913383,
+    "ast_hash": "fe09f5a7745ecfdf878441b269ef1cba",
+    "semantic_hash": "fe09f5a7745ecfdf878441b269ef1cba"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\passes\\10_vowels_saved.lua": {
+    "mtime": 1781938589.0904112,
+    "ast_hash": "9e0adad56cb45ded3d21ab02fdb70369",
+    "semantic_hash": "9e0adad56cb45ded3d21ab02fdb70369"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\passes\\11_unstressed_reduction.lua": {
+    "mtime": 1781938601.803976,
+    "ast_hash": "fa4ee80000285f4a723468f3f473991b",
+    "semantic_hash": "fa4ee80000285f4a723468f3f473991b"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\passes\\12_epenthesis.lua": {
+    "mtime": 1781906410.2729764,
+    "ast_hash": "e1808fd94347b8f9136218d5da55a71f",
+    "semantic_hash": "e1808fd94347b8f9136218d5da55a71f"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\passes\\13_sonorants.lua": {
+    "mtime": 1781938352.4656308,
+    "ast_hash": "79bf6011ee0b4bfe9b818ecd93ae423f",
+    "semantic_hash": "79bf6011ee0b4bfe9b818ecd93ae423f"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\passes\\14_final_cleanup.lua": {
+    "mtime": 1781940954.0722265,
+    "ast_hash": "c34b3545562eaa6ef9f988dec9a8bf11",
+    "semantic_hash": "c34b3545562eaa6ef9f988dec9a8bf11"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\passes\\_shared.lua": {
+    "mtime": 1781938352.4677756,
+    "ast_hash": "4f7520b914cc8e938bd16175e715ca27",
+    "semantic_hash": "4f7520b914cc8e938bd16175e715ca27"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\passes\\init.lua": {
+    "mtime": 1781551868.5249827,
+    "ast_hash": "8357384d5ae6868408550585b8d824d9",
+    "semantic_hash": "8357384d5ae6868408550585b8d824d9"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\run.ps1": {
+    "mtime": 1781430084.6510355,
+    "ast_hash": "58fc0fa042c2aae99a9d157e181df181",
+    "semantic_hash": "58fc0fa042c2aae99a9d157e181df181"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\stress_initial_analysis.py": {
+    "mtime": 1781595554.1402664,
+    "ast_hash": "76f4efdbaf021e48f31fb755edbdba98",
+    "semantic_hash": "76f4efdbaf021e48f31fb755edbdba98"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\ustring\\charsets.lua": {
+    "mtime": 1708762721.5686245,
+    "ast_hash": "c6857089c70a4162896040a26a6310e7",
+    "semantic_hash": "c6857089c70a4162896040a26a6310e7"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\ustring\\lower.lua": {
+    "mtime": 1631984949.0,
+    "ast_hash": "04cfcbdddcf059996eec6e4cb83bf6bd",
+    "semantic_hash": "04cfcbdddcf059996eec6e4cb83bf6bd"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\ustring\\normalization-data.lua": {
+    "mtime": 1631984949.0,
+    "ast_hash": "ab3fc212f08a006fa9a42b812c960232",
+    "semantic_hash": "ab3fc212f08a006fa9a42b812c960232"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\ustring\\string.lua": {
+    "mtime": 1631984949.0,
+    "ast_hash": "362a4c540cff49d3530becbc8c353f32",
+    "semantic_hash": "362a4c540cff49d3530becbc8c353f32"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\ustring\\upper.lua": {
+    "mtime": 1631984949.0,
+    "ast_hash": "f298fadbfd1443b6f3d257f168e6b4b8",
+    "semantic_hash": "f298fadbfd1443b6f3d257f168e6b4b8"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\ustring\\ustring.lua": {
+    "mtime": 1749143551.777153,
+    "ast_hash": "fc78b30e324fd9836d37999f94c74d76",
+    "semantic_hash": "fc78b30e324fd9836d37999f94c74d76"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\.graymatter\\MEMORY.md": {
+    "mtime": 1782174053.4497373,
+    "ast_hash": "7876b64b262f63bd8a8b58f107b4f789",
+    "semantic_hash": "7876b64b262f63bd8a8b58f107b4f789"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\.remember\\now.md": {
+    "mtime": 1782173639.829395,
+    "ast_hash": "f5099ccbf919548f6fc7599d782a61a6",
+    "semantic_hash": "f5099ccbf919548f6fc7599d782a61a6"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\.remember\\remember.md": {
+    "mtime": 1781857101.1502573,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\.remember\\today-2026-06-14.md": {
+    "mtime": 1781470931.5529377,
+    "ast_hash": "8040a0072ef0cb91de1ab66df8e50e01",
+    "semantic_hash": "8040a0072ef0cb91de1ab66df8e50e01"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\.remember\\today-2026-06-15.md": {
+    "mtime": 1781557388.9698486,
+    "ast_hash": "43c4d0ffc633735bc0582b7fead1218e",
+    "semantic_hash": "43c4d0ffc633735bc0582b7fead1218e"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\.remember\\today-2026-06-16.md": {
+    "mtime": 1781637153.415957,
+    "ast_hash": "f996455e8aac7638411cc91f7c6f414e",
+    "semantic_hash": "f996455e8aac7638411cc91f7c6f414e"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\.remember\\today-2026-06-18.md": {
+    "mtime": 1781819790.8275063,
+    "ast_hash": "050d86bebf5571978a9dc3106e09027f",
+    "semantic_hash": "050d86bebf5571978a9dc3106e09027f"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\.remember\\today-2026-06-19.md": {
+    "mtime": 1781912674.6103296,
+    "ast_hash": "a072c9d62240a5467ab68c1fba49bb1b",
+    "semantic_hash": "a072c9d62240a5467ab68c1fba49bb1b"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\.remember\\today-2026-06-20.md": {
+    "mtime": 1781940344.936738,
+    "ast_hash": "dd028854f7dfa18b17b71eeced1b13b4",
+    "semantic_hash": "dd028854f7dfa18b17b71eeced1b13b4"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\AGENTS.md": {
+    "mtime": 1782174053.4784474,
+    "ast_hash": "273a21048c9f22813f7a043bc03f54a3",
+    "semantic_hash": "273a21048c9f22813f7a043bc03f54a3"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\CLAUDE.md": {
+    "mtime": 1782174053.4779212,
+    "ast_hash": "de055fc4bfe61eaeb0f4df98dc257b1c",
+    "semantic_hash": "de055fc4bfe61eaeb0f4df98dc257b1c"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\C\uf03aUsershellpanderrrsl_err.txt": {
+    "mtime": 1781608205.1681037,
+    "ast_hash": "4b219fe937c110e24093e6c40e3ed695",
+    "semantic_hash": "4b219fe937c110e24093e6c40e3ed695"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\README.md": {
+    "mtime": 1750320042.3041575,
+    "ast_hash": "2d371c2dd01d20b8d57455e03149db53",
+    "semantic_hash": "2d371c2dd01d20b8d57455e03149db53"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_baseline_matches.txt": {
+    "mtime": 1781610086.9608994,
+    "ast_hash": "1f05f61c1c1827ab58f47e1467a60876",
+    "semantic_hash": "1f05f61c1c1827ab58f47e1467a60876"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_error_buckets.txt": {
+    "mtime": 1781886408.1819353,
+    "ast_hash": "0b53f2d58c16ebedbfee32e50cc78017",
+    "semantic_hash": "0b53f2d58c16ebedbfee32e50cc78017"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_lev1_3124.txt": {
+    "mtime": 1781922450.9044936,
+    "ast_hash": "3b6833d35b37e5ca308660becbd92f9f",
+    "semantic_hash": "3b6833d35b37e5ca308660becbd92f9f"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_lev1_3131.txt": {
+    "mtime": 1781920758.1800115,
+    "ast_hash": "2192704aba4510124f63261412900b32",
+    "semantic_hash": "2192704aba4510124f63261412900b32"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_lev1_output.txt": {
+    "mtime": 1781920733.6910374,
+    "ast_hash": "4dfb35fa9f2150b71924e67d33e066b2",
+    "semantic_hash": "4dfb35fa9f2150b71924e67d33e066b2"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\_tmp_out.txt": {
+    "mtime": 1781940159.556014,
+    "ast_hash": "477bdd68ade20d17eb85c3751948344c",
+    "semantic_hash": "477bdd68ade20d17eb85c3751948344c"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\docs\\error_analysis_current.md": {
+    "mtime": 1781879369.012183,
+    "ast_hash": "236e20fd3c43667d19da0c6c86faf715",
+    "semantic_hash": "236e20fd3c43667d19da0c6c86faf715"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\docs\\superpowers\\plans\\2026-06-15-theory-grounded-refinement.md": {
+    "mtime": 1781518309.1666927,
+    "ast_hash": "76e9788c497b5aecf58e68a3de6214b7",
+    "semantic_hash": "76e9788c497b5aecf58e68a3de6214b7"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\docs\\superpowers\\specs\\2026-06-14-token-array-monolith-replacement-design.md": {
+    "mtime": 1781459771.408567,
+    "ast_hash": "945a7c141296106be6c42416499d0c89",
+    "semantic_hash": "945a7c141296106be6c42416499d0c89"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\g2p_test_history.txt": {
+    "mtime": 1781509284.10578,
+    "ast_hash": "cd82576e60e8ef3a9b41629a6c1c9999",
+    "semantic_hash": "cd82576e60e8ef3a9b41629a6c1c9999"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\g2p_test_history_ext.txt": {
+    "mtime": 1781502655.2071612,
+    "ast_hash": "3872291b937c022b76d5c7b75ce1037f",
+    "semantic_hash": "3872291b937c022b76d5c7b75ce1037f"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\implementation_plan.md": {
+    "mtime": 1781353928.5968418,
+    "ast_hash": "503468959a8adf8e22577694b67b73ab",
+    "semantic_hash": "503468959a8adf8e22577694b67b73ab"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\improvement_plan_fresh.md": {
+    "mtime": 1781596275.4809084,
+    "ast_hash": "38b112916d8f4f1342ae45f2559319bb",
+    "semantic_hash": "38b112916d8f4f1342ae45f2559319bb"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\summary.md": {
+    "mtime": 1781354489.9329185,
+    "ast_hash": "77294ce99a3d1ecbec3596bd3b1bbc30",
+    "semantic_hash": "77294ce99a3d1ecbec3596bd3b1bbc30"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\theory\\Summary of Irish Phonetics Chapter 1.txt": {
+    "mtime": 1781518701.505565,
+    "ast_hash": "f6576f0dbd3b0ff5b1c23569b9941c19",
+    "semantic_hash": "f6576f0dbd3b0ff5b1c23569b9941c19"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\theory\\The Sound Structure of Modern I - Hickey, Raymond; 1.txt": {
+    "mtime": 1781426144.7015388,
+    "ast_hash": "9dbf5dd7823a8d96975268a1fcc6305b",
+    "semantic_hash": "9dbf5dd7823a8d96975268a1fcc6305b"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\theory\\The Sound Structure of Modern I - Hickey, Raymond; 2.txt": {
+    "mtime": 1781346563.8323812,
+    "ast_hash": "d095247398640bb542b14a0b83ff19b1",
+    "semantic_hash": "d095247398640bb542b14a0b83ff19b1"
+  },
+  "F:\\projects\\transcription\\wiktionary_ipa_phoneme_lexicons\\irish\\repo\\The Sound Structure of Modern I - Hickey, Raymond;.pdf": {
+    "mtime": 1748197801.4562874,
+    "ast_hash": "c4d53d069406378c6e2ba4f34e5d4218",
+    "semantic_hash": "c4d53d069406378c6e2ba4f34e5d4218"
+  }
+}

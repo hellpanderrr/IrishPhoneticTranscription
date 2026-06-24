@@ -30,8 +30,18 @@ return {
     while i <= #tokens do
       table.insert(new_tokens, tokens[i])
 
-      -- Check: current token is sonorant, next is voiced obstruent
-      if S.is_sonorant(tokens[i]) and tokens[i + 1] and S.is_voiced_obstruent(tokens[i + 1]) then
+      -- Check: current token is sonorant, next is heterorganic obstruent or fricative
+      -- Hickey §2.8: Svarabhakti occurs between sonorants and following heterorganic
+      -- consonants — not just voiced stops. r+ch (dorchadas), r+f (dearfa),
+      -- r+m (gairme), n+ch (seanchas), l+m (calma), r+bh/r+mh (thairbhe, dearbhú)
+      -- all take epenthetic schwa.
+      if S.is_sonorant(tokens[i]) and tokens[i + 1] and
+         (S.is_voiced_obstruent(tokens[i + 1]) or
+          tokens[i + 1].ortho == "ch" or
+          tokens[i + 1].ortho == "f" or
+          tokens[i + 1].ortho == "m" or
+          tokens[i + 1].ortho == "bh" or
+          tokens[i + 1].ortho == "mh") then
         -- Find preceding vowel
         local prev_vowel = S.find_preceding_vowel(tokens, i)
         -- Condition: preceding vowel is stressed AND short
