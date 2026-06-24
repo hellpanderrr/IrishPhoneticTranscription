@@ -211,6 +211,15 @@ function _shared.is_voiced_obstruent(token)
         (token.ortho == "b" or token.ortho == "d" or token.ortho == "g")
 end
 
+-- Hickey §2.8: Svarabhakti epenthesis occurs between a sonorant and a
+-- following heterorganic obstruent or fricative — not just voiced stops.
+-- This covers r+ch (urchar), r+f (dearfa), r+m (gairme), l+m (calma).
+function _shared.is_heterorganic_obstruent(token)
+    return token and token.type == "cons" and
+        (token.ortho == "b" or token.ortho == "d" or token.ortho == "g" or
+         token.ortho == "ch" or token.ortho == "f" or token.ortho == "m")
+end
+
 function _shared.clone_token(token)
     local copy = {}
     for k, v in pairs(token) do

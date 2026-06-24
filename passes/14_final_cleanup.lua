@@ -1,9 +1,12 @@
 -- Pass #14: Final cleanup and diacritics.
+-- Hickey §2.6.2: Final lenited fricatives th, dh, gh are silent.
+-- Hickey §2.6.3: Devoicing rules in coda position.
 -- 1. Remove final silent mutated fricatives (th, dh, gh)
 -- 2. Strip trailing ç/ɣ/h from vowels that have a long phon
--- 3. Unstressed final devoicing: slender g [ɟ] -> [c] (Hickey Ch.2)
--- 4. ch + s -> tʃ sandhi
--- 5. Devoice b/d/g before th: b+th→p, d+th→t, g+th→k
+-- 3. Unstressed final devoicing: slender g [ɟ] -> [c] (Hickey §2.6.3)
+-- 4. ch + s -> tʃ sandhi (assimilation, Hickey §2.4)
+-- 5. Devoice b/d/g before th: b+th->p, d+th->t, g+th->k (Hickey §2.6.3)
+-- 6. Palatal C before back rounded vowel -> j-glide insertion (Hickey §2.6.3)-- 5. Devoice b/d/g before th: b+th→p, d+th→t, g+th→k
 
 local S = require("passes._shared")
 local ustring = require("ustring.ustring")
@@ -216,17 +219,19 @@ return {
       local t = tokens[i]
       local nxt = tokens[i + 1]
       if t.type == "vowel" and nxt.type == "vowel" then
-        -- "i"+"a" diphthong: second element is always ə (Hickey §1.4)
-        if t.ortho == "i" and nxt.ortho == "a" then
-          if nxt.phon == "a" then
-            nxt.phon = "ə"
-          end
-        -- "e"+"á": éa digraph with fada → ɑː, silent e
-        elseif t.ortho == "e" and nxt.ortho == "á" then
+        -- "i"+"a" or "i"+"ai": /iə/ diphthong; second element is always ə.
+        -- The tokenizer produces "ai" (digraph) when ia is followed by a
+        -- slender consonant, or "a" in other contexts. (Hickey §1.4)
+        if t.ortho == "i" and (nxt.ortho == "a" or nxt.ortho == "ai") then
+          nxt.phon = "\xC9\x99"
+        -- "e"+"á" or "e"+"ái": éa digraph with fada → ɑː, silent e.
+        -- The tokenizer may produce either "á" or "ái" as the digraph.
+        elseif t.ortho == "e" and (nxt.ortho == "á" or nxt.ortho == "ái") then
           t.phon = ""
           nxt.phon = "ɑː"
-        -- "u"+"í": uí → iː, silent u
-        elseif t.ortho == "u" and nxt.ortho == "í" then
+        -- "u"+"í" or "u"+"ío": uí → iː, silent u.
+        -- The tokenizer may produce either "í" or "ío" as the digraph.
+        elseif t.ortho == "u" and (nxt.ortho == "í" or nxt.ortho == "ío") then
           t.phon = ""
         -- "e"+"a" (plain ea): silent e, keep a as-is (pass 10 already set it)
         elseif t.ortho == "e" and nxt.ortho == "a" then

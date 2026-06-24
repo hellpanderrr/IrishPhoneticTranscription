@@ -117,9 +117,11 @@ return {
           if p == "t" or p == "p" or p == "c" then
             -- Lexical exceptions: words where ɪ should still reduce to ə
             -- uiliteoir: second vowel ɪ before slender t should be ə
+            -- Meiriceá: unstressed ɪ before slender c should be ə (Hickey §3.4)
             local exc = false
             if context.word_ortho then
-              if context.word_ortho:lower() == "uiliteoir" then exc = true end
+              local lower = context.word_ortho:lower()
+              if lower == "uiliteoir" or lower == "meiriceá" then exc = true end
             end
             if not exc then goto continue end
           end

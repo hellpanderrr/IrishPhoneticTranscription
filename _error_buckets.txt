@@ -1,0 +1,1 @@
+F:\soft\lua\lua.exe: _gen_error_data.lua:84: no visible label 'next' for <goto> at line 37

@@ -562,6 +562,9 @@ return {
               ["tibéidis"]=true, ["fáiscim"]=true, uiliteoir=true,
               milis=true, rinnis=true, muiris=true, ["dílis"]=true, ["rómáinis"]=true,
               ["roimis"]=true, ["chuiris"]=true, ["bímis"]=true, ["mhilis"]=true,
+              -- Words ending in -is where the vowel should reduce to ə (Hickey §3.4):
+              tinnis=true, ["spáinnis"]=true, ["tibéidis"]=true, ["peirsis"]=true,
+              ["soirbis"]=true,
             }
             if not is_keep_i_exceptions[w:lower()] then
               token.restore_i = true
