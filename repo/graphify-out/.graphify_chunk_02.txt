@@ -1,0 +1,11 @@
+F:\projects\transcription\wiktionary_ipa_phoneme_lexicons\irish\repo\docs\superpowers\plans\2026-06-15-theory-grounded-refinement.md
+F:\projects\transcription\wiktionary_ipa_phoneme_lexicons\irish\repo\docs\superpowers\specs\2026-06-14-token-array-monolith-replacement-design.md
+F:\projects\transcription\wiktionary_ipa_phoneme_lexicons\irish\repo\g2p_test_history.txt
+F:\projects\transcription\wiktionary_ipa_phoneme_lexicons\irish\repo\g2p_test_history_ext.txt
+F:\projects\transcription\wiktionary_ipa_phoneme_lexicons\irish\repo\implementation_plan.md
+F:\projects\transcription\wiktionary_ipa_phoneme_lexicons\irish\repo\improvement_plan_fresh.md
+F:\projects\transcription\wiktionary_ipa_phoneme_lexicons\irish\repo\summary.md
+F:\projects\transcription\wiktionary_ipa_phoneme_lexicons\irish\repo\theory\Summary of Irish Phonetics Chapter 1.txt
+F:\projects\transcription\wiktionary_ipa_phoneme_lexicons\irish\repo\theory\The Sound Structure of Modern I - Hickey, Raymond; 1.txt
+F:\projects\transcription\wiktionary_ipa_phoneme_lexicons\irish\repo\theory\The Sound Structure of Modern I - Hickey, Raymond; 2.txt
+F:\projects\transcription\wiktionary_ipa_phoneme_lexicons\irish\repo\The Sound Structure of Modern I - Hickey, Raymond;.pdf
