@@ -5,3 +5,6 @@ graymatter daemon ready: dir=F:\projects\transcription\wiktionary_ipa_phoneme_le
 daemon: idle for 2m0s with no clients, exiting
 daemon: stopped
 graymatter daemon ready: dir=F:\projects\transcription\wiktionary_ipa_phoneme_lexicons\irish\repo\.graymatter addr=tcp://127.0.0.1:64493 pid=17364 idle-exit=2m0s
+daemon: idle for 2m0s with no clients, exiting
+daemon: stopped
+graymatter daemon ready: dir=F:\projects\transcription\wiktionary_ipa_phoneme_lexicons\irish\repo\.graymatter addr=tcp://127.0.0.1:64502 pid=39448 idle-exit=2m0s
