@@ -213,11 +213,18 @@ return {
         if suffix_f then
           local pp = prev.phon
           local is_obstruent = false
-          for ch in pp:gmatch(".") do
-            if ch == "k" or ch == "g" or ch == "p" or ch == "t"
-              or ch == "d" or ch == "b" or ch == "s" or ch == "x"
-              or ch == "f" or ch == "v" or ch == "h" or ch == "ʃ" then
-              is_obstruent = true; break
+          -- Check for multi-byte IPA obstruents first (ʃ = 0xCA 0x83).
+          -- Plain gmatch(".") iterates bytes, not UTF-8 chars.
+          if pp:find("\xCA\x83") then
+            is_obstruent = true
+          end
+          if not is_obstruent then
+            for ch in pp:gmatch(".") do
+              if ch == "k" or ch == "g" or ch == "p" or ch == "t"
+                or ch == "d" or ch == "b" or ch == "s" or ch == "x"
+                or ch == "f" or ch == "v" or ch == "h" then
+                is_obstruent = true; break
+              end
             end
           end
           if is_obstruent then

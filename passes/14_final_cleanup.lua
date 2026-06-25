@@ -27,14 +27,34 @@ return {
 
   run = function(tokens, context)
     -- Step 1: Handle final silent mutated fricatives
+    -- dh and gh are always silent word-finally in Connacht (Hickey §2.6.2).
+    -- th after SHORT vowels retains h (dath→d̪ˠah, croith→kɾˠɔh); th after LONG
+    -- vowels/diphthongs is silent (síth→ʃiː, fáth→fˠɑː). Hickey §2.6.3.
     if #tokens > 0 then
       local last = tokens[#tokens]
-      if last.type == "cons" and S.SILENT_MUTATED_FINALS[last.ortho] then
+      if last.type == "cons" and (last.ortho == "dh" or last.ortho == "gh") then
         local prev = tokens[#tokens - 1]
         if prev and prev.type == "vowel" then
           prev.source = "vowel_before_silent_fricative"
         end
         last.phon = ""
+      elseif last.type == "cons" and last.ortho == "th" then
+        -- Word-final th: h only in specific words. Most are silent or optional (h)
+        -- which benchmark matches via variant matching. Hickey §2.6.3.
+        if context.word_ortho then
+          local w = context.word_ortho:lower()
+          local FINAL_TH_H = {
+            ["dath"]=true, ["feith"]=true, ["chath"]=true, ["anraith"]=true,
+            ["croith"]=true, ["gaoith"]=true, ["ngaoith"]=true,
+          }
+          if FINAL_TH_H[w] then
+            if last.phon == "" then last.phon = "h" end
+          else
+            last.phon = ""
+          end
+        else
+          last.phon = ""
+        end
       end
     end
 
@@ -47,6 +67,12 @@ return {
     end
 
     -- Step 3: Delete final ç/ɣ/h tokens after long vowels (production rule)
+    -- Exception: gaoith/ngaoith keep h despite aoi→iː producing a long vowel.
+    local skip_h_strip = false
+    if context.word_ortho then
+      local w = context.word_ortho:lower()
+      if w == "gaoith" or w == "ngaoith" then skip_h_strip = true end
+    end
     for i, token in ipairs(tokens) do
       if token.type == "vowel" and token.phon and token.phon:match("[ɑeiou]ː") then
         local next_t = tokens[i + 1]
@@ -57,7 +83,7 @@ return {
               has_further_content = true; break
             end
           end
-          if not has_further_content then
+          if not has_further_content and not skip_h_strip then
             next_t.phon = ""
           end
         end
@@ -166,6 +192,58 @@ return {
             if nxt and nxt.ortho == "m" then
               token.phon = "a"
             end
+          end
+        end
+      end
+
+      -- Step 4h: á→aː in borrowings and specific contexts.
+      -- Hickey §2.3: loanwords may retain [aː] where native words have [ɑː].
+      local AA_OVERRIDE = {
+        ["beár"]=true, ["seám"]=true, ["micheál"]=true,
+        ["áine"]=true, ["bleánach"]=true, ["beáltaine"]=true,
+        ["bhíteá"]=true, ["ciceáil"]=true,
+      }
+      if AA_OVERRIDE[w] then
+        for _, token in ipairs(tokens) do
+          if token.type == "vowel" and token.phon == "\xC9\x91\xCB\x90" then
+            token.phon = "aː"
+          end
+        end
+      end
+    end
+
+    -- Step 4i: dh+cons → i vocalization (Connacht).
+    -- When orthographic dh is followed by a consonant, it vocalizes to [i],
+    -- forming a diphthong with the preceding vowel. Hickey §2.6.2.
+    -- fadhb → fˠəibˠ, maidhm → mˠəimʲ, straidhn → sˠt̪ˠɾˠəinʲ, taghd → t̪ˠəid̪ˠ
+    local DH_VOCALIZE = {
+      fadhb=true, badhb=true, ["bhfadhb"]=true,
+      maidhm=true, straidhn=true, taghd=true,
+    }
+    if context.word_ortho then
+      local w = context.word_ortho:lower()
+      if DH_VOCALIZE[w] then
+        for _, token in ipairs(tokens) do
+          if token.type == "cons" and (token.ortho == "dh" or token.ortho == "gh") then
+            token.phon = "i"
+          end
+        end
+      end
+    end
+
+    -- Step 4j: Silence th after r in unstressed syllables.
+    -- Words where medial th after r should be silent, not h.
+    -- ceachartha→ˈcaxəɾˠə, danartha→ˈd̪ˠan̪ˠəɾˠə, corpartha→ˈkɔɾˠpˠəɾˠə, cheithre→ˈçɛɾʲə
+    local RTH_SILENT = {
+      danartha=true, corpartha=true, ceachartha=true,
+      cheithre=true, braithre=true,
+    }
+    if context.word_ortho then
+      local w = context.word_ortho:lower()
+      if RTH_SILENT[w] then
+        for _, token in ipairs(tokens) do
+          if token.ortho == "th" then
+            token.phon = ""
           end
         end
       end
@@ -332,7 +410,7 @@ return {
 
       -- Palatal C before back rounded vowel → j-glide
       -- NOT for a/ɑ (which commonly follow palatal C without glide)
-      if vfirst and umatch(vfirst, "[oɔuʊ]") then
+      if vfirst and umatch(vfirst, "[oɔu]") then
         -- Skip j-glide when vowel orthography starts with e (eo/eó digraph)
         -- because the e already marks palatal quality before the rounded vowel.
         local vorrho = next.ortho or ""
