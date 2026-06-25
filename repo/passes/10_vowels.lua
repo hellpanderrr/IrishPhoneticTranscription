@@ -342,7 +342,15 @@ return {
 
         elseif next.ortho == "s" or next.ortho == "sh" then
           -- Before slender sibilants, oi stays \xC9\x94 (not lowered to \xC9\x9B)
-          token.phon = "\xC9\x94"
+          -- Lexical exception: ois/hɔis (→ ɪʃ) and coisric/coisreac (→ ɛʃ).
+          if context.word_ortho then
+            local w = context.word_ortho:lower()
+            if w == "ois" or w == "hois" then token.phon = "ɪ"
+            elseif w == "coisric" or w == "coisreac" then token.phon = "ɛ"
+            else token.phon = "\xC9\x94" end
+          else
+            token.phon = "\xC9\x94"
+          end
         elseif (next.ortho == "b" or next.ortho == "p" or next.ortho == "d" or next.ortho == "g" or next.ortho == "c") then
           -- Word-final: check nothing substantial follows
           local wf = true
@@ -411,7 +419,14 @@ return {
         local w = context.word_ortho:lower()
         local EPS_TO_I = { deinir=true, deineann=true, deinid=true, dheineann=true,
           ["goirín"]=true, coirp=true, foireann=true, breilsce=true,
-          croinic=true, croinice=true }
+          croinic=true, croinice=true, }
+        -- Additional words where oi→ɪ but NOT e/ei→ɪ (must only match oi ortho)
+        local EPS_TO_I_OI = { goirme=true, moille=true, oileain=true, oilean=true,
+          ois=true, hois=true }
+        if EPS_TO_I_OI[w] and ortho == "oi" then
+          token.phon = "ɪ"
+          token.restore_i = true
+        end
         -- Doire (Derry) needs case-sensitive match, only for "oi" vowel
         if context.word_ortho == "Doire" and ortho == "oi" then
           token.phon = "ɪ"
@@ -426,7 +441,8 @@ return {
       if ortho == "oi" and token.phon == "ɛ" and context.word_ortho then
         local w = context.word_ortho:lower()
         local OI_TO_OE = { coillte=true, gcoillte=true, choillte=true,
-          scoile=true, goidim=true }
+          scoile=true, goidim=true,
+          coirce=true, coille=true, gcoill=true }
         if OI_TO_OE[w] then token.phon = "ɞ" end
       end      end
 
