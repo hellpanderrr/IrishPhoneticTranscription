@@ -231,6 +231,40 @@ return {
       end
     end
 
+    -- Step 4k: teagasc — silence final k.
+    -- The final -c in teagasc (teaching) is silent in Connacht.
+    -- Hickey §2.6.3: final c after s is silent in this word.
+    if context.word_ortho and context.word_ortho:lower() == "teagasc" then
+      for i = #tokens, 1, -1 do
+        if tokens[i].phon == "k" then
+          tokens[i].phon = ""
+          break
+        end
+      end
+    end
+
+    -- Step 4l: oí → iː lexical overrides.
+    -- The normalizer strips fadas, so oí becomes oi and resolves as /ɔ/.
+    -- These words need the o vowel silenced and í→iː kept. Hickey §1.4.
+    local OI_SILENCE_O = {
+      snoi=true, chroi=true, croi=true,
+      snoiodoireacht=true, ["gra mo chroi"]=true,
+    }
+    if context.word_ortho then
+      local w = context.word_ortho:lower()
+      if OI_SILENCE_O[w] then
+        local found = false
+        for _, token in ipairs(tokens) do
+          if not found and token.type == "vowel" and token.ortho == "oi" then
+            token.phon = "iː"
+            found = true
+          end
+        end
+      end
+    end
+
+    -- Step 4f: -igh endings: restore ə → iː (imperative verbs, adjectives).
+
     -- Step 4j: Silence th after r in unstressed syllables.
     -- Words where medial th after r should be silent, not h.
     -- ceachartha→ˈcaxəɾˠə, danartha→ˈd̪ˠan̪ˠəɾˠə, corpartha→ˈkɔɾˠpˠəɾˠə, cheithre→ˈçɛɾʲə
