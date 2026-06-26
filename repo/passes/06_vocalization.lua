@@ -18,6 +18,17 @@ return {
         goto continue
       end
 
+      -- Skip vocalization when 'i' is a palatal marker (preceded by another vowel).
+      -- dóibh → oː + vʲ (not vocalize i+bh to əi).
+      -- The 'i' between a vowel and bh/mh is marking palatalization, not forming
+      -- a diphthong with the following fricative.
+      if vowel.ortho == "i" then
+        local prev_t = tokens[i - 1]
+        if prev_t and prev_t.type == "vowel" then
+          goto continue
+        end
+      end
+
       local is_slender = vowel.ortho == "e" or vowel.ortho == "i" or vowel.ortho == "ea"
       local was_vocalized = false
 
