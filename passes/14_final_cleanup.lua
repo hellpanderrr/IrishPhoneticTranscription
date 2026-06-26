@@ -405,7 +405,8 @@ return {
       ::dev_continue::
     end
 
-    -- Step 6b: Devoice g before f/t/s -- regressive devoicing assimilation.
+    -- Step 6b: Devoice g before f/t/s/h -- regressive devoicing assimilation.
+    -- Also catches ɡ before h (from f-lenition in future-f forms like pógfaidh).
     for i = 1, #tokens - 1 do
       local c = tokens[i]
       local next_t = tokens[i + 1]
@@ -415,6 +416,11 @@ return {
       local np = next_t.phon
       if np == "fˠ" or np == "fʲ" or np == "t̪ˠ" or np == "tʲ" then
         c.phon = "k"
+      elseif np == "h" and next_t.ortho == "f" then
+        -- g before f-lenited h (future-f: pógfaidh→kə, tiocfad→kəd̪ˠ)
+        -- Devoice g→k and silence the f-h fricative
+        c.phon = "k"
+        next_t.phon = ""
       end
       ::dev2_continue::
     end
