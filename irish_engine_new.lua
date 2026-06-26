@@ -107,6 +107,11 @@ local function render_output(tokens)
   local parts = {}
   for i, token in ipairs(tokens) do
     if token.phon and token.phon ~= "" then
+        -- Skip hyphens in rendered output (e.g. t-ainm, -fidh).
+        -- Only skip hyphen characters, not all boundaries (spaces are needed).
+        if token.phon == "-" or token.ortho == "-" then
+          goto render_continue
+        end
       if token.stress and token.type == "cons" then
         -- IPA convention: ˈCV not CˈV — stress mark goes before entire onset.
         -- Check if an earlier consonant is also part of this onset cluster.
@@ -152,6 +157,7 @@ local function render_output(tokens)
       end
       table.insert(parts, token.phon)
     end
+    ::render_continue::
   end
   return table.concat(parts)
 end
