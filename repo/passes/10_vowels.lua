@@ -73,6 +73,38 @@ return {
         end
       end
 
+      -- Lexical: stressed io → ɪ in specific words (not iɔ).
+      -- fios→fʲɪsˠ, cion→cunˠ, sioc→ʃuk, etc.
+      -- Some check following consonant to pick ɪ vs ʊ.
+      if ortho == "i" and next and next.type == "vowel" and next.ortho == "o" and
+         context.word_ortho then
+        local w = context.word_ortho:lower()
+        -- IO→ʊ before c/k: sioc, pioc, phioc, prioc, phrioc, riocht, liom
+        -- IO→u before n: cion
+        local IO_TO_U = { sioc=true, pioc=true, phioc=true, prioc=true, phrioc=true, riocht=true, liom=true, cion=true }
+        -- IO→ɪ for most others: fios, lios, giob, etc.
+        local IO_TO_I = {
+          fios=true, lios=true, giob=true, ghiob=true,
+          mion=true, slios=true, smior=true, fionn=true,
+          briosc=true, prios=true, chion=true,
+        }
+        if IO_TO_U[w] then
+          -- Check if the expected quality is ʊ or u
+          local is_u = (w == "cion")
+          token.phon = is_u and "u" or "\xca\x8a"  -- u or ʊ
+          next.phon = ""
+          next.source = "io_reduced_to_u"
+          next.is_epenthetic = true
+          goto continue
+        elseif IO_TO_I[w] then
+          token.phon = "\xc9\xaa"  -- ɪ
+          next.phon = ""
+          next.source = "io_reduced_to_i"
+          next.is_epenthetic = true
+          goto continue
+        end
+      end
+
       -- Check if this vowel is the first element of a VV pair (split digraph).
       local is_digraph_first = next and next.type == "vowel"
 
