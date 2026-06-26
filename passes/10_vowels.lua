@@ -117,7 +117,11 @@ return {
       -- The dialect digraph resolution will set the correct phoneme.
       -- Without this guard, standalone i→ɪ, o→ɔ etc. would overwrite the digraph result.
       -- Exempt known digraph orthos (ae, ea, ai, etc.) which need need_resolve.
-      if is_digraph_first and not S.VOWEL_DIGRAPHS[ortho] then
+      -- Fada vowels (ó, ú, á, í, é) carry inherent length and should always
+      -- resolve to their long IPA values regardless of following vowel.
+      if is_digraph_first and not S.VOWEL_DIGRAPHS[ortho]
+         and ortho ~= "\xc3\xb3" and ortho ~= "\xc3\xba"
+         and ortho ~= "\xc3\xa1" and ortho ~= "\xc3\xad" and ortho ~= "\xc3\xa9" then
         need_resolve = false
       end
 
@@ -161,8 +165,8 @@ return {
           else
             token.phon = "iː"  -- word-final: aí -> iː
           end
-        elseif ortho == "óí" or ortho == "ó" then token.phon = (dv.long and dv.long.o) or "oː"
-        elseif ortho == "ú" then token.phon = (dv.long and dv.long.u) or "uː"
+        elseif ortho == "óí" or ortho == "ói" or ortho == "ó" then token.phon = (dv.long and dv.long.o) or "oː"
+        elseif ortho == "úi" or ortho == "ú" then token.phon = (dv.long and dv.long.u) or "uː"
         elseif ortho == "í" then token.phon = (dv.long and dv.long.i) or "iː"
         elseif ortho == "é" then token.phon = (dv.long and dv.long.e) or "eː"
         elseif ortho == "á" then token.phon = (dv.long and dv.long.a) or "ɑː"
