@@ -1,5 +1,7 @@
 -- Pass #1: Assign broad/slender polarity to consonants.
 -- Scans flanking vowels to determine palatal status.
+-- References: Hickey II.1.1 (polarity system), III.2.3.2 (lenition mutation outcomes),
+--  FG Ch.5 (Connacht consonant inventory)
 
 local S = require("passes._shared")
 
@@ -9,6 +11,7 @@ return {
 
   run = function(tokens, context)
     -- Simplify initial clusters (cn→cr, gn→gr, etc.) before polarity assignment
+    -- Hickey II.2.2: cluster simplification — /kn/, /ɡn/, /tn/, /mn/ reduced
     if #tokens >= 2 and tokens[1].type == "cons" and tokens[2].type == "cons" then
       local shift = S.INITIAL_CLUSTER_SHIFTS[tokens[1].ortho .. tokens[2].ortho]
       if shift then
@@ -21,6 +24,7 @@ return {
     end
 
     -- Assign ng polarity based on preceding broad vowel
+    -- Hickey II.1.8: velar nasal /ŋ/ broadens after back vowels
     for i = 1, #tokens - 1 do
       local vowel = tokens[i]
       local ng = tokens[i + 1]
@@ -35,6 +39,7 @@ return {
     -- Word-initial r is always broad (ɾˠ) in Connacht, regardless of the
     -- following vowel. rí /ɾˠiː/, ré /ɾˠeː/, reacht /ɾˠaxt̪ˠ/. Set this
     -- before the main loop so it isn't overridden by the next-vowel scan.
+    -- Hickey II.1.8: /r/ neutralized to [ɾˠ] word-initially
     if #tokens >= 1 and tokens[1].type == "cons" and tokens[1].ortho == "r"
        and tokens[1].palatal == nil then
       S.set_polarity(tokens[1], false)
@@ -56,6 +61,7 @@ return {
     -- Standalone lenited fricatives (bh, mh, bhf) → slender by default.
     -- These appear as isolated benchmark entries representing the lenited form.
     -- In isolation, "bh" and "mh" are pronounced with slender vʲ, not broad vˠ.
+    -- Hickey II.1.7.2: lenited labial fricatives — historical dependent phonemes
     if #tokens == 1 and tokens[1].type == "cons" and tokens[1].is_mutated then
       if tokens[1].ortho == "bh" or tokens[1].ortho == "mh" then
         S.set_polarity(tokens[1], true)
@@ -68,6 +74,9 @@ return {
     end
 
     -- Main polarity assignment for all consonants
+    -- Hickey II.1.1: polarity determined by flanking vowels —
+    --   e/i/é/í → palatal (slender), a/o/u/á/ó/ú → non-palatal (broad)
+    -- FG Ch.5: Connacht polarity patterns (Ceathrún Rua data)
     for i, token in ipairs(tokens) do
       if token.type ~= "cons" then goto continue end
       if token.palatal ~= nil then goto continue end  -- already set (e.g., ng)
@@ -94,6 +103,7 @@ return {
       -- propagates to a following consonant, but a final silent/quiet lenited
       -- fricative historically colors the vowel broadly (croith /kɾˠɔh/,
       -- sruith /sɾˠʊh/). Letting it go slender front-raises the vowel.
+      -- Hickey II.1.9.4: vowel gradation — broad coda preserves back vowel quality
       if token.is_mutated and i == #tokens and not next_vowel and prev_vowel and
          (prev_vowel.ortho == "oi" or prev_vowel.ortho == "ui") and
          (token.ortho == "th" or token.ortho == "sh" or token.ortho == "fh" or
@@ -102,6 +112,7 @@ return {
       end
 
       -- Sonorant polarity: when no vowel context, check next consonant
+      -- Hickey II.1.8: sonorants (l/n/r/m) assimilate to following consonant's polarity
       local sonorants = { l = true, n = true, r = true, m = true }
       if sonorants[token.ortho] and not polarity then
         local next_cons = nil
@@ -120,6 +131,7 @@ return {
 
     -- Word-final consonant after "ío" digraph → broad (Connacht phonology)
     -- míol → mʲiːlˠ, cíor → ciːɾˠ, síob → ʃiːbˠ, críon → cɾʲiːnˠ
+    -- Hickey II.1.9: long /iː/ from ío — following consonant stays broad in Connacht
     for i, token in ipairs(tokens) do
       if token.type ~= "cons" then goto skip end
       local prev = (i > 1) and tokens[i - 1] or nil
@@ -139,6 +151,7 @@ return {
     -- "rr" geminate: in Irish, two consecutive r's (rr orthography) are
     -- always broad regardless of surrounding vowel context.
     -- giorria /ɟɪɾˠiə/, charria /xaɾˠiə/
+    -- Hickey II.1.8: geminate rr retains broad quality (historical geminate)
     for i = 1, #tokens - 1 do
       local t1, t2 = tokens[i], tokens[i+1]
       if t1 and t1.type == "cons" and t1.ortho == "r" and

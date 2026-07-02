@@ -1,6 +1,7 @@
 -- Pass #7: Vowel nasal raising.
 -- o/u/ó/ú -> [uː] before geminate nasals (nn, ng, doubled n n).
 -- Runs after vocalization so vocalized forms aren't re-nasalized.
+-- References: Hickey II.1.9.4 (vowel gradation — nasal raising before geminate sonorants)
 
 local S = require("passes._shared")
 
@@ -28,7 +29,7 @@ return {
           tokens[i + 2] and tokens[i + 2].type == "cons" and tokens[i + 2].ortho == "n"
 
       if is_broad_nasal or is_geminate_n then
-        -- Only SHORT o/u raise before geminate nasals (Hickey: o->u before
+        -- Only SHORT o/u raise before geminate nasals (Hickey II.1.9.4: /o/→[ʊ] before
         -- nasals). Long ó/ú already carry length and keep it (dhónna->oːn,
         -- not ʊn). brúnn keeps uː.
         if ortho == "o" or ortho == "u" then

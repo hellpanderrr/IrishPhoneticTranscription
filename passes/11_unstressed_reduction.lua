@@ -1,6 +1,8 @@
 -- Pass #11: Reduce unstressed short vowels to schwa.
 -- In unstressed positions, short vowels reduce to ə.
 -- Long vowels (with ː) are never reduced.
+-- References: Hickey II.1.9.6 (unstressed vowels → only [ə] and [ɪ] possible),
+--  Hickey II.2.7.2 (final devoicing), II.1.9.4 (vowel gradation)
 
 local S = require("passes._shared")
 
@@ -93,6 +95,7 @@ return {
 
       -- Don't reduce ɪ after palatal c/ɟ (preserves Irish slender vowel quality).
       -- A few lexical exceptions (airgid, eiscir) need regular reduction.
+      -- Hickey II.1.9.6: slender vowel quality [ɪ] preserved after palatal stops
       if phon == "ɪ" then
         local prev_t = tokens[i - 1]
         if prev_t and prev_t.type == "cons" and
@@ -109,6 +112,7 @@ return {
       -- the slender offglide survives before these: expected ɪ ~89% before
       -- slender t, ~91% before p, and c is already covered by the word-final
       -- rule above for medial positions too. afraic, ceimic, fisic, critic.
+      -- Hickey II.1.9.6: ɪ offglide survives before slender voiceless stops
       if phon == "ɪ" then
         local nxt = tokens[i + 1]
         if nxt and nxt.type == "cons" and nxt.palatal == true and nxt.phon ~= "" then

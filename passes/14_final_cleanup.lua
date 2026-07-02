@@ -1,12 +1,9 @@
 -- Pass #14: Final cleanup and diacritics.
--- Hickey §2.6.2: Final lenited fricatives th, dh, gh are silent.
--- Hickey §2.6.3: Devoicing rules in coda position.
--- 1. Remove final silent mutated fricatives (th, dh, gh)
--- 2. Strip trailing ç/ɣ/h from vowels that have a long phon
--- 3. Unstressed final devoicing: slender g [ɟ] -> [c] (Hickey §2.6.3)
--- 4. ch + s -> tʃ sandhi (assimilation, Hickey §2.4)
--- 5. Devoice b/d/g before th: b+th->p, d+th->t, g+th->k (Hickey §2.6.3)
--- 6. Palatal C before back rounded vowel -> j-glide insertion (Hickey §2.6.3)-- 5. Devoice b/d/g before th: b+th→p, d+th→t, g+th→k
+-- References: Hickey II.1.7.2 (final lenited fricatives silent),
+--  Hickey II.2.7.2 (final devoicing), II.2.7.1 (internal lenition),
+--  Hickey II.1.9.9.1 (vocalization of historical fricatives, digraph resolution),
+--  Hickey II.1.7 (consonant system — sandhi affrication [tʃ] from /x/+/s/),
+--  Hickey II.3 (function word stress/prosody), II.2.7.5 (assimilation across word boundaries)
 
 local S = require("passes._shared")
 local ustring = require("ustring.ustring")
@@ -27,9 +24,9 @@ return {
 
   run = function(tokens, context)
     -- Step 1: Handle final silent mutated fricatives
-    -- dh and gh are always silent word-finally in Connacht (Hickey §2.6.2).
+    -- dh and gh are always silent word-finally in Connacht (Hickey II.1.7.2).
     -- th after SHORT vowels retains h (dath→d̪ˠah, croith→kɾˠɔh); th after LONG
-    -- vowels/diphthongs is silent (síth→ʃiː, fáth→fˠɑː). Hickey §2.6.3.
+    -- vowels/diphthongs is silent (síth→ʃiː, fáth→fˠɑː). Hickey II.1.7.2.
     if #tokens > 0 then
       local last = tokens[#tokens]
       if last.type == "cons" and (last.ortho == "dh" or last.ortho == "gh") then
@@ -91,7 +88,11 @@ return {
     end
 
     -- Step 4: Unstressed final devoicing (Connacht/Ulster) — TIGHTENED
-    -- Devoice slender g [ɟ] -> [c] ONLY when preceded by schwa [ə]. Empirical
+    -- Devoice slender g [ɟ] -> [c] ONLY when preceded by schwa [ə].
+    -- Hickey II.1.8: final palatal velar devoices after unstressed [ə]
+    --   (Nollaig→[ˈn̪ˠɔl̪ˠəkʲ], coisrig→[kˠɔʃɾʲɪc])
+    -- Hickey II.2.7.2: final devoicing in unstressed syllables
+    -- Empirical
     -- analysis of the benchmark: of 39 slender-g-final words the rule fired on,
     -- 33 were over-devoiced (exp keeps ɟ: cúig, tréig, bróig, smig, etc.) and
     -- only 6 were correct — all 6 had schwa before the final g (Nollaig,
@@ -197,7 +198,7 @@ return {
       end
 
       -- Step 4h: á→aː in borrowings and specific contexts.
-      -- Hickey §2.3: loanwords may retain [aː] where native words have [ɑː].
+      -- Hickey II.1.9: loanwords may retain [aː] where native words have [ɑː].
       local AA_OVERRIDE = {
         ["beár"]=true, ["seám"]=true, ["micheál"]=true,
         ["áine"]=true, ["bleánach"]=true, ["beáltaine"]=true,
@@ -214,7 +215,8 @@ return {
 
     -- Step 4i: dh+cons → i vocalization (Connacht).
     -- When orthographic dh is followed by a consonant, it vocalizes to [i],
-    -- forming a diphthong with the preceding vowel. Hickey §2.6.2.
+    -- forming a diphthong with the preceding vowel.
+    -- Hickey II.1.9: historical /ɣ/ before consonant → [i] (fadhb→[fˠəibˠ])
     -- fadhb → fˠəibˠ, maidhm → mˠəimʲ, straidhn → sˠt̪ˠɾˠəinʲ, taghd → t̪ˠəid̪ˠ
     local DH_VOCALIZE = {
       fadhb=true, badhb=true, ["bhfadhb"]=true,
@@ -259,7 +261,8 @@ return {
 
     -- Step 4l: oí → iː lexical overrides.
     -- The normalizer strips fadas, so oí becomes oi and resolves as /ɔ/.
-    -- These words need the o vowel silenced and í→iː kept. Hickey §1.4.
+    -- These words need the o vowel silenced and í→iː kept.
+    -- Hickey II.1.9: oí as word-final diphthong → [iː] (croí→[kɾˠiː])
     local OI_SILENCE_O = {
       snoi=true, chroi=true, croi=true,
       snoiodoireacht=true, ["gra mo chroi"]=true,
@@ -331,16 +334,11 @@ return {
     -- Step 4g: Fix vowel pairs split by fadas. When the tokenizer splits
     -- digraphs like ea/ui by a fada mark on the second vowel, the first
     -- vowel should be silent in these specific combos.
-    -- References:
-    -- - "eá" → ɑː: Hickey §1.4 (long vowels and diphthongs), the first
-    --   element of the ea digraph is always elided when the second carries
-    --   a fada. The result is a long back vowel /ɑː/.
-    -- - "uí" → iː: Hickey §1.4; uí as a word-final diphthong reduces to
-    --   a long front vowel /iː/, the initial /u/ offglide is dropped.
-    -- - "i"+"a" → iə: Hickey §1.4; the diphthong /iə/ has ə as second
-    --   element in all dialects; a is never realized as /a/ in this position.
-    -- - "e"+"a" → a: Hickey §1.4; ea as a digraph always produces /a/ or
-    --   /aː/; the first element is silent.
+    -- Hickey II.1.9: split digraphs with fada — first element elides
+    --   eá→[ɑː] (Hickey I.4: long vowels from digraphs),
+    --   uí→[iː] (word-final diphthong drops /u/ offglide),
+    --   i+a→[iə] (centering diphthong, second element = [ə]),
+    --   e+a→[a] (ea digraph, first element silent)
     for i = 1, #tokens - 1 do
       local t = tokens[i]
       local nxt = tokens[i + 1]
@@ -367,6 +365,7 @@ return {
     end
 
     -- Step 5: ch + s ->> tʃ sandhi
+    -- Hickey II.1.7: sandhi affricate [tʃ] from /x/+/s/ (bhíodh sé→[vʲiːtʃeː])
     for i = 1, #tokens - 1 do
       if tokens[i].phon == "x" and tokens[i + 1].ortho == "s" then
         tokens[i].phon = "tʃ"; tokens[i + 1].phon = ""
@@ -377,6 +376,8 @@ return {
     -- Handles verbal adjective forms: fágtha→kə, scuabtha→pˠə, lúbtha→pˠə
     -- Also silences th after ANY obstruent (incl. c, ch, p, f, s) — the default
     -- medial th outcome is h in V_th contexts but silent in C_th clusters.
+    -- Hickey II.1.8: regressive devoicing before th — voiced stop devoices,
+    --   th elides in C+C clusters (Hickey II.2.7.2)
     for i = 1, #tokens - 1 do
       local c = tokens[i]
       local next_t = tokens[i + 1]
@@ -448,6 +449,8 @@ return {
     -- Step 8:*  (was 7: aspiration removed — dataset doesn't use ʰ
     -- Only insert [j] after palatal C when followed by back rounded vowels (ɔ, o, u, ʊ).
     -- Broad C + front V → [w] is not productive; removed as it produced ~1000 false positives.
+    -- Hickey II.1.9.8: on-glide [j] after palatal C before back rounded vowels
+    --   (beo→[bʲoː], mion→[mʲʌnˠ]); [w] offglide after broad C before front V (buí→[bˠwiː])
     for i, token in ipairs(tokens) do
       if token.type ~= "cons" then goto continue end
       if token.phon == "" then goto continue end
@@ -503,6 +506,8 @@ return {
 
     -- Step 9: Function word overridess — replace ALL phonemes with hardcoded IPA.
     -- Must be the very last step so no further rules touch these tokens.
+    -- Hickey II.3: grammatical words (proclitics, prepositions, particles)
+    --   lack lexical stress and have fixed phonetic forms per dialect
     -- Split tokens into word segments so function words inside multi-word phrases are caught.
     -- Track segment token-index ranges and the boundary that follows each segment
     -- so Step 10 can blank inter-word boundaries for proclitic + content fusions.

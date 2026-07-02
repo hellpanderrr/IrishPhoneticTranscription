@@ -1,6 +1,7 @@
 -- Pass #8: Vowel gradation before slender codas.
 -- Before slender ng -> [ɪ]
 -- Before slender nn -> [ɪ]
+-- References: Hickey II.1.9.4 (vowel gradation — coda-driven vowel quality)
 
 local S = require("passes._shared")
 

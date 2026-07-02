@@ -1,6 +1,7 @@
 -- Pass #2: Calculate primary stress position.
 -- Also computes is_monosyllabic, vowel_count, root_vowel_count.
 -- Runs early so vocalization (pass #6) and reduction (pass #11) are stress-aware.
+-- References: Hickey II.3 (stress), FG Ch.5 (Connacht stress patterns)
 
 local S = require("passes._shared")
 
@@ -28,6 +29,8 @@ return {
     if #segments == 0 then return tokens end
 
     local UNSTRESSED = {
+      -- Hickey II.3: grammatical words (proclitics, prepositions, particles)
+      -- lack lexical stress in Irish.
       ["'un"]=true,["un"]=true,["'ur"]=true,["ur"]=true,["-as"]=true,["-sa"]=true,
       ["-se"]=true,["-ne"]=true,["-na"]=true,["-im"]=true,["-fas"]=true,["-fá"]=true,
       ["-fí"]=true,["-tá"]=true,["-ím"]=true,bhur=true,["-óidh"]=true,["-ithe"]=true,
@@ -83,6 +86,7 @@ return {
       end
 
       -- Prefix check for this segment
+      -- Hickey II.3: prefixes do not attract stress; root-initial stress dominates
       local has_prefix = false
       if seg_vc >= 2 and seg[1].type == "cons" and seg[2] and
          (seg[2].type == "vowel" or seg[2].type == "cons") then
@@ -91,6 +95,8 @@ return {
       end
 
       -- Find stress position
+      -- Hickey II.3: lexical stress falls on first syllable of the root in
+      -- Connacht/Ulster (Munster differs — stress attracted to long vowels)
       local stress_index = S.vowel_token_index(seg)
       if not stress_index then goto next_seg end
 

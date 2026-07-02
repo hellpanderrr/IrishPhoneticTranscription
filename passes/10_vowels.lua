@@ -1,6 +1,10 @@
 -- Pass #10: Resolve vowel tokens to IPA.
 -- Dialect-aware via context.dialect.
 -- Handles short/long/diphthong mappings plus contextual allophony.
+-- References: Hickey II.1.9 (vowel system — inventory, short/long/diphthongs),
+--  Hickey II.1.9.4 (vowel gradation — coda-driven allophony),
+--  Hickey II.1.9.5 (short vowel qualities), II.1.9.6 (unstressed vowels),
+--  FG Ch.5 (Connacht vowel inventory), FG Ch.7 (orthography→IPA mappings)
 
 local S = require("passes._shared")
 
@@ -19,9 +23,9 @@ return {
       local next = tokens[i + 1]
       local prev = tokens[i - 1]
 
-      -- Stressed 'io' collapses to [ʊ] before certain consonants (Summary
-      -- Ch.1 5.2.3: /ʊ/ from <io> in stressed syllable, e.g. iomarca,
-      -- piocadh). The following o is silenced. Covers:
+      -- Stressed 'io' collapses to [ʊ] before certain consonants (Hickey II.1.9.5:
+      -- /ʊ/ from <io> in stressed syllable, e.g. iomarca, piocadh). The following
+      -- o is silenced. Covers:
       --  - io+m : iom- prefix (iomlan, iompar, iomra, ...), liom- (liomog)
       --  - io+c : the tiocf- future (tiocfad, dtiocfa, thiocfa) and pioc/phioc
       --  - io+f : Stiofan/Stiofain
@@ -111,6 +115,7 @@ return {
       -- Silencing standalone i when it's a palatalization marker.
       -- Pattern: vowel + i + consonant => i is always a palatal marker.
       -- The consonant already gets palatal=true from the polarity pass.
+      -- Hickey II.1.9: i between V and C is non-syllabic palatalization marker
       if ortho == "i" and next and next.type == "cons" and prev and prev.type == "vowel" then
         token.phon = ""
         token.source = "palatal_marker_silenced"
@@ -120,6 +125,7 @@ return {
       -- Silencing i before u (palatalization marker in iú/iu patterns).
       -- Pattern: i + u => i is a palatalization marker, u carries the vowel.
       -- E.g., siúl → ʃuːlˠ, fiú → fʲuː
+      -- Hickey II.1.9: iú/iu — i marks preceding palatal, ú/u carries vowel
       if ortho == "i" and next and next.type == "vowel" and
          (next.ortho == "u" or next.ortho == "ú") then
         token.phon = ""
@@ -129,6 +135,7 @@ return {
 
       -- Handle ae digraph (split as a + e) BEFORE need_resolve guard.
       -- Resolve a+e → eː, silence the e token.
+      -- Hickey II.1.9: ae→/eː/ — digraph with first element carrying the phoneme
       if ortho == "a" and is_digraph_first and next.ortho == "e" then
         token.phon = "eː"
         next.phon = ""
@@ -158,6 +165,8 @@ return {
       end
 
       if need_resolve then
+        -- Hickey II.1.7.2: a+dh → [ɑː] — dh silences and vowel lengthens
+        --   (-adh suffix: tick→tack in verb endings keeps short for reduction)
         if next and next.type == "cons" and next.ortho == "dh" and
            (ortho == "a" or ortho == "ai" or ortho == "á" or ortho == "aí") then
           -- Only raise to long vowel when stressed. Unstressed suffix -adh
@@ -166,6 +175,10 @@ return {
           if ortho == "aí" then token.phon = "ɑːiː"
           elseif token.stress then token.phon = "ɑː" end
         elseif ortho == "aoi" then token.phon = "iː"
+        -- Hickey II.1.9: dialect-specific digraph resolutions (Connacht table)
+        --   ao→[iː], ai→[a], ea→[a], eo→[oː], oi→[ɔ], ui→[ʊ],
+        --   ua→[uə], ia→[iə], ío→[iː], éi→[eː] (Connacht)
+        -- FG Ch.5: Ceathrún Rua vowel inventory
         elseif ortho == "ao" then token.phon = dv.ao
         elseif ortho == "eo" then token.phon = dv.eo
         elseif ortho == "ea" then token.phon = dv.ea
@@ -202,6 +215,8 @@ return {
         elseif ortho == "í" then token.phon = (dv.long and dv.long.i) or "iː"
         elseif ortho == "é" then token.phon = (dv.long and dv.long.e) or "eː"
         elseif ortho == "á" then token.phon = (dv.long and dv.long.a) or "ɑː"
+        -- Hickey II.1.9: short vowel inventory — /ɪ, e, a, ʌ, ʊ/ (Connacht)
+        --   FG Ch.5: short vowel allophones in Connacht (Ceathrún Rua data)
         elseif ortho == "o" then token.phon = (dv.short and dv.short.o) or "ɔ"
         elseif ortho == "u" then token.phon = (dv.short and dv.short.u) or "ʊ"
         elseif ortho == "i" then token.phon = (dv.short and dv.short.i) or "ɪ"
@@ -353,9 +368,13 @@ return {
 
       -- /x/ palatal non-assimilation: blocks vowel fronting
       -- bocht → bˠɔxt̪ˠ, NOT *bˠɪxʲtʲə
+      -- Hickey II.1.7.2: /x/ does not participate in palatal harmony —
+      --   preceding vowel retains back quality
       local has_x_block = next and next.type == "cons" and next.ortho == "ch"
 
       -- Contextual: consonant polarity affects vowel quality
+      -- Hickey II.1.9.5: vowel gradation — coda consonant determines short vowel quality
+      --   slender coda→[ɪ ɛ], broad coda→[a ɔ ʊ]
       if next and next.type == "cons" and not has_x_block and not is_digraph_first then
         if next.palatal == true and (ortho == "o" or ortho == "u") then
           token.phon = "ɪ"
@@ -372,6 +391,7 @@ return {
 
       -- oi before palatal consonant: front to ɛ (not back ɔ)
       -- goilim → ɡɛlʲəmʲ, foide → fˠɛdʲə, coire → kɛɾʲə
+      -- Hickey II.1.9.4: /oi/→[ɪ ɛ] before slender consonants (vowel gradation)
       if ortho == "oi" and next and next.type == "cons" and next.palatal == true then
         if next.ortho == "n" or next.ortho == "m" or next.ortho == "t" then
           token.phon = "ɪ"
@@ -426,6 +446,7 @@ return {
 
       -- ui before palatal consonant: front to ɪ (not back ʊ)
       -- muiníneach → mˠɪnʲiːnʲəx, cuireann → kɪɾʲən̪ˠ
+      -- Hickey II.1.9.4: /ui/→[ɪ] before slender consonants
       if ortho == "ui" and next and next.type == "cons" and next.palatal == true then
         -- Lexical exceptions: keep ʊ instead of fronting to ɪ
         local keep_u = false
@@ -582,6 +603,7 @@ return {
         end
       end
 
+      -- Hickey II.1.7.2: dh following o/u coalesces to [uː]
       -- dh triggers raising
       if next and next.type == "cons" and next.ortho == "dh" then
         if ortho == "o" or ortho == "u" then
@@ -689,6 +711,8 @@ return {
       end
 
       -- Previous consonant polarity affects preceding vowel quality
+      -- Hickey II.1.9.4: preceding consonant polarity propagates to vowel quality
+      --   broad onset → [ə], slender onset → [ɪ] for unstressed vowels
       if prev and prev.type == "cons" then
         if prev.palatal == true then
           -- Exceptions: -is suffix words that should reduce to ə (milis, rinnis, Rómáinis)

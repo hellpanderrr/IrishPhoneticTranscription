@@ -1,4 +1,23 @@
 -- Shared data and utilities for all passes.
+--
+-- Theory references (used across all passes):
+--   Hickey 2014: Hickey, R. "The Sound Structure of Modern Irish" (De Gruyter, 2014)
+--     Ch.II = The Phonological Framework
+--       §1.1 palatal vs non-palatal (polarity), §1.7 consonants (stops, fricatives),
+--       §1.8 sonorants (3-way l/n, geminates, historical development §1.8.6),
+--       §1.9 vowels (short/long/diphthongs, §1.9.4 vowel gradation,
+--         §1.9.5 short vowels, §1.9.6 unstressed vowels, §1.9.7 diphthongs,
+--         §1.9.8 glides, §1.9.9.1 vocalisation of fricatives),
+--       §2 phonotactics (§2.2 cluster simplification, §2.7.2 final devoicing,
+--         §2.7.1 internal lenition, §2.8 epenthesis/svarabhakti,
+--         §2.9 metathesis, §3 stress)
+--   Ch.III = The Morphonology of Irish
+--       §2.3.1 nasalisation (eclipsis), §2.3.2 lenition
+--   FG: "Fuaimeanna na Gaeilge: An Caighdeán Liteartha agus An Ghaeilge Chónnta"
+--       (An Gúm, 2003)
+--     Ch.5 = Connacht (Ceathrún Rua) sound inventory,
+--     Ch.7 = orthography-to-pronunciation mappings,
+--     Appendix A = full sound catalog per dialect
 
 local ustring = require("ustring.ustring")
 local N = ustring.toNFC
