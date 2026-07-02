@@ -13,17 +13,60 @@ repo/.graymatter/
 
 # Superpowers
 .superpowers/
+docs/superpowers/
 
-# Analysis and comparison scripts
+# Graphify cache
+graphify-out/cache/
+graphify-out/cost.json
+
+# Analysis/comparison temp scripts
 dolgo_cmp.py
 dolgo_score.py
 _dolgo_*.json
+_add_*
+_after*
+_analyze*
+_apply*
+_base*
+_baseline*
+_before*
+_benchmark*
+_check*
+_cur*
+_current*
+_dolgo*
+_error*
+_fix_*
+_fresh*
+_gen_*
+_investigate*
+_lev1*
+_new*
+_post*
+_prev*
+_py*
+_quick*
+_scan*
+_tmp*
+_with_*
+analyze_*
+categorize_*
+compare_*
+deep_analysis*
+engine_compare*
+error_analysis*
+fresh_compare*
+gen_results*
+improvement_plan*
+implementation_plan*
+mono_compare*
+stress_initial*
 
 # Results
-data/results.csv
-
-# Plans
-docs/superpowers/plans/
+repo/results.csv
+repo/results_new.*
+repo/results_*.tsv
+repo/new_results.csv
 
 # Temp benchmark files
-%TEMP%*/
+%TEMP%*
