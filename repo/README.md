@@ -1,168 +1,92 @@
+# Irish G2P Engine
 
-# `IrishPhoneticTranscription`
+A rule-based, standalone **grapheme-to-phoneme (G2P) engine for Irish**, implemented in Lua. Converts standard Irish orthography to IPA phonetic representation, targeting the **Connacht dialect**. Academic/experimental tool based on Raymond Hickey's *The Sound Structure of Modern Irish* (2014) and Ó Raghallaigh's *Fuaimeanna na Gaeilge*.
 
-## Project Overview
+## Architecture
 
-`IrishPhoneticTranscription` is a rule-based, standalone grapheme-to-phoneme (G2P) engine for the Irish language, implemented in Lua. The system's primary goal is to convert standard Irish orthography into its phonetic representation (IPA), specifically targeting the phonology of the **Connacht dialect**.
+Modular **16-pass token-array pipeline**. The engine tokenizes orthographic input, then processes the token array sequentially through specialized passes, each handling one phonological domain:
 
-This project serves as an exploration of modeling complex, context-sensitive phonological rules. It is a work-in-progress and should be considered an academic or experimental tool rather than a production-ready, pan-dialectal G2P solution.
+| Pass | Name | Purpose |
+|------|------|---------|
+| 01 | `polarity` | Consonant broad/slender polarity |
+| 02 | `stress` | Default initial-stress + lexical exceptions |
+| 03 | `eclipsis` | Eclipsis detection and resolution |
+| 04 | `cluster_simplify` | Cluster reduction (chn→chr, cn→cr, etc.) |
+| 05 | `mutated_fricatives` | Lenited consonant resolution (bh, mh, dh, gh, etc.) |
+| 06 | `vocalization` | Fricative vocalization (agh, adh, abh, amh → vowel/diphthong) |
+| 06d | `anticipatory_raising` | Anticipatory vowel raising before velarized consonants |
+| 07 | `nasalization` | Nasal raising effects |
+| 08 | `slender_coda` | Slender coda consonant handling |
+| 09 | `consonants` | Consonant quality, devoicing, and contextual allophony |
+| 09b | `vowel_adjunct` | Additional vowel-consonant interactions |
+| 10 | `vowels` | Vowel resolution + contextual allophony |
+| 11 | `unstressed_reduction` | Unstressed vowel reduction (→ ə, ɪ) |
+| 12 | `epenthesis` | Epenthetic vowel insertion in clusters |
+| 13 | `sonorants` | Sonorant dental/postalveolar diacritics |
+| 14 | `final_cleanup` | Final IPA cleanup, artifact removal |
 
-## Current Status & Known Issues
+## Repository Structure
 
-The engine correctly models a significant portion of Connacht Irish phonology but has several known limitations and areas requiring further development. Users should be aware of these issues before relying on the output for critical applications.
-
-### Primary Limitations:
-
-1.  **Strict Dialectal Focus:** The output is heavily biased towards a generalized Connacht phonology. It does **not** accurately model key features of Munster (e.g., stress patterns) or Ulster (e.g., vowel qualities, lenition of `an`). Using this script for non-Connacht text will produce significant dialectal mismatches.
-2.  **Stress System:** The current stress assignment relies on a default initial-stress rule supplemented by a **limited lexical exception list**. Consequently, it frequently fails to correctly place stress on:
-    *   Loanwords (e.g., `ospidéal`, `tobac`).
-    *   Words with stress-attracting derivational suffixes (e.g., `-án`, `-óir`).
-3.  **Sandhi (Word Boundary Phenomena):** Sandhi rules are currently disabled and underdeveloped. The script processes each word in isolation, meaning it does not model phonetic changes that occur across word boundaries (e.g., assimilation, elision). This can lead to inaccuracies in fluent text transcription.
-4.  **Inconsistent Lenition of `sh` and `th`:** The realization of initial lenited `sh` and `th` is a known point of failure. The current rule set struggles to consistently apply the correct phonetic output (`/h/` vs. `/ç/`) based on the quality of the following vowel. *See `a Sheáin` vs. `thóg` in test results.*
-5.  **Vocalization & Hiatus:** The vocalization of intervocalic lenited consonants (`bh`, `mh`, `dh`, `gh`) is inconsistent. The script often produces diphthongs where a long vowel or complete elision is expected, or vice-versa. *See `leabhar` and `láimh` in test results.*
-
-## Technical Architecture
-
-The transcription process is a multi-stage pipeline, where the output of one stage becomes the input for the next. This architecture is designed for modularity but also introduces complexity, as errors in early stages can cascade.
-
-### Core Pipeline Stages:
-
-1.  **Lexical Lookup:** An initial check against a hard-coded table of irregular words. **Current Weakness:** The exception list is small and requires significant expansion to improve accuracy on common words.
-2.  **Orthographic Normalization:** Simplifies consonant clusters (e.g., `cn` -> `cr`).
-3.  **Marker-Based Transformation:** The core of the engine. A series of stages insert unique markers for orthographic features (e.g., `bh` -> `MKR_BH`), which are then resolved into base phonemes.
-4.  **Procedural Vowel Allophony:** A critical, complex stage that attempts to model context-sensitive vowel changes.
-    *   **Implementation:** It uses a single procedural function to handle rule precedence, first resolving long vowels and then applying a prioritized list of contextual rules (nasal raising, velar raising, gradation) to the remaining short vowels.
-    *   **Current Weakness:** This stage is highly sensitive to the input from previous marker resolution stages. Errors in consonant quality assignment can prevent allophony rules from triggering correctly. The `greamaím` test case highlights remaining issues in this area.
-5.  **Cleanup & Diacritic Application:** Final rules add quality markers (`ʲ`, `ˠ`, `̪`) and clean up any remaining artifacts.
+```
+repo/
+├── irish_engine_new.lua      # Engine entry point: tokenizer + pass orchestrator
+├── irish.lua                 # Compatibility alias → irish_engine_new
+├── passes/                   # 18 module files (16 passes + init + shared)
+│   ├── init.lua              # Pass ordering
+│   ├── _shared.lua           # Shared definitions (VOWEL_DIGRAPHS, DIALECTS, make_token)
+│   ├── 01_polarity.lua
+│   ├── ...
+│   └── 14_final_cleanup.lua
+├── archive/                  # Previous engine versions (monolith, tokens prototype)
+│   ├── irish.lua             # Original monolith entry point
+│   ├── irish_core.lua        # Monolith phonetic data
+│   ├── irish_tokens.lua      # Token-prototype (predecessor to passes/)
+│   └── regression*.lua       # Old regression tests
+├── theory/                   # Reference materials
+│   ├── Fuaimeanna na Gaeilge — Chapter 1 Summary.txt
+│   ├── The Sound Structure of Modern Irish — Hickey Ch.1.txt
+│   └── The Sound Structure of Modern Irish — Hickey Ch.2.txt
+├── data/
+│   ├── connacht_only.csv     # Wiktionary IPA: Connacht dialect (6,593 words)
+│   └── all_regions.csv       # Wiktionary IPA: all Irish dialects
+├── ustring/                  # Unicode-aware string library for Lua 5.4
+├── bench_run.lua             # Benchmark harness
+└── summary.md                # Detailed project summary
+```
 
 ## Usage
 
 ### Prerequisites
+- Lua 5.4+
+- `ustring` library (included at `ustring/`)
 
-*   Lua 5.4+
-*   `ustring` library 
-
-### Command-Line Execution
-
-
-**Transcribe a string:**
+### Transcribe a word
 ```sh
- >>> lua irish.lua test
- ˈtʲɛʃtʲ
+lua -e "local e=require('irish_engine_new'); print(e.transcribe('seomra','connacht'))"
 ```
 
-**Debug Mode:**
-The script includes a verbose debug mode that logs the transformation at each stage of the pipeline. To enable it, pass the `--d` flag.
-
+### Run benchmark
 ```sh
- >>> lua irish.lua --d test
-    MIN_DBG (Stage2_5_M):   Stage2_5_MarkSuffixes START: In=    test     Map size:      0
-    MIN_DBG (Stage2_5_M):  END: Out=    test     Map size:      4
-    MIN_DBG (Stage2_5_M): Af. Stage2_5_MarkSuffixes: [test]
-    MIN_DBG (MarkDigrap):   MarkDigraphsAndVocalisationTriggers START: In=      test     Map size:      4
-    MIN_DBG (MarkDigrap):  END: Out=    test     Map size:      4
-    MIN_DBG (Stage3_1_M):   Stage3_1_MarkerResolution START: In=        test     Map size:      4
-    MIN_DBG (Stage3_1_M):  END: Out=    test     Map size:      4
-    MIN_DBG (ConsonantR): OVERRIDE (Initial C): For 't', next_v_group 'e' with following cons 'st' implies -> slender
-    MIN_DBG (ConsonantR): DEBUG DETERMINE_C_QUAL (Fallback): For 's' in 'test' (idx 3): next_v_group=''(nil), prev_v_group='e'(slender) -> slender
-    MIN_DBG (ConsonantR): DEBUG DETERMINE_C_QUAL (Fallback): For 't' in 'test' (idx 4): next_v_group=''(nil), prev_v_group='e'(slender) -> slender
-    MIN_DBG (Stage3_2_A):   ApplyStress START: In=      t'es't'  (Original Ortho: '     test    ') Map size:    1
-    MIN_DBG (Stage3_2_A): ApplyStress: Adding stress to '       ˈt'es't'        '.
-    MIN_DBG (Stage3_2_A): Ortho map updated after stress application. Old map size: 1 -> New map size: 2
-    MIN_DBG (Stage3_2_A):  END: Out=    ˈt'es't'         Map size:      2
-    MIN_DBG (Stage3_2_A): Af. Stage3_2_ApplyStress: [ˈt'es't']
-    MIN_DBG (Stage4_0_S):   Stage4_0_SpecificOrthoToTempMarker START: In=       ˈt'es't'         Map size:      2
-    MIN_DBG (Stage4_0_S):  END: Out=    ˈt'es't'         Map size:      2
-    MIN_DBG (Stage4_0_1):   Stage4_0_1_Resolve_CH_Marker START: In=     ˈt'es't'         Map size:      2
-    MIN_DBG (Stage4_0_1):  END: Out=    ˈt'es't'         Map size:      2
-    MIN_DBG (Stage4_1_V):   Stage4_1_VocmarkToTempMarker START: In=     ˈt'es't'         Map size:      2
-    MIN_DBG (Stage4_1_V):  END: Out=    ˈt'es't'         Map size:      2
-    MIN_DBG (Stage4_2_L):   Stage4_2_LongVowelsOrthoToTempMarker START: In=     ˈt'es't'         Map size:      2
-    MIN_DBG (Stage4_2_L):  END: Out=    ˈt'es't'         Map size:      2
-    MIN_DBG (Stage4_3_D):   Stage4_3_DiphthongsOrthoToTempMarker START: In=     ˈt'es't'         Map size:      2
-    MIN_DBG (Stage4_3_D):  END: Out=    ˈt'es't'         Map size:      2
-    MIN_DBG (Stage4_4_R):   Stage4_4_ResolveTempVowelMarkers START: In= ˈt'es't'         Map size:      2
-    MIN_DBG (Stage4_4_R):  END: Out=    ˈt'es't'         Map size:      2
-    MIN_DBG (Stage4_4_1):   Stage4_4_1_VocalizeLenitedFricatives START (Proc Helper): In=       ˈt'es't'
-    MIN_DBG (Stage4_4_1):   Loop 1: Current unit: 'ˈ'
-    MIN_DBG (Stage4_4_1):     new_units_build before:
-    MIN_DBG (Stage4_4_1):     new_units_build after add: ˈ
-    MIN_DBG (Stage4_4_1):   Loop 2: Current unit: 't''
-    MIN_DBG (Stage4_4_1):     new_units_build before: ˈ
-    MIN_DBG (Stage4_4_1):     new_units_build after add: ˈt'
-    MIN_DBG (Stage4_4_1):   Loop 3: Current unit: 'e'
-    MIN_DBG (Stage4_4_1):     new_units_build before: ˈt'
-    MIN_DBG (Stage4_4_1):     new_units_build after add: ˈt'e
-    MIN_DBG (Stage4_4_1):   Loop 4: Current unit: 's''
-    MIN_DBG (Stage4_4_1):     new_units_build before: ˈt'e
-    MIN_DBG (Stage4_4_1):     new_units_build after add: ˈt'es'
-    MIN_DBG (Stage4_4_1):   Loop 5: Current unit: 't''
-    MIN_DBG (Stage4_4_1):     new_units_build before: ˈt'es'
-    MIN_DBG (Stage4_4_1):     new_units_build after add: ˈt'es't'
-    MIN_DBG (Stage4_4_1):  END (no change by unit_processor): Out=      ˈt'es't'
-    MIN_DBG (Stage4_5_C):   START: In=  ˈt'es't'
-    MIN_DBG (Stage4_5_C):  END: Out=    ˈt'ɛs't'
-    MIN_DBG (Stage4_5_C): Af. Stage4_5_ContextualAllophonyOnPhonetic: [ˈt'ɛs't']
-    MIN_DBG (Stage4_5_1):   Stage4_5_1_DisyllabicShortLongRaising START (Proc Helper): In=      ˈt'ɛs't'
-    MIN_DBG (Stage4_5_1):  END (no change by unit_processor): Out=      ˈt'ɛs't'
-    MIN_DBG (Stage4_5_2):   Stage4_5_2_ConnachtSpecificVowelShifts START: In=   ˈt'ɛs't'         Map size:      2
-    MIN_DBG (Stage4_5_2):  END: Out=    ˈt'ɛs't'         Map size:      2
-    MIN_DBG (Nasalizati):   Nasalization START (Proc Helper): In=       ˈt'ɛs't'
-    MIN_DBG (Nasalizati): NO.
-    MIN_DBG (Nasalizati):  END (no change by unit_processor): Out=      ˈt'ɛs't'
-    MIN_DBG (Stage4_6_U):   START (Outer): In=  ˈt'ɛs't'
-    MIN_DBG (Stage4_6_U): Word '        ˈt'ɛs't'        ' is monosyllabic, SKIPPING.
-    MIN_DBG (Epenthesis):   START (Proc): In=   ˈt'ɛs't'
-    MIN_DBG (Epenthesis): After procedural epenthesis:  ˈt'ɛs't'
-    MIN_DBG (Epenthesis): After strong sonorant rules:  ˈt'ɛs't'
-    MIN_DBG (Epenthesis):  END (Proc): Out=     ˈt'ɛs't'
-    MIN_DBG (Diacritics):   Diacritics START: In=       ˈt'ɛs't'         Map size:      2
-    MIN_DBG (Diacritics):  END: Out=    ˈt'ɛs't'         Map size:      2
-    MIN_DBG (FinalClean):   FinalCleanup START: In=     ˈt'ɛs't'         Map size:      2
-    MIN_DBG (FinalClean): Iter.gsub: Rule '     s'      ' APPLIED to '  ˈt'ɛs't'        ' -> '  ˈt'ɛʃt' ' (     1       x)
-    MIN_DBG (FinalClean): Iter.gsub: Rule '     t'      ' APPLIED to '  ˈt'ɛʃt' ' -> '  ˈtʲɛʃtʲ ' (     2       x)
-    MIN_DBG (FinalClean): WARN: Ortho map may be misaligned after iterative_gsub. Rebuilding basic map for stage: FinalCleanup
-    MIN_DBG (FinalClean):  END: Out=    ˈtʲɛʃtʲ  Map size:      1
-    MIN_DBG (FinalClean): Af. FinalCleanup: [ˈtʲɛʃtʲ]
-ˈtʲɛʃtʲ
+lua bench_run.lua "label"
 ```
-The debug output is written to `irish_debug_43_lua_p_strict.txt`.
 
-**Running regression tests:**
+## Current Status
 
-lua regression.lua
-| Word | Expected IPA | Generated IPA | Distance |
-| -------- | ------- | ------- | ------- |
-| glas | ˈɡlˠasˠ | ˈɡlˠasˠ | 0 |
-| glais | ˈɡlˠaʃ | ˈɡlˠaʃ | 0 |
-| alt | ˈalˠt̪ˠ | ˈalˠt̪ˠ | 1 |
-| ailt | ˈɛlʲtʲ | ˈɛlʲtʲ | 0 |
-| seomra | ˈʃoːmˠɾˠə | ˈʃoːmˠɾˠə | 1 |
-| seomraí | ˈʃoːmˠɾˠiː | ˈʃoːmˠɾˠiː | 1 |
-| trom | ˈt̪ˠɾˠɔmˠ | ˈt̪ˠɾˠɔmˠ | 2 |
-| bonn | ˈbˠuːn̪ˠ | ˈbˠuːn̪ˠ | 0 |
-| fón | ˈfˠuːnˠ | ˈfˠuːnˠ | 1 |
-| sheol | ˈhoːlˠ | ˈhoːlˠ | 2 |
-| thóg | ˈçoːɡ | ˈçoːɡ | 1 |
-| shíl | ˈhiːlʲ | ˈhiːlʲ | 0 |
-| a Sheáin | a ˈhɛɑːnʲ | a ˈhɛɑːnʲ | 3 |
-| aithrí | ˈahɾʲiː | ˈahɾʲiː | 0 |
-| brath | ˈbˠɾˠaç | ˈbˠɾˠaç | 1 |
-| cnoc | ˈkɾˠʊk | ˈkɾˠʊk | 0 |
-| tnúth | ˈt̪ˠɾˠuː | ˈt̪ˠɾˠuː | 0 |
-| Tadhg | ˈt̪ˠaɡ | ˈt̪ˠaɡ | 1 |
-| 'ur | əɾˠ | əɾˠ | 2 |
-| íocfaidh | ˈiːkə | ˈiːkə | 0 |
-| marcaigh | ˈmˠaɾˠkiː | ˈmˠaɾˠkiː | 0 |
-| chugham | ˈxuːəmˠ | ˈxuːəmˠ | 1 |
-| láimh | ˈlˠɑːiː | ˈlˠɑːiː | 3 |
-| leabhar | ˈlʲəuəɾˠ | ˈlʲəuəɾˠ | 1 |
-| greamaím | ˈɟɾʲʊmˠɑːmʲ | ˈɟɾʲʊmˠɑːmʲ | 2 |
-| dugaire | ˈd̪ˠʊɡɪɾʲə | ˈd̪ˠʊɡɪɾʲə | 1 |
-| Gaelach | ˈɡeːlʲəx | ˈɡeːlʲəx | 2 |
-| Gaedhlaing | ˈɡeːjlʲəŋ | ˈɡeːjlʲəŋ | 4 |
+The engine correctly models a significant portion of Connacht Irish phonology but has known limitations:
 
-## Current accuracy
-Average Levenstein edit distance (from fuzzywuzzy.partial_ratio, 0-100 normalized): 84.81
+### Known Issues
+1. **Dialectal focus**: Connacht only. Does not accurately model Munster stress or Ulster vowel qualities.
+2. **Stress**: Default initial-stress with limited lexical exceptions. Fails on loanwords (e.g., `ospidéal`, `tobac`) and derivational suffixes (`-án`, `-óir`).
+3. **Sandhi**: Processes words in isolation — no cross-word boundary assimilation or elision.
+4. **Lenited sh/th**: Inconsistent /h/ vs /ç/ realization depending on following vowel.
+5. **Vocalization**: Intervocalic bh/mh/dh/gh inconsistent — sometimes produces diphthongs where long vowel expected, or vice-versa.
+6. **th→ç quality**: Requires conditional rule based on preceding vowel environment (not yet implemented).
+7. **bh/mh w-coda**: Multi-pass interaction issue prevents correct w preservation after diphthongs in some words.
 
-Average phonetic distance, (edit distance between dolgopolsky' equivalence classes, from panphon.distance.dolgo_prime_distance_div_maxlen, 0-1 normalized): 0.9413
+### Encoding Notes
+- Lua 5.4 strings are raw bytes. Unicode IPA characters use UTF-8 byte sequences.
+- `ustring` library provides `ulen(s)`, `usub(s,i,i)` for Unicode-aware operations.
+
+## References
+- Hickey, Raymond (2014). *The Sound Structure of Modern Irish*. De Gruyter Mouton.
+- Ó Raghallaigh, Brian (2013). *Fuaimeanna na Gaeilge*. Cois Life, Dublin.
