@@ -15,13 +15,15 @@ local usub = ustring.sub
 local function trim(s) return s:match("^%s*(.-)%s*$") end
 
 local function levenshtein(s1, s2)
+  if not s1 or not s2 then return 999 end
   local m, n = ulen(s1), ulen(s2)
   local v0, v1 = {}, {}
   for i = 0, n do v0[i] = i end
   for i = 1, m do
     v1[0] = i
     for j = 1, n do
-      local c = (usub(s1, i, i) == usub(s2, j, j)) and 0 or 1
+      local a, b = usub(s1, i, i), usub(s2, j, j)
+      local c = (a == b) and 0 or 1
       v1[j] = math.min(v1[j - 1] + 1, v0[j] + 1, v0[j - 1] + c)
     end
     for j = 0, n do v0[j] = v1[j] end
@@ -29,24 +31,99 @@ local function levenshtein(s1, s2)
   return v1[n]
 end
 
-local exact, total, total_lev = 0, 0, 0
+-- Simple Dolgopolsky equivalence classes for IPA
+local DOLGO_MAP = {
+  ["i"] = "i", ["iː"] = "i", ["ɪ"] = "i",
+  ["e"] = "e", ["eː"] = "e", ["ɛ"] = "e", ["ɛː"] = "e",
+  ["a"] = "a", ["aː"] = "a", ["æ"] = "a", ["æː"] = "a",
+  ["ə"] = "ə",
+  ["o"] = "o", ["oː"] = "o", ["ɔ"] = "o", ["ɔː"] = "o",
+  ["u"] = "u", ["uː"] = "u", ["ʊ"] = "u", ["ɤ"] = "u",
+  ["ʌ"] = "a",
+  ["p"] = "p", ["b"] = "b", ["t"] = "t", ["d"] = "d",
+  ["k"] = "k", ["ɡ"] = "g", ["g"] = "g", ["c"] = "k", ["ɟ"] = "g",
+  ["f"] = "f", ["v"] = "v", ["s"] = "s", ["z"] = "z",
+  ["ʃ"] = "s", ["ʒ"] = "z", ["ç"] = "x", ["x"] = "x",
+  ["ɣ"] = "g", ["h"] = "h", ["ɦ"] = "h",
+  ["m"] = "m", ["n"] = "n", ["ɲ"] = "n", ["ŋ"] = "n",
+  ["l"] = "l", ["ʎ"] = "l", ["r"] = "r", ["ɾ"] = "r",
+  ["j"] = "j", ["w"] = "w",
+  ["ʷ"] = "", ["ʲ"] = "", ["ˠ"] = "", ["̪"] = "", ["̠"] = "",
+  ["ˈ"] = "", [","] = "", ["."] = "", [" "] = "",
+}
+
+local function dolgo_tokenize(s)
+  local tokens = {}
+  local i = 1
+  local len = ulen(s)
+  while i <= len do
+    local ch = usub(s, i, i)
+    local next_ch = (i < len) and usub(s, i + 1, i + 1) or ""
+    if next_ch == "ː" then
+      local digraph = ch .. "ː"
+      local mapped = DOLGO_MAP[digraph]
+      if mapped then
+        if mapped ~= "" then table.insert(tokens, mapped) end
+        i = i + 2
+      else
+        local mapped_ch = DOLGO_MAP[ch]
+        if mapped_ch and mapped_ch ~= "" then table.insert(tokens, mapped_ch) end
+        i = i + 1
+      end
+    else
+      local mapped = DOLGO_MAP[ch]
+      if mapped then
+        if mapped ~= "" then table.insert(tokens, mapped) end
+      else
+        table.insert(tokens, ch)
+      end
+      i = i + 1
+    end
+  end
+  return tokens
+end
+
+local function dolgo_distance(s1, s2)
+  local t1, t2 = dolgo_tokenize(s1), dolgo_tokenize(s2)
+  local m, n = #t1, #t2
+  if m == 0 and n == 0 then return 0 end
+  local v0, v1 = {}, {}
+  for i = 0, n do v0[i] = i end
+  for i = 1, m do
+    v1[0] = i
+    for j = 1, n do
+      local c = (t1[i] == t2[j]) and 0 or 1
+      v1[j] = math.min(v1[j - 1] + 1, v0[j] + 1, v0[j - 1] + c)
+    end
+    for j = 0, n do v0[j] = v1[j] end
+  end
+  local maxlen = math.max(m, n)
+  if maxlen == 0 then return 0 end
+  return (v1[n] or 0) / maxlen
+end
+
+local exact, total, total_lev, total_dolgo = 0, 0, 0, 0
 local out_file = arg and arg[2] and io.open(arg[2], "w") or nil
+if out_file then out_file:write("word\tgot\texpected\texact\tlev\tdolgo\n") end
 
 for word, entry in pairs(bench) do
   local got = engine.transcribe(word, "connacht")
   total = total + 1
   local variants = {}
   for v in entry.expected:gmatch("[^,]+") do table.insert(variants, trim(v)) end
-  local best_lev, best_exp = nil, nil
+  local best_lev, best_exp, best_dolgo = nil, nil, nil
   for _, ev in ipairs(variants) do
     local lev = levenshtein(got, ev)
-    if best_lev == nil or lev < best_lev then best_lev, best_exp = lev, ev end
+    local dolgo = dolgo_distance(got, ev)
+    if best_lev == nil or lev < best_lev then best_lev, best_exp, best_dolgo = lev, ev, dolgo end
   end
+  if best_lev == nil then best_lev, best_exp, best_dolgo = 999, "", 1 end
   total_lev = total_lev + best_lev
+  total_dolgo = total_dolgo + best_dolgo
   if got == best_exp then exact = exact + 1 end
   if out_file then
     out_file:write(word .. "\t" .. got .. "\t" .. best_exp .. "\t" ..
-      tostring(got == best_exp) .. "\t" .. best_lev .. "\n")
+      tostring(got == best_exp) .. "\t" .. best_lev .. "\t" .. string.format("%.4f", best_dolgo) .. "\n")
   end
 end
 if out_file then out_file:close() end
@@ -55,6 +132,7 @@ local label = (arg and arg[1]) or ""
 local pct = exact / total * 100
 local avg_lev = total_lev / total
 local norm_lev = (1 - total_lev / (total * 20)) * 100
+local avg_dolgo = total_dolgo / total
 if label ~= "" then io.write(label .. ": ") end
-io.write(string.format("Exact: %d/%d (%.2f%%)  Avg Lev: %.2f  Norm Lev: %.2f%%\n",
-  exact, total, pct, avg_lev, norm_lev))
+io.write(string.format("Exact: %d/%d (%.2f%%)  Avg Lev: %.2f  Norm Lev: %.2f%%  Avg Dolgo: %.4f\n",
+  exact, total, pct, avg_lev, norm_lev, avg_dolgo))
