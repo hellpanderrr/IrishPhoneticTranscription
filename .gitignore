@@ -69,3 +69,6 @@ repo/new_results.csv
 
 # Temp benchmark files
 %TEMP%*
+
+# PDF reference files (not tracked — keep on disk only)
+*.pdf

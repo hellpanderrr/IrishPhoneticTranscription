@@ -1,10 +1,14 @@
 -- Pass #12: Epenthesis (Svarabhakti vowel insertion).
 -- Inserts a vowel between heterorganic sonorant+voiced-obstruent
 -- clusters when the preceding vowel is SHORT and STRESSED.
--- NOT restricted to monosyllables. (Corrected per Hickey Chapter 2)
+-- NOT restricted to monosyllables. (Corrected per Hickey II.2.8)
+-- References: Hickey II.2.8 (svarabhakti — sonorant + heterorganic obstruent → vowel insertion)
 
 local S = require("passes._shared")
 
+-- Hickey II.2.8: heterorganic clusters trigger epenthesis:
+--   sonorant (l,n,r) + heterorganic voiced obstruent (b,d,g) or fricative (ch,f,m,bh,mh)
+--   Condition: preceding vowel is SHORT and STRESSED
 local function is_heterorganic_cluster(tokens, i)
   local t1 = tokens[i]
   local t2 = tokens[i + 1]

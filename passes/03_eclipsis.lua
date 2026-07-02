@@ -3,6 +3,7 @@
 -- Silences the eclipsed consonant. Survivor keeps its ortho and resolves normally in pass 09.
 -- Now scans EVERY word start (position 1 or after a boundary token),
 -- so multi-word eclipsis (i bhfad, i dtosach) works.
+-- References: Hickey III.2.3.1 (nasalisation / eclipsis), FG Ch.7 (mutation mapping)
 
 local S = require("passes._shared")
 
@@ -31,6 +32,7 @@ return {
 
         if pair == "bhf" then
           -- bh + f → w (bh resolves to w in pass 09, f is silenced)
+          -- Hickey III.2.3.1: bhf eclipsis → [w] (labial glide from nasalisation)
           t2.phon = ""
           t2.source = "eclipsis_silenced"
           i = i + 2
@@ -47,6 +49,7 @@ return {
       end
 
       -- Single-token ng at word start: eclipsis of g → ŋ/ɲ depending on following vowel
+      -- Hickey III.2.3.1: velar nasal /ŋ/ from nasalised g
       if t1.type == "cons" and t1.ortho == "ng" then
         -- Scan forward to find the next vowel to determine polarity
         local next_vowel = nil

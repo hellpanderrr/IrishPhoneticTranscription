@@ -1,6 +1,7 @@
 -- Pass #4: Normalize consonant clusters.
 -- Runs after eclipsis but before mutated_fricatives so the simplified
 -- ortho is what the fricative rules see.
+-- References: Hickey II.2.2 (cluster simplification), II.2.1 (permissible clusters)
 
 local S = require("passes._shared")
 
@@ -16,6 +17,7 @@ return {
       local t1 = tokens[i]; local t2 = tokens[i + 1]
 
       -- bh + th -> r
+      -- Hickey II.2.2: cluster reduction in historical compounds — bhth→/r/
       if t1.type == "cons" and t2.type == "cons" and
          t1.ortho == "bh" and t2.ortho == "th" then
         t1.ortho = "r"
@@ -24,6 +26,7 @@ return {
         i = i + 1
 
       -- ch + n -> ch + r (if followed by a vowel)
+      -- Hickey II.2.2: /xn/→/xr/ before vowels — cluster simplification
       elseif t1.type == "cons" and t2.type == "cons" and
              t1.ortho == "ch" and t2.ortho == "n" then
         -- Check next token is a vowel

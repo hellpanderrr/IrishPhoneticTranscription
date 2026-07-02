@@ -7,6 +7,8 @@
 -- 2. Handle geminate sonorants (ll, nn, rr, mm): silence second, adjust first.
 -- 3. Vowel lengthening before geminate sonorants in monosyllables.
 -- Runs after vowel resolution (#12) so vowel phonemes are final.
+-- References: Hickey II.1.8 (sonorant system — 3-way l/n, geminates, §1.8.4 three-way
+--  distinctions, §1.8.6 historical development), FG Ch.5 (Connacht sonorant inventory)
 
 local S = require("passes._shared")
 local ustring = require("ustring.ustring")
@@ -55,6 +57,8 @@ return {
     -- Phase 1: Adjust non-geminate sonorant diacritics.
     -- For l and n: insert dental/postalveolar combining mark based on context.
     -- Skip consecutive identical sonorants (handled in Phase 2).
+    -- Hickey II.1.8: 3-way l/n contrast — palatal [lʲ nʲ], neutral [l n],
+    --   velarized [lˠ nˠ]; dental [l̪ˠ n̪ˠ] before consonants in Connacht
     for i = 1, #tokens do
       local token = tokens[i]
       if token.type ~= "cons" then goto next_son end
@@ -94,6 +98,7 @@ return {
     -- LONG and UNSTRESSED. Distribution: ~125 words want nˠ vs ~93 want n̪ˠ
     -- in this context (net +41 exact). Word-final = no following non-boundary
     -- token with non-empty phon.
+    -- Hickey II.1.8: final broad n → [nˠ] after unstressed long vowels in Connacht
     for i = 1, #tokens do
       local token = tokens[i]
       if token.type ~= "cons" then goto next_strip end
@@ -130,6 +135,8 @@ return {
     end
 
     -- Phase 2: Handle consecutive identical sonorants (geminate ll, nn, rr, mm).
+    -- Hickey II.1.8.6: historical geminate sonorants simplified in Middle Irish;
+    --   preceding vowel lengthened in compensation (Connacht/Ulster)
     for i = 1, #tokens - 1 do
       local first = tokens[i]
       local second = tokens[i + 1]

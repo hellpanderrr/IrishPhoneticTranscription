@@ -1,5 +1,5 @@
 -- Pass #6d: Anticipatory vowel raising (Western Irish, Connacht only).
--- Hickey Ch.2: Short /a/ or /o/ in the FIRST syllable raises to [ɪ] or [ʊ]
+-- Hickey II.1.9.4: Short /a/ or /o/ in the FIRST syllable raises to [ɪ] or [ʊ]
 -- if the second syllable contains a long [aː].
 -- coláiste → kʊlˠaːʃtʲə, caisleán → kɪʃlʲaːnˠ.
 -- Only applies when anticipatory_raising = true (Connacht).

@@ -1,5 +1,7 @@
 -- Pass #9: Resolve consonant tokens to IPA.
 -- Handles broad/slender alternation and voiceless sonorants.
+-- References: Hickey II.1.7 (consonant system — stops, fricatives, pairs),
+--  FG Ch.5 (Connacht consonant inventory), FG Appendix A (sound catalog)
 
 local S = require("passes._shared")
 
@@ -16,6 +18,9 @@ return {
 
       local prev = tokens[i - 1]
 
+      -- Hickey II.1.7.2: bh/mh → [vˠ/vʲ] or [w]
+      -- Connacht: /v/ weakens to [w] intervocalically and initially (a bhua→[ə wuə])
+      -- Southern: retains [v]; broad sonorant clusters → [vˠ]
       if token.ortho == "bh" or token.ortho == "mh" then
         if token.palatal == true then
           token.phon = "vʲ"
@@ -48,8 +53,8 @@ return {
         end
       elseif token.ortho == "ch" then
         if token.palatal == true then
-          -- Hickey: slender ch after front vowel ortho -> c, after back vowel -> h
-          -- Word-initial slender ch -> c,
+          -- Hickey II.1.7.2: slender ch → [ç] after front V, [c] word-initially;
+          -- after back V/without front context → [h]. Broad ch → [x].
           local prev_v = tokens[i - 1]
           if prev_v and prev_v.type == "vowel" then
             -- Check ortho for front vowel: simple i/e/í/é or digraphs
@@ -74,6 +79,8 @@ return {
         else
           token.phon = "x"
         end
+      -- Hickey II.1.7.2: slender sh → [ç] before back rounded V, [h] elsewhere.
+      -- Broad sh → [h] (lenition of s)
       elseif token.ortho == "sh" then
         -- Connacht: slender sh before back rounded vowel -> ç.
         -- shiúl /çuːlˠ/, Sheoirse /çoːɾˠʃə/
@@ -131,6 +138,7 @@ return {
         token.phon = ""
       elseif token.ortho == "bhf" then
         token.phon = "w"
+      -- Hickey II.1.7.2: s does NOT palatalize before labials (sméar→[sˠmʲeːɾˠ], not *[ʃmʲeːɾˠ])
       elseif token.ortho == "s" then
         -- s before p/t/k/m: check polarity. If the following consonant
         -- is broad, s stays broad. Only palatalize s before a slender p/t/k/m.
@@ -170,10 +178,12 @@ return {
         else
           token.phon = S.palatal_consonant(token, "lʲ", "lˠ")
         end
+      -- Hickey II.1.8: /r/→[ɾˠ] before dental stops (coronal assimilation);
+      --   palatal /rʲ/ does not occur word-initially; neutralized after lenition
       elseif token.ortho == "r" then
         -- Connacht: r before dental consonants (t, d, n, s) is broad ɾˠ
         -- regardless of vowel context. Irish phonotactics forbid /rʲ/ before
-        -- dental stops in syllable coda (Hickey 2.7.4).
+        -- dental stops in syllable coda (Hickey II.1.8).
         local next_c = tokens[i + 1]
         local force_broad = next_c and next_c.type == "cons" and
           (next_c.ortho == "s" or next_c.ortho == "t" or
@@ -199,6 +209,8 @@ return {
         else
           token.phon = S.palatal_consonant(token, "ɾʲ", "ɾˠ")
         end
+      -- Hickey II.1.7.2: f under lenition → ∅ (but fh→∅ is the lenited form, handled above)
+      -- Future-f: f-lenition in verbal inflection (póg-f-aidh→poːkə)
       elseif token.ortho == "f" then
         -- Future-tense suffix -fidh/-faidh: f between consonant and (i|ai)+dh → context rule.
         -- After obstruent (c/t/d/g/s/ch/x): f elides (∅). After sonorant (l/n/r): f → h.
