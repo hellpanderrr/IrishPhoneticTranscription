@@ -10,14 +10,21 @@ Irish G2P (grapheme-to-phoneme) engine — modular 16-pass token-array pipeline.
 
 ## Architecture
 - `passes/init.lua` — pass order (16 passes)
-- `passes/_shared.lua` — shared defs (VOWEL_DIGRAPHS, DIALECTS, make_token)
+- `passes/_shared.lua` — shared defs + theory reference header (Hickey/FG citations)
 - `passes/01_polarity.lua` — consonant broad/slender polarity
 - `passes/10_vowels.lua` — vowel resolution + contextual allophony
 - `passes/11_unstressed_reduction.lua` — unstressed vowel reduction
 - `irish_engine_new.lua` — engine entry point
 
+## Theory References
+Every phonological rule in the 16 passes cites its source in comments:
+- **Hickey 2014** — "The Sound Structure of Modern Irish" (Ch.II: Phonological Framework, Ch.III: Morphonology)
+- **FG** — "Fuaimeanna na Gaeilge" (An Gúm, 2003, Ch.5: Connacht inventory, Ch.7: orthography→IPA)
+- PDFs in `theory/` on disk (not git-tracked); text extracts `.txt` files are tracked
+
 ## Benchmark Target
-- Current: ~44.17% exact match (2912/6593) Connacht
+- Current: ~60.52% exact match (3993/6598) Connacht
+- Norm Lev: 90.59, Norm Dolgo: 93.44
 - Lev-1 single-substitution error buckets in `_base.tsv`
 
 ## Encoding
