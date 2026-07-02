@@ -79,10 +79,10 @@ The engine correctly models a significant portion of Connacht Irish phonology bu
 
 | Metric | Score |
 |--------|-------|
-| Exact match | 3975/6598 (60.25%) |
-| Avg Levenshtein | 0.91 |
-| Norm Lev (0–100) | **90.33** |
-| Norm Dolgo (0–100) | **93.15** |
+| Exact match | 3993/6598 (60.52%) |
+| Avg Levenshtein | 0.89 |
+| Norm Lev (0–100) | **90.59** |
+| Norm Dolgo (0–100) | **93.44** |
 
 > Normalized scores are 0–100 where 100 = perfect match.<br>
 > Lev normalization: `(1 − lev / max_segment_length) × 100`<br>
