@@ -30,7 +30,6 @@ Modular **16-pass token-array pipeline**. The engine tokenizes orthographic inpu
 ## Repository Structure
 
 ```
-repo/
 ├── irish_engine_new.lua      # Engine entry point: tokenizer + pass orchestrator
 ├── irish.lua                 # Compatibility alias → irish_engine_new
 ├── passes/                   # 18 module files (16 passes + init + shared)
@@ -72,9 +71,11 @@ lua -e "local e=require('irish_engine_new'); print(e.transcribe('seomra','connac
 lua bench_run.lua "label"
 ```
 
-## Results
+## Current Status
 
-See per-word results in [results.csv](results.csv) — columns: `word`, `got`, `expected`, `exact`, `lev`, `lev_norm`, `dolgo`, `dolgo_norm`.
+The engine correctly models a significant portion of Connacht Irish phonology but has known limitations:
+
+### Benchmark Results
 
 | Metric | Score |
 |--------|-------|
@@ -86,25 +87,77 @@ See per-word results in [results.csv](results.csv) — columns: `word`, `got`, `
 > Normalized scores are 0–100 where 100 = perfect match.<br>
 > Lev normalization: `(1 − lev / max_segment_length) × 100`<br>
 > Dolgo normalization: `(1 − dolgo_edit_distance) × 100`
+>
+> See per-word results in [results.csv](results.csv) — columns: `word`, `got`, `expected`, `exact`, `lev`, `lev_norm`, `dolgo`, `dolgo_norm`.
 
-## Remote
+### Remote
 
 ```sh
 git remote add origin https://github.com/hellpanderrr/IrishPhoneticTranscription
 ```
 
-## Current Status
+### Error Breakdown (2,623 mismatches)
 
-The engine correctly models a significant portion of Connacht Irish phonology but has known limitations:
+#### Diacritics (53.9% of errors)
+
+| Count | % | Error type |
+|-------|---|------------|
+| 416 | 15.9% | Missing dental diacritic [̪] on t/d/n/l |
+| 376 | 14.3% | Extra dental/postalveolar diacritics |
+| 235 | 9.0% | Missing postalveolar diacritic [̠] on ʃ |
+| 195 | 7.4% | Broad/slender quality mismatch (ˠ/ʲ) |
+| 92 | 3.5% | Missing broad velarization [ˠ] |
+
+These are primarily **sonorant pass** issues (pass 13) — the engine places dental/postalveolar diacritics on broad/minimal pairs imperfectly, especially in clusters and unstressed environments.
+
+#### Stress (11.5% of errors)
+
+| Count | % | Error type |
+|-------|---|------------|
+| 183 | 7.0% | Extra primary stress mark [ˈ] |
+| 182 | 6.9% | Missing primary stress mark [ˈ] |
+
+Default initial-stress with limited lexical exceptions. Fails on loanwords (`ospidéal`, `tobac`), derivational suffixes (`-án`, `-óir`), and grammatical prefixes. No secondary stress pattern modeling.
+
+#### Vowel Quality (12.0% of errors)
+
+| Count | % | Error type |
+|-------|---|------------|
+| 70 | 2.7% | Near-close front [ɪ] not produced (produces [i] or [ə] instead) |
+| 69 | 2.6% | Open back [ɑ] not produced (produces [a] instead) |
+| 41 | 1.6% | Stress count mismatch |
+| 20 | 0.8% | [ɪ] instead of [ə] (over-reduction in unstressed syllables) |
+| 13 | 0.5% | Near-close back [ʊ] not produced |
+| 11 | 0.4% | Epenthetic syllable not inserted |
+| 10 | 0.4% | Near-open front [æ] not produced (produces [a] instead) |
+| 8 | 0.3% | Open-mid front [ɛ] not produced |
+| 6 | 0.2% | [ə] instead of [ɪ] (under-reduction) |
+
+The vowel pass (10) and unstressed reduction pass (11) handle most cases but fail on context-dependent allophony — especially æ-raising, ɑ-backing, and ɪ/ʊ near-close distinctions in non-initial syllables.
+
+#### Lenition & Consonant Quality (3.2% of errors)
+
+| Count | % | Error type |
+|-------|---|------------|
+| 20 | 0.8% | [ç] instead of [h] (over-lenition of th) |
+| 11 | 0.4% | [h] instead of [ç] (under-lenition of th) |
+| 11 | 0.4% | abh/amh/abh → [əw] instead of [au/əu] |
+| 10 | 0.4% | bh/mh → [iiː/áiː] instead of [vʲ] (vocalization) |
+| 6 | 0.2% | R-quality mismatch [ɾˠ/ɾʲ] |
+| 5 | 0.2% | -íocht/-iomh: missing [w] glide |
+
+Lenited fricative pass (05) and vocalization pass (06) are the main sources. th quality depends on preceding vowel environment — a conditional rule not yet implemented. bh/mh coda vocalization creates overshoot where expected [v] becomes [iiː] or [áiː].
 
 ### Known Issues
+
 1. **Dialectal focus**: Connacht only. Does not accurately model Munster stress or Ulster vowel qualities.
 2. **Stress**: Default initial-stress with limited lexical exceptions. Fails on loanwords (e.g., `ospidéal`, `tobac`) and derivational suffixes (`-án`, `-óir`).
 3. **Sandhi**: Processes words in isolation — no cross-word boundary assimilation or elision.
 4. **Lenited sh/th**: Inconsistent /h/ vs /ç/ realization depending on following vowel.
 5. **Vocalization**: Intervocalic bh/mh/dh/gh inconsistent — sometimes produces diphthongs where long vowel expected, or vice-versa.
-6. **th→ç quality**: Requires conditional rule based on preceding vowel environment (not yet implemented).
-7. **bh/mh w-coda**: Multi-pass interaction issue prevents correct w preservation after diphthongs in some words.
+6. **bh/mh w-coda**: Multi-pass interaction issue prevents correct w preservation after diphthongs in some words.
+7. **Dental diacritics**: [̪]/[̠] placement sensitive to cluster composition and stress environment — doesn't fully generalize to all contexts.
+8. **Vowel allophony**: æ/ɑ/ɪ/ʊ allophones inconsistently produced in unstressed or derived environments.
 
 ### Encoding Notes
 - Lua 5.4 strings are raw bytes. Unicode IPA characters use UTF-8 byte sequences.
