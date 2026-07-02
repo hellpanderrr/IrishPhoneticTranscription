@@ -2,89 +2,72 @@
 
 ## Purpose
 
-A rule-based, standalone **Grapheme-to-Phoneme (G2P) engine for Irish**, implemented in Lua. Converts Irish orthography to IPA phonetic representation, targeting the **Connacht dialect**. Academic/experimental tool based on Raymond Hickey's *The Sound Structure of Modern Irish* (2014).
+A rule-based, standalone **Grapheme-to-Phoneme (G2P) engine for Irish**, implemented in Lua. Converts Irish orthography to IPA phonetic representation, targeting the **Connacht dialect**. Academic/experimental tool based on Raymond Hickey's *The Sound Structure of Modern Irish* (2014) and Ó Raghallaigh's *Fuaimeanna na Gaeilge*.
 
-## Current Accuracy (as of v19, 2025-06-15)
+## Architecture
 
-| Metric | Value |
-|---|---|
-| Words tested | 6,911 (Wiktionary Connacht IPA) |
-| Perfect match (`match=100`) | 2,423 (35.1%) |
-| Average Levenshtein match | 84.81 / 100 |
-| Average Dolgo distance | 0.9413 (1.0 = perfect) |
-| Significant errors (Dolgo < 0.8) | 611 words |
+Modular **16-pass token-array pipeline**. The engine tokenizes orthographic input into structured tokens, then processes the token array through 16 sequential passes, each handling one phonological domain. Passes are loaded from `passes/init.lua` which defines the ordering.
 
 ## Repository Structure
 
 ```
-irish/repo/
-├── irish_main.lua          # CLI entrypoint, transcribe() API
-├── irish_core.lua          # Phonetic data, vowel/consonant classes, exceptions (36 KB)
-├── irish_engine.lua        # Rules engine + pipeline orchestration (44 KB)
-├── irish_rules.lua         # All rule tables by pipeline stage (65 KB)
-├── irish_processors.lua    # Procedural functions: vocalization, reduction, epenthesis (22 KB)
-├── irish_rules_data.lua    # Additional rules data (101 KB)
-├── regression.lua          # Regression test suite with history tracking
-├── analyze_deep.py         # Failure analysis of results.csv
-├── results.csv             # Full test output vs. expected IPA
+repo/
+├── irish_engine_new.lua      # Engine entry point: tokenizer + pass orchestrator
+├── irish.lua                 # Compatibility alias → irish_engine_new
+├── passes/                   # 18 module files (16 passes + init + shared)
+│   ├── init.lua              # Pass ordering
+│   ├── _shared.lua           # Shared definitions: VOWEL_DIGRAPHS, DIALECTS, make_token
+│   ├── 01_polarity.lua       # Consonant broad/slender polarity
+│   ├── 02_stress.lua         # Default initial-stress + lexical exceptions
+│   ├── 03_eclipsis.lua       # Eclipsis detection and resolution
+│   ├── 04_cluster_simplify.lua # Cluster reduction (chn→chr, cn→cr)
+│   ├── 05_mutated_fricatives.lua # Lenited consonant resolution (bh, mh, dh, gh)
+│   ├── 06_vocalization.lua   # Fricative vocalization → vowel/diphthong
+│   ├── 06d_anticipatory_raising.lua # Anticipatory vowel raising
+│   ├── 07_nasalization.lua   # Nasal raising effects
+│   ├── 08_slender_coda.lua   # Slender coda consonant handling
+│   ├── 09_consonants.lua     # Consonant quality, devoicing, allophony
+│   ├── 09b_vowel_adjunct.lua # Vowel-consonant interactions
+│   ├── 10_vowels.lua         # Vowel resolution + contextual allophony
+│   ├── 11_unstressed_reduction.lua # Unstressed vowel reduction
+│   ├── 12_epenthesis.lua     # Epenthetic vowel insertion
+│   ├── 13_sonorants.lua      # Sonorant dental/postalveolar diacritics
+│   └── 14_final_cleanup.lua  # Final IPA cleanup, artifact removal
+├── archive/                  # Previous engine versions for reference
+│   ├── irish.lua             # Original monolith entry point
+│   ├── irish_core.lua        # Monolith phonetic data
+│   ├── irish_tokens.lua      # Token-prototype predecessor
+│   └── regression*.lua       # Old regression tests
+├── theory/                   # Reference materials
+│   ├── Fuaimeanna na Gaeilge — Chapter 1 Summary.txt
+│   ├── The Sound Structure of Modern Irish — Hickey Ch.1.txt
+│   └── The Sound Structure of Modern Irish — Hickey Ch.2.txt
 ├── data/
-│   ├── connacht_only.csv   # Wiktionary IPA: Connacht dialect (6,911 words)
-│   └── all_regions.csv     # Wiktionary IPA: all Irish dialects (17,281 words)
-├── ustring/                # Unicode-aware string library for Lua
-├── implementation_plan.md  # 10-issue improvement roadmap
-└── README.md               # Project overview and usage
+│   ├── connacht_only.csv     # Wiktionary IPA: Connacht dialect (6,593 words)
+│   └── all_regions.csv       # Wiktionary IPA: all Irish dialects
+├── ustring/                  # Unicode-aware string library for Lua 5.4
+├── bench_run.lua             # Benchmark harness
+├── README.md                 # Project overview
+└── summary.md                # This file
 ```
 
-## Architecture: Multi-Stage Pipeline
+## Usage
 
-The engine transforms Irish text to IPA through **13 sequential stages** using a marker-based approach (orthographic features → internal markers → base phonemes → refined output):
+```sh
+# Transcribe a word
+lua -e "local e=require('irish_engine_new'); print(e.transcribe('seomra','connacht'))"
 
-| Stage | Name | Purpose |
-|---|---|---|
-| 1 | Preprocessing | Lowercasing, whitespace normalization |
-| 1.5 | Cluster Simplification | Reduce clusters (`chn`→`chr`, `cn`→`cr`) |
-| 2 | Digraph Marking | Insert markers for lenited consonants, eclipsis, vocalization triggers |
-| 2.5 | Suffix Marking | Mark derivational/inflectional suffixes |
-| 3.1 | Marker Resolution | Resolve markers to base phonemes, determine broad/slender quality |
-| 3.2 | Stress Assignment | Default initial stress + lexical exceptions |
-| 4.0–4.4 | Vowel Processing | Long vowels, diphthongs, vocalized fricatives |
-| 4.5 | Contextual Allophony | Nasal raising, velar raising, gradation, Connacht shifts |
-| 4.6 | Unstressed Reduction | Reduce unstressed vowels to schwa/allophones |
-| — | Epenthesis | Insert epenthetic vowels in consonant clusters |
-| — | Diacritics | Apply `ʲ`, `ˠ`, `̪` quality markers |
-| — | Final Cleanup | Remove artifacts, final IPA normalization |
+# Run benchmark
+lua bench_run.lua "label"
+```
 
-## Known Issues (prioritized by impact)
+## Encoding Notes
 
-### Priority 1 — High Impact
-1. **`sh`/`th` lenition confusion** (113 cases) — wrong `h` vs `ç` based on following vowel
-2. **Stress mark false positives** (362 cases) — `ˈ` added to monosyllabic words where conventions omit it
-3. **`ó` not raised to `uː` before nasals** (~30 cases) — nasal raising rule not applied
+- Lua 5.4 strings are raw bytes. IPA characters use UTF-8 byte sequences.
+- Common IPA escapes: ɛ = `\xc9\x9b` (U+025B), ɪ = `\xc9\xaa` (U+026A), ʊ = `\xca\x8a` (U+028A), ˠ = `\xcb\xa0` (U+02E0, broad), ʲ = `\xca\xb2` (U+02B2, slender)
+- Use `ustring` library: `ulen(s)`, `usub(s,i,i)` for Unicode-aware operations.
 
-### Priority 2 — Phonological Accuracy
-4. **Missing dental diacritics** (52 cases) — `n`, `l`, `d`, `t` broad forms lack `̪`
-5. **Vocalized fricative diphthongs** (200+ cases) — `bh/mh/gh/dh` produce wrong output
-6. **`cn-`/`gn-` marker leak** (13 cases) — internal `Kɾˠ_O_SHT` markers appear in output
+## References
 
-### Priority 3 — Fine-Tuning
-7. **`bh`/`mh` broad → `w` rule** (30 cases)
-8. **Unstressed vowel reduction** (`ə` vs `ɪ`, ~70 cases)
-9. **Vowel shift before long low vowels** (~20 cases)
-
-### Priority 4 — Data Quality
-10. **Empty expected IPA** (~100 cases) — should be excluded from scoring
-
-## Limitations
-
-- **Connacht only** — does not model Munster or Ulster phonology
-- **Incomplete stress system** — limited lexical exception list
-- **Sandhi disabled** — each word processed in isolation
-- **Marker leaks** — internal markers occasionally appear in output
-
-## Git History
-
-20 commits (2025-05-24 to 2025-06-15), iterative improvement from initial commit to v19 with Dolgo 0.9413.
-
-## Memory / Refactoring Status
-
-An in-progress modularization effort has extracted `irish_rules_data.lua`, `irish_utils.lua`, and `irish_constants.lua` from the monolith. Current blocker: procedural code accidentally placed in the data module. Regression baseline for refactoring: Levenshtein distance = 30 across 28 test words.
+- Hickey, Raymond (2014). *The Sound Structure of Modern Irish*. De Gruyter Mouton.
+- Ó Raghallaigh, Brian (2013). *Fuaimeanna na Gaeilge*. Cois Life, Dublin.
