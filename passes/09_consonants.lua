@@ -167,17 +167,19 @@ return {
             end
       -- Hickey II.1.7.2: s does NOT palatalize before labials (sméar→[sˠmʲeːɾˠ], not *[ʃmʲeːɾˠ])
       elseif token.ortho == "s" then
-        -- s before p/t/k/m: check polarity. If the following consonant
-        -- is broad, s stays broad. Only palatalize s before a slender p/t/k/m.
+        -- s before p/t/k/m: check polarity. s stays broad before LABIALS
+        -- (p, m, b, f) per Hickey II.1.7.2. Before coronals (t, c) it
+        -- palatalizes if the following stop is slender.
         local next = tokens[i + 1]
-        if next and (next.ortho == "p" or next.ortho == "t" or next.ortho == "c") then
+        local word_initial_s = (prev == nil) or (prev.type == "boundary")
+        if word_initial_s and next and (next.ortho == "p" or next.ortho == "m" or next.ortho == "b" or next.ortho == "f") then
+          token.phon = "sˠ"  -- s always broad before labials (Hickey II.1.7.2)
+        elseif next and (next.ortho == "t" or next.ortho == "c") then
           if next.palatal == true then
             token.phon = "ʃ"
           else
             token.phon = "sˠ"
           end
-        elseif next and next.ortho == "m" then
-          token.phon = "sˠ"
         elseif token.palatal == true then
           token.phon = "ʃ"
         else
