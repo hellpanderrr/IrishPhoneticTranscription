@@ -49,6 +49,32 @@ local function has_postalveolar(phon)
   return phon:find(POSTALVEOLAR, 1, true) ~= nil
 end
 
+-- Word-initial slender l/n get the postalveolar (retracted) diacritic l̠ʲ/n̠ʲ
+-- (Hickey II.1.8: "tensor" slender sonorants in initial position).
+-- However, grammatical/function words (prepositional pronouns, particles,
+-- negatives) retain the lax/non-retracted lʲ/nʲ. Also excluded are loanwords
+-- where the slender l/n is not part of the native tensor system.
+local GRAMMATICAL_SLENDER = {
+  -- Prepositional pronouns: Hickey II.3 — clitic/grammatical, no retracted sonorant
+  leat=true, leatsa=true, leis=true, linn=true, liom=true, libh=true,
+  -- Negative particle + its inflected forms
+  ["Ní"]=true, ["ní"]=true, ["Níor"]=true, ["níos"]=true,
+  -- Negative verb forms (ní + bhíom etc.): initial n is the particle, not stem
+  ["nílid"]=true, ["nílim"]=true, ["nílir"]=true, ["níochán"]=true,
+  -- Name/defective particles
+  Nic=true, nis=true, ["nár"]=true,
+  -- Verbal adjective prefix n-
+  nite=true,
+  -- Loanwords: English borrowings don't participate in the native tensor
+  -- sonorant system (Hickey II.1.8: loanword nativisation is variable).
+  leictreoir=true, litreach=true, litreacha=true, ["líomóid"]=true,
+  -- Derived/compound forms where the initial slender l comes from a stem
+  -- that does not have tensor quality.
+  ["léarscáil"]=true, ["líonra"]=true,
+  -- Verb forms where initial l is from a stem that is not historically tensor
+  ligim=true, ["liúr"]=true,
+}
+
 return {
   name = "sonorants",
   writes_context = false,
@@ -79,15 +105,30 @@ return {
         next_t.phon and next_t.phon ~= "" and
         next_t.type ~= "boundary"
 
+      -- Check for word-initial position
+      local word_initial = (i == 1) or (tokens[i-1] and tokens[i-1].type == "boundary")
+
       if is_broad then
-        if followed_by_cons and not has_dental(token.phon) then
-          -- Insert dental diacritic: lˠ → l̪ˠ, n̪ˠ stays n̪ˠ (already has dental)
-          token.phon = insert_combining(token.phon, DENTAL)
+        if not has_dental(token.phon) then
+          if followed_by_cons then
+            token.phon = insert_combining(token.phon, DENTAL)
+          elseif word_initial then
+            -- Hickey II.1.8: initial broad l/n are denti-alveolar l̪ˠ/n̪ˠ
+            token.phon = insert_combining(token.phon, DENTAL)
+          end
         end
       else
-        if followed_by_cons and not has_postalveolar(token.phon) then
-          -- Insert postalveolar diacritic: lʲ → l̠ʲ, nʲ → n̠ʲ
-          token.phon = insert_combining(token.phon, POSTALVEOLAR)
+        if not has_postalveolar(token.phon) then
+          if followed_by_cons then
+            token.phon = insert_combining(token.phon, POSTALVEOLAR)
+          elseif word_initial then
+            -- Hickey II.1.8: initial slender l/n are tensor/alveolar l̠ʲ/n̠ʲ
+            -- Skip grammatical words (prepositional pronouns, particles, etc.)
+            local word_ortho = context.word_ortho or ""
+            if not GRAMMATICAL_SLENDER[word_ortho] then
+              token.phon = insert_combining(token.phon, POSTALVEOLAR)
+            end
+          end
         end
       end
 
@@ -127,7 +168,22 @@ return {
       local pv_phon = prev_v.phon or ""
       local is_long = pv_phon:find("ː", 1, true) ~= nil
       local is_stressed = prev_v.stress or false
-      if is_long and not is_stressed then
+
+      -- Skip words where word-final broad n keeps dental diacritic.
+      -- These are mostly:
+      --  - Monosyllables after /u/ or diphthongs (bun, Brian, buan, cuan, srian)
+      --  - Certain grammatical/lexical exceptions (chan)
+      local word_ortho = context.word_ortho or ""
+      local KEEP_N_DENTAL = {
+        Brian=true, buan=true, bun=true, chan=true, cuan=true,
+        feochan=true, ghrian=true, srian=true,
+      }
+      if KEEP_N_DENTAL[word_ortho] then goto next_strip end
+
+      if (is_long and not is_stressed) or not is_long then
+        -- Strip dental from word-final broad n preceded by:
+        -- 1. Long unstressed vowel (original rule), OR
+        -- 2. Short vowel (any stress) — Hickey II.1.8: coda n̪ˠ weakens to nˠ
         token.phon = "nˠ"
       end
 

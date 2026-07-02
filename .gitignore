@@ -72,3 +72,6 @@ repo/new_results.csv
 
 # PDF reference files (not tracked — keep on disk only)
 *.pdf
+
+# Sub-repo (separate git repo in subdirectory)
+repo/
