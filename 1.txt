@@ -1,1 +1,0 @@
-﻿Create an extensive LLM prompt with an overview of the project, remaining issues and next steps. Include conceptual overview of the pipeline with all linguistic minutae. Note lua regex limitations. Include iterations left estimate.

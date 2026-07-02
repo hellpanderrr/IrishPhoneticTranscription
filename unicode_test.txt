@@ -1,2 +1,0 @@
-﻿Unicode test: ŋ
-UTF-8 bytes: ŋ

@@ -1,3 +1,0 @@
-File: C:\\Program Files\Wireshark\radius\dictionary.merit
-Recovery Codes: Merit-Proxy
-
