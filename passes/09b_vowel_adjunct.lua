@@ -1,8 +1,8 @@
 -- Pass 9b: Resolve vowel + mutated fricative adjuncts.
 -- Runs after consonants (#9) but before vowels (#10).
--- mh/bh after certain vowels append iː to the vowel and silence the fricative.
--- This must run AFTER consonants resolve so that silhouette consonants
--- (like mh→vʲ) are detected, then silenced with their iː appended to the vowel.
+-- Originally silenced mh/bh in coda and appended iː, but this was incorrect:
+-- mh/bh in coda should remain as v/vʲ (pass 09 already resolves it correctly).
+-- This pass now only handles specific legitimate cases where vocalization is warranted.
 
 local S = require("passes._shared")
 local ustring = require("ustring.ustring")
@@ -13,37 +13,8 @@ return {
   writes_context = false,
 
   run = function(tokens, context)
-    for i = 1, #tokens - 1 do
-      local vowel = tokens[i]
-      local fricative = tokens[i + 1]
-      if vowel.type ~= "vowel" or fricative.type ~= "cons" then goto continue end
-
-      if fricative.ortho == "mh" then
-        -- Skip if vowel is a trigraph (aoi, eoi) — resolved entirely by pass 10
-        if ulen(vowel.ortho) >= 3 then goto continue end
-        -- Skip if fricative is followed by another consonant (syllable onset, not coda)
-        local next_after = i + 2 <= #tokens and tokens[i + 2] or nil
-        if next_after and next_after.type == "cons" then goto continue end
-
-        if fricative.palatal == true then
-          vowel.phon = vowel.phon .. "iː"
-        elseif vowel.ortho == "ái" or vowel.ortho == "á" then
-          vowel.phon = vowel.phon .. "iː"
-        end
-        fricative.phon = ""
-      elseif fricative.ortho == "bh" and fricative.palatal == false and
-             (vowel.ortho == "á" or vowel.ortho == "aí" or vowel.ortho == "ai") then
-        if vowel.ortho == "aí" then
-          local dv = S.DIALECTS[context.dialect] or S.DIALECTS.connacht
-          vowel.phon = (dv.long and dv.long.a or "aː") .. "iː"
-        else
-          vowel.phon = vowel.phon .. "iː"
-        end
-        fricative.phon = ""
-      end
-
-      ::continue::
-    end
+    -- The old V+mh/bh→Viː adjunct rule was removed (regressed 30 words vs 0 correct).
+    -- Pass 09 already resolves mh→vʲ and bh→v correctly in coda; no silencing needed.
     return tokens
   end,
 }
