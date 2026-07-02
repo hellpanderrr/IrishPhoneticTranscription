@@ -1,5 +1,7 @@
 # Irish G2P Engine
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/hellpanderrr/IrishPhoneticTranscription)
+
 A rule-based, standalone **grapheme-to-phoneme (G2P) engine for Irish**, implemented in Lua. Converts standard Irish orthography to IPA phonetic representation, targeting the **Connacht dialect**. Academic/experimental tool based on Raymond Hickey's *The Sound Structure of Modern Irish* (2014) and Ó Raghallaigh's *Fuaimeanna na Gaeilge*.
 
 ## Architecture
@@ -68,6 +70,27 @@ lua -e "local e=require('irish_engine_new'); print(e.transcribe('seomra','connac
 ### Run benchmark
 ```sh
 lua bench_run.lua "label"
+```
+
+## Results
+
+See per-word results in [results.csv](results.csv) — columns: `word`, `got`, `expected`, `exact`, `lev`, `lev_norm`, `dolgo`, `dolgo_norm`.
+
+| Metric | Score |
+|--------|-------|
+| Exact match | 3975/6598 (60.25%) |
+| Avg Levenshtein | 0.91 |
+| Norm Lev (0–100) | **90.33** |
+| Norm Dolgo (0–100) | **93.15** |
+
+> Normalized scores are 0–100 where 100 = perfect match.<br>
+> Lev normalization: `(1 − lev / max_segment_length) × 100`<br>
+> Dolgo normalization: `(1 − dolgo_edit_distance) × 100`
+
+## Remote
+
+```sh
+git remote add origin https://github.com/hellpanderrr/IrishPhoneticTranscription
 ```
 
 ## Current Status

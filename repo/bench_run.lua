@@ -15,8 +15,10 @@ local usub = ustring.sub
 local function trim(s) return s:match("^%s*(.-)%s*$") end
 
 local function levenshtein(s1, s2)
-  if not s1 or not s2 then return 999 end
+  if not s1 or not s2 then return 999, 1 end
   local m, n = ulen(s1), ulen(s2)
+  if m == 0 then return n, math.max(n, 1) end
+  if n == 0 then return m, math.max(m, 1) end
   local v0, v1 = {}, {}
   for i = 0, n do v0[i] = i end
   for i = 1, m do
@@ -28,7 +30,7 @@ local function levenshtein(s1, s2)
     end
     for j = 0, n do v0[j] = v1[j] end
   end
-  return v1[n]
+  return v1[n], math.max(m, n)
 end
 
 -- Simple Dolgopolsky equivalence classes for IPA
@@ -102,28 +104,34 @@ local function dolgo_distance(s1, s2)
   return (v1[n] or 0) / maxlen
 end
 
-local exact, total, total_lev, total_dolgo = 0, 0, 0, 0
+local exact, total, total_lev, total_norm_lev, total_dolgo, total_norm_dolgo = 0, 0, 0, 0, 0, 0
 local out_file = arg and arg[2] and io.open(arg[2], "w") or nil
-if out_file then out_file:write("word\tgot\texpected\texact\tlev\tdolgo\n") end
+if out_file then out_file:write("word\tgot\texpected\texact\tlev\tlev_norm\tdolgo\tdolgo_norm\n") end
 
 for word, entry in pairs(bench) do
   local got = engine.transcribe(word, "connacht")
   total = total + 1
   local variants = {}
   for v in entry.expected:gmatch("[^,]+") do table.insert(variants, trim(v)) end
-  local best_lev, best_exp, best_dolgo = nil, nil, nil
+  local best_lev, best_exp, best_dolgo, best_norm_lev, best_norm_dolgo = nil, nil, nil, nil, nil
   for _, ev in ipairs(variants) do
-    local lev = levenshtein(got, ev)
+    local lev, maxlen = levenshtein(got, ev)
     local dolgo = dolgo_distance(got, ev)
-    if best_lev == nil or lev < best_lev then best_lev, best_exp, best_dolgo = lev, ev, dolgo end
+    if best_lev == nil or lev < best_lev then
+      best_lev, best_exp, best_dolgo = lev, ev, dolgo
+      best_norm_lev = (maxlen > 0) and ((1 - lev / maxlen) * 100) or 100
+      best_norm_dolgo = (1 - dolgo) * 100
+    end
   end
-  if best_lev == nil then best_lev, best_exp, best_dolgo = 999, "", 1 end
+  if best_lev == nil then best_lev, best_exp, best_dolgo, best_norm_lev, best_norm_dolgo = 999, "", 1, 0, 0 end
   total_lev = total_lev + best_lev
+  total_norm_lev = total_norm_lev + best_norm_lev
   total_dolgo = total_dolgo + best_dolgo
+  total_norm_dolgo = total_norm_dolgo + best_norm_dolgo
   if got == best_exp then exact = exact + 1 end
   if out_file then
     out_file:write(word .. "\t" .. got .. "\t" .. best_exp .. "\t" ..
-      tostring(got == best_exp) .. "\t" .. best_lev .. "\t" .. string.format("%.4f", best_dolgo) .. "\n")
+      tostring(got == best_exp) .. "\t" .. best_lev .. "\t" .. string.format("%.2f", best_norm_lev) .. "\t" .. string.format("%.4f", best_dolgo) .. "\t" .. string.format("%.2f", best_norm_dolgo) .. "\n")
   end
 end
 if out_file then out_file:close() end
@@ -131,8 +139,9 @@ if out_file then out_file:close() end
 local label = (arg and arg[1]) or ""
 local pct = exact / total * 100
 local avg_lev = total_lev / total
-local norm_lev = (1 - total_lev / (total * 20)) * 100
+local avg_norm_lev = total_norm_lev / total
 local avg_dolgo = total_dolgo / total
+local avg_norm_dolgo = total_norm_dolgo / total
 if label ~= "" then io.write(label .. ": ") end
-io.write(string.format("Exact: %d/%d (%.2f%%)  Avg Lev: %.2f  Norm Lev: %.2f%%  Avg Dolgo: %.4f\n",
-  exact, total, pct, avg_lev, norm_lev, avg_dolgo))
+io.write(string.format("Exact: %d/%d (%.2f%%)  Avg Lev: %.2f  Norm Lev: %.2f  Norm Dolgo: %.2f\n",
+  exact, total, pct, avg_lev, avg_norm_lev, avg_norm_dolgo))
