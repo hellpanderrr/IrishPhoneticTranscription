@@ -1,0 +1,27 @@
+# Temp/debug files
+*.pyc
+__pycache__/
+%TEMP%*
+
+# Graymatter daemon files
+.graymatter/
+
+# Session logs
+.session_history.log
+
+# Superpowers
+.superpowers/
+
+# Analysis and comparison scripts
+dolgo_cmp.py
+dolgo_score.py
+_dolgo_*.json
+
+# Results
+data/results.csv
+
+# Plans
+docs/superpowers/plans/
+
+# Temp benchmark files
+%TEMP%*/
