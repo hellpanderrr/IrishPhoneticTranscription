@@ -62,8 +62,7 @@ implementation_plan*
 mono_compare*
 stress_initial*
 
-# Results
-repo/results.csv
+# Results (temp/generated)
 repo/results_new.*
 repo/results_*.tsv
 repo/new_results.csv
