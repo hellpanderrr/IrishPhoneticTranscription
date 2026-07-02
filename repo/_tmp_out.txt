@@ -1,7 +1,0 @@
-1: ortho=bh type=cons phon=w palatal=false
-2: ortho=f type=cons phon= palatal=false
-3: ortho=ui type=vowel phon=ɪ palatal=nil
-4: ortho=l type=cons phon=l̠ʲ palatal=true
-5: ortho=t type=cons phon=tʲ palatal=true
-6: ortho=ea type=vowel phon=ə palatal=nil
-7: ortho=r type=cons phon=ɾˠ palatal=false
