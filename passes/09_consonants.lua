@@ -191,15 +191,41 @@ return {
         token.phon = S.palatal_consonant(token, "tʲ", "t̪ˠ")
       elseif token.ortho == "d" then
         token.phon = S.palatal_consonant(token, "dʲ", "d̪ˠ")
-      elseif token.ortho == "n" then
-        if token.is_voiceless then
+                  elseif token.ortho == "n" then
+        -- Hickey II.1.7.8: n assimilates to place of following stop:
+        --   before velar/palatal stops (c, g) → ŋ (broad) / ɲ (slender).
+        --   Word-internal n before c/g becomes velar nasal.
+        --   Does NOT apply before fricatives (ch, gh, sh).
+        local next_cons = tokens[i + 1]
+        if next_cons and next_cons.type == "cons" and
+           (next_cons.ortho == "c" or next_cons.ortho == "g") then
+          if token.palatal == true then
+            token.phon = "ɲ"
+          else
+            token.phon = "ŋ"
+          end
+        elseif token.is_voiceless then
           token.phon = S.palatal_consonant(token, "n̥", "n̪ˠ")
         else
           token.phon = S.palatal_consonant(token, "nʲ", "n̪ˠ")
         end
-      elseif token.ortho == "ng" then
-        token.phon = S.palatal_consonant(token, "ɲ", "ŋ")
-      elseif token.ortho == "l" then
+elseif token.ortho == "ng" then
+        -- Hickey II.1.7.8: ng before coronal stops (t, d, th) -> n
+        local next_c = tokens[i + 1]
+        if next_c and next_c.type == "cons" and
+           (next_c.ortho == "t" or next_c.ortho == "d" or next_c.ortho == "th") then
+          token.ortho = "n"
+          token.palatal = next_c.palatal
+          token.broad = nil
+          if next_c.palatal == true then
+            token.phon = "nʲ"
+          else
+            token.phon = "n̪ˠ"
+          end
+        else
+          token.phon = S.palatal_consonant(token, "\xC9\xB2", "\xC5\x8B")
+        end
+elseif token.ortho == "l" then
         if token.is_voiceless then
           token.phon = S.palatal_consonant(token, "l̥", "lˠ")
         else

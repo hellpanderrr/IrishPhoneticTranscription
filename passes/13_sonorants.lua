@@ -91,6 +91,10 @@ return {
       if token.phon == "" then goto next_son end
       if token.ortho ~= "l" and token.ortho ~= "n" then goto next_son end
 
+      -- Skip already-velarized n (assimilated to ŋ/ɲ before velar stops)
+      if token.ortho == "n" and token.phon:sub(1,2) == "ŋ" then goto next_son end
+      if token.ortho == "n" and token.phon:sub(1,2) == "ɲ" then goto next_son end
+
       -- Skip if next token is same ortho (geminate pair — handled in Phase 2)
       local next_t = tokens[i + 1]
       if next_t and next_t.type == "cons" and next_t.ortho == token.ortho then
