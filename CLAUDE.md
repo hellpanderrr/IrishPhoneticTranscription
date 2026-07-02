@@ -23,9 +23,10 @@ Every phonological rule in the 16 passes cites its source in comments:
 - PDFs in `theory/` on disk (not git-tracked); text extracts `.txt` files are tracked
 
 ## Benchmark Target
-- Current: ~60.52% exact match (3993/6598) Connacht
-- Norm Lev: 90.59, Norm Dolgo: 93.44
+- Current: ~64.25% exact match (4239/6598) Connacht
+- Norm Lev: 91.28, Norm Dolgo: 93.44
 - Lev-1 single-substitution error buckets in `_base.tsv`
+- Previous: ~44.17% (2912/6593), theory-grounding session → ~60.52% (3993/6598), retracted/dental session → ~64.25% (4239/6598)
 
 ## Encoding
 - Lua strings are raw bytes. Unicode chars use UTF-8 byte sequences.
