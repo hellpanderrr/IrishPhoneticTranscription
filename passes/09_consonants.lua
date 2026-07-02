@@ -46,7 +46,22 @@ return {
               token.phon = "w"
             end
           else
-            token.phon = "w"
+            -- Hickey II.1.7.2: non-initial broad mh/bh retained as [v] before
+            -- consonants (coda); weakened to [w] before vowels or word-finally.
+            -- Pass #06 already silenced historically vocalised forms.
+            -- Lexical exceptions: words where non-initial broad mh/bh weakens
+            -- to [w] even before a consonant (Connacht weakening in specific stems)
+            local word_ortho = context and context.word_ortho or ""
+            local W_BEFORE_C = {
+              faobhrach=true, naomhtar=true,
+            }
+            local nxt = tokens[i + 1]
+            if nxt and nxt.type == "cons" and nxt.phon and nxt.phon ~= ""
+               and not W_BEFORE_C[word_ortho] then
+              token.phon = "vˠ"  -- before consonant = coda (retained)
+            else
+              token.phon = "w"    -- before vowel or word-final -> weakened
+            end
           end
         else
           token.phon = "vˠ"
@@ -137,7 +152,19 @@ return {
       elseif token.ortho == "fh" then
         token.phon = ""
       elseif token.ortho == "bhf" then
-        token.phon = "w"
+            -- Hickey II.1.7.2: non-initial broad mh/bh retained as [v] before
+            -- consonants (coda) or word-finally; weakened to [w] only before
+            -- vowels (onset). Pass #06 already silenced historically vocalised forms.
+            local nxt = tokens[i + 1]
+            if nxt and nxt.type == "cons" and nxt.phon and nxt.phon ~= "" then
+              token.phon = "vˠ"  -- before consonant = coda
+            elseif nxt and nxt.type == "boundary" then
+              token.phon = "vˠ"  -- word-final = coda
+            elseif not nxt then
+              token.phon = "vˠ"  -- word-final = coda
+            else
+              token.phon = "w"    -- before vowel = onset -> weakened
+            end
       -- Hickey II.1.7.2: s does NOT palatalize before labials (sméar→[sˠmʲeːɾˠ], not *[ʃmʲeːɾˠ])
       elseif token.ortho == "s" then
         -- s before p/t/k/m: check polarity. If the following consonant

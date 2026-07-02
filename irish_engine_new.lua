@@ -47,6 +47,15 @@ local function tokenize_word(word)
     elseif tri == "aoi" or tri == "eoi" then
       table.insert(tokens, S.make_token(tri, "vowel", i, i + 2))
       i = i + 3
+    elseif tri == "ngh" then
+        -- n + gh (lenited g), NOT ng + h; avoids impossible /ŋh/ cluster
+        local tn = S.make_token("n", "cons", i, i)
+        table.insert(tokens, tn)
+        local tgh = S.make_token("gh", "cons", i + 1, i + 2)
+        tgh.is_mutated = true
+        tgh.mutation = "lenition"
+        table.insert(tokens, tgh)
+        i = i + 3
     elseif digraph == "ng" then
       table.insert(tokens, S.make_token(digraph, "cons", i, i + 1))
       i = i + 2
