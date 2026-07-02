@@ -3,8 +3,10 @@
 __pycache__/
 %TEMP%*
 
-# Graymatter daemon files
+# Graymatter daemon files (at any depth)
 .graymatter/
+**/.graymatter/
+repo/.graymatter/
 
 # Session logs
 .session_history.log
