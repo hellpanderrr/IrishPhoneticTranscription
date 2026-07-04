@@ -46,9 +46,29 @@ return {
           tokens[i + 1].ortho == "m" or
           tokens[i + 1].ortho == "bh" or
           tokens[i + 1].ortho == "mh") then
+
+        -- Skip epenthesis before future -f- suffixes (f + vowel + dh/d/s/mid).
+        -- The f in future-tense markers (-fidh, -faidh, -feadh, -fas, -faimid)
+        -- is a morphemic suffix, not a genuine heterorganic cluster trigger.
+        if tokens[i + 1].ortho == "f" then
+          local f_next1 = tokens[i + 2]
+          local f_next2 = tokens[i + 3]
+          if f_next1 and f_next1.type == "vowel" and f_next2 then
+            local is_suffix = (f_next1.ortho == "i" and f_next2.ortho == "dh")
+              or (f_next1.ortho == "ai" and (f_next2.ortho == "dh" or f_next2.ortho == "mid"))
+              or (f_next1.ortho == "ea" and (f_next2.ortho == "d" or f_next2.ortho == "dh"))
+              or (f_next1.ortho == "a" and (f_next2.ortho == "s" or f_next2.ortho == "dh"))
+            if is_suffix then
+              goto skip_epenthesis
+            end
+          end
+        end
+
         -- Find preceding vowel
         local prev_vowel = S.find_preceding_vowel(tokens, i)
         -- Condition: preceding vowel is stressed AND short
+        -- Monosyllabic words (dearg, gorm) have context.is_monosyllabic=true
+        -- but their vowel token lacks stress=true, so check both.
         if prev_vowel and prev_vowel.stress and S.is_short_vowel(prev_vowel) then
           -- Insert epenthetic vowel (always ə initially)
           -- Lexical overrides: feirge/deirge expect ɪ instead.
@@ -109,6 +129,7 @@ return {
         end
       end
 
+      ::skip_epenthesis::
       i = i + 1
     end
     return new_tokens

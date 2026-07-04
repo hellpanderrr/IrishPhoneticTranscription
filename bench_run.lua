@@ -14,6 +14,35 @@ local usub = ustring.sub
 
 local function trim(s) return s:match("^%s*(.-)%s*$") end
 
+-- Expand parenthetical optional elements into multiple variants.
+-- "mʲa(h)" -> {"mʲa", "mʲah"}
+local function expand_variant(s)
+  local results = {""}
+  local i = 1
+  while i <= #s do
+    if s:sub(i, i) == "(" then
+      local close = s:find(")", i, true)
+      if close then
+        local inner = s:sub(i + 1, close - 1)
+        local new = {}
+        for _, r in ipairs(results) do
+          table.insert(new, r .. inner)
+          table.insert(new, r)
+        end
+        results = new
+        i = close + 1
+      else
+        for j, r in ipairs(results) do results[j] = r .. s:sub(i, i) end
+        i = i + 1
+      end
+    else
+      for j, r in ipairs(results) do results[j] = r .. s:sub(i, i) end
+      i = i + 1
+    end
+  end
+  return results
+end
+
 local function levenshtein(s1, s2)
   if not s1 or not s2 then return 999, 1 end
   local m, n = ulen(s1), ulen(s2)
@@ -112,7 +141,12 @@ for word, entry in pairs(bench) do
   local got = engine.transcribe(word, "connacht")
   total = total + 1
   local variants = {}
-  for v in entry.expected:gmatch("[^,]+") do table.insert(variants, trim(v)) end
+  for v in entry.expected:gmatch("[^,]+") do
+    local expanded = expand_variant(trim(v))
+    for _, ev in ipairs(expanded) do
+      table.insert(variants, ev)
+    end
+  end
   local best_lev, best_exp, best_dolgo, best_norm_lev, best_norm_dolgo = nil, nil, nil, nil, nil
   for _, ev in ipairs(variants) do
     local lev, maxlen = levenshtein(got, ev)

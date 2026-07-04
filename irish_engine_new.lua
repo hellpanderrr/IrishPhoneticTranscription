@@ -42,6 +42,7 @@ local function tokenize_word(word)
     elseif c1 == "'" then
       local token = S.make_token(c1, "boundary", i, i)
       token.source = "apostrophe"
+      token.phon = ""  -- silence apostrophe in output
       table.insert(tokens, token)
       i = i + 1
     elseif tri == "aoi" or tri == "eoi" then
