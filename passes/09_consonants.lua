@@ -272,12 +272,31 @@ elseif token.ortho == "l" then
         local prev = tokens[i - 1]
         local next1 = tokens[i + 1]
         local next2 = tokens[i + 2]
-        -- Match -fidh (f + i + dh) or -faidh (f + ai + dh)
-        local suffix_f = prev and prev.type == "cons" and prev.phon and prev.phon ~= ""
+        -- Match -fidh (f + i + dh) or -faidh (f + ai + dh) or -fead (f + ea + d) or
+        -- -feadh (f + ea + dh) or -fas (f + a + s) or -fadh (f + a + dh) or -faimid (f + ai + mid)
+        -- The future -f- suffix lenites between a stem-final consonant and the verb ending.
+        -- After obstruent: f → ∅. After sonorant: f → h.
+        local is_future_suffix = prev and prev.type == "cons" and prev.phon and prev.phon ~= ""
           and next1 and next1.type == "vowel"
-          and ((next1.ortho == "i" and next2 and next2.ortho == "dh")
-            or (next1.ortho == "ai" and next2 and next2.ortho == "dh"))
-        if suffix_f then
+          and (
+            -- -fidh: f + i + dh
+            (next1.ortho == "i" and next2 and next2.ortho == "dh")
+            -- -faidh: f + ai + dh
+            or (next1.ortho == "ai" and next2 and next2.ortho == "dh")
+            -- -fead: f + ea + d (1sg. future)
+            or (next1.ortho == "ea" and next2 and next2.ortho == "d" and (not tokens[i+3] or tokens[i+3].ortho ~= "h"))
+            -- -feadh: f + ea + dh (autonomous future)
+            or (next1.ortho == "ea" and next2 and next2.ortho == "dh")
+            -- -fas: f + a + s (relative future)
+            or (next1.ortho == "a" and next2 and next2.ortho == "s")
+            -- -fad: f + a + d (1sg. future)
+            or (next1.ortho == "a" and next2 and next2.ortho == "d" and (not tokens[i+3] or tokens[i+3].ortho ~= "h"))
+            -- -fadh: f + a + dh
+            or (next1.ortho == "a" and next2 and next2.ortho == "dh")
+            -- -faimid: f + ai + mid
+            or (next1.ortho == "ai" and tokens[i+2] and tokens[i+2].ortho == "mid")
+          )
+        if is_future_suffix then
           local pp = prev.phon
           local is_obstruent = false
           -- Check for multi-byte IPA obstruents first (ʃ = 0xCA 0x83).
@@ -295,6 +314,17 @@ elseif token.ortho == "l" then
             end
           end
           if is_obstruent then
+            -- Regressive devoicing: a voiced stop before future -f- suffix
+            -- devoices to its voiceless counterpart. creidfead→creitfead,
+            -- lúbfad→lúbpād, ligfidh→ligcidh etc.
+            local DEV = {
+              ["d"] = "t", ["dʲ"] = "tʲ", ["d̪ˠ"] = "t̪ˠ",
+              b = "p", ["bʲ"] = "pʲ", ["bˠ"] = "pˠ",
+              ["ɟ"] = "c", ["ɡ"] = "k",
+            }
+            if DEV[pp] then
+              prev.phon = DEV[pp]
+            end
             token.phon = ""
           else
             token.phon = "h"

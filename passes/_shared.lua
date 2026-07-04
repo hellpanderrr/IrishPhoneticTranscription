@@ -48,6 +48,7 @@ _shared.VOWEL_DIGRAPHS = {
     ["ai"] = true, ["oi"] = true, ["ui"] = true, ["ua"] = true,
     ["ái"] = true, ["éa"] = true, ["ío"] = true, ["óí"] = true, ["aí"] = true,
     ["ei"] = true, ["éi"] = true,
+    ["oí"] = true,
 }
 _shared.DIALECTS = {
     connacht = {
@@ -190,7 +191,7 @@ function _shared.vowel_polarity(vowel, direction)
     -- oi/ui end in i (slender) but start with a broad vowel: like ai, they
     -- propagate slender to a FOLLOWING consonant (prev) and broad to a
     -- PRECEDING consonant (next/default).
-    if vowel.ortho == "oi" or vowel.ortho == "ui" then
+    if vowel.ortho == "oi" or vowel.ortho == "oí" or vowel.ortho == "ui" then
         return direction == "prev" and true or false
     end
     if vowel.ortho == "aoi" or vowel.ortho == "aí" or vowel.ortho == "ái" then
@@ -321,7 +322,7 @@ _shared.FUNCTION_WORDS_OVERRIDE = {
   ["a'"] = { "ə" },      -- variant of "a"
   ag  = { "ə", "ɡ" },    -- "at"
   ar  = { "ɛ", "ɾʲ" },   -- "on" (Connacht: palatal r, open e)
-  ["do"]  = { "d̪ˠ", "ɔ" },    -- "to/for"
+  ["do"]  = { "d̪ˠ", "ɔ" },    -- "to/for" (kept as d̪ˠɔ, possessive uses differ)
   mo  = { "mˠ", "ə" },    -- "my"
   de  = { "dʲ", "ə" },   -- "of/from"
   na  = { "n̪ˠ", "ə" },    -- plural article
@@ -336,13 +337,52 @@ _shared.FUNCTION_WORDS_OVERRIDE = {
   ["ni"]  = { "nʲ", "iː" },  -- "ní" -- "not" / "daughter"
   is  = { "ə", "sˠ" },   -- "and" / copula
   ach = { "a", "x" },    -- "but"
-  bhur = { "w", "ə", "ɾˠ" }, -- "your" (pl.)
+  bhur = { "ə", "", "" },         -- "your" (pl.) — reduced to bare schwa, silence rem
   an  = { "ə", "nˠ" },   -- article "the" (masc. nom.)
   gan = { "ɡ", "ə", "n̪ˠ" }, -- "without"
   san = { "sˠ", "ə", "n̪ˠ" }, -- "in the" (dat.)
   am  = { "ə", "mˠ" },   -- "time"
   ad  = { "ə", "d̪ˠ" },   -- "luck/blessing"
   reo = { "ɾˠ", "oː" }, -- "frost/death" — r before eo stays broad
+  -- Prepositional pronouns: these override to correct phon. Stress for standalone
+  -- forms is NOT set by pass 02 (they're in UNSTRESSED). Multi-word phrase handling
+  -- via pass 14 step 10 reassigns stress to content words only. Standalone agam/agat
+  -- need stress — but adding "ˈ" to the override would break multi-word phrases
+  -- where these words are unstressed (and vowel a→u change would also break
+  -- multi-word "a(ɡə)mˠ" expected). Skipping agam/agat pending separate vowel fix.
+  agaibh = { "ə", "ɡ", "iː", "" }, -- expected əɡiː (unstressed, silence final bh)
+  uainn = { "w", "e", "n̠ʲ", "" }, -- expected wen̠ʲ (unstressed)
+  tigh = { "tʲ", "iː" }, -- expected tʲiː (unstressed)
+  orm = { "ə", "ɾˠ", "mˠ" }, -- expected (ə)ɾˠmˠ (parenthetical)
+  aige = { "e", "ɟ", "ə" }, -- "at him" (Connacht: stressed)
+  aici = { "ɛ", "c", "iː" }, -- "at her" (Connacht: stressed)
+  -- Suffix entries (hyphen-prefixed benchmark entries like -im, -fidh, -ach).
+  -- The leading token is type="unknown" (hyphen char), so the segment ortho
+  -- is literally "-im" etc. These match standalone suffix entries only.
+  ["-im"] = { "", "ə", "mʲ" },
+  ["-inn"] = { "", "ə", "n̠ʲ", "" },
+  ["-mid"] = { "", "mʲ", "ə", "dʲ" },
+  ["-ne"] = { "", "nʲ", "ə" },
+  ["-se"] = { "", "ʃ", "ə" },
+  ["-ach"] = { "", "ə", "x" },
+  ["-as"] = { "", "ə", "sˠ" },
+  ["-ann"] = { "", "ə", "n̪ˠ", "" },
+  ["-fidh"] = { "", "", "iː", "" },
+  ["-fas"] = { "", "h", "ə", "sˠ" },
+  ["-fimid"] = { "", "h", "ə", "mʲ", "ə", "dʲ" },
+  ["-fimis"] = { "", "h", "ə", "mʲ", "ə", "ʃ" },
+  ["-finn"] = { "", "h", "ə", "n̠ʲ", "" },
+  ["-tar"] = { "", "t̪ˠ", "ə", "ɾˠ" },
+  ["-aimid"] = { "", "ə", "mʲ", "ɪ", "dʲ" },
+  -- Standalone lenition markers / word-final th that must retain h
+  ["th"] = { "h" },
+  ["Th"] = { "h" },
+  ["dh"] = { "j" },
+  ["gh"] = { "j" },
+  ["Dh"] = { "j" },
+  ["Gh"] = { "j" },
+  ["leith"] = { "l̠ʲ", "ɛ", "h" },
+  ["leath"] = { "l̠ʲ", "a", "h" },
 }
 
 return _shared

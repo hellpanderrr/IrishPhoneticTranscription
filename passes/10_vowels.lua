@@ -181,6 +181,7 @@ return {
         -- FG Ch.5: Ceathrún Rua vowel inventory
         elseif ortho == "ao" then token.phon = dv.ao
         elseif ortho == "eo" then token.phon = dv.eo
+        elseif ortho == "oí" then token.phon = "iː"  -- Hickey II.1.9: oí → iː (Connacht) — separate digraph from oi
         elseif ortho == "ea" then token.phon = dv.ea
         elseif ortho == "ae" then token.phon = "eː"
         elseif ortho == "ei" then token.phon = "ɛ"

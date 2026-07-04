@@ -84,14 +84,14 @@ return {
       local prev_vowel, j = nil, i - 1
       while j >= 1 do
         if tokens[j].type == "vowel" then prev_vowel = tokens[j]; break end
-        if tokens[j].type == "boundary" then break end  -- word boundary: don't scan into prev word
+        if tokens[j].type == "boundary" and tokens[j].source ~= "apostrophe" then break end  -- word boundary: don't scan into prev word (apostrophes don't block)
         j = j - 1
       end
 
       local next_vowel, j = nil, i + 1
       while j <= #tokens do
         if tokens[j].type == "vowel" then next_vowel = tokens[j]; break end
-        if tokens[j].type == "boundary" then break end  -- word boundary: don't scan into next word
+        if tokens[j].type == "boundary" and tokens[j].source ~= "apostrophe" then break end  -- word boundary: don't scan into next word (apostrophes don't block)
         j = j + 1
       end
 

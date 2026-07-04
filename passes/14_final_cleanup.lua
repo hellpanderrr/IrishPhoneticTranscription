@@ -259,26 +259,9 @@ return {
       end
     end
 
-    -- Step 4l: oí → iː lexical overrides.
-    -- The normalizer strips fadas, so oí becomes oi and resolves as /ɔ/.
-    -- These words need the o vowel silenced and í→iː kept.
-    -- Hickey II.1.9: oí as word-final diphthong → [iː] (croí→[kɾˠiː])
-    local OI_SILENCE_O = {
-      snoi=true, chroi=true, croi=true,
-      snoiodoireacht=true, ["gra mo chroi"]=true,
-    }
-    if context.word_ortho then
-      local w = context.word_ortho:lower()
-      if OI_SILENCE_O[w] then
-        local found = false
-        for _, token in ipairs(tokens) do
-          if not found and token.type == "vowel" and token.ortho == "oi" then
-            token.phon = "iː"
-            found = true
-          end
-        end
-      end
-    end
+    -- Step 4l: oí → iː is now handled as a recognized vowel digraph in the
+    -- tokenizer (VOWEL_DIGRAPHS) and resolved in the vowel pass (pass 10).
+    -- See _shared.lua VOWEL_DIGRAPHS and passes/10_vowels.lua ortho=="oí".
 
     -- Step 4f: -igh endings: restore ə → iː (imperative verbs, adjectives).
 
@@ -550,7 +533,8 @@ return {
         for _, t in ipairs(seg) do
           if fw_ipa[override_idx] then
             t.phon = fw_ipa[override_idx]
-            t.stress = false
+            -- Preserve original stress status (some function words like aige carry stress)
+            if not t.stress then t.stress = false end
           end
           override_idx = override_idx + 1
         end
