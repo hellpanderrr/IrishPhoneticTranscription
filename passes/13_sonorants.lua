@@ -95,6 +95,9 @@ local NON_TENSOR_SLENDER = {
   argoint=true, peint=true, failte=true, mointeach=true,
   -- Additional verbal adjective forms (-te/-the suffix with slender n/l)
   deintear=true, puint=true, ginte=true, nuaghinte=true, oscailte=true, gabhailte=true, innealtoir=true,
+  -- Loanwords and compounds: slender l/n is non-tensor
+  pillin=true, milsean=true, milse=true, leorai=true, liopa=true, liopard=true,
+  truaill=true, duille=true, gaedhilge=true,
 }
 
 return {
@@ -141,6 +144,31 @@ return {
           elseif word_initial then
             -- Hickey II.1.8: initial broad l/n are denti-alveolar l̪ˠ/n̪ˠ
             token.phon = insert_combining(token.phon, DENTAL)
+          elseif token.from_dl then
+            -- Historical dl->l reduction: l retains dental articulation even
+            -- before a vowel (codlata -> kOl̪ˠət̪ˠə). Set in pass 04.
+            token.phon = insert_combining(token.phon, DENTAL)
+          elseif token.ortho == "l" then
+            -- Broad l preceded by r: retains fortis dental articulation.
+            -- Hickey II.1.8: broad l in medial r+l clusters (iarla, Bearla,
+            -- Ceatharlach, tarlu, etc.) keeps denti-alveolar quality before
+            -- vowels. Excludes mutation forms (Bhearla, mBearla) where
+            -- lenition or eclipsis causes lenis articulation.
+            local prev_t = tokens[i - 1]
+            if prev_t and prev_t.ortho == "r" and prev_t.type == "cons" and prev_t.phon and prev_t.phon ~= "" then
+              -- Check if word starts with a mutation marker for the base word.
+              -- If so, the l is lenis and should not receive dental.
+              local word = context.word_ortho or ""
+              if not (word:match("^[Bb]h") or word:match("^m[Bb]")) then
+                token.phon = insert_combining(token.phon, DENTAL)
+              end
+            end
+          end
+        elseif not word_initial and not followed_by_cons and not token.from_dl and token.ortho == "n" then
+          -- Hickey II.1.8: medial broad n between vowels is lenis [nˠ], not fortis [n̪ˠ]
+          local prev_t = tokens[i - 1]
+          if prev_t and prev_t.type == "vowel" then
+            token.phon = S.palatal_consonant(token, "nʲ", "nˠ")
           end
         end
       else
@@ -213,7 +241,7 @@ return {
       }
       if KEEP_N_DENTAL[word_ortho] then goto next_strip end
 
-      if (is_long and not is_stressed) or not is_long then
+      if (is_long and not is_stressed) or (not is_long and not context.is_monosyllabic) then
         -- Strip dental from word-final broad n preceded by:
         -- 1. Long unstressed vowel (original rule), OR
         -- 2. Short vowel (any stress) — Hickey II.1.8: coda n̪ˠ weakens to nˠ
