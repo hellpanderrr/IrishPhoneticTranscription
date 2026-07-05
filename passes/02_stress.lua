@@ -54,6 +54,10 @@ return {
       chugam=true,chugat=true,chugainn=true,chugaibh=true,chuige=true,
       uaim=true,uait=true,uainn=true,uaibh=true,uathu=true,
       ["faoi"]=true,["fearacht"]=true,["trí"]=true,["trína"]=true,
+      -- Monosyllabic past/conditional forms with apostrophe prefix d'/b':
+      -- these are grammatical/verbal function words without lexical stress.
+      ["d'ith"]=true,["d'fhág"]=true,["d'fhás"]=true,["d'alt"]=true,
+      ["d'iarr"]=true,["d'fhuaigh"]=true,["b'fhearr"]=true,
     }
 
     -- Process each word segment independently.
@@ -75,10 +79,21 @@ return {
 
       if seg_vc <= 1 then
         if #segments > 1 then
-          for _, t in ipairs(seg) do
-            if t.type == "vowel" then
-              t.stress = true
-              break
+          -- Skip stress for monosyllabic segments prefixed by an apostrophe
+          -- marker (d'ith, b'fhearr, etc.). These are grammatical/verbal
+          -- function words and lack lexical stress in Connacht.
+          local skip_stress = false
+          local wo = context.word_ortho or ""
+          if wo:match("^[dbm]'") and seg_vc <= 1 then
+            skip_stress = true
+            seg_is_monosyllabic = true
+          end
+          if not skip_stress then
+            for _, t in ipairs(seg) do
+              if t.type == "vowel" then
+                t.stress = true
+                break
+              end
             end
           end
         end

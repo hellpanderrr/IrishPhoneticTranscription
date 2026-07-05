@@ -94,9 +94,16 @@ local function render_output(tokens)
         if t.type == "cons" and t.phon and t.phon ~= "" then
           onset_start = j
         elseif t.type == "boundary" then
-          break
+          -- Apostrophe boundaries (d'fhag, b'fhearr) are elision markers,
+          -- not prosodic boundaries — skip them to let stress land on the
+          -- prefix consonant. True boundaries (spaces) remain as barriers.
+          if t.ortho == "'" then
+            -- skip apostrophe
+          else
+            break
+          end
         elseif t.phon == nil or t.phon == "" then
-          -- skip silenced non-boundary tokens
+          -- skip silenced non-boundary tokens (fh, th, etc.)
         else
           break
         end
