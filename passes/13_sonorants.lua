@@ -57,6 +57,7 @@ end
 local GRAMMATICAL_SLENDER = {
   -- Prepositional pronouns: Hickey II.3 — clitic/grammatical, no retracted sonorant
   leat=true, leatsa=true, leis=true, linn=true, liom=true, libh=true,
+  leofa=true, leosan=true,
   -- Negative particle + its inflected forms
   ["Ní"]=true, ["ní"]=true, ["Níor"]=true, ["níos"]=true,
   -- Negative verb forms (ní + bhíom etc.): initial n is the particle, not stem
@@ -73,6 +74,27 @@ local GRAMMATICAL_SLENDER = {
   ["léarscáil"]=true, ["líonra"]=true,
   -- Verb forms where initial l is from a stem that is not historically tensor
   ligim=true, ["liúr"]=true,
+}
+
+-- Lexical exemptions: words where slender l/n should NOT receive the
+-- postalveolar diacritic before a consonant (loanwords, verbal adjectives,
+-- and other non-native formations). These words participate in the slender
+-- system (lʲ/nʲ) but lack the tensor/postalveolar quality of native Irish
+-- slender sonorants. Hickey II.1.8: loanword nativisation is variable.
+-- Exemption applies to l̠ʲ→lʲ and n̠ʲ→nʲ before any following consonant.
+local NON_TENSOR_SLENDER = {
+  -- Verbal nouns/adjectives in -(a)ilt(e), -(a)int, -(a)inte
+  cigilt=true, goilte=true, ceilte=true, oiltear=true, scaoilte=true,
+  buailteacha=true, deighilt=true, seimint=true, innilt=true,
+  -- Loanwords: English borrowings with slender l/n
+  bairille=true, baraille=true, bille=true, billi=true,
+  ceilp=true, ceilpe=true, cailc=true, cailce=true, stailc=true, spailpin=true,
+  cillin=true, einne=true, rinnis=true, india=true, insim=true, lia=true,
+  chailleas=true, muinteora=true,
+  -- Abstract nouns in -int / -óint / extended -te verbal adjective
+  argoint=true, peint=true, failte=true, mointeach=true,
+  -- Additional verbal adjective forms (-te/-the suffix with slender n/l)
+  deintear=true, puint=true, ginte=true, nuaghinte=true, oscailte=true, gabhailte=true, innealtoir=true,
 }
 
 return {
@@ -124,12 +146,19 @@ return {
       else
         if not has_postalveolar(token.phon) then
           if followed_by_cons then
-            token.phon = insert_combining(token.phon, POSTALVEOLAR)
+            -- Hickey II.1.8: slender l/n before consonant → postalveolar l̠ʲ/n̠ʲ
+            -- Exclude non-tensor sonorants (loanwords, verbal adjectives, etc.)
+            local word_ortho = S.normalize_ortho(context.word_ortho or "")
+            local is_exempt = NON_TENSOR_SLENDER[S.strip_fadas(word_ortho)]
+            if not is_exempt then
+              token.phon = insert_combining(token.phon, POSTALVEOLAR)
+            end
           elseif word_initial then
             -- Hickey II.1.8: initial slender l/n are tensor/alveolar l̠ʲ/n̠ʲ
             -- Skip grammatical words (prepositional pronouns, particles, etc.)
-            local word_ortho = context.word_ortho or ""
-            if not GRAMMATICAL_SLENDER[word_ortho] then
+            -- also non-tensor sonorants (loanwords, etc.)
+            local word_ortho = S.normalize_ortho(context.word_ortho or "")
+            if not GRAMMATICAL_SLENDER[word_ortho] and not NON_TENSOR_SLENDER[S.strip_fadas(word_ortho)] then
               token.phon = insert_combining(token.phon, POSTALVEOLAR)
             end
           end
@@ -224,23 +253,30 @@ return {
 
       if first.ortho == "n" then
         if is_slender then
-          -- Geminate slender nn is ALWAYS postalveolar (n̠ʲ) in Irish
-          first.phon = "n̠ʲ"
+          -- Geminate slender nn is ALWAYS postalveolar (n̠ʲ) in native Irish
+          -- Exclude loanwords and non-tensor sonorants
+          if context.word_ortho and NON_TENSOR_SLENDER[S.strip_fadas(S.normalize_ortho(context.word_ortho))] then
+            first.phon = "nʲ"
+          else
+            first.phon = "n̠ʲ"
+          end
         else
           -- Geminate broad n always dental
           first.phon = "n̪ˠ"
         end
       elseif first.ortho == "l" then
         if is_slender then
-          -- Geminate slender ll is ALWAYS postalveolar (l̠ʲ) in Irish
-          first.phon = "l̠ʲ"
-        else
-          -- Geminate broad l: dental before cons, velarized otherwise
-          if before_cons then
-            first.phon = "l̪ˠ"
+          -- Geminate slender ll is ALWAYS postalveolar (l̠ʲ) in native Irish
+          -- Exclude loanwords and non-tensor sonorants
+          if context.word_ortho and NON_TENSOR_SLENDER[S.strip_fadas(S.normalize_ortho(context.word_ortho))] then
+            first.phon = "lʲ"
           else
-            first.phon = "lˠ"
+            first.phon = "l̠ʲ"
           end
+        else
+          -- Geminate broad l is ALWAYS dental (l̪ˠ) in Connacht
+          -- Hickey II.1.8: historical fortis /L/ → denti-alveolar [l̪ˠ]
+          first.phon = "l̪ˠ"
         end
       elseif first.ortho == "r" then
         first.phon = is_slender and "ɾʲ" or "ɾˠ"
@@ -276,6 +312,38 @@ return {
       end
 
       ::next_pair::
+    end
+
+    -- Phase 3: Vowel lengthening before heavy sonorant clusters (rd, rl, rn).
+    -- Hickey II.1.8.4: Short vowels lengthen before historically heavy
+    -- consonant clusters rd, rl, rn in Connacht and Ulster.
+    for i = 1, #tokens - 2 do
+      local vowel = tokens[i]
+      if vowel.type ~= "vowel" then goto next_len end
+      if vowel.phon == "" then goto next_len end
+      -- Skip already-long vowels
+      if vowel.phon:find("ː", 1, true) then goto next_len end
+
+      local r_token = tokens[i + 1]
+      local c_token = tokens[i + 2]
+      if not r_token or r_token.type ~= "cons" or r_token.ortho ~= "r" then
+        goto next_len
+      end
+      if not c_token or c_token.type ~= "cons" then goto next_len end
+      if c_token.ortho ~= "d" and c_token.ortho ~= "l" and c_token.ortho ~= "n" then
+        goto next_len
+      end
+
+      -- Lengthen vowel. For orthographic "a", also adjust quality: a→ɑː
+      -- when the following r is broad. Hickey II.1.8.4.
+      if vowel.ortho == "a" and not r_token.palatal then
+        vowel.phon = "ɑː"
+      else
+        vowel.phon = vowel.phon .. "ː"
+      end
+      vowel.source = "sonorant_lengthening"
+
+      ::next_len::
     end
 
     return tokens

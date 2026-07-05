@@ -245,6 +245,29 @@ return {
       end
     end
 
+    -- Step 4m: Silence medial gh/dh (ɣ) in specific Connacht words.
+    -- Hickey II.1.7.2: dh/gh are silent between vowels in Connacht;
+    --   historically fricative /ð ɣ/ elided (Eoghan→oːn̪ˠ, Fódhla→fˠoːlˠə).
+    -- Also handle r+gh words where gh→iː after r (Carghas→kaɾˠiːsˠ).
+    local GH_SILENT_LEXICAL = {
+      ["eoghan"]=true, ["eoghain"]=true, ["fearghal"]=true, ["fearghas"]=true,
+      ["carghas"]=true, ["carghais"]=true, ["ruadhan"]=true, ["fodhla"]=true,
+      ["laoghaire"]=true, ["gaedhlaing"]=true, ["aodhagan"]=true,
+      ["fionnghuala"]=true, ["dubhghall"]=true,
+      -- Multi-word phrases where gh/dh is silent in the second element
+      ["tir eoghain"]=true, ["dun laoghaire"]=true,
+    }
+    if context.word_ortho then
+      local wnorm = S.strip_fadas(S.normalize_ortho(context.word_ortho):lower())
+      if GH_SILENT_LEXICAL[wnorm] then
+        for _, token in ipairs(tokens) do
+          if token.type == "cons" and (token.ortho == "gh" or token.ortho == "dh") then
+            token.phon = ""
+          end
+        end
+      end
+    end
+
     -- Step 4l: iəw glide for specific words (riabhach, riamh).
     -- The bh/mh vocalization produces bare iə, but benchmark expects iəw.
     -- These words need the w glide after the iə diphthong.
@@ -471,7 +494,7 @@ return {
       if token.type ~= "vowel" then goto uw_c end
       local p = token.phon
       if not p or p == "" then goto uw_c end
-      if #p > 1 and p:sub(-1) == "u" then
+      if #p > 1 and p:sub(-1) == "u" and p ~= "əu" and p ~= "au" then
         -- Scan forward past silent tokens to find next vowel
         local nx = nil
         for j = i + 1, #tokens do
@@ -485,6 +508,63 @@ return {
         end
       end
       ::uw_c::
+    end
+
+    -- Step 8c: Word-final bh/mh → uː in specific words.
+    -- Hickey II.1.9.9.1: word-final bh/mh can vocalize to [uː] in Connacht.
+    -- Two patterns, both using lexical tables:
+    --   A: V+bh/mh was vocalized to əu (pass 6). əu → uː in specific words.
+    --      (talamh→t̪ˠalˠuː, Brandubh→bˠɾˠan̪ˠd̪ˠuː, ubh→uː, ullamh→ʊl̪ˠuː)
+    --   B: C+epenthetic+bh/mh. Remove epenthetic, bh/mh → uː. Only applies
+    --      when the preceding sonorant is broad R (tarbh→t̪ˠaɾˠuː, marbh→mˠaɾˠuː).
+    --      NOT for l+bh/mh (dealbh→dʲalˠəvˠ) or n+bh/mh (linbh→l̠ʲɪnʲəvʲ)
+    --      where pass 12 sets bh/mh→vˠ/vʲ, which should be kept.
+    local FINAL_BH_UU = {
+      -- Pattern A: vocalized əu → uː
+      talamh=true, ullamh=true, eileamh=true, brandubh=true,
+      ubh=true, ["n-ubh"]=true, deanamh=true, adamh=true,
+      smaoineamh=true, subh=true, seasamh=true,
+      -- Pattern B: r+bh → uː (broad r only)
+      tarbh=true, dtarbh=true, marbh=true, mharbh=true, searbh=true,
+    }
+    local wlower = context.word_ortho and (S.normalize_ortho(context.word_ortho):lower()) or ""
+    if FINAL_BH_UU[wlower] then
+      -- Pattern B: find epenthetic ə between sonorant and bh/mh, remove it and set bh→uː
+      -- Pattern A: find əu from vocalization and convert to uː
+      for i = 1, #tokens do
+        local prev = tokens[i - 1]
+        local t = tokens[i]
+        if not t then goto bhf_skip end
+
+        -- Pattern B: bh/mh token with silent epenthetic vowel before it
+        if t.type == "cons" and (t.ortho == "bh" or t.ortho == "mh") then
+          if prev and prev.type == "vowel" and prev.phon == "ə" and prev.is_epenthetic then
+            prev.phon = ""
+            t.phon = "uː"
+            goto bhf_skip
+          end
+        end
+
+        -- Pattern A: əu vowel followed by silenced bh/mh and word-boundary
+        if t.type == "vowel" and t.phon == "əu" then
+          local has_silent_bh = false
+          local word_ended = true
+          for j = i + 1, #tokens do
+            local tj = tokens[j]
+            if tj.type == "boundary" then break end
+            if tj.type == "cons" and (tj.ortho == "bh" or tj.ortho == "mh") then
+              has_silent_bh = true
+            elseif tj.type == "cons" or tj.type == "vowel" then
+              if tj.phon and tj.phon ~= "" then word_ended = false; break end
+            end
+          end
+          if has_silent_bh and word_ended then
+            t.phon = "uː"
+          end
+        end
+
+        ::bhf_skip::
+      end
     end
 
     -- Step 9: Function word overridess — replace ALL phonemes with hardcoded IPA.
@@ -665,6 +745,23 @@ return {
           if t.type == "vowel" then first_seg_vowel_count = first_seg_vowel_count + 1 end
         end
         if first_seg_vowel_count >= 2 then
+          local first_v = stressed_vowel[1]
+          if not first_v then
+            for _, t in ipairs(content_segs[1]) do
+              if t.type == "vowel" then first_v = t; break end
+            end
+          end
+          if first_v then first_v.secondary = true end
+        end
+        -- Lexical override: give secondary stress to monosyllabic first content
+        -- words in specific multiword phrases (place names, compounds).
+        local phrase_lookup = ustring.lower(phrase_ortho)
+        local MONO_SECONDARY = {
+          ["loch garman"]=true, ["luan casca"]=true, ["dun dealgan"]=true,
+          ["cal ceannann"]=true, ["lom laithreach"]=true,
+          ["gach uile dhuine"]=true,
+        }
+        if MONO_SECONDARY[phrase_lookup] then
           local first_v = stressed_vowel[1]
           if not first_v then
             for _, t in ipairs(content_segs[1]) do

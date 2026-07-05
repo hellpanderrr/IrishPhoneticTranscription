@@ -143,6 +143,15 @@ function _shared.normalize_ortho(word)
     return ustring.lower(N(word or ""))
 end
 
+-- Strip fadas (acute accents) from Irish orthography.
+-- normalize_ortho() lowercases and NFC-normalizes but does NOT strip fadas,
+-- so lexical table lookups must use this to normalize accented keys.
+-- Byte patterns: á=\xC3\xA1, é=\xC3\xA9, í=\xC3\xAD, ó=\xC3\xB3, ú=\xC3\xBA
+function _shared.strip_fadas(w)
+    if not w then return "" end
+    return (w:gsub("\xC3\xA1", "a"):gsub("\xC3\xA9", "e"):gsub("\xC3\xAD", "i"):gsub("\xC3\xB3", "o"):gsub("\xC3\xBA", "u"))
+end
+
 function _shared.make_token(ortho, token_type, s, e)
     return {
         ortho = ortho,

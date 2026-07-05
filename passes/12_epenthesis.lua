@@ -39,7 +39,12 @@ return {
       -- consonants — not just voiced stops. r+ch (dorchadas), r+f (dearfa),
       -- r+m (gairme), n+ch (seanchas), l+m (calma), r+bh/r+mh (thairbhe, dearbhú)
       -- all take epenthetic schwa.
-      if S.is_sonorant(tokens[i]) and tokens[i + 1] and
+      -- Exclude homorganic clusters (rd, rl, rn, nd, ld) — Hickey §2.8
+      local cur_ortho = tokens[i].ortho
+      local next_ortho = tokens[i + 1] and tokens[i + 1].ortho
+      local is_homorganic = (cur_ortho == "r" and (next_ortho == "d" or next_ortho == "l" or next_ortho == "n")) or
+        (cur_ortho == "n" and next_ortho == "d") or (cur_ortho == "l" and next_ortho == "d")
+      if S.is_sonorant(tokens[i]) and tokens[i + 1] and not is_homorganic and
          (S.is_voiced_obstruent(tokens[i + 1]) or
           tokens[i + 1].ortho == "ch" or
           tokens[i + 1].ortho == "f" or
@@ -69,7 +74,8 @@ return {
         -- Condition: preceding vowel is stressed AND short
         -- Monosyllabic words (dearg, gorm) have context.is_monosyllabic=true
         -- but their vowel token lacks stress=true, so check both.
-        if prev_vowel and prev_vowel.stress and S.is_short_vowel(prev_vowel) then
+        if prev_vowel and S.is_short_vowel(prev_vowel) and
+           (prev_vowel.stress or context.is_monosyllabic) then
           -- Insert epenthetic vowel (always ə initially)
           -- Lexical overrides: feirge/deirge expect ɪ instead.
           local epenthetic = S.clone_token(tokens[i])
