@@ -134,8 +134,10 @@ local function dolgo_distance(s1, s2)
 end
 
 local exact, total, total_lev, total_norm_lev, total_dolgo, total_norm_dolgo = 0, 0, 0, 0, 0, 0
-local out_file = arg and arg[2] and io.open(arg[2], "w") or nil
+local out_file = io.open("results.csv", "w")
+local err_file = io.open("errors.csv", "w")
 if out_file then out_file:write("word\tgot\texpected\texact\tlev\tlev_norm\tdolgo\tdolgo_norm\n") end
+if err_file then err_file:write("word\tgot\texpected\tlev\tlev_norm\tdolgo\tdolgo_norm\n") end
 
 for word, entry in pairs(bench) do
   local got = engine.transcribe(word, "connacht")
@@ -167,8 +169,12 @@ for word, entry in pairs(bench) do
     out_file:write(word .. "\t" .. got .. "\t" .. best_exp .. "\t" ..
       tostring(got == best_exp) .. "\t" .. best_lev .. "\t" .. string.format("%.2f", best_norm_lev) .. "\t" .. string.format("%.4f", best_dolgo) .. "\t" .. string.format("%.2f", best_norm_dolgo) .. "\n")
   end
+  if err_file and got ~= best_exp then
+    err_file:write(word .. "\t" .. got .. "\t" .. best_exp .. "\t" .. best_lev .. "\t" .. string.format("%.2f", best_norm_lev) .. "\t" .. string.format("%.4f", best_dolgo) .. "\t" .. string.format("%.2f", best_norm_dolgo) .. "\n")
+  end
 end
 if out_file then out_file:close() end
+if err_file then err_file:close() end
 
 local label = (arg and arg[1]) or ""
 local pct = exact / total * 100

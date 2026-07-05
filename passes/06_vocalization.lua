@@ -20,7 +20,7 @@ return {
       end
 
       -- Skip vocalization when 'i' is a palatal marker (preceded by another vowel).
-      -- dóibh → oː + vʲ (not vocalize i+bh to əi).
+      -- dibh → oː + vʲ (not vocalize i+bh to əi).
       -- The 'i' between a vowel and bh/mh is marking palatalization, not forming
       -- a diphthong with the following fricative.
       -- Hickey II.1.9: i as palatal marker between two Vs, not syllabic
@@ -37,24 +37,24 @@ return {
       -- Hickey II.1.9.9.1: V+bh/mh → /əu əi/ — historical /v/ absorbed into vowel
       --   (leabhar→[lʲauɾˠ], samhradh→[sˠauɾˠə])
       if vowel.ortho == "ea" and (fricative.ortho == "bh" or fricative.ortho == "mh") then
-        vowel.phon = "əu"; was_vocalized = true
+        vowel.phon = "\xc9\x99u"; was_vocalized = true
       elseif fricative.ortho == "bh" or fricative.ortho == "mh" then
         if is_slender then
-          vowel.phon = "əi"; was_vocalized = true
+          vowel.phon = "\xc9\x99i"; was_vocalized = true
         elseif vowel.ortho == "a" or vowel.ortho == "o" or vowel.ortho == "u" then
-          vowel.phon = "əu"; was_vocalized = true
+          vowel.phon = "\xc9\x99u"; was_vocalized = true
         end
       -- Hickey II.1.9.9.1: V+dh/gh → /ai/ stressed, /ə/ unstressed
       --   (aghaidh→[əi], radharc→[ɾˠaɾˠk])
       elseif fricative.ortho == "dh" or fricative.ortho == "gh" then
         if vowel.stress then
           if is_slender then
-            vowel.phon = "əi"; was_vocalized = true
+            vowel.phon = "\xc9\x99i"; was_vocalized = true
           elseif vowel.ortho == "a" or vowel.ortho == "o" or vowel.ortho == "u" then
             vowel.phon = "ai"; was_vocalized = true
           end
         else
-          vowel.phon = "ə"; was_vocalized = true
+          vowel.phon = "\xc9\x99"; was_vocalized = true
         end
       end
 
@@ -64,9 +64,9 @@ return {
 
       -- Lexical overrides: stressed a+bh/mh → au (not əu) for specific words
       if was_vocalized and vowel.ortho == "a" and (fricative.ortho == "bh" or fricative.ortho == "mh") and context.word_ortho then
-        local A_VOCALIZE_AU = { damhsaigh=true, rabhadar=true, ["clamhsán"]=true,
-          ["damhán"]=true, clabhta=true, fabhtach=true, amha=true, ["clabhtaí"]=true,
-          rabhamar=true, ["gabhála"]=true, ["sabhdán"]=true, cabhsa=true }
+        local A_VOCALIZE_AU = { damhsaigh=true, rabhadar=true, ["clamhs\xc3\xa1n"]=true,
+          ["damh\xc3\xa1n"]=true, clabhta=true, fabhtach=true, amha=true, ["clabhta\xc3\xad"]=true,
+          rabhamar=true, ["gabh\xc3\xa1la"]=true, ["sabhd\xc3\xa1n"]=true, cabhsa=true }
         if A_VOCALIZE_AU[context.word_ortho:lower()] then
           vowel.phon = "au"
         end
