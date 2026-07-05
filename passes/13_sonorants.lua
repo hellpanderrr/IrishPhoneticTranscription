@@ -251,6 +251,52 @@ return {
       ::next_strip::
     end
 
+    -- Phase 1c: Word-final broad l gets dental in specific native Irish words
+    -- (focal, ceol, col, etc.). Excludes ao-vowel words (gaol, maol), loanwords
+    -- (sceal, Pol), and lenited/eclipsed forms.
+    -- Hickey II.1.8: word-final broad l can be fortis [l̪ˠ] or lenis [lˠ]
+    -- depending on word etymology and morphological context.
+    local FINAL_L_DENTAL = {
+      ceol=true, col=true, gol=true, mol=true, ol=true, sal=true, cal=true, al=true,
+      focal=true, pobal=true, seagal=true, cantal=true, taisteal=true,
+      sciobol=true, parasol=true, bleidhmhiol=true,
+      ainmfhocal=true, fhocal=true,
+      seipeal=true, cruinneal=true, imanal=true,
+    }
+    for i = 1, #tokens do
+      local token = tokens[i]
+      if token.type ~= "cons" then goto next_fl end
+      if token.ortho ~= "l" then goto next_fl end
+      if not token.phon or token.phon == "" then goto next_fl end
+      if has_dental(token.phon) then goto next_fl end
+      if token.palatal == true then goto next_fl end
+
+      -- Check if word-final (no following non-boundary content)
+      local is_final = true
+      for j = i + 1, #tokens do
+        local t = tokens[j]
+        if t.type == "boundary" then break end
+        if (t.type == "cons" or t.type == "vowel") and t.phon and t.phon ~= "" then
+          is_final = false; break
+        end
+      end
+      if not is_final then goto next_fl end
+
+      -- Check lexical table (strip fadas for lookup).
+      -- Exclude fada-conflated words: words that reduce to the same
+      -- stripped key but differ in IPA (e.g. mol vs mól).
+      local word = S.strip_fadas(S.normalize_ortho(context.word_ortho or ""))
+      if FINAL_L_DENTAL[word] then
+        -- mól (heap/animal) conflates with mol (praise) after strip_fadas
+        local EXCLUDE = context.word_ortho == "m\xC3\xB3l"  -- mól with fada
+        if not EXCLUDE then
+          token.phon = insert_combining(token.phon, DENTAL)
+        end
+      end
+
+      ::next_fl::
+    end
+
     -- Phase 2: Handle consecutive identical sonorants (geminate ll, nn, rr, mm).
     -- Hickey II.1.8.6: historical geminate sonorants simplified in Middle Irish;
     --   preceding vowel lengthened in compensation (Connacht/Ulster)
