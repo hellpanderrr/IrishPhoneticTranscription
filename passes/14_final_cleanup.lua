@@ -674,12 +674,22 @@ return {
       end
     end
 
-    -- Step 10: Reassign stress in multi-word phrases.
+        -- Skip stress reassignment for apostrophe-prefixed words (d'ith, b'fhearr).
+    -- These are single lexical items where the first segment is a grammatical
+    -- prefix (d', b', m'), not a separate word.
+    local is_apostrophe_word = false
+    if #fw_segments == 2 and seg_ranges[1] and seg_ranges[1].boundary then
+      local btok = tokens[seg_ranges[1].boundary]
+      if btok and btok.ortho == "'" then
+        is_apostrophe_word = true
+      end
+    end
+-- Step 10: Reassign stress in multi-word phrases.
     -- Empirically (analysis of 212 multi-word benchmark entries with ≥2 content
     -- words), the dominant Connacht pattern is: primary ˈ on the LAST content
     -- word, secondary ˌ on the FIRST content word. Single content words keep
     -- their primary stress. Function words remain unstressed (set above).
-    if #fw_segments > 1 then
+    if #fw_segments > 1 and not is_apostrophe_word then
 	-- Lexical stress override: these phrases keep default stress (primary on
 	-- first content word, no secondary) instead of the default reassignment.
 	-- These are typically noun+adjective compounds and name phrases.
