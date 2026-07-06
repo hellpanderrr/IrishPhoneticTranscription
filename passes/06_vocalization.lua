@@ -43,6 +43,14 @@ return {
           vowel.phon = "\xc9\x99i"; was_vocalized = true
         elseif vowel.ortho == "a" or vowel.ortho == "o" or vowel.ortho == "u" then
           vowel.phon = "\xc9\x99u"; was_vocalized = true
+          -- Connacht: o+mh → oː in comh- prefix. Hickey II.1.9: comh- reduces
+          -- to /koː/ before consonants in Connacht (vs. /kəu/ elsewhere).
+          if vowel.ortho == "o" and context.word_ortho then
+            local word_lower = context.word_ortho:lower()
+            if word_lower:sub(1, 4) == "comh" then
+              vowel.phon = "oː"
+            end
+          end
         end
       -- Hickey II.1.9.9.1: V+dh/gh → /ai/ stressed, /ə/ unstressed
       --   (aghaidh→[əi], radharc→[ɾˠaɾˠk])
