@@ -464,7 +464,20 @@ return {
       -- u/ui → uː reliably regardless of cluster.
       local phon_c1 = usub(vowel.phon, 1, 1)
       if phon_c1 == "a" and not r_token.palatal then
-        vowel.phon = "ɑː"
+        -- Lexical table: ea-derived words where the lengthened vowel
+        -- should be front aː, not back ɑː.
+        -- FG Ch.5: Connacht vowel quality before heavy clusters
+        local EA_FRONT_A = {
+          bearn=true, dearnadar=true, dearnamar=true, dearnas=true,
+          dhearnadar=true, dhearnamar=true, dhearnas=true,
+          dtearn=true, ndearnadar=true, ndearnamar=true, ndearnas=true,
+          tearn=true, thearn=true,
+        }
+        if EA_FRONT_A[word] then
+          vowel.phon = "aː"
+        else
+          vowel.phon = "ɑː"
+        end
       elseif phon_c1 == "ɔ" and c_token.ortho ~= "l" then
         -- o/oi before rd/rn → oː; before rl keep ɔ quality (orla)
         vowel.phon = "oː"

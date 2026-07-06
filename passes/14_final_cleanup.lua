@@ -647,6 +647,22 @@ return {
       end
     end
 
+    -- Step 8d: Word-final slender bh/mh → w in specific words.
+    -- In Connacht, word-final slender bh/mh after the ío digraph (→ iː)
+    -- weakens to [w], not [vʲ], in certain lexical items.
+    -- Hickey II.1.7.2: lenited labial fricatives → [w] in Connacht coda
+    local FINAL_BH_V_TO_W = {
+      scriobh=true, sniomh=true, gniomh=true, griobh=true, shniomh=true,
+    }
+    local lookup = context.word_ortho and S.strip_fadas(S.normalize_ortho(context.word_ortho):lower()) or ""
+    if FINAL_BH_V_TO_W[lookup] then
+      for i, token in ipairs(tokens) do
+        if token.type == "cons" and (token.ortho == "bh" or token.ortho == "mh") then
+          token.phon = "w"
+        end
+      end
+    end
+
     -- Step 9: Function word overridess — replace ALL phonemes with hardcoded IPA.
     -- Must be the very last step so no further rules touch these tokens.
     -- Hickey II.3: grammatical words (proclitics, prepositions, particles)
