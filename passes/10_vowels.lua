@@ -243,7 +243,9 @@ return {
         local w = context.word_ortho:lower()
         local O_TO_U = { ["tomás"]=true, ["tromán"]=true, ["tomáisín"]=true,
           conairt=true, donas=true, domasach=true, crom=true, sona=true,
-          brostaigh=true, ["ros comáin"]=true }
+          brostaigh=true, ["ros comáin"]=true,
+          -- Hickey II.1.9.2: short o → ʊ before ŋk in Connacht
+          ponc=true, sponc=true, phonc=true }
         if O_TO_U[w] then
           token.phon = "ʊ"
         end

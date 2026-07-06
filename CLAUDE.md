@@ -65,8 +65,8 @@ Every phonological rule in the 16 passes cites its source in comments:
 - PDFs in `theory/` on disk (not git-tracked); text extracts `.txt` files are tracked
 
 ## Benchmark Target
-- Current: ~71.82% exact match (4739/6598) Connacht
-- Norm Lev: ~93.82, Norm Dolgo: ~95.27
+- Current: ~72.11% exact match (4758/6598) Connacht
+- Norm Lev: ~93.87, Norm Dolgo: ~95.33
 - Lev-1 single-substitution error buckets via `errors.csv`
 
 ## Encoding
@@ -135,7 +135,10 @@ Every phonological rule in the 16 passes cites its source in comments:
 
 - **[comh- prefix]** — Connacht: o+mh in comh- prefix → oː (not əu). Hickey II.1.9: comh- reduces to /koː/ before consonants. Fixed in pass 06. +3 exact match (comhlacht, comhluadar, comhrá).
 - **[s+onset l dental]** — Broad l after s (sl-, shl-, -sl- sequences) is denti-alveolar l̪ˠ, not lenis lˠ. Added `preceded_by_s` detection in Phase 1. +8 exact match.
-- **[word-final n dental rule]** — Long stressed vowels keep n̪ˠ; short vowels and unstressed long vowels strip to nˠ. Removed blanket Phase 1 strip (over-applied to long-vowel words like bán). Moved nuance to Phase 1b with `not is_long or (is_long and not is_stressed)` condition. KEEP_N_DENTAL table restored for short-vowel/diphthong exceptions (Brian, buan, cuan, etc.). +9 exact match.
+- **[word-final broad n dental rule]** — Long stressed vowels keep n̪ˠ; short vowels and unstressed long vowels strip to nˠ. Removed blanket Phase 1 strip (over-applied to long-vowel words like bán). Moved nuance to Phase 1b with `not is_long or (is_long and not is_stressed)` condition. KEEP_N_DENTAL table restored for short-vowel/diphthong exceptions (Brian, buan, cuan, etc.). +9 exact match.
+- **[ea→aː before rd/rn]** — 13 words with ea-derived vowels before rd/rn clusters (bearn, dearnadar, etc.) got back vowel ɑː instead of front aː. Lexical EA_FRONT_A table in Phase 3. +13 exact match.
+- **[ponc/sponc/phonc o→ʊ]** — Short o before ŋk should raise to ʊ (Connacht). Added to O_TO_U lexical table in pass 10. +3 exact match (ponc, sponc, phonc).
+- **[word-final slender bh/mh→w]** — Connacht: word-final slender bh/mh after long vowels (scríobh, sníomh, gníomh, gríobh, shníomh) weakens to w not vʲ. Lexical FINAL_BH_V_TO_W table in pass 14 Step 8d. +5 exact match.
 
 - _(none yet)_
 
