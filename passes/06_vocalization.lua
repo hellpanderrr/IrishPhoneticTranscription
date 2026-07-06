@@ -62,12 +62,38 @@ return {
         fricative.phon = ""
       end
 
-      -- Lexical overrides: stressed a+bh/mh → au (not əu) for specific words
-      if was_vocalized and vowel.ortho == "a" and (fricative.ortho == "bh" or fricative.ortho == "mh") and context.word_ortho then
-        local A_VOCALIZE_AU = { damhsaigh=true, rabhadar=true, ["clamhs\xc3\xa1n"]=true,
-          ["damh\xc3\xa1n"]=true, clabhta=true, fabhtach=true, amha=true, ["clabhta\xc3\xad"]=true,
-          rabhamar=true, ["gabh\xc3\xa1la"]=true, ["sabhd\xc3\xa1n"]=true, cabhsa=true }
-        if A_VOCALIZE_AU[context.word_ortho:lower()] then
+      -- Skip vocalization when a is part of a rising diphthong (ia, ua).
+      -- In riamh, Niamh, ciabh, etc., ia+labial fricative = iəw/iəvˠ,
+      -- not vocalization (the fricative resolves to w/vˠ in pass 09).
+      -- Hickey II.1.9.7: rising diphthongs ia, ua.
+      if was_vocalized and vowel.ortho == "a" and
+         (fricative.ortho == "bh" or fricative.ortho == "mh") then
+        local prev_t = tokens[i - 1]
+        if prev_t and prev_t.type == "vowel" and
+           (prev_t.ortho == "i" or prev_t.ortho == "u") then
+          vowel.phon = "a"
+          fricative.phon = fricative.ortho
+          was_vocalized = false
+        end
+      end
+
+      -- Lexical overrides: a+bh/mh → au (not əu) for specific words.
+      -- Also covers ea+bh/mh → au. Hickey II.1.9.9.1: vocalization
+      -- quality varies lexically — əu is the general default, but many
+      -- common words have historical au.
+      if was_vocalized and (fricative.ortho == "bh" or fricative.ortho == "mh") and context.word_ortho then
+        local VOCALIZE_AU = {
+          abhac=true, cabhail=true, dabhach=true, labhairt=true,
+          ramhar=true, rabhais=true, rabhadar=true, rabhamar=true,
+          amha=true, fabhtach=true, clabhta=true,
+          damhsaigh=true, cabhsa=true,
+          tabharthach=true,
+          feabhas=true, fheabhas=true, sheabhac=true, seabhac=true,
+          seabhaic=true, meabhair=true, mheabhair=true,
+          leamhnacht=true, Feabhra=true,
+          ["gabhaid\xC3\xADs"]=true, ghabhas=true, ngabhas=true,
+        }
+        if VOCALIZE_AU[context.word_ortho:lower()] then
           vowel.phon = "au"
         end
       end
