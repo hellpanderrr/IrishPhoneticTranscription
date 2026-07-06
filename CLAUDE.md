@@ -84,7 +84,9 @@ Every phonological rule in the 16 passes cites its source in comments:
 - Add theory citations (Hickey section, FG chapter) to every new phonological rule
 - Run benchmark after every change to check for regressions — this engine is sensitive to pass ordering
 
-## Lua & Terminal Gotchas
+## Self-Updating Gotchas
+
+**How this section works:** Whenever the agent discovers a non-obvious tooling or workflow pitfall during a session, it **appends** an entry here before committing. This accumulates tribal knowledge across sessions. Duplicate or superseded entries should be removed.
 
 ### Encoding / Shell
 - **Fadas vanish in inline `lua -e` scripts** — bash strips UTF-8 acute accents on the command line. Always test fada-containing words (í, ó, á, etc.) from a `.lua` file, never inline.
@@ -103,11 +105,11 @@ Every phonological rule in the 16 passes cites its source in comments:
 - **Apostrophe-prefixed words** (`d'ith`, `b'fhearr`) lack lexical stress and must be excluded from stress assignment (pass 02 UNSTRESSED table + pass 14 Step 10 skip).
 - **`-íocht` suffix** tokenizes two ways: `ío+ch+t` (ríocht) or `aí+o+ch+t` (draíocht). Both must be handled.
 
-## Self-Updating Error Patterns
+## Phonological Error Buckets
 
-**How this section works:** Whenever the agent discovers a persistent, high-volume error pattern through benchmark error analysis (Levenshtein distance 1 bucketing), it **appends** an entry here before committing. Each entry includes the pattern description, affected words, root cause, and which pass needs fixing. Remove entries once resolved.
+**How this section works:** Whenever the agent identifies a persistent, high-volume error pattern through benchmark error analysis (Levenshtein distance 1 bucketing), it **appends** an entry here before committing. Move entries to "Resolved" once the fix is committed. This is the working queue of phonological patterns to fix.
 
-### Active Error Patterns
+### Active
 
 <!-- Use this format when adding new entries:
 - **[pattern_name]** — Brief description. e.g. "Vowel X before heavy sonorant clusters"
@@ -122,7 +124,7 @@ Every phonological rule in the 16 passes cites its source in comments:
 - **[-íocht suffix]** — Connacht /iəxt̪ˠ/ not /iːçtʲ/. ~21 errors, fixed in pass 14 (Step 4n).
 - **[function_word_reduction]** — do→ɡə, is→sˠ, agam/agat→uɡəmˠ/uɡəd̪ˠ, chonaic→hanʲic, mar→mˠəɾˠ, seo→ʃɔ. Fixed in _shared.lua FUNCTION_WORDS_OVERRIDE.
 
-### Resolved Patterns
+### Resolved
 
 <!-- Move fixed entries here with the commit hash -->
 
