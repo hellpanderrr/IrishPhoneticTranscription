@@ -394,19 +394,32 @@ return {
       second.source = "strong_sonorant"
 
       -- Vowel lengthening before geminate sonorants only in monosyllables.
+      -- Hickey II.1.8.6: historical geminate sonorants trigger compensatory
+      --   lengthening of the preceding vowel in Connacht/Ulster.
+      -- Lexical exceptions: words where the short vowel is preserved
+      -- (function words, recent borrowings, or words with analogical
+      -- short vowel). Hickey II.1.8.6: loanword nativisation is variable.
+      local LENGTHEN_EXCEPTIONS = {
+        mall=true, mhall=true, ngeall=true, gheall=true, breall=true,
+        ["i ngeall ar"]=true, ["mar gheall ar go"]=true,
+      }
       if context.is_monosyllabic then
         local pv = tokens[i - 1]
         if pv and pv.type == "vowel" then
           local ortho = pv.ortho
           if ortho == "ea" or ortho == "a" then
-            -- Preserve existing quality (a or ɑ set by vowel pass), just add length
-            local c1 = usub(pv.phon, 1, 1)
-            if c1 == "ɑ" then
-              pv.phon = "ɑː"
-            else
-              pv.phon = "aː"
+            -- Skip lengthening for lexical exceptions
+            local lookup = context.word_ortho or ""
+            if not LENGTHEN_EXCEPTIONS[lookup] then
+              -- Preserve existing quality (a or ɑ set by vowel pass), just add length
+              local c1 = usub(pv.phon, 1, 1)
+              if c1 == "ɑ" then
+                pv.phon = "ɑː"
+              else
+                pv.phon = "aː"
+              end
+              pv.source = "sonorant_lengthening"
             end
-            pv.source = "sonorant_lengthening"
           elseif ortho == "o" then
             pv.phon = "oː"
             pv.source = "sonorant_lengthening"
