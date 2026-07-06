@@ -40,7 +40,7 @@ return {
       ["-eáil"]=true,["-ail"]=true,["-eal"]=true,["-ógra"]=true,["-úint"]=true,
       ["-aint"]=true,["-im"]=true,["-inn"]=true,["-mid"]=true,["-ne"]=true,
       ["-se"]=true,["-tar"]=true,["-fimid"]=true,["-fimis"]=true,["-finn"]=true,
-      ["-igí"]=true,["-imis"]=true,a=true,["a'"]=true,["a-"]=true,["ab"]=true,ach=true,["ad"]=true,
+      ["-ófá"]=true,["-ófar"]=true,["-igí"]=true,["-imis"]=true,a=true,["a'"]=true,["a-"]=true,["ab"]=true,ach=true,["ad"]=true,
       ["ag"]=true,["an"]=true,["ar"]=true,["as"]=true,["ba"]=true,["bh"]=true,["bhf"]=true,
       ["am"]=true,["ch"]=true,de=true,["do"]=true,["dh"]=true,["dh'"]=true,["go"]=true,["gh"]=true,
       ["i"]=true,["is"]=true,["le"]=true,["mar"]=true,["mh"]=true,["ní"]=true,

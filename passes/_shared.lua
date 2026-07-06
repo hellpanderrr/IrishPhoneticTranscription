@@ -395,6 +395,8 @@ _shared.FUNCTION_WORDS_OVERRIDE = {
   ["-igh"] = { "", "", "j" },
   ["-ithe"] = { "", "iː", "", "" },
   ["-igí"] = { "", "ə", "ɟ", "iː" },
+  ["-ófar"] = { "", "o", "h", "ə", "ɾˠ" },
+  ["-ófá"] = { "", "oː", "fˠ", "aː" },
   -- Standalone lenition markers / word-final th that must retain h
   ["th"] = { "h" },
   ["Th"] = { "h" },
