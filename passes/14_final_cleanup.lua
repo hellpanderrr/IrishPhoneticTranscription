@@ -282,6 +282,30 @@ return {
       end
     end
 
+    -- Step 4n: Diphthong absorption: əu + (silent) + ə → əu.
+    -- When vocalization produces diphthong əu (abh/eabh/amh/eamh → əu), any
+    -- following unstressed vowel that reduced to ə should be absorbed.
+    -- The vocalized fricative (bh/mh) sits between them as a silent token.
+    -- Hickey II.1.9.9.1: heavy diphthongs absorb adjacent unstressed short vowels
+    --   (seabhac→ʃauk, deamhan→dʲəun̪ˠ, not *ʃəuək, *dʲəuən̪ˠ).
+    for i, token in ipairs(tokens) do
+      if token.type == "vowel" and token.phon == "\xC9\x99u" then  -- əu
+        -- Scan past silent consonant (vocalized bh/mh with phon="") to find next vowel
+        for j = i + 1, #tokens do
+          local t = tokens[j]
+          if t.type == "vowel" then
+            if t.phon == "\xC9\x99" and not t.stress then
+              t.phon = ""  -- absorb the schwa
+            end
+            break
+          end
+          if t.type ~= "cons" or (t.phon and t.phon ~= "") then
+            break  -- stop at non-cons or non-silent token
+          end
+        end
+      end
+    end
+
     -- Step 4n: -íocht suffix override (Connacht).
     -- Hickey II.1.9, FG Ch.5: the nominalizing suffix -íocht resolves to
     -- [iəxt̪ˠ] in Connacht (not [iːçtʲ] or [iːxt̪ˠ]).
