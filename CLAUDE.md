@@ -103,6 +103,11 @@ Every phonological rule in the 16 passes cites its source in comments:
 ### Benchmark
 - **Monosyllabic stress is inconsistent** — many expected values lack `ˈ` on monosyllabic content words. A blanket `t.stress=true` for all single-vowel words (pass 02) caused ~1400 regressions. Always verify blanket rules.
 - **Apostrophe-prefixed words** (`d'ith`, `b'fhearr`) lack lexical stress and must be excluded from stress assignment (pass 02 UNSTRESSED table + pass 14 Step 10 skip).
+- **IGH_RESTORE condition must catch ɪ as well as ə** — many `-igh` words end as `ɪ` after vowel gradation (pass 10), not `ə` from reduction (pass 11). Checking only `phon == "ə"` silently skips them.
+- **Suffix fada keys must use normalized form** — FUNCTION_WORDS_OVERRIDE lookup uses `ustring.lower(seg_ortho)` which preserves multi-byte fada chars. Key `["-igí"]` matches; `["-igi"]` (strip_fadas) would silently fail.
+
+### Git / Shell
+- **`nul` file in git status** — Windows shell leaks a file named `nul` when redirecting to `/dev/null`. `rm -f nul` before `git add` avoids "short read while indexing" errors.
 - **`-íocht` suffix** tokenizes two ways: `ío+ch+t` (ríocht) or `aí+o+ch+t` (draíocht). Both must be handled.
 
 ## Phonological Error Buckets
