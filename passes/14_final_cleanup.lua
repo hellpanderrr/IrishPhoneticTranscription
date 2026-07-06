@@ -346,7 +346,7 @@ return {
     -- benchmark expects iː (e.g. beirigh→ˈbʲɛɾʲiː, suigh→sˠiː, istigh→əʃˈtʲiː).
     -- Not all -igh words want iː (Corcaigh→ˈkɔɾˠkə, brostaigh→ˈbˠɾˠʊsˠt̪ˠə).
     local IGH_RESTORE = {
-      ["beirigh"]=true, ["bligh"]=true, ["bhligh"]=true,
+      ["beirigh"]=true, ["bligh"]=true, ["bhligh"]=true, ["dligh"]=true,
       ["suigh"]=true, ["shuigh"]=true, ["igh"]=true, ["nigh"]=true,
       ["righ"]=true, ["ligh"]=true, ["tigh"]=true, ["thigh"]=true,
       ["dtigh"]=true, ["dúigh"]=true, ["éiligh"]=true,
@@ -354,7 +354,7 @@ return {
       ["thoiligh"]=true, ["fraoigh"]=true, ["fhraoigh"]=true,
       ["deasaigh"]=true, ["feisigh"]=true, ["bogaigh"]=true,
       ["bunaigh"]=true, ["cuimhnigh"]=true, ["oibrigh"]=true,
-      ["Shligigh"]=true, ["istigh"]=true,
+      ["Shligigh"]=true, ["istigh"]=true, ["ghuigh"]=true,
       ["airbheartaigh"]=true, ["taoisigh"]=true, ["taobhaigh"]=true,
       ["gairmiúlaigh"]=true, ["díghalraigh"]=true,
       ["fréamhshamhaltaigh"]=true, ["Ó Cathasaigh"]=true,
@@ -366,8 +366,29 @@ return {
         for _, token in ipairs(tokens) do
           if token.type == "vowel" then last_vowel = token end
         end
-        if last_vowel and last_vowel.phon == "ə" then
+        if last_vowel and (last_vowel.phon == "ə" or last_vowel.phon == "\xC9\xAA" or last_vowel.phon == "i") then
           last_vowel.phon = "iː"
+        end
+      end
+    end
+
+    -- Step 4o: Add missing -igh entries to IGH_RESTORE that end up as ɪ not ə.
+    -- These were added because the original check only caught phon == "ə", but
+    -- many -igh words end up with ɪ (short i) instead of ə (schwa).
+    -- The condition was widened to catch both in the existing IGH_RESTORE block above.
+
+    -- Step 4p: -igí imperative suffix → əɟiː or iːɟiː (Connacht).
+    -- Hickey II.1.9: unstressed suffix reduces initial vowel, keeps final iː.
+    local IGIRESTORE = { ["-igí"]=true, ["cinnigí"]=true }
+    if context.word_ortho then
+      local w = context.word_ortho:lower()
+      if IGIRESTORE[w] then
+        for _, token in ipairs(tokens) do
+          if token.type == "vowel" and token.ortho == "í" and not token.stress then
+            if token.phon == "ɪ" or token.phon == "i" then
+              token.phon = "iː"
+            end
+          end
         end
       end
     end
