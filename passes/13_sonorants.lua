@@ -137,12 +137,31 @@ return {
       -- Check for word-initial position
       local word_initial = (i == 1) or (tokens[i-1] and tokens[i-1].type == "boundary")
 
+      -- Check for s+onset cluster: preceded immediately by s (or its lenited form sh),
+      -- e.g. sl- clusters and medial -sl- sequences.
+      -- In Connacht Irish, /l/ is dental after /s/ but not after other consonants
+      -- in onset clusters (cl-, gl-, pl-, etc. take lenis lˠ).
+      -- Hickey II.1.8: strong (fortis) vs weak (lenis) sonorants — quality varies
+      --   by preceding consonant; s+sonorant patterns differently from stop+sonorant.
+      local preceded_by_s = false
+      if not word_initial then
+        local pt = tokens[i - 1]
+        if pt and pt.type == "cons" and pt.phon and pt.phon ~= "" then
+          if pt.ortho == "s" or pt.ortho == "sh" then
+            preceded_by_s = true
+          end
+        end
+      end
+
       if is_broad then
         if not has_dental(token.phon) then
           if followed_by_cons then
             token.phon = insert_combining(token.phon, DENTAL)
-          elseif word_initial then
-            -- Hickey II.1.8: initial broad l/n are denti-alveolar l̪ˠ/n̪ˠ
+          elseif word_initial or preceded_by_s then
+            -- Hickey II.1.8: initial broad l/n and s+onset clusters are
+            -- denti-alveolar l̪ˠ/n̪ˠ in Connacht. This includes sl- word-initially
+            -- (slán, slua, slám) and medial -sl- (prioslaire).
+            -- Note: cl-, gl-, pl-, bl- clusters take lenis lˠ, not dental.
             token.phon = insert_combining(token.phon, DENTAL)
           elseif token.from_dl then
             -- Historical dl->l reduction: l retains dental articulation even
@@ -164,8 +183,10 @@ return {
               end
             end
           end
-        elseif not word_initial and not followed_by_cons and not token.from_dl and token.ortho == "n" then
-          -- Hickey II.1.8: medial broad n between vowels is lenis [nˠ], not fortis [n̪ˠ]
+        elseif next_t and not followed_by_cons and not token.from_dl and token.ortho == "n" then
+          -- Intervocalic n (followed by a vowel, not word-final): lenis nˠ
+          -- Word-final n handled by Phase 1b with more nuanced rules.
+          -- Hickey II.1.8: intervocalic broad n weakens to lenis [nˠ]
           local prev_t = tokens[i - 1]
           if prev_t and prev_t.type == "vowel" then
             token.phon = S.palatal_consonant(token, "nʲ", "nˠ")
@@ -241,10 +262,21 @@ return {
       }
       if KEEP_N_DENTAL[word_ortho] then goto next_strip end
 
-      if (is_long and not is_stressed) or (not is_long and not context.is_monosyllabic) then
+      -- Multi-word phrases where word-final broad n should lose dental
+      -- even with a long vowel (usually due to phrase-level stress shift).
+      local FORCE_STRIP_N = {
+        ["a lán"]=true,
+      }
+      if FORCE_STRIP_N[word_ortho] then
+        token.phon = "nˠ"
+        goto next_strip
+      end
+
+      if not is_long or (is_long and not is_stressed) then
         -- Strip dental from word-final broad n preceded by:
-        -- 1. Long unstressed vowel (original rule), OR
-        -- 2. Short vowel (any stress) — Hickey II.1.8: coda n̪ˠ weakens to nˠ
+        -- 1. Short vowel (any stress) — n̪ˠ→nˠ, OR
+        -- 2. Long unstressed vowel — n̪ˠ→nˠ.
+        -- Keep dental only for long stressed vowels. Hickey II.1.8: coda n weakens
         token.phon = "nˠ"
       end
 
