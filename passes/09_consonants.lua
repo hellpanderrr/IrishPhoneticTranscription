@@ -291,16 +291,16 @@ elseif token.ortho == "l" then
             or (next1.ortho == "ea" and next2 and next2.ortho == "d" and (not tokens[i+3] or tokens[i+3].ortho ~= "h"))
             -- -feadh: f + ea + dh (autonomous future)
             or (next1.ortho == "ea" and next2 and next2.ortho == "dh")
-            -- -fas: f + a + s (relative future)
-            or (next1.ortho == "a" and next2 and next2.ortho == "s")
-            -- -fad: f + a + d (1sg. future)
-            or (next1.ortho == "a" and next2 and next2.ortho == "d" and (not tokens[i+3] or tokens[i+3].ortho ~= "h"))
-            -- -fadh: f + a + dh
-            or (next1.ortho == "a" and next2 and next2.ortho == "dh")
+            -- -fas: f + a + s (relative future) -- block if another syllable follows
+            or (next1.ortho == "a" and next2 and next2.ortho == "s" and (not tokens[i+3] or tokens[i+3].type ~= "vowel"))
+            -- -fad: f + a + d (1sg. future) -- word-final only
+            or (next1.ortho == "a" and next2 and next2.ortho == "d" and (not tokens[i+3] or tokens[i+3].ortho ~= "h") and (not tokens[i+3] or tokens[i+3].type ~= "vowel"))
+            -- -fadh: f + a + dh -- block if another syllable follows
+            or (next1.ortho == "a" and next2 and next2.ortho == "dh" and (not tokens[i+3] or tokens[i+3].type ~= "vowel"))
             -- -faimid: f + ai + mid
             or (next1.ortho == "ai" and tokens[i+2] and tokens[i+2].ortho == "mid")
-            -- -far: f + a + r (autonomous future)
-            or (next1.ortho == "a" and next2 and next2.ortho == "r")
+            -- -far: f + a + r (autonomous future) -- block if another syllable follows
+            or (next1.ortho == "a" and next2 and next2.ortho == "r" and (not tokens[i+3] or tokens[i+3].type ~= "vowel"))
             -- -fá: f + á (2sg. conditional/future)
             or (next1.ortho == "\xC3\xA1")
           )
