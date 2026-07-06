@@ -65,8 +65,8 @@ Every phonological rule in the 16 passes cites its source in comments:
 - PDFs in `theory/` on disk (not git-tracked); text extracts `.txt` files are tracked
 
 ## Benchmark Target
-- Current: ~71.78% exact match (4736/6598) Connacht
-- Norm Lev: ~93.81, Norm Dolgo: ~95.25
+- Current: ~71.82% exact match (4739/6598) Connacht
+- Norm Lev: ~93.82, Norm Dolgo: ~95.27
 - Lev-1 single-substitution error buckets via `errors.csv`
 
 ## Encoding
@@ -133,8 +133,9 @@ Every phonological rule in the 16 passes cites its source in comments:
 
 <!-- Move fixed entries here with the commit hash -->
 
+- **[comh- prefix]** — Connacht: o+mh in comh- prefix → oː (not əu). Hickey II.1.9: comh- reduces to /koː/ before consonants. Fixed in pass 06. +3 exact match (comhlacht, comhluadar, comhrá).
 - **[s+onset l dental]** — Broad l after s (sl-, shl-, -sl- sequences) is denti-alveolar l̪ˠ, not lenis lˠ. Added `preceded_by_s` detection in Phase 1. +8 exact match.
-- **[word-final n dental rule]** — Long stressed vowels keep n̪ˠ; short vowels and unstressed long vowels strip to nˠ. Removed blanket Phase 1 strip (over-applied to long-vowel words like bán). Moved nuance to Phase 1b with `not is_long or (is_long and not is_stressed)` condition. KEEP_N_DENTAL table restored for short-vowel/diphthong exceptions (Brian, buan, cuan, etc.). +9 exact match (incl. Bíobla, Fhionlainnis, clocha, clós, gl- clusters).
+- **[word-final n dental rule]** — Long stressed vowels keep n̪ˠ; short vowels and unstressed long vowels strip to nˠ. Removed blanket Phase 1 strip (over-applied to long-vowel words like bán). Moved nuance to Phase 1b with `not is_long or (is_long and not is_stressed)` condition. KEEP_N_DENTAL table restored for short-vowel/diphthong exceptions (Brian, buan, cuan, etc.). +9 exact match.
 
 - _(none yet)_
 
