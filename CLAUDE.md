@@ -65,8 +65,8 @@ Every phonological rule in the 16 passes cites its source in comments:
 - PDFs in `theory/` on disk (not git-tracked); text extracts `.txt` files are tracked
 
 ## Benchmark Target
-- Current: ~72.11% exact match (4758/6598) Connacht
-- Norm Lev: ~93.87, Norm Dolgo: ~95.33
+- Current: ~72.39% exact match (4776/6598) Connacht
+- Norm Lev: ~93.93, Norm Dolgo: ~95.41
 - Lev-1 single-substitution error buckets via `errors.csv`
 
 ## Encoding
@@ -128,6 +128,9 @@ Every phonological rule in the 16 passes cites its source in comments:
 - **[ts-/tch- mutation]** — Word-initial ts→t̪ˠ, tch→tʲ (silence second consonant). ~25 errors, fixed in pass 03.
 - **[-íocht suffix]** — Connacht /iəxt̪ˠ/ not /iːçtʲ/. ~21 errors, fixed in pass 14 (Step 4n).
 - **[function_word_reduction]** — do→ɡə, is→sˠ, agam/agat→uɡəmˠ/uɡəd̪ˠ, chonaic→hanʲic, mar→mˠəɾˠ, seo→ʃɔ. Fixed in _shared.lua FUNCTION_WORDS_OVERRIDE.
+- **[á→aː vowel quality]** — ~64 errors where Connacht long á produces ɑː but expected aː. Fixed in pass 10 (AA_TO_A, AAI_TO_AI) + pass 14 (éa digraph E_PLUS_AA_TO_A). +12 exact match.
+- **[dental n medial]** — ~35 Lev-1 errors where medial broad n before vowel should be n̪ˠ not nˠ (déanaí, gcónaí, Seán, etc.). All blanket-rule attempts caused regressions.
+- **[dental l medial]** — ~29 Lev-1 errors where medial broad l before vowel should be l̪ˠ not lˠ (mála, eolas, clocha, glór, etc.). All blanket rules cause ~612 false positives.
 
 ### Resolved
 
@@ -139,6 +142,7 @@ Every phonological rule in the 16 passes cites its source in comments:
 - **[ea→aː before rd/rn]** — 13 words with ea-derived vowels before rd/rn clusters (bearn, dearnadar, etc.) got back vowel ɑː instead of front aː. Lexical EA_FRONT_A table in Phase 3. +13 exact match.
 - **[ponc/sponc/phonc o→ʊ]** — Short o before ŋk should raise to ʊ (Connacht). Added to O_TO_U lexical table in pass 10. +3 exact match (ponc, sponc, phonc).
 - **[word-final slender bh/mh→w]** — Connacht: word-final slender bh/mh after long vowels (scríobh, sníomh, gníomh, gríobh, shníomh) weakens to w not vʲ. Lexical FINAL_BH_V_TO_W table in pass 14 Step 8d. +5 exact match.
+- **[ll vowel lengthening exceptions]** — 6 words (mall, breall, ngeall, gheall, mhall, i ngeall ar) have short vowel before geminate ll. Lexical LENGTHEN_EXCEPTIONS table in pass 13 Phase 2. +6 exact match.
 
 - _(none yet)_
 
