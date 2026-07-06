@@ -129,23 +129,34 @@ return {
       ::continue::
     end
 
-    -- Word-final consonant after "ío" digraph → broad (Connacht phonology)
+    -- Word-final consonant(s) after "ío" digraph → broad (Connacht phonology)
     -- míol → mʲiːlˠ, cíor → ciːɾˠ, síob → ʃiːbˠ, críon → cɾʲiːnˠ
-    -- Hickey II.1.9: long /iː/ from ío — following consonant stays broad in Connacht
+    -- Applied to entire closing cluster (handles geminate nn in -íonn suffix:
+    -- bíonn→bʲiːn̪ˠ, not bʲiːn̠ʲ). Hickey II.1.9: long /iː/ from ío —
+    -- following consonant(s) stay broad in Connacht.
     for i, token in ipairs(tokens) do
-      if token.type ~= "cons" then goto skip end
+      if token.type ~= "cons" then goto skip_io end
+      -- The first consonant after ío starts the coda cluster
       local prev = (i > 1) and tokens[i - 1] or nil
-      if not (prev and prev.type == "vowel" and prev.ortho == "ío") then goto skip end
-      local is_final = true
+      if not (prev and prev.type == "vowel" and prev.ortho == "ío") then goto skip_io end
+      -- Walk forward from this consonant: if no more vowels appear before
+      -- the word ends (boundary or end-of-tokens), set ALL closing
+      -- consonants to broad.
+      local no_more_vowels = true
       for k = i + 1, #tokens do
-        if tokens[k].type ~= "boundary" and tokens[k].phon and tokens[k].phon ~= "" then
-          is_final = false; break
+        if tokens[k].type == "vowel" then no_more_vowels = false; break end
+        if tokens[k].type == "boundary" and tokens[k].source ~= "apostrophe" then break end
+      end
+      if no_more_vowels then
+        for k = i, #tokens do
+          if tokens[k].type == "cons" then
+            S.set_polarity(tokens[k], false)
+          elseif tokens[k].type == "vowel" or (tokens[k].type == "boundary" and tokens[k].source ~= "apostrophe") then
+            break
+          end
         end
       end
-      if is_final then
-        S.set_polarity(token, false)
-      end
-      ::skip::
+      ::skip_io::
     end
 
     -- "rr" geminate: in Irish, two consecutive r's (rr orthography) are
