@@ -282,6 +282,41 @@ return {
       end
     end
 
+    -- Step 4n: -íocht suffix override (Connacht).
+    -- Hickey II.1.9, FG Ch.5: the nominalizing suffix -íocht resolves to
+    -- [iəxt̪ˠ] in Connacht (not [iːçtʲ] or [iːxt̪ˠ]).
+    -- The suffix scans as either:
+    --   A: ío + ch + t (ríocht, filíocht)
+    --   B: aí + o + ch + t (eolaíocht, draíocht)
+    -- Need to fix vowel quality (iə not iː) AND consonant broadness (x/t̪ˠ not ç/tʲ).
+    if context.word_ortho then
+      local w = context.word_ortho:lower()
+      if w:match("[íi]ocht$") then
+        for i, token in ipairs(tokens) do
+          -- Fix vowels: ío → iə for the suffix
+          if token.type == "vowel" and token.ortho == "ío" then
+            token.phon = "iə"
+            -- Check if next uchar in otho is 'o' — silence it
+          end
+          -- Fix aí + o → i + ə (aí in suffix position set to i, silence o)
+          if token.type == "vowel" and token.ortho == "aí" then
+            local nxt = tokens[i + 1]
+            if nxt and nxt.type == "vowel" and nxt.ortho == "o" then
+              token.phon = "i"
+              nxt.phon = "ə"
+            end
+          end
+          -- Fix consonant quality for -cht: broad x and t̪ˠ
+          if token.type == "cons" and token.ortho == "ch" then
+            token.phon = "x"
+          end
+          if token.type == "cons" and token.ortho == "t" then
+            token.phon = "t\u{032A}\u{02E0}"  -- t̪ˠ
+          end
+        end
+      end
+    end
+
     -- Step 4l: oí → iː is now handled as a recognized vowel digraph in the
     -- tokenizer (VOWEL_DIGRAPHS) and resolved in the vowel pass (pass 10).
     -- See _shared.lua VOWEL_DIGRAPHS and passes/10_vowels.lua ortho=="oí".
