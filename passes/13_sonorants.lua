@@ -391,12 +391,25 @@ return {
     -- Phase 3: Vowel lengthening before heavy sonorant clusters (rd, rl, rn).
     -- Hickey II.1.8.4: Short vowels lengthen before historically heavy
     -- consonant clusters rd, rl, rn in Connacht and Ulster.
+    -- Does NOT apply to reduced vowels (schwa, from pass 11) or
+    -- compound words where r+d/r+l/r+n spans a morpheme boundary.
+    local PHASE3_EXCEPTIONS = {
+      -- morpheme-boundary r+d/r+l/r+n (compound / derived forms)
+      ["Feardorcha"]=true, ["feardorcha"]=true,
+      ["Toirdhealbhach"]=true, ["toirdhealbhach"]=true,
+      ["liopard"]=true, ["Risteard"]=true,
+      -- Sord has historical au diphthong, not lengthened o
+      ["Sord"]=true, ["sord"]=true,
+    }
     for i = 1, #tokens - 2 do
       local vowel = tokens[i]
       if vowel.type ~= "vowel" then goto next_len end
       if vowel.phon == "" then goto next_len end
       -- Skip already-long vowels
       if vowel.phon:find("ː", 1, true) then goto next_len end
+      -- Skip reduced vowels (schwa) — these are already phonologically
+      -- weakened (unstressed) and do not participate in sonorant lengthening
+      if vowel.phon:sub(1,1) == "ə" then goto next_len end
 
       local r_token = tokens[i + 1]
       local c_token = tokens[i + 2]
@@ -408,10 +421,25 @@ return {
         goto next_len
       end
 
-      -- Lengthen vowel. For orthographic "a", also adjust quality: a→ɑː
-      -- when the following r is broad. Hickey II.1.8.4.
-      if vowel.ortho == "a" and not r_token.palatal then
+      -- Check lexical exceptions (compound words)
+      local word = context.word_ortho or ""
+      if PHASE3_EXCEPTIONS[word] then goto next_len end
+
+      -- Lengthen vowel. For short vowels, use the long vowel quality
+      -- rather than just appending ː. Hickey II.1.8.4: short vowels
+      -- raise before heavy clusters in Connacht.
+      -- o/oi before rd/rn → oː; before rl → preserve ɔ quality.
+      -- u/ui → uː reliably regardless of cluster.
+      local phon_c1 = usub(vowel.phon, 1, 1)
+      if phon_c1 == "a" and not r_token.palatal then
         vowel.phon = "ɑː"
+      elseif phon_c1 == "ɔ" and c_token.ortho ~= "l" then
+        -- o/oi before rd/rn → oː; before rl keep ɔ quality (orla)
+        vowel.phon = "oː"
+      elseif phon_c1 == "ʊ" then
+        vowel.phon = "uː"
+      elseif phon_c1 == "a" then
+        vowel.phon = "aː"
       else
         vowel.phon = vowel.phon .. "ː"
       end
