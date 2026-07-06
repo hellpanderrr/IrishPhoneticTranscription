@@ -58,11 +58,14 @@ return {
         if tokens[i + 1].ortho == "f" then
           local f_next1 = tokens[i + 2]
           local f_next2 = tokens[i + 3]
-          if f_next1 and f_next1.type == "vowel" and f_next2 then
-            local is_suffix = (f_next1.ortho == "i" and f_next2.ortho == "dh")
-              or (f_next1.ortho == "ai" and (f_next2.ortho == "dh" or f_next2.ortho == "mid"))
-              or (f_next1.ortho == "ea" and (f_next2.ortho == "d" or f_next2.ortho == "dh"))
-              or (f_next1.ortho == "a" and (f_next2.ortho == "s" or f_next2.ortho == "dh"))
+          if f_next1 and f_next1.type == "vowel" then
+            local is_suffix = (f_next1.ortho == "\xC3\xA1")  -- -fá (no f_next2)
+            if not is_suffix and f_next2 then
+              is_suffix = (f_next1.ortho == "i" and f_next2.ortho == "dh")
+                or (f_next1.ortho == "ai" and (f_next2.ortho == "dh" or f_next2.ortho == "mid"))
+                or (f_next1.ortho == "ea" and (f_next2.ortho == "d" or f_next2.ortho == "dh"))
+                or (f_next1.ortho == "a" and (f_next2.ortho == "s" or f_next2.ortho == "dh" or f_next2.ortho == "r"))
+            end
             if is_suffix then
               goto skip_epenthesis
             end

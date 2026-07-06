@@ -269,15 +269,19 @@ elseif token.ortho == "l" then
       elseif token.ortho == "f" then
         -- Future-tense suffix -fidh/-faidh: f between consonant and (i|ai)+dh → context rule.
         -- After obstruent (c/t/d/g/s/ch/x): f elides (∅). After sonorant (l/n/r): f → h.
+        -- After vowel (future tense marker -ó-/-f-): f → h.
+        -- After bh/mh: bh+mh+f hardens to single f (scríobhfaidh→ʃcɾʲiːfˠə).
         local prev = tokens[i - 1]
         local next1 = tokens[i + 1]
         local next2 = tokens[i + 2]
         -- Match -fidh (f + i + dh) or -faidh (f + ai + dh) or -fead (f + ea + d) or
         -- -feadh (f + ea + dh) or -fas (f + a + s) or -fadh (f + a + dh) or -faimid (f + ai + mid)
+        -- or -far (f + a + r) or -fá (f + á)
         -- The future -f- suffix lenites between a stem-final consonant and the verb ending.
         -- After obstruent: f → ∅. After sonorant: f → h.
-        local is_future_suffix = prev and prev.type == "cons" and prev.phon and prev.phon ~= ""
-          and next1 and next1.type == "vowel"
+        local is_future_suffix = next1 and next1.type == "vowel"
+          and (prev and prev.type == "cons" and prev.phon and prev.phon ~= "" or
+               prev and prev.type == "vowel")
           and (
             -- -fidh: f + i + dh
             (next1.ortho == "i" and next2 and next2.ortho == "dh")
@@ -295,39 +299,76 @@ elseif token.ortho == "l" then
             or (next1.ortho == "a" and next2 and next2.ortho == "dh")
             -- -faimid: f + ai + mid
             or (next1.ortho == "ai" and tokens[i+2] and tokens[i+2].ortho == "mid")
+            -- -far: f + a + r (autonomous future)
+            or (next1.ortho == "a" and next2 and next2.ortho == "r")
+            -- -fá: f + á (2sg. conditional/future)
+            or (next1.ortho == "\xC3\xA1")
           )
         if is_future_suffix then
-          local pp = prev.phon
-          local is_obstruent = false
-          -- Check for multi-byte IPA obstruents first (ʃ = 0xCA 0x83).
-          -- Plain gmatch(".") iterates bytes, not UTF-8 chars.
-          if pp:find("\xCA\x83") then
-            is_obstruent = true
-          end
-          if not is_obstruent then
-            for ch in pp:gmatch(".") do
-              if ch == "k" or ch == "g" or ch == "p" or ch == "t"
-                or ch == "d" or ch == "b" or ch == "s" or ch == "x"
-                or ch == "f" or ch == "v" or ch == "h" then
-                is_obstruent = true; break
+          -- bh/mh + f hardening: when the preceding token is bh or mh,
+          -- the f absorbs into a single hard f (scríobhfaidh→ʃcɾʲiːfˠə).
+          -- Hickey II.1.7.2: lenited labial before future -f- hardens to [f].
+          if prev and prev.type == "cons" and (prev.ortho == "bh" or prev.ortho == "mh") then
+            prev.phon = ""
+            token.phon = S.palatal_consonant(token, "fʲ", "fˠ")
+            -- bh/mh already resolved to vˠ/w; silence them and let f carry the labial
+          else
+            local pp = prev and prev.phon or ""
+            local is_obstruent = false
+            -- Check for multi-byte IPA obstruents first (ʃ = 0xCA 0x83).
+            -- Plain gmatch(".") iterates bytes, not UTF-8 chars.
+            if pp:find("\xCA\x83") then
+              is_obstruent = true
+            end
+            if not is_obstruent then
+              for ch in pp:gmatch(".") do
+                if ch == "k" or ch == "g" or ch == "p" or ch == "t"
+                  or ch == "d" or ch == "b" or ch == "s" or ch == "x"
+                  or ch == "f" or ch == "v" or ch == "h" then
+                  is_obstruent = true; break
+                end
               end
             end
-          end
-          if is_obstruent then
-            -- Regressive devoicing: a voiced stop before future -f- suffix
-            -- devoices to its voiceless counterpart. creidfead→creitfead,
-            -- lúbfad→lúbpād, ligfidh→ligcidh etc.
-            local DEV = {
-              ["d"] = "t", ["dʲ"] = "tʲ", ["d̪ˠ"] = "t̪ˠ",
-              b = "p", ["bʲ"] = "pʲ", ["bˠ"] = "pˠ",
-              ["ɟ"] = "c", ["ɡ"] = "k",
-            }
-            if DEV[pp] then
-              prev.phon = DEV[pp]
+            -- Check for multi-byte IPA devoicing targets (ɟ = 0xC9 0x9F)
+            local is_dev_target = (pp == "\xC9\x9F")  -- ɟ (U+025F)
+            if not is_obstruent and is_dev_target then
+              is_obstruent = true
             end
-            token.phon = ""
-          else
-            token.phon = "h"
+            -- Determine if -far/-fá suffixes keep f (don't elide/lenite to h).
+            -- Hickey II.1.7.2: future -f- suffix — f retained before r/á
+            -- in specific contexts, elided/lenited before dh/d/s.
+            -- -far (-f + a + r): f always kept (molfar, lúbfar).
+            -- -fá (-f + á): f→h after consonant (déarfá), kept after vowel (-ófá).
+            local keep_f = false
+            if next2 and next2.ortho == "r" then
+              keep_f = true  -- -far
+            elseif next1.ortho == "\xC3\xA1" and prev and prev.type == "vowel" then
+              keep_f = true  -- -fá after vowel (-ófá)
+            end
+            if is_obstruent then
+              -- Regressive devoicing: a voiced stop before future -f- suffix
+              -- devoices to its voiceless counterpart. creidfead→creitfead,
+              -- lúbfad→lúbpād, ligfidh→ligcidh etc.
+              local DEV = {
+                ["d"] = "t", ["dʲ"] = "tʲ", ["d̪ˠ"] = "t̪ˠ",
+                b = "p", ["bʲ"] = "pʲ", ["bˠ"] = "pˠ",
+                ["ɟ"] = "c", ["ɡ"] = "k",
+              }
+              if DEV[pp] then
+                prev.phon = DEV[pp]
+              end
+              if keep_f then
+                token.phon = S.palatal_consonant(token, "fʲ", "fˠ")
+              else
+                token.phon = ""
+              end
+            else
+              if keep_f then
+                token.phon = S.palatal_consonant(token, "fʲ", "fˠ")
+              else
+                token.phon = "h"
+              end
+            end
           end
         else
           token.phon = S.palatal_consonant(token, "fʲ", "fˠ")
