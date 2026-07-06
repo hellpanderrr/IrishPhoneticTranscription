@@ -436,9 +436,22 @@ return {
           nxt.phon = "\xC9\x99"
         -- "e"+"á" or "e"+"ái": éa digraph with fada → ɑː, silent e.
         -- The tokenizer may produce either "á" or "ái" as the digraph.
+        -- Lexical exceptions: words where éa digraph should be [aː] not [ɑː]
+        -- (replicated from pass 10 AA_TO_A table for consistency).
         elseif t.ortho == "e" and (nxt.ortho == "á" or nxt.ortho == "ái") then
           t.phon = ""
-          nxt.phon = "ɑː"
+          local E_PLUS_AA_TO_A = {
+            bear=true, seam=true, micheal=true, meachan=true,
+            bleanach=true, bealtaine=true, bhtea=true, ciceail=true,
+            spleach=true, spleachas=true, neamhspleach=true,
+            cocarail=true, saile=true, sileail=true,
+          }
+          local w = S.strip_fadas(S.normalize_ortho(context.word_ortho or ""))
+          if E_PLUS_AA_TO_A[w] then
+            nxt.phon = "aː"
+          else
+            nxt.phon = "ɑː"
+          end
         -- "u"+"í" or "u"+"ío": uí → iː, silent u.
         -- The tokenizer may produce either "í" or "ío" as the digraph.
         elseif t.ortho == "u" and (nxt.ortho == "í" or nxt.ortho == "ío") then
