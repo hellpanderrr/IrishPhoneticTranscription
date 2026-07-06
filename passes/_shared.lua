@@ -331,7 +331,7 @@ _shared.FUNCTION_WORDS_OVERRIDE = {
   ["a'"] = { "ə" },      -- variant of "a"
   ag  = { "ə", "ɡ" },    -- "at"
   ar  = { "ɛ", "ɾʲ" },   -- "on" (Connacht: palatal r, open e)
-  ["do"]  = { "d̪ˠ", "ɔ" },    -- "to/for" (kept as d̪ˠɔ, possessive uses differ)
+  ["do"]  = { "ɡ", "ə" },    -- "to/for" (Connacht: extreme reduction to ɡə, Hickey II.2.7)
   mo  = { "mˠ", "ə" },    -- "my"
   de  = { "dʲ", "ə" },   -- "of/from"
   na  = { "n̪ˠ", "ə" },    -- plural article
@@ -339,12 +339,12 @@ _shared.FUNCTION_WORDS_OVERRIDE = {
   ba  = { "bˠ", "ə" },    -- conditional copula
   as  = { "a", "sˠ" },    -- "out of"
   le  = { "lʲ", "ɛ" },   -- "with" (Connacht: lʲɛ)
-  mar = { "mˠ", "a", "ɾˠ" }, -- "as/like" — [a] not [ə] to match expected mˠaɾˠ in multi-word phrases
+  mar = { "mˠ", "ə", "ɾˠ" }, -- "as/like" (Connacht: reduced to mˠəɾˠ)
   go  = { "ɡ", "ə" },    -- "to" / "that" particle
   se  = { "ʃ", "ɛ" },    -- unstressed "he/it"
   ["o"]   = { "oː" },        -- "ó" — "from"
   ["ni"]  = { "nʲ", "iː" },  -- "ní" -- "not" / "daughter"
-  is  = { "ə", "sˠ" },   -- "and" / copula
+  is  = { "", "sˠ" },    -- "and" / copula (Connacht: ʃ/sˠ before vowels, i silenced)
   ach = { "a", "x" },    -- "but"
   bhur = { "ə", "", "" },         -- "your" (pl.) — reduced to bare schwa, silence rem
   an  = { "ə", "nˠ" },   -- article "the" (masc. nom.)
@@ -359,12 +359,20 @@ _shared.FUNCTION_WORDS_OVERRIDE = {
   -- need stress — but adding "ˈ" to the override would break multi-word phrases
   -- where these words are unstressed (and vowel a→u change would also break
   -- multi-word "a(ɡə)mˠ" expected). Skipping agam/agat pending separate vowel fix.
+  -- Prepositional pronouns (cont'd) and high-frequency function words
   agaibh = { "ə", "ɡ", "iː", "" }, -- expected əɡiː (unstressed, silence final bh)
   uainn = { "w", "e", "n̠ʲ", "" }, -- expected wen̠ʲ (unstressed)
   tigh = { "tʲ", "iː" }, -- expected tʲiː (unstressed)
   orm = { "ə", "ɾˠ", "mˠ" }, -- expected (ə)ɾˠmˠ (parenthetical)
   aige = { "e", "ɟ", "ə" }, -- "at him" (Connacht: stressed)
   aici = { "ɛ", "c", "iː" }, -- "at her" (Connacht: stressed)
+  -- High-frequency irregular verbs and demonstratives
+  chonaic = { "h", "a", "nʲ", "i", "c" }, -- "saw" (Connacht: hanʲic, Hickey II.2.7)
+  seo = { "ʃ", "ɔ" }, -- "this" (Connacht: short ɔ, Hickey II.1.9.5)
+  -- Prepositional pronouns: agam/agat with vowel raising (Connacht: u not a)
+  -- Hickey II.2.7: function word reduction — unstressed a → u in high-frequency forms
+  agam = { "u", "ɡ", "ə", "mˠ" }, -- "at me" (Connacht: uɡəmˠ)
+  agat = { "u", "ɡ", "ə", "d̪ˠ" }, -- "at you" (sg.) (Connacht: uɡəd̪ˠ)
   -- Suffix entries (hyphen-prefixed benchmark entries like -im, -fidh, -ach).
   -- The leading token is type="unknown" (hyphen char), so the segment ortho
   -- is literally "-im" etc. These match standalone suffix entries only.
