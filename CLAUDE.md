@@ -65,8 +65,8 @@ Every phonological rule in the 16 passes cites its source in comments:
 - PDFs in `theory/` on disk (not git-tracked); text extracts `.txt` files are tracked
 
 ## Benchmark Target
-- Current: ~70.70% exact match (4665/6598) Connacht
-- Norm Lev: ~93.51, Norm Dolgo: ~95.08
+- Current: ~71.78% exact match (4736/6598) Connacht
+- Norm Lev: ~93.81, Norm Dolgo: ~95.25
 - Lev-1 single-substitution error buckets via `errors.csv`
 
 ## Encoding
@@ -132,6 +132,9 @@ Every phonological rule in the 16 passes cites its source in comments:
 ### Resolved
 
 <!-- Move fixed entries here with the commit hash -->
+
+- **[s+onset l dental]** — Broad l after s (sl-, shl-, -sl- sequences) is denti-alveolar l̪ˠ, not lenis lˠ. Added `preceded_by_s` detection in Phase 1. +8 exact match.
+- **[word-final n dental rule]** — Long stressed vowels keep n̪ˠ; short vowels and unstressed long vowels strip to nˠ. Removed blanket Phase 1 strip (over-applied to long-vowel words like bán). Moved nuance to Phase 1b with `not is_long or (is_long and not is_stressed)` condition. KEEP_N_DENTAL table restored for short-vowel/diphthong exceptions (Brian, buan, cuan, etc.). +9 exact match (incl. Bíobla, Fhionlainnis, clocha, clós, gl- clusters).
 
 - _(none yet)_
 
