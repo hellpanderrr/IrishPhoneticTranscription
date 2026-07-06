@@ -19,7 +19,7 @@ Defined in `passes/init.lua`. Each pass receives the token array + context, modi
 
 1. **01_polarity** — broad/slender polarity from flanking vowels. Simplifies initial clusters (cn→cr, gn→gr, mn→mr, tn→tr). Sets word-initial r→broad, sonorant polarity from following consonant.
 2. **02_stress** — primary stress on first syllable by default. Computes `is_monosyllabic`, `vowel_count`, `root_vowel_count`. First pass that writes to `context`.
-3. **03_eclipsis** — word-initial eclipsis clusters (mb→m, gc→g, dt→d, bp→b, bhf→w, ng→ŋ, nn→n). Scans multi-word inputs for phrase-internal eclipsis.
+3. **03_eclipsis** — word-initial eclipsis clusters (mb→m, gc→g, dt→d, bp→b, bhf→w, ng→ŋ, nn→n). Also handles T-prefix mutation (Hickey III.2.2.2): word-initial ts→t, tch→t (s and ch silenced). Scans multi-word inputs for phrase-internal eclipsis.
 4. **04_cluster_simplify** — merges adjacent consonants that form compound clusters (bh+th→r, etc.).
 5. **05_mutated_fricatives** — resolves lenited fricatives to approximants after vowels; fh is always silent but leaves a ghost-palatal trace.
 6. **06_vocalization** — vowel+fricative sequences: -adh→ai/eː/ə, ea+bh→əu, u+gh→uː, a/o/u+bh/mh→əu. Does NOT silence the fricative (pass 09b handles that).
@@ -32,7 +32,7 @@ Defined in `passes/init.lua`. Each pass receives the token array + context, modi
 13. **11_unstressed_reduction** — reduces unstressed short vowels to [ə]. Long vowels protected. Lexical exception tables prevent over-reduction.
 14. **12_epenthesis** — inserts [ə] between heterorganic sonorant+obstruent clusters (Hickey §2.8 svarabhakti). Condition: preceding vowel short + stressed. Excludes homorganic clusters (rd, rn, rl, nd, ld, nn, ll, rr).
 15. **13_sonorants** — 4-way l/n diacritic system: broad+/C→l̪ˠ/n̪ˠ, broad+otherwise→lˠ/nˠ, slender+/C→l̠ʲ/n̠ʲ, slender+otherwise→lʲ/nʲ. Geminate handling (ll→l̪ˠ/l̠ʲ, nn→n̪ˠ/n̠ʲ, rr→ɾˠ, mm→mˠ). Vowel lengthening before geminates in monosyllables. Lengthening before heavy sonorant clusters (rd, rl, rn).
-16. **14_final_cleanup** — final silent fricatives, trailing ç/ɣ/h deletion, unstressed final devoicing (ɟ→c), lexical ɪ→i overrides, dh+cons→i vocalization, j-glide insertions, u→w before vowels, bh/mh→uː lexical overrides, function word IPA overrides (60+ entries), multi-word phrase cliticization and stress reassignment, sandhi affrication (ch+s→tʃ), regressive devoicing before th. The largest and most complex pass.
+16. **14_final_cleanup** — final silent fricatives, trailing ç/ɣ/h deletion, unstressed final devoicing (ɟ→c), lexical ɪ→i overrides, dh+cons→i vocalization, j-glide insertions, u→w before vowels, bh/mh→uː lexical overrides, function word IPA overrides (60+ entries), multi-word phrase cliticization and stress reassignment, sandhi affrication (ch+s→tʃ), regressive devoicing before th, **-íocht suffix override** (Connacht: iːçtʲ→iəxt̪ˠ). The largest and most complex pass.
 
 ### Token Model
 - `irish_engine_new.lua` — `tokenize_word()` splits orthography into tokens with `{ortho, phon, type, palatal, stress, is_mutated, mutation, source, is_epenthetic, ortho_indices, ...}`
@@ -65,8 +65,8 @@ Every phonological rule in the 16 passes cites its source in comments:
 - PDFs in `theory/` on disk (not git-tracked); text extracts `.txt` files are tracked
 
 ## Benchmark Target
-- Current: ~68.81% exact match (4540/6598) Connacht
-- Norm Lev: ~92.8, Norm Dolgo: ~94.8
+- Current: ~70.70% exact match (4665/6598) Connacht
+- Norm Lev: ~93.51, Norm Dolgo: ~95.08
 - Lev-1 single-substitution error buckets via `errors.csv`
 
 ## Encoding
@@ -83,6 +83,50 @@ Every phonological rule in the 16 passes cites its source in comments:
 - **Never use bare UTF-8 in table key brackets**: `["péint"]=true` causes Lua parse error. Write table keys without fadas and strip before lookup.
 - Add theory citations (Hickey section, FG chapter) to every new phonological rule
 - Run benchmark after every change to check for regressions — this engine is sensitive to pass ordering
+
+## Lua & Terminal Gotchas
+
+### Encoding / Shell
+- **Fadas vanish in inline `lua -e` scripts** — bash strips UTF-8 acute accents on the command line. Always test fada-containing words (í, ó, á, etc.) from a `.lua` file, never inline.
+- **Python on Windows** is `python`, not `python3`.
+- **`errors.csv` is tab-delimited** — `csv.DictReader` needs `delimiter='\t'`. The header is `word\tgot\texpected\tlev\tlev_norm\tdolgo\tdolgo_norm`.
+- **cp1251 encoding** — printing IPA chars to a Windows terminal gives `UnicodeEncodeError`. Redirect to a file or write to JSON instead.
+- **Python `\u` escape** — string literals containing `\u` (e.g. `'\u'.replace(...)`) fail before compilation. Use a raw string or escape the backslash.
+
+### Lua
+- The module exports `tokenize_word`, not `tokenize`.
+- No CSV module is installed — use Python for data analysis.
+- `ustring` library (`ulen`, `usub`) for Unicode operations; byte-string comparisons must compare the full byte sequence.
+
+### Benchmark
+- **Monosyllabic stress is inconsistent** — many expected values lack `ˈ` on monosyllabic content words. A blanket `t.stress=true` for all single-vowel words (pass 02) caused ~1400 regressions. Always verify blanket rules.
+- **Apostrophe-prefixed words** (`d'ith`, `b'fhearr`) lack lexical stress and must be excluded from stress assignment (pass 02 UNSTRESSED table + pass 14 Step 10 skip).
+- **`-íocht` suffix** tokenizes two ways: `ío+ch+t` (ríocht) or `aí+o+ch+t` (draíocht). Both must be handled.
+
+## Self-Updating Error Patterns
+
+**How this section works:** Whenever the agent discovers a persistent, high-volume error pattern through benchmark error analysis (Levenshtein distance 1 bucketing), it **appends** an entry here before committing. Each entry includes the pattern description, affected words, root cause, and which pass needs fixing. Remove entries once resolved.
+
+### Active Error Patterns
+
+<!-- Use this format when adding new entries:
+- **[pattern_name]** — Brief description. e.g. "Vowel X before heavy sonorant clusters"
+  - **Count:** NN errors (errors.csv Lev-1 bucket)
+  - **Examples:** word1, word2, word3
+  - **Root cause:** Root phonological/technical issue.
+  - **Fix in:** passes/NN_passname.lua step X
+  - **Theory:** Hickey/FG citation
+-->
+
+- **[ts-/tch- mutation]** — Word-initial ts→t̪ˠ, tch→tʲ (silence second consonant). ~25 errors, fixed in pass 03.
+- **[-íocht suffix]** — Connacht /iəxt̪ˠ/ not /iːçtʲ/. ~21 errors, fixed in pass 14 (Step 4n).
+- **[function_word_reduction]** — do→ɡə, is→sˠ, agam/agat→uɡəmˠ/uɡəd̪ˠ, chonaic→hanʲic, mar→mˠəɾˠ, seo→ʃɔ. Fixed in _shared.lua FUNCTION_WORDS_OVERRIDE.
+
+### Resolved Patterns
+
+<!-- Move fixed entries here with the commit hash -->
+
+- _(none yet)_
 
 <!-- graymatter:instructions:begin — managed by `graymatter init`; edits inside this block are overwritten -->
 ## Memory (GrayMatter)
