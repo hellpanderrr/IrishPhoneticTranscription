@@ -610,6 +610,34 @@ return {
         if AAI_TO_AI[w] then token.phon = "aː" end
       end
 
+      -- Lexical quality overrides: ío → iə before ch in specific words.
+      -- Connacht default for ío is [iː], but before a velar fricative (ch)
+      -- these words have a centering diphthong [iə]. Hickey II.1.9: vowel
+      -- allophony before velar fricatives — diphthongization in Connacht.
+      if ortho == "ío" and token.phon == "iː" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        local IO_TO_IA = {
+          ["críochnaigh"]=true, ["críochnaím"]=true, ["críochnaíonn"]=true,
+          ["críochnóidh"]=true,
+          ["cíoch"]=true, ["áinsíoch"]=true, ["beithíoch"]=true,
+          ["buíochán"]=true, ["buíocháin"]=true, ["buíochas"]=true,
+          -- NOTE: críochnaithe (verbal adj.) keeps iː, not iə
+        }
+        -- Only apply when the next consonant is ch (velar fricative)
+        local nxt = tokens[i + 1]
+        local matches = IO_TO_IA[w]
+        -- Also match multi-word phrases containing "buíochas"/"bhuíochas".
+        -- The lenited form "bhuíochas" won't match the exact "buíochas" key.
+        if not matches and (w:find("íochas") or w:find("íocháin")) then
+          matches = true
+        end
+        -- NOTE: do NOT match "íochán" substring — fíochán, níochán and
+        -- suíochán need iː not iə. Only exact table match handles buíochán.
+        if matches and nxt and nxt.type == "cons" and nxt.ortho == "ch" then
+          token.phon = "iə"
+        end
+      end
+
       -- uisce: standalone word wants i, not ɪ
       if ortho == "ui" and context.word_ortho then
         local w = context.word_ortho:lower()
