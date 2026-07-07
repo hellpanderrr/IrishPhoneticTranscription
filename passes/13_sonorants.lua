@@ -59,9 +59,10 @@ local GRAMMATICAL_SLENDER = {
   leat=true, leatsa=true, leis=true, linn=true, liom=true, libh=true,
   leofa=true, leosan=true,
   -- Negative particle + its inflected forms
-  ["Ní"]=true, ["ní"]=true, ["Níor"]=true, ["níos"]=true,
   -- Negative verb forms (ní + bhíom etc.): initial n is the particle, not stem
   ["nílid"]=true, ["nílim"]=true, ["nílir"]=true, ["níochán"]=true,
+  -- Surname particle (Ní = daughter of): capitalised, not retracted
+  ["Ní"]=true,
   -- Name/defective particles
   Nic=true, nis=true, ["nár"]=true,
   -- Verbal adjective prefix n-
@@ -95,6 +96,10 @@ local NON_TENSOR_SLENDER = {
   argoint=true, peint=true, failte=true, mointeach=true,
   -- Additional verbal adjective forms (-te/-the suffix with slender n/l)
   deintear=true, puint=true, ginte=true, nuaghinte=true, oscailte=true, gabhailte=true, innealtoir=true,
+  -- Additional n+t over-application exceptions
+  caintim=true, guiochtaint=true, peinteailte=true,
+  -- Loanwords and verbal suffix -t(-e) forms: n+t is non-tensor
+  caintim=true, guiochtaint=true, peinteailte=true,
   -- Loanwords and compounds: slender l/n is non-tensor
   pillin=true, milsean=true, milse=true, leorai=true, liopa=true, liopard=true,
   truaill=true, duille=true, gaedhilge=true,
@@ -156,7 +161,25 @@ return {
       if is_broad then
         if not has_dental(token.phon) then
           if followed_by_cons then
-            token.phon = insert_combining(token.phon, DENTAL)
+            -- Hickey II.1.8: broad l before consonant is denti-alveolar l̪ˠ
+            -- in native Irish words (fortis position). Exceptions are mostly
+            -- loanwords and morpheme-boundary l+r clusters.
+            local word_lookup = S.strip_fadas(S.normalize_ortho(context.word_ortho or ""))
+            local L_CONS_NON_DENTAL = {
+              -- Loanwords where broad l before consonant keeps lenis lˠ
+              -- Keys must be strip_fadas (no bare fadas in Lua table brackets)
+              alpan=true, balsamach=true,
+              bolcanach=true, bolcan=true, bolcain=true,
+              dulra=true,
+              holc=true, innealtoir=true,
+              iolran=true,
+              olca=true, scealp=true,
+              -- l+f verb suffix (future/conditional -f-): morpheme boundary
+              molfar=true,
+            }
+            if not L_CONS_NON_DENTAL[word_lookup] then
+              token.phon = insert_combining(token.phon, DENTAL)
+            end
           elseif word_initial or preceded_by_s then
             -- Hickey II.1.8: initial broad l/n and s+onset clusters are
             -- denti-alveolar l̪ˠ/n̪ˠ in Connacht. This includes sl- word-initially
@@ -179,6 +202,42 @@ return {
               -- If so, the l is lenis and should not receive dental.
               local word = context.word_ortho or ""
               if not (word:match("^[Bb]h") or word:match("^m[Bb]")) then
+                token.phon = insert_combining(token.phon, DENTAL)
+              end
+            else
+              -- Lexical table: specific native Irish words where medial broad l
+              -- before a vowel (or after epenthesis) is denti-alveolar l̪ˠ.
+              -- Hickey II.1.8: fortis broad l surfaces as l̪ˠ in Connacht in
+              -- specific native words, including after consonants (cl-, gl-)
+              -- and between vowels. Most non-native words and transparent
+              -- compounds retain lenis lˠ.
+              local word_ortho = S.normalize_ortho(context.word_ortho or "")
+              local lookup = S.strip_fadas(word_ortho)
+              local L_VOWEL_DENTAL = {
+                -- cl- before vowel: fortis l after stop
+                -- Keys use strip_fadas (no bare fadas in Lua table brackets)
+                clocha=true, clos=true, cluin=true, cluiteach=true,
+                -- gl- before vowel
+                gluaisim=true, glor=true,
+                -- Intervocalic V+l+V: fortis l between vowels
+                mala=true, gala=true,
+                hola=true, tola=true, salu=true,
+                solas=true,
+                eolach=true, eolas=true, feola=true,
+                seolaim=true, olaimid=true,
+                ualach=true, shalach=true, sealga=true,
+                folmha=true, gaelach=true, ghaelach=true,
+                colur=true,
+                alastar=true, polainnis=true,
+                -- n+l cluster before vowel
+                danlann=true, munla=true,
+                fionlainnis=true,
+                bhfionlainnis=true, fhionlainnis=true,
+                -- coda l in compounds after consonant
+                speacla=true, biobla=true,
+                tslainte=true,
+              }
+              if L_VOWEL_DENTAL[lookup] then
                 token.phon = insert_combining(token.phon, DENTAL)
               end
             end
@@ -206,8 +265,36 @@ return {
             -- Hickey II.1.8: initial slender l/n are tensor/alveolar l̠ʲ/n̠ʲ
             -- Skip grammatical words (prepositional pronouns, particles, etc.)
             -- also non-tensor sonorants (loanwords, etc.)
-            local word_ortho = S.normalize_ortho(context.word_ortho or "")
-            if not GRAMMATICAL_SLENDER[word_ortho] and not NON_TENSOR_SLENDER[S.strip_fadas(word_ortho)] then
+            local raw_word = context.word_ortho or ""
+            local word_ortho = S.normalize_ortho(raw_word)
+            if not GRAMMATICAL_SLENDER[raw_word] and not NON_TENSOR_SLENDER[S.strip_fadas(word_ortho)] then
+              token.phon = insert_combining(token.phon, POSTALVEOLAR)
+            end
+          elseif token.ortho == "n" then
+            -- Lexical table: slender n before a vowel in specific native Irish
+            -- words gets postalveolar ǹov (tensor quality). Hickey II.1.8:
+            -- medial slender n in native words surfaces as ǹov before vowels
+            -- in Connacht (r+n, sh+n sequences, and word-initial n+e/i).
+            local raw_word = context.word_ortho or ""
+            local word_ortho = S.normalize_ortho(raw_word)
+            local lookup = S.strip_fadas(word_ortho)
+            local N_VOWEL_POSTALVEOLAR = {
+              -- r+n sequences before vowel (historical -rn- clusters -> n retains tensor)
+              airne=true, airnean=true, airneis=true, bairneach=true,
+              cairn=true, ceirnin=true, muirnin=true, oirnis=true,
+              tairne=true, toirneach=true, toirneis=true, tuirne=true,
+              -- sh+n sequences before vowel (misneach, cuisneach)
+              misneach=true, cuisneach=true, frisneiseach=true,
+              tarcaisne=true, slisne=true,
+              -- word-initial n+e/i (sní, snite, inis)
+              sni=true, snite=true,
+              inis=true,
+              -- word-initial n+í (negative particle)
+              ni=true, nios=true,
+              -- native r+n where n is tense
+              uigneacha=true,
+            }
+            if N_VOWEL_POSTALVEOLAR[lookup] then
               token.phon = insert_combining(token.phon, POSTALVEOLAR)
             end
           end
