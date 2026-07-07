@@ -65,8 +65,8 @@ Every phonological rule in the 16 passes cites its source in comments:
 - PDFs in `theory/` on disk (not git-tracked); text extracts `.txt` files are tracked
 
 ## Benchmark Target
-- Current: ~72.46% exact match (4781/6598) Connacht
-- Norm Lev: ~93.94, Norm Dolgo: ~95.44
+- Current: ~73.42% exact match (4844/6598) Connacht
+- Norm Lev: ~94.06, Norm Dolgo: ~95.44
 - Lev-1 single-substitution error buckets via `errors.csv`
 
 ## Encoding
@@ -130,12 +130,13 @@ Every phonological rule in the 16 passes cites its source in comments:
 - **[function_word_reduction]** — do→ɡə, is→sˠ, agam/agat→uɡəmˠ/uɡəd̪ˠ, chonaic→hanʲic, mar→mˠəɾˠ, seo→ʃɔ. Fixed in _shared.lua FUNCTION_WORDS_OVERRIDE.
 - **[á→aː vowel quality]** — ~64 errors where Connacht long á produces ɑː but expected aː. Fixed in pass 10 (AA_TO_A, AAI_TO_AI) + pass 14 (éa digraph E_PLUS_AA_TO_A). +12 exact match.
 - **[ío→iə before ch]** — Connacht ío→iː but expected iə before velar fricative ch in specific words (críochnaigh, cíoch, beithíoch, buíochán, etc.). Fixed in pass 10 IO_TO_IA lexical table. +5 exact match.
-- **[dental n medial]** — ~35 Lev-1 errors where medial broad n before vowel should be n̪ˠ not nˠ (déanaí, gcónaí, Seán, etc.). All blanket-rule attempts caused regressions.
-- **[dental l medial]** — ~29 Lev-1 errors where medial broad l before vowel should be l̪ˠ not lˠ (mála, eolas, clocha, glór, etc.). All blanket rules cause ~612 false positives.
+- **[dental n medial]** — ~35 Lev-1 errors where medial broad n before vowel should be n̪ˠ not nˠ (déanaí, gcónaí, Seán, etc.). All blanket-rule attempts caused regressions. The Phase 1a rule strips dental from n before vowels unconditionally; a targeted fix requires per-word or per-vowel-context logic.
 
 ### Resolved
 
 <!-- Move fixed entries here with the commit hash -->
+
+- **[dental l medial]** — ~63 Lev-1 errors where broad l should be dental l̪ˠ at word onset, after stop (cl-/gl-), or between vowels (mála, eolas, clocha, glór, etc.). Fixed in pass 13 Phase 1 with lexical L_CONS_NON_DENTAL exemption table (prevents over-application on loanwords like alpán, bolcán, dúlra) + L_VOWEL_DENTAL lexical table (targeted per-word for medially-occuring V+l+V). +45 exact match.
 
 - **[comh- prefix]** — Connacht: o+mh in comh- prefix → oː (not əu). Hickey II.1.9: comh- reduces to /koː/ before consonants. Fixed in pass 06. +3 exact match (comhlacht, comhluadar, comhrá).
 - **[s+onset l dental]** — Broad l after s (sl-, shl-, -sl- sequences) is denti-alveolar l̪ˠ, not lenis lˠ. Added `preceded_by_s` detection in Phase 1. +8 exact match.
@@ -144,8 +145,7 @@ Every phonological rule in the 16 passes cites its source in comments:
 - **[ponc/sponc/phonc o→ʊ]** — Short o before ŋk should raise to ʊ (Connacht). Added to O_TO_U lexical table in pass 10. +3 exact match (ponc, sponc, phonc).
 - **[word-final slender bh/mh→w]** — Connacht: word-final slender bh/mh after long vowels (scríobh, sníomh, gníomh, gríobh, shníomh) weakens to w not vʲ. Lexical FINAL_BH_V_TO_W table in pass 14 Step 8d. +5 exact match.
 - **[ll vowel lengthening exceptions]** — 6 words (mall, breall, ngeall, gheall, mhall, i ngeall ar) have short vowel before geminate ll. Lexical LENGTHEN_EXCEPTIONS table in pass 13 Phase 2. +6 exact match.
-
-- _(none yet)_
+- **[slender n postalveolar]** — ~19 Lev-1 errors where slender n before vowel (airne, míneach, sní, inis) or word-initial (ní, níos) should be retracted n̠ʲ not palatal nʲ. Fixed in pass 13: GRAMMATICAL_SLENDER no longer exempts lowercase ní/níos (benchmark expects retraction), added N_VOWEL_POSTALVEOLAR lexical table for r+n, sh+n, and word-initial n+e/i sequences. NON_TENSOR_SLENDER exempts loanwords and -t- verbal suffix (caintím, guíochtaint, péinteáilte). Uses raw word_ortho for case-preserving Ní (surname) exemption. +18 exact match.
 
 <!-- graymatter:instructions:begin — managed by `graymatter init`; edits inside this block are overwritten -->
 ## Memory (GrayMatter)
