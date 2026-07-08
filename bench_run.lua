@@ -144,9 +144,15 @@ for word, entry in pairs(bench) do
   total = total + 1
   local variants = {}
   for v in entry.expected:gmatch("[^,]+") do
-    local expanded = expand_variant(trim(v))
-    for _, ev in ipairs(expanded) do
-      table.insert(variants, ev)
+    -- Split on ~ for dialect variants (e.g. "a ~ b" → two variants)
+    for side in v:gmatch("[^~]+") do
+      local trimmed = trim(side)
+      if trimmed ~= "" then
+        local expanded = expand_variant(trimmed)
+        for _, ev in ipairs(expanded) do
+          table.insert(variants, ev)
+        end
+      end
     end
   end
   local best_lev, best_exp, best_dolgo, best_norm_lev, best_norm_dolgo = nil, nil, nil, nil, nil
