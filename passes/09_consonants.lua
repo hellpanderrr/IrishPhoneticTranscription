@@ -303,6 +303,10 @@ elseif token.ortho == "l" then
             or (next1.ortho == "a" and next2 and next2.ortho == "r" and (not tokens[i+3] or tokens[i+3].type ~= "vowel"))
             -- -fá: f + á (2sg. conditional/future)
             or (next1.ortho == "\xC3\xA1")
+            -- -faí: f + aí (conditional autonomous)
+            -- Hickey III.2.2.2: conditional autonomous -faí retains f
+            -- after consonant but lenites to h after vowel.
+            or (next1.ortho == "aí")
           )
         if is_future_suffix then
           -- bh/mh + f hardening: when the preceding token is bh or mh,
@@ -340,8 +344,11 @@ elseif token.ortho == "l" then
             -- -far (-f + a + r): f always kept (molfar, lúbfar).
             -- -fá (-f + á): f→h after consonant (déarfá), kept after vowel (-ófá).
             local keep_f = false
+            local is_fai = (next1.ortho == "aí")
             if next2 and next2.ortho == "r" then
               keep_f = true  -- -far
+            elseif is_fai and prev and prev.type == "cons" then
+              keep_f = true  -- -faí after consonant: retain f (Connacht)
             elseif next1.ortho == "\xC3\xA1" and prev and prev.type == "vowel" then
               keep_f = true  -- -fá after vowel (-ófá)
             end

@@ -77,6 +77,28 @@ return {
         end
       end
 
+      -- Lexical override: unstressed io before n → ʊ in specific compound words.
+      -- The io collapse rule (lines 34-70) requires stress, but in compounds
+      -- like "frith-ionsaitheach" the second element's io is unstressed
+      -- while still retaining the phonological collapse to [ʊ] before n.
+      -- Hickey II.1.9.5: <io> collapses to [ʊ] before sonorants.
+      if ortho == "i" and next and next.type == "vowel" and next.ortho == "o" and
+         tokens[i+2] and tokens[i+2].type == "cons" and tokens[i+2].ortho == "n" and
+         context.word_ortho then
+        local w = context.word_ortho:lower()
+        local IO_UNSTRESSED_TO_U = {
+          ["frith-ionsaitheach"] = true,
+          ["frithionsaitheach"] = true,
+        }
+        if IO_UNSTRESSED_TO_U[w] then
+          token.phon = "\xca\x8a"  -- ʊ
+          next.phon = ""
+          next.source = "io_collapse_unstressed"
+          next.is_epenthetic = true
+          goto continue
+        end
+      end
+
       -- Lexical: stressed io → ɪ in specific words (not iɔ).
       -- fios→fʲɪsˠ, cion→cunˠ, sioc→ʃuk, etc.
       -- Some check following consonant to pick ɪ vs ʊ.
@@ -445,6 +467,21 @@ return {
         local w = context.word_ortho:lower()
         local OI_KEEP_O = { scoil=true, troigh=true, soirbis=true, ["doiciméad"]=true }
         if OI_KEEP_O[w] then token.phon = "\xC9\x94" end
+      end
+
+      -- Lexical quality overrides: oi → əi in specific words (diphthong quality).
+      -- Hickey II.1.9.9.1: historical /oi/ before slender sonorant diphthongizes
+      -- to [əi] in Connacht for certain verb stems (oibrigh-family).
+      if ortho == "oi" and token.phon == "ɛ" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        local OI_TO_AI = {
+          ["oibrigh"] = true,
+          ["oibreofaí"] = true,
+          ["d'oibreofaí"] = true,
+        }
+        if OI_TO_AI[w] then
+          token.phon = "\xC9\x99i"  -- əi
+        end
       end
 
       -- ui before palatal consonant: front to ɪ (not back ʊ)

@@ -339,13 +339,27 @@ return {
       local is_stressed = prev_v.stress or false
 
       -- Skip words where word-final broad n keeps dental diacritic.
-      -- These are mostly:
-      --  - Monosyllables after /u/ or diphthongs (bun, Brian, buan, cuan, srian)
-      --  - Certain grammatical/lexical exceptions (chan)
+      -- Hickey II.1.8: word-final broad n is dental n̪ˠ in Connacht after
+      -- long stressed vowels (-an/-un/-on suffix words) and in specific
+      -- monosyllables (bun, Brian, buan, cuan, srian). After unstressed
+      -- long vowels the dental is lenited to nˠ (rion, buion, crion).
+      -- Use quoted string keys for fada-bearing words (bare keys must be ASCII).
       local word_ortho = context.word_ortho or ""
       local KEEP_N_DENTAL = {
-        Brian=true, buan=true, bun=true, chan=true, cuan=true,
+        -- Monosyllables: short/diphthong vowel + dental n (Hickey II.1.8)
+        aon=true, Brian=true, buan=true, bun=true, chan=true, cuan=true,
         feochan=true, ghrian=true, srian=true,
+        -- Stressed -an/-un/-on suffix words
+        ["altán"]=true, ["bán"]=true, ["bodhrán"]=true, ["corcán"]=true,
+        ["dán"]=true, ["deamhan"]=true, ["duibheagán"]=true,
+        ["Eoghan"]=true,
+        ["fán"]=true, ["gaothrán"]=true, ["gearrán"]=true, ["geimhriúchán"]=true,
+        ["gluaisteán"]=true, ["glún"]=true, ["ghlún"]=true, ["guthán"]=true,
+        ["harán"]=true, ["Idirlíon"]=true,
+        ["lán"]=true, ["meán"]=true, ["milseán"]=true,
+        ["príosún"]=true, ["réidhleán"]=true,
+        ["sacán"]=true, ["Seán"]=true, ["Siobhán"]=true, ["smiolgadán"]=true,
+        ["stáisiún"]=true, ["súsán"]=true,
       }
       if KEEP_N_DENTAL[word_ortho] then goto next_strip end
 
