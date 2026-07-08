@@ -4,24 +4,20 @@
 --  Hickey II.1.9.9.1 (vocalization of historical fricatives, digraph resolution),
 --  Hickey II.1.7 (consonant system — sandhi affrication [tʃ] from /x/+/s/),
 --  Hickey II.3 (function word stress/prosody), II.2.7.5 (assimilation across word boundaries)
-
 local S = require("passes._shared")
 local ustring = require("ustring.ustring")
 local ugsub = ustring.gsub
 local usub = ustring.sub
 local umatch = ustring.match
-
 local function strip_trailing_fricative(phon)
   if not phon then return phon end
   -- Match pattern: long vowel + ç/ɣ/h at end
   -- Use ugsub (UTF-8-aware) not plain gsub — ː, ç, ɣ are multi-byte
   return ugsub(phon, "([ɑeiou]ː)[ɣçh]$", "%1")
 end
-
 return {
   name = "final_cleanup",
   writes_context = false,
-
   run = function(tokens, context)
     -- Step 1: Handle final silent mutated fricatives
     -- dh and gh are always silent word-finally in Connacht (Hickey II.1.7.2).
@@ -54,7 +50,6 @@ return {
         end
       end
     end
-
     -- Step 2: Strip trailing ç/ɣ/h from long-vowel phons
     -- This matches the production rule: ([ɑeiou]ː)[ɣçh]$ → %1
     for _, token in ipairs(tokens) do
@@ -62,7 +57,6 @@ return {
         token.phon = strip_trailing_fricative(token.phon)
       end
     end
-
     -- Step 3: Delete final ç/ɣ/h tokens after long vowels (production rule)
     -- Exception: gaoith/ngaoith keep h despite aoi→iː producing a long vowel.
     local skip_h_strip = false
@@ -86,7 +80,6 @@ return {
         end
       end
     end
-
     -- Step 4: Unstressed final devoicing (Connacht/Ulster) — TIGHTENED
     -- Devoice slender g [ɟ] -> [c] ONLY when preceded by schwa [ə].
     -- Hickey II.1.8: final palatal velar devoices after unstressed [ə]
@@ -121,15 +114,12 @@ return {
       end
     end
     ::devoice_skip::
-
-
     -- Step 4b: Restore unstressed vowels from restore_i: ? back to ?
     for _, token in ipairs(tokens) do
       if token.restore_i and token.phon == "ə" then
         token.phon = "ɪ"
       end
     end
-
     -- Step 4c: Lexical ɪ→i overrides (after reduction so pass 11 doesn't re-reduce)
     -- Words where short i should be full i even in unstressed/monosyllabic positions.
     -- Also handles u→palatal→ɪ and oi→m→ɪ cases.
@@ -146,7 +136,6 @@ return {
         end
       end
     end
-
     -- Step 4d: Keep unstressed "a" in specific loanwords.
     -- cileagram/chileagram: final "a" in "-gram" suffix should stay /a/
     -- paragraf: final "a" in "-graf" suffix should stay /a/
@@ -164,7 +153,6 @@ return {
         end
       end
     end
-
     -- Step 4e: Keep unstressed "a" in specific loanwords.
     -- cileagram/chileagram: final "a" in "-gram" suffix should stay /a/
     -- paragraf: final "a" in "-graf" suffix should stay /a/
@@ -196,7 +184,6 @@ return {
           end
         end
       end
-
       -- Step 4h: á→aː in borrowings and specific contexts.
       -- Hickey II.1.9: loanwords may retain [aː] where native words have [ɑː].
       local AA_OVERRIDE = {
@@ -212,7 +199,6 @@ return {
         end
       end
     end
-
     -- Step 4i: dh+cons → i vocalization (Connacht).
     -- When orthographic dh is followed by a consonant, it vocalizes to [i],
     -- forming a diphthong with the preceding vowel.
@@ -232,7 +218,6 @@ return {
         end
       end
     end
-
     -- Step 4k: teagasc — silence final k.
     -- The final -c in teagasc (teaching) is silent in Connacht.
     -- Hickey §2.6.3: final c after s is silent in this word.
@@ -244,7 +229,6 @@ return {
         end
       end
     end
-
     -- Step 4m: Silence medial gh/dh (ɣ) in specific Connacht words.
     -- Hickey II.1.7.2: dh/gh are silent between vowels in Connacht;
     --   historically fricative /ð ɣ/ elided (Eoghan→oːn̪ˠ, Fódhla→fˠoːlˠə).
@@ -267,7 +251,6 @@ return {
         end
       end
     end
-
     -- Step 4l: iəw glide for specific words (riabhach, riamh).
     -- The bh/mh vocalization produces bare iə, but benchmark expects iəw.
     -- These words need the w glide after the iə diphthong.
@@ -281,7 +264,6 @@ return {
         end
       end
     end
-
     -- Step 4n: Diphthong absorption: əu + (silent) + ə → əu.
     -- When vocalization produces diphthong əu (abh/eabh/amh/eamh → əu), any
     -- following unstressed vowel that reduced to ə should be absorbed.
@@ -305,7 +287,6 @@ return {
         end
       end
     end
-
     -- Step 4n: -íocht suffix override (Connacht).
     -- Hickey II.1.9, FG Ch.5: the nominalizing suffix -íocht resolves to
     -- [iəxt̪ˠ] in Connacht (not [iːçtʲ] or [iːxt̪ˠ]).
@@ -315,7 +296,7 @@ return {
     -- Need to fix vowel quality (iə not iː) AND consonant broadness (x/t̪ˠ not ç/tʲ).
     if context.word_ortho then
       local w = context.word_ortho:lower()
-      if w:match("[íi]ocht$") then
+      if w:match("[íi]ocht$") or w:match("[íi]ochta$") or w:match("íochtaí$") then
         for i, token in ipairs(tokens) do
           -- Fix vowels: ío → iə for the suffix
           if token.type == "vowel" and token.ortho == "ío" then
@@ -340,13 +321,10 @@ return {
         end
       end
     end
-
     -- Step 4l: oí → iː is now handled as a recognized vowel digraph in the
     -- tokenizer (VOWEL_DIGRAPHS) and resolved in the vowel pass (pass 10).
     -- See _shared.lua VOWEL_DIGRAPHS and passes/10_vowels.lua ortho=="oí".
-
     -- Step 4f: -igh endings: restore ə → iː (imperative verbs, adjectives).
-
     -- Step 4j: Silence th after r in unstressed syllables.
     -- Words where medial th after r should be silent, not h.
     -- ceachartha→ˈcaxəɾˠə, danartha→ˈd̪ˠan̪ˠəɾˠə, corpartha→ˈkɔɾˠpˠəɾˠə, cheithre→ˈçɛɾʲə
@@ -364,7 +342,6 @@ return {
         end
       end
     end
-
     -- Step 4f: -igh endings: restore ə → iː (imperative verbs, adjectives).
     -- Words ending in -igh have the final vowel reduced to ə by pass 11, but
     -- benchmark expects iː (e.g. beirigh→ˈbʲɛɾʲiː, suigh→sˠiː, istigh→əʃˈtʲiː).
@@ -395,12 +372,10 @@ return {
         end
       end
     end
-
     -- Step 4o: Add missing -igh entries to IGH_RESTORE that end up as ɪ not ə.
     -- These were added because the original check only caught phon == "ə", but
     -- many -igh words end up with ɪ (short i) instead of ə (schwa).
     -- The condition was widened to catch both in the existing IGH_RESTORE block above.
-
     -- Step 4p: -igí imperative suffix → əɟiː or iːɟiː (Connacht).
     -- Hickey II.1.9: unstressed suffix reduces initial vowel, keeps final iː.
     local IGIRESTORE = { ["-igí"]=true, ["cinnigí"]=true }
@@ -416,7 +391,6 @@ return {
         end
       end
     end
-
     -- Step 4g: Fix vowel pairs split by fadas. When the tokenizer splits
     -- digraphs like ea/ui by a fada mark on the second vowel, the first
     -- vowel should be silent in these specific combos.
@@ -462,7 +436,6 @@ return {
         end
       end
     end
-
     -- Step 5: ch + s ->> tʃ sandhi
     -- Hickey II.1.7: sandhi affricate [tʃ] from /x/+/s/ (bhíodh sé→[vʲiːtʃeː])
     for i = 1, #tokens - 1 do
@@ -470,7 +443,6 @@ return {
         tokens[i].phon = "tʃ"; tokens[i + 1].phon = ""
       end
     end
-
     -- Step 6: Devoice b/d/g before th — b+th→p, d+th→t, g+th→k, silence th
     -- Handles verbal adjective forms: fágtha→kə, scuabtha→pˠə, lúbtha→pˠə
     -- Also silences th after ANY obstruent (incl. c, ch, p, f, s) — the default
@@ -483,7 +455,6 @@ return {
       if c.type ~= "cons" then goto dev_continue end
       if not next_t or next_t.ortho ~= "th" then goto dev_continue end
       if next_t.phon ~= "h" then goto dev_continue end
-
       -- Devoice the consonant: b+th→p, d+th→t, g+th→k, then silence th
       -- Hickey §2.6.3: th assimilates to the voicing of the preceding consonant
       -- and then the cluster is devoiced.
@@ -501,10 +472,8 @@ return {
           or phon == "fʲ" then
         next_t.phon = ""
       end
-
       ::dev_continue::
     end
-
     -- Step 6b: Devoice g before f/t/s/h -- regressive devoicing assimilation.
     -- Also catches ɡ before h (from f-lenition in future-f forms like pógfaidh).
     for i = 1, #tokens - 1 do
@@ -524,7 +493,6 @@ return {
       end
       ::dev2_continue::
     end
-
     -- Step 6c: Word-final broad g -> k for lexically-specified words (easpag)
     if context.word_ortho then
       local w = context.word_ortho:lower()
@@ -541,10 +509,8 @@ return {
         end
       end
     end
-
     -- Step 6 removed: rʲ → ʃ assibilation (Hickey Ch.2)
     -- 503 words produced ʃ incorrectly, only 54 expected it
-
     -- Step 8:*  (was 7: aspiration removed — dataset doesn't use ʰ
     -- Only insert [j] after palatal C when followed by back rounded vowels (ɔ, o, u, ʊ).
     -- Broad C + front V → [w] is not productive; removed as it produced ~1000 false positives.
@@ -559,11 +525,9 @@ return {
       local vphon = next.phon
       if not vphon or vphon == "" then goto continue end
       if token.palatal ~= true then goto continue end
-
       -- Get first IPA character (strip length mark)
       local vfirst = ugsub(vphon, "ː", "")
       vfirst = usub(vfirst, 1, 1)
-
       -- Palatal C before back rounded vowel → j-glide
       -- NOT for a/ɑ (which commonly follow palatal C without glide)
       if vfirst and umatch(vfirst, "[oɔu]") then
@@ -574,10 +538,8 @@ return {
           token.phon = token.phon .. "j"
         end
       end
-
       ::continue::
     end
-
     -- Step 8b: Convert diphthong-final u to w before a following vowel.
     -- When bh/mh vocalization produces "?u" before another vowel
     -- (e.g. -abhair, -abhach), the u offglide should become w.
@@ -602,7 +564,6 @@ return {
       end
       ::uw_c::
     end
-
     -- Step 8c: Word-final bh/mh → uː in specific words.
     -- Hickey II.1.9.9.1: word-final bh/mh can vocalize to [uː] in Connacht.
     -- Two patterns, both using lexical tables:
@@ -628,7 +589,6 @@ return {
         local prev = tokens[i - 1]
         local t = tokens[i]
         if not t then goto bhf_skip end
-
         -- Pattern B: bh/mh token with silent epenthetic vowel before it
         if t.type == "cons" and (t.ortho == "bh" or t.ortho == "mh") then
           if prev and prev.type == "vowel" and prev.phon == "ə" and prev.is_epenthetic then
@@ -637,7 +597,6 @@ return {
             goto bhf_skip
           end
         end
-
         -- Pattern A: əu vowel followed by silenced bh/mh and word-boundary
         if t.type == "vowel" and t.phon == "əu" then
           local has_silent_bh = false
@@ -655,11 +614,9 @@ return {
             t.phon = "uː"
           end
         end
-
         ::bhf_skip::
       end
     end
-
     -- Step 8d: Word-final slender bh/mh → w in specific words.
     -- In Connacht, word-final slender bh/mh after the ío digraph (→ iː)
     -- weakens to [w], not [vʲ], in certain lexical items.
@@ -675,7 +632,6 @@ return {
         end
       end
     end
-
     -- Step 9: Function word overridess — replace ALL phonemes with hardcoded IPA.
     -- Must be the very last step so no further rules touch these tokens.
     -- Hickey II.3: grammatical words (proclitics, prepositions, particles)
@@ -704,7 +660,6 @@ return {
       table.insert(fw_segments, fw_current)
       table.insert(seg_ranges, { start = fw_current_start, stop = #tokens, boundary = nil })
     end
-
     for _, seg in ipairs(fw_segments) do
       if #seg == 0 then goto next_fw_seg end
       -- Build normalized ortho for lookup
@@ -713,7 +668,6 @@ return {
         if t.ortho then seg_ortho = seg_ortho .. t.ortho end
       end
       if seg_ortho == "" then goto next_fw_seg end
-
       -- Use simple lowercased lookup (normalize_ortho strips accents)
       local lookup_word = ustring.lower(seg_ortho)
       local fw_ipa = S.FUNCTION_WORDS_OVERRIDE[lookup_word]
@@ -735,7 +689,6 @@ return {
       end
       ::next_fw_seg::
     end
-
     -- Step 9b: Proclitic cliticization. Certain function words fuse with the
     -- following content word — the expected IPA has no space between them
     -- (e.g. "i gceart" -> əˈɟaɾˠt̪ˠ, "go dtí" -> ɡəˈdʲiː, "faoi deara" ->
@@ -782,7 +735,6 @@ return {
         end
       end
     end
-
         -- Skip stress reassignment for apostrophe-prefixed words (d'ith, b'fhearr).
     -- These are single lexical items where the first segment is a grammatical
     -- prefix (d', b', m'), not a separate word.
@@ -809,13 +761,12 @@ return {
 	  ["pocaire gaoithe"] = true, ["imeartas focal"] = true,
 	}
 	
-
       -- Collect content-word segments (those not overridden as function words).
       local content_segs = {}
       for _, seg in ipairs(fw_segments) do
         local seg_ortho = ""
         for _, t in ipairs(seg) do
-          if t.ortho then seg_ortho = seg_ortho .. t.ortho end
+          if t.ortho and not t.is_epenthetic then seg_ortho = seg_ortho .. t.ortho end
         end
         local lookup_word = ustring.lower(seg_ortho)
         local is_function_word = S.FUNCTION_WORDS_OVERRIDE[lookup_word] ~= nil
@@ -823,18 +774,16 @@ return {
           table.insert(content_segs, seg)
         end
       end
-
-	-- Build phrase ortho for stress override lookup
+	-- Build phrase ortho for stress override lookup (skip epenthetic tokens)
 	local phrase_ortho = ""
 	for ci, seg in ipairs(content_segs) do
 	  local seg_ortho = ""
 	  for _, t in ipairs(seg) do
-	    if t.ortho then seg_ortho = seg_ortho .. t.ortho end
+	    if t.ortho and not t.is_epenthetic then seg_ortho = seg_ortho .. t.ortho end
 	  end
 	  if ci > 1 then phrase_ortho = phrase_ortho .. " " end
 	  phrase_ortho = phrase_ortho .. ustring.lower(seg_ortho)
 	end
-
 	-- Skip stress reassignment for lexically-specified phrases (keep pass 02 default)
 	if not STRESS_OVERRIDE_FIRST_PRIMARY[phrase_ortho] then
       if #content_segs >= 2 then
@@ -874,11 +823,18 @@ return {
         end
         -- Lexical override: give secondary stress to monosyllabic first content
         -- words in specific multiword phrases (place names, compounds).
-        local phrase_lookup = ustring.lower(phrase_ortho)
+        -- Use strip_fadas so "dún" and "dun" both match the fada-free key.
+        local phrase_lookup = S.strip_fadas(ustring.lower(phrase_ortho))
         local MONO_SECONDARY = {
           ["loch garman"]=true, ["luan casca"]=true, ["dun dealgan"]=true,
           ["cal ceannann"]=true, ["lom laithreach"]=true,
           ["gach uile dhuine"]=true,
+          -- Place names and common phrases with monosyllabic first word
+          ["beal feirste"]=true, ["cloch blarnan"]=true, ["la fheile"]=true,
+          ["uibh fhaili"]=true, ["chuir dtaisce"]=true, ["cuir dtaisce"]=true,
+          ["cu faoil"]=true, ["fion dearg"]=true, ["fion geal"]=true,
+          ["la feile"]=true, ["mac leinn"]=true, ["mac tire"]=true,
+          ["teach pobail"]=true, ["teach osta"]=true, ["cal ceannann"]=true,
         }
         if MONO_SECONDARY[phrase_lookup] then
           local first_v = stressed_vowel[1]
@@ -912,7 +868,6 @@ return {
       end
       end
     end
-
     return tokens
   end,
 }

@@ -343,6 +343,16 @@ return {
         if w == "riaráiste" then token.phon = "iː" end
       end
 
+      -- timpeall: short i → iː (lexical override). Hickey: historical mp cluster
+      -- triggered compensatory lengthening in this specific word.
+      -- Benchmark: ˈtʲiːmʲpʲəl̪ˠ not ˈtʲɪmʲpʲəl̪ˠ. Connacht data confirms long vowel.
+      if ortho == "i" and token.phon == "ɪ" and context.word_ortho then
+        local w = context.word_ortho:lower()
+        if w == "timpeall" then
+          token.phon = "iː"
+        end
+      end
+
       -- thig, thit: lenited t raises short i to i in Connacht
       if ortho == "i" and token.phon == "ɪ" and context.word_ortho then
         local w = context.word_ortho:lower()
