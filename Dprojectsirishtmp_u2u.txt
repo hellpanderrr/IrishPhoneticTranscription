@@ -1,1 +1,0 @@
-b'U_TO_U = { ultach=true, guth=true, bun=true,\r\n          ["i mbun"]=true, mbun=true, pluc=true, ["bonn\xc3\xa1n"]=true,\r\n          thusa=true,\r\n          ["thug"]=true, ["sioc"]=true, ["triom\xc3\xba"]=true,\r\n    '

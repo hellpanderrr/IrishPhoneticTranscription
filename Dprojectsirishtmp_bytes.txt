@@ -1,5 +1,0 @@
-O_LONG_TO_U area: b'O_LONG_TO_U = { ["n\xc3\xb3s"]=true, ["gc\xc3\xb3na\xc3\xad"]=true, ["i gc\xc3\xb3na\xc3\xad"]=true, ["\xc3\xb3mrach"]=true }\r\n        i'
-A_TO_AE area: b'A_TO_AE = { deasc=true, ["seacl\xc3\xa1id"]=true, craiceann=true,\r\n          faithne=true, spaisteoireacht=true, mhaige=true,\r\n          craicne=true, ["maide briste"]=true, ["flaithi\xc3\xbalacht"]=true }\r\n     '
-EPS_TO_I area: b'EPS_TO_I = { deinir=true, deineann=true, deinid=true, dheineann=true,\r\n          ["goir\xc3\xadn"]=true, coirp=true, foireann=true, breilsce=true,\r\n          croinic=true, croinice=true, }\r\n        -- Addit'
-U_TO_OPEN_O area: b'U_TO_OPEN_O = { tuirseach=true, ["cura\xc3\xad"]=true, ucht=true, cultacha=true }\r\n        if U_TO_OPEN_O[w] then token.phon = "\\xc9\\x94" end  -- \xc9\x94\r\n      '
-I_TO_I_CLOSE area: b'I_TO_I_CLOSE = { insim=true, ["s\xc3\xadnid"]=true, ["gh\xc3\xa9araigh"]=true }\r\n        if I_TO_I_CLOSE[w] then token.phon = "i" end\r\n      end\r\n      -- Lexical quality overrides: \'\xc3\xa1i\' digraph \xe2\x86\x92 a\xcb\x90 in speci'
