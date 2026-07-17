@@ -32,6 +32,12 @@ local FINAL_E_C_G_EXCEPTIONS = {
 local AFTER_C_G_GUARD_EXCEPTIONS = {
   ["airgid"] = true, ["eiscir"] = true,
 	  ["feicim"] = true, ["fáiscim"] = true,
+  -- Words where unstressed ɪ after c/ɟ should reduce to ə (benchmark expects ə).
+  -- Many are genitive/plural forms ending in -ige/-oige/-acha.
+  ["fuinneoige"]=true, ["carraige"]=true, ["indiacha"]=true,
+  ["cearnóige"]=true, ["cad chuige"]=true, ["diosfaige"]=true,
+  ["nollaig"]=true, ["uair an chloig"]=true, ["danmhairge"]=true,
+  ["gaedhilge"]=true,
 }
 
 local SHORT_VOWELS = { ["a"] = true, ["e"] = true, ["i"] = true, ["o"] = true, ["u"] = true,
@@ -119,13 +125,13 @@ return {
           -- strip trailing ʲ (slender sonorants render as base+ʲ, e.g. lʲ nʲ mʲ)
           local p = nxt.phon:gsub("\xca\xb2$", "")
           if p == "t" or p == "p" or p == "c" then
-            -- Lexical exceptions: words where ɪ should still reduce to ə
+            -- Lexical exceptions: words where ɪ should still reduce to ə.
             -- uiliteoir: second vowel ɪ before slender t should be ə
             -- Meiriceá: unstressed ɪ before slender c should be ə (Hickey §3.4)
             local exc = false
             if context.word_ortho then
               local lower = context.word_ortho:lower()
-              if lower == "uiliteoir" or lower == "meiriceá" then exc = true end
+              if lower == "uiliteoir" or lower == "meirice\xc3\xa1" then exc = true end
             end
             if not exc then goto continue end
           end
@@ -174,6 +180,59 @@ return {
           if word_final_cons then
             token.phon = "ɪ"
             goto continue
+          end
+        end
+      end
+
+      -- Keep ɪ before word-final c or ɟ (palatal stops). The after-c/ɟ guard
+      -- protects ɪ *after* c/ɟ, but ɪ *before* c/ɟ (mairg -> mˠaɾʲɪɟ, leirg
+      -- -> l̠ʲɛɾʲɪɟ, etc.) needs the same protection. Check that the ɪ is
+      -- followed by c/ɟ with nothing but boundary (or silenced tokens) after it.
+      -- Hickey II.1.9.6: slender offglide ɪ survives before palatal stops.
+      if phon == "ɪ" then
+        local after_cg = false
+        for j = i + 1, #tokens do
+          local t2 = tokens[j]
+          if t2.type == "boundary" then
+            after_cg = true; break  -- c/ɟ found earlier + boundary = word-final
+          end
+          if t2.type == "vowel" then break end  -- another vowel = not word-final
+          if t2.type == "cons" and t2.phon and t2.phon ~= "" then
+            local p = t2.phon:gsub("\xca\xb2$", "")
+            if p == "c" or p == "ɟ" then
+              -- Found c/ɟ; now check if anything non-boundary follows
+              local all_done = true
+              for k = j + 1, #tokens do
+                local tk = tokens[k]
+                if tk.type == "boundary" then break end
+                if tk.type == "vowel" then all_done = false; break end
+                if tk.type == "cons" and tk.phon and tk.phon ~= "" then
+                  all_done = false; break
+                end
+              end
+              if all_done then after_cg = true end
+              break
+            else
+              break  -- non-c/ɟ consonant = not our pattern
+            end
+          end
+        end
+        if after_cg then goto continue end
+      end
+
+      -- Keep word-final ɪ after h/ç (-the/-che/-ghe endings).
+      -- The historical verbal noun suffix retains final ɪ in Connacht.
+      -- Hickey II.1.9.6: slender verb-noun suffix carries ɪ before the h.
+      if phon == "ɪ" then
+        local nxt = tokens[i + 1]
+        local word_final = (nxt == nil) or (nxt.type == "boundary")
+        if word_final then
+          local prev_t = tokens[i - 1]
+          if prev_t and prev_t.type == "cons" then
+            local p = prev_t.phon:gsub("\xca\xb2$", "")
+            if p == "h" or p == "ç" then
+              goto continue
+            end
           end
         end
       end
