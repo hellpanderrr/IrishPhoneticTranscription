@@ -134,8 +134,8 @@ local function dolgo_distance(s1, s2)
 end
 
 local exact, total, total_lev, total_norm_lev, total_dolgo, total_norm_dolgo = 0, 0, 0, 0, 0, 0
-local out_file = io.open("results.csv", "w")
-local err_file = io.open("errors.csv", "w")
+local out_file = io.open("data/results.csv", "w")
+local err_file = io.open("data/errors.csv", "w")
 if out_file then out_file:write("word\tgot\texpected\texact\tlev\tlev_norm\tdolgo\tdolgo_norm\n") end
 if err_file then err_file:write("word\tgot\texpected\tlev\tlev_norm\tdolgo\tdolgo_norm\n") end
 
