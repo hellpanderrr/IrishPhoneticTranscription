@@ -66,6 +66,53 @@ return {
       ["d'iarr"]=true,["d'fhuaigh"]=true,["b'fhearr"]=true,
     }
 
+    -- Monosyllabic content words that need primary stress (benchmark expected).
+    -- Many are 1-vowel content words (nouns, verbs) that pass 02 skips by
+    -- default because the blanket seg_vc <= 1 rule caused ~1400 regressions.
+    -- Hickey II.3: monosyllabic content words carry lexical stress on the only vowel.
+    local MONOSYLLABIC_STRESS = {
+      ["ailm"]=true,["airg"]=true,["aoibh"]=true,["aoir"]=true,
+      ["cealg"]=true,["ceilg"]=true,["chealg"]=true,["cholm"]=true,
+      ["chuan"]=true,["cheibh"]=true,["chid"]=true,["chir"]=true,
+      ["chung"]=true,["cian"]=true,["claiomh"]=true,["colg"]=true,
+      ["colm"]=true,["croiuil"]=true,["crua-ae"]=true,["cruan"]=true,
+      ["cuan"]=true,["cib"]=true,["cid"]=true,["cim"]=true,
+      ["daid"]=true,["dealbh"]=true,["dearg"]=true,["deilbh"]=true,
+      ["dein"]=true,["deis"]=true,["dhearg"]=true,["dhil"]=true,
+      ["did"]=true,["dil"]=true,["dtarbh"]=true,["duadh"]=true,
+      ["duais"]=true,["duas"]=true,["duan"]=true,["diog"]=true,
+      ["durt"]=true,["feac"]=true,["feilm"]=true,["feirg"]=true,
+      ["feirm"]=true,["fhian"]=true,["fhranc"]=true,["fhuail"]=true,
+      ["fhag"]=true,["fiach"]=true,["fian"]=true,["franc"]=true,
+      ["fuail"]=true,["faisc"]=true,["gairm"]=true,["garg"]=true,
+      ["gceibh"]=true,["gearb"]=true,["gearg"]=true,["ghoir"]=true,
+      ["gin"]=true,["glinn"]=true,["gorm"]=true,["gram"]=true,
+      ["grua"]=true,["grast"]=true,["griobh"]=true,["groig"]=true,
+      ["harm"]=true,["havais"]=true,["iur"]=true,["leamh"]=true,
+      ["leirg"]=true,["lig"]=true,["linbh"]=true,["lorg"]=true,
+      ["luain"]=true,["mairbh"]=true,["mairg"]=true,["marbh"]=true,
+      ["marg"]=true,["mbaint"]=true,["mbad"]=true,["mbios"]=true,
+      ["meadhg"]=true,["meirg"]=true,["meann"]=true,["mhairbh"]=true,
+      ["mharbh"]=true,["min"]=true,["mion"]=true,["morg"]=true,
+      ["muis"]=true,["naion"]=true,["ndisc"]=true,["neon"]=true,
+      ["ngram"]=true,["nuai"]=true,["nuaiocht"]=true,["nas"]=true,
+      ["nin"]=true,["panc"]=true,["pas"]=true,["pleidhc"]=true,
+      ["pai"]=true,["piob"]=true,["raon"]=true,["rian"]=true,
+      ["rud"]=true,["ruan"]=true,["ruog"]=true,["reir"]=true,
+      ["riog"]=true,["riuil"]=true,["roimh"]=true,["ron"]=true,
+      ["salm"]=true,["scar"]=true,["seal"]=true,["sealbh"]=true,
+      ["sealg"]=true,["searbh"]=true,["seilbh"]=true,["seilg"]=true,
+      ["seinm"]=true,["sheal"]=true,["shli"]=true,["siog"]=true,
+      ["slea"]=true,["slis"]=true,["sli"]=true,["smior"]=true,
+      ["smut"]=true,["smur"]=true,["stoc"]=true,["stoirm"]=true,
+      ["steic"]=true,["steig"]=true,["seu"]=true,["tairbh"]=true,
+      ["tairg"]=true,["tarbh"]=true,["tchim"]=true,["tchionn"]=true,
+      ["teilg"]=true,["thairg"]=true,["thraoith"]=true,["threabh"]=true,
+      ["thug"]=true,["toirbh"]=true,["tolg"]=true,["traoith"]=true,
+      ["treabh"]=true,["truig"]=true,["tsealg"]=true,["tseilbh"]=true,
+      ["tseilg"]=true,["tslis"]=true,["tur"]=true,["uaimh"]=true,
+    }
+
     -- Process each word segment independently.
     local seg_is_monosyllabic = false
     local seg_root_vowel_count = 0
@@ -104,6 +151,22 @@ return {
           end
         end
         if #segments == 1 then seg_is_monosyllabic = true end
+        -- Lexical override: some monosyllabic content words need primary stress
+        -- even though they have only one vowel (the skip-eifs loop aboves
+        -- doesn't set stress for single-segment words with seg_vc = 1).
+        -- Hickey II.3: lexical stress falls on the first syllable — for
+        -- monosyllabic content words this means the only vowel.
+        if #segments == 1 and seg_vc <= 1 then
+          local lookup = S.strip_fadas(ortho:lower())
+          if MONOSYLLABIC_STRESS[lookup] then
+            for _, t in ipairs(seg) do
+              if t.type == "vowel" then
+                t.stress = true
+                break
+              end
+            end
+          end
+        end
         goto next_seg
       end
 
