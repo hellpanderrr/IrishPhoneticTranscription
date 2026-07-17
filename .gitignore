@@ -11,6 +11,9 @@ repo/.graymatter/
 # Session logs
 .session_history.log
 
+# Claude personal local config
+CLAUDE.local.md
+
 # Superpowers
 .superpowers/
 docs/superpowers/
