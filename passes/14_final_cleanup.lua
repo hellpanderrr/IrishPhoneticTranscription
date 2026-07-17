@@ -869,37 +869,70 @@ return {
       end
     end
 
-    -- Step 11: Compound secondary stress.
-    -- Single-word compounds (aerostach, creidmheas) need secondary on the second
-    -- morpheme. Reverse compounds (ardri, Iarmhi) shift primary to last vowel.
+    -- Step 11: Compound secondary stress (general rules, not a full lexical table).
     -- Hickey II.3.3: compounds retain primary on the first element and develop
-    -- secondary on the second (most cases).
+    -- secondary on the second. Three productive patterns:
+    --   1. Hyphen in orthography: morpheme boundary, secondary on vowel after hyphen
+    --   2. Known prefix: secondary on first vowel after the prefix end
+    --   3. Reverse stress: primary shifts to last vowel (opaque lexical entries)
+    -- Only truly opaque 2-vowel compounds need lexical entries.
     if #fw_segments <= 1 then
       local word_lookup = S.strip_fadas(ustring.lower(context.word_ortho or ""))
       if word_lookup and word_lookup ~= "" then
-        local COMPOUND_SECONDARY = {}
-        do
-          local w2 = {"acastoir","achoimre","aerostach","ainrialai","aischuir","aonghuthach","aonmhac","ardchlar","ardfhear","ardghlorach","athfhas","atuirseach","bansar","bricfeasta","broc-chu","breagfholt","bunscoil","bunabhar","ceolchoirm","creidmheas","cruitchlar","crubchrois","do-ranna","donnrua","dordean","dronuilleog","dichiall","dicheilli","dithairbheach","dolamhach","fionnuar","feinchuis","feinphic","fionghort","fiormhaith","gairmeach","garinion","garmhac","geaglaidir","geaglaidre","leafaos","leathre","larthosai","meanscoil","mucar","mimhuinte","mormheanma","ollbhua","olldord","ollscoil","pasfhocal","rac-cheol","riomhleabhar","saorstat","seanbhan","seanbhean","seandaoine","seanfhear","seanmhna","snagcheol","sochreidte","sothuigthe","taoschno","tiuf-teaf","trathchlar","tseanbhean","teadchlar","ogfhear","ursceal","risteard",}
-          for _, w in ipairs(w2) do COMPOUND_SECONDARY[w] = 2 end
-          local w3 = {"chiribeas","cireabaiti","ciribeas","idirlion","ainmfhocal","caithirin","cinneadhtheoiric","clabhchorda","cocarail","dighalraigh","fiafheoil","geimhriuchan","griando","grianghraf","heileacaptar","iarnbhreac","idirghui","ollbhasun","pobalscoil",}
-          for _, w in ipairs(w3) do COMPOUND_SECONDARY[w] = 3 end
-          COMPOUND_SECONDARY["raeta-romainsis"] = 4
-        end
-        local COMPOUND_REVERSE_STRESS = {["deardaoin"]=true,["iarmhi"]=true,["hiarmhi"]=true,["ardri"]=true,["diosfaige"]=true,}
-        local sec_vowel_idx = COMPOUND_SECONDARY[word_lookup]
-        if sec_vowel_idx then
-          local vcount = 0
-          for _, t in ipairs(tokens) do
-            if t.type == "vowel" and not t.is_epenthetic then
-              vcount = vcount + 1
-              if vcount == sec_vowel_idx then
-                if not t.stress then t.secondary = true end
-                break
-              end
-            end
+        -- The known prefix set for compound stress. These are prefixes that
+        -- productively form compounds where the second element retains stress.
+        -- See KNOWN_PREFIXES in _shared.lua for the general prefix set used by
+        -- pass 02 for root-vowel counting.
+        local COMPOUND_PREFIXES = {
+          ard=true,ath=true,ban=true,bun=true,comh=true,dea=true,di=true,
+          do=true,droch=true,fein=true,fionn=true,fior=true,fo=true,
+          frith=true,gar=true,grian=true,idir=true,in=true,leas=true,
+          leath=true,mi=true,mor=true,oll=true,pobal=true,riomh=true,
+          saor=true,sean=true,snag=true,so=true,tead=true,trath=true,
+          tras=true,ur=true,ain=true,aon=true,
+        }
+        -- Opaque 2-vowel compounds with no productive prefix (lexical).
+        local COMPOUND_LEXICAL = {
+          ["aischuir"]=true,["breagfholt"]=true,["ceolchoirm"]=true,
+          ["creidmheas"]=true,["cruitchlar"]=true,["feinchuis"]=true,
+          ["feinphic"]=true,["fionghort"]=true,["fiormhaith"]=true,
+          ["gairmeach"]=true,["leafaos"]=true,["mucar"]=true,
+          ["ogfhear"]=true,["taoschno"]=true,["teadchlar"]=true,
+          ["trathchlar"]=true,["ursceal"]=true,["risteard"]=true,
+        }
+        local COMPOUND_REVERSE = {
+          ["deardaoin"]=true,["iarmhi"]=true,["hiarmhi"]=true,
+          ["ardri"]=true,["diosfaige"]=true,
+        }
+
+        -- Determine if this word has a known prefix, and where it ends
+        local prefix_end = nil
+        for pf, _ in pairs(COMPOUND_PREFIXES) do
+          if word_lookup:sub(1, #pf) == pf and #word_lookup > #pf + 1 then
+            prefix_end = #pf + 1  -- character index where the root starts
+            break
           end
         end
-        if COMPOUND_REVERSE_STRESS[word_lookup] then
+        -- Find hyphen position in the raw orthography
+        local hyphen_pos = nil
+        if context.word_ortho then
+          hyphen_pos = context.word_ortho:find("-")
+        end
+
+        if hyphen_pos then
+          -- Rule 1: hyphen marks morpheme boundary
+          -- Count tokens, find the first vowel token at or after hyphen_pos
+          local past_hyphen = false
+          for _, t in ipairs(tokens) do
+            if t.ortho == "-" then
+              past_hyphen = true
+            elseif past_hyphen and t.type == "vowel" then
+              if not t.stress then t.secondary = true end
+              break
+            end
+          end
+        elseif COMPOUND_REVERSE[word_lookup] then
+          -- Rule 2: reverse-stress compounds
           local vowels = {}
           for _, t in ipairs(tokens) do
             if t.type == "vowel" and not t.is_epenthetic then
@@ -913,6 +946,38 @@ return {
             end
             if not vowels[#vowels].stress then
               vowels[#vowels].stress = true
+            end
+          end
+        elseif COMPOUND_LEXICAL[word_lookup] then
+          -- Rule 3: opaque lexical compounds — secondary on vowel 2
+          local vcount = 0
+          for _, t in ipairs(tokens) do
+            if t.type == "vowel" and not t.is_epenthetic then
+              vcount = vcount + 1
+              if vcount == 2 then
+                if not t.stress then t.secondary = true end
+                break
+              end
+            end
+          end
+        elseif prefix_end then
+          -- Rule 4: known prefix — secondary on first vowel at or after the prefix end
+          -- Map token index to orthographic position.
+          -- The approach: find the first vowel that falls at or after prefix_end
+          -- in the orthographic string (estimated from token ortho lengths).
+          local char_pos = 0
+          local past_prefix = false
+          for _, t in ipairs(tokens) do
+            if t.ortho then
+              local old_pos = char_pos
+              char_pos = char_pos + #t.ortho
+              if not past_prefix and char_pos >= prefix_end then
+                past_prefix = true
+              end
+            end
+            if past_prefix and t.type == "vowel" and not t.is_epenthetic then
+              if not t.stress then t.secondary = true end
+              break
             end
           end
         end
