@@ -1,0 +1,2 @@
+FIX2 area: b']=true, ["flaithi\xc3\xbalacht"]=true }\r\n        if A_TO_AE[w] then token.ph'
+FIX6 area: b'U_TO_U = { ultach=true, guth=true, bun=true,\r\n          ["i mbun"]=true, mbun=true, pluc=true, ["bonn\xc3\xa1n"]=true,\r\n      '
