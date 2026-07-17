@@ -868,6 +868,57 @@ return {
       end
       end
     end
+
+    -- Step 11: Compound secondary stress.
+    -- Single-word compounds (aerostach, creidmheas) need secondary on the second
+    -- morpheme. Reverse compounds (ardri, Iarmhi) shift primary to last vowel.
+    -- Hickey II.3.3: compounds retain primary on the first element and develop
+    -- secondary on the second (most cases).
+    if #fw_segments <= 1 then
+      local word_lookup = S.strip_fadas(ustring.lower(context.word_ortho or ""))
+      if word_lookup and word_lookup ~= "" then
+        local COMPOUND_SECONDARY = {}
+        do
+          local w2 = {"acastoir","achoimre","aerostach","ainrialai","aischuir","aonghuthach","aonmhac","ardchlar","ardfhear","ardghlorach","athfhas","atuirseach","bansar","bricfeasta","broc-chu","breagfholt","bunscoil","bunabhar","ceolchoirm","creidmheas","cruitchlar","crubchrois","do-ranna","donnrua","dordean","dronuilleog","dichiall","dicheilli","dithairbheach","dolamhach","fionnuar","feinchuis","feinphic","fionghort","fiormhaith","gairmeach","garinion","garmhac","geaglaidir","geaglaidre","leafaos","leathre","larthosai","meanscoil","mucar","mimhuinte","mormheanma","ollbhua","olldord","ollscoil","pasfhocal","rac-cheol","riomhleabhar","saorstat","seanbhan","seanbhean","seandaoine","seanfhear","seanmhna","snagcheol","sochreidte","sothuigthe","taoschno","tiuf-teaf","trathchlar","tseanbhean","teadchlar","ogfhear","ursceal","risteard",}
+          for _, w in ipairs(w2) do COMPOUND_SECONDARY[w] = 2 end
+          local w3 = {"chiribeas","cireabaiti","ciribeas","idirlion","ainmfhocal","caithirin","cinneadhtheoiric","clabhchorda","cocarail","dighalraigh","fiafheoil","geimhriuchan","griando","grianghraf","heileacaptar","iarnbhreac","idirghui","ollbhasun","pobalscoil",}
+          for _, w in ipairs(w3) do COMPOUND_SECONDARY[w] = 3 end
+          COMPOUND_SECONDARY["raeta-romainsis"] = 4
+        end
+        local COMPOUND_REVERSE_STRESS = {["deardaoin"]=true,["iarmhi"]=true,["hiarmhi"]=true,["ardri"]=true,["diosfaige"]=true,}
+        local sec_vowel_idx = COMPOUND_SECONDARY[word_lookup]
+        if sec_vowel_idx then
+          local vcount = 0
+          for _, t in ipairs(tokens) do
+            if t.type == "vowel" and not t.is_epenthetic then
+              vcount = vcount + 1
+              if vcount == sec_vowel_idx then
+                if not t.stress then t.secondary = true end
+                break
+              end
+            end
+          end
+        end
+        if COMPOUND_REVERSE_STRESS[word_lookup] then
+          local vowels = {}
+          for _, t in ipairs(tokens) do
+            if t.type == "vowel" and not t.is_epenthetic then
+              table.insert(vowels, t)
+            end
+          end
+          if #vowels >= 2 then
+            if vowels[1].stress then
+              vowels[1].stress = false
+              vowels[1].secondary = true
+            end
+            if not vowels[#vowels].stress then
+              vowels[#vowels].stress = true
+            end
+          end
+        end
+      end
+    end
+
     return tokens
   end,
 }
