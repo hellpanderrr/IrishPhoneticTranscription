@@ -88,7 +88,9 @@ The engine correctly models a significant and growing portion of Connacht Irish 
 > Lev normalization: `(1 − lev / max_segment_length) × 100`<br>
 > Dolgo normalization: `(1 − dolgo_edit_distance) × 100`
 >
-> See per-word results in [results.csv](results.csv) — columns: `word`, `got`, `expected`, `exact`, `lev`, `lev_norm`, `dolgo`, `dolgo_norm`.
+> See per-word results in [data/results.csv](data/results.csv) — columns: `word`, `got`, `expected`, `exact`, `lev`, `lev_norm`, `dolgo`, `dolgo_norm`.
+
+Error mismatches are in [data/errors.csv](data/errors.csv) — same columns without `exact`.
 
 ### Remote
 
