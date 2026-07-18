@@ -21,6 +21,21 @@ return {
       end
     end
 
+    if context.dialect == "ulster" then
+      -- Ulster -íocht is [iaxt̪ˠ], not Connacht [iəxt̪ˠ] (barraíocht,
+      -- coisíocht — benchmark Ulster rows use a full [a]).
+      local w = (context.word_ortho or ""):lower()
+      if w:match("[íi]ocht$") or w:match("[íi]ochta$") or w:match("íochtaí$") then
+        for i, t in ipairs(tokens) do
+          local nxt = tokens[i + 1]
+          if t.type == "vowel" and t.phon == "iə" and nxt and
+             nxt.type == "cons" and nxt.ortho == "ch" then
+            t.phon = "ia"
+          end
+        end
+      end
+    end
+
     if context.dialect == "munster" then
       -- Munster sonorant notation normalization (moved here from the end of
       -- pass 13 so pass-14-created sonorants are covered too): broad l/n are
