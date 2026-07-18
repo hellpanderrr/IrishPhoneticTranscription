@@ -108,6 +108,50 @@ local function render_output(tokens)
           break
         end
       end
+      -- Word-medial stress: the onset can only be a phonotactically legal
+      -- cluster (Hickey II.1.10: obstruent(+liquid), s+stop(+liquid)).
+      -- A preceding coda consonant must stay with the previous syllable:
+      -- portach → pˠəɾˠ.ˈt̪ˠax (rt is coda|onset, not an onset cluster).
+      if onset_start < i then
+        local has_prev_vowel = false
+        for j = onset_start - 1, 1, -1 do
+          local t = tokens[j]
+          if t.type == "vowel" then has_prev_vowel = true; break end
+          if t.type == "boundary" and t.ortho ~= "'" then break end
+        end
+        if has_prev_vowel then
+          local cons = {}
+          for j = onset_start, i - 1 do
+            local t = tokens[j]
+            if t.type == "cons" and t.phon and t.phon ~= "" then
+              table.insert(cons, j)
+            end
+          end
+          local function is_liquid(t) local o = t.ortho or ""; return o == "r" or o == "l" end
+          local function is_stop_or_f(t)
+            local o = (t.ortho or ""):sub(1, 1)
+            return o == "p" or o == "t" or o == "c" or o == "b" or o == "d"
+                or o == "g" or o == "f" or o == "m"
+          end
+          if #cons >= 2 then
+            local a, b = tokens[cons[#cons - 1]], tokens[cons[#cons]]
+            local legal_pair = (is_stop_or_f(a) and is_liquid(b)) or
+                               ((a.ortho == "s") and is_stop_or_f(b))
+            if legal_pair then
+              onset_start = cons[#cons - 1]
+              -- s + stop + liquid: extend to 3 if legal
+              if #cons >= 3 then
+                local s0 = tokens[cons[#cons - 2]]
+                if s0.ortho == "s" and is_stop_or_f(a) and is_liquid(b) then
+                  onset_start = cons[#cons - 2]
+                end
+              end
+            else
+              onset_start = cons[#cons]
+            end
+          end
+        end
+      end
       if onset_start < i then
         if tokens[i].stress then
           tokens[i].stress = false

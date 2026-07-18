@@ -185,6 +185,56 @@ return {
       local stress_index = S.vowel_token_index(seg)
       if not stress_index then goto next_seg end
 
+      -- Munster stress attraction (Hickey II.3, FG Ch.5):
+      --   1. Long vowel/diphthong in σ2 attracts stress (cailín [kaˈlʲiːnʲ]);
+      --      when σ1 and σ2 are both long, stress still falls on σ2
+      --      (crúibín [kɾˠuːˈbʲiːnʲ], ordú [oːɾˠˈd̪ˠuː] — Ó Sé/benchmark).
+      --   2. σ1..σ2 short + long σ3 → stress σ3 (ceannasaí [canˠəˈsˠiː]).
+      --   3. Short σ1 + -(e)ach(t) in σ2 attracts stress unless the σ2 onset
+      --      is a sonorant r/l/n/h (portach [pəɾˠˈt̪ˠɑx] vs ocrach [ˈɔkɾˠəx]).
+      if context.dialect == "munster" and seg_vc >= 2 then
+        local nuclei = {}
+        for i, t in ipairs(seg) do
+          if t.type == "vowel" then table.insert(nuclei, i) end
+        end
+        local LONG_DIGRAPHS = { ao=true, aoi=true, ae=true, eo=true, eoi=true,
+                                ia=true, iai=true, ua=true, uai=true }
+        local function is_long(k)
+          local t = seg[nuclei[k]]
+          if not t then return false end
+          local ol = (t.ortho or ""):lower()
+          -- any fada vowel marks length; otherwise known long digraphs
+          if S.strip_fadas(ol) ~= ol then return true end
+          return LONG_DIGRAPHS[ol] or false
+        end
+        local target = nil
+        if #nuclei >= 2 and is_long(2) then
+          target = 2
+        elseif #nuclei >= 3 and not is_long(1) and not is_long(2) and is_long(3) then
+          target = 3
+        elseif #nuclei >= 2 and not is_long(1) then
+          local ol = ortho:lower()
+          if seg_vc == 2 and (ol:match("acht?$") or ol:match("eacht?$")) then
+            local onset = seg[nuclei[2] - 1]
+            local oc = (onset and onset.type == "cons") and onset.ortho:lower() or ""
+            if oc ~= "r" and oc ~= "l" and oc ~= "n" and oc ~= "h" and oc ~= "" then
+              target = 2
+            end
+          end
+        end
+        -- Verbal inflection endings resist attraction (Ó Sé): synthetic
+        -- person/autonomous suffixes keep root-initial stress even with a
+        -- long vowel (freastalaím [ˈfʲɾʲasˠt̪ˠəlˠiːmʲ], d'fhágfaí, gabhaidís).
+        if target then
+          local ol2 = ortho:lower()
+          if ol2:match("ím$") or ol2:match("faí$") or ol2:match("fí$") or
+             ol2:match("idís$") or ol2:match("imís$") then
+            target = nil
+          end
+        end
+        if target then stress_index = nuclei[target] end
+      end
+
       -- Stress stays on the vowel. render_output moves the stress mark to the
       -- onset consonant for IPA rendering. Shifting to consonant here
       -- causes incorrect vowel reduction (unstressed vowels get reduced to ə).
