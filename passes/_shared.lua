@@ -86,7 +86,9 @@ _shared.DIALECTS = {
     ulster   = {
         ao = "iː", ai = "ai", ea = "a", eo = "ɔː", ["ío"] = "iː",
         oi = "ɔi", ui = "ʊi", ua = "uə", ia = "iə", ["éi"] = "eː",
-        short = { a = "a", o = "ɔ", u = "ʊ", i = "ɪ", e = "ɛ" },
+        -- Hickey I.2.3: Ulster short o/u merge into unrounded [ʌ]
+        -- (bod [bˠʌd̪ˠ], cur [kʌɾˠ])
+        short = { a = "a", o = "ʌ", u = "ʌ", i = "ɪ", e = "ɛ" },
         long  = { a = "ɑː", o = "oː", u = "uː", i = "iː", e = "eː" },
         diphthong = {},
         r_lowering_trigger = true,

@@ -504,7 +504,9 @@ return {
         mall=true, mhall=true, ngeall=true, gheall=true, breall=true,
         ["i ngeall ar"]=true, ["mar gheall ar go"]=true,
       }
-      if context.is_monosyllabic then
+      -- Ulster keeps the short vowel before historical geminates
+      -- (Hickey II.1.8.6: am [amˠ], ceann [can̪ˠ], donn [d̪ˠʌn̪ˠ])
+      if context.is_monosyllabic and context.dialect ~= "ulster" then
         local pv = tokens[i - 1]
         if pv and pv.type == "vowel" then
           local ortho = pv.ortho

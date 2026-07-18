@@ -274,6 +274,63 @@ return {
       ::continue::
     end
 
+    -- =======================================================================
+    -- Ulster vowel adjustments (Hickey II.3, I.2.3: Northern dialect)
+    -- =======================================================================
+    if context.dialect == "ulster" then
+      -- (1) Post-tonic long-vowel shortening — the signature Ulster feature:
+      -- long vowels in non-initial syllables shorten (scadán [ˈsˠkad̪ˠənˠ],
+      -- maoilín [ˈmˠiːlʲinʲ], dochtúir, Sabóid, seachrán).
+      local ULSTER_SHORTEN = {
+        ["iː"] = "i", ["uː"] = "u", ["oː"] = "ɔ", ["ɔː"] = "ɔ",
+        ["ɑː"] = "a", ["aː"] = "a",
+      }
+      local seen_vowel = false
+      for _, t in ipairs(tokens) do
+        if t.type == "boundary" then seen_vowel = false end
+        if t.type == "vowel" then
+          if seen_vowel and not t.stress and t.phon and ULSTER_SHORTEN[t.phon] then
+            t.phon = ULSTER_SHORTEN[t.phon]
+          end
+          seen_vowel = true
+        end
+      end
+
+      -- (2) Word-final unstressed suffix realizations:
+      --   -adh → [u]  (ghearradh, rugadh, canadh)
+      --   -igh/-aigh → [i]  (bealaigh, ceannaigh)
+      --   -ach keeps [a] (benchmark Ulster: -ach = a/ah/ax), no schwa
+      local wl = (context.word_ortho or ""):lower()
+      local last_v = nil
+      for j = #tokens, 1, -1 do
+        if tokens[j].type == "vowel" and tokens[j].phon and tokens[j].phon ~= "" then
+          last_v = tokens[j]; break
+        end
+        if tokens[j].type == "boundary" then break end
+      end
+      if last_v and not last_v.stress then
+        if wl:match("adh$") and (last_v.phon == "ə" or last_v.phon == "u") then
+          last_v.phon = "u"
+        elseif wl:match("igh$") and (last_v.phon == "ə" or last_v.phon == "ɪ") then
+          last_v.phon = "i"
+        elseif (wl:match("ach$") or wl:match("each$")) and last_v.phon == "ə" then
+          last_v.phon = "a"
+        end
+      end
+
+      -- (3) Final verbal -im is broad [mˠ] in Ulster (éistim [ˈeːʃtʲəmˠ])
+      if wl:match("im$") and context.vowel_count and context.vowel_count > 1 then
+        for j = #tokens, 1, -1 do
+          local t = tokens[j]
+          if t.type == "cons" and t.phon and t.phon ~= "" then
+            if t.ortho == "m" then t.phon = "mˠ"; t.palatal = false end
+            break
+          end
+          if t.type == "vowel" or t.type == "boundary" then break end
+        end
+      end
+    end
+
     return tokens
   end,
 }
