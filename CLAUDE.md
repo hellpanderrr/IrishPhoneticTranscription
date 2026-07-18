@@ -8,9 +8,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Irish G2P (grapheme-to-phoneme) engine — modular 16-pass token-array pipeline. Transcribes Irish orthography to IPA for Connacht dialect. About 6600 words in the benchmark dictionary, each with expected IPA variants.
 
 ## Key Commands
-- **Benchmark**: `F:/soft/lua/lua.exe bench_run.lua "label"`
-- **Lua**: `F:/soft/lua/lua.exe` (not on PATH)
-- **Test a word**: `F:/soft/lua/lua.exe -e "local e=require('irish_engine_new'); print(e.transcribe('word','connacht'))"`
+- **Benchmark**: `D:/soft/lua/lua.exe bench_run.lua "label" [dialect]` — dialect: connacht (default) | munster | ulster
+- **Lua**: `D:/soft/lua/lua.exe` (not on PATH; formerly on the unmounted F: drive)
+- **Test a word**: `D:/soft/lua/lua.exe -e "local e=require('irish_engine_new'); print(e.transcribe('word','connacht'))"`
+- **Regenerate dialect benchmarks**: `python tools/make_dialect_benchmarks.py` (from `data/all_regions.csv`; writes `_benchmark_munster.lua`, `_benchmark_ulster.lua`. `_benchmark.lua` stays the curated Connacht dictionary)
 
 ## Architecture
 
@@ -65,7 +66,9 @@ Every phonological rule in the 16 passes cites its source in comments:
 - PDFs in `theory/` on disk (not git-tracked); text extracts `.txt` files are tracked
 
 ## Benchmark Target
-- Current: ~73.42% exact match (4844/6598) Connacht
+- Current: ~75.14% exact match (4958/6598) Connacht
+- Baselines (untuned, Connacht-centric engine): Munster 47.80% (3784/7917), Ulster 40.96% (3476/8487)
+- `data/all_regions.csv` is the dialect-tagged source (17,281 rows, 9,719 words; tags like Munster/Ulster/Connacht/Aran/Cois-Fharraige; untagged rows are treated as pan-dialectal and included in every dialect's benchmark)
 - Norm Lev: ~94.06, Norm Dolgo: ~95.44
 - Lev-1 single-substitution error buckets via `errors.csv`
 
@@ -109,6 +112,7 @@ Every phonological rule in the 16 passes cites its source in comments:
 ### Git / Shell
 - **`nul` file in git status** — Windows shell leaks a file named `nul` when redirecting to `/dev/null`. `rm -f nul` before `git add` avoids "short read while indexing" errors.
 - **`-íocht` suffix** tokenizes two ways: `ío+ch+t` (ríocht) or `aí+o+ch+t` (draíocht). Both must be handled.
+- **Lua keyword bare identifiers** — Never use Lua reserved words (`do`, `in`, `so`, `end`, `for`, `if`, etc.) as bare table keys. Always bracket-quote: `["do"]=true` not `do=true`. This caused a 120-point regression when the COMPOUND_PREFIXES table turned out to be dead code for months (the entire Rule 4 section never compiled due to `do`/`in`/`so` as bare identifiers). Fixing it without removing the bad table causes mass regressions from 2-char prefix false matches.
 
 ## Phonological Error Buckets
 
