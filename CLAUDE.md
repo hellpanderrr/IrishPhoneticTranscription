@@ -67,7 +67,9 @@ Every phonological rule in the 16 passes cites its source in comments:
 
 ## Benchmark Target
 - Current: ~75.14% exact match (4958/6598) Connacht
-- Baselines (untuned, Connacht-centric engine): Munster 47.80% (3784/7917), Ulster 40.96% (3476/8487)
+- Munster (tagged-only benchmark, 4102 words): 37.52% after first rule batch (untuned Connacht-engine baseline was 23.06%)
+- Ulster (tagged-only benchmark, 4785 words): 16.43% — untuned baseline, next dialect phase
+- Dialect benchmarks score only words with ≥1 dialect-tagged row; untagged rows are accepted as alternate variants but untagged-only words are excluded (mixed transcription conventions)
 - `data/all_regions.csv` is the dialect-tagged source (17,281 rows, 9,719 words; tags like Munster/Ulster/Connacht/Aran/Cois-Fharraige; untagged rows are treated as pan-dialectal and included in every dialect's benchmark)
 - Norm Lev: ~94.06, Norm Dolgo: ~95.44
 - Lev-1 single-substitution error buckets via `errors.csv`
