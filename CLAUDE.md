@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 # Irish G2P Engine
 
 ## Project
-Irish G2P (grapheme-to-phoneme) engine — modular 16-pass token-array pipeline. Transcribes Irish orthography to IPA for Connacht dialect. About 6600 words in the benchmark dictionary, each with expected IPA variants.
+Irish G2P (grapheme-to-phoneme) engine — modular 17-pass token-array pipeline. Transcribes Irish orthography to IPA for Connacht dialect. About 6600 words in the benchmark dictionary, each with expected IPA variants.
 
 ## Key Commands
 - **Benchmark**: `D:/soft/lua/lua.exe bench_run.lua "label" [dialect]` — dialect: connacht (default) | munster | ulster
@@ -15,7 +15,7 @@ Irish G2P (grapheme-to-phoneme) engine — modular 16-pass token-array pipeline.
 
 ## Architecture
 
-### Pipeline (16 passes in order)
+### Pipeline (17 passes in order)
 Defined in `passes/init.lua`. Each pass receives the token array + context, modifies tokens, and returns them.
 
 1. **01_polarity** — broad/slender polarity from flanking vowels. Simplifies initial clusters (cn→cr, gn→gr, mn→mr, tn→tr). Sets word-initial r→broad, sonorant polarity from following consonant.
@@ -34,6 +34,7 @@ Defined in `passes/init.lua`. Each pass receives the token array + context, modi
 14. **12_epenthesis** — inserts [ə] between heterorganic sonorant+obstruent clusters (Hickey §2.8 svarabhakti). Condition: preceding vowel short + stressed. Excludes homorganic clusters (rd, rn, rl, nd, ld, nn, ll, rr).
 15. **13_sonorants** — 4-way l/n diacritic system: broad+/C→l̪ˠ/n̪ˠ, broad+otherwise→lˠ/nˠ, slender+/C→l̠ʲ/n̠ʲ, slender+otherwise→lʲ/nʲ. Geminate handling (ll→l̪ˠ/l̠ʲ, nn→n̪ˠ/n̠ʲ, rr→ɾˠ, mm→mˠ). Vowel lengthening before geminates in monosyllables. Lengthening before heavy sonorant clusters (rd, rl, rn).
 16. **14_final_cleanup** — final silent fricatives, trailing ç/ɣ/h deletion, unstressed final devoicing (ɟ→c), lexical ɪ→i overrides, dh+cons→i vocalization, j-glide insertions, u→w before vowels, bh/mh→uː lexical overrides, function word IPA overrides (60+ entries), multi-word phrase cliticization and stress reassignment, sandhi affrication (ch+s→tʃ), regressive devoicing before th, **-íocht suffix override** (Connacht: iːçtʲ→iəxt̪ˠ). The largest and most complex pass.
+17. **15_dialect_finalize** — LAST pass: per-dialect surface normalizations that must not be bypassable by later passes regenerating their input (Ulster ɑː→aː, Munster sonorant notation flatten). New dialect-wide surface normalizations belong here, not mid-pipeline.
 
 ### Token Model
 - `irish_engine_new.lua` — `tokenize_word()` splits orthography into tokens with `{ortho, phon, type, palatal, stress, is_mutated, mutation, source, is_epenthetic, ortho_indices, ...}`
@@ -68,7 +69,7 @@ Every phonological rule in the 16 passes cites its source in comments:
 ## Benchmark Target
 - Current: ~75.16% exact match (4959/6598) Connacht
 - Munster (tagged-only benchmark, 4102 words): 40.49% (1661) after two rule batches (untuned Connacht-engine baseline was 23.06%)
-- Ulster (tagged-only benchmark, 4785 words): 35.53% (1700) after two vowel batches (untuned baseline was 16.43%)
+- Ulster (tagged-only benchmark, 4785 words): 36.51% (1747) after two vowel batches + pass-15 finalization (untuned baseline was 16.43%)
 - Dialect benchmarks score only words with ≥1 dialect-tagged row; untagged rows are accepted as alternate variants but untagged-only words are excluded (mixed transcription conventions)
 - `data/all_regions.csv` is the dialect-tagged source (17,281 rows, 9,719 words; tags like Munster/Ulster/Connacht/Aran/Cois-Fharraige; untagged rows are treated as pan-dialectal and included in every dialect's benchmark)
 - Norm Lev: ~94.06, Norm Dolgo: ~95.44
@@ -112,6 +113,14 @@ Every phonological rule in the 16 passes cites its source in comments:
 - **IGH_RESTORE condition must catch ɪ as well as ə** — many `-igh` words end as `ɪ` after vowel gradation (pass 10), not `ə` from reduction (pass 11). Checking only `phon == "ə"` silently skips them.
 - **Suffix fada keys must use normalized form** — FUNCTION_WORDS_OVERRIDE lookup uses `ustring.lower(seg_ortho)` which preserves multi-byte fada chars. Key `["-igí"]` matches; `["-igi"]` (strip_fadas) would silently fail.
 
+### Dialect work (learned 2026-07-18)
+- **The benchmark source is multi-transcriber and internally inconsistent.** Tagged rows disagree with each other on sonorant diacritics (l̪ˠ vs lˠ in identical contexts), aː vs æː (Ulster), u vs uː for -adh, h/x/∅ for final ch — *per word, not per rule*. When an error bucket has a sizeable mirror bucket (X→Y and Y→X both ≥ ~15), it's transcriber noise: a rule can only trade one bucket for the other. Check for the mirror bucket BEFORE writing the rule.
+- **Empirical flatten beats textbook description.** Hickey says Munster has a clean 2-way sonorant system; the benchmark data doesn't. When theory and majority-data disagree, benchmark against both variants and keep the winner — record the loser as a tried-and-reverted note.
+- **Tried and reverted (don't re-attempt without new evidence):** Munster final -e→ɪ (-90), Munster eá→aː in pass 14 (-5, note comment left at site), Ulster word-final broad ch→h (fixed 41, broke 166), Munster retracted-slender-only-in-geminates (worse than full flatten).
+- **Dialect rules are pass-order sensitive**: a pass-11 vowel conversion can be bypassed by pass 13 *creating* new instances afterwards (Ulster ɑː→aː misses ard-cluster lengthening output). When a gated rule underperforms, check whether a later pass regenerates the input pattern.
+- **ExactSkeleton−ExactNoStress delta measures convention noise** per dialect (Connacht ~3.7pp, Munster ~5.3pp). Use it to decide rule-vs-noise before chasing a bucket.
+- **Untagged all_regions.csv rows are excluded from dialect scoring** (mixed conventions) but kept as accepted alternate variants for tagged words — policy lives in tools/make_dialect_benchmarks.py.
+
 ### Git / Shell
 - **`nul` file in git status** — Windows shell leaks a file named `nul` when redirecting to `/dev/null`. `rm -f nul` before `git add` avoids "short read while indexing" errors.
 - **`-íocht` suffix** tokenizes two ways: `ío+ch+t` (ríocht) or `aí+o+ch+t` (draíocht). Both must be handled.
@@ -122,6 +131,11 @@ Every phonological rule in the 16 passes cites its source in comments:
 **How this section works:** Whenever the agent identifies a persistent, high-volume error pattern through benchmark error analysis (Levenshtein distance 1 bucketing), it **appends** an entry here before committing. Move entries to "Resolved" once the fix is committed. This is the working queue of phonological patterns to fix.
 
 ### Active
+
+- **[Connacht multiword phrases]** — 215 errors (13%); lexicalized contractions (tá a fhios ag→t̪ˠɑːsˠ eɟ). Extend FUNCTION_WORDS_OVERRIDE with top ~50 phrases from errors.csv.
+- **[Connacht sl- slender l̠ʲ]** — slis/slios/slige family (~23): s+slender-l onset should give retracted l̠ʲ (slender counterpart of the existing preceded_by_s broad rule in pass 13).
+- **[Connacht w→vˠ after long vowel]** — snámh, fhómhair (~23): broad mh coda after long vowel keeps friction. Conflicts with FINAL_BH_V_TO_W table — needs careful condition.
+- **[Ulster -f(a)idh→i]** — verbal future endings, majority want short i (~38 mixed with iː).
 
 <!-- Use this format when adding new entries:
 - **[pattern_name]** — Brief description. e.g. "Vowel X before heavy sonorant clusters"
@@ -140,6 +154,9 @@ Every phonological rule in the 16 passes cites its source in comments:
 - **[dental n medial]** — ~35 Lev-1 errors where medial broad n before vowel should be n̪ˠ not nˠ (déanaí, gcónaí, Seán, etc.). All blanket-rule attempts caused regressions. The Phase 1a rule strips dental from n before vowels unconditionally; a targeted fix requires per-word or per-vowel-context logic.
 
 ### Resolved
+
+- **[Ulster ɑː leak via pass 13]** — fixed by new pass 15 dialect_finalize (2026-07-18): Ulster ɑː→aː re-runs after passes 13/14. Part of +47 Ulster.
+- **[Ulster liquid-ɔ syllable condition]** — fixed in pass 11: ɔ only before coda liquids; intervocalic liquids/geminates take ʌ. Part of +47 Ulster.
 
 <!-- Move fixed entries here with the commit hash -->
 
