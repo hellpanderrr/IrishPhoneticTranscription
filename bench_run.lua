@@ -136,6 +136,85 @@ local function dolgo_distance(s1, s2)
   return (v1[n] or 0) / maxlen
 end
 
+-- ---------------------------------------------------------------------------
+-- Additional metrics: stress-insensitive exact, skeleton (diacritic-
+-- insensitive) exact, and per-class phone error rates (PER).
+-- ---------------------------------------------------------------------------
+
+-- Strip primary/secondary stress marks (ˈ U+02C8, ˌ U+02CC)
+local function strip_stress(s)
+  return (s:gsub("\xcb\x88", ""):gsub("\xcb\x8c", ""))
+end
+
+-- Skeleton: additionally strip secondary-articulation diacritics
+-- ˠ U+02E0, ʲ U+02B2, dental ̪ U+032A, retracted ̠ U+0320 — leaves the
+-- bare phone skeleton, isolating transcription-convention differences.
+local function skeleton(s)
+  s = strip_stress(s)
+  return (s:gsub("\xcb\xa0", ""):gsub("\xca\xb2", "")
+           :gsub("\xcc\xaa", ""):gsub("\xcc\xa0", ""))
+end
+
+-- Split an IPA string into phone tokens: base char + attached marks
+-- (length ː, polarity/dental/retracted diacritics). Stress marks and
+-- spaces are dropped (measured separately).
+local PHONE_MARKS = {
+  ["ː"] = true, ["\xcb\xa0"] = true, ["\xca\xb2"] = true,
+  ["\xcc\xaa"] = true, ["\xcc\xa0"] = true,
+}
+local VOWEL_BASE = {
+  a=true, e=true, i=true, o=true, u=true,
+  ["ɑ"]=true, ["æ"]=true, ["ɛ"]=true, ["ɪ"]=true, ["ɔ"]=true,
+  ["ʊ"]=true, ["ə"]=true, ["ʌ"]=true, ["ɤ"]=true, ["ɯ"]=true,
+}
+local function phone_tokens(s)
+  s = strip_stress(s)
+  local toks = {}
+  local n = ulen(s)
+  for k = 1, n do
+    local ch = usub(s, k, k)
+    if ch == " " or ch == "." then
+      -- skip separators
+    elseif PHONE_MARKS[ch] and #toks > 0 then
+      toks[#toks] = toks[#toks] .. ch
+    else
+      table.insert(toks, ch)
+    end
+  end
+  return toks
+end
+
+local function token_lev(t1, t2)
+  local m, n = #t1, #t2
+  if m == 0 then return n end
+  if n == 0 then return m end
+  local v0, v1 = {}, {}
+  for j = 0, n do v0[j] = j end
+  for i2 = 1, m do
+    v1[0] = i2
+    for j = 1, n do
+      local c = (t1[i2] == t2[j]) and 0 or 1
+      v1[j] = math.min(v1[j - 1] + 1, v0[j] + 1, v0[j - 1] + c)
+    end
+    for j = 0, n do v0[j] = v1[j] end
+  end
+  return v1[n]
+end
+
+local function class_tokens(toks, want_vowel)
+  local out = {}
+  for _, t in ipairs(toks) do
+    local base = usub(t, 1, 1)
+    if (VOWEL_BASE[base] or false) == want_vowel then table.insert(out, t) end
+  end
+  return out
+end
+
+local exact_nostress, exact_skel = 0, 0
+local per_edits, per_len = 0, 0
+local vper_edits, vper_len = 0, 0
+local cper_edits, cper_len = 0, 0
+
 local exact, total, total_lev, total_norm_lev, total_dolgo, total_norm_dolgo = 0, 0, 0, 0, 0, 0
 local suffix = (dialect == "connacht") and "" or ("_" .. dialect)
 local out_file = io.open("data/results" .. suffix .. ".csv", "w")
@@ -175,6 +254,29 @@ for word, entry in pairs(bench) do
   total_dolgo = total_dolgo + best_dolgo
   total_norm_dolgo = total_norm_dolgo + best_norm_dolgo
   if got == best_exp then exact = exact + 1 end
+
+  -- Stress-insensitive / skeleton exact match (any variant)
+  local ns_hit, sk_hit = false, false
+  local got_ns, got_sk = strip_stress(got), skeleton(got)
+  for _, ev in ipairs(variants) do
+    if got_ns == strip_stress(ev) then ns_hit = true end
+    if got_sk == skeleton(ev) then sk_hit = true end
+  end
+  if ns_hit then exact_nostress = exact_nostress + 1 end
+  if sk_hit then exact_skel = exact_skel + 1 end
+
+  -- Per-class PER against the best variant (corpus-aggregated)
+  if best_exp and best_exp ~= "" then
+    local gt, et = phone_tokens(got), phone_tokens(best_exp)
+    per_edits = per_edits + token_lev(gt, et)
+    per_len = per_len + #et
+    local gv, ev2 = class_tokens(gt, true), class_tokens(et, true)
+    vper_edits = vper_edits + token_lev(gv, ev2)
+    vper_len = vper_len + #ev2
+    local gc, ec = class_tokens(gt, false), class_tokens(et, false)
+    cper_edits = cper_edits + token_lev(gc, ec)
+    cper_len = cper_len + #ec
+  end
   if out_file then
     out_file:write(word .. "\t" .. got .. "\t" .. best_exp .. "\t" ..
       tostring(got == best_exp) .. "\t" .. best_lev .. "\t" .. string.format("%.2f", best_norm_lev) .. "\t" .. string.format("%.4f", best_dolgo) .. "\t" .. string.format("%.2f", best_norm_dolgo) .. "\n")
@@ -195,3 +297,10 @@ local avg_norm_dolgo = total_norm_dolgo / total
 if label ~= "" then io.write(label .. ": ") end
 io.write(string.format("Exact: %d/%d (%.2f%%)  Avg Lev: %.2f  Norm Lev: %.2f  Norm Dolgo: %.2f\n",
   exact, total, pct, avg_lev, avg_norm_lev, avg_norm_dolgo))
+io.write(string.format(
+  "  ExactNoStress: %d (%.2f%%)  ExactSkeleton: %d (%.2f%%)  PER: %.2f%%  V-PER: %.2f%%  C-PER: %.2f%%\n",
+  exact_nostress, exact_nostress / total * 100,
+  exact_skel, exact_skel / total * 100,
+  per_len > 0 and per_edits / per_len * 100 or 0,
+  vper_len > 0 and vper_edits / vper_len * 100 or 0,
+  cper_len > 0 and cper_edits / cper_len * 100 or 0))
