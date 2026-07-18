@@ -96,16 +96,27 @@ return {
       -- Only a/ɑ/ɪ in the FIRST syllable resist pretonic reduction
       -- (cailín [kɑˈlʲiːnʲ], bruitíneach [bˠɾˠɪˈtʲiːnʲəx]); non-initial
       -- pretonic vowels and ɔ/ʊ/ɛ reduce (portach [pˠəɾˠˈt̪ˠax], buachalán).
-      if context.dialect == "munster" and
-         (phon == "a" or phon == "ɑ" or phon == "ɪ") then
-        local is_first_vowel = true
-        for j = i - 1, 1, -1 do
-          if tokens[j].type == "vowel" then is_first_vowel = false; break end
+      if context.dialect == "munster" then
+        local pretonic = false
+        for j = i + 1, #tokens do
           if tokens[j].type == "boundary" then break end
+          if tokens[j].type == "vowel" and tokens[j].stress then pretonic = true; break end
         end
-        if is_first_vowel then
-          for j = i + 1, #tokens do
-            if tokens[j].type == "vowel" and tokens[j].stress then goto continue end
+        if pretonic then
+          if phon == "a" or phon == "ɑ" or phon == "ɪ" then
+            local is_first_vowel = true
+            for j = i - 1, 1, -1 do
+              if tokens[j].type == "vowel" then is_first_vowel = false; break end
+              if tokens[j].type == "boundary" then break end
+            end
+            if is_first_vowel then goto continue end
+          end
+          -- Other pretonic short vowels reduce even in 2-vowel words —
+          -- attracted stress leaves a reduced pretonic syllable
+          -- (cosán [kəˈsˠɑːn̪ˠ], portach [pˠəɾˠˈt̪ˠax]).
+          if SHORT_VOWELS[phon] then
+            token.phon = "ə"
+            goto continue
           end
         end
       end
@@ -262,6 +273,7 @@ return {
       end
       ::continue::
     end
+
     return tokens
   end,
 }
