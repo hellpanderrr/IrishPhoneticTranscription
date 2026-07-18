@@ -88,6 +88,7 @@ Every phonological rule in the 16 passes cites its source in comments:
 - **Never use bare UTF-8 in table key brackets**: `["péint"]=true` causes Lua parse error. Write table keys without fadas and strip before lookup.
 - Add theory citations (Hickey section, FG chapter) to every new phonological rule
 - Run benchmark after every change to check for regressions — this engine is sensitive to pass ordering
+- **Every commit message must report the full metric set for all three dialects** (Exact, NoStress, Skeleton, Norm Lev, Norm Dolgo, PER V/C) — run `bench_run.lua` for connacht, munster, and ulster before committing
 
 ## Self-Updating Gotchas
 
