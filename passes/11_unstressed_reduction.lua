@@ -310,7 +310,17 @@ return {
         if t.type == "vowel" and t.ortho == "o" then
           local n1, n2 = tokens[i2 + 1], tokens[i2 + 2]
           local c1 = n1 and n1.type == "cons" and n1.ortho or nil
-          if (t.phon == "ʌ") and (c1 == "l" or c1 == "r") then
+          -- ɔ only before CODA liquids: liquid must be followed by a
+          -- consonant or word end (lorg, bolg, corr); intervocalic liquids
+          -- take plain ʌ (molann, colún, torann).
+          local liquid_coda = (c1 == "l" or c1 == "r") and
+            (n2 == nil or n2.type == "boundary" or n2.type == "cons")
+          -- intervocalic geminate ll/rr (olla, stollaire) is not a coda
+          if liquid_coda and n2 and n2.type == "cons" and n2.ortho == c1 then
+            local n3 = tokens[i2 + 3]
+            if n3 and n3.type == "vowel" then liquid_coda = false end
+          end
+          if (t.phon == "ʌ") and liquid_coda then
             t.phon = "ɔ"
           elseif c1 == "n" and n2 and n2.type == "cons" and n2.ortho == "n" and
                  (t.phon == "ʊ" or t.phon == "ɔ" or t.phon == "u" or t.phon == "uː") then

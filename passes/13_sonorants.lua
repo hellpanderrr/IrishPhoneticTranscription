@@ -661,23 +661,8 @@ return {
       end
     end
 
-    -- Munster slender sonorants (Hickey II.1.8, benchmark Munster rows):
-    -- single slender l/n are plain palatal [lʲ/nʲ] — the retracted series
-    -- survives only in geminates/rn clusters (linne [n̠ʲ] vs binne single
-    -- [nʲ]). Broad lenis/dental contrast patterns as in the West.
-    if context.dialect == "munster" then
-      local MUNSTER_SONORANTS = {
-        ["l\xcb\xa0"] = "l\xcc\xaa\xcb\xa0",           -- lˠ → l̪ˠ
-        ["n\xcb\xa0"] = "n\xcc\xaa\xcb\xa0",           -- nˠ → n̪ˠ
-        ["l\xcc\xa0\xca\xb2"] = "l\xca\xb2",           -- l̠ʲ → lʲ
-        ["n\xcc\xa0\xca\xb2"] = "n\xca\xb2",           -- n̠ʲ → nʲ
-      }
-      for _, t in ipairs(tokens) do
-        if t.type == "cons" and t.phon and MUNSTER_SONORANTS[t.phon] then
-          t.phon = MUNSTER_SONORANTS[t.phon]
-        end
-      end
-    end
+    -- (Munster sonorant notation normalization moved to pass 15
+    -- dialect_finalize so pass-14-created sonorants are covered.)
 
     return tokens
   end,
