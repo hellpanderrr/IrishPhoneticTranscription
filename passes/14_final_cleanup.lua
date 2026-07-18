@@ -424,6 +424,8 @@ return {
           if E_PLUS_AA_TO_A[w] then
             nxt.phon = "aː"
           else
+            -- NOTE: a Munster eá→aː fronting was tried here (2026-07-18) and
+            -- reverted: -5 exact (the Munster rows split aː/ɑː per word).
             nxt.phon = "ɑː"
           end
         -- "u"+"í" or "u"+"ío": uí → iː, silent u.
