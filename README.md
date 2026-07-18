@@ -2,7 +2,7 @@
 
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/hellpanderrr/IrishPhoneticTranscription)
 
-A rule-based, standalone **grapheme-to-phoneme (G2P) engine for Irish**, implemented in Lua. Converts standard Irish orthography to IPA phonetic representation, targeting the **Connacht dialect**. Academic/experimental tool based on Raymond Hickey's *The Sound Structure of Modern Irish* (2014) and Ó Raghallaigh's *Fuaimeanna na Gaeilge*.
+A rule-based, standalone **grapheme-to-phoneme (G2P) engine for Irish**, implemented in Lua. Converts standard Irish orthography to IPA phonetic representation for all three major dialects — **Connacht** (primary target), **Munster**, and **Ulster**. Academic/experimental tool based on Raymond Hickey's *The Sound Structure of Modern Irish* (2014) and Ó Raghallaigh's *Fuaimeanna na Gaeilge*.
 
 ## Architecture
 
@@ -64,33 +64,41 @@ Modular **16-pass token-array pipeline**. The engine tokenizes orthographic inpu
 ### Transcribe a word
 ```sh
 lua -e "local e=require('irish_engine_new'); print(e.transcribe('seomra','connacht'))"
+# dialect: 'connacht' | 'munster' | 'ulster'
 ```
 
 ### Run benchmark
 ```sh
-lua bench_run.lua "label"
+lua bench_run.lua "label" [dialect]     # dialect defaults to connacht
+python tools/make_dialect_benchmarks.py # regenerate Munster/Ulster dictionaries
 ```
 
 ## Current Status
 
-The engine correctly models a significant and growing portion of Connacht Irish phonology. The benchmark dictionary contains 6,598 words with expected IPA variants from Wiktionary.
+The engine models a large and growing portion of Irish phonology across the three dialects. Connacht is the primary, most-tuned target; Munster and Ulster support was added via dialect-gated rules (Munster stress attraction, pretonic reduction, bh/mh friction retention, geminate diphthongization; Ulster post-tonic long-vowel shortening, o/u→ʌ merger, á-fronting, ó-lowering, suffix vowel realizations).
+
+Benchmark dictionaries are built from dialect-tagged Wiktionary IPA (`data/all_regions.csv`, 17,281 rows / 9,719 words). Only words with at least one dialect-tagged transcription are scored per dialect; untagged rows are accepted as alternate variants.
 
 ### Benchmark Results
 
-| Metric | Score |
-|--------|-------|
-| Exact match | **4880/6598 (73.96%)** |
-| Avg Levenshtein | 0.57 |
-| Norm Lev (0–100) | **94.19** |
-| Norm Dolgo (0–100) | **95.55** |
+| Metric | Connacht (6,598 words) | Munster (4,102) | Ulster (4,785) |
+|--------|------------------------|-----------------|----------------|
+| Exact match | **4963 (75.22%)** | **1661 (40.49%)** | **1700 (35.53%)** |
+| Exact, stress-insensitive | 78.27% | 44.25% | 36.49% |
+| Exact, diacritic skeleton | 81.98% | 49.51% | 38.75% |
+| Norm Levenshtein (0–100) | **94.47** | 85.35 | 84.51 |
+| Norm Dolgopolsky (0–100) | **95.39** | 84.75 | 84.42 |
+| Phone Error Rate (PER) | **7.52%** | 19.71% | 23.61% |
+| — vowel PER / consonant PER | 10.14 / 5.96 | 31.14 / 12.14 | 41.08 / 15.00 |
 
 > Normalized scores are 0–100 where 100 = perfect match.<br>
 > Lev normalization: `(1 − lev / max_segment_length) × 100`<br>
-> Dolgo normalization: `(1 − dolgo_edit_distance) × 100`
+> Dolgo normalization: `(1 − dolgo_edit_distance) × 100`<br>
+> PER: corpus-aggregated phone-token edit distance / expected phone count.
 >
-> See per-word results in [data/results.csv](data/results.csv) — columns: `word`, `got`, `expected`, `exact`, `lev`, `lev_norm`, `dolgo`, `dolgo_norm`.
-
-Error mismatches are in [data/errors.csv](data/errors.csv) — same columns without `exact`.
+> Per-word results: [data/results.csv](data/results.csv) (Connacht), `data/results_munster.csv`, `data/results_ulster.csv`; mismatches in the corresponding `errors*.csv`.
+>
+> Note: the reference transcriptions come from multiple transcribers and are internally inconsistent on some conventions (sonorant diacritics, `a/ɑ` backing, stress marking on monosyllables). The stress-insensitive and skeleton rows quantify that ceiling — for Munster, ~9pp of the gap is diacritic-convention noise alone.
 
 ### Remote
 
@@ -98,7 +106,7 @@ Error mismatches are in [data/errors.csv](data/errors.csv) — same columns with
 git remote add origin https://github.com/hellpanderrr/IrishPhoneticTranscription
 ```
 
-### Error Breakdown (1,718 mismatches)
+### Error Breakdown (Connacht; snapshot from the 73.96% run — categories still representative)
 
 #### Broad/Slender Quality (24.5% of errors)
 
@@ -143,7 +151,7 @@ The vowel pass (10) and unstressed reduction pass (11) handle most cases but fai
 
 #### Other Known Issues
 
-1. **Dialectal focus**: Connacht only. Does not accurately model Munster stress or Ulster vowel qualities.
+1. **Dialect depth**: Connacht is the most complete. Munster/Ulster rule sets cover the major systematic differences (stress, vowel quality/quantity, bh-mh, sonorants) but lack the lexical-exception layers Connacht has accumulated.
 2. **Stress**: Default initial-stress with limited lexical exceptions. Fails on loanwords (`ospidéal`, `tobac`) and derivational suffixes (`-án`, `-óir`).
 3. **Compound prosody**: No systematic secondary stress for compounds (veidhlín → ˌvʲəiˈlʲiːnʲ, not ˈvʲəilʲiːnʲ). Multi-word phrase stress (pass 14 Step 10) handles ~20 lexicalized phrases but doesn't generalize.
 4. **Lenited sh/th**: Inconsistent /h/ vs /ç/ realization depending on following vowel.
@@ -156,7 +164,7 @@ The vowel pass (10) and unstressed reduction pass (11) handle most cases but fai
 
 ### Progress
 
-The engine has improved from **60.5%** → **74.0%** exact match through a series of targeted phonological fixes. Typical methodology: analyze benchmark `errors.csv`, bucket by error type (Levenshtein-1 substitution patterns), fix the highest-volume pattern in the relevant pass, verify no regressions, repeat.
+Connacht has improved from **60.5%** → **75.2%** exact match through targeted phonological fixes. Munster went 23.1% → 40.5% and Ulster 16.4% → 35.5% in the initial dialect-expansion rounds. Typical methodology: analyze the dialect's `errors*.csv`, bucket by error type (Levenshtein-1 substitution patterns), fix the highest-volume pattern in the relevant pass with a theory-cited rule, verify no cross-dialect regressions, repeat.
 
 ### Encoding Notes
 - Lua 5.4 strings are raw bytes. Unicode IPA characters use UTF-8 byte sequences.
