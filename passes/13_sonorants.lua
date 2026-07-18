@@ -630,6 +630,35 @@ return {
       ::next_len::
     end
 
+    -- Munster ɪ-lengthening before heavy nasal/lateral clusters (Hickey
+    -- II.1.9: high front vowels lengthen before tense sonorants in the South
+    -- even outside monosyllables): suim [sˠiːmʲ], tinte [tʲiːnʲtʲə],
+    -- inse [ˈiːnʲʃə], fillfidh.
+    if context.dialect == "munster" then
+      for i, t in ipairs(tokens) do
+        if t.type == "vowel" and t.phon == "ɪ" then
+          -- collect following consonant orthos up to next vowel/boundary
+          local seq = {}
+          local j = i + 1
+          while tokens[j] and tokens[j].type == "cons" and #seq < 3 do
+            table.insert(seq, tokens[j].ortho or "")
+            j = j + 1
+          end
+          local after = tokens[j]  -- vowel, boundary, or nil
+          local word_final = (after == nil) or (after.type == "boundary")
+          if #seq == 1 and seq[1] == "m" and word_final then
+            t.phon = "iː"
+          elseif #seq >= 2 and seq[1] == "n" and (seq[2] == "t" or seq[2] == "s") then
+            t.phon = "iː"
+          elseif #seq >= 3 and seq[1] == "n" and seq[2] == "n" and seq[3] == "s" then
+            t.phon = "iː"
+          elseif #seq >= 3 and seq[1] == "l" and seq[2] == "l" then
+            t.phon = "iː"
+          end
+        end
+      end
+    end
+
     -- Munster slender sonorants (Hickey II.1.8, benchmark Munster rows):
     -- single slender l/n are plain palatal [lʲ/nʲ] — the retracted series
     -- survives only in geminates/rn clusters (linne [n̠ʲ] vs binne single
