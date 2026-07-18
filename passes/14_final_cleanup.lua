@@ -879,18 +879,6 @@ return {
     if #fw_segments <= 1 then
       local word_lookup = S.strip_fadas(ustring.lower(context.word_ortho or ""))
       if word_lookup and word_lookup ~= "" then
-        -- The known prefix set for compound stress. These are prefixes that
-        -- productively form compounds where the second element retains stress.
-        -- See KNOWN_PREFIXES in _shared.lua for the general prefix set used by
-        -- pass 02 for root-vowel counting.
-        local COMPOUND_PREFIXES = {
-          ard=true,ath=true,ban=true,bun=true,comh=true,dea=true,di=true,
-          do=true,droch=true,fein=true,fionn=true,fior=true,fo=true,
-          frith=true,gar=true,grian=true,idir=true,in=true,leas=true,
-          leath=true,mi=true,mor=true,oll=true,pobal=true,riomh=true,
-          saor=true,sean=true,snag=true,so=true,tead=true,trath=true,
-          tras=true,ur=true,ain=true,aon=true,
-        }
         -- Opaque 2-vowel compounds with no productive prefix (lexical).
         local COMPOUND_LEXICAL = {
           ["aischuir"]=true,["breagfholt"]=true,["ceolchoirm"]=true,
@@ -905,14 +893,6 @@ return {
           ["ardri"]=true,["diosfaige"]=true,
         }
 
-        -- Determine if this word has a known prefix, and where it ends
-        local prefix_end = nil
-        for pf, _ in pairs(COMPOUND_PREFIXES) do
-          if word_lookup:sub(1, #pf) == pf and #word_lookup > #pf + 1 then
-            prefix_end = #pf + 1  -- character index where the root starts
-            break
-          end
-        end
         -- Find hyphen position in the raw orthography
         local hyphen_pos = nil
         if context.word_ortho then
@@ -958,26 +938,6 @@ return {
                 if not t.stress then t.secondary = true end
                 break
               end
-            end
-          end
-        elseif prefix_end then
-          -- Rule 4: known prefix — secondary on first vowel at or after the prefix end
-          -- Map token index to orthographic position.
-          -- The approach: find the first vowel that falls at or after prefix_end
-          -- in the orthographic string (estimated from token ortho lengths).
-          local char_pos = 0
-          local past_prefix = false
-          for _, t in ipairs(tokens) do
-            if t.ortho then
-              local old_pos = char_pos
-              char_pos = char_pos + #t.ortho
-              if not past_prefix and char_pos >= prefix_end then
-                past_prefix = true
-              end
-            end
-            if past_prefix and t.type == "vowel" and not t.is_epenthetic then
-              if not t.stress then t.secondary = true end
-              break
             end
           end
         end

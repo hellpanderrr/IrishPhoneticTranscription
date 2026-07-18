@@ -108,7 +108,7 @@ return {
         -- IO→ʊ before c/k: sioc, pioc, phioc, prioc, phrioc, riocht, liom
         -- IO→u before n: cion
         local IO_TO_U = { sioc=true, pioc=true, phioc=true, prioc=true, phrioc=true, riocht=true, liom=true, cion=true,
-            triomú=true }
+            ["triomú"]=true }
         -- IO→ɪ for most others: fios, lios, giob, etc.
         local IO_TO_I = {
           fios=true, lios=true, giob=true, ghiob=true,
@@ -311,7 +311,7 @@ return {
       if ortho == "u" and token.phon == "ʊ" and context.word_ortho then
         local w = context.word_ortho:lower()
         local U_TO_OPEN_O = { tuirseach=true, ["curaí"]=true, ucht=true, cultacha=true,
-          long=true, luch=true, luchóg=true, purgóid=true, urchóid=true,
+          long=true, luch=true, ["luchóg"]=true, ["purgóid"]=true, ["urchóid"]=true,
           conamar=true, confach=true, lonta=true, donnrua=true }
         if U_TO_OPEN_O[w] then token.phon = "\xc9\x94" end  -- ɔ
       end
@@ -587,7 +587,7 @@ return {
           trach=true,
           -- Additional a->a backing for stressed a before r-type consonants
           ["b'fhearr"]=true, bfhearr=true, lasrach=true, scafa=true,
-          sacán=true, Parthalán=true, }
+          ["sacán"]=true, ["Parthalán"]=true, }
         if A_TO_AA[w] then token.phon = "ɑ" end
       end
 
