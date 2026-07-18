@@ -618,6 +618,18 @@ return {
         end
       end
 
+      -- Munster: long á fronts to [aː] after a palatal onset (eá spellings:
+      -- ceárta [ˈcaːɾˠt̪ˠə], milseán, Seáinín). FG Ch.5: CD /ɑː/ vs fronted
+      -- realization in palatal contexts.
+      if context.dialect == "munster" and token.phon == "ɑː" then
+        local prv = tokens[i - 1]
+        if prv and ((prv.type == "cons" and prv.palatal == true) or
+                    -- eá spellings tokenize as glide e + á
+                    (prv.type == "vowel" and (prv.ortho == "e" or prv.ortho == "i"))) then
+          token.phon = "aː"
+        end
+      end
+
       -- Lexical quality overrides: long á → aː in specific words
       -- Connacht long á default is [ɑː] (broad). These words need front [aː] instead.
       if ortho == "á" and token.phon == "ɑː" and context.word_ortho then

@@ -174,25 +174,10 @@ local function render_output(tokens)
           goto render_continue
         end
       if token.stress and token.type == "cons" then
-        -- IPA convention: ˈCV not CˈV — stress mark goes before entire onset.
-        -- Check if an earlier consonant is also part of this onset cluster.
-        local onset_start = i
-        for j = i - 1, 1, -1 do
-          local t = tokens[j]
-          if t.type == "cons" and t.phon and t.phon ~= "" then
-            onset_start = j
-          elseif t.type == "boundary" then
-            break
-          elseif t.phon == nil or t.phon == "" then
-            -- skip
-          else
-            break
-          end
-        end
-        -- Only emit stress mark on the true onset start
-        if onset_start == i then
-          table.insert(parts, S.STRESS_MARK)
-        end
+        -- IPA convention: ˈCV not CˈV. The pre-process above already moved
+        -- stress to the correct (phonotactically legal) onset start, so the
+        -- mark is emitted exactly where the stress token sits.
+        table.insert(parts, S.STRESS_MARK)
       elseif token.stress then
         table.insert(parts, S.STRESS_MARK)
       elseif token.secondary and token.type == "cons" then
