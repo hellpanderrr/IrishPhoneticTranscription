@@ -274,6 +274,30 @@ return {
       ::continue::
     end
 
+    -- Connacht: final -adh is [uː]/[u] in past-autonomous verb forms and a
+    -- set of nouns (rinneadh [ˈɾˠɪnʲuː], boladh [ˈbˠɔlˠu]), but [ə] in verbal
+    -- nouns (bualadh). Grammatically conditioned — FG Ch.7 schwa rule
+    -- explicitly excludes past forms — so lexically listed.
+    if context.dialect == "connacht" then
+      local ADH_FINAL = {
+        ["rinneadh"] = "uː", ["dearnadh"] = "uː", ["cailleadh"] = "uː",
+        ["bunadh"] = "uː", ["baladh"] = "uː", ["troscadh"] = "uː",
+        ["geimhreadh"] = "uː",
+        ["boladh"] = "u", ["d'oileadh"] = "u", ["n-oileadh"] = "u",
+        ["oilfeadh"] = "u", ["d'oilfeadh"] = "u", ["n-oilfeadh"] = "u",
+      }
+      local wl = (context.word_ortho or ""):lower()
+      if ADH_FINAL[wl] then
+        for j = #tokens, 1, -1 do
+          local t = tokens[j]
+          if t.type == "vowel" and t.phon and t.phon ~= "" then
+            t.phon = ADH_FINAL[wl]
+            break
+          end
+        end
+      end
+    end
+
     -- =======================================================================
     -- Ulster vowel adjustments (Hickey II.3, I.2.3: Northern dialect)
     -- =======================================================================
