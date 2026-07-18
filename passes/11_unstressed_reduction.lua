@@ -278,6 +278,29 @@ return {
     -- Ulster vowel adjustments (Hickey II.3, I.2.3: Northern dialect)
     -- =======================================================================
     if context.dialect == "ulster" then
+      -- (0) Short-o exceptions to the ʌ-merger (Hickey I.2.3):
+      -- ɔ preserved before liquids (lorg [l̪ˠɔɾˠəɡ], bolg, corr);
+      -- before geminate nn the vowel is plain [ʌ] (tonn, fonn, donn) —
+      -- no Connacht-style nasal raising.
+      for i2, t in ipairs(tokens) do
+        if t.type == "vowel" and t.ortho == "o" then
+          local n1, n2 = tokens[i2 + 1], tokens[i2 + 2]
+          local c1 = n1 and n1.type == "cons" and n1.ortho or nil
+          if (t.phon == "ʌ") and (c1 == "l" or c1 == "r") then
+            t.phon = "ɔ"
+          elseif c1 == "n" and n2 and n2.type == "cons" and n2.ortho == "n" and
+                 (t.phon == "ʊ" or t.phon == "ɔ" or t.phon == "u" or t.phon == "uː") then
+            t.phon = "ʌ"
+          end
+        end
+      end
+
+      -- (0b) Ulster á is front [aː] in all spellings, including ái digraphs
+      -- (gáire, Máire, cáithnín) — Hickey I.2.3 northern fronting.
+      for _, t in ipairs(tokens) do
+        if t.type == "vowel" and t.phon == "ɑː" then t.phon = "aː" end
+      end
+
       -- (1) Post-tonic long-vowel shortening — the signature Ulster feature:
       -- long vowels in non-initial syllables shorten (scadán [ˈsˠkad̪ˠənˠ],
       -- maoilín [ˈmˠiːlʲinʲ], dochtúir, Sabóid, seachrán).
@@ -309,7 +332,10 @@ return {
         if tokens[j].type == "boundary" then break end
       end
       if last_v and not last_v.stress then
-        if wl:match("adh$") and (last_v.phon == "ə" or last_v.phon == "u") then
+        if wl:match("eadh$") and (last_v.phon == "ə" or last_v.phon == "u") then
+          -- slender -eadh → [uː] (séideadh, briseadh)
+          last_v.phon = "uː"
+        elseif wl:match("adh$") and (last_v.phon == "ə" or last_v.phon == "u") then
           last_v.phon = "u"
         elseif wl:match("igh$") and (last_v.phon == "ə" or last_v.phon == "ɪ") then
           last_v.phon = "i"

@@ -89,7 +89,9 @@ _shared.DIALECTS = {
         -- Hickey I.2.3: Ulster short o/u merge into unrounded [ʌ]
         -- (bod [bˠʌd̪ˠ], cur [kʌɾˠ])
         short = { a = "a", o = "ʌ", u = "ʌ", i = "ɪ", e = "ɛ" },
-        long  = { a = "ɑː", o = "oː", u = "uː", i = "iː", e = "eː" },
+        -- Hickey I.2.3: Ulster á fronts ([aː]/[æː]; aː is the majority
+        -- benchmark realization) and ó lowers to [ɔː] (bróg [bˠɾˠɔːɡ])
+        long  = { a = "aː", o = "ɔː", u = "uː", i = "iː", e = "eː" },
         diphthong = {},
         r_lowering_trigger = true,
         anticipatory_raising = false,
