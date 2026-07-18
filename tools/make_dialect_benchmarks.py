@@ -47,9 +47,13 @@ def main():
                     has_tagged = True
                 elif not tags:
                     variants.append(ipa)
-            if variants:
-                if has_tagged:
-                    n_tagged += 1
+            # Only words with at least one dialect-tagged transcription are
+            # scored: untagged-only words carry mixed/Connacht-convention IPA
+            # (lenis lˠ/nˠ, retracted n̠ʲ) that punishes correct dialect rules.
+            # Untagged rows still count as accepted alternate variants for
+            # words that ARE tagged.
+            if variants and has_tagged:
+                n_tagged += 1
                 # de-dup, preserve order; join with comma (harness splits on ,)
                 seen, uniq = set(), []
                 for v in variants:

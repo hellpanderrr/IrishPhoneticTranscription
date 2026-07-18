@@ -10,6 +10,10 @@ return {
   writes_context = false,
 
   run = function(tokens, context)
+    -- Hickey II.1.7.2 / Ch.I 2.3: broad bh/mh weakening to [w] is a
+    -- Connacht/Ulster feature; Munster retains labiodental friction [vˠ]
+    -- (bhog: N/W [wʌɡ] vs S [vʌɡ]).
+    local WEAK_BH = (context.dialect == "munster") and "vˠ" or "w"
     for i, token in ipairs(tokens) do
       if token.type ~= "cons" then goto continue end
       -- Skip tokens already silenced or vocalized by earlier passes
@@ -40,10 +44,10 @@ return {
                  vowel_after.ortho == "a" then
                 token.phon = "vˠ"
               else
-                token.phon = "w"
+                token.phon = WEAK_BH
               end
             else
-              token.phon = "w"
+              token.phon = WEAK_BH
             end
           else
             -- Hickey II.1.7.2: non-initial broad mh/bh retained as [v] before
@@ -60,7 +64,7 @@ return {
                and not W_BEFORE_C[word_ortho] then
               token.phon = "vˠ"  -- before consonant = coda (retained)
             else
-              token.phon = "w"    -- before vowel or word-final -> weakened
+              token.phon = WEAK_BH    -- before vowel or word-final -> weakened
             end
           end
         else
@@ -163,7 +167,7 @@ return {
             elseif not nxt then
               token.phon = "vˠ"  -- word-final = coda
             else
-              token.phon = "w"    -- before vowel = onset -> weakened
+              token.phon = WEAK_BH    -- before vowel = onset -> weakened
             end
       -- Hickey II.1.7.2: s does NOT palatalize before labials (sméar→[sˠmʲeːɾˠ], not *[ʃmʲeːɾˠ])
       elseif token.ortho == "s" then

@@ -591,6 +591,33 @@ return {
         if A_TO_AA[w] then token.phon = "ɑ" end
       end
 
+      -- Munster short-a backing (FG Ch.5 §5.2.2 pattern, CD inventory):
+      -- short a/ea/ai backs to [ɑ] after a broad (velarized) onset or
+      -- word-initially (slat [sˠl̪ˠɑt̪ˠ], cailín [kɑˈlʲiːnʲ], easna [ˈɑsˠnˠə]);
+      -- a palatal onset keeps front [a] (teach [tʲax]).
+      if context.dialect == "munster" and token.phon == "a"
+         and (ortho == "a" or ortho == "ea" or ortho == "ai") then
+        -- Applies to stressed vowels and word-initial syllables only —
+        -- non-initial unstressed a reduces to [ə] (buachalán) and must not back.
+        local is_first_vowel = true
+        for j = i - 1, 1, -1 do
+          if tokens[j].type == "vowel" then is_first_vowel = false; break end
+          if tokens[j].type == "boundary" and tokens[j].ortho ~= "'" then break end
+        end
+        if token.stress or context.is_monosyllabic or is_first_vowel then
+          local prv = tokens[i - 1]
+          local nxt = tokens[i + 1]
+          local prev_broad = prv and prv.type == "cons" and prv.palatal == false
+          local no_prev_cons = not (prv and prv.type == "cons")
+          local next_broad = not (nxt and nxt.type == "cons" and nxt.palatal == true)
+          -- broad onset backs unconditionally (cailín [kɑˈlʲiːnʲ]);
+          -- onsetless a backs only before a broad coda (easna vs aistriú)
+          if prev_broad or (no_prev_cons and next_broad) then
+            token.phon = "ɑ"
+          end
+        end
+      end
+
       -- Lexical quality overrides: long á → aː in specific words
       -- Connacht long á default is [ɑː] (broad). These words need front [aː] instead.
       if ortho == "á" and token.phon == "ɑː" and context.word_ortho then

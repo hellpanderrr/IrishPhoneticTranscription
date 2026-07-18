@@ -508,6 +508,28 @@ return {
         local pv = tokens[i - 1]
         if pv and pv.type == "vowel" then
           local ortho = pv.ortho
+          -- Munster (Hickey II.1.8.6): compensation is DIPHTHONGIZATION, not
+          -- plain lengthening: ceann [cɑun̪ˠ], poll [pˠəul̪ˠ], am [aumˠ].
+          if context.dialect == "munster" then
+            local lookup = context.word_ortho or ""
+            if not LENGTHEN_EXCEPTIONS[lookup] then
+              if ortho == "ea" or ortho == "a" then
+                pv.phon = "au"
+                pv.source = "sonorant_lengthening"
+              elseif ortho == "o" then
+                pv.phon = "əu"
+                pv.source = "sonorant_lengthening"
+              elseif ortho == "u" then
+                pv.phon = "uː"
+                pv.source = "sonorant_lengthening"
+              elseif ortho == "i" then
+                -- Hickey II.1.9: ill → South [iːlʲ] (cill [ciːlʲ])
+                pv.phon = "iː"
+                pv.source = "sonorant_lengthening"
+              end
+            end
+            goto munster_geminate_done
+          end
           if ortho == "ea" or ortho == "a" then
             -- Skip lengthening for lexical exceptions
             local lookup = context.word_ortho or ""
@@ -528,6 +550,7 @@ return {
             pv.phon = "uː"
             pv.source = "sonorant_lengthening"
           end
+          ::munster_geminate_done::
         end
       end
 
@@ -605,6 +628,24 @@ return {
       vowel.source = "sonorant_lengthening"
 
       ::next_len::
+    end
+
+    -- Munster slender sonorants (Hickey II.1.8, benchmark Munster rows):
+    -- single slender l/n are plain palatal [lʲ/nʲ] — the retracted series
+    -- survives only in geminates/rn clusters (linne [n̠ʲ] vs binne single
+    -- [nʲ]). Broad lenis/dental contrast patterns as in the West.
+    if context.dialect == "munster" then
+      local MUNSTER_SONORANTS = {
+        ["l\xcb\xa0"] = "l\xcc\xaa\xcb\xa0",           -- lˠ → l̪ˠ
+        ["n\xcb\xa0"] = "n\xcc\xaa\xcb\xa0",           -- nˠ → n̪ˠ
+        ["l\xcc\xa0\xca\xb2"] = "l\xca\xb2",           -- l̠ʲ → lʲ
+        ["n\xcc\xa0\xca\xb2"] = "n\xca\xb2",           -- n̠ʲ → nʲ
+      }
+      for _, t in ipairs(tokens) do
+        if t.type == "cons" and t.phon and MUNSTER_SONORANTS[t.phon] then
+          t.phon = MUNSTER_SONORANTS[t.phon]
+        end
+      end
     end
 
     return tokens

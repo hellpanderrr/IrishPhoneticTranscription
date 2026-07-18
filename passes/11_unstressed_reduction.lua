@@ -90,6 +90,26 @@ return {
       local next_token = tokens[i + 1]
       if next_token and next_token.type == "vowel" then goto continue end
 
+      -- Munster: pretonic short vowels keep full quality when stress has been
+      -- attracted rightward (pacáil [pˠaˈkɑːlʲ], bruitíneach [bˠɾˠɪˈtʲiːnʲəx]).
+      -- FG Ch.5/Ó Sé: pretonic reduction is much weaker than post-tonic.
+      -- Only a/ɑ/ɪ in the FIRST syllable resist pretonic reduction
+      -- (cailín [kɑˈlʲiːnʲ], bruitíneach [bˠɾˠɪˈtʲiːnʲəx]); non-initial
+      -- pretonic vowels and ɔ/ʊ/ɛ reduce (portach [pˠəɾˠˈt̪ˠax], buachalán).
+      if context.dialect == "munster" and
+         (phon == "a" or phon == "ɑ" or phon == "ɪ") then
+        local is_first_vowel = true
+        for j = i - 1, 1, -1 do
+          if tokens[j].type == "vowel" then is_first_vowel = false; break end
+          if tokens[j].type == "boundary" then break end
+        end
+        if is_first_vowel then
+          for j = i + 1, #tokens do
+            if tokens[j].type == "vowel" and tokens[j].stress then goto continue end
+          end
+        end
+      end
+
       -- For 2-vowel words: short vowels in non-final syllable keep full quality
       if context.vowel_count == 2 and SHORT_VOWELS[phon] then
         local has_later_vowel = false
