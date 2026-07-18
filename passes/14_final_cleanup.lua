@@ -673,6 +673,9 @@ return {
       -- Use simple lowercased lookup (normalize_ortho strips accents)
       local lookup_word = ustring.lower(seg_ortho)
       local fw_ipa = S.FUNCTION_WORDS_OVERRIDE[lookup_word]
+      -- NOTE: these are Connacht transcriptions, but gating them to Connacht
+      -- was tried (2026-07-18) and REVERTED: Munster -13, Ulster -14 exact.
+      -- Function words are largely pan-dialectal in the benchmark source.
       if fw_ipa then
         local override_idx = 1
         for _, t in ipairs(seg) do
