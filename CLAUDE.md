@@ -70,6 +70,7 @@ Every phonological rule in the 16 passes cites its source in comments:
 - Current: ~75.16% exact match (4959/6598) Connacht
 - Munster (tagged-only benchmark, 4102 words): 40.49% (1661) after two rule batches (untuned Connacht-engine baseline was 23.06%)
 - Ulster (tagged-only benchmark, 4785 words): 36.51% (1747) after two vowel batches + pass-15 finalization (untuned baseline was 16.43%)
+- Next ROI queue: Connacht multiword phrases (215), Ulster -f(a)idh→i (~38), Connacht sl- slender l̠ʲ (~23), Connacht w→vˠ after long V (~23) — see Active buckets below
 - Dialect benchmarks score only words with ≥1 dialect-tagged row; untagged rows are accepted as alternate variants but untagged-only words are excluded (mixed transcription conventions)
 - `data/all_regions.csv` is the dialect-tagged source (17,281 rows, 9,719 words; tags like Munster/Ulster/Connacht/Aran/Cois-Fharraige; untagged rows are treated as pan-dialectal and included in every dialect's benchmark)
 - Norm Lev: ~94.06, Norm Dolgo: ~95.44
@@ -120,6 +121,8 @@ Every phonological rule in the 16 passes cites its source in comments:
 - **Dialect rules are pass-order sensitive**: a pass-11 vowel conversion can be bypassed by pass 13 *creating* new instances afterwards (Ulster ɑː→aː misses ard-cluster lengthening output). When a gated rule underperforms, check whether a later pass regenerates the input pattern.
 - **ExactSkeleton−ExactNoStress delta measures convention noise** per dialect (Connacht ~3.7pp, Munster ~5.3pp). Use it to decide rule-vs-noise before chasing a bucket.
 - **Untagged all_regions.csv rows are excluded from dialect scoring** (mixed conventions) but kept as accepted alternate variants for tagged words — policy lives in tools/make_dialect_benchmarks.py.
+- **FUNCTION_WORDS_OVERRIDE helps ALL dialects** — the "Connacht IPA hurts Munster/Ulster" hypothesis was tested and falsified (gating cost M -13 / U -14). Function words are pan-dialectal in the source. Benchmark before gating any pass-14 lexical layer.
+- **New dialect-wide surface normalizations go in pass 15 (dialect_finalize), not mid-pipeline** — mid-pipeline rules get bypassed when later passes regenerate the target phone (that leak cost Ulster ~48 words until pass 15 existed).
 
 ### Git / Shell
 - **`nul` file in git status** — Windows shell leaks a file named `nul` when redirecting to `/dev/null`. `rm -f nul` before `git add` avoids "short read while indexing" errors.
