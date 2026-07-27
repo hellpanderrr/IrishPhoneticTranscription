@@ -84,7 +84,9 @@ _shared.DIALECTS = {
         },
     },
     ulster   = {
-        ao = "iː", ai = "ai", ea = "a", eo = "ɔː", ["ío"] = "iː",
+        -- ai → [a]: Ulster ai digraph monophthongizes (benchmark: 891 words
+        -- with plain [a] vs 24 keeping [ai] — faide, bainne, aisteoir)
+        ao = "iː", ai = "a", ea = "a", eo = "ɔː", ["ío"] = "iː",
         oi = "ɔi", ui = "ʊi", ua = "uə", ia = "iə", ["éi"] = "eː",
         -- Hickey I.2.3: Ulster short o/u merge into unrounded [ʌ]
         -- (bod [bˠʌd̪ˠ], cur [kʌɾˠ])

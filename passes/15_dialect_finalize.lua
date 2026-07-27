@@ -7,6 +7,8 @@
 -- pass 11 already ran — Gardaí, cairdeas, Cháit).
 -- References: Hickey I.2.3 (Ulster á fronting), II.1.8 (Munster sonorants)
 
+local S = require("passes._shared")
+
 return {
   name = "dialect_finalize",
   writes_context = false,
@@ -47,6 +49,55 @@ return {
         end
       end
 
+      -- Ulster: á → [æː] in a lexical set (mála, prátaí, gairdín, Páras...).
+      -- The benchmark splits ~408 aː vs ~187 æː with NO phonological
+      -- conditioning detectable (fronting is lexically diffusing per
+      -- Hickey I.2.3); per-word table required. Keys strip_fadas'd.
+      local A_TO_AE = {
+        ["a chairde"]=true, ["a lan"]=true, ["aille"]=true, ["ainsi"]=true,
+        ["airithe"]=true, ["arasan"]=true, ["asc"]=true, ["ataim"]=true,
+        ["ataimid"]=true, ["baine"]=true, ["bainin"]=true, ["baire"]=true,
+        ["baisin"]=true, ["baite"]=true, ["bal"]=true, ["bard"]=true,
+        ["bhfaga"]=true, ["bhfainne"]=true, ["bhfainni"]=true,
+        ["blafar"]=true, ["blarna"]=true, ["blarnan"]=true,
+        ["cailiuil"]=true, ["cairdiuil"]=true, ["cana"]=true,
+        ["cead mhata"]=true, ["cearnog"]=true, ["cearnoga"]=true,
+        ["chailiuil"]=true, ["chairde"]=true, ["charn"]=true,
+        ["chearnog"]=true, ["clairseacha"]=true, ["cloch na blarnan"]=true,
+        ["d'fhagadar"]=true, ["d'fhagadh"]=true, ["d'fhagfadh"]=true,
+        ["dala"]=true, ["dana"]=true, ["danlann"]=true, ["drama"]=true,
+        ["faga"]=true, ["fagadh"]=true, ["fainni"]=true, ["fan"]=true,
+        ["fasach"]=true, ["fhag"]=true, ["fhagadar"]=true,
+        ["fhagadh"]=true, ["fhagfadh"]=true, ["fhainne"]=true,
+        ["flea"]=true, ["frasa"]=true, ["gair"]=true, ["gairdin"]=true,
+        ["gardai"]=true, ["gcearnog"]=true, ["ghairdin"]=true,
+        ["ghardai"]=true, ["ghrain"]=true, ["ghranaigh"]=true,
+        ["gnas"]=true, ["gnath"]=true, ["granaigh"]=true, ["har"]=true,
+        ["laib"]=true, ["lain"]=true, ["lama"]=true, ["lana"]=true,
+        ["lar"]=true, ["le fail"]=true, ["mailin"]=true, ["mairin"]=true,
+        ["mala"]=true, ["malai"]=true, ["mbard"]=true, ["mbas"]=true,
+        ["meanach"]=true, ["meann"]=true, ["mha"]=true, ["naid"]=true,
+        ["naisiuin"]=true, ["naisiun"]=true, ["naisiunta"]=true,
+        ["ndan"]=true, ["ngairdin"]=true, ["ngardai"]=true,
+        ["ngrain"]=true, ["ngranaigh"]=true, ["pa"]=true, ["paidin"]=true,
+        ["pairti"]=true, ["pana"]=true, ["paras"]=true, ["pha"]=true,
+        ["pharas"]=true, ["plana"]=true, ["plas"]=true, ["plata"]=true,
+        ["platai"]=true, ["pratai"]=true, ["rasa"]=true, ["rasur"]=true,
+        ["sainn"]=true, ["sar"]=true, ["sas"]=true, ["sasair"]=true,
+        ["sasar"]=true, ["sasta"]=true, ["seain"]=true, ["seainin"]=true,
+        ["seanra"]=true, ["smal"]=true, ["snafa"]=true, ["snaite"]=true,
+        ["spainn"]=true, ["spainne"]=true, ["spas"]=true, ["stabh"]=true,
+        ["tabla"]=true, ["tairgiuil"]=true, ["tal"]=true, ["tana"]=true,
+        ["thar saile"]=true, ["trata"]=true, ["tsal"]=true,
+        ["bharr"]=true, ["clairneid"]=true, ["barda"]=true,
+      }
+      local w_ae_nf = S.strip_fadas(((context.word_ortho or ""):lower()))
+      if A_TO_AE[w_ae_nf] then
+        for _, t in ipairs(tokens) do
+          if t.type == "vowel" and t.phon == "aː" then t.phon = "æː" end
+        end
+      end
+
       -- Ulster: word-final -ach weakens [x]→[h] in a lexical set (~77 of 420
       -- -ach words; Hickey I.2.3 notes Ulster ch-weakening is variable).
       -- Keys strip_fadas'd.
@@ -64,8 +115,7 @@ return {
         protastunach=true, reiteach=true, ruifineach=true,
         ["t-eadach"]=true, tosach=true, tiomanach=true,
       }
-      local w_ach = (context.word_ortho or ""):lower()
-      local w_ach_nf = w_ach:gsub("[áéíóú]", { ["á"]="a", ["é"]="e", ["í"]="i", ["ó"]="o", ["ú"]="u" })
+      local w_ach_nf = S.strip_fadas(((context.word_ortho or ""):lower()))
       if ACH_TO_H[w_ach_nf] then
         for i = #tokens, 1, -1 do
           local t = tokens[i]
