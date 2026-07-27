@@ -75,6 +75,9 @@ return {
 
       if UNSTRESSED[ortho] then
         if seg_vc == 1 then seg_is_monosyllabic = true end
+        -- Flag deliberate non-stress so pass 14's late stress repair
+        -- (Step 11) doesn't re-add stress to grammatical words.
+        if #segments == 1 then context.no_lexical_stress = true end
         goto next_seg
       end
 

@@ -99,6 +99,16 @@ return {
             end
           end
           table.insert(new_tokens, epenthetic)
+          -- Hickey II.3 + II.2.8: svarabhakti makes a monosyllabic root
+          -- disyllabic (dearg → dʲaɾˠəɡ); disyllabic content words carry
+          -- primary stress on the first syllable. Pass 02 skipped stress
+          -- because it saw one vowel. Grammatical words (orm, "-as", d'/b'
+          -- forms) keep no stress via context.no_lexical_stress.
+          if not prev_vowel.stress and context.is_monosyllabic and
+             not context.no_lexical_stress and context.word_ortho and
+             not context.word_ortho:find(" ") then
+            prev_vowel.stress = true
+          end
         end
 
       -- Also handle l+bh/mh cluster: insert epenthetic schwa and change bh/mh -> vˠ/vʲ
@@ -134,6 +144,12 @@ return {
             tokens[i + 1].phon = "vʲ"
           else
             tokens[i + 1].phon = "vˠ"
+          end
+          -- Same stress repair as above: svarabhakti disyllabified the root.
+          if not prev_vowel.stress and context.is_monosyllabic and
+             not context.no_lexical_stress and context.word_ortho and
+             not context.word_ortho:find(" ") then
+            prev_vowel.stress = true
           end
         end
       end

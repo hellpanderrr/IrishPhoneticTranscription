@@ -120,6 +120,28 @@ return {
         token.phon = "ɪ"
       end
     end
+    -- Step 4b2: Lexical tap→trill override. A small set of words realize
+    -- r as trilled [r] rather than tap [ɾ] (mostly obstruent+r onsets and
+    -- rare intervocalic cases). Hickey II.1.8: the tap/trill distinction is
+    -- lexicalized in Connacht; benchmark distribution is ~12 trill vs ~900 tap,
+    -- so a per-word table is the only safe approach.
+    if context.word_ortho then
+      local trill_lookup = S.strip_fadas(S.normalize_ortho(context.word_ortho))
+      local R_TRILL = {
+        geireach=true, bolscaire=true, treascair=true, fhreimh=true,
+        bhfreimh=true, aireilias=true, car=true, firead=true,
+        spreagtha=true, oibreacha=true, coireail=true, sprantais=true,
+        hoibre=true, greannach=true, burla=true, deifre=true,
+        critheann=true,
+      }
+      if R_TRILL[trill_lookup] then
+        for _, token in ipairs(tokens) do
+          if token.type == "cons" and token.ortho == "r" and token.phon then
+            token.phon = token.phon:gsub("\xc9\xbe", "r")  -- ɾ → r
+          end
+        end
+      end
+    end
     -- Step 4c: Lexical ɪ→i overrides (after reduction so pass 11 doesn't re-reduce)
     -- Words where short i should be full i even in unstressed/monosyllabic positions.
     -- Also handles u→palatal→ɪ and oi→m→ɪ cases.

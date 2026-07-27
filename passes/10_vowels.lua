@@ -286,9 +286,13 @@ return {
       end
 
       -- Lexical quality overrides: long ó → uː in specific words (Connacht raising)
+      -- Hickey II.1.9: /oː/ raises to [uː] adjacent to nasals in Connacht
+      -- (cónaí, nóiméad, nóin, Dónall, móide, coróin).
       if (ortho == "ó" or ortho == "óí") and token.phon == "oː" and context.word_ortho then
-        local w = context.word_ortho:lower()
-        local O_LONG_TO_U = { ["nós"]=true, ["gcónaí"]=true, ["i gcónaí"]=true, ["ómrach"]=true }
+        local w = S.strip_fadas(S.normalize_ortho(context.word_ortho))
+        local O_LONG_TO_U = { nos=true, gconai=true, ["i gconai"]=true, omrach=true,
+          conai=true, noimead=true, moide=true, donall=true, noin=true,
+          coroin=true }
         if O_LONG_TO_U[w] then token.phon = "uː" end
       end
 
