@@ -94,16 +94,20 @@ local function render_output(tokens)
         if t.type == "cons" and t.phon and t.phon ~= "" then
           onset_start = j
         elseif t.type == "boundary" then
-          -- Apostrophe boundaries (d'fhag, b'fhearr) are elision markers,
+          -- Apostrophe boundaries (d'fhag, b'fhearr) and hyphen boundaries
+          -- (n-aicmí, t-ógánach, h-Éirinn) are elision/mutation markers,
           -- not prosodic boundaries — skip them to let stress land on the
           -- prefix consonant. True boundaries (spaces) remain as barriers.
-          if t.ortho == "'" then
-            -- skip apostrophe
+          if t.ortho == "'" or t.ortho == "-" then
+            -- skip apostrophe/hyphen
           else
             break
           end
         elseif t.phon == nil or t.phon == "" then
           -- skip silenced non-boundary tokens (fh, th, etc.)
+        elseif t.ortho == "-" then
+          -- skip hyphen tokens (type "unknown", phon "-"): mutation prefix
+          -- markers (n-itheann, t-ógánach), not prosodic boundaries
         else
           break
         end
