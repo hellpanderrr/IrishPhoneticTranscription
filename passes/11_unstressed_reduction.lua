@@ -349,11 +349,37 @@ return {
         ["iː"] = "i", ["uː"] = "u", ["oː"] = "ɔ", ["ɔː"] = "ɔ",
         ["ɑː"] = "a", ["aː"] = "a",
       }
+      -- Lexical exceptions: words whose post-tonic long vowel RESISTS the
+      -- shortening (pisín→pʲɪʃiːnʲ, giotár, saighdiúir, garraí...).
+      -- Benchmark split ~197 long kept vs ~389 shortened — the keepers are
+      -- lexical. Keys strip_fadas'd.
+      local ULSTER_KEEP_LONG = {
+        ["abulacht"]=true, ["acson"]=true, ["aerostach"]=true,
+        ["athraigh"]=true, ["barriall"]=true, ["bealtaine"]=true,
+        ["bearrfaidh"]=true, ["bearrtha"]=true, ["bharula"]=true,
+        ["bithiunach"]=true, ["breidin"]=true, ["caifeach"]=true,
+        ["caitin"]=true, ["caitriona"]=true, ["casaoid"]=true,
+        ["casur"]=true, ["cipin"]=true, ["clibin"]=true, ["cotan"]=true,
+        ["d'athraigh"]=true, ["diuracan"]=true, ["doighiuil"]=true,
+        ["eadalach"]=true, ["eillin"]=true, ["einsimeach"]=true,
+        ["feidhmiuil"]=true, ["fiuntach"]=true, ["galan"]=true,
+        ["gallan"]=true, ["garrai"]=true, ["gearmain"]=true,
+        ["gearr"]=true, ["gearrfaidh"]=true, ["gearrtha"]=true,
+        ["gearrthacha"]=true, ["ghearr"]=true, ["giotar"]=true,
+        ["giuistis"]=true, ["goirin"]=true, ["ngarrai"]=true,
+        ["ngearrfaidh"]=true, ["pardun"]=true, ["phisin"]=true,
+        ["pisin"]=true, ["praiscin"]=true, ["puisin"]=true,
+        ["roisin"]=true, ["saighdiuir"]=true, ["sciulan"]=true,
+        ["seasun"]=true, ["seasur"]=true, ["siunta"]=true, ["smigin"]=true,
+        ["suiomh greasain"]=true, ["tarrthalach"]=true, ["tuiodoir"]=true,
+      }
+      local ul_keep = ULSTER_KEEP_LONG[S.strip_fadas((context.word_ortho or ""):lower())]
       local seen_vowel = false
       for _, t in ipairs(tokens) do
         if t.type == "boundary" then seen_vowel = false end
         if t.type == "vowel" then
-          if seen_vowel and not t.stress and t.phon and ULSTER_SHORTEN[t.phon] then
+          if seen_vowel and not t.stress and t.phon and ULSTER_SHORTEN[t.phon]
+             and not ul_keep then
             t.phon = ULSTER_SHORTEN[t.phon]
           end
           seen_vowel = true
