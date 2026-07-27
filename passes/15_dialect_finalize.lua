@@ -236,6 +236,69 @@ return {
     end
 
     if context.dialect == "munster" then
+      -- Munster: lexical a-quality corrections. MUNSTER_A_FRONT keeps front
+      -- [a] where the backing rule over-applied (baile, maide, stair, banc);
+      -- MUNSTER_A_REDUCE reduces pretonic [ɑ]→[ə] (atá, arán, paróiste).
+      -- Benchmark-derived; a-backing and pretonic reduction are both
+      -- lexically diffuse in Munster (FG Ch.5).
+      local MUNSTER_A_FRONT = {
+        ["-ail"]=true, ["acadamh"]=true, ["achadh"]=true, ["achaini"]=true,
+        ["acson"]=true, ["altadh"]=true, ["asaibhse"]=true, ["baile"]=true,
+        ["baile brigin"]=true, ["baile meanach"]=true, ["baile mor"]=true,
+        ["bailigh"]=true, ["banc"]=true, ["barulach"]=true, ["bhanc"]=true,
+        ["bhatar"]=true, ["bhfarraige"]=true, ["bhfarraigi"]=true,
+        ["bhlais"]=true, ["bpaipear"]=true, ["brabusach"]=true,
+        ["caithfidh"]=true, ["caitliceach"]=true, ["calrach"]=true,
+        ["canach"]=true, ["canunach"]=true, ["carraigeacha"]=true,
+        ["cearnog"]=true, ["cearnoga"]=true, ["cearta"]=true,
+        ["charraigeacha"]=true, ["chearnog"]=true, ["chearta"]=true,
+        ["ciseain"]=true, ["cisean"]=true, ["clainne"]=true, ["clais"]=true,
+        ["cnaipe"]=true, ["dhath"]=true, ["eachtran"]=true,
+        ["earraideach"]=true, ["fado"]=true, ["fadu"]=true,
+        ["farraigi"]=true, ["fea"]=true, ["flea"]=true, ["francaigh"]=true,
+        ["gaibh"]=true, ["gairm"]=true, ["galanta"]=true, ["gcearnog"]=true,
+        ["gcearta"]=true, ["glantoir"]=true, ["laige"]=true, ["lea"]=true,
+        ["maide"]=true, ["mairim"]=true, ["maitheamh"]=true, ["marai"]=true,
+        ["mhair"]=true, ["mhaith"]=true, ["mhaithe"]=true,
+        ["mhargadh"]=true, ["milseain"]=true, ["milsean"]=true,
+        ["n-achaini"]=true, ["n-each"]=true, ["pacail"]=true,
+        ["paipear"]=true, ["portach"]=true, ["praisigh"]=true,
+        ["sa bhaile"]=true, ["scairteadh"]=true, ["stair"]=true,
+        ["tarraingt"]=true, ["thar saile"]=true,
+      }
+      local MUNSTER_A_REDUCE = {
+        ["-amh"]=true, ["-each"]=true, ["-far"]=true, ["abran"]=true,
+        ["abulacht"]=true, ["aduaidh"]=true, ["aduain"]=true,
+        ["aduaine"]=true, ["agoid"]=true, ["amhain"]=true, ["amuigh"]=true,
+        ["anocht"]=true, ["aprun"]=true, ["aran"]=true, ["araon"]=true,
+        ["aru"]=true, ["ata"]=true, ["ataim"]=true, ["ataimid"]=true,
+        ["atathar"]=true, ["bacach"]=true, ["bacai"]=true,
+        ["bagaiste"]=true, ["bagun"]=true, ["baruil"]=true,
+        ["bhacach"]=true, ["brachan"]=true, ["bradach"]=true,
+        ["cabach"]=true, ["canail"]=true, ["carbon"]=true,
+        ["carbonach"]=true, ["casog"]=true, ["catan"]=true,
+        ["crannog"]=true, ["d'fhogair"]=true, ["damaiste"]=true,
+        ["damhan"]=true, ["fadalach"]=true, ["gabhala"]=true,
+        ["gabhaltas"]=true, ["gadai"]=true, ["galan"]=true,
+        ["gallan"]=true, ["gasog"]=true, ["haran"]=true,
+        ["i dtolamh"]=true, ["i dtratha"]=true, ["i lathair"]=true,
+        ["marog"]=true, ["maros"]=true, ["matan"]=true, ["matanach"]=true,
+        ["n-aran"]=true, ["ngadai"]=true, ["paroiste"]=true,
+        ["pharoiste"]=true, ["saboid"]=true, ["sacan"]=true, ["salu"]=true,
+        ["spadanta"]=true, ["stagun"]=true, ["talun"]=true,
+      }
+      local mun_w = S.strip_fadas(((context.word_ortho or ""):lower()))
+      if MUNSTER_A_FRONT[mun_w] then
+        for _, t in ipairs(tokens) do
+          if t.type == "vowel" and t.phon == "ɑ" then t.phon = "a" end
+        end
+      elseif MUNSTER_A_REDUCE[mun_w] then
+        -- reduce only the FIRST (pretonic) ɑ
+        for _, t in ipairs(tokens) do
+          if t.type == "vowel" and t.phon == "ɑ" then t.phon = "ə"; break end
+        end
+      end
+
       -- Munster word-final -igh/-aigh/-aidh/-idh keeps a real palatal stop:
       -- [ɪɟ] after a consonant (bealaigh→bʲal̪ˠɪɟ, doiligh→d̪ˠɪlʲɪɟ), bare [ɟ]
       -- after a long vowel or diphthong (dóigh→d̪ˠoːɟ, luaigh→l̪ˠuəɟ).
