@@ -1,1369 +1,1355 @@
 word	got	expected	lev	lev_norm	dolgo	dolgo_norm
-chineál	ˈçɪnʲɑːlˠ	ˈçɪnˠɑːlˠ	1	88.89	0.0000	100.00
-pianfaidh	ˈpʲiən̪ˠhə	ˈpʲiənhə	2	80.00	0.0000	100.00
-deannach	ˈdʲan̪ˠəx	dʲanˠəx	2	77.78	0.0000	100.00
-bailíonn brobh beart	ˌbˠalʲiːn̪ˠ bˠɾˠəu ˈbʲaɾˠt̪ˠ	ˈbˠalʲiːn̪ˠ ˈbˠɾˠow ˈbʲaɾˠtʲ	6	78.57	0.2143	78.57
-maímh	mˠavʲ	mˠiːvʲ	2	66.67	0.3333	66.67
-cosán	ˈkɔsˠɑːnˠ	ˈkəsˠɑːnˠ	1	88.89	0.2000	80.00
-carraigreacha	ˈkaɾˠəɟɾʲəxə	ˈkaɾˠɪɟɾʲəxiː	3	76.92	0.2222	77.78
-mantaíl	ˈmˠan̪ˠt̪ˠəlʲ	ˈmˠan̪ˠt̪ˠiːlʲ	2	85.71	0.1667	83.33
-geimhriúchán	ˈɟɛvʲɾʲuːxɑːn̪ˠ	ˈɟiːvɾʲuˌxɑːn̪ˠ	4	73.33	0.2222	77.78
-adhairc	ˈaiəɾʲc	ˈəiəɾʲc	1	85.71	0.2000	80.00
-díthairbheach	ˈdʲiːhəɾʲvʲəx	ˈdʲiːˌhæɾʲəvʲəx	3	80.00	0.3000	70.00
-meabhair	ˈmʲauəɾʲ	mʲauɾʲ	2	75.00	0.2000	80.00
-Ruadhán	ˈɾˠuəɑːnˠ	ˈɾˠuːɑːnˠ	1	88.89	0.2000	80.00
-tuíodóireacht	ˈt̪ˠiːd̪ˠoːɾʲəxt̪ˠ	ˈt̪ˠiːd̪ˠoːɾʲ	5	72.22	0.3750	62.50
--ímis	iːmʲɪʃ	iːmʲəʃ	1	83.33	0.2500	75.00
-libhse	ˈl̠ʲəiʃə	ˈlʲɪvʲʃə	4	50.00	0.4000	60.00
-sibhse	ˈʃəiʃə	ʃɪvʲʃə	4	33.33	0.4000	60.00
-inné	ˈɪn̠ʲeː	əˈn̠ʲeː	2	71.43	0.3333	66.67
-iontas	ˈɪn̪ˠt̪ˠəsˠ	ˈiːn̪ˠt̪ˠəsˠ	2	83.33	0.0000	100.00
-lagsprid	ˈl̪ˠaɟʃpʲɾʲədʲ	ˈl̪ˠɑɡsˠpʲɾʲidʲ	5	66.67	0.2500	75.00
-ailm	ˈalʲəmʲ	ˈa.lʲəmʲ	1	87.50	0.0000	100.00
-lonta	ˈl̪ˠɔn̪ˠt̪ˠə	ˈl̪ˠʊn̪ˠt̪ˠə	1	91.67	0.2000	80.00
-ochón	ˈɔxoːnˠ	ɔˈxoːn	3	57.14	0.0000	100.00
-seabhac	ˈʃauək	ʃauk	2	66.67	0.2000	80.00
-manglam	ˈmˠɪŋlˠəmˠ	mˠɑŋl̪ˠəmˠ	3	70.00	0.1667	83.33
-carbhat	ˈkaɾˠəwət̪ˠ	kɑɾˠəˈwɑt̪ˠə	5	58.33	0.3750	62.50
-d'fhulaing	ˈd̪ˠʊlˠəŋ	ˈd̪ˠʊlˠən̠ʲ	3	72.73	0.0000	100.00
-scaifte	ˈsˠkafʲtʲə	ˈskafʲtʲə	1	90.00	0.0000	100.00
-róghoilliúnach	ˈɾˠoːɣəl̠ʲuːnˠəx	ɾˠoːˈɣɔl̠ʲuːnˠəx	3	81.25	0.1111	88.89
-cairr	kaɾˠ	kaːɾˠ	1	80.00	0.0000	100.00
-grá mo chroí	ɡɾˠɑː ˈmˠə ˈxɾˠiː	ɡɾˠaː mˠə xɾˠiː	3	82.35	0.1250	87.50
-máithreacha	ˈmˠaːhɾʲəxə	ˈmˠaːɾʲhəxiː	4	66.67	0.4286	57.14
-idirghuí	ˈɪdʲəɾˠɣiː	ˈɪdʲərʲˌɣiː	3	72.73	0.1429	85.71
-stopallán	ˈsˠt̪ˠɔpˠəl̪ˠɑːnˠ	ˈsˠt̪ˠɔpəl̪ˠɑːnˠ	1	94.12	0.0000	100.00
-cáilíocht	ˈkɑːlʲiəxt̪ˠ	ˈkˠɑːlʲiəxtˠ	2	83.33	0.0000	100.00
-d'fhás	d̪ˠɑːsˠ	dˠɑːsˠ	1	85.71	0.0000	100.00
-fhianaise	ˈiənˠəʃə	ˈiːnˠɪʃə	2	75.00	0.3333	66.67
-cluichí	ˈklˠɪçiː	ˈklˠifʲiː	3	66.67	0.2000	80.00
-iontach	ˈɪn̪ˠt̪ˠəx	ˈiən̪ˠt̪ˠəx	2	81.82	0.1667	83.33
-Deirdre	ˈdʲɛːɾˠdʲɾʲə	ˈdʲɛɾˠdʲɾʲə	1	91.67	0.0000	100.00
-collach	ˈkɔl̪ˠəx	ˈkol̪ˠəx	1	87.50	0.0000	100.00
-seanmóirí	ˈʃanˠəmˠoːɾʲiː	ˈʃanˠəmoːɾʲiː	1	92.86	0.0000	100.00
-crua-ae	ˈkɾˠuəˌeː	ˈkɾˠuəiju	3	66.67	0.4286	57.14
-hairde	ˈhɑːɾˠdʲə	ˈhaːɾˠdʲə	1	88.89	0.2000	80.00
-scafa	sˠkafˠə	sˠkɑfˠə	1	85.71	0.2000	80.00
-aonghuthach	ˈiːn̪ˠɣəhəx	ˈeːn̪ˠˌɣʊhəx	3	75.00	0.3750	62.50
-Feabhra	ˈfʲəuɾˠə	fʲauɾˠə	2	75.00	0.2000	80.00
-i ngéibheann	əˈɲeːvʲaːn̪ˠ	əˈɲeːvʲən̪ˠ	2	83.33	0.1667	83.33
-fréamhshamhail	ˈfʲɾʲeːvˠhəulʲ	ˈfʲɾʲeːvˠ.hawəlʲ	4	75.00	0.3333	66.67
-ansiúd	ən̠ʲˈʃuːd̪ˠ	ən̪ˠˈʃuːd̪ˠ	2	81.82	0.0000	100.00
-Meicsiceo	ˈmʲɛcʃɪcoː	ˈmʲɛc.ʃɪ.coː	2	83.33	0.0000	100.00
-n-iasc	n̠ʲiəsˠk	n͈ʲiəsˠk	1	87.50	0.1667	83.33
-Catalóinis	ˈkat̪ˠəlˠoːnʲɪʃ	ˈkatˠəl̪ˠoːnʲəʃ	3	80.00	0.1111	88.89
-fíonghort	ˈfʲiːn̪ˠɣəɾˠt̪ˠ	ˈfʲiːnˠˌɣɔɾˠtˠ	4	73.33	0.2500	75.00
-dtiocfainn	ˈdʲʊkfˠən̠ʲ	dʲʊkən̠ʲ	3	72.73	0.1667	83.33
-nimhe	ˈn̠ʲəiə	ˈn̠ʲivʲə	3	62.50	0.5000	50.00
-grán buí	ˈɡɾˠɑːnˠ ˈbˠiː	ˈɡɾˠɑːnˠ bˠiː	1	92.86	0.0000	100.00
-anduine	ˈan̪ˠd̪ˠənʲə	ˈan̪ˠɪnʲə	4	66.67	0.3333	66.67
-cóta fearthainne	ˌkoːt̪ˠə ˈfʲaɾˠhən̠ʲə	ˈkoːt̪ˠə ˈfʲaɾˠhənʲə	2	90.48	0.0833	91.67
-aghaidh	ˈaiə	ai	2	50.00	0.3333	66.67
-beithígh	ˈbʲɛhə	ˈbʲɛhiː	2	71.43	0.2500	75.00
-bodhrán	ˈbˠuːɾˠɑːn̪ˠ	ˈbˠəuɾˠɑːn̪ˠ	2	83.33	0.1667	83.33
-Baile Meánach	ˌbˠalʲə ˈmʲɑːnˠəx	ˌbˠalʲə ˈmʲɑːn̪ˠəx	1	94.44	0.0000	100.00
--íteá	iːtʲɑː	iːtʲaː	1	83.33	0.3333	66.67
-fiáin	fʲiɑːnʲ	ˈfʲiːɑːnʲ	2	77.78	0.0000	100.00
-caibléara	ˈkabʲlʲeːɾˠə	ˈkabʲəlʲeːɾˠə	1	92.31	0.1250	87.50
-spiorad	ˈsˠpʲɪɾˠəd̪ˠ	ˈsˠpʲiɾˠədʲ	3	75.00	0.0000	100.00
-lúthchleasa	ˈl̪ˠuːhçlʲəsˠə	ˈl̪ˠuːçlʲasˠə	2	85.71	0.2500	75.00
-fhómhair	ˈoːwəɾʲ	ˈoːvˠəɾʲ	2	75.00	0.2500	75.00
-anocht	əˈnˠɔxt̪ˠ	əˈn̪ˠɔxt̪ˠ	1	90.00	0.0000	100.00
--imis	ɪmʲɪʃ	əmʲəʃ	2	60.00	0.5000	50.00
-bainis	ˈbˠanʲɪʃ	ˈbanʲəʃ	2	75.00	0.2000	80.00
-ghníomh	jnʲiːvʲ	jɾʲiːvˠ	2	71.43	0.2500	75.00
-feadh	fʲɪ	fʲæː	2	50.00	0.5000	50.00
-oirthear	ˈɛɾʲhəɾˠ	ˈeɾʲhəɾˠ	1	87.50	0.0000	100.00
-snátha	ˈsˠn̪ˠɑːhə	sˠn̪ˠɑː	3	70.00	0.4000	60.00
-Fionlainnise	ˈfʲɪn̪ˠlˠən̠ʲəʃə	ˈfʲɪn̪ˠl̪ˠən̠ʲɪʃə	2	88.24	0.1111	88.89
-fomhuireán	ˈfˠəuɾʲɑːnˠ	ˈfɔwərʲɑːnˠ	4	63.64	0.4286	57.14
-aréir	əˈɾʲeːɾʲ	əˈɾˠeːɾʲ	1	87.50	0.0000	100.00
-bóithrí	ˈbˠoːhɾʲiː	ˈbˠoːɾʲiː	1	90.00	0.2000	80.00
-adhnaic	ˈain̪ˠɪc	ˈəin̪ˠəc	2	75.00	0.4000	60.00
-Fórsa Cosanta Áitiúil	ˌfˠoːɾˠsˠə kɔsˠən̪ˠt̪ˠə ˈɑːtʲuːlʲ	ˈfˠoːɾˠsˠə ˈkɔsˠən̪ˠt̪ˠə ˈaːtʲuːlʲ	3	91.18	0.1176	88.24
-staighre	ˈsˠt̪ˠəiɾʲə	ˈsˠt̪ˠaiɾʲə	1	90.91	0.1667	83.33
-lenarbh	ˈl̠ʲɛnˠəɾˠw	ˈlʲɛnˠəɾˠvˠ	3	72.73	0.1667	83.33
-veigeán	vˈɛɟɑːnˠ	ˈvʲɛɟɑːnˠ	2	77.78	0.0000	100.00
-abhac	ˈauək	auk	2	60.00	0.2500	75.00
-aerfort	ˈeːɾˠəfˠəɾˠt̪ˠ	ˈeːɾˠfɔɾˠt̪ˠ	3	78.57	0.2857	71.43
-imní	ˈɪmʲnʲiː	ˈɪmʲɾʲiː	1	87.50	0.2500	75.00
-agat	uɡəd̪ˠ	ˈuɡəd̪ˠ	1	85.71	0.0000	100.00
-Gaedhlaing	ˈɡeːlˠəŋ	ˈɡeːlɪɲ	3	62.50	0.2000	80.00
-inniu	ˈɪn̠ʲə	əˈn̠ʲu	3	50.00	0.6667	33.33
-n-éirí	ˈn̠ʲeːɾʲiː	ˈn̠ʲaiɾʲiː	2	80.00	0.4000	60.00
-ainmfhocal	ˈanˠəmˠəkəl̪ˠ	ˈanʲəmʲˌɔkəl̪ˠ	4	71.43	0.2222	77.78
-rabharta	ˈɾˠəuɾˠt̪ˠə	ˈɾˠɑuɾˠt̪ˠə	1	90.91	0.1667	83.33
-neosainn	ˈn̠ʲoːsˠən̠ʲ	ˈnʲoːsˠənʲ	2	83.33	0.0000	100.00
-Baile Átha Cliath	ˌbˠalʲə ɑːhə ˈclʲiə	ˌbʲlʲɑː ˈclʲiə	6	68.42	0.3333	66.67
-bhímis	ˈvʲiːmʲɪʃ	vʲiːmʲəʃ	2	77.78	0.2000	80.00
-Rúisis	ˈɾˠuːʃɪʃ	ˈɾˠuːʃəʃ	1	87.50	0.2000	80.00
-giuirléid	ˈɟiɪːɾʲlʲeːdʲ	ˈɟuːɾˠlʲeːdʲ	3	76.92	0.3750	62.50
-tabhair	ˈt̪ˠəuɾʲ	ˈt̪ˠoːɾʲ	2	75.00	0.5000	50.00
-arán	ˈaɾˠɑːnˠ	ˈɾˠɑːnˠ	1	87.50	0.2500	75.00
-fiodh	fʲiuː	fʲɪ	3	40.00	0.3333	66.67
-cladh	klˠə	klˠai	2	60.00	0.5000	50.00
-shleamhna	ˈhl̠ʲəun̪ˠə	ˈhlʲãun̪ˠə	2	81.82	0.1667	83.33
-in éindí le	ɪnʲ ˈeːn̠ʲdʲiː lʲɛ	ə ˈn̠ʲeːn̠ʲdʲiː lʲə	7	63.16	0.2500	75.00
-coileán	ˈkɛlʲɑːnˠ	ˈkilʲɑːnˠ	1	88.89	0.2000	80.00
-liopard	ˈlʲipˠəɾˠd̪ˠ	ˈlʲi.pˠəɾˠdˠ	2	83.33	0.0000	100.00
-tuillidh	ˈt̪ˠɪl̠ʲə	ˈt̪ˠɪl̠ʲiː	2	80.00	0.2500	75.00
-Nollag	ˈn̪ˠɔl̪ˠəɡ	ˈn̪ˠolˠək	3	70.00	0.2000	80.00
-Vicipéid	vˈɪcɪpʲeːdʲ	vʲɪcɪpʲeːdʲ	1	90.91	0.0000	100.00
-Feardorcha	ˈfʲaɾˠd̪ˠəɾˠxə	ˈfʲaɾˠd̪ˠɔɾˠəxə	2	86.67	0.2222	77.78
-chugham	ˈxaiəmˠ	xuːmˠ	4	42.86	0.6000	40.00
-dualgas	ˈd̪ˠuəlˠəɡəsˠ	ˈd̪ˠuəlˠɡəsˠ	1	92.31	0.1250	87.50
-níl a bhuíochas ort	n̠ʲiːlʲ əwiəxəsˠ ˈəɾˠt̪ˠ	ˈn̠ʲiːlʲ ə ˈwiəxəsˠ ɔɾˠt̪ˠ	5	80.77	0.0769	92.31
-fheadha	ˈəiə	ɑː	4	0.00	1.0000	0.00
-aischuir	ˈaˌsˠxɪɾʲ	ˈaʃˌxɪrʲ	4	55.56	0.3333	66.67
-ramhar	ˈɾˠauəɾˠ	ɾˠauɾˠ	2	75.00	0.2000	80.00
-ruamann na gcoinneal	ˌɾˠuəmˠaːn̪ˠ n̪ˠə ˈɡɪn̠ʲəlˠ	ˈɾˠuəmˠən̪ˠə ˈɡɪn̠ʲəlˠ	7	74.07	0.2143	78.57
-féinchúis	ˈfʲeːn̪ˠxuːʃ	ˈfʲeːnʲˌxuːʃ	2	83.33	0.1429	85.71
-badhbh	bˠəw	bˠəivˠ	3	50.00	0.5000	50.00
-laisteas	ˈl̪ˠaʃtʲəsˠ	l̪ˠaʃˈtʲasˠ	3	72.73	0.1667	83.33
-piachán	ˈpʲiəxɑːnˠ	ˈpʲiəxːɑːn	2	80.00	0.1429	85.71
-síocháin	ˈʃiəxɑːnʲ	ˈʃiə.xɑːnʲ	1	90.00	0.0000	100.00
-gí nar	ɟiː ˈn̪ˠaɾˠ	ˈɟiː n̪ˠaɾˠ	2	81.82	0.0000	100.00
-orm	ɔɾˠəmˠ	əɾˠmˠ	2	66.67	0.5000	50.00
-meaisín	ˈmʲaʃiːnʲ	mʲəˈʃiːnʲ	3	66.67	0.2000	80.00
-tagtar	ˈt̪ˠakt̪ˠəɾˠ	ˈt̪ˠaɡt̪ˠəɾˠ	1	91.67	0.1667	83.33
-milse	ˈmʲɪlʲʃə	ˈmʲɪl̠ʲʃə	1	88.89	0.0000	100.00
-bharr	waːɾˠ	wˠɑːɾˠ	2	66.67	0.3333	66.67
-muinchille	ˈmˠɪnʲəçəl̠ʲə	ˈmˠɪnʲəl̠ʲə	2	84.62	0.2500	75.00
-meall	mʲaːl̪ˠ	mʲɑːl̪ˠ	1	85.71	0.3333	66.67
-caidhp bháis	kɑːjpʲ ˈwɑːʃ	ˌkaipʲ ˈwɑːʃ	4	66.67	0.3750	62.50
-mháighistreása	ˈwɑːjəʃtʲɾʲɑːsˠə	ˈwɑːʃtʲɾʲɑːsˠə	2	87.50	0.2000	80.00
-it	ɪtʲ	ɪt̪ˠ	2	50.00	0.0000	100.00
-comhartha	ˈkoːəɾˠhə	ˈkõhəɾˠuː	4	55.56	0.6667	33.33
-cairéalaí	ˈkaɾʲeːlˠiː	kəˈɾʲeːl̪ˠiː	4	66.67	0.1667	83.33
-Aindriú	ˈan̠ʲdʲɾʲuː	ˈanʲɾʲuː	3	72.73	0.2000	80.00
-bhuntáiste	ˈwʊn̪ˠt̪ˠɑːʃtʲə	ˈwˠʊn̪ˠt̪ˠɑːʃtʲə	1	93.75	0.0000	100.00
-proifisiúntacht	ˈpˠɾˠɛfʲəʃuːn̪ˠt̪ˠəxt̪ˠ	pˠɾˠɔfʲɪˈʃuːn̪ˠt̪ˠəxt̪ˠ	4	82.61	0.1667	83.33
-Eochaidh	ˈoːxə	ˈɔxiː	4	20.00	0.3333	66.67
-'un	ʊnˠ	ənˠ	1	66.67	0.5000	50.00
-Tadhg	t̪ˠəɡ	t̪ˠaiəɡ	2	71.43	0.4000	60.00
-Brasaíl	ˈbˠɾˠasˠəlʲ	bˠɾˠaˈsˠiːlʲ	4	66.67	0.1667	83.33
-treascair	ˈtʲrʲasˠkərʲ	ˈtʲrʲasˠkəɾʲ	1	91.67	0.0000	100.00
-scannán	ˈsˠkan̪ˠaːnˠ	sˠkəˈn̪ˠaːn̪ˠ	4	69.23	0.1667	83.33
-giolla	ˈɟɪl̪ˠə	ˈɟul̪ˠə	1	85.71	0.2500	75.00
-gruth	ɡɾˠʊ	ɡɾˠɞ	1	75.00	0.3333	66.67
-cnuimh	kɾˠɪvʲ	knˠevʲ	2	66.67	0.5000	50.00
-min	mʲinʲ	ˈmʲinʲ	1	83.33	0.0000	100.00
-Cireabaití	ˈcɪɾʲəbˠətʲiː	ˈkɪɾʲəˌbatiː	5	61.54	0.2222	77.78
-stotha	ˈsˠt̪ˠɔhə	ˈst̪ˠɔhə	1	88.89	0.0000	100.00
-ba	bˠə	bˠaː	2	50.00	0.5000	50.00
-ngabhar	ˈŋəuɾˠ	ˈŋɑuəɾˠ	2	71.43	0.4000	60.00
-foighid	fˠɛədʲ	fˠaidʲ	2	66.67	0.5000	50.00
-Laighin	l̪ˠəənʲ	l̪ˠəinʲ	1	85.71	0.2500	75.00
-Cian	ciənˠ	ˈciənˠ	1	83.33	0.0000	100.00
-cairdeach	ˈkɑːɾˠdʲəx	ˈkɑːrdʲəx	2	80.00	0.0000	100.00
-fathach	ˈfˠahəx	ˈfˠax	2	71.43	0.4000	60.00
-ar oscailt	ɛɾʲˈɔsˠkəl̠ʲtʲ	ɛɾʲ ˈɔsˠkɪlʲtʲ	3	78.57	0.1250	87.50
-aighneas	ˈəinʲəsˠ	ˈai.nʲəsˠ	2	77.78	0.2000	80.00
-Veinéiseach	vˈɛnʲeːʃəx	ˈvʲɛnʲeːʃəx	2	81.82	0.0000	100.00
-nití	ˈn̠ʲɪtʲiː	ˈnʲɨ̞tʲi	4	55.56	0.4000	60.00
-Satharn	ˈsˠahəːɾˠn̪ˠ	ˈsˠahəɾˠn̪ˠ	1	91.67	0.1429	85.71
-Ard-Fheis	ˈɑːɾˠdʲəʃ	ˈɑːɾˠd̪ˠ ˈɛɕ	6	50.00	0.4000	60.00
-pinginí	ˈpʲɪɲənʲiː	ˈpʲiːn̠ʲiː	4	60.00	0.3333	66.67
-goidtear	ˈɡɛdʲtʲəɾˠ	ˈɡɞtʲəɾˠ	3	70.00	0.3333	66.67
-Róimh	ɾˠoːvʲ	ˈɾˠõːvʲ	2	71.43	0.3333	66.67
-buail an t-iarann te	ˌbˠuəlʲ ənˠ tʲiəɾˠaːn̪ˠ ˈtʲɛ	bˠuəlʲ ə tʲiəɾˠən̪ˠ tʲɛ	6	78.57	0.2000	80.00
-cúig déag	ˌkuːɟ dʲeːɡ	kuːɟ dʲeːɡ	1	90.91	0.1429	85.71
-bóthair	ˈbˠoːhəɾʲ	ˈboːhəɾʲ	1	88.89	0.0000	100.00
-ceithre	ˈcɛhɾʲə	ˈçɛɾʲə	2	71.43	0.4000	60.00
-Uaimh	uəvʲ	əˈn̪ˠuəvʲ	5	44.44	0.4000	60.00
-Uíbh Fhailí	iːvʲ ˈalʲiː	ˌiːvʲ ˈalʲiː	1	91.67	0.1667	83.33
-foirmiúlacht	ˈfˠɛɾʲəmʲuːlˠəxt̪ˠ	ˈfˠɔɾˠmʲuːlˠəxt̪ˠ	3	83.33	0.2000	80.00
-tá brón orm	t̪ˠɑː ˈbˠɾˠoːnˠ əɾˠəmˠ	t̪ˠɑː ˈbˠɾˠoːnˠ ɔɾˠəmˠ	1	95.45	0.1000	90.00
-Sord	sˠɔɾˠd̪ˠ	sˠauɾˠd̪ˠ	2	77.78	0.4000	60.00
-Aodhagán	ˈiːəɡɑːnˠ	ˈiːɡɑːnˠ	1	88.89	0.2000	80.00
-ghleanna	ˈjlʲan̪ˠə	ˈjlʲaːn̪ˠə	1	90.00	0.0000	100.00
+rabhamar	ˈɾˠauəmˠəɾˠ	ˈɾˠawəmˠəɾˠ	1	90.91	0.1429	85.71
+cad is ainm duit	kad̪ˠ sˠ anʲəmʲ ˈd̪ˠɪtʲ	kad̪ˠ əs ˈanʲəmʲ d̪ˠɪtʲ	4	82.61	0.0833	91.67
 ex	ɛx	ɛksˠ	3	25.00	0.6667	33.33
-Veinéis	vˈɛnʲeːʃ	ˈvʲɛnʲeːʃ	2	77.78	0.0000	100.00
-gróite	ˈɡɾˠoːtʲə	ˈɡɾˠoːtʲiː	2	80.00	0.2000	80.00
-comh	koː	kɔ	2	33.33	0.0000	100.00
-ardrí	ˌɑːɾˠˈdʲɾʲiː	ˌɑːɾˠd̪ˠˈɾˠiː	5	61.54	0.0000	100.00
-diamant	ˈdʲiəmˠən̪ˠt̪ˠ	ˈdʲiˑəmˠən̪ˠt̪ˠ	1	93.33	0.1250	87.50
-chluich	xlˠʊx	xlˠɪç	2	60.00	0.2500	75.00
-chughamsa	ˈxaiəmˠsˠə	ˈxuːmˠsˠə	3	70.00	0.4286	57.14
-coill	kɛl̠ʲ	kel̠ʲ	1	80.00	0.0000	100.00
-mucár	ˈmˠʊˌkɑːɾˠ	ˈmˠʊkˌɑːɾˠ	2	80.00	0.3333	66.67
-dein	dʲɪnʲ	ˈdʲɪnʲ	1	83.33	0.0000	100.00
-in aghaidh	ɪnʲ ˈaiə	əˈn̪ˠəi	7	12.50	0.6000	40.00
-carraig	ˈkaɾˠɪc	ˈkaːɾˠɪɟ	2	75.00	0.2000	80.00
-fungasach	ˈfˠʊŋəsˠəx	ˈfˠʊŋɡəsˠəx	1	90.91	0.1250	87.50
-tóraíocht	ˈt̪ˠoːɾˠiəxt̪ˠ	ˈt̪ˠoːɾˠiːəxt̪ˠ	1	93.33	0.0000	100.00
-cén chaoi a bhfuil tú	ceːnʲxiː əwɪlʲ ˈt̪ˠuː	ceːnˠxiː ˈwɪlʲ t̪ˠuː	3	85.71	0.0909	90.91
-meaingeal	ˈmʲaɲəlˠ	ˈmæɲɟəl	4	50.00	0.1667	83.33
-coisc	kɔʃc	kʌʃc	1	75.00	0.2500	75.00
-gach uile dhuine	ˌɡax ɪlʲə ˈɣɪnʲə	ˌxɪlʲə ˈɣɪnʲə	3	81.25	0.1818	81.82
-Nás na Ríogh	n̪ˠɑːsˠ n̪ˠə ˈɾʲiː	ˌn̪ˠɑːsˠ n̪ˠə ˈɾˠiː	2	89.47	0.1250	87.50
-chualabhair	ˈxuəlˠəuɾʲ	ˈxuəlˠəwəɾʲ	2	81.82	0.2500	75.00
-mbaile	ˈmˠalʲə	ˈmˠɑːlʲə	2	75.00	0.2500	75.00
-Meán Fómhair	ˌmʲɑːnˠ ˈfˠoːwəɾʲ	ˌmʲɑːn̪ˠ ˈfoːwəɾʲ	2	88.24	0.0000	100.00
-ghlún	ɣlˠuːn̪ˠ	ɣl̪ˠuːn̪ˠ	1	88.89	0.0000	100.00
-leic	l̠ʲɛc	l̠ɛc	1	80.00	0.0000	100.00
-goidte	ˈɡɛdʲtʲə	ˈɡɞtʲə	3	62.50	0.4000	60.00
-duabhair	ˈd̪ˠuəwəɾʲ	ˈd̪ˠuəvˠəɾʲ	2	81.82	0.1667	83.33
-geimhreadh	ˈɟɛvʲɾʲuː	ˈɟivʲɾʲuː	1	88.89	0.2000	80.00
-clabhchorda	ˈklˠəuxəːɾˠd̪ˠə	ˈklˠauˌxoːɾˠd̪ˠə	3	81.25	0.4000	60.00
-éiríonn	ˈeːɾʲiːn̪ˠ	ˈəiɾʲiːn̪ˠ	2	80.00	0.4000	60.00
-Toirdhealbhach	ˈt̪ˠɛɾʲjəl̪ˠwəx	ˈtʲɾʲɛl̪ˠax	7	53.33	0.5556	44.44
-bhFranc	wɾˠaŋk	ˈvˠɾˠaŋk	3	62.50	0.2000	80.00
-Múscraí	ˈmˠuːsˠkɾˠiː	mˠuːz̪ˠˈɡɾˠiː	5	61.54	0.3333	66.67
-láithreach stairiúil	ˌl̪ˠɑːhɾʲəx ˈsˠt̪ˠaɾʲuːlʲ	ˌl̪ˠɑːɾʲʲəx ˈsˠtˠaɾʲuːlʲ	3	88.00	0.0769	92.31
-tambóirín	ˈt̪ˠamˠəbˠoːɾʲiːnʲ	ˈt̪ˠamˠbˠoːɾʲiːnʲ	1	94.44	0.1111	88.89
-banna	ˈbˠan̪ˠə	ˈbˠanˠə	1	87.50	0.0000	100.00
-ionadaí	ˈinˠəd̪ˠiː	ˈi.ɴˠə.dˠiː	4	63.64	0.2000	80.00
-Aoine an Chéasta	ˌiːnʲə ənˠ ˈçeːsˠt̪ˠə	ˌiːnʲə ˈçeːsˠt̪ˠə	4	80.95	0.1818	81.82
-deirteá	ˈdʲɛɾˠtʲɑː	ˈdʲɛɾʲtʲɑː	1	90.00	0.0000	100.00
-easóg	ˈasˠoːɡ	ˈaːsˠoːɡ	1	87.50	0.0000	100.00
-te	tʲɛ	tʲe	1	66.67	0.0000	100.00
-inár	ˈɪnˠɑːɾˠ	ɪˈnˠaːɾˠ	3	62.50	0.2500	75.00
-dearmadacha	ˈdʲaɾˠəmˠəd̪ˠəxə	ˈdʲaɾˠmˠəd̪ˠəx	2	87.50	0.2000	80.00
-bheifeá	ˈvʲɛfʲɑː	ˈvʲɛhɑː	2	75.00	0.2500	75.00
-bádóireacht	ˈbˠɑːd̪ˠoːɾʲəxt̪ˠ	ˈbˠɑːdoːɾʲəxt̪ˠ	2	88.24	0.0000	100.00
-de Búrca	dʲəˈbˠuːɾˠkə	d̪ˠəˈbˠuːɾˠkə	2	84.62	0.0000	100.00
-cóngarach	ˈkoːŋəɾˠəx	ˈkoːŋɡəɾˠəx	1	90.91	0.1250	87.50
-guidte	ˈɡɪdʲtʲə	ˈɡɪtʲə	2	75.00	0.2000	80.00
-donnrua	ˈd̪ˠʊn̪ˠɾˠuə	ˈd̪ˠɔn̪ˠˌɾˠuə	2	84.62	0.2857	71.43
-Parthalán	ˈpˠaɾˠhəlˠɑːnˠ	ˈpˠɑɾˠhəlˠɑːnˠ	1	92.86	0.1250	87.50
-grianghraf	ˈɟɾʲiən̪ˠɣɾˠəfˠ	ˈɟɾʲiənˠˌɣɾˠafˠ	3	80.00	0.2000	80.00
-cúntóir	ˈkuːn̪ˠt̪ˠoːɾʲ	ˈkuːnˠt̪ˠoːɾʲ	1	92.86	0.0000	100.00
-gríos	ɟɾʲiːsˠ	ɡɾʲɪsˠ	3	57.14	0.0000	100.00
-déanadh	ˈdʲeːnˠə	ˈdʲeːnˠəx	1	88.89	0.2000	80.00
-beirbhiughadh	ˈbʲɛɾʲəvʲəə	ˈbʲɛɾʲuː	5	54.55	0.5714	42.86
-anglais	ˈɪŋlˠəʃ	ˈaŋɡlˠəʃ	2	75.00	0.3333	66.67
-fiastalach	ˈfʲiəsˠt̪ˠəlˠəx	ˈfʲiəsˠt̪ˠələx	1	93.33	0.0000	100.00
-daichead	ˈd̪ˠaçəd̪ˠ	ˈd̪ˠa.çəd̪ˠ	1	90.91	0.0000	100.00
-dortha	ˈd̪ˠɔɾˠhə	ˈd̪ˠʌɾˠhə	1	88.89	0.2000	80.00
-cé gur	ceːˈɡʊɾˠ	ˈceːɡəɾˠ	3	62.50	0.2000	80.00
-bhfuáil	wuɑːlʲ	ˈwuːaːlʲ	3	62.50	0.2500	75.00
-Fionnghall	ˈfʲɪn̪ˠɣəl̪ˠ	fʲuːnɣal	8	33.33	0.3333	66.67
-taidhleoir	ˈt̪ˠɑːjlʲoːɾʲ	ˈt̪ˠailʲoːɾʲ	3	76.92	0.3333	66.67
-confach	ˈkɔnˠəfˠəx	ˈkʊnˠəfˠəx	1	90.00	0.1429	85.71
-vác	vɑːk	wɑːk	1	75.00	0.3333	66.67
-thiocfainn	ˈhʊkfˠən̠ʲ	hʊkən̠ʲ	3	70.00	0.1667	83.33
-amhairc	ˈəuɾʲc	ˈafˠɪɾʲc	4	50.00	0.6000	40.00
-carria	ˈkaɾˠiə	ˈkaɾˠiː	1	85.71	0.2000	80.00
-amhráin	ˈəuɾˠɑːnʲ	ˈoːɾˠɑːnʲ	2	77.78	0.4000	60.00
-aníos	əˈnʲiːsˠ	əˈn̠ʲiːsˠ	1	88.89	0.0000	100.00
-ciumhais	ˈcəuʃ	cuːʃ	3	40.00	0.2500	75.00
-Shligigh	ˈhl̠ʲɪɟɪ	ˈhlʲɪɟiː	3	62.50	0.0000	100.00
-amharc	ˈəuɾˠk	ˈaːfˠɾˠək	5	44.44	0.6000	40.00
-Victeoiria	vˈɪctʲoːɾʲiə	vʲɪcˈtʲoːɾʲiə	2	84.62	0.0000	100.00
-cónaí	ˈkuːn̪ˠiː	ˈkuːnˠiː	1	88.89	0.0000	100.00
-geimhriú	ˈɟɛvʲɾʲuː	ɟiːvʲɾʲuː	3	66.67	0.2000	80.00
-bean rialta	bʲanˠ ˈɾʲiəl̪ˠt̪ˠə	ˌbʲanˠ ˈɾˠiəl̪ˠt̪ˠə	2	89.47	0.1000	90.00
-hAlbain	ˈhalˠəbˠənʲ	ˈhaləbˠənʲ	1	90.91	0.0000	100.00
-bricfásta	ˈbʲɾʲɪkɑːsˠt̪ˠə	ˈbʲɾʲɪcfˠɑːsˠt̪ˠə	3	82.35	0.1111	88.89
-inseoidh	ˈin̠ʲʃə	ˈinʲʃoː	3	57.14	0.2500	75.00
-bheirtear	ˈvʲɛɾˠtʲəɾˠ	ˈvʲɛɾʲhəɾˠ	3	72.73	0.1667	83.33
-foraois	ˈfˠɔɾˠiːʃ	ˈfɔɾˠiːʃ	1	88.89	0.0000	100.00
-íocaíocht	ˈiəkiəxt̪ˠ	ˈiːkiəxt̪ˠ	1	90.00	0.1429	85.71
--ófar	ohəɾˠ	oˠhəɾˠ	1	83.33	0.0000	100.00
-ar scáth a	ɛɾʲˈsˠkɑːh ə	ɛɾʲˈsˠkɑːə	2	83.33	0.1429	85.71
-istigh	ˈɪʃtʲiː	əʃˈtʲiː	3	57.14	0.2500	75.00
-bhfeighil	vʲɪəlʲ	vʲəilʲ	2	66.67	0.5000	50.00
-ainrialaí	ˈan̠ʲɾʲiəlˠiː	ˈanʲˌɾˠiəlˠiː	3	76.92	0.1250	87.50
-geallaim	ˈɟal̪ˠəmʲ	ˈɟaːl̪ˠəmʲ	1	90.00	0.0000	100.00
-agam	uɡəmˠ	ˈuɡəmˠ	1	83.33	0.0000	100.00
-diabhal	ˈdʲiəwəlˠ	ˈdʲauəlˠ	3	66.67	0.5000	50.00
-gabháltas	ˈɡəuɑːl̪ˠt̪ˠəsˠ	ˈɡoːl̪ˠt̪ˠəsˠ	3	80.00	0.3750	62.50
-éadóchasach	ˈeːd̪ˠoːxəsˠəx	ˈeːd̪ˠoːxːəsˠəx	1	93.33	0.1111	88.89
-lárthosaí	ˈl̪ˠɑːɾˠhəsˠiː	ˈl̪ˠɑːɾˠˌhɔsˠiː	2	86.67	0.2500	75.00
-óinseacha	ˈoːn̠ʲʃəxə	ˈoːɲʃəxə	3	70.00	0.0000	100.00
-clabhtaí	ˈklˠəut̪ˠiː	ˈklˠaut̪ˠiː	1	90.91	0.1667	83.33
-coisrig	ˈkɔʃɾʲɪɟ	ˈkɔʃɾʲɪc	1	87.50	0.1667	83.33
-piocóid	ˈpʲɪkoːdʲ	ˈpʲʊkoːdʲ	1	88.89	0.2000	80.00
-aneas	əˈnʲasˠ	əˈn̠ʲasˠ	1	87.50	0.0000	100.00
+díghalraigh	ˈdʲiːɣəl̪ˠɾˠiː	dʲiˈɣɑl̪ˠˌɾˠiː	4	71.43	0.2500	75.00
+deoch	dʲoːx	dʲox	1	80.00	0.0000	100.00
+mhná	vˠn̪ˠɑː	vˠɾˠɑː	2	71.43	0.3333	66.67
 féinfhostaithe	ˈfʲeːnˠəsˠt̪ˠɪhə	ˈfʲeːnʲosˠt̪ˠəhə	3	81.25	0.2222	77.78
-crosta	ˈkɾˠɔsˠt̪ˠə	ˈkrˠɔs̪ˠt̪ˠə	2	83.33	0.0000	100.00
-comrádaí	ˈkɔmˠɾˠɑːd̪ˠiː	kumˠˈɾˠɑːd̪ˠiː	3	78.57	0.1429	85.71
-fear sneachta	fʲaɾˠ ˈʃnʲaxt̪ˠə	fʲaɾˠ ˈʃn̠ʲaxt̪ˠə	1	94.12	0.0000	100.00
-Fionnghuala	ˈfʲɪn̪ˠuəlˠə	fʲɪn̪ˠˈuːəlˠə	3	76.92	0.0000	100.00
-meán oíche	ˌmʲɑːnˠ ˈiːçə	mʲɑːnˠ ˈiːhə	2	84.62	0.2857	71.43
-hadharca	ˈhaiəɾˠkə	ˈhəiəɾˠkə	1	88.89	0.1429	85.71
-n-oilfeadh	ˈn̪ˠɛl̠ʲhu	ˈn̪ˠɛlʲhu	1	90.00	0.0000	100.00
-ins	ɪn̠ʲʃ	ɪnˠsˠ	3	40.00	0.0000	100.00
-fhios	iɔsˠ	ɪsˠ	2	50.00	0.3333	66.67
-d'oilfeadh	ˈd̪ˠɛl̠ʲhu	ˈd̪ˠɛlʲhu	1	90.00	0.0000	100.00
-taoschnó	ˈt̪ˠiːˌsˠˌxɾˠoː	ˈt̪ˠiːsˠˌxɾˠoː	1	93.33	0.1250	87.50
-cú dobhráin	kuː ˈd̪ˠəuɾˠɑːnʲ	kuː ˈd̪ˠoʊ.ɾaːnʲ	5	68.75	0.2500	75.00
-Indiacha	ˈɪn̠ʲdʲiəxə	ˈinʲiəxə	4	63.64	0.1429	85.71
-ina dhiaidh sin	ˌɪnˠə jiə ˈʃɪnʲ	ɪnˠə ˈjiə ʃinʲ	4	73.33	0.1000	90.00
-saghas	ˈsˠaiəsˠ	sˠəisˠ	3	62.50	0.4000	60.00
-abhaill	ˈəul̠ʲ	ˈəuwəl̠ʲ	2	75.00	0.4000	60.00
-dá bhrí sin	d̪ˠɑː vʲɾʲiː ˈʃɪnʲ	d̪ˠɑː ˈvʲɾʲiː ʃɪnʲ	2	88.89	0.0000	100.00
-leis	lʲɛʃ	l̠ʲɛʃ	1	80.00	0.0000	100.00
-macánta	ˈmˠakɑːn̪ˠt̪ˠə	ˈmakɑːn̪ˠt̪ˠə	1	92.86	0.0000	100.00
-cuideachtúil	ˈkɪdʲəxt̪ˠuːlʲ	ˈkudʲəxt̪ˠuːlʲ	1	92.86	0.1250	87.50
-fianaise	ˈfʲiənˠəʃə	ˈfʲiːnˠɪʃə	2	80.00	0.2857	71.43
-Danmhairgis	ˈd̪ˠanˠəwəɾʲɟɪʃ	ˈd̪ˠanˠwaɾʲɪɟɪʃ	3	80.00	0.3000	70.00
-Afganastáin	ˈafˠɡənˠəsˠt̪ˠɑːnʲ	afˠˈɡan̪ˠəsˠt̪ˠɑːnʲ	4	78.95	0.1000	90.00
-tobac	ˈt̪ˠɔbˠək	t̪ˠəˈbˠak	4	55.56	0.4000	60.00
-dearthár	ˈdʲaɾˠhɑːɾˠ	ˈdʲaɾˠhaɾˠ	2	81.82	0.1667	83.33
-cloigín	ˈklˠɛɟiːnʲ	ˈklˠoɡiːnʲ	2	80.00	0.1667	83.33
-duille	d̪ˠəlʲə	d̪ˠɪlʲə	1	85.71	0.2500	75.00
-gaothrán	ˈɡiːhɾˠɑːn̪ˠ	ˈɡiːɾ̥ˠɑːn̪ˠ	2	83.33	0.3333	66.67
-dúigh	d̪ˠuː	d̪ˠuːj	1	83.33	0.3333	66.67
-Carghas	ˈkaɾˠəsˠ	ˈkaɾˠiːsˠ	2	77.78	0.2000	80.00
-Muileann gCearr	ˌmˠɪlʲən̪ˠ ˈɟaɾˠ	ənˠ ˌmˠɪlʲən̪ˠ ˈɟɑːɾˠ	6	71.43	0.2727	72.73
-Corn na Breataine	koːɾˠn̪ˠ n̪ˠə ˈbʲɾʲat̪ˠənʲə	kɔrˠnˠ nˠə ˈbʲrʲatˠənʲə	7	74.07	0.0000	100.00
-puint	pˠənʲtʲ	pˠɪnʲtʲ	1	85.71	0.2500	75.00
-coireanna	ˈkɛɾʲən̪ˠə	ˈkɛɾʲənˠə	1	90.00	0.0000	100.00
-cruitchlár	ˈkɾˠʊt̪ˠxlˠɑːɾˠ	ˈkɾˠɪtʲˌxlˠɑːɾˠ	3	80.00	0.2222	77.78
-lem	l̠ʲɪmʲ	lʲɛmˠ	3	50.00	0.3333	66.67
-splanc	sˠpˠlˠaŋk	sˠpˠl̪ˠaːŋk	2	81.82	0.0000	100.00
-dem	dʲɪmʲ	dʲɛmˠ	2	60.00	0.3333	66.67
-cén uair	ceːnʲˈuəɾʲ	ceːˈn̪ˠuəɾʲ	3	72.73	0.0000	100.00
-Bolcán	ˈbˠɔlˠkɑːnˠ	ˈbɔlˠkɑːnˠ	1	90.91	0.0000	100.00
-cheana	ˈçanˠə	ˈhanˠə	1	83.33	0.2500	75.00
-seod	ʃoːd̪ˠ	ʃoːd̪	1	83.33	0.0000	100.00
-banana	ˈbˠanˠənˠə	bˠəˈn̪ˠan̪ˠə	6	50.00	0.3333	66.67
-saighdiúir	ˈsˠəidʲuːɾʲ	ˈsˠaidʲuːɾʲ	1	90.91	0.1667	83.33
-leamh	ˈl̠ʲəu	ˈl̠ʲavˠ	3	57.14	0.6667	33.33
-bolcán	ˈbˠɔlˠkɑːnˠ	ˈbɔlˠkɑːnˠ	1	90.91	0.0000	100.00
-bronntanas	ˈbˠɾˠʊn̪ˠt̪ˠənˠəsˠ	ˈbˠɾˠuːn̪ˠt̪ˠənˠəsˠ	2	89.47	0.0000	100.00
-comhréireach	ˈkɪɾʲeːɾʲəx	ˈkˠoːɾˠeːɾʲəxˠ	5	64.29	0.1429	85.71
-ar dtús	ɛɾʲˈd̪ˠuːsˠ	əɾˠˈd̪ˠuːsˠ	2	81.82	0.2000	80.00
-géagláidir	ˈɟeːɡlˠɑːdʲəɾʲ	ˈɟeːɡˌl̪ˠɑːdʲɪɾʲ	3	81.25	0.2222	77.78
-sleamhain	ˈʃl̠ʲəunʲ	ˈʃl̠ʲãuwənʲ	3	72.73	0.4286	57.14
-adamh	ˈad̪ˠuː	ˈɑd̪ˠəvˠ	4	50.00	0.7500	25.00
-fhéin	eːnʲ	heːnʲ	1	80.00	0.3333	66.67
--fá	fˠɑː	fˠaː	1	75.00	0.5000	50.00
-t-arán	ˈt̪ˠaɾˠɑːnˠ	ˈt̪ˠɾˠɑːnˠ	1	90.91	0.2000	80.00
-sa mbaile	sˠə mˠəˈalʲə	sˠə ˈmˠalʲə	3	75.00	0.1429	85.71
-bunábhar	ˈbˠʊnˠɑːwəɾˠ	ˈbˠʊnˠˌɑːwəɾˠ	1	92.31	0.1250	87.50
-díon as	ˈdʲiːnˠ asˠ	ˈdʲiːnˠ æsˠ	1	90.91	0.0000	100.00
+ionadaí	ˈinˠəd̪ˠiː	ˈi.ɴˠə.dˠiː	4	63.64	0.2000	80.00
+n-iasc	n̠ʲiəsˠk	n͈ʲiəsˠk	1	87.50	0.1667	83.33
+Tadhg	t̪ˠəɡ	t̪ˠaiəɡ	2	71.43	0.4000	60.00
+cantal	ˈkan̪ˠt̪ˠəl̪ˠ	ˈkanˠtˠəl̪ˠ	2	84.62	0.0000	100.00
+Raeta-Rómáinsis	ˈɾˠeːt̪ˠəˌɾˠoːmˠɑːn̠ʲʃɪʃ	ˈɾˠeːtˠəroːˌmˠaːnʲʃɪʃ	7	70.83	0.2308	76.92
+fhianaise	ˈiənˠəʃə	ˈiːnˠɪʃə	2	75.00	0.3333	66.67
+arán	ˈaɾˠɑːnˠ	ˈɾˠɑːnˠ	1	87.50	0.2500	75.00
+Laighin	l̪ˠəənʲ	l̪ˠəinʲ	1	85.71	0.2500	75.00
+éileamh	ˈeːlʲəu	ˈeːlʲuː	2	71.43	0.2500	75.00
+traidisiún	ˈt̪ˠɾˠadʲɪʃuːnˠ	t̪ˠɾˠəˈdʲɪʃuːnˠ	3	80.00	0.1250	87.50
+seasamh	ˈʃasˠuː	ˈʃasˠəvˠ	3	62.50	0.4000	60.00
+fodhuine	ˈfˠuːənʲə	ˈfˠɔɣɪnʲə	3	66.67	0.5000	50.00
+badhbh	bˠəw	bˠəivˠ	3	50.00	0.5000	50.00
+iomrall	ˈʊmˠɾˠəl̪ˠ	ˈʊmˠəɾˠəl̪ˠ	1	90.91	0.1667	83.33
+laghairt	ˈl̪ˠaiəɾˠtʲ	l̪ˠəiɾˠtʲ	3	72.73	0.3333	66.67
+d'fhulaing	ˈd̪ˠʊlˠəŋ	ˈd̪ˠʊlˠən̠ʲ	3	72.73	0.0000	100.00
+inné	ˈɪn̠ʲeː	əˈn̠ʲeː	2	71.43	0.3333	66.67
+fiántas	ˈfʲiɑːn̪ˠt̪ˠəsˠ	ˈfʲi.ɑːn̪ˠt̪ˠəsˠ	1	93.75	0.0000	100.00
+Claíomh Solais	ˌklˠiːəu ˈsˠɔlˠəʃ	klˠiːvˠ ˈsˠɔl̪ˠəʃ	4	76.47	0.2727	72.73
+críochnaím	ˈcɾʲiəxɾˠiːmʲ	ˈcɾʲiəxn̪ˠiːmʲ	2	85.71	0.1250	87.50
+Gaedhlaing	ˈɡeːlˠəŋ	ˈɡeːlɪɲ	3	62.50	0.2000	80.00
+shleamhna	ˈhl̠ʲəun̪ˠə	ˈhlʲãun̪ˠə	2	81.82	0.1667	83.33
+Ruadhán	ˈɾˠuəɑːnˠ	ˈɾˠuːɑːnˠ	1	88.89	0.2000	80.00
+Port an Dúnáin	pˠɔɾˠt̪ˠ ənˠ ˈd̪ˠuːnˠɑːnʲ	pˠɔɾˠt̪ˠ ə ˈd̪ˠuːnˠɑːnʲ	2	92.00	0.0909	90.91
+-na	n̪ˠa	n̪ˠə	1	75.00	0.5000	50.00
+ar aon chaoi	ɛɾʲiːnˠ ˈxiː	ɛɾʲ eː ˈxiː	4	66.67	0.3333	66.67
+duán	d̪ˠuɑːnˠ	ˈd̪ˠuːɑːnˠ	2	80.00	0.0000	100.00
+dronuilleog	ˈd̪ˠɾˠɔnˠəl̠ʲoːɡ	ˈd̪ˠɾɔnˠˌɪl̠ʲoːɡ	3	81.25	0.2222	77.78
+bheifeá	ˈvʲɛfʲɑː	ˈvʲɛhɑː	2	75.00	0.2500	75.00
+cuán	kuɑːnˠ	ˈkuː.ɑːnˠ	3	66.67	0.0000	100.00
 claíomh	ˈklˠiːəu	ˈkl̪ˠaːvʲə	5	50.00	0.6000	40.00
-bearna mhíl	ˌbʲɑːɾˠn̪ˠə ˈvʲiːlʲ	ˈbʲaːɾˠn̪ˠə ˈvʲiːlʲ	2	89.47	0.2222	77.78
-ar nós	ɛɾʲˈn̪ˠuːsˠ	əɾˠˈn̪ˠuːsˠ	2	81.82	0.2000	80.00
-leoraís	ˈl̠ʲoːɾˠəʃ	lʲɔɾˠiːsˠ	8	20.00	0.2000	80.00
-duibheagán	ˈd̪ˠɪvʲəɡɑːn̪ˠ	ˈd̪ˠivʲəɡɑːn̪ˠ	1	92.86	0.0000	100.00
-ghnách	ɣn̪ˠɑːx	ɣnˠɑːx	1	85.71	0.0000	100.00
-díolaim	ˈdʲiːlˠəmʲ	ˈdʲiːl̪əmʲ	1	90.00	0.0000	100.00
-cealg	ˈcalˠəɡ	ˈcal̪ˠəɡ	1	87.50	0.0000	100.00
-gairleog	ˈɡaːɾʲlʲoːɡ	ˈɡaɾʲlʲoːɡ	1	90.91	0.0000	100.00
-ceilg	ˈcɛlʲəc	ˈcɛlʲɪɟ	2	71.43	0.4000	60.00
-athair	ˈæhəɾʲ	ˈæhæɾʲ	1	83.33	0.2500	75.00
-Lá Fhéile Pádraig	l̪ˠɑː eːlʲə ˈpˠɑːd̪ˠɾˠɪc	ˌl̪ˠɑː ˌeːlʲə ˈpˠɑːɾˠɪc	5	79.17	0.2500	75.00
-n-airdí	ˈn̪ˠɑːɾˠdʲiː	ˈn̪ˠaːɾˠdʲiː	1	91.67	0.2000	80.00
-iníon	ˈɪnʲiːnˠ	nʲiːnˠ	2	75.00	0.2500	75.00
-mungarlach	ˈmˠʊŋəːɾˠl̪ˠəx	ˈmˠʊŋɡəɾˠl̪ˠəx	2	85.71	0.2222	77.78
-seilg	ˈʃɛlʲəc	ˈʃɛlʲɪɟ	2	71.43	0.4000	60.00
-den	dʲɪnʲ	dʲənˠ	2	60.00	0.3333	66.67
+inniu	ˈɪn̠ʲə	əˈn̠ʲu	3	50.00	0.6667	33.33
+seó	ʃeoː	ʃoː	1	75.00	0.3333	66.67
+dháréag	ˈɣɑːɾʲeːɡ	ɣɑːˈɾˠeːɡ	3	66.67	0.0000	100.00
+nimh	n̠ʲəi	n̠ʲɪvʲ	3	50.00	0.6667	33.33
+Cheatharlach	ˈçahəːɾˠl̪ˠəx	ˈçahəɾˠl̪ˠəx	1	92.31	0.1111	88.89
+comh	koː	kɔ	2	33.33	0.0000	100.00
+roimhe	ˈɾˠɛvʲə	ˈɾˠivʲə	1	85.71	0.2500	75.00
+cirte	ˈcɪɾˠtʲə	ˈcɨ̞ɾˠtʲə	2	77.78	0.3333	66.67
+bunadh	ˈbˠʊnˠuː	ˈbˠunˠuː	1	87.50	0.0000	100.00
+bricfeasta	ˈbʲɾʲɪcfʲəsˠt̪ˠə	ˈbʲɾʲɪcˌfʲasˠt̪ˠə	2	88.24	0.2000	80.00
+d'íosfaí	ˈdʲiːsˠfˠiː	ˈdʲiːsˠfʲiː	1	90.91	0.0000	100.00
+seangaire	ˈʃaŋəɾʲə	ˈʃanˠəɡəɾʲə	4	63.64	0.2500	75.00
+Dubhghus	ˈd̪ˠəuɣəsˠ	ˈd̪ˠuːɣusˠ	3	70.00	0.3333	66.67
+Nás na Ríogh	n̪ˠɑːsˠ n̪ˠə ˈɾʲiː	ˌn̪ˠɑːsˠ n̪ˠə ˈɾˠiː	2	89.47	0.1250	87.50
+muirnín	ˈmˠiːɾˠn̠ʲiːn̠ʲ	ˈmˠuːɾˠn̠ʲiːnʲ	2	86.67	0.1667	83.33
+amha	ˈauə	ˈawə	1	75.00	0.3333	66.67
+ceithre	ˈcɛhɾʲə	ˈçɛɾʲə	2	71.43	0.4000	60.00
+Nás	ˈn̪ˠɑːsˠ	əˈn̪ˠɑːsˠ	1	88.89	0.2500	75.00
 bhfuiltear	ˈwɪl̠ʲtʲəɾˠ	ˈwɪl̠ʲtʲəɾʲ	1	90.91	0.0000	100.00
-Alban	ˈalˠəbˠənˠ	ˈaləbˠənˠ	1	90.00	0.0000	100.00
-aerga	ˈeːɾˠəɡə	ˈeːɾˠɡə	1	87.50	0.2000	80.00
-ríomhchláraitheoir	ˈɾˠiːvˠxlˠɑːɾˠəhoːɾʲ	ɾˠiːvˠˈxlˠaːɾˠəhoːɾʲ	3	85.00	0.0909	90.91
-grianmhar	ˈɟɾʲiən̪ˠwəɾˠ	ˈɟɾʲiən̪ˠvˠəɾˠ	2	85.71	0.1250	87.50
-Iarmhí	ˌiəɾʲˈvʲiː	əˌn̠ʲiəɾˠˈvʲiː	5	64.29	0.2500	75.00
-achoimre	ˈaxəmʲɾʲə	ˈaˌxɪmʲɾʲə	2	80.00	0.2857	71.43
-crosaire	ˈkɾˠɔsˠəɾʲə	ˈkɾˠɔsəɾʲə	1	90.91	0.0000	100.00
-adharca	ˈaiəɾˠkə	ˈəiəɾˠkə	1	87.50	0.1667	83.33
-beathaisnéisí	ˈbʲahəʃnʲeːʃiː	ˈbʲahɑʃnʲeːʃiː	1	92.86	0.1111	88.89
-iníona	ˈinʲiːnˠə	ˈinʲiːnˠiː	2	80.00	0.2000	80.00
-vóta	vˈoːt̪ˠə	ˈwoːt̪ˠə	2	75.00	0.2500	75.00
-foréigean	ˈfˠɪɾʲeːɟənˠ	fˠɔɾˠˈeːɟɪnˠ	5	58.33	0.2857	71.43
-grian-	ɟɾʲiənˠ	ɟɾʲiənʲ	1	85.71	0.0000	100.00
-déan as	ˈdʲeːnˠ asˠ	ˈdʲiːnˠ æsˠ	2	81.82	0.2000	80.00
-siamban	ˈʃiəmˠbˠənˠ	ʃiəmʲbˠan̠ʲ	5	54.55	0.1429	85.71
-Oíche Inide	ˌiːçə ˈɪnʲədʲə	ˈiːç ˈɪnʲədʲə	2	85.71	0.2222	77.78
-Latharna	ˈl̪ˠahəːɾˠn̪ˠə	ˈl̪ˠahəɾˠn̪ˠə	1	92.86	0.1250	87.50
-Sheáin	hɑːnʲ	çɑːnʲ	1	80.00	0.3333	66.67
--tá	t̪ˠɑː	t̪ˠaː	1	80.00	0.5000	50.00
-bacáil	ˈbˠækɑːlʲ	ˈbˠakælʲ	3	66.67	0.2000	80.00
-barrchith	ˈbˠaɾˠəçə	ˈbˠɑːɾˠçɪ	4	55.56	0.5000	50.00
-gearrcach	ˈɟaɾˠkəx	ˈɟɑːɾˠkəx	2	77.78	0.1667	83.33
-gearrán	ˈɟaɾˠɑːn̪ˠ	ɟəˈɾˠɑːn̪ˠ	3	70.00	0.2000	80.00
-éagrábhadh	ˈeːɡɾˠɑːwə	ˈeːkɾˠɑːvˠ	3	70.00	0.5000	50.00
-Nollaig	ˈn̪ˠɔl̪ˠɪc	ˈn̪ˠol̪ˠəc	2	80.00	0.2000	80.00
-bóín Dé	bʲjoːnʲ ˈdʲeː	ˈbˠoːiːnʲ ˈdʲeː	5	66.67	0.3333	66.67
--san	sˠanˠ	sˠənˠ	1	80.00	0.3333	66.67
-aontaím	ˈiːn̪ˠt̪ˠəmʲ	ˈiːn̪ˠt̪ˠiːmʲ	2	84.62	0.2000	80.00
-seanmhná	ˈʃanˠəvˠn̪ˠɑː	ˈʃanˠˌvˠnˠɑː	2	84.62	0.1429	85.71
-leithscéal	ˈl̠ʲɛhʃceːlˠ	ˈl̠ʲeʃceːlˠ	2	83.33	0.1429	85.71
+dáréag	ˈd̪ˠɑːɾʲeːɡ	d̪ˠɑːˈɾˠeːɡ	3	72.73	0.0000	100.00
 Daidí na Nollag	ˌd̪ˠadʲiː n̪ˠə ˈn̪ˠoːl̪ˠəɡ	ˌd̪ˠadʲiː n̪ˠə ˈnˠɔl̪ˠəɡ	3	88.46	0.0000	100.00
-bheireas	ˈvʲɛɾʲəsˠ	ˈvʲɛɾʲəs̪ˠ	1	90.00	0.0000	100.00
-Frainc	fˠɾˠaɲc	fˠɾˠæɲc	1	85.71	0.0000	100.00
-gráigh	ɡɾˠə	ɡɾˠɑː	2	60.00	0.3333	66.67
-Gaedhilge	ˈɡeːjəlʲɟɪ	ˈɡeːlʲɟə	3	70.00	0.4286	57.14
-'spáin	sˠpˠɑːnʲ	spˠɑːnʲ	1	87.50	0.0000	100.00
-Baile Nua na hArda	ˌbˠalʲə n̪ˠuə n̪ˠə ˈhɑːɾˠd̪ˠə	ˌbˠalʲə ˌn̪ˠuː n̪ˠə ˈhɑːɾˠd̪ˠə	2	93.33	0.1333	86.67
-ar an ásc sin	ɛɾʲ ənˠ ɑːsˠk ˈʃɪnʲ	ɛɾʲ ənˠ ˈɑːsk ʃɪnʲ	3	84.21	0.0000	100.00
 féich	fʲeː	fʲeːç	1	80.00	0.3333	66.67
-phingin	ˈfʲɪɲənʲ	fʲiːn̠ʲ	5	37.50	0.4000	60.00
-Eibhlín	ˈɛvʲlʲiːnʲ	ˈɛvʲəlʲiːnʲ	1	90.91	0.1667	83.33
-buanfas	ˈbˠuən̪ˠhəsˠ	ˈbˠuənˠfˠəsˠ	3	75.00	0.1429	85.71
-airsean	ˈaɾˠʃənˠ	ˈɛɾʲʃənˠ	2	75.00	0.2000	80.00
-Sinn Féin	ʃɪn̠ʲ ˈfʲeːnʲ	ʃɪnʲ fʲeːnʲ	2	84.62	0.0000	100.00
-Fionlainn	ˈfʲɪn̪ˠlˠən̠ʲ	ˈfʲɪnlˠən̠ʲ	2	84.62	0.0000	100.00
-cuir i gcás	kɪɾʲ əˈɡɑːsˠ	ˌkɪɾʲ ə ˈɡɑːsˠ	2	85.71	0.1250	87.50
-labhairt	ˈl̪ˠauəɾˠtʲ	l̪ˠauɾʲtʲ	3	72.73	0.1667	83.33
-chealg	ˈçalˠəɡ	ˈçal̪ˠəɡ	1	87.50	0.0000	100.00
-gaimbín	ˈɡamʲəbʲiːnʲ	ˈɡamʲbʲiːnʲ	1	91.67	0.1429	85.71
+ficheall	ˈfʲɪçəl̪ˠ	ˈfʲɪhəl̪ˠ	1	88.89	0.2000	80.00
+ghnáth	ɣn̪ˠɑː	ɣnˠɑː	1	83.33	0.0000	100.00
+i mbun	əmˠəˈunˠ	əˈmˠunˠ	3	62.50	0.2000	80.00
+ba	bˠə	bˠaː	2	50.00	0.5000	50.00
+gearrán	ˈɟaɾˠɑːn̪ˠ	ɟəˈɾˠɑːn̪ˠ	3	70.00	0.2000	80.00
+paindéim	ˈpˠan̠ʲdʲeːmʲ	pˠanʲ.dʲeːmʲ	3	76.92	0.0000	100.00
+cúlán	ˈkuːlˠaːnˠ	ˈkuːlaːn	2	80.00	0.0000	100.00
+tuar ceatha	t̪ˠuəɾˠ ˈcahə	ˈt̪ˠuəɾˠ ˈcahə	1	92.86	0.0000	100.00
+god é	ɡɔd̪ˠ ˈeː	ɡəˈd̪ˠeː	4	55.56	0.2500	75.00
+turaire	ˈt̪ˠʊɾˠəɾʲə	t̪ˠʊɾˠɪɾʲə	2	81.82	0.1667	83.33
+Bandan	ˈbˠan̪ˠd̪ˠənˠ	bˠɑn̪ˠd̪ˠən̪ˠ	3	76.92	0.1667	83.33
+luaidhim	ˈl̪ˠuəjəmʲ	l̪ˠuəmʲ	3	70.00	0.3333	66.67
+chugham	ˈxaiəmˠ	xuːmˠ	4	42.86	0.6000	40.00
+T-léine	ˈtʲlʲeːnʲə	t̪ˠiː ˈl̠ʲeːnʲə	8	46.67	0.1667	83.33
+fhéin	eːnʲ	heːnʲ	1	80.00	0.3333	66.67
+gearrthacha	ˈɟaɾˠhəxə	ˈɟaːrˠhəxə	2	80.00	0.0000	100.00
+cainteanna	ˈkan̠ʲtʲən̪ˠə	kan̠ʲtʲənə	3	76.92	0.0000	100.00
+Ceatharlach	ˈcahəːɾˠl̪ˠəx	ˈcahəɾˠl̪ˠəx	1	92.31	0.1111	88.89
+limis	ˈl̠ʲɪmʲɪʃ	ˈl̠ʲɪ.mʲɪʃ	1	90.00	0.0000	100.00
+ollbhua	ˈɔl̪ˠəwuə	ˈɔl̪ˠˌwuə	1	88.89	0.1667	83.33
+rugadar	ˈɾˠʊɡəd̪ˠəɾˠ	ˈɾˠʊɡədˠəɾˠ	1	91.67	0.0000	100.00
+baineannach	ˈbˠanʲən̪ˠəx	ˈbˠanʲənˠəx	1	91.67	0.0000	100.00
+bhímis	ˈvʲiːmʲɪʃ	vʲiːmʲəʃ	2	77.78	0.2000	80.00
+ar dtúis	ɛɾʲˈd̪ˠuːʃ	ɛɾˠˈd̪ˠuːʃ	1	90.00	0.0000	100.00
+ar a laghad	ɛɾʲ əˈl̪ˠaiəd̪ˠ	ˌɛɾʲəˈl̪ˠəid̪ˠ	4	73.33	0.3750	62.50
+cúinge	ˈkuːɲə	ˈkuːɲɪ	1	83.33	0.2500	75.00
+-imis	ɪmʲɪʃ	əmʲəʃ	2	60.00	0.5000	50.00
+Fórsa Cosanta Áitiúil	ˌfˠoːɾˠsˠə kɔsˠən̪ˠt̪ˠə ˈɑːtʲuːlʲ	ˈfˠoːɾˠsˠə ˈkɔsˠən̪ˠt̪ˠə ˈaːtʲuːlʲ	3	91.18	0.1176	88.24
+eochair	ˈoːxəɾʲ	ˈɔxəɾʲ	2	71.43	0.0000	100.00
+Vallúinis	vˈal̪ˠuːnʲɪʃ	wal̪ˠuːnʲɪʃ	2	83.33	0.1429	85.71
+shnua	hn̪ˠuə	hn̪ˠuː	1	83.33	0.2500	75.00
+scamhóg	ˈsˠkəuoːɡ	ˈsˠkaːwoːɡ	3	70.00	0.3333	66.67
+fiafheoil	ˈfʲiˌəoːlʲ	ˈfʲiəˌoːlʲ	2	80.00	0.3333	66.67
+céachta	ˈceːxt̪ˠə	ˈceːx.t̪ˠə	1	90.00	0.0000	100.00
+eascracha	ˈasˠkɾˠəxə	ˈaskrəxə	3	70.00	0.0000	100.00
+Fhionlainn	ˈɪn̪ˠlˠən̠ʲ	ˈɪnlˠən̠ʲ	2	81.82	0.0000	100.00
+barda	ˈbˠɑːɾˠd̪ˠə	ˈbˠɑːɾˠdˠə	1	90.91	0.0000	100.00
+harda	ˈhɑːɾˠd̪ˠə	ˈhaːɾˠd̪ˠə	1	90.00	0.2000	80.00
+ainrialaí	ˈan̠ʲɾʲiəlˠiː	ˈanʲˌɾˠiəlˠiː	3	76.92	0.1250	87.50
+gí nar	ɟiː ˈn̪ˠaɾˠ	ˈɟiː n̪ˠaɾˠ	2	81.82	0.0000	100.00
+Rúisis	ˈɾˠuːʃɪʃ	ˈɾˠuːʃəʃ	1	87.50	0.2000	80.00
+loite	ˈl̪ˠɪtʲə	l̪ˠɔɪtʲə	2	75.00	0.2000	80.00
+scilling	ˈʃcɪl̠ʲəɲ	ˈʃcɪl̠ʲən̠ʲ	3	72.73	0.0000	100.00
+cnó Brasaíleach	kɾˠoː ˈbˠɾˠasˠiːlʲəx	kno:	18	10.00	0.8182	18.18
+Cadhla	ˈkailˠə	ˈkəi̯lˠə	2	75.00	0.3333	66.67
+daichead	ˈd̪ˠaçəd̪ˠ	ˈd̪ˠa.çəd̪ˠ	1	90.91	0.0000	100.00
+oifigiúil	ˈɛfʲəɟuːlʲ	ˈɛfʲɪɟuːlʲ	1	90.00	0.1667	83.33
+Róimhe	ˈɾˠoːvʲə	ˈɾˠõːvʲə	1	87.50	0.2500	75.00
+an rud a fhaightear go bog caitear go bog é	ənˠ ɾˠʊd̪ˠ əəitʲəɾˠ ɡəbˠɔɡ katʲəɾˠ ɡəbˠɔɡ ˈeː	ən̪ˠ ɾˠʊd̪ˠ ə aɪtʲəɾˠ ɡə bˠɔɡ kɑtʲəɾˠ ɡə bˠɔɡ eː	8	83.33	0.0741	92.59
+sréin	ʃɾʲeːnʲ	sˠɾˠeːnʲ	3	62.50	0.0000	100.00
+caint	kan̠ʲtʲ	kaːn̠ʲtʲ	1	87.50	0.0000	100.00
+sliogán	ˈʃl̠ʲɪɡɑːnˠ	ˈʃl̠ʲiɟaːnˠ	3	72.73	0.1667	83.33
+trasinscneach	ˈt̪ˠɾˠaʃən̠ʲʃcnʲəx	t̪ˠɾˠasˠˈɪn̠ʲʃcnʲəx	5	73.68	0.0909	90.91
+ógfhear	ˈoːˌɟəɾˠ	ˈoːɡˌaɾˠ	3	62.50	0.6000	40.00
+San	sˠən̪ˠ	sˠanˠ	2	66.67	0.3333	66.67
+an té	ənˠ ˈtʲeː	ən̠ʲˈtʲeː	2	77.78	0.0000	100.00
+ceolchoirm	ˈcoːlˠəˌxəɾʲmʲ	ˈcoːlˠˌxɞɾʲəmʲ	3	78.57	0.3333	66.67
+ghnó	ɣn̪ˠoː	ɣɾˠoː	2	66.67	0.3333	66.67
+bonnán	ˈbˠʊn̪ˠɑːnˠ	ˈbˠun̪ˠɑːnˠ	1	90.91	0.0000	100.00
+ngabhar	ˈŋəuɾˠ	ˈŋɑuəɾˠ	2	71.43	0.4000	60.00
+i gceann	əˈɟaːn̪ˠ	ɟɨ̞n̪ˠ	4	50.00	0.7500	25.00
+Chiribeas	ˈçɪɾʲəbʲəsˠ	ˈxɪɾʲəˌbas	5	54.55	0.2500	75.00
+héileacaptar	ˈheːlʲəkəpˠt̪ˠəɾˠ	ˈheː.l̪ʲəˌkapˠ.t̪ˠəɾˠ	5	76.19	0.1818	81.82
+éineacht	ˈeːnʲəxt̪ˠ	ʲeːnʲəxt̪ˠ	1	90.00	0.0000	100.00
+coisc	kɔʃc	kʌʃc	1	75.00	0.2500	75.00
+airbheartaigh	ˈaɾʲəvʲəɾˠt̪ˠiː	aɾʲˈvʲaɾˠt̪ˠiː	3	80.00	0.2500	75.00
+stiúideo	ˈʃtʲuːdʲoː	ˈʃtʲuːdʲioː	1	90.91	0.1667	83.33
+it	ɪtʲ	ɪt̪ˠ	2	50.00	0.0000	100.00
+Satharn	ˈsˠahəːɾˠn̪ˠ	ˈsˠahəɾˠn̪ˠ	1	91.67	0.1429	85.71
+tsnátha	ˈt̪ˠn̪ˠɑːhə	t̪ˠn̪ˠɑː	3	72.73	0.4000	60.00
+daonchairdiúil	ˈd̪ˠiːnˠəxəːɾˠdʲuːlʲ	ˈd̪iːn̪xɑːɾˠdʲuːlʲ	4	80.00	0.1818	81.82
+Nuala	ˈn̪ˠuəlˠə	ˈn̪ˠuːəlˠə	1	90.00	0.0000	100.00
+dúirt	d̪ˠuːɾˠtʲ	d̪ˠuːɾʲtʲ	1	88.89	0.0000	100.00
+gróite	ˈɡɾˠoːtʲə	ˈɡɾˠoːtʲiː	2	80.00	0.2000	80.00
+fhómhair	ˈoːwəɾʲ	ˈoːvˠəɾʲ	2	75.00	0.2500	75.00
+bhFionlainn	ˈvʲɪn̪ˠlˠən̠ʲ	ˈvʲɪnlˠən̠ʲ	2	84.62	0.0000	100.00
+cnogaí	ˈkɾˠɔɡiː	ˈknˠuɡiː	2	75.00	0.4000	60.00
+fadhbanna	ˈfˠaibˠən̪ˠə	ˈfˠəibˠən̪ˠə	1	91.67	0.1429	85.71
+coinín	ˈkɪnʲiːnʲ	ˈkɪnʲinʲ	1	88.89	0.0000	100.00
+tanaíocha	ˈt̪ˠanˠiːəxə	ˈt̪ˠanˠiːxə	1	91.67	0.1429	85.71
+cruitchlár	ˈkɾˠʊt̪ˠxlˠɑːɾˠ	ˈkɾˠɪtʲˌxlˠɑːɾˠ	3	80.00	0.2222	77.78
+méar coise	mʲeːɾˠ ˈkɔʃə	mʲeːɾˠ kɛʃə	2	83.33	0.1429	85.71
+mar go	mˠəɾˠ ɡə	mˠaɾˠ ɡə	1	87.50	0.2000	80.00
+Cholm Cille	ˌxɔlˠəmˠ ˈcɪl̠ʲə	ˌxɔlˠəmˈcɪl̠ʲə	2	87.50	0.0000	100.00
+ar buile	ɛɾʲˈbˠɪlʲə	ˈeɾʲˈbˠi.lʲə	4	66.67	0.0000	100.00
 beirtear	ˈbʲɛɾʲtʲəɾˠ	ˈbʲɛɾˠtʲəɾʲ	2	81.82	0.0000	100.00
+tambóirín	ˈt̪ˠamˠəbˠoːɾʲiːnʲ	ˈt̪ˠamˠbˠoːɾʲiːnʲ	1	94.44	0.1111	88.89
+cuimhneochaidh	ˈkɪvʲnʲoːxə	ˈkɨ̃vʲnʲaxə	4	63.64	0.3750	62.50
+drochbhéasach	ˈd̪ˠɾˠɔhvʲeːsˠəx	d̪ˠɾɔxˈvʲeːsˠəx	4	75.00	0.1111	88.89
+láithreach stairiúil	ˌl̪ˠɑːhɾʲəx ˈsˠt̪ˠaɾʲuːlʲ	ˌl̪ˠɑːɾʲʲəx ˈsˠtˠaɾʲuːlʲ	3	88.00	0.0769	92.31
+péinteáilte	ˈpʲeːnʲtʲɑːlʲtʲə	ˈpʲeːnʲtʲɑːl̠ʲtʲə	1	94.12	0.0000	100.00
+labhairt	ˈl̪ˠauəɾˠtʲ	l̪ˠauɾʲtʲ	3	72.73	0.1667	83.33
+puint	pˠənʲtʲ	pˠɪnʲtʲ	1	85.71	0.2500	75.00
+bricfásta	ˈbʲɾʲɪkɑːsˠt̪ˠə	ˈbʲɾʲɪcfˠɑːsˠt̪ˠə	3	82.35	0.1111	88.89
+slog	sˠl̪ˠɔɡ	sˠl̪ˠuɡ	1	85.71	0.2500	75.00
+tarmachan	ˈt̪ˠaɾˠəmˠəxənˠ	ˈt̪ˠaɾəmˠəxənˠ	1	93.33	0.0000	100.00
+im	ɪmʲ	imˠ	2	33.33	0.0000	100.00
+Cróitis	ˈkɾˠoːtʲɪʃ	ˈkɾˠoːtʲəʃ	1	90.00	0.1667	83.33
+ar nós	ɛɾʲˈn̪ˠuːsˠ	əɾˠˈn̪ˠuːsˠ	2	81.82	0.2000	80.00
+gréas	ɟɾʲeːsˠ	ɟɾeːsˠ	1	85.71	0.0000	100.00
+fiastalach	ˈfʲiəsˠt̪ˠəlˠəx	ˈfʲiəsˠt̪ˠələx	1	93.33	0.0000	100.00
+hAlbain	ˈhalˠəbˠənʲ	ˈhaləbˠənʲ	1	90.91	0.0000	100.00
+Malaeis	ˈmˠalˠeːʃ	ˈmˠalˠeːɪʃ	1	90.00	0.1667	83.33
+tsnua	t̪ˠn̪ˠuə	t̪ˠɾˠũː	4	50.00	0.7500	25.00
+tabharthach	ˈt̪ˠauəɾˠhəx	ˈt̪ˠauɾˠhəx	1	91.67	0.1250	87.50
+langa	ˈl̪ˠɪŋə	ˈl̪ˠaŋɡə	2	75.00	0.4000	60.00
+meabhair	ˈmʲauəɾʲ	mʲauɾʲ	2	75.00	0.2000	80.00
+spioraid	ˈsˠpʲɪɾˠədʲ	ˈsˠpʲiɾˠədʲ	1	90.91	0.0000	100.00
+cnuimhe	ˈkɾˠɪvʲə	ˈknˠevʲə	2	75.00	0.4000	60.00
+lasmuigh	ˈl̪ˠasˠmˠə	l̪ˠasˠˈmˠʊ	3	70.00	0.2000	80.00
+pasfhocal	ˈpˠasˠəkəlˠ	ˈpˠasˠˌɔkəlˠ	2	83.33	0.2500	75.00
+monabhar	ˈmˠɔnˠəuɾˠ	ˈmˠʊnˠəwəɾˠ	3	72.73	0.4286	57.14
+dheinimís	ˈjɛnʲəmʲiːʃ	jɪnʲəˈmʲiːʃtʲ	5	61.54	0.2500	75.00
+ar an ásc sin	ɛɾʲ ənˠ ɑːsˠk ˈʃɪnʲ	ɛɾʲ ənˠ ˈɑːsk ʃɪnʲ	3	84.21	0.0000	100.00
+ana-	ˈanˠə	ˈɑn̪ˠə	2	66.67	0.3333	66.67
+bíchearb	ˈbʲiːçəɾˠbˠ	ˈbʲiːçəɾˠəbˠ	1	91.67	0.1429	85.71
+Victeoiria	vˈɪctʲoːɾʲiə	vʲɪcˈtʲoːɾʲiə	2	84.62	0.0000	100.00
+Fionnghuala	ˈfʲɪn̪ˠuəlˠə	fʲɪn̪ˠˈuːəlˠə	3	76.92	0.0000	100.00
+feadh	fʲɪ	fʲæː	2	50.00	0.5000	50.00
+Tír na nÓg	tʲiːɾʲ n̪ˠə ˈn̪ˠoːɡ	ˌtʲiːɾˠ n̪ˠə ˈn̪ˠoːɡ	2	90.00	0.1111	88.89
+Danmhairge	ˈd̪ˠanˠəwəɾʲɟɪ	ˈd̪ˠanwəɾʲəɟə	4	71.43	0.3333	66.67
+faigh	fˠə	fˠəi	1	75.00	0.3333	66.67
+Alban	ˈalˠəbˠənˠ	ˈaləbˠənˠ	1	90.00	0.0000	100.00
+Nollag	ˈn̪ˠɔl̪ˠəɡ	ˈn̪ˠolˠək	3	70.00	0.2000	80.00
+cén áit	ceːnʲˈɑːtʲ	ceːˈn̪ˠɑːtʲ	3	72.73	0.0000	100.00
+in éineacht	ɪnʲ ˈeːnʲəxt̪ˠ	əˈn̠ʲeːnʲəxt̪ˠ	5	64.29	0.1429	85.71
+neimhe	ˈn̠ʲɛvʲə	ˈn̠ʲɨ̞̃vʲə	3	70.00	0.5000	50.00
+snátha	ˈsˠn̪ˠɑːhə	sˠn̪ˠɑː	3	70.00	0.4000	60.00
+maíte	ˈmˠatʲə	ˈmˠiːtʲə	2	75.00	0.2500	75.00
+cad chuige	kad̪ˠ ˈxəɟɪ	kəˈt̪ˠiɟə	8	27.27	0.7143	28.57
+criostal	ˈcɾʲɪsˠt̪ˠəlˠ	ˈkɾˠɪsˠt̪ˠəlˠ	2	84.62	0.0000	100.00
+faigheann	ˈfˠəin̪ˠ	fˠɑːn̪ˠ	3	62.50	0.5000	50.00
+scar	ˈsˠkaɾˠ	ˈskaɾˠ	1	85.71	0.0000	100.00
+abhna	ˈəun̪ˠə	ˈoːn̪ˠə	2	71.43	0.5000	50.00
+cíor thuathail	ciːɾˠ ˈhuəhəlʲ	cɪəɾˠ hʊəhɪlʲ	5	64.29	0.2000	80.00
+cnoga	ˈkɾˠɔɡə	ˈknˠuɡə	2	71.43	0.4000	60.00
+aonghuthach	ˈiːn̪ˠɣəhəx	ˈeːn̪ˠˌɣʊhəx	3	75.00	0.3750	62.50
+den	dʲɪnʲ	dʲənˠ	2	60.00	0.3333	66.67
+carbán	ˈkaɾˠəbˠɑːnˠ	ˈkarˠbˠɑːnˠ	2	83.33	0.1429	85.71
+áibhirseoir	ˈɑːvʲəɾˠʃoːɾʲ	ˈɑːɾɕoːɾʲ	5	61.54	0.4286	57.14
+cuideachtúil	ˈkɪdʲəxt̪ˠuːlʲ	ˈkudʲəxt̪ˠuːlʲ	1	92.86	0.1250	87.50
+tseilg	ˈtʲɛlʲəc	ˈtʲɛlʲɪɟ	2	75.00	0.4000	60.00
+cladh	klˠə	klˠai	2	60.00	0.5000	50.00
+fuála	ˈfˠuɑːlˠə	ˈfˠuːaːlˠə	2	80.00	0.2000	80.00
+cadhnraí	ˈkain̪ˠɾˠiː	ˈkəinˠɾˠiː	2	81.82	0.1667	83.33
+phingin	ˈfʲɪɲənʲ	fʲiːn̠ʲ	5	37.50	0.4000	60.00
+n-athruithe	ˈn̪ˠahɾˠəhə	ˈn̪ˠahɾˠɪhə	1	90.91	0.1429	85.71
+chluich	xlˠʊx	xlˠɪç	2	60.00	0.2500	75.00
+coill	kɛl̠ʲ	kel̠ʲ	1	80.00	0.0000	100.00
+mbeidh	mʲɪ	mʲɛj	2	50.00	0.6667	33.33
+daidithe	ˈd̪ˠadʲəhə	ˈdˠadʲɪhə	2	80.00	0.1667	83.33
+anchúinse	ˈanˠəxuːn̠ʲʃə	ˈanˠxuːn̠ʲʃə	1	92.31	0.1250	87.50
 anoir	əˈnˠɛɾʲ	əˈn̪ˠɛɾʲ	1	87.50	0.0000	100.00
 Inis	ˈɪn̠ʲɪʃ	ˈɪnʲɪʃ	1	85.71	0.0000	100.00
-habhann	ˈhəun̪ˠ	haun̪ˠ	2	71.43	0.2500	75.00
-lenár	ˈl̠ʲɛnˠɑːɾˠ	ˈlʲɛnˠɑːɾˠ	1	90.91	0.0000	100.00
-Cróitis	ˈkɾˠoːtʲɪʃ	ˈkɾˠoːtʲəʃ	1	90.00	0.1667	83.33
-bean sí	ˈbʲanˠ ˈʃiː	bʲanˠ ʃiː	2	81.82	0.0000	100.00
-San	sˠən̪ˠ	sˠanˠ	2	66.67	0.3333	66.67
-críochnaigh	ˈcɾʲiəxɾˠə	ˈcɾʲiəxn̪ˠə	2	81.82	0.1429	85.71
-ndomhan	ˈn̪ˠəunˠ	ˈn̪ˠaʊ.ən̪ˠ	5	54.55	0.4000	60.00
-otharlann	ˈɔhəːɾˠl̪ˠən̪ˠ	ˈɔhəɾˠl̪ˠənˠ	2	85.71	0.1250	87.50
-ollbhasún	ˈɔl̪ˠəwəsˠuːnˠ	ˈɔl̪ˠwaˌsˠuːnˠ	3	78.57	0.3750	62.50
-cladhaire	ˈklˠaiəɾʲə	ˈklˠaiɾʲə	1	90.00	0.1429	85.71
-bunú	ˈbˠʊnˠuː	bˠʊn̪uː	2	75.00	0.0000	100.00
-Eoghan	ˈoːən̪ˠ	oːn̪ˠ	2	71.43	0.3333	66.67
-ghníomhaíocht	ˈjnʲiəwiəxt̪ˠ	ˈɣɾˠiːwiəxt̪ˠ	4	69.23	0.3333	66.67
-Carghais	ˈkaɾˠəʃ	ˈkaɾˠiːʃ	2	75.00	0.2000	80.00
-croíthe	ˈkɾˠiːhə	ˈkɾˠiːhɪ	1	87.50	0.2000	80.00
-ar gcúl	ɛɾʲˈɡuːlˠ	eɾʲˈɡuːlˠ	1	88.89	0.0000	100.00
-roimhe	ˈɾˠɛvʲə	ˈɾˠivʲə	1	85.71	0.2500	75.00
-amadána	ˈamˠəd̪ˠɑːnˠə	ˈamədɑːnə	4	69.23	0.0000	100.00
-uileag	ˈɪlʲəɡ	əˈlʲɞɡ	3	50.00	0.5000	50.00
-frisnéiseach	ˈfʲɾʲɪʃn̠ʲeːʃəx	ˈfʲɾʲɪʃn̠ʲæʃax	3	80.00	0.2222	77.78
-Sord Cholm Cille	sˠoːɾˠd̪ˠ xɔlˠəmˠ ˈcɪl̠ʲə	ˌsˠauɾˠd̪ˠ xɔlˠəm ˈcɪl̠ʲə	4	84.00	0.2000	80.00
-haon déag	hiːnˠ dʲeːɡ	heːn̠ʲ dʲeːɡ	3	75.00	0.1667	83.33
+Frainc	fˠɾˠaɲc	fˠɾˠæɲc	1	85.71	0.0000	100.00
+Fionnabhair	ˈfʲɪn̪ˠəuɾʲ	ˈfʲɪn̪ˠuːɾʲ	2	81.82	0.1667	83.33
 tchím	ˈtʲiːmʲ	ˈtʲiːmˠ	1	85.71	0.0000	100.00
-tseanbhean	ˈtʲanʲəvʲənˠ	ˈtʲanˠˌvʲanˠ	3	75.00	0.2857	71.43
-cnámha	ˈkɾˠɑːwə	kɾˠɑːwə	1	87.50	0.0000	100.00
-Ciribeas	ˈcɪɾʲəbʲəsˠ	ˈkɪɾʲəˌbas	5	54.55	0.2500	75.00
-mbeidh	mʲɪ	mʲɛj	2	50.00	0.6667	33.33
-bheidh	vʲɪ	vʲɛj	2	50.00	0.6667	33.33
-led	l̠ʲɪdʲ	lʲɛd̪ˠ	4	33.33	0.3333	66.67
-det	dʲɪtʲ	dʲɛt̪ˠ	3	50.00	0.3333	66.67
-ded	dʲɪdʲ	dʲɛd̪ˠ	3	50.00	0.3333	66.67
-let	l̠ʲɪtʲ	lʲɛt̪ˠ	4	33.33	0.3333	66.67
-n-athruithe	ˈn̪ˠahɾˠəhə	ˈn̪ˠahɾˠɪhə	1	90.91	0.1429	85.71
-an té	ənˠ ˈtʲeː	ən̠ʲˈtʲeː	2	77.78	0.0000	100.00
-ana-	ˈanˠə	ˈɑn̪ˠə	2	66.67	0.3333	66.67
-clamhsán	ˈklˠəusˠɑːnˠ	ˈklˠausˠɑːnˠ	1	91.67	0.1429	85.71
-ceaptha	ˈcapˠə	ˈcapˠiː	2	71.43	0.2500	75.00
-i dtaca le	əˈd̪ˠakə lʲɛ	əˈd̪ˠakə lʲe	1	91.67	0.0000	100.00
-laistiar	ˈl̪ˠaʃtʲiəɾˠ	l̪ˠaʃˈtʲiəɾˠ	2	83.33	0.0000	100.00
-Sorcha	ˈsˠɔɾˠəxə	ˈsɔɾˠəxə	1	88.89	0.0000	100.00
-Siobhán	ˈʃʊɑːn̪ˠ	ˈʃʊwaːn̪ˠ	2	77.78	0.4000	60.00
-focla	ˈfˠɔklˠə	ˈfˠɔkl̪ə	1	87.50	0.0000	100.00
-tchíthear	ˈtʲiːhəɾˠ	ˈtʲihəɾˠ	1	88.89	0.0000	100.00
-gleanna	ˈɟlʲan̪ˠə	ˈɟlʲaːn̪ˠə	1	90.00	0.0000	100.00
-cérb	ceːɾʲbʲ	ceːɾˠbˠ	2	71.43	0.0000	100.00
-meá	mʲɑː	mʲæh	2	50.00	0.6667	33.33
-cúb	kuːbˠ	kuːb	1	80.00	0.0000	100.00
+leic	l̠ʲɛc	l̠ɛc	1	80.00	0.0000	100.00
+bhfreastalaí	ˈvʲɾʲasˠt̪ˠəlˠiː	ˈfʲɾʲasˠt̪ˠəlˠiː	1	93.75	0.1250	87.50
+geimhriú	ˈɟɛvʲɾʲuː	ɟiːvʲɾʲuː	3	66.67	0.2000	80.00
+gabhar	ˈɡəuɾˠ	ˈɡɑuəɾˠ	2	71.43	0.4000	60.00
+ianaithe	ˈiənˠɪhə	ɪən̪ˠɪə	4	50.00	0.1667	83.33
+críochnaithe	ˈcɾʲiːxɾˠɪhə	ˈcɾʲiːxn̪ˠɪhɪ	3	76.92	0.2500	75.00
+ar a fhad	ɛɾʲ əˈad̪ˠ	əɾʲˈad̪ˠ	3	70.00	0.4000	60.00
+ceirnín	ˈcɛːɾˠn̠ʲiːn̠ʲ	ˈcɛɾˠn̠ʲiːnʲ	2	85.71	0.0000	100.00
+mar an gcéanna	mˠəɾˠ ənˠ ˈɟeːn̪ˠə	mˠaɾˠ ə ˈɟeːn̪ˠə	3	83.33	0.2222	77.78
+cearnóige	ˈcɑːɾˠn̪ˠoːɟɪ	ˈcɑːɾˠn̪ˠoːɟə	1	92.31	0.1429	85.71
+Ó Broin	oː ˈbˠɾˠɪnʲ	oːˈbˠɾˠinʲ	2	81.82	0.0000	100.00
+beathaisnéisí	ˈbʲahəʃnʲeːʃiː	ˈbʲahɑʃnʲeːʃiː	1	92.86	0.1111	88.89
+ansiúd	ən̠ʲˈʃuːd̪ˠ	ən̪ˠˈʃuːd̪ˠ	2	81.82	0.0000	100.00
+Brasaíl	ˈbˠɾˠasˠiːlʲ	bˠɾˠaˈsˠiːlʲ	2	83.33	0.0000	100.00
+fortacht	ˈfˠɔɾˠt̪ˠəxt̪ˠ	ˈfˠɔɾˠt̪əxt̪ˠ	1	92.86	0.0000	100.00
+ngabha	ˈŋəu	ŋɑu	2	50.00	0.3333	66.67
+gleannta	ˈɟlʲan̪ˠt̪ˠə	ˈɟlʲaːn̪ˠt̪ˠə	1	92.31	0.0000	100.00
+aerfort	ˈeːɾˠəfˠəɾˠt̪ˠ	ˈeːɾˠfɔɾˠt̪ˠ	3	78.57	0.2857	71.43
+ainmfhocal	ˈanˠəmˠəkəl̪ˠ	ˈanʲəmʲˌɔkəl̪ˠ	4	71.43	0.2222	77.78
+haon déag	hiːnˠ dʲeːɡ	heːn̠ʲ dʲeːɡ	3	75.00	0.1667	83.33
+cén fáth	ceːnʲˈfˠɑː	ceːnˠ ˈfˠɑː	2	81.82	0.0000	100.00
+luin	l̪ˠɪnʲ	l̪ˠɪnˠ	1	83.33	0.0000	100.00
+buachaillí	ˈbˠuəxəl̠ʲiː	ˈbuəxəlʲiː	2	83.33	0.0000	100.00
+tionchar	ˈtʲɪn̪ˠxəɾˠ	ˈtʲʊŋxəɾˠ	4	63.64	0.1667	83.33
+bainis	ˈbˠanʲɪʃ	ˈbanʲəʃ	2	75.00	0.2000	80.00
+riaráiste	ˈɾˠiəɾˠɑːʃtʲə	ˈɾˠiːɾˠɑːʃtʲə	1	92.31	0.1250	87.50
+cineál	ˈcɪnʲɑːlˠ	ˈcɪnˠɑːlˠ	1	88.89	0.0000	100.00
+airneán	ˈɑːɾˠn̠ʲɑːnˠ	ˈaːɾˠn̠ʲaːnˠ	2	83.33	0.4000	60.00
+ealaín	ˈalˠiːnʲ	ˈɑːlˠiːnʲ	2	77.78	0.2500	75.00
 órthóraíocht	ˈoːɾˠhoːɾˠiəxt̪ˠ	oːɾˠˈhoːɾˠiːəxt̪ˠ	3	82.35	0.0000	100.00
-paindéim	ˈpˠan̠ʲdʲeːmʲ	pˠanʲ.dʲeːmʲ	3	76.92	0.0000	100.00
-Fearghas	ˈfʲaɾˠəsˠ	ˈfʲæːɾˠiːsˠ	4	63.64	0.2000	80.00
-bunúsach	ˈbˠʊnˠuːsˠəx	ˈbʊn̪ˠuːsˠəx	2	83.33	0.0000	100.00
-truaill	t̪ˠɾˠuəlʲ	t̪ˠɾˠuəl̠ʲ	1	90.00	0.0000	100.00
-inghlactha	ˈɪn̪ˠɣlˠəkə	ɪnʲˈɣlˠakə	4	63.64	0.1429	85.71
-soitheach	ˈsˠɛhəx	ˈsˠeçəx	2	71.43	0.2000	80.00
-oifig	ˈɛfʲɪɟ	ˈɛfʲɪc	1	83.33	0.2500	75.00
-ógh	ə	oː	2	0.00	1.0000	0.00
-ógfhear	ˈoːˌɟəɾˠ	ˈoːɡˌaɾˠ	3	62.50	0.6000	40.00
-in aice	ɪnʲ ˈacɪ	əˈn̪ˠacɪ	5	37.50	0.2000	80.00
-gearrthacha	ˈɟaɾˠhəxə	ˈɟaːrˠhəxə	2	80.00	0.0000	100.00
-seanfhocal	ˈʃanˠəkəlˠ	ˈʃanˠɔkəlˠ	1	90.00	0.1429	85.71
-aisig	ˈaʃɪɟ	ˈaʃɪc	1	80.00	0.2500	75.00
-íoglú	ˈiːɡlˠuː	ˈiː.ɡl̪ˠuː	2	80.00	0.0000	100.00
-feabhas	ˈfʲauəsˠ	fʲausˠ	2	75.00	0.2000	80.00
-fulaing	ˈfˠʊlˠəŋ	ˈfˠʊlˠən̠ʲ	3	70.00	0.0000	100.00
-tuar ceatha	t̪ˠuəɾˠ ˈcahə	ˈt̪ˠuəɾˠ ˈcahə	1	92.86	0.0000	100.00
-bláthnaid	ˈbˠlˠɑːhn̪ˠədʲ	ˈbˠl̪ˠɑːn̪ˠədʲ	2	85.71	0.1429	85.71
+comhartha	ˈkoːəɾˠhə	ˈkõhəɾˠuː	4	55.56	0.6667	33.33
+fuinneoige	ˈfˠin̠ʲoːɟɪ	ˈfiɲoːɡʲə	7	36.36	0.1667	83.33
+dúinte	ˈd̪ˠuːn̠ʲtʲə	ˈd̪uːn̠ʲtʲə	1	91.67	0.0000	100.00
+achoimre	ˈaxəmʲɾʲə	ˈaˌxɪmʲɾʲə	2	80.00	0.2857	71.43
+ghlún	ɣlˠuːn̪ˠ	ɣl̪ˠuːn̪ˠ	1	88.89	0.0000	100.00
+Risteard	ˈɾˠɪˌʃtʲəɾˠd̪ˠ	ˈɾˠɪʃˌtʲɑːɾˠd̪ˠ	4	73.33	0.3750	62.50
+bóín Dé	bʲjoːnʲ ˈdʲeː	ˈbˠoːiːnʲ ˈdʲeː	5	66.67	0.3333	66.67
+gráigh	ɡɾˠə	ɡɾˠɑː	2	60.00	0.3333	66.67
+grianmhar	ˈɟɾʲiən̪ˠwəɾˠ	ˈɟɾʲiən̪ˠvˠəɾˠ	2	85.71	0.1250	87.50
+pianfaidh	ˈpʲiən̪ˠhə	ˈpʲiənhə	2	80.00	0.0000	100.00
+ionsaí	ˈɪn̪ˠsˠiː	ˈɔnˠsˠiː	2	77.78	0.2500	75.00
+lá breá	l̪ˠɑː ˈbʲɾʲɑː	l̪ˠɑː bʲɾʲɑː	1	92.31	0.0000	100.00
+clabhchorda	ˈklˠəuxəːɾˠd̪ˠə	ˈklˠauˌxoːɾˠd̪ˠə	3	81.25	0.4000	60.00
+Tír Eoghain	tʲiːɾʲ ˈoːənʲ	tʲiːɾʲ ˈoːnʲ	1	92.31	0.1667	83.33
+i bhfad ó shin	əwad̪ˠ oː ˈhɪnʲ	əˌwad̪ˠ oːˈhɪnʲ	2	86.67	0.1111	88.89
+salm	ˈsˠalˠəmˠ	ˈsˠal̪ˠəmˠ	1	90.00	0.0000	100.00
+Sord Cholm Cille	sˠoːɾˠd̪ˠ xɔlˠəmˠ ˈcɪl̠ʲə	ˌsˠauɾˠd̪ˠ xɔlˠəm ˈcɪl̠ʲə	4	84.00	0.2000	80.00
+sa mbaile	sˠə mˠəˈalʲə	sˠə ˈmˠalʲə	3	75.00	0.1429	85.71
+Sord	sˠɔɾˠd̪ˠ	sˠauɾˠd̪ˠ	2	77.78	0.4000	60.00
+Baile Átha Luain	ˌbˠalʲə ɑːhə ˈl̪ˠuənʲ	ˌbʲlʲɑː ˈl̪ˠuənʲ	6	71.43	0.3333	66.67
+comrádaí	ˈkɔmˠɾˠɑːd̪ˠiː	kumˠˈɾˠɑːd̪ˠiː	3	78.57	0.1429	85.71
+Samhna	ˈsˠəun̪ˠə	ˈsˠəʊnˠə	2	77.78	0.0000	100.00
+Iarmhí	ˌiəɾʲˈvʲiː	əˌn̠ʲiəɾˠˈvʲiː	5	64.29	0.2500	75.00
+cheird	çɛːɾˠdʲ	çeɾˠdʲ	2	71.43	0.0000	100.00
+freagra	ˈfʲɾʲaɡɾˠə	ˈfʲɾʲɑːɡɾˠə	2	81.82	0.1667	83.33
+áitithe	ˈɑːtʲəhɪ	ˈɑːtʲɪhə	2	75.00	0.4000	60.00
+loin	l̪ˠɪnʲ	l̪ˠɪnˠ	1	83.33	0.0000	100.00
+deannach	ˈdʲan̪ˠəx	dʲanˠəx	2	77.78	0.0000	100.00
+bláthach	ˈbˠlˠɑːhəx	ˈbˠlˠɑːx	2	80.00	0.3333	66.67
+veigeán	vˈɛɟɑːnˠ	ˈvʲɛɟɑːnˠ	2	77.78	0.0000	100.00
+carbhat	ˈkaɾˠəwət̪ˠ	kɑɾˠəˈwɑt̪ˠə	5	58.33	0.3750	62.50
+cailíní	ˈkalʲiːnʲiː	ˈkaːlʲiːnʲiː	1	91.67	0.0000	100.00
+de Búrca	dʲəˈbˠuːɾˠkə	d̪ˠəˈbˠuːɾˠkə	2	84.62	0.0000	100.00
+tiomáint	ˈtʲʊmˠɑːn̠ʲtʲ	ˈtʲɪmˠɑːn̠ʲtʲ	1	92.31	0.1667	83.33
+Afganastáin	ˈafˠɡənˠəsˠt̪ˠɑːnʲ	afˠˈɡan̪ˠəsˠt̪ˠɑːnʲ	4	78.95	0.1000	90.00
+chealg	ˈçalˠəɡ	ˈçal̪ˠəɡ	1	87.50	0.0000	100.00
+Danmhairgis	ˈd̪ˠanˠəwəɾʲɟɪʃ	ˈd̪ˠanˠwaɾʲɪɟɪʃ	3	80.00	0.3000	70.00
+cairéalaí	ˈkaɾʲeːlˠiː	kəˈɾʲeːl̪ˠiː	4	66.67	0.1667	83.33
+deighilt	dʲɪəlʲtʲ	dʲəilʲtʲ	2	75.00	0.4000	60.00
+bansár	ˈbˠan̪ˠsˠɑːɾˠ	ˈbˠanˠˌsˠɑːɾˠ	2	84.62	0.1429	85.71
+Eoghan	ˈoːən̪ˠ	oːn̪ˠ	2	71.43	0.3333	66.67
+aon déag	iːnˠ dʲeːɡ	eːn̠ʲ dʲeːɡ	3	72.73	0.2000	80.00
+mhairbh	ˈwaɾʲəvʲ	ˈwarʲəvʲ	1	87.50	0.0000	100.00
+acmhainneach	ˈakwən̠ʲəx	ˈakuːn̠ʲəx	2	80.00	0.2857	71.43
+doirtear	ˈd̪ˠɔɾˠtʲəɾˠ	ˈd̪ˠɨ̞ɾˠtʲəɾˠ	2	84.62	0.2857	71.43
+nílimid	ˈn̠ʲiːlʲəmʲədʲ	ˈnʲiːlʲɪmʲiːdʲ	4	71.43	0.2857	71.43
+-fá	fˠɑː	fˠaː	1	75.00	0.5000	50.00
+siopadóireacht	ˈʃɪpˠəd̪ˠoːɾʲəxt̪ˠ	ˈʃʊpˠəd̪ˠoːɾʲəxt̪ˠ	1	94.44	0.1000	90.00
+tuíodóireacht	ˈt̪ˠiːd̪ˠoːɾʲəxt̪ˠ	ˈt̪ˠiːd̪ˠoːɾʲ	5	72.22	0.3750	62.50
+meá	mʲɑː	mʲæh	2	50.00	0.6667	33.33
+ionad	ˈɪnˠəd̪ˠ	ˈinˠəd̪ˠ	1	87.50	0.0000	100.00
+anois	əˈnˠɔʃ	əˈnʲiʃ	2	66.67	0.2500	75.00
+aonad	ˈiːnˠəd̪ˠ	ˈeːnˠəd̪ˠ	1	88.89	0.2500	75.00
+adhall	ˈaiəl̪ˠ	ˈəiəl̪ˠ	1	85.71	0.2500	75.00
+ar gcúl	ɛɾʲˈɡuːlˠ	eɾʲˈɡuːlˠ	1	88.89	0.0000	100.00
+ainseabhaí	ˈan̠ʲʃəuiː	ˈanʲʃəwiː	2	80.00	0.1667	83.33
+bleidhmhíol	ˈbʲlʲəivʲiːl̪ˠ	ˈbʲlʲɛjvʲiːl̪ˠ	2	85.71	0.2857	71.43
+Ó Cathasaigh	oː ˈkahəsˠə	ˈkahəsˠiː	5	54.55	0.2857	71.43
+slán a bheas tú	sˠl̪ˠɑːnˠ əvʲasˠ ˈt̪ˠuː	ˈsˠl̪ˠɑːn̪ˠ ə ˈvʲɛsˠ t̪ˠuː	6	76.92	0.1000	90.00
+Cian	ciənˠ	ˈciənˠ	1	83.33	0.0000	100.00
+aneas	əˈnʲasˠ	əˈn̠ʲasˠ	1	87.50	0.0000	100.00
+nglacfá	ˈŋlˠakɑː	ŋlɑkˈfɑː	5	37.50	0.3333	66.67
+Sheáin	hɑːnʲ	çɑːnʲ	1	80.00	0.3333	66.67
+vóta	vˈoːt̪ˠə	ˈwoːt̪ˠə	2	75.00	0.2500	75.00
+inár	ˈɪnˠɑːɾˠ	ɪˈnˠaːɾˠ	3	62.50	0.2500	75.00
+tibhe	ˈtʲəiə	ˈtʲɪvʲə	3	57.14	0.5000	50.00
+ar deighilt	ɛɾʲˈdʲəil̠ʲtʲ	ɛɾʲˈdʲəilʲtʲ	1	92.31	0.0000	100.00
+chuimhnigh	ˈxɪvʲnʲə	ˈxiːnʲə	3	62.50	0.2000	80.00
+Feardorcha	ˈfʲaɾˠd̪ˠəɾˠxə	ˈfʲaɾˠd̪ˠɔɾˠəxə	2	86.67	0.2222	77.78
+gléasann	ˈɟlʲeːsˠən̪ˠ	ˈɟlʲeːsən̪ˠ	1	91.67	0.0000	100.00
+croíthe	ˈkɾˠiːhə	ˈkɾˠiːhɪ	1	87.50	0.2000	80.00
+díolaim	ˈdʲiːlˠəmʲ	ˈdʲiːl̪əmʲ	1	90.00	0.0000	100.00
+lagsprid	ˈl̪ˠaɟʃpʲɾʲədʲ	ˈl̪ˠɑɡsˠpʲɾʲidʲ	5	66.67	0.2500	75.00
+Dhaidí na Nollag	ˌɣadʲiː n̪ˠə ˈn̪ˠoːl̪ˠəɡ	ˌɣadʲiː n̪ˠə ˈnˠɔl̪ˠəɡ	3	87.50	0.0000	100.00
 seanfhear	ˈʃanʲəɾˠ	ˈʃanˠˌaɾˠ	3	66.67	0.3333	66.67
-scadán	ˈsˠkad̪ˠɑːnˠ	ˈsˠkʊd̪ˠɑːnˠ	1	91.67	0.1667	83.33
+pleidhc	ˈpʲlʲəic	ˈpləik	3	62.50	0.0000	100.00
+Baile Nua na hArda	ˌbˠalʲə n̪ˠuə n̪ˠə ˈhɑːɾˠd̪ˠə	ˌbˠalʲə ˌn̪ˠuː n̪ˠə ˈhɑːɾˠd̪ˠə	2	93.33	0.1333	86.67
+maímh	mˠavʲ	mˠiːvʲ	2	66.67	0.3333	66.67
+bláthnaid	ˈbˠlˠɑːhn̪ˠədʲ	ˈbˠl̪ˠɑːn̪ˠədʲ	2	85.71	0.1429	85.71
+'ur	ʊɾˠ	ə	3	0.00	1.0000	0.00
+rinc	ɾˠəɲc	ɾˠɪɲc	1	80.00	0.2500	75.00
+n-abhann	ˈn̪ˠəun̪ˠ	n̪ˠaun̪ˠ	2	77.78	0.2500	75.00
+bheas	vʲasˠ	vʲɛsˠ	1	80.00	0.3333	66.67
+insíonn	ˈɪn̠ʲʃiːn̪ˠ	ˈiːnʲʃiːn̪ˠ	3	72.73	0.0000	100.00
+Muileann gCearr	ˌmˠɪlʲən̪ˠ ˈɟaɾˠ	ənˠ ˌmˠɪlʲən̪ˠ ˈɟɑːɾˠ	6	71.43	0.2727	72.73
+-each	ax	əx	1	50.00	0.5000	50.00
+leamh	ˈl̠ʲəu	ˈl̠ʲavˠ	3	57.14	0.6667	33.33
+adamh	ˈad̪ˠuː	ˈɑd̪ˠəvˠ	4	50.00	0.7500	25.00
+le do thoil	lʲɛ ɡə ˈhɛlʲ	lʲɛd̪ˠəˈhɔlʲ	5	58.33	0.2857	71.43
+adhairc	ˈaiəɾʲc	ˈəiəɾʲc	1	85.71	0.2000	80.00
+tiomáin	ˈtʲʊmˠɑːnʲ	ˈtʲɪmˠɑːnʲ	1	90.00	0.2000	80.00
+bearaigh	ˈbʲaɾˠə	ˈbʲɛɾˠi	2	71.43	0.5000	50.00
+airdí	ˈɑːɾˠdʲiː	ˈaːɾˠdʲiː	1	88.89	0.2500	75.00
+foghar	ˈfˠaiəɾˠ	fˠauɾˠ	3	62.50	0.4000	60.00
+pobalscoil	ˈpˠɔbˠəl̪ˠsˠkəlʲ	ˈpˠɔbˠəlˠˌsˠkɛlʲ	3	81.25	0.2000	80.00
+foréigean	ˈfˠɪɾʲeːɟənˠ	fˠɔɾˠˈeːɟɪnˠ	5	58.33	0.2857	71.43
+dianghlasáil	ˈdʲiən̪ˠɣlˠəsˠɑːlʲ	dʲiənˠˈɣlˠa.sˠɑːlʲ	5	72.22	0.1000	90.00
+bun ribe	bˠʊnˠ ˈɾʲɪbʲə	bˠʌnˠ ˈɾˠɨ̞bʲə	4	71.43	0.3750	62.50
+proifisiúnta	ˈpˠɾˠɛfʲəʃuːn̪ˠt̪ˠə	pˠɾˠɔˈfʲɛʃun̪ˠt̪ˠə	5	73.68	0.2000	80.00
+oidhre	ˈəiɾʲə	ˈaiɾʲə	1	83.33	0.2500	75.00
+i gcomhluadar	əˈɡəulˠuəd̪ˠəɾˠ	əˈɡoːlˠuəd̪ˠəɾˠ	2	86.67	0.2000	80.00
+camán	ˈkamˠaːnˠ	kaˈmaːn	4	55.56	0.0000	100.00
+Cireabaití	ˈcɪɾʲəbˠətʲiː	ˈkɪɾʲəˌbatiː	5	61.54	0.2222	77.78
+deartháir	ˈdʲaɾˠhɑːɾʲ	ˈdʲaɾˠhaɾʲ	2	81.82	0.1667	83.33
+bunaitheoir	ˈbˠʊnˠəhoːɾʲ	ˈbˠunˠahoːɾʲ	2	83.33	0.1429	85.71
+tráthúil	ˈt̪ˠɾˠɑːhuːlʲ	ˈtˠɾˠɑː.huːlʲ	2	84.62	0.0000	100.00
+ní ba	n̠ʲiː bˠə	ˈn̠ʲiːbə	3	66.67	0.0000	100.00
+amadána	ˈamˠəd̪ˠɑːnˠə	ˈamədɑːnə	4	69.23	0.0000	100.00
+cóta fearthainne	ˌkoːt̪ˠə ˈfʲaɾˠhən̠ʲə	ˈkoːt̪ˠə ˈfʲaɾˠhənʲə	2	90.48	0.0833	91.67
+Indiacha	ˈɪn̠ʲdʲiəxə	ˈinʲiəxə	4	63.64	0.1429	85.71
+Aoine an Chéasta	ˌiːnʲə ənˠ ˈçeːsˠt̪ˠə	ˌiːnʲə ˈçeːsˠt̪ˠə	4	80.95	0.1818	81.82
+bóithrí	ˈbˠoːhɾʲiː	ˈbˠoːɾʲiː	1	90.00	0.2000	80.00
+dtiocfá	ˈdʲʊkɑː	ˈdʲʊkfˠɑː	2	77.78	0.2000	80.00
+beachlann	ˈbʲaxlˠən̪ˠ	ˈbʲaxlən̪ˠ	1	90.91	0.0000	100.00
+bhFranc	wɾˠaŋk	ˈvˠɾˠaŋk	3	62.50	0.2000	80.00
+díleá	ˈdʲiːlʲɑː	ˈdʲiːl̠ʲɑː	1	90.00	0.0000	100.00
+éanacha	ˈeːnˠəxə	ˈeːn̪ˠəxiː	3	70.00	0.2000	80.00
+sáfach	ˈsˠɑːfˠəx	ˈsɑːfˠəx	1	88.89	0.0000	100.00
+dtiocfainn	ˈdʲʊkfˠən̠ʲ	dʲʊkən̠ʲ	3	72.73	0.1667	83.33
+tarrtháil	ˈt̪ˠaɾˠhɑːlʲ	ˈt̪ˠɑːɾˠhɑːlʲ	2	84.62	0.1667	83.33
+feadha	ˈfʲəiə	fʲɑː	4	33.33	0.7500	25.00
+airgeadúla	ˈɪɾʲəɟəd̪ˠuːlˠə	ˈaɾʲɪɟəd̪ˠuːlˠə	2	86.67	0.2222	77.78
+oilfidh	ˈɛl̠ʲhə	ˈɛlʲhə	1	85.71	0.0000	100.00
+freastalóidh	ˈfʲɾʲasˠt̪ˠəlˠoː	ˈfʲɾʲasˠt̪ˠəlˠoːj	1	94.12	0.1111	88.89
+rabharta	ˈɾˠəuɾˠt̪ˠə	ˈɾˠɑuɾˠt̪ˠə	1	90.91	0.1667	83.33
 bunscoil	ˈbˠʊn̪ˠsˠkəlʲ	ˈbˠʊnˠˌsˠkɛlʲ	3	76.92	0.2500	75.00
+Shligigh	ˈhl̠ʲɪɟɪ	ˈhlʲɪɟiː	3	62.50	0.0000	100.00
+portach	ˈpˠɔɾˠt̪ˠəx	ˈpˠoɾˠt̪ˠəx	1	90.91	0.0000	100.00
+laistigh	ˈl̪ˠaʃtʲə	l̪ˠaʃˈtʲɪj	4	60.00	0.3333	66.67
+goidte	ˈɡɛdʲtʲə	ˈɡɞtʲə	3	62.50	0.4000	60.00
+bacáil	ˈbˠækɑːlʲ	ˈbˠakælʲ	3	66.67	0.2000	80.00
+fheadh	ɪ	a	1	0.00	1.0000	0.00
+abhrasóir	ˈəuɾˠəsˠoːɾʲ	ˈavˠɾˠəsˠoːɾʲ	3	76.92	0.2857	71.43
+ligthe	ˈl̠ʲɪcə	ˈl̠ʲɪcɪ	1	85.71	0.2500	75.00
+taoschnó	ˈt̪ˠiːˌsˠˌxɾˠoː	ˈt̪ˠiːsˠˌxɾˠoː	1	93.33	0.1250	87.50
+gabháil	ˈɡəuɑːlʲ	ˈɡɔwɑːlʲ	2	75.00	0.4000	60.00
+íocaíocht	ˈiəkiəxt̪ˠ	ˈiːkiəxt̪ˠ	1	90.00	0.1429	85.71
+lúthchleasa	ˈl̪ˠuːhçlʲəsˠə	ˈl̪ˠuːçlʲasˠə	2	85.71	0.2500	75.00
+buanfas	ˈbˠuən̪ˠhəsˠ	ˈbˠuənˠfˠəsˠ	3	75.00	0.1429	85.71
+gearrcach	ˈɟaɾˠkəx	ˈɟɑːɾˠkəx	2	77.78	0.1667	83.33
+acastóir	ˈaˌkəsˠt̪ˠoːɾʲ	ˈaˌkasˠt̪ˠoːɾʲ	1	92.86	0.1250	87.50
+túr	t̪ˠuːɾˠ	ˈt̪ˠuːɾˠ	1	87.50	0.0000	100.00
+lenarbh	ˈl̠ʲɛnˠəɾˠw	ˈlʲɛnˠəɾˠvˠ	3	72.73	0.1667	83.33
+aiseag	ˈæʃəɡ	ˈæʃək	1	80.00	0.2500	75.00
+deirfiúr	ˈdʲɛɾʲəfʲuːɾˠ	ˈdʲɛɾʲəfʲəɾˠ	2	84.62	0.1429	85.71
+arú amárach	ˌaɾˠuː ˈamˠɑːɾˠəx	əɾˠuːˈmˠɑːɾˠəx	4	76.47	0.3000	70.00
+polaitíocht	ˈpˠɔlˠət̪ˠiəxt̪ˠ	ˈpˠɔlˠətʲiəxt̪ˠ	2	87.50	0.0000	100.00
+-óimis	oːmʲɪʃ	oːmʲəʃ	1	83.33	0.2500	75.00
+Iúr	uːɾˠ	ən̠ʲˈtʲuːɾˠ	7	36.36	0.6000	40.00
+meánscoil	ˈmʲɑːn̪ˠsˠkəlʲ	ˈmʲɑːnˠˌsˠkɛlʲ	3	78.57	0.2500	75.00
+hAlban	ˈhalˠəbˠənˠ	ˈhaləbˠənˠ	1	90.91	0.0000	100.00
+in aice	ɪnʲ ˈacɪ	əˈn̪ˠacɪ	5	37.50	0.2000	80.00
+bhuel	wuɪlʲ	wɛlʲ	2	60.00	0.5000	50.00
+tá a fhios ag	t̪ˠɑː əˈɪsˠ əɡ	t̪ˠɑːsˠ eɟ	6	57.14	0.4286	57.14
+cérb	ceːɾʲbʲ	ceːɾˠbˠ	2	71.43	0.0000	100.00
+hIarmhí	ˌhiəɾʲˈvʲiː	ˌhiəɾˠˈvʲiː	1	90.91	0.0000	100.00
+ciumhais	ˈcəuʃ	cuːʃ	3	40.00	0.2500	75.00
+Fionlainn	ˈfʲɪn̪ˠlˠən̠ʲ	ˈfʲɪnlˠən̠ʲ	2	84.62	0.0000	100.00
+tuillidh	ˈt̪ˠɪl̠ʲə	ˈt̪ˠɪl̠ʲiː	2	80.00	0.2500	75.00
+-fidís	fʲɪdʲiːʃ	hədʲiːʃ	3	62.50	0.4000	60.00
+tiocfaidh ár lá	ˌtʲʊkə ɑːɾˠ ˈl̪ˠɑː	ˈtʲʊki aːɾˠ ˈl̪ˠaː	4	77.78	0.4444	55.56
+Dubhghall	ˈd̪ˠəul̪ˠ	ˈd̪ˠʊwəl̪ˠ	3	70.00	0.6000	40.00
+Áirc an Chonartha	ɑːɾʲc ənˠ ˈxɔnˠəɾˠhə	ˈɑːɾʲc ə ˌxɔn̪ˠəɾˠhə	5	75.00	0.0833	91.67
+chuán	xuɑːnˠ	ˈxuː.ɑːnˠ	3	66.67	0.0000	100.00
+macánta	ˈmˠakɑːn̪ˠt̪ˠə	ˈmakɑːn̪ˠt̪ˠə	1	92.86	0.0000	100.00
+ólfaidh	ˈoːl̪ˠhə	ˈɔːl̪ˠhə	1	87.50	0.0000	100.00
+le chéile	lʲɛ ˈçeːlʲə	lʲə ˈçeːlʲə	1	90.91	0.1667	83.33
+óinseacha	ˈoːn̠ʲʃəxə	ˈoːɲʃəxə	3	70.00	0.0000	100.00
+ógh	ə	oː	2	0.00	1.0000	0.00
+dualgas	ˈd̪ˠuəlˠəɡəsˠ	ˈd̪ˠuəlˠɡəsˠ	1	92.31	0.1250	87.50
+Luan Cásca	ˌl̪ˠuənˠ ˈkɑːsˠkə	ˌl̪ˠuən̪ˠ ˈkɑːsˠkə	1	94.44	0.0000	100.00
+Aindriú	ˈan̠ʲdʲɾʲuː	ˈanʲɾʲuː	3	72.73	0.2000	80.00
+confach	ˈkɔnˠəfˠəx	ˈkʊnˠəfˠəx	1	90.00	0.1429	85.71
+cion	cjunˠ	cunˠ	1	80.00	0.2500	75.00
+mion	ˈmʲɪnˠ	ˈmʲinˠ	1	83.33	0.0000	100.00
+turaíocht	ˈt̪ˠʊɾˠiəxt̪ˠ	t̪ˠɞɾˠiːəxt̪ˠ	3	76.92	0.1429	85.71
+barrchith	ˈbˠaɾˠəçə	ˈbˠɑːɾˠçɪ	4	55.56	0.5000	50.00
+bréagfholt	ˈbʲɾʲeːˌɡəl̪ˠt̪ˠ	ˈbʲɾʲeːɡˌɔl̪ˠt̪ˠ	3	81.25	0.3750	62.50
+adharca	ˈaiəɾˠkə	ˈəiəɾˠkə	1	87.50	0.1667	83.33
+éiríonn	ˈeːɾʲiːn̪ˠ	ˈəiɾʲiːn̪ˠ	2	80.00	0.4000	60.00
 éirím	ˈeːɾʲiːmʲ	ˈəiɾʲiːmʲ	2	77.78	0.4000	60.00
 éirigh	ˈeːɾʲə	ˈaiɾʲə	2	66.67	0.5000	50.00
-éireoidh	ˈeːɾʲə	ˈəiɾʲoː	4	42.86	0.7500	25.00
-éineacht	ˈeːnʲəxt̪ˠ	ʲeːnʲəxt̪ˠ	1	90.00	0.0000	100.00
-éilítear	ˈeːlʲiːtʲəɾˠ	ˈeːlʲiːɾʲ	4	66.67	0.3333	66.67
-hard	hɑːɾˠd̪ˠ	haːɾˠd̪ˠ	1	87.50	0.2500	75.00
-éileamh	ˈeːlʲəu	ˈeːlʲuː	2	71.43	0.2500	75.00
-éiclips	ˈeːclʲɪpʲʃ	ˈeːclʲɪpˠsˠ	3	72.73	0.0000	100.00
-olldord	ˈɔl̪ˠd̪ˠəːɾˠd̪ˠ	ˈɔl̪ˠˌd̪ˠoːɾˠd̪ˠ	2	87.50	0.4286	57.14
-Bhrasaíl	ˈvˠɾˠasˠəlʲ	vˠɾˠaˈsˠiːlʲ	4	66.67	0.1667	83.33
-éanacha	ˈeːnˠəxə	ˈeːn̪ˠəxiː	3	70.00	0.2000	80.00
-acmhainn	ˈakwən̠ʲ	ˈakuːn̠ʲ	2	75.00	0.4000	60.00
-bualadh	ˈbˠuəlˠə	ˈbˠɔl̪ˠə	3	62.50	0.4000	60.00
-éadóchas	ˈeːd̪ˠoːxəsˠ	ˈeːd̪ˠoːxːəsˠ	1	92.31	0.1429	85.71
-freastalta	ˈfʲɾʲasˠt̪ˠəl̪ˠt̪ˠə	ˈfʲɾʲasˠt̪ˠəl̪ˠt̪ə	1	94.74	0.0000	100.00
-naíon	ˈn̪ˠiːɔnˠ	ˈn̪ˠiːnˠ	1	88.89	0.2500	75.00
-mallacht	ˈmˠal̪ˠəxt̪ˠ	ˈmˠaːl̪ˠəxt̪ˠ	1	92.31	0.0000	100.00
-anchúinse	ˈanˠəxuːn̠ʲʃə	ˈanˠxuːn̠ʲʃə	1	92.31	0.1250	87.50
-cúcamar	ˈkuːkəmˠəɾˠ	kuːkəmˠərˠ	2	81.82	0.0000	100.00
-caorán	ˈkiːɾˠɑːnˠ	ˈkiːɾˠanˠ	2	80.00	0.2000	80.00
-taspáin	ˈt̪ˠasˠpˠɑːnʲ	t̪əˈspˠɑːnʲ	4	69.23	0.1667	83.33
-án	ɑːnˠ	ˈɑːnˠ	1	80.00	0.0000	100.00
-capaill	ˈkapˠəl̠ʲ	ˈkapˠəl̪ʲ	1	88.89	0.0000	100.00
-abhna	ˈəun̪ˠə	ˈoːn̪ˠə	2	71.43	0.5000	50.00
-áitithe	ˈɑːtʲəhɪ	ˈɑːtʲɪhə	2	75.00	0.4000	60.00
-umhal	ˈəulˠ	uːlˠ	3	40.00	0.3333	66.67
-tabharthach	ˈt̪ˠauəɾˠhəx	ˈt̪ˠauɾˠhəx	1	91.67	0.1250	87.50
-áilleacht	ˈɑːl̠ʲəxt̪ˠ	ˈɑːlʲəxt	3	72.73	0.0000	100.00
-cathú	ˈkahuː	ˈkaːuː	1	83.33	0.2500	75.00
-áibhirseoir	ˈɑːvʲəɾˠʃoːɾʲ	ˈɑːɾɕoːɾʲ	5	61.54	0.4286	57.14
-teoiric chinnteoireachta	ˌtʲoːɾʲɪc ˈçɪn̠ʲtʲoːɾʲəxt̪ˠə	ˌtʲoːɾʲəc ˈçɪn̠ʲtʲoːɾʲəxt̪ˠ	2	92.86	0.1250	87.50
-barr-	bˠaːɾˠ	bˠɑːɾˠ	1	83.33	0.3333	66.67
-cruimhe	ˈkɾˠɪvʲə	ˈkɾˠevʲə	1	87.50	0.2000	80.00
-Éadbhard	ˈeːd̪ˠwəːɾˠd̪ˠ	ˈeːd̪ˠwəɾˠd̪ˠ	1	92.86	0.1429	85.71
-Ó Cathasaigh	oː ˈkahəsˠə	ˈkahəsˠiː	5	54.55	0.2857	71.43
-tsnua	t̪ˠn̪ˠuə	t̪ˠɾˠũː	4	50.00	0.7500	25.00
-Dún Laoghaire	d̪ˠuːnˠ ˈl̪ˠiːəɾʲə	d̪ˠuːn̪ˠ ˈl̪ˠiːɾʲə	2	88.89	0.1250	87.50
-thiocfá	ˈhʊkɑː	ˈhʊkfˠɑː	2	75.00	0.2000	80.00
-searbh	ˈʃaɾˠuː	ˈʃarˠuː	1	85.71	0.0000	100.00
-éadtualaing	ˈeːd̪ˠt̪ˠuəlˠəŋ	ˈeːd̪ˠɔlən	7	53.33	0.3750	62.50
-aineolaí	ˈanʲoːlˠiː	ˈaːn̪ˠoːl̪ˠiː	4	69.23	0.0000	100.00
-Áirc an Chonartha	ɑːɾʲc ənˠ ˈxɔnˠəɾˠhə	ˈɑːɾʲc ə ˌxɔn̪ˠəɾˠhə	5	75.00	0.0833	91.67
-Áine	ˈɑːnʲə	ˈaːnʲə	1	83.33	0.3333	66.67
-neimhe	ˈn̠ʲɛvʲə	ˈn̠ʲɨ̞̃vʲə	3	70.00	0.5000	50.00
-vása	vˈɑːsˠə	ˈwɑːsˠə	2	71.43	0.2500	75.00
-veigeatóir	vˈɛɟət̪ˠoːɾʲ	ˈvʲɛɟɪt̪ˠoːɾʲ	3	76.92	0.1429	85.71
-amháin	ˈəuɑːnʲ	əˈwɑːnʲ	3	57.14	0.2500	75.00
-Luimneach	ˈl̪ˠɪmʲnʲəx	ˈl̪ˠɪmʲənʲəx	1	91.67	0.1429	85.71
-fiántas	ˈfʲiɑːn̪ˠt̪ˠəsˠ	ˈfʲi.ɑːn̪ˠt̪ˠəsˠ	1	93.75	0.0000	100.00
-urlár	ˈuːɾˠl̪ˠɑːɾˠ	ˈauɾˠl̪ˠɑːɾˠ	2	83.33	0.1667	83.33
-hIarmhí	ˌhiəɾʲˈvʲiː	ˌhiəɾˠˈvʲiː	1	90.91	0.0000	100.00
-carraige	ˈkaɾˠəɟɪ	ˈkaːɾˠiɟə	3	66.67	0.3333	66.67
-cén fáth	ceːnʲˈfˠɑː	ceːnˠ ˈfˠɑː	2	81.82	0.0000	100.00
-umhlú	ˈəulˠuː	ˈuːlˠuː	2	71.43	0.2500	75.00
-tiocfair	ˈtʲʊkfˠəɾʲ	ˈtʲʊkəɾʲ	2	80.00	0.1667	83.33
-uirlis	ˈɪːɾʲlʲɪʃ	ˈuːɾˠl̠ʲəʃ	4	60.00	0.5000	50.00
-ar chor ar bith	ɛɾʲxɔɾˠ ɛɾʲˈbʲɪ	ə ˌxɔɾˠ əˈbʲɪ	6	60.00	0.4444	55.56
-seanscéal	ˈʃan̠ʲʃceːlˠ	ˈʃanˠʃceːlˠ	2	83.33	0.0000	100.00
-uigneacha	ˈɪɟn̠ʲəxə	ˈɪɟn̠ʲaxə	1	88.89	0.1667	83.33
-tiomáint	ˈtʲʊmˠɑːn̠ʲtʲ	ˈtʲɪmˠɑːn̠ʲtʲ	1	92.31	0.1667	83.33
-uathlathaí	ˈuəhlˠəhiː	ˈuəlˠəhiː	1	90.00	0.1429	85.71
-dtitfinn	ˈdʲɪtʲfʲən̠ʲ	ˈdʲɪtʲən̠ʲ	2	83.33	0.1667	83.33
-scilling	ˈʃcɪl̠ʲəɲ	ˈʃcɪl̠ʲən̠ʲ	3	72.73	0.0000	100.00
-uair an chloig	ˌuəɾʲ ənˠ ˈxlˠɪɟ	uəɾʲ ə xlˠɛɟ	5	68.75	0.3000	70.00
-oidhre	ˈəiɾʲə	ˈaiɾʲə	1	83.33	0.2500	75.00
-bheas	vʲasˠ	vʲɛsˠ	1	80.00	0.3333	66.67
-cnuimhe	ˈkɾˠɪvʲə	ˈknˠevʲə	2	75.00	0.4000	60.00
-faigh	fˠə	fˠəi	1	75.00	0.3333	66.67
-neascóid	ˈn̠ʲasˠkoːdʲ	ˈn̠ʲɪsˠkoːdʲ	1	91.67	0.1667	83.33
-bun ribe	bˠʊnˠ ˈɾʲɪbʲə	bˠʌnˠ ˈɾˠɨ̞bʲə	4	71.43	0.3750	62.50
-dólámhach	ˈd̪ˠoːlˠɑːwəx	ˈd̪ˠoːˌl̪ˠɑːwəx	2	86.67	0.1250	87.50
-Bhaile Átha Cliath	ˌwalʲə ɑːhə ˈclʲiə	ˌvʲlʲɑː ˈclʲiə	6	66.67	0.4167	58.33
-Laoghaire	ˈl̪ˠiːəɾʲə	ˈl̪ˠiːɾʲə	1	90.00	0.2000	80.00
-dalta	ˈd̪ˠal̪ˠt̪ˠə	d̪ˠalˠt̪ˠə	2	83.33	0.0000	100.00
-bainfidh	ˈbˠan̠ʲhə	ˈbˠɪnʲhə	2	77.78	0.2000	80.00
-uafás	ˈuəfˠɑːsˠ	ˈuːhɑːsˠ	3	66.67	0.4000	60.00
-braistint	ˈbˠɾˠaʃtʲən̠ʲtʲ	ˈbˠɾˠɑʃtʲənʲtʲ	2	86.67	0.1250	87.50
-laethe	ˈl̪ˠeːhə	ˈl̪ˠeːhɪ	1	87.50	0.2500	75.00
-arú amárach	ˌaɾˠuː ˈamˠɑːɾˠəx	əɾˠuːˈmˠɑːɾˠəx	4	76.47	0.3000	70.00
-mo ghrá thú	ˈmˠə ɣɾˠɑː ˈhuː	mˠə ɣɾˠɑː huː	2	86.67	0.0000	100.00
-tóin in airde	ˌt̪ˠoːnʲ ɪnʲ ˈɑːɾˠdʲə	ˌt̪ˠuːnʲ əˈn̪ˠɑːɾˠdʲə	6	71.43	0.2000	80.00
-in éineacht le	ɪnʲ ˈeːnʲəxt̪ˠ lʲɛ	əˈn̠ʲeːnʲəxt̪ˠ lʲə	6	66.67	0.2222	77.78
-ghaiscígh	ˈɣaʃcɪ	ˈɣaʃciː	2	71.43	0.0000	100.00
-buachaillí	ˈbˠuəxəl̠ʲiː	ˈbuəxəlʲiː	2	83.33	0.0000	100.00
-monabhar	ˈmˠɔnˠəuɾˠ	ˈmˠʊnˠəwəɾˠ	3	72.73	0.4286	57.14
-shnua	hn̪ˠuə	hn̪ˠuː	1	83.33	0.2500	75.00
-cluiche	ˈklˠɪçə	ˈklˠifʲə	3	62.50	0.2000	80.00
-bogaigh	ˈbˠɔɡiː	ˈbɔɡiː	1	85.71	0.0000	100.00
-cumannachas	ˈkʊmˠən̪ˠəxəsˠ	ˈkʊmˠən̪ˠəxəs	1	92.86	0.0000	100.00
-gréasáin	ˈɟɾʲeːsˠɑːnʲ	ˈɟɾeːsˠɑːnʲ	1	91.67	0.0000	100.00
-Cabúl	ˈkabˠuːlˠ	kaˈbˠuːlˠ	2	77.78	0.0000	100.00
-gairm	ˈɡaɾʲəmʲ	ˈɡeɾʲəmʲ	1	87.50	0.2000	80.00
-troscadh	ˈt̪ˠɾˠɔsˠkuː	ˈt̪ˠɾˠosˠkuː	1	91.67	0.0000	100.00
-tálaim	ˈt̪ˠɑːlˠɪmʲ	t̪ˠɑːl̪ˠɪmʲ	2	81.82	0.0000	100.00
-Tír Bhascach	tʲiːɾʲ ˈwasˠkəx	tʲiːɾʲ ˈvˠaskəx	3	80.00	0.1111	88.89
-chodlata	ˈxɔd̪ˠlˠət̪ˠə	ˈkɔl̪ˠət̪ˠə	4	69.23	0.2857	71.43
-tá ocras orm	t̪ˠɑː ˈɔkɾˠəsˠ əɾˠəmˠ	ˈt̪ˠɔkɾˠəsˠ ɔɾˠəmˠ	6	71.43	0.1818	81.82
-céilíoch	ˈceːlʲiːx	ˈceːlʲiːəx	1	90.00	0.1667	83.33
-bhfreastalaí	ˈvʲɾʲasˠt̪ˠəlˠiː	ˈfʲɾʲasˠt̪ˠəlˠiː	1	93.75	0.1250	87.50
-turaíocht	ˈt̪ˠʊɾˠiəxt̪ˠ	t̪ˠɞɾˠiːəxt̪ˠ	3	76.92	0.1429	85.71
-aire	ˈaɾʲə	ˈaːɾʲə	1	83.33	0.0000	100.00
-turaireacht	ˈt̪ˠʊɾˠəɾʲəxt̪ˠ	t̪ˠʊɾˠɪɾʲɑxt̪ˠ	3	80.00	0.2500	75.00
-giorraím	ˈɟɪɾˠəmʲ	ˈɟɪɾˠiːmʲ	2	77.78	0.2000	80.00
-tulach	ˈt̪ˠʊlˠəx	ˈt̪ˠol̪ˠəx	2	80.00	0.2000	80.00
-spioraid	ˈsˠpʲɪɾˠədʲ	ˈsˠpʲiɾˠədʲ	1	90.91	0.0000	100.00
-dearnadh	ˈdʲɑːɾˠn̪ˠuː	ˈdʲaːɾˠn̪ˠuː	1	91.67	0.2000	80.00
-proifisiúnta	ˈpˠɾˠɛfʲəʃuːn̪ˠt̪ˠə	pˠɾˠɔˈfʲɛʃun̪ˠt̪ˠə	5	73.68	0.2000	80.00
-tugann	ˈt̪ˠʊɡən̪ˠ	ˈtˠʊɡən̪ˠ	1	90.00	0.0000	100.00
-cad chuige	kad̪ˠ ˈxəɟɪ	kəˈt̪ˠiɟə	8	27.27	0.7143	28.57
-mhná	vˠn̪ˠɑː	vˠɾˠɑː	2	71.43	0.3333	66.67
-tuarastail	ˈt̪ˠuəɾˠəsˠt̪ˠəlʲ	ˈt̪uəɾˠəsˠt̪əlʲ	2	88.24	0.0000	100.00
-Bablóinia	bˠaˈbˠlˠoːnʲiə	bˠabˠˈlˠoːnʲiə	2	85.71	0.0000	100.00
-tabhartanas	ˈt̪ˠəuɾˠt̪ˠənˠəsˠ	ˈt̪ˠoːɾˠt̪ˠənˠəsˠ	2	88.24	0.2222	77.78
-báthair	ˈbˠɑːhəɾʲ	ˈbɑːhəɾʲ	1	88.89	0.0000	100.00
-claidh	klˠə	kl̪ˠəi	2	66.67	0.2500	75.00
-tsnátha	ˈt̪ˠn̪ˠɑːhə	t̪ˠn̪ˠɑː	3	72.73	0.4000	60.00
-nimhneach	ˈn̠ʲəinʲəx	ˈn̠ʲivʲnʲəx	3	72.73	0.3333	66.67
-briota	ˈbʲɾʲɪt̪ˠə	ˈbʲɾʲɨ̞t̪ˠə	2	81.82	0.3333	66.67
-buile	ˈbˠilʲə	ˈbˠɪlʲə	1	85.71	0.0000	100.00
-fortacht	ˈfˠɔɾˠt̪ˠəxt̪ˠ	ˈfˠɔɾˠt̪əxt̪ˠ	1	92.86	0.0000	100.00
-tseilg	ˈtʲɛlʲəc	ˈtʲɛlʲɪɟ	2	75.00	0.4000	60.00
-Ulaidh	ˈʊlˠə	ˈʊlˠiː	2	66.67	0.3333	66.67
-gairmiúil	ˈɡaɾʲəmʲuːlʲ	ɡaɾʲmʲuːlʲ	2	83.33	0.1429	85.71
-fheabhas	ˈauəsˠ	əusˠ	3	50.00	0.5000	50.00
-mar sin	mˠəɾˠ ˈʃɪnʲ	mˠaɾˠˈʃɪnʲ	2	81.82	0.1667	83.33
-feighil	fʲɪəlʲ	fʲəilʲ	2	66.67	0.5000	50.00
-trína	tʲɾʲiːnˠə	ˈtʲɾʲiːnˠə	1	90.00	0.0000	100.00
-guirme	ˈɡɪɾʲəmʲə	ˈɡɪɾʲmʲə	1	88.89	0.1667	83.33
-Chiribeas	ˈçɪɾʲəbʲəsˠ	ˈxɪɾʲəˌbas	5	54.55	0.2500	75.00
-chuimhnigh	ˈxɪvʲnʲə	ˈxiːnʲə	3	62.50	0.2000	80.00
-hidrigin	ˈhɪdʲɾʲəɟɪnʲ	hɪdʲɾʲɪɟɪnʲ	2	83.33	0.1250	87.50
-céad míle fáilte	ceːd̪ˠ mʲiːlʲə ˈfˠɑːl̠ʲtʲə	ceːd̪ˠ ˈmʲiːlʲə ˈfˠaːlʲtʲə	3	88.46	0.0833	91.67
-nochtacht	ˈn̪ˠɔxt̪ˠəxt̪ˠ	ˈnɔxt̪ˠəxt̪ˠ	2	85.71	0.0000	100.00
-tráthúil	ˈt̪ˠɾˠɑːhuːlʲ	ˈtˠɾˠɑː.huːlʲ	2	84.62	0.0000	100.00
-gréas	ɟɾʲeːsˠ	ɟɾeːsˠ	1	85.71	0.0000	100.00
-tráthnóna	ˈt̪ˠɾˠɑːhn̪ˠoːnˠə	t̪ˠɾˠəˈhnˠuːnˠə	5	70.59	0.2500	75.00
-isteach	ˈɪʃtʲəx	əʃˈtʲax	4	42.86	0.4000	60.00
-tráthanna	ˈt̪ˠɾˠɑːhən̪ˠə	ˈt̪ˠɾˠɑːn̪ˠə	2	85.71	0.2857	71.43
-tráigh	t̪ˠɾˠə	t̪ˠɾˠɑː	2	71.43	0.3333	66.67
-abhrasóir	ˈəuɾˠəsˠoːɾʲ	ˈavˠɾˠəsˠoːɾʲ	3	76.92	0.2857	71.43
-trombón	ˈt̪ˠɾˠɔmˠəbˠoːnˠ	ˈt̪ˠɾˠɔmˠbˠoːnˠ	1	93.75	0.1250	87.50
-tarrtháil	ˈt̪ˠaɾˠhɑːlʲ	ˈt̪ˠɑːɾˠhɑːlʲ	2	84.62	0.1667	83.33
-araon	əˈɾˠiːn̪ˠ	əˈɾˠeːn̪ˠ	1	88.89	0.2500	75.00
-triomach	ˈtʲɾʲʊmˠəx	ˈtʲɾʲɪməx	2	80.00	0.1667	83.33
-lá breithe maith agat	l̪ˠɑː bʲɾʲɛhə ˈmˠah uɡəd̪ˠ	l̪ˠɑː bʲɾʲɛhə mˠa ˈaɡət̪ˠ	5	80.77	0.2143	78.57
-trasinscneach	ˈt̪ˠɾˠaʃən̠ʲʃcnʲəx	t̪ˠɾˠasˠˈɪn̠ʲʃcnʲəx	5	73.68	0.0909	90.91
-traidisiún	ˈt̪ˠɾˠadʲɪʃuːnˠ	t̪ˠɾˠəˈdʲɪʃuːnˠ	3	80.00	0.1250	87.50
-id	ɪdʲ	ɪd̪ˠ	2	50.00	0.0000	100.00
-lúthchleas	ˈl̪ˠuːhçlʲəsˠ	ˈl̪ˠuːçlʲasˠ	2	84.62	0.2857	71.43
-ghnáth	ɣn̪ˠɑː	ɣnˠɑː	1	83.33	0.0000	100.00
-ramhair	ˈɾˠəuɾʲ	ɾˠəurʲ	2	71.43	0.0000	100.00
-laghairt	ˈl̪ˠaiəɾˠtʲ	l̪ˠəiɾˠtʲ	3	72.73	0.3333	66.67
-maíte	ˈmˠatʲə	ˈmˠiːtʲə	2	75.00	0.2500	75.00
-Bolcáin	ˈbˠɔlˠkɑːnʲ	ˈbɔlˠkɑːnʲ	1	90.91	0.0000	100.00
-neamhspleách	ˈn̠ʲəuʃpʲlʲaːx	ˈn̠ʲəusˠpʲlʲaːx	2	86.67	0.0000	100.00
-oilfeadh	ˈɛl̠ʲhu	ˈɛlʲhu	1	85.71	0.0000	100.00
-toirneach	ˈt̪ˠoːɾˠn̠ʲəx	ˈt̪ˠauɾˠn̠ʲəx	2	84.62	0.2857	71.43
-Mumhain	ˈmˠəunʲ	mˠuːnʲ	3	57.14	0.2500	75.00
-salach	ˈsˠalˠəx	ˈsˠaːl̪ˠəx	2	80.00	0.0000	100.00
-gainimh	ˈɡanʲəi	ˈɡɑnʲəvʲ	3	62.50	0.4000	60.00
-gallta	ˈɡal̪ˠt̪ˠə	ˈɡaːl̪ˠt̪ˠə	1	90.91	0.0000	100.00
-suaimhneas	ˈsˠuəvʲnʲəsˠ	ˈsˠiːmʲnʲəsˠ	3	75.00	0.4286	57.14
-adhall	ˈaiəl̪ˠ	ˈəiəl̪ˠ	1	85.71	0.2500	75.00
-ólfaidh	ˈoːl̪ˠhə	ˈɔːl̪ˠhə	1	87.50	0.0000	100.00
-mboicht	mˠɛçtʲ	mˠɔxtʲ	2	66.67	0.2500	75.00
-céadta	ˈceːd̪ˠt̪ˠə	ˈceːt̪ˠə	3	72.73	0.2000	80.00
-tiuf-teaf	ˈtʲɪfʲˌtʲəfˠ	ˈtʲufˠˌtʲafˠ	3	75.00	0.2857	71.43
-éasc	eːsˠk	eːsk	1	80.00	0.0000	100.00
-tionchar	ˈtʲɪn̪ˠxəɾˠ	ˈtʲʊŋxəɾˠ	4	63.64	0.1667	83.33
-freastalaíonn	ˈfʲɾʲasˠt̪ˠəlˠiːən̪ˠ	ˈfʲɾʲasˠt̪ˠəlˠiːn̪ˠ	1	95.00	0.1000	90.00
-tiomáin	ˈtʲʊmˠɑːnʲ	ˈtʲɪmˠɑːnʲ	1	90.00	0.2000	80.00
-tiocfar	ˈtʲʊkfˠəɾˠ	ˈtʲʊkfəɾˠ	1	90.00	0.0000	100.00
-tiocfaimid	ˈtʲʊkfˠəmʲədʲ	ˈtʲʊkəmʲədʲ	2	84.62	0.1250	87.50
-tiocfaidh ár lá	ˌtʲʊkə ɑːɾˠ ˈl̪ˠɑː	ˈtʲʊki aːɾˠ ˈl̪ˠaː	4	77.78	0.4444	55.56
-tiocfaid	ˈtʲʊkfˠədʲ	ˈtʲʊkədʲ	2	80.00	0.1667	83.33
-cearnóige	ˈcɑːɾˠn̪ˠoːɟɪ	ˈcɑːɾˠn̪ˠoːɟə	1	92.31	0.1429	85.71
-timpistí	ˈtʲɪmʲpʲəʃtʲiː	ˈtʲɪmˠpˠəʃtʲiː	2	85.71	0.0000	100.00
-timpiste	ˈtʲɪmʲpʲəʃtʲə	ˈtʲɪmˠpˠəʃtʲə	2	84.62	0.0000	100.00
-minicí	ˈmʲɪnʲɪciː	ˈmʲɪnɪciː	1	90.00	0.0000	100.00
-rinneadh	ˈɾˠɪn̠ʲuː	ˈɾˠɪnʲuː	1	88.89	0.0000	100.00
-culaith	ˈkʊlˠə	ˈkolˠiː	3	57.14	0.5000	50.00
-théigh	hɪ	heːj	3	25.00	0.6667	33.33
-duamair	ˈd̪ˠuəmˠəɾʲ	ˈd̪ˠuəməɾʲ	1	90.91	0.0000	100.00
-gearraim	ˈɟaɾˠəmʲ	ˈɟaːɾˠəmʲ	1	88.89	0.0000	100.00
-riaráiste	ˈɾˠiəɾˠɑːʃtʲə	ˈɾˠiːɾˠɑːʃtʲə	1	92.31	0.1250	87.50
-dtiocfá	ˈdʲʊkɑː	ˈdʲʊkfˠɑː	2	77.78	0.2000	80.00
-thráigh	hɾˠə	hɾˠɑː	2	60.00	0.3333	66.67
-féinphic	ˈfʲeːn̠ʲfʲɪc	ˈfʲeːnʲˌfʲɪc	2	83.33	0.1429	85.71
-facabhair	ˈfˠakəuɾʲ	ˈfˠakəwəɾˠ	3	70.00	0.2857	71.43
-tráill	t̪ˠɾˠɑːl̠ʲ	t̪ˠɾˠɑːlʲ	1	90.00	0.0000	100.00
-nighe	ˈn̠ʲəiə	n̠ʲiː	3	57.14	0.5000	50.00
-cearc ghoir	caɾˠk ˈɣɛɾʲ	ˈcaɾˠk ˈɣɪɾʲ	2	83.33	0.1429	85.71
-cúinge	ˈkuːɲə	ˈkuːɲɪ	1	83.33	0.2500	75.00
-thiocfas	ˈhʊkəsˠ	ˈçukəsˠ	2	71.43	0.2000	80.00
-Catalóin	ˈkat̪ˠəlˠoːnʲ	ˈkatˠəl̪ˠoːnʲ	2	84.62	0.0000	100.00
-déarfainn	ˈdʲeːɾˠfˠən̠ʲ	ˈdʲeːɾˠhən̠ʲ	2	84.62	0.1667	83.33
-lastoir	ˈl̪ˠasˠt̪ˠəɾʲ	l̪ˠasˠˈt̪ˠɛɾʲ	3	76.92	0.1667	83.33
-caomhnú	ˈkiːvˠn̪ˠuː	ˈkˠiːnˠuː	4	63.64	0.2000	80.00
-le haghaidh	lʲɛ ˈhaiə	lʲəi̯	6	33.33	0.6667	33.33
-righin	ˈɾˠəiənʲ	ɾˠəinʲ	2	75.00	0.2000	80.00
-ar aghaidh	ɛɾʲˈaiə	ɛɾʲ ˈəi	3	57.14	0.4000	60.00
-teilg	ˈtʲɛlʲəc	ˈtʲɛlʲɪɟ	2	75.00	0.4000	60.00
-teideal	ˈtʲɛdʲəlˠ	ˈtʲɛdʲəl	1	88.89	0.0000	100.00
-maraím	ˈmˠaɾˠəmʲ	ˈmˠaɾˠiːmʲ	2	80.00	0.2000	80.00
-portach	ˈpˠɔɾˠt̪ˠəx	ˈpˠoɾˠt̪ˠəx	1	90.91	0.0000	100.00
-cibé	ˈcɪbʲeː	cɪˈbʲeː	2	71.43	0.0000	100.00
-gliocais	ˈɟlʲɪkəʃ	ˈɟlʊkəʃ	2	75.00	0.1667	83.33
-ríomhaire	ˈɾˠiːwəɾʲə	ˈɾˠiːvˠəɾʲə	2	81.82	0.1667	83.33
-scráib	sˠkɾˠaːbʲ	sˠkɾˠaːbˠ	1	88.89	0.0000	100.00
-bogearraí	ˈbˠɪɟəɾˠiː	ˈbˠoɟəɾˠiː	1	90.00	0.1667	83.33
-Bandan	ˈbˠan̪ˠd̪ˠənˠ	bˠɑn̪ˠd̪ˠən̪ˠ	3	76.92	0.1667	83.33
-triomú	ˈtʲɾʲʊmˠuː	ˈtʲɾʲumˠuː	1	90.00	0.0000	100.00
-tarmachan	ˈt̪ˠaɾˠəmˠəxənˠ	ˈt̪ˠaɾəmˠəxənˠ	1	93.33	0.0000	100.00
-sabhdán	ˈsˠəud̪ˠɑːnˠ	ˈsˠaud̪ˠɑːnˠ	1	91.67	0.1667	83.33
-god é	ɡɔd̪ˠ ˈeː	ɡəˈd̪ˠeː	4	55.56	0.2500	75.00
-seandaoine	ˈʃan̪ˠd̪ˠiːnʲə	ˈʃanˌdiːnə	5	64.29	0.1250	87.50
-Danmhairge	ˈd̪ˠanˠəwəɾʲɟɪ	ˈd̪ˠanwəɾʲəɟə	4	71.43	0.3333	66.67
-Baváir	bˠavɑːɾʲ	ˈbˠawɑːɾʲ	2	77.78	0.2000	80.00
-fothragadh	ˈfˠɔhɾˠəɡə	ˈfˠoɾˠəkə	3	70.00	0.2857	71.43
-luaidhim	ˈl̪ˠuəjəmʲ	l̪ˠuəmʲ	3	70.00	0.3333	66.67
-tuairisceoir	ˈt̪ˠuəɾʲɪʃcoːɾʲ	t̪ˠuˑəɾʲɪʃcoːɾʲ	2	86.67	0.1000	90.00
-gabhála	ˈɡəuɑːlˠə	ˈɡawɑːlˠə	2	77.78	0.3333	66.67
-tairbh	ˈt̪ˠaɾʲəvʲ	ˈt̪ˠɑɾʲəvʲ	1	90.00	0.2000	80.00
-barriall	ˈbˠaɾˠiəl̪ˠ	ˈbˠɑːɾˠiəl̪ˠ	2	83.33	0.1667	83.33
-gluaisrothar	ˈɡlˠuəsˠɾˠəhəɾˠ	ɡlˠuəʃˈɾˠɔhəɾˠ	4	73.33	0.1000	90.00
-aisling	ˈaʃl̠ʲəɲ	ˈaʃl̠ʲən̠ʲ	3	70.00	0.0000	100.00
-ghnó	ɣn̪ˠoː	ɣɾˠoː	2	66.67	0.3333	66.67
-airneán	ˈɑːɾˠn̠ʲɑːnˠ	ˈaːɾˠn̠ʲaːnˠ	2	83.33	0.4000	60.00
-ata	əˈt̪ˠa	ˈat̪ˠə	3	50.00	0.6667	33.33
-bunadh	ˈbˠʊnˠuː	ˈbˠunˠuː	1	87.50	0.0000	100.00
-súil ribe	ˌsˠuːlʲ ˈɾʲɪbʲə	ˈsˠuːlʲ ˈɾˠɪbʲə	2	86.67	0.1250	87.50
-greamaím	ˈɟɾʲamˠəmʲ	ˈɟɾʲamˠiːmʲ	2	81.82	0.1667	83.33
-súiche	ˈsˠuːçə	ˈsˠuːçɪ	1	85.71	0.2500	75.00
-beagnach	ˈbʲaɡn̪ˠəx	ˈbʲɔɡnˠəx	2	80.00	0.1667	83.33
-leoraí	ˈlʲoːɾˠiː	ˈlʲɔɾˠiː	2	77.78	0.0000	100.00
-bráithre	ˈbˠɾˠɑːhɾʲə	ˈbˠɾˠɑːɾʲə	1	90.91	0.1667	83.33
-Dún Éideann	d̪ˠuːnˠ ˈeːdʲən̪ˠ	ˈd̪ˠuːnˠ ˈeːdʲən̪ˠ	1	94.44	0.0000	100.00
-fionn	fʲɪoːn̪ˠ	fʲuːn̪ˠ	2	75.00	0.5000	50.00
-Droichead Nua	ˌd̪ˠɾˠɛçəd̪ˠ ˈn̪ˠuə	ˌd̪ˠɾˠeːd̪ˠ ˈn̪ˠuː	4	78.95	0.3000	70.00
-cúlán	ˈkuːlˠaːnˠ	ˈkuːlaːn	2	80.00	0.0000	100.00
-oileadh	ˈɛlʲə	ˈɛlʲətʲ	2	71.43	0.2500	75.00
-Ceatharlach	ˈcahəːɾˠl̪ˠəx	ˈcahəɾˠl̪ˠəx	1	92.31	0.1111	88.89
-amhrán	ˈəuɾˠɑːnˠ	ˈɑːɾˠɑːnˠ	2	77.78	0.4000	60.00
-sáfach	ˈsˠɑːfˠəx	ˈsɑːfˠəx	1	88.89	0.0000	100.00
-sochreidte	ˈsˠɔhɾʲədʲtʲə	ˈsˠɔˌçɾʲɛtʲə	5	61.54	0.5000	50.00
-ruán	ˈɾˠuɑːnˠ	ˈɾˠuː.ɑːnˠ	2	80.00	0.0000	100.00
-caint	kan̠ʲtʲ	kaːn̠ʲtʲ	1	87.50	0.0000	100.00
-comhrialtas	ˈkɪɾʲiəl̪ˠt̪ˠəsˠ	ˈkoːɾˠiəl̪ˠt̪ˠəsˠ	3	82.35	0.1111	88.89
-suaimhneach	ˈsˠuəvʲnʲəx	ˈsˠiːmʲɾʲəx	4	63.64	0.5714	42.86
-spáin	sˠpˠɑːnʲ	spˠɑːnʲ	1	87.50	0.0000	100.00
-gcodlaíonn	ˈɡɔd̪ˠlˠiːən̪ˠ	ˈɡol̪ˠiːn̪ˠ	5	64.29	0.2857	71.43
-dronuilleog	ˈd̪ˠɾˠɔnˠəl̠ʲoːɡ	ˈd̪ˠɾɔnˠˌɪl̠ʲoːɡ	3	81.25	0.2222	77.78
-cadhnra	ˈkain̪ˠɾˠə	ˈkəinˠɾˠə	2	80.00	0.1667	83.33
-dordéan	ˈd̪ˠoːɾˠdʲeːnˠ	ˈd̪ˠoːɾˠd̪ˠˌeːnˠ	3	81.25	0.1429	85.71
-mart	mˠaɾˠt̪ˠ	mˠaɾˠtˠ	1	87.50	0.0000	100.00
-strainséir	ˈsˠt̪ˠɾˠan̠ʲʃeːɾʲ	ˈsˠt̪ˠɾˠan̠ʲʃeːɾˠə	2	88.89	0.1111	88.89
-stoptha	ˈsˠt̪ˠɔpˠə	sˈˠt̪ˠɔpˠə	2	80.00	0.0000	100.00
-ceird	cɛːɾˠdʲ	ceɾˠdʲ	2	71.43	0.0000	100.00
-glún	ɡlˠuːn̪ˠ	ɡl̪ˠuːn̪ˠ	1	88.89	0.0000	100.00
-naíonta	ˈn̪ˠiːɔn̪ˠt̪ˠə	ˈn̪ˠiːn̪ˠt̪ˠə	1	92.86	0.1667	83.33
-Odhrán	ˈuːɾˠɑːnˠ	ˈoːɾˠɑːnˠ	1	88.89	0.2500	75.00
-stiúideo	ˈʃtʲuːdʲoː	ˈʃtʲuːdʲioː	1	90.91	0.1667	83.33
-oighear	ɛəɾˠ	əiɾˠ	2	50.00	0.6667	33.33
-stadta	ˈsˠt̪ˠad̪ˠt̪ˠə	ˈsˠt̪ˠat̪ˠə	3	78.57	0.1667	83.33
-mar ea	mˠəɾˠ ˈa	mˠaɾˠ ˈja	2	77.78	0.4000	60.00
-adhlacóir	ˈailˠəkoːɾʲ	ˈəil̪ˠəkoːɾʲ	2	83.33	0.1429	85.71
-triail	tʲɾʲiəlʲ	tʲɾʲiːɑːlʲ	3	70.00	0.2000	80.00
-sréin	ʃɾʲeːnʲ	sˠɾˠeːnʲ	3	62.50	0.0000	100.00
-ar buile	ɛɾʲˈbˠɪlʲə	ˈeɾʲˈbˠi.lʲə	4	66.67	0.0000	100.00
-sráide	ˈsˠɾˠɑːdʲə	sˠɾˠaːdʲə	2	80.00	0.2000	80.00
-sráidbhaile	ˈsˠɾˠɑːd̪ˠwəlʲə	ˈsˠɾˠɑːdʲwalʲə	3	80.00	0.1250	87.50
-féinspéis	ˈfʲeːn̠ʲʃpʲeːʃ	ˈfʲeːnʲsˠpʲeːʃ	3	78.57	0.0000	100.00
-acmhainneach	ˈakwən̠ʲəx	ˈakuːn̠ʲəx	2	80.00	0.2857	71.43
-Ungáiris	ˈʊŋɑːɾʲɪʃ	ˈʊŋˠɡaːrʲɪʃ	4	63.64	0.2857	71.43
--aíonn	iːoːn̪ˠ	iːən̪ˠ	2	71.43	0.3333	66.67
-cnó Brasaíleach	kɾˠoː ˈbˠɾˠasˠəlʲəx	kno:	17	10.53	0.8182	18.18
-chomh maith	xəu ˈmˠa	xə mˠa	2	75.00	0.2000	80.00
-comhlach	ˈkoːlˠəx	ˈkuːlˠəx	1	87.50	0.2000	80.00
-Tír Eoghain	tʲiːɾʲ ˈoːənʲ	tʲiːɾʲ ˈoːnʲ	1	92.31	0.1667	83.33
-bláthach	ˈbˠlˠɑːhəx	ˈbˠlˠɑːx	2	80.00	0.3333	66.67
-cnogaí	ˈkɾˠɔɡiː	ˈknˠuɡiː	2	75.00	0.4000	60.00
-spréigh	sˠpʲɾʲɪ	sˠpʲɾʲeːj	3	66.67	0.4000	60.00
-fiánta	ˈfʲiɑːn̪ˠt̪ˠə	ˈfʲiː.ɑːn̪ˠt̪ˠə	2	86.67	0.0000	100.00
-T-léine	ˈtʲlʲeːnʲə	t̪ˠiː ˈl̠ʲeːnʲə	8	46.67	0.1667	83.33
-muirnín	ˈmˠiːɾˠn̠ʲiːn̠ʲ	ˈmˠuːɾˠn̠ʲiːnʲ	2	86.67	0.1667	83.33
-sliogán	ˈʃl̠ʲɪɡɑːnˠ	ˈʃl̠ʲiɟaːnˠ	3	72.73	0.1667	83.33
-díchiall	ˈdʲiːçiəl̪ˠ	ˈdʲiːˌçeːl̠ʲə	6	53.85	0.5714	42.86
-sothuigthe	ˈsˠɔhəcə	ˈsˠɔˌhɪcɪ	3	66.67	0.4286	57.14
-sol má	sˠɔlˠ ˈmˠɑː	ˈsˠɔlˠmˠɑː	3	72.73	0.0000	100.00
-beir bua agus beannacht	bʲɛɾʲ bˠuə aɡəsˠ ˈbʲan̪ˠəxt̪ˠ	bʲɛɾʲ bˠuə ɑɡəsˠ ˈbʲan̪ˠəxt̪ˠ	1	96.55	0.0625	93.75
-soilse	ˈsˠɛl̠ʲʃə	ˈsˠəil̠ʲʃə	2	80.00	0.3333	66.67
-Dún Dealgan	ˌd̪ˠuːnˠ ˈdʲalˠəɡənˠ	ˌd̪ˠuːn̪ˠ ˈdʲal̪ˠəɡən̪ˠ	3	86.96	0.0000	100.00
-d'íosfaí	ˈdʲiːsˠfˠiː	ˈdʲiːsˠfʲiː	1	90.91	0.0000	100.00
-arraing	ˈaɾˠəŋ	ˈaɾˠən̠ʲ	3	62.50	0.0000	100.00
-Nás	ˈn̪ˠɑːsˠ	əˈn̪ˠɑːsˠ	1	88.89	0.2500	75.00
-Mumhan	ˈmˠəunˠ	mˠuːnˠ	3	57.14	0.2500	75.00
-dhéanfaí	ˈjeːn̪ˠfˠiː	ˈjiːnfˠiː	3	72.73	0.2000	80.00
-bhFrainc	wɾˠaɲc	vˠɾˠaɲc	2	71.43	0.2000	80.00
-snoíodóireacht	ˈsˠn̪ˠiːəd̪ˠoːɾʲəxt̪ˠ	ˈsˠn̪ˠiːd̪ˠoːɾʲəxt̪ˠ	1	95.24	0.1000	90.00
-i gceann	əˈɟaːn̪ˠ	ɟɨ̞n̪ˠ	4	50.00	0.7500	25.00
-snagcheol	ˈsˠn̪ˠaɟçoːlˠ	ˈsˠn̪ˠaɡˌçoːlˠ	2	85.71	0.1250	87.50
-sna	sˠn̪ˠa	sˠnˠə	2	66.67	0.3333	66.67
-Gaeilge na hAlban	ˌɡeːlʲəɟɪ n̪ˠə ˈhalˠəbˠənˠ	ˈɡeːlʲɟɪ nˠə ˈhalˠəbˠənˠ	3	88.46	0.1250	87.50
-smiolgadán	ˈsˠmʲɪl̪ˠɡəd̪ˠɑːn̪ˠ	ˈsˠmʲɪl̪ˠəɡəd̪ˠɑːn̪ˠ	1	95.00	0.1000	90.00
-rugabhair	ˈɾˠʊɡəuɾʲ	ˈɾˠʊɡəwəɾʲ	2	80.00	0.2857	71.43
-sléibhe	ˈʃl̠ʲeːvʲə	ˈʃlʲeːvʲə	1	90.00	0.0000	100.00
-slán a bheas tú	sˠl̪ˠɑːnˠ əvʲasˠ ˈt̪ˠuː	ˈsˠl̪ˠɑːn̪ˠ ə ˈvʲɛsˠ t̪ˠuː	6	76.92	0.1000	90.00
-sluaite	ˈsˠl̪ˠuətʲə	ˈsˠɫ̪uətʲə	2	81.82	0.1667	83.33
-sliotar	ˈʃl̠ʲɪt̪ˠəɾˠ	ˈʃlʲɪt̪ˠəɾˠ	1	91.67	0.0000	100.00
-Samhna	ˈsˠəun̪ˠə	ˈsˠəʊnˠə	2	77.78	0.0000	100.00
-turaire	ˈt̪ˠʊɾˠəɾʲə	t̪ˠʊɾˠɪɾʲə	2	81.82	0.1667	83.33
-poiblí	ˈpˠɛbʲlʲiː	ˈpˠəibʲlʲiː	2	81.82	0.3333	66.67
-sleamhna	ˈʃl̠ʲəun̪ˠə	ˈʃl̠ʲãun̪ˠə	1	90.91	0.1667	83.33
-Nuala	ˈn̪ˠuəlˠə	ˈn̪ˠuːəlˠə	1	90.00	0.0000	100.00
-slaghdán	ˈsˠl̪ˠaid̪ˠɑːnˠ	ˈsˠl̪ˠəid̪ˠɑːnˠ	1	93.33	0.1429	85.71
-in éineacht	ɪnʲ ˈeːnʲəxt̪ˠ	əˈn̠ʲeːnʲəxt̪ˠ	5	64.29	0.1429	85.71
-cinneadhtheoiric	ˈcɪn̠ʲəhoːɾʲɪc	ˈcɪn̠ʲəˌhoːɾʲəc	2	86.67	0.2000	80.00
-oscailte	ˈɔsˠkəlʲtʲə	ˈɔsˠkɪlʲtʲɪ	2	81.82	0.2857	71.43
-daonchairdiúil	ˈd̪ˠiːnˠəxəːɾˠdʲuːlʲ	ˈd̪iːn̪xɑːɾˠdʲuːlʲ	4	80.00	0.1818	81.82
-aonaid	ˈiːnˠədʲ	ˈeːnˠədʲ	1	87.50	0.2500	75.00
-coraíocht	ˈkɔɾˠiəxt̪ˠ	ˈkɑɾˠiəxt̪ˠ	1	90.91	0.1429	85.71
-sióg	ˈʃioːɡ	ˈʃiːoːɡ	1	85.71	0.0000	100.00
-siopadóireacht	ˈʃɪpˠəd̪ˠoːɾʲəxt̪ˠ	ˈʃʊpˠəd̪ˠoːɾʲəxt̪ˠ	1	94.44	0.1000	90.00
-iománaíocht	ˈʊmˠɑːnˠiəxt̪ˠ	əˈmˠɑːn̪ˠiəxt̪ˠ	3	80.00	0.1250	87.50
-sioc	ʃjuk	ʃuk	1	75.00	0.2500	75.00
-cheird	çɛːɾˠdʲ	çeɾˠdʲ	2	71.43	0.0000	100.00
-radhairc	ˈɾˠaiəɾʲc	ɾˠəiɾʲc	3	66.67	0.3333	66.67
-shléibhe	ˈhl̠ʲeːvʲə	ˈhlʲeːvʲə	1	90.00	0.0000	100.00
-shleamhnaigh	ˈhl̠ʲəun̪ˠə	ˈhlʲãun̪ˠə	2	81.82	0.1667	83.33
-shleamhain	ˈhl̠ʲəunʲ	ˈhlʲãuwənʲ	4	60.00	0.4286	57.14
-chulaith	ˈxʊlˠə	ˈxolˠiː	3	57.14	0.5000	50.00
-polaitíocht	ˈpˠɔlˠət̪ˠiəxt̪ˠ	ˈpˠɔlˠətʲiəxt̪ˠ	2	87.50	0.0000	100.00
-almóinn	ˈalˠəmˠoːn̠ʲ	ˈal̪ˠmˠoːn̠ʲ	2	83.33	0.1667	83.33
-Vallúinis	vˈal̪ˠuːnʲɪʃ	wal̪ˠuːnʲɪʃ	2	83.33	0.1429	85.71
-sheabhac	ˈhauək	hauk	2	66.67	0.2000	80.00
-gabhaidh	ˈɡəu	ˈɡohiː	4	33.33	0.7500	25.00
-seó	ʃeoː	ʃoː	1	75.00	0.3333	66.67
-seobh	ʃoːw	ʃɔw	2	50.00	0.0000	100.00
-seo chugainn	ˈʃɔ xəɡən̠ʲ	ʃɔ ˈxʊɡən̠ʲ	3	72.73	0.1429	85.71
-seo caite	ˈʃɔ ˈkatʲə	ʃɔ ˈkatʲə	1	90.00	0.0000	100.00
-bogha	ˈbˠaiə	bˠau	3	50.00	0.5000	50.00
-Iúr	uːɾˠ	ən̠ʲˈtʲuːɾˠ	7	36.36	0.6000	40.00
-inneoin	ˈɪn̠ʲoːnʲ	ˈin̠ʲuːnʲ	2	77.78	0.2500	75.00
-rabhais	ˈɾˠauəʃ	ɾˠauʃ	2	71.43	0.2000	80.00
-ghoirid	ˈɣɛɾʲədʲ	ˈɣʌɾʲədʲ	1	87.50	0.2000	80.00
-díleá	ˈdʲiːlʲɑː	ˈdʲiːl̠ʲɑː	1	90.00	0.0000	100.00
-seasamh	ˈʃasˠuː	ˈʃasˠəvˠ	3	62.50	0.4000	60.00
-seanmóir	ˈʃanˠəmˠoːɾʲ	ˈʃanˠəmˠəɾʲ	2	83.33	0.1429	85.71
-seangaire	ˈʃaŋəɾʲə	ˈʃanˠəɡəɾʲə	4	63.64	0.2500	75.00
-seanduine	ˈʃan̪ˠd̪ˠənʲə	ˈʃan̪ˠinʲə	4	69.23	0.2857	71.43
-seanathair	ˈʃanˠəhəɾʲ	ˈʃanˠahəɾʲ	1	90.00	0.1429	85.71
-chomh luath is	xəu ˈl̪ˠuəh sˠ	xəˈl̪ˠuəsˠ	4	71.43	0.2500	75.00
-sealg	ˈʃalˠəɡ	ˈʃal̪ˠəɡ	1	87.50	0.0000	100.00
-dháréag	ˈɣɑːɾʲeːɡ	ɣɑːˈɾˠeːɡ	3	66.67	0.0000	100.00
-sealbha	ˈʃalˠəwə	ˈʃalˠəvˠə	2	77.78	0.1667	83.33
-druideacha	d̪ˠɾˠədʲəxə	d̪ˠɾˠɪdʲəxə	1	90.91	0.1429	85.71
-seal	ʃalˠ	ˈʃalˠ	1	80.00	0.0000	100.00
-amha	ˈauə	ˈawə	1	75.00	0.3333	66.67
-Clocha Liatha	ˌklˠɔxə ˈl̠ʲiəhə	n̪ˠə ˌklˠɔxə ˈl̠ʲiəhə	5	76.19	0.1538	84.62
-Fionnabhair	ˈfʲɪn̪ˠəuɾʲ	ˈfʲɪn̪ˠuːɾʲ	2	81.82	0.1667	83.33
-deartháireacha	ˈdʲaɾˠhɑːɾʲəxə	ˈdʲaɾˠhaɾʲəxə	2	85.71	0.1111	88.89
-Dia's Muire duit	ˌdʲiəsˠ mˠɪɾʲə ˈd̪ˠɪtʲ	ˌdʲiəs ˈmˠɪɾʲə ˈd̪ˠɪtʲ	2	90.91	0.0000	100.00
-tráthchlár	ˈt̪ˠɾˠɑːhxlˠɑːɾˠ	ˈt̪ˠɾˠɑːˌxl̪ˠɑːɾˠ	2	88.24	0.1250	87.50
-deochanna	ˈdʲoːxən̪ˠə	ˈdʲɔxən̪ˠə	2	81.82	0.0000	100.00
-Deireadh Fómhair	ˌdʲɛɾʲɪ ˈfˠoːwəɾʲ	dʲeɾʲə fuːwəɾʲ	6	64.71	0.3000	70.00
-rac-cheol	ˈɾˠacˌçoːlˠ	ˈɾˠakˌçoːlˠ	1	90.91	0.0000	100.00
-bunaitheoir	ˈbˠʊnˠəhoːɾʲ	ˈbˠunˠahoːɾʲ	2	83.33	0.1429	85.71
-scrábán	ˈsˠkɾˠɑːbˠɑːnˠ	ˈsˠkɾˠɑːbɑːnˠ	1	92.86	0.0000	100.00
-lenar	ˈl̠ʲɛnˠəɾˠ	ˈlʲɛnˠəɾˠ	1	90.00	0.0000	100.00
-scamhóg	ˈsˠkəuoːɡ	ˈsˠkaːwoːɡ	3	70.00	0.3333	66.67
-scairt ascaille	sˠkaɾˠtʲ ˈasˠkəl̠ʲə	ˈsˠkaɾˠtʲ ˈasˠkəl̠ʲə	1	95.00	0.0000	100.00
-dheinimís	ˈjɛnʲəmʲiːʃ	jɪnʲəˈmʲiːʃtʲ	5	61.54	0.2500	75.00
-salm	ˈsˠalˠəmˠ	ˈsˠal̪ˠəmˠ	1	90.00	0.0000	100.00
-Port an Dúnáin	pˠɔɾˠt̪ˠ ənˠ ˈd̪ˠuːnˠɑːnʲ	pˠɔɾˠt̪ˠ ə ˈd̪ˠuːnˠɑːnʲ	2	92.00	0.0909	90.91
-toghadh	ˈt̪ˠaiə	ˈt̪ˠəu.ə	3	62.50	0.5000	50.00
-saighead	sˠəəd̪ˠ	sˠəid̪ˠ	1	85.71	0.2500	75.00
-sa gcaoi go	sˠə ˈɡiː ɡə	sə ˈɡiː ɡə	1	90.91	0.0000	100.00
-loite	ˈl̪ˠɪtʲə	l̪ˠɔɪtʲə	2	75.00	0.2000	80.00
-comharsa	ˈkoːəɾˠsˠə	ˈkuːɾˠsˠə	2	80.00	0.3333	66.67
-háidí	ˈhɑːdʲiː	ˈhɑːdiː	1	87.50	0.0000	100.00
-claonadh	ˈklˠiːnˠə	ˈklˠɤːnˠətʲ	3	72.73	0.4286	57.14
-aonbheannach	ˈiːnʲəvʲən̪ˠəx	ˈeːnˠ.ˈvʲa.nˠəx	7	53.33	0.3750	62.50
-ardfhear	ˈɑːɾˠdʲəɾˠ	ˈɑːɾˠd̪ˠˌaɾˠ	4	66.67	0.3333	66.67
-ríomhleabhar	ˈɾˠiːvʲlʲəuɾˠ	ˈɾʲiːwˌlʲəuɾˠ	3	76.92	0.2500	75.00
-teachín	ˈtʲaçiːnʲ	ˈtʲaxiːnʲ	1	88.89	0.0000	100.00
-aon déag	iːnˠ dʲeːɡ	eːn̠ʲ dʲeːɡ	3	72.73	0.2000	80.00
-nuacht	n̪ˠuəxt̪ˠ	nˠuˑəxt̪ˠ	2	77.78	0.1667	83.33
-bearaigh	ˈbʲaɾˠə	ˈbʲɛɾˠi	2	71.43	0.5000	50.00
-Volaifis	vˈɔlˠəfʲɪʃ	wɔl̪ˠəfʲɪʃ	3	70.00	0.1429	85.71
-aonmhac	ˈiːnˠəwək	ˈeːnˠˌwak	3	66.67	0.5000	50.00
-Dubhghall	ˈd̪ˠəul̪ˠ	ˈd̪ˠʊwəl̪ˠ	3	70.00	0.6000	40.00
-comhionann	ˈkɪiənˠən̪ˠ	ˈkuːˈaːn̪ˠən̪ˠ	6	57.14	0.4286	57.14
-ráinig	ˈɾˠɑːnʲɪɟ	ˈɾˠɑːnʲɪc	1	88.89	0.2000	80.00
-ruóg	ˈɾˠuoːɡ	ˈɾˠuːoːɡ	1	87.50	0.0000	100.00
-rugadar	ˈɾˠʊɡəd̪ˠəɾˠ	ˈɾˠʊɡədˠəɾˠ	1	91.67	0.0000	100.00
-cineálta	ˈcɪnʲɑːl̪ˠt̪ˠə	ˈcɪnˠɑːl̪ˠt̪ˠə	1	92.86	0.0000	100.00
-eicínt	ˈɛciːn̠ʲtʲ	əˈciːn̠ʲtʲ	2	80.00	0.2000	80.00
-sléibhte	ˈʃl̠ʲeːvʲtʲə	ˈʃl̠ʲeːfʲtʲə	1	91.67	0.1667	83.33
-ceirnín	ˈcɛːɾˠn̠ʲiːn̠ʲ	ˈcɛɾˠn̠ʲiːnʲ	2	85.71	0.0000	100.00
-bhFionlainn	ˈvʲɪn̪ˠlˠən̠ʲ	ˈvʲɪnlˠən̠ʲ	2	84.62	0.0000	100.00
-buntús	ˈbˠʊn̪ˠt̪ˠuːsˠ	ˈbˠunˠ.ˈtˠuːsˠ	5	64.29	0.0000	100.00
-gréasán	ˈɟɾʲeːsˠɑːnˠ	ˈɟɾeːsˠɑːnˠ	1	91.67	0.0000	100.00
-lonnaithe	ˈl̪ˠʊn̪ˠɪhə	ˈl̪ˠɔn̪ˠiː	4	63.64	0.5000	50.00
-Ó Broin	oː ˈbˠɾˠɪnʲ	oːˈbˠɾˠinʲ	2	81.82	0.0000	100.00
-Iodáilis	ˈɪd̪ˠaːlʲɪʃ	ˈɪdˠaːlʲɪʃ	1	90.91	0.0000	100.00
-damhán	ˈd̪ˠəuɑːnˠ	ˈd̪ˠawɑːnˠ	2	80.00	0.4000	60.00
-tirim	ˈtʲɪɾʲəmʲ	ˈtʲeɾʲəmʲ	1	88.89	0.2000	80.00
-ro-	ɾˠɔ	ɾˠə	1	66.67	0.5000	50.00
-rinc	ɾˠəɲc	ɾˠɪɲc	1	80.00	0.2500	75.00
-leabharlann	ˈl̠ʲəuəːɾˠl̪ˠən̪ˠ	ˈl̠ʲəuɾˠl̪ˠən̪ˠ	2	88.24	0.2222	77.78
-draíodóir	ˈd̪ˠɾˠiːɔd̪ˠoːɾʲ	ˈd̪ˠɾˠiəd̪ˠoːɾʲ	2	87.50	0.1429	85.71
-bolcáin	ˈbˠɔlˠkɑːnʲ	ˈbɔlˠkɑːnʲ	1	90.91	0.0000	100.00
-iarnbhreac	ˈiəɾˠn̠ʲvʲɾʲək	ˈiəɾˠn̪ˠˌvʲɾʲak	4	73.33	0.2222	77.78
-raidió	ˈɾˠadʲioː	ˈɾˠadʲiːoː	1	90.00	0.0000	100.00
-shlíoc	hl̠ʲiːk	hlʲiːk	1	85.71	0.0000	100.00
-faigheann	ˈfˠəin̪ˠ	fˠɑːn̪ˠ	3	62.50	0.5000	50.00
-dochreidte	ˈd̪ˠɔhɾʲədʲtʲə	d̪ˠɔˈçɾʲɛtʲə	6	57.14	0.3750	62.50
-rabhadar	ˈɾˠauəd̪ˠəɾˠ	ˈɾˠawəd̪ˠəɾˠ	1	91.67	0.1429	85.71
-airdí	ˈɑːɾˠdʲiː	ˈaːɾˠdʲiː	1	88.89	0.2500	75.00
-pósfadsa	ˈpˠoːsˠəd̪ˠsˠə	ˈpˠoːsˠəd̪ˠsˠ	1	92.86	0.1429	85.71
-póg mo thóin	pˠoːɡ ˈmˠə ˈhoːnʲ	pˠoːɡʲ mˠə huːnʲ	4	76.47	0.1250	87.50
-faighfeá	ˈfˠəifʲɑː	ˈfˠaiɑː	3	66.67	0.4000	60.00
-péinteáilte	ˈpʲeːnʲtʲɑːlʲtʲə	ˈpʲeːnʲtʲɑːl̠ʲtʲə	1	94.12	0.0000	100.00
-deargaim	ˈdʲaɾˠəɡəmʲ	ˈdʲaɾˠɡəmʲ	1	90.91	0.1429	85.71
-gníomhaí	ˈɟɾʲiːwiː	ˈɡnʲiːwiː	2	77.78	0.2000	80.00
-Baile Brigín	ˌbˠalʲə ˈbʲɾʲɪɟiːnʲ	ˌbˠalə ˈbʲɾʲɪɟiːnʲ	1	94.74	0.0000	100.00
-páí	ˈpˠɑːiː	ˈpˠɑː.iː	1	87.50	0.0000	100.00
-amach is amach	ˌamˠəx sˠ ˈamˠəx	əˈmˠax əsˠ əˈmˠax	7	58.82	0.6000	40.00
-carr patróil	kaɾˠ ˈpˠat̪ˠɾˠoːlʲ	ˌkɑːɾˠ ˈpat̪ˠɾˠoːl̠ʲ	5	75.00	0.2000	80.00
-dromchla	ˈd̪ˠɾˠɔmˠəxlˠə	ˈd̪ˠɾˠɔmˠxlˠə	1	92.86	0.1250	87.50
-foghlaim	ˈfˠailˠəmʲ	ˈfˠoːlˠəmʲ	2	80.00	0.3333	66.67
-punta	ˈpˠʊn̪ˠt̪ˠə	ˈpˠʌn̪ˠt̪ˠə	1	90.91	0.2000	80.00
-puimcín	ˈpˠɪmʲciːnʲ	ˈpˠɪmʲciːn	1	90.91	0.0000	100.00
-tarrang	ˈt̪ˠaɾˠəŋ	ˈt̪ˠɑɾˠək	2	77.78	0.4000	60.00
-'ur	ʊɾˠ	ə	3	0.00	1.0000	0.00
-praghas	ˈpˠɾˠaiəsˠ	pɾˠəisˠ	4	60.00	0.3333	66.67
-potaisiam	ˈpˠɔt̪ˠəʃiəmˠ	pˠɔˈt̪ˠaʃiəmˠ	3	76.92	0.1250	87.50
-leomh	l̠ʲoːw	l̠ʲow	1	83.33	0.0000	100.00
-codlata	ˈkɔd̪ˠlˠət̪ˠə	ˈkɔl̪ˠət̪ˠə	3	76.92	0.1429	85.71
-VEID	vɛdʲ	vʲɛdʲ	1	80.00	0.0000	100.00
-poblacht	ˈpˠɔbˠlˠəxt̪ˠ	ˈpˠɔbˠlaxt̪ˠ	2	84.62	0.1429	85.71
-pobalscoil	ˈpˠɔbˠəl̪ˠsˠkəlʲ	ˈpˠɔbˠəlˠˌsˠkɛlʲ	3	81.25	0.2000	80.00
--fidís	fʲɪdʲiːʃ	hədʲiːʃ	3	62.50	0.4000	60.00
-fhuáil	ˈuɑːlʲ	ˈuːaːlʲ	2	71.43	0.3333	66.67
-pleidhc	ˈpʲlʲəic	ˈpləik	3	62.50	0.0000	100.00
-scamhóga	ˈsˠkəuoːɡə	ˈsˠkawoːɡiː	4	63.64	0.4286	57.14
-slabaí	ˈsˠl̪ˠabˠiː	ˈsˠɫ̪abˠiː	2	81.82	0.2000	80.00
-slog	sˠl̪ˠɔɡ	sˠl̪ˠuɡ	1	85.71	0.2500	75.00
-is cuma	sˠ ˈkʊmˠə	əsˠ ˈkʊmˠə	1	90.00	0.1667	83.33
-cha	xa	ha	1	50.00	0.5000	50.00
-pingin	ˈpʲɪɲənʲ	pʲiːn̠ʲ	5	37.50	0.4000	60.00
-pillín	ˈpʲɪlʲiːnʲ	ˈpiliːn	4	60.00	0.0000	100.00
-d'fhití	ˈdʲɪtʲiː	ˈdʲitʲiː	1	87.50	0.0000	100.00
-yé	yeː	jeː	1	66.67	0.5000	50.00
-vé	veː	vʲeː	1	75.00	0.0000	100.00
-pianó	ˈpʲiənˠoː	pʲiˈanˠoː	3	66.67	0.2000	80.00
-fíormhaith	ˈfʲiːɾˠwə	ˈfʲiːɾʲˌwãiç	5	58.33	0.5000	50.00
-go dtí gur	ɡədʲiː ˈɡʊɾˠ	ɡə ˈdʲiː ɡəɾˠ	4	69.23	0.1429	85.71
--na	n̪ˠa	n̪ˠə	1	75.00	0.5000	50.00
-t-airgead	ˈt̪ˠaɾʲəɟəd̪ˠ	ˈt̪ˠaɾʲɪɟəd̪ˠ	1	92.31	0.1429	85.71
-pasfhocal	ˈpˠasˠəkəlˠ	ˈpˠasˠˌɔkəlˠ	2	83.33	0.2500	75.00
-ficheall	ˈfʲɪçəl̪ˠ	ˈfʲɪhəl̪ˠ	1	88.89	0.2000	80.00
-drochbhéasach	ˈd̪ˠɾˠɔhvʲeːsˠəx	d̪ˠɾɔxˈvʲeːsˠəx	4	75.00	0.1111	88.89
-gliocas	ˈɟlʲɪkəsˠ	ˈɟlʊkəsˠ	2	77.78	0.1667	83.33
-mar	mˠəɾˠ	ˈmˠəɾˠ	1	83.33	0.0000	100.00
-ospidéil	ˈɪʃpʲədʲeːlʲ	ˈɔspʲədʲeːlʲ	2	83.33	0.1429	85.71
-ospidéal	ˈɪʃpʲədʲeːlˠ	ˈɔsˠpʲədʲeːlˠ	3	76.92	0.1429	85.71
-is éigean	sˠ ˈeːɟənˠ	ˈʃeːɟənˠ	4	60.00	0.0000	100.00
-os cionn	əsˠ ˈcɪoːn̪ˠ	oːsˠˈciən̪ˠ	6	50.00	0.3333	66.67
-oráistí	ˈɔɾˠɑːʃtʲiː	ˈorɑːʃtʲiː	3	72.73	0.0000	100.00
-ceannachán	ˈcan̪ˠəxaːnˠ	canəxaːn	4	66.67	0.0000	100.00
-ollscoil	ˈɔl̪ˠsˠkəlʲ	ˈɔl̪ˠˌsˠkɔlʲ	2	83.33	0.2857	71.43
-tur	ˈt̪ˠʊɾˠ	t̪ˠʊɾˠ	1	85.71	0.0000	100.00
-haonaid	ˈhiːnˠədʲ	ˈheːnˠədʲ	1	88.89	0.2000	80.00
-oirnis	ˈoːɾˠn̠ʲɪʃ	ˈəuɾʲn̠ʲəʃ	4	60.00	0.5000	50.00
-oinniún	ˈɪn̠ʲuːnˠ	ˈin̠ʲuːnˠ	1	88.89	0.0000	100.00
-oilfidh	ˈɛl̠ʲhə	ˈɛlʲhə	1	85.71	0.0000	100.00
-airleacan	ˈaːɾʲlʲəkənˠ	ˈɑːɾˠl̠ʲəkənˠ	3	76.92	0.1429	85.71
-oifigiúil	ˈɛfʲəɟuːlʲ	ˈɛfʲɪɟuːlʲ	1	90.00	0.1667	83.33
--sa	sˠa	sˠə	1	66.67	0.5000	50.00
-nótaire	ˈn̪ˠoːt̪ˠəɾʲə	ˈn̪ˠoːtəɾʲə	2	84.62	0.0000	100.00
-eitre	ˈɛtʲɾʲə	ˈɛtʲəɾʲə	1	87.50	0.2000	80.00
-comhair	ˈkoːəɾʲ	kuːɾʲ	3	57.14	0.5000	50.00
-coisreacaim	ˈkɔʃɾʲəkəmʲ	ˈkʌʃtʲɾʲakəmʲ	4	69.23	0.3333	66.67
-tanaíocha	ˈt̪ˠanˠiːəxə	ˈt̪ˠanˠiːxə	1	91.67	0.1429	85.71
-ní ba	n̠ʲiː bˠə	ˈn̠ʲiːbə	3	66.67	0.0000	100.00
-anrud	ˈan̪ˠɾˠəd̪ˠ	ˈan̪ˠɾˠʌd̪ˠ	1	90.91	0.2000	80.00
-ná tráchtaigí air	n̪ˠɑː t̪ˠɾˠɑːxt̪ˠəɟiː ˈaɾʲ	n̪ˠɑː ˈt̪ˠɾˠɑːxt̪ˠɪɟiː ɛɾʲ	4	84.62	0.1667	83.33
-ná trácht air	n̪ˠɑː t̪ˠɾˠɑːxt̪ˠ ˈaɾʲ	n̪ˠɑː ˈt̪ˠɾˠɑːxt̪ˠ ɛɾʲ	3	86.36	0.1111	88.89
-nuaíocht	ˈn̪ˠuəiəxt̪ˠ	ˈn̪ˠuːiəxt̪ˠ	1	91.67	0.1429	85.71
--sean	ʃanˠ	ʃənˠ	1	75.00	0.3333	66.67
-gabháil	ˈɡəuɑːlʲ	ˈɡɔwɑːlʲ	2	75.00	0.4000	60.00
-nuaghinte	ˈn̪ˠuəjənʲtʲə	ˈn̪ˠʊʝɪnʲtʲə	4	69.23	0.3750	62.50
-nuachtán	ˈn̪ˠuəxt̪ˠaːnˠ	nˠuˑəxt̪ˠaːnˠ	3	78.57	0.1250	87.50
-nochtach	ˈn̪ˠɔxt̪ˠəx	ˈnɔxt̪ˠəx	2	81.82	0.0000	100.00
-ar an ásc san	ɛɾʲ ənˠ ˈɑːsˠk ˈsˠən̪ˠ	ɛɾʲ ənˠ ˈɑːsk sˠən̪ˠ	2	90.91	0.0000	100.00
-bunús	ˈbˠʊnˠuːsˠ	ˈbʊnˠuːsˠ	1	90.00	0.0000	100.00
-nimh	n̠ʲəi	n̠ʲɪvʲ	3	50.00	0.6667	33.33
-lá breá	l̪ˠɑː ˈbʲɾʲɑː	l̪ˠɑː bʲɾʲɑː	1	92.31	0.0000	100.00
-feadaíl	ˈfʲad̪ˠəlʲ	ˈfʲad̪ˠiːlʲ	2	81.82	0.2000	80.00
-sreang	ʃɾʲaŋ	sˠɾˠɑːŋ	5	28.57	0.2500	75.00
-ngabha	ˈŋəu	ŋɑu	2	50.00	0.3333	66.67
-baineannach	ˈbˠanʲən̪ˠəx	ˈbˠanʲənˠəx	1	91.67	0.0000	100.00
-seanbhean	ˈʃanʲəvʲənˠ	ˈʃæːn̪ˠˌvʲæːn̪ˠ	8	46.67	0.2857	71.43
-nbhur	n̪ˠwʊɾˠ	nˠə	5	28.57	0.7500	25.00
-pingine	ˈpʲɪɲənʲə	pʲiːn̠ʲə	5	44.44	0.3333	66.67
-fíoraíocht	ˈfʲiəɾˠiəxt̪ˠ	ˈfʲiːɾˠiəxt̪ˠ	1	92.31	0.1250	87.50
-cuisle	ˈkiʃl̠ʲə	ˈkiʃlʲə	1	87.50	0.0000	100.00
-cuimhneochaidh	ˈkɪvʲnʲoːxə	ˈkɨ̃vʲnʲaxə	4	63.64	0.3750	62.50
-n-abhann	ˈn̪ˠəun̪ˠ	n̪ˠaun̪ˠ	2	77.78	0.2500	75.00
 mórmheanma	ˈmˠoːɾʲvʲən̪ˠmˠə	ˈmˠoːɾˠˌvʲanˠmˠə	4	75.00	0.2222	77.78
-móire	ˈmˠoːɾʲə	ˈmoːɾʲə	1	87.50	0.0000	100.00
-féarach	ˈfʲeːɾˠəx	ˈfʲeːrəx	2	77.78	0.0000	100.00
-mar go	mˠəɾˠ ɡə	mˠaɾˠ ɡə	1	87.50	0.2000	80.00
-spealas	ˈsˠpʲalˠəsˠ	ˈsˠpʲalˠəs	1	90.91	0.0000	100.00
-méar coise	mʲeːɾˠ ˈkɔʃə	mʲeːɾˠ kɛʃə	2	83.33	0.1429	85.71
-ar a laghad	ɛɾʲ əˈl̪ˠaiəd̪ˠ	ˌɛɾʲəˈl̪ˠəid̪ˠ	4	73.33	0.3750	62.50
-cirte	ˈcɪɾˠtʲə	ˈcɨ̞ɾˠtʲə	2	77.78	0.3333	66.67
-Gaeilge na hÉireann	ˌɡeːlʲəɟɪ n̪ˠə ˈheːɾʲaːn̪ˠ	ˈɡeːlʲɟɪ n̪ˠə ˈheːɾʲən̪ˠ	4	84.62	0.2143	78.57
-cluich	klˠʊx	klˠɪç	2	60.00	0.2500	75.00
-murlán	ˈmˠuːɾˠl̪ˠɑːnˠ	ˈmˠʊɾˠl̪ˠɑːn	3	78.57	0.0000	100.00
-bród	bˠɾˠoːd̪ˠ	ˈbˠɾˠoːd̪ˠ	1	90.00	0.0000	100.00
-anagheairid	ˈanˠəaɾʲədʲ	ɑnɑˈjaɾʲədʲ	5	54.55	0.3750	62.50
-freastalóidh	ˈfʲɾʲasˠt̪ˠəlˠoː	ˈfʲɾʲasˠt̪ˠəlˠoːj	1	94.12	0.1111	88.89
-ghliocais	ˈjlʲɪkəʃ	ˈjlʊkəʃ	2	75.00	0.1667	83.33
-dar le	ˈd̪ˠaɾˠ lʲɛ	d̪ˠaɾˠ lʲɛ	1	90.91	0.0000	100.00
-geansaí	ˈɟan̪ˠsˠiː	ˈɟanˠsˠiː	1	90.00	0.0000	100.00
-lug	l̪ˠʊɡ	l̪ˠʌɡ	1	80.00	0.3333	66.67
-monarcacht	ˈmˠɔnˠəɾˠkəxt̪ˠ	ˈmˠɔnəɾˠkəxt̪ˠ	1	93.33	0.0000	100.00
-bhoicht	wɛçtʲ	wɔxtʲ	2	60.00	0.2500	75.00
-Cheatharlach	ˈçahəːɾˠl̪ˠəx	ˈçahəɾˠl̪ˠəx	1	92.31	0.1111	88.89
-aidhmeannas	ˈɑːjmʲən̪ˠəsˠ	ˈəimʲən̪ˠəsˠ	3	76.92	0.2857	71.43
-dea-bhéasach	ˈdʲaˌvʲeːsˠəx	dʲaˈvʲeːsˠəx	2	84.62	0.1250	87.50
-hAlban	ˈhalˠəbˠənˠ	ˈhaləbˠənˠ	1	90.91	0.0000	100.00
-ar deighilt	ɛɾʲˈdʲəil̠ʲtʲ	ɛɾʲˈdʲəilʲtʲ	1	92.31	0.0000	100.00
-miongháire	ˈmʲɪn̪ˠɣaːɾʲə	mʲɪnˠɣaːɾʲə	2	84.62	0.0000	100.00
-mion	ˈmʲɪnˠ	ˈmʲinˠ	1	83.33	0.0000	100.00
-daonra	ˈd̪ˠiːn̪ˠɾˠə	ˈdˠiːn̪ˠɾˠə	1	91.67	0.0000	100.00
-gairmiúlacht	ˈɡaɾʲəmʲuːlˠəxt̪ˠ	ɡaɾʲˈmʲuːl̪ˠəxt̪ˠ	3	82.35	0.1000	90.00
-taifead	ˈt̪ˠahəd̪ˠ	ˈt̪ˠafʲəd̪ˠ	2	81.82	0.2000	80.00
-cad é	kad̪ˠ ˈeː	kəd̪ˠˈeː	2	77.78	0.2500	75.00
-cadhnraí	ˈkain̪ˠɾˠiː	ˈkəinˠɾˠiː	2	81.82	0.1667	83.33
-ar bís	ɛɾʲˈbʲiːʃ	əɾˠˈbʲiːʃ	2	77.78	0.2000	80.00
-mheabhair	ˈvʲauəɾʲ	vʲəuɾʲ	3	62.50	0.4000	60.00
-Dubhghus	ˈd̪ˠəuɣəsˠ	ˈd̪ˠuːɣusˠ	3	70.00	0.3333	66.67
-díogacha	ˈdʲiːɡəxə	ˈdʲiɡəxə	1	88.89	0.0000	100.00
-mharbh	ˈwaɾˠuː	ˈwarˠuː	1	85.71	0.0000	100.00
-ceolmhar	ˈcoːlˠəwəɾˠ	ˈcoːl̪ˠwəɾˠ	2	81.82	0.1429	85.71
-mhaithe	ˈwahə	ˈwãhə	1	80.00	0.2500	75.00
-bricfeasta	ˈbʲɾʲɪcfʲəsˠt̪ˠə	ˈbʲɾʲɪcˌfʲasˠt̪ˠə	2	88.24	0.2000	80.00
-mhairbh	ˈwaɾʲəvʲ	ˈwarʲəvʲ	1	87.50	0.0000	100.00
-go raibh maith agat	ɡəɾˠavʲ ˈmˠah uɡəd̪ˠ	ɡəɾˠəˈmˠahəɡət̪ˠ	7	65.00	0.3333	66.67
-an rud a fhaightear go bog caitear go bog é	ənˠ ɾˠʊd̪ˠ əəitʲəɾˠ ɡəbˠɔɡ katʲəɾˠ ɡəbˠɔɡ ˈeː	ən̪ˠ ɾˠʊd̪ˠ ə aɪtʲəɾˠ ɡə bˠɔɡ kɑtʲəɾˠ ɡə bˠɔɡ eː	8	83.33	0.0741	92.59
-meánscoil	ˈmʲɑːn̪ˠsˠkəlʲ	ˈmʲɑːnˠˌsˠkɛlʲ	3	78.57	0.2500	75.00
-harda	ˈhɑːɾˠd̪ˠə	ˈhaːɾˠd̪ˠə	1	90.00	0.2000	80.00
-ollbhua	ˈɔl̪ˠəwuə	ˈɔl̪ˠˌwuə	1	88.89	0.1667	83.33
-céachta	ˈceːxt̪ˠə	ˈceːx.t̪ˠə	1	90.00	0.0000	100.00
-le do thoil	lʲɛ ɡə ˈhɛlʲ	lʲɛd̪ˠəˈhɔlʲ	5	58.33	0.2857	71.43
-Ollainnis	ˈɔl̪ˠən̠ʲɪʃ	ˈɔl̪ˠən̠ʲəʃ	1	90.91	0.1667	83.33
-Róimhe	ˈɾˠoːvʲə	ˈɾˠõːvʲə	1	87.50	0.2500	75.00
-cainteanna	ˈkan̠ʲtʲən̪ˠə	kan̠ʲtʲənə	3	76.92	0.0000	100.00
-dorú	ˈd̪ˠɔɾˠuː	ˈd̪ˠaɾˠuː	1	88.89	0.2500	75.00
-iomrá	ˈʊmˠɾˠɑː	ˈʊmɾˠɑː	1	87.50	0.0000	100.00
-mar gheall ar go	mˠəɾˠ ˈjal̪ˠ ɛɾʲ ɡə	mˠaɾˠ jal̪ˠ ɛrʲ ɡə	3	84.21	0.1000	90.00
-mar an gcéanna	mˠəɾˠ ənˠ ˈɟeːn̪ˠə	mˠaɾˠ ə ˈɟeːn̪ˠə	3	83.33	0.2222	77.78
-maorga	ˈmˠiːɾˠəɡə	ˈmˠiːɾˠɡə	1	90.00	0.1667	83.33
-ar a fhad	ɛɾʲ əˈad̪ˠ	əɾʲˈad̪ˠ	3	70.00	0.4000	60.00
-laethanta na riabhaí	ˌl̪ˠeːhən̪ˠt̪ˠə n̪ˠə ˈɾʲiəwiː	ˈl̪ˠeːhən̪ˠt̪ˠə n̪ˠə ˈɾˠiəwiː	2	93.10	0.0667	93.33
-grúdaire	ˈɡɾˠuːd̪ˠəɾʲə	ˈɡɾˠuːd̪əɾʲə	1	92.31	0.0000	100.00
-bacán	ˈbˠakɑːnˠ	ˈbˠukɑːnˠ	1	88.89	0.2000	80.00
-mairstean	ˈmˠaɾˠʃtʲənˠ	ˈmˠaɾˠsˠtʲənˠ	2	84.62	0.0000	100.00
-codlaím	ˈkɔd̪ˠlˠəmʲ	ˈkol̪ˠiːmʲ	5	54.55	0.3333	66.67
-ceannaím	ˈcan̪ˠəmʲ	ˈcan̪ˠiːmʲ	2	80.00	0.2000	80.00
-maighdean	ˈmˠəidʲənˠ	ˈmˠəɪdʲənˠ	1	90.00	0.0000	100.00
-bonnán	ˈbˠʊn̪ˠɑːnˠ	ˈbˠun̪ˠɑːnˠ	1	90.91	0.0000	100.00
-cérbh	ceːɾʲvʲ	ceːɾˠvˠ	2	71.43	0.0000	100.00
-maghar	ˈmˠaiəɾˠ	mˠəiɾˠ	3	62.50	0.4000	60.00
-magairle	ˈmˠaɡəːɾʲlʲə	ˈmˠaɡəɾˠl̠ʲə	3	75.00	0.1250	87.50
-macalla	ˈmˠakəl̪ˠə	mˠaˈkal̪ˠə	3	70.00	0.1667	83.33
-Imánál	ˈɪmˠɑːnˠɑːl̪ˠ	ɪˈmˠɑːn̪ɑːl̪ˠ	3	76.92	0.0000	100.00
-anglaise	ˈɪŋlˠəʃə	ˈaŋɡləʃə	3	62.50	0.2857	71.43
-lúthchleasaí	ˈl̪ˠuːhçlʲəsˠiː	ˈl̪ˠuːçlʲasˠiː	2	86.67	0.2500	75.00
-gluaisteán	ˈɡlˠuəʃtʲɑːn̪ˠ	ˈɡl̪ˠʊəʃtʲɑːn̪ˠ	2	86.67	0.0000	100.00
-deoch	dʲoːx	dʲox	1	80.00	0.0000	100.00
-tá grá agam ort	t̪ˠɑː ɡɾˠɑː uɡəmˠ ˈəɾˠt̪ˠ	t̪ˠɑː ˈɡɾˠɑː aɡəmˠ ɔɾˠt̪ˠ	4	84.00	0.1667	83.33
-míorúilteach	ˈmʲiːɾˠuːl̠ʲtʲəx	ˈmʲiːɾˠuːl̪ˠt̪ˠəx	4	76.47	0.0000	100.00
-i gcónaí	əˈɡuːnˠiː	əˈɡuːn̪ˠiː	1	90.00	0.0000	100.00
-deifreach	ˈdʲɛfʲɾʲəx	ˈdʲɛfʲəɾʲəx	1	90.91	0.1429	85.71
-cunlach	ˈkʊn̪ˠlˠəx	ˈkuːn̪ˠl̪ˠəx	3	75.00	0.0000	100.00
-láithreach baill	ˌl̪ˠɑːhɾʲəx ˈbˠal̠ʲ	ˌl̪ˠɑːɾʲəx ˈbˠɑl̠ʲ	2	89.47	0.2000	80.00
-Tír na nÓg	tʲiːɾʲ n̪ˠə ˈn̪ˠoːɡ	ˌtʲiːɾˠ n̪ˠə ˈn̪ˠoːɡ	2	90.00	0.1111	88.89
-láithreach	ˈl̪ˠɑːhɾʲəx	ˈl̪ˠɑːɾʲəx	1	90.91	0.1667	83.33
--idís	ɪdʲiːʃ	ədʲiːʃ	1	83.33	0.2500	75.00
-adhlaic	ˈailˠɪc	ˈəil̪ˠəc	3	62.50	0.4000	60.00
-luin	l̪ˠɪnʲ	l̪ˠɪnˠ	1	83.33	0.0000	100.00
-imeoidh	ˈɪmʲə	ˈimʲoə	2	66.67	0.2500	75.00
+éireoidh	ˈeːɾʲə	ˈəiɾʲoː	4	42.86	0.7500	25.00
+seo caite	ˈʃɔ ˈkatʲə	ʃɔ ˈkatʲə	1	90.00	0.0000	100.00
+éilítear	ˈeːlʲiːtʲəɾˠ	ˈeːlʲiːɾʲ	4	66.67	0.3333	66.67
+lenár	ˈl̠ʲɛnˠɑːɾˠ	ˈlʲɛnˠɑːɾˠ	1	90.91	0.0000	100.00
+dúnfad	ˈd̪ˠuːn̪ˠhəd̪ˠ	ˈd̪ˠuːnˠhəd̪ˠ	1	92.86	0.0000	100.00
+Gaedhilge	ˈɡeːjəlʲɟɪ	ˈɡeːlʲɟə	3	70.00	0.4286	57.14
+éiclips	ˈeːclʲɪpʲʃ	ˈeːclʲɪpˠsˠ	3	72.73	0.0000	100.00
 mosar	ˈmˠɔsˠəɾˠ	ˈmɔsˠəɾˠ	1	88.89	0.0000	100.00
-luathcha	ˈl̪ˠuəhxə	ˈl̪ˠuəxə	1	88.89	0.1667	83.33
-luaidhe	ˈl̪ˠuəjə	ˈl̪ˠuː.iː	4	55.56	0.6000	40.00
-long	l̪ˠʊŋ	l̪ˠɔŋ	1	80.00	0.3333	66.67
-dóiche	ˈd̪ˠoːçə	ˈd̪ˠɔːiçɪ	3	66.67	0.4000	60.00
-camán	ˈkamˠaːnˠ	kaˈmaːn	4	55.56	0.0000	100.00
-damnaím	ˈd̪ˠamˠn̪ˠəmʲ	ˈd̪ˠamˠn̪ˠiːmʲ	2	85.71	0.1667	83.33
-loiteach	ˈl̪ˠɪtʲəx	ˈl̪ˠɛtʲəx	1	88.89	0.2000	80.00
-loin	l̪ˠɪnʲ	l̪ˠɪnˠ	1	83.33	0.0000	100.00
-liopa	lʲiɔpˠə	lʲɪpˠə	2	71.43	0.2000	80.00
-d'oil	d̪ˠɛlʲ	ˈd̪ˠɛlʲ	1	85.71	0.0000	100.00
-limis	ˈl̠ʲɪmʲɪʃ	ˈl̠ʲɪ.mʲɪʃ	1	90.00	0.0000	100.00
-ligthe	ˈl̠ʲɪcə	ˈl̠ʲɪcɪ	1	85.71	0.2500	75.00
-bíonn cluasa ar an gcoill	bʲiːn̪ˠ klˠuəsˠə ɛɾʲ ənˠ ˈɡɛl̠ʲ	bʲiːən̪ˠ kl̪ˠuəsˠə ɛɾˠ ən̪ˠ ɡəlʲ	7	78.12	0.1176	88.24
-déanamh	ˈdʲeːnˠəu	ˈdʲaːnˠuː	3	66.67	0.4000	60.00
-libh	lʲəi	lʲɪbʲ	3	40.00	0.6667	33.33
-héileacaptar	ˈheːlʲəkəpˠt̪ˠəɾˠ	ˈheː.l̪ʲəˌkapˠ.t̪ˠəɾˠ	5	76.19	0.1818	81.82
-leon	l̠ʲoːnˠ	l̠ʲuːnˠ	1	85.71	0.3333	66.67
-cén áit	ceːnʲˈɑːtʲ	ceːˈn̪ˠɑːtʲ	3	72.73	0.0000	100.00
-Haváis	ˈhavaːʃ	ˈhawaːɪʃ	2	75.00	0.3333	66.67
-fuiltear	ˈfˠɪl̠ʲtʲəɾˠ	ˈfˠɪl̠ʲtʲəɾʲ	1	91.67	0.0000	100.00
-leigheas	l̠ʲɪəsˠ	l̠ʲəisˠ	2	71.43	0.5000	50.00
-Éadaoin	ˈeːd̪ˠiːnʲ	ˈeːdʲiːnʲ	2	80.00	0.0000	100.00
-leathré	ˈl̠ʲahɾʲeː	ˈlʲahˌɾʲeː	2	80.00	0.1667	83.33
-gabha	ˈɡəu	ˈɡəuə	1	80.00	0.2500	75.00
-lenarb	ˈl̠ʲɛnˠəɾˠbˠ	ˈlʲɛnˠəɾˠbˠ	1	91.67	0.0000	100.00
-cliste	ˈclʲɪʃtʲə	ˈcʲlʲɪʃtʲə	1	90.00	0.0000	100.00
-le déanaí	lʲɛ ˈdʲeːnˠiː	lʲə ˈdʲeːn̪ˠiː	2	85.71	0.1667	83.33
-Baile Átha Luain	ˌbˠalʲə ɑːhə ˈl̪ˠuənʲ	ˌbʲlʲɑː ˈl̪ˠuənʲ	6	71.43	0.3333	66.67
-abhaile	ˈəulʲə	əˈwalʲə	3	57.14	0.4000	60.00
-lastuas	l̪ˠaˈsˠt̪ˠuəsˠ	l̪ˠasˠˈt̪ˠuəsˠ	2	85.71	0.0000	100.00
-lastuaidh	l̪ˠaˈsˠt̪ˠuə	l̪ˠasˠˈt̪ˠuə	2	83.33	0.0000	100.00
-lasmuigh	ˈl̪ˠasˠmˠə	l̪ˠasˠˈmˠʊ	3	70.00	0.2000	80.00
-langa	ˈl̪ˠɪŋə	ˈl̪ˠaŋɡə	2	75.00	0.4000	60.00
-laistigh	ˈl̪ˠaʃtʲə	l̪ˠaʃˈtʲɪj	4	60.00	0.3333	66.67
-jé	jeː	d͡ʒeː	3	40.00	0.7500	25.00
-almanag	ˈalˠəmˠənˠəɡ	ˈalˠəmənək	3	75.00	0.1250	87.50
-os comhair	əsˠ ˈkəuɾʲ	əsˠˈkuːɾʲ	3	70.00	0.1667	83.33
-is fuath le	sˠ ˈfˠuəh lʲɛ	sˠfˠuə lʲə	4	69.23	0.2857	71.43
-is fearr	sˠ ˈfʲaːɾˠ	sˠˈfʲɑːɾˠ	2	80.00	0.2500	75.00
-anois	əˈnˠɔʃ	əˈnʲiʃ	2	66.67	0.2500	75.00
-sara fada	ˌsˠaɾˠə ˈfˠad̪ˠə	ˈsˠɑɾˠə ˈfˠɑd̪ˠə	3	81.25	0.3333	66.67
-ionsaí	ˈɪn̪ˠsˠiː	ˈɔnˠsˠiː	2	77.78	0.2500	75.00
-ionaidh	ˈɪnˠə	ˈiːnˠiː	4	42.86	0.3333	66.67
-iomrall	ˈʊmˠɾˠəl̪ˠ	ˈʊmˠəɾˠəl̪ˠ	1	90.91	0.1667	83.33
-inár gcoinne	ˌɪnˠɑːɾˠ ˈɡɪn̠ʲə	ən̪ˠɑːɾˠ ˈɡɪn̠ʲə	3	81.25	0.2222	77.78
-cloisint	ˈklˠɔʃən̠ʲtʲ	ˈkl̪ˠoʃənʲtʲ	3	75.00	0.0000	100.00
+áilleacht	ˈɑːl̠ʲəxt̪ˠ	ˈɑːlʲəxt	3	72.73	0.0000	100.00
+Feabhra	ˈfʲəuɾˠə	fʲauɾˠə	2	75.00	0.2000	80.00
+éasc	eːsˠk	eːsk	1	80.00	0.0000	100.00
+conamar	ˈkɔnˠəmˠəɾˠ	ˈkʊnˠəmˠəɾˠ	1	90.91	0.1429	85.71
+amhairc	ˈəuɾʲc	ˈafˠɪɾʲc	4	50.00	0.6000	40.00
+éadóchasach	ˈeːd̪ˠoːxəsˠəx	ˈeːd̪ˠoːxːəsˠəx	1	93.33	0.1111	88.89
+éadóchas	ˈeːd̪ˠoːxəsˠ	ˈeːd̪ˠoːxːəsˠ	1	92.31	0.1429	85.71
+abhaill	ˈəul̠ʲ	ˈəuwəl̠ʲ	2	75.00	0.4000	60.00
+éadtualaing	ˈeːd̪ˠt̪ˠuəlˠəŋ	ˈeːd̪ˠɔlən	7	53.33	0.3750	62.50
+scairt ascaille	sˠkaɾˠtʲ ˈasˠkəl̠ʲə	ˈsˠkaɾˠtʲ ˈasˠkəl̠ʲə	1	95.00	0.0000	100.00
+acmhainn	ˈakwən̠ʲ	ˈakuːn̠ʲ	2	75.00	0.4000	60.00
 in éindí	ɪnʲ ˈeːn̠ʲdʲiː	ə ˈn̠ʲeːn̠ʲdʲiː	6	60.00	0.1667	83.33
-in ainneoin	ɪnʲ ˈan̠ʲoːnʲ	əˈn̪ˠan̠ʲoːnʲ	5	61.54	0.1667	83.33
-in aice le	ɪnʲ ˈacɪ lʲɛ	əˈn̪ˠacɪlʲə	7	41.67	0.2857	71.43
-bpingin	ˈbʲɪɲənʲ	bʲiːn̠ʲ	5	37.50	0.4000	60.00
-im	ɪmʲ	imˠ	2	33.33	0.0000	100.00
-ibh	əi	ɪvʲ	3	0.00	1.0000	0.00
--óimis	oːmʲɪʃ	oːmʲəʃ	1	83.33	0.2500	75.00
-lom láithreach	ˌl̪ˠɔmˠ ˈl̪ˠɑːhɾʲəx	ˌlˠɔmˠ ˈl̪ˠɑːɾʲəx	2	89.47	0.1000	90.00
-i mbun	əmˠəˈunˠ	əˈmˠunˠ	3	62.50	0.2000	80.00
-cailíní	ˈkalʲiːnʲiː	ˈkaːlʲiːnʲiː	1	91.67	0.0000	100.00
-fodhuine	ˈfˠuːənʲə	ˈfˠɔɣɪnʲə	3	66.67	0.5000	50.00
-i gcomhluadar	əˈɡəulˠuəd̪ˠəɾˠ	əˈɡoːlˠuəd̪ˠəɾˠ	2	86.67	0.2000	80.00
-Idirlíon	ˈɪdʲəːɾʲlʲiːn̪ˠ	ˈɪdʲəɾʲˌl̠ʲiːn̪ˠ	3	81.25	0.2500	75.00
-i bhfad ó shin	əwad̪ˠ oː ˈhɪnʲ	əˌwad̪ˠ oːˈhɪnʲ	2	86.67	0.1111	88.89
-ní móide	n̠ʲiːˈmˠoːdʲə	n̠ʲiː ˈmˠuːdʲə	2	85.71	0.1667	83.33
-fáidh	fˠə	fˠɑːj	3	40.00	0.6667	33.33
-ianaithe	ˈiənˠɪhə	ɪən̪ˠɪə	4	50.00	0.1667	83.33
-Dé Sathairn	dʲeː ˈsˠahəːɾˠnʲ	dʲeː ˈsˠahəɾˠnʲ	1	93.75	0.1111	88.89
-siadsan	ˈʃiəd̪ˠsˠənˠ	ˈʃiəd̪ˠsənˠ	1	91.67	0.0000	100.00
-criostal	ˈcɾʲɪsˠt̪ˠəlˠ	ˈkɾˠɪsˠt̪ˠəlˠ	2	84.62	0.0000	100.00
-gariníon	ˈɡaɾʲənʲiːnˠ	ˈɡaɾʲˌɪnʲiːnˠ	2	84.62	0.2500	75.00
-hairdí	ˈhɑːɾˠdʲiː	ˈhaːɾˠdʲiː	1	90.00	0.2000	80.00
-fhiáin	iɑːnʲ	ˈiːɑːnʲ	2	71.43	0.0000	100.00
-bod gaoithe	bˠɔd̪ˠ ˈɡiːhə	ˈbˠɔd̪ˠ ˈɡiːhə	1	92.86	0.0000	100.00
-le chéile	lʲɛ ˈçeːlʲə	lʲə ˈçeːlʲə	1	90.91	0.1667	83.33
-gach aon duine	ɡax iːnˠ ˈd̪ˠɪnʲə	ɡax eːn̪ˠˈd̪ˠɪnʲə	3	82.35	0.1111	88.89
+lig do scíth	l̠ʲɪɟ ɡə ˈʃciː	ˌl̠ʲɪɟ də ˈʃciː	2	86.67	0.2222	77.78
+ríomhchláraitheoir	ˈɾˠiːvˠxlˠɑːɾˠəhoːɾʲ	ɾˠiːvˠˈxlˠaːɾˠəhoːɾʲ	3	85.00	0.0909	90.91
+-tá	t̪ˠɑː	t̪ˠaː	1	80.00	0.5000	50.00
+ghnách	ɣn̪ˠɑːx	ɣnˠɑːx	1	85.71	0.0000	100.00
+cladhaire	ˈklˠaiəɾʲə	ˈklˠaiɾʲə	1	90.00	0.1429	85.71
+cumha	ˈkəu	kuə	3	25.00	0.6667	33.33
+láithreach	ˈl̪ˠɑːhɾʲəx	ˈl̪ˠɑːɾʲəx	1	90.91	0.1667	83.33
+ndomhan	ˈn̪ˠəunˠ	ˈn̪ˠaʊ.ən̪ˠ	5	54.55	0.4000	60.00
+téigh	tʲɪ	tʲəi	2	50.00	0.3333	66.67
+Carghais	ˈkaɾˠəʃ	ˈkaɾˠiːʃ	2	75.00	0.2000	80.00
+gliogaire	ˈɟlʲɪɡəɾʲə	ˈɟlʲɯɡəɾʲə	1	90.00	0.1429	85.71
+crua-ae	ˈkɾˠuəˌeː	ˈkɾˠuəiju	3	66.67	0.4286	57.14
+chiumhais	ˈçəuʃ	çuːʃ	3	40.00	0.2500	75.00
+cluiche	ˈklˠɪçə	ˈklˠifʲə	3	62.50	0.2000	80.00
+cha	xa	ha	1	50.00	0.5000	50.00
+codlata	ˈkɔd̪ˠlˠət̪ˠə	ˈkɔl̪ˠət̪ˠə	3	76.92	0.1429	85.71
+bainfidh	ˈbˠan̠ʲhə	ˈbˠɪnʲhə	2	77.78	0.2000	80.00
+Áine	ˈɑːnʲə	ˈaːnʲə	1	83.33	0.3333	66.67
+yé	yeː	jeː	1	66.67	0.5000	50.00
+chapaill	ˈxapˠəl̠ʲ	ˈxapˠəl̪ʲ	1	88.89	0.0000	100.00
+grian-	ɟɾʲiənˠ	ɟɾʲiənʲ	1	85.71	0.0000	100.00
+díomhnas	ˈdʲiːvˠn̪ˠəsˠ	ˈdʲiũːnʲəs	6	53.85	0.1667	83.33
+vé	veː	vʲeː	1	75.00	0.0000	100.00
+in éineacht le	ɪnʲ ˈeːnʲəxt̪ˠ lʲɛ	əˈn̠ʲeːnʲəxt̪ˠ lʲə	6	66.67	0.2222	77.78
+vác	vɑːk	wɑːk	1	75.00	0.3333	66.67
+urlár	ˈuːɾˠl̪ˠɑːɾˠ	ˈauɾˠl̪ˠɑːɾˠ	2	83.33	0.1667	83.33
+Uaimh	uəvʲ	əˈn̪ˠuəvʲ	5	44.44	0.4000	60.00
+raon	ˈɾˠiːn̪ˠ	ˈɾˠiːnˠ	1	87.50	0.0000	100.00
+saile	ˈsˠalʲə	ˈsalʲə	1	85.71	0.0000	100.00
+aischuir	ˈaˌsˠxɪɾʲ	ˈaʃˌxɪrʲ	4	55.56	0.3333	66.67
+beireas	ˈbʲɛɾʲəsˠ	ˈbʲɛɾʲəs̪ˠ	1	90.00	0.0000	100.00
+bualadh	ˈbˠuəlˠə	ˈbˠɔl̪ˠə	3	62.50	0.4000	60.00
+umhlú	ˈəulˠuː	ˈuːlˠuː	2	71.43	0.2500	75.00
+umhal	ˈəulˠ	uːlˠ	3	40.00	0.3333	66.67
+sara fada	ˌsˠaɾˠə ˈfˠad̪ˠə	ˈsˠɑɾˠə ˈfˠɑd̪ˠə	3	81.25	0.3333	66.67
+dalta	ˈd̪ˠal̪ˠt̪ˠə	d̪ˠalˠt̪ˠə	2	83.33	0.0000	100.00
+uirlis	ˈɪːɾʲlʲɪʃ	ˈuːɾˠl̠ʲəʃ	4	60.00	0.5000	50.00
+tiocfaimid	ˈtʲʊkfˠəmʲədʲ	ˈtʲʊkəmʲədʲ	2	84.62	0.1250	87.50
+uileag	ˈɪlʲəɡ	əˈlʲɞɡ	3	50.00	0.5000	50.00
+in éindí le	ɪnʲ ˈeːn̠ʲdʲiː lʲɛ	ə ˈn̠ʲeːn̠ʲdʲiː lʲə	7	63.16	0.2500	75.00
+duamair	ˈd̪ˠuəmˠəɾʲ	ˈd̪ˠuəməɾʲ	1	90.91	0.0000	100.00
+deirfiúracha	ˈdʲɛɾʲəfʲuːɾˠəxə	ˈdʲeɾʲəfʲəɾˠəxə	3	81.25	0.1000	90.00
+uathlathaí	ˈuəhlˠəhiː	ˈuəlˠəhiː	1	90.00	0.1429	85.71
+íoglú	ˈiːɡlˠuː	ˈiː.ɡl̪ˠuː	2	80.00	0.0000	100.00
+imní	ˈɪmʲnʲiː	ˈɪmʲɾʲiː	1	87.50	0.2500	75.00
+grúdaire	ˈɡɾˠuːd̪ˠəɾʲə	ˈɡɾˠuːd̪əɾʲə	1	92.31	0.0000	100.00
+iomrá	ˈʊmˠɾˠɑː	ˈʊmɾˠɑː	1	87.50	0.0000	100.00
+uair an chloig	ˌuəɾʲ ənˠ ˈxlˠɪɟ	uəɾʲ ə xlˠɛɟ	5	68.75	0.3000	70.00
+glaodh	ɡlˠə	ɡlˠiː	2	60.00	0.3333	66.67
+uafásach	ˈuəfˠɑːsˠəx	ˈuːhɑːsˠəx	3	72.73	0.2857	71.43
+suaimhneas	ˈsˠuəvʲnʲəsˠ	ˈsˠiːmʲnʲəsˠ	3	75.00	0.4286	57.14
+uafás	ˈuəfˠɑːsˠ	ˈuːhɑːsˠ	3	66.67	0.4000	60.00
+crích	cɾʲiː	cɾʲiːç	1	83.33	0.2500	75.00
+bláthmhar	ˈbˠlˠɑːhwəɾˠ	ˈbˠlˠɑːfˠəɾˠ	2	83.33	0.2857	71.43
 gach uile	ɡax ˈɪlʲə	ˈxɯlʲə(corresponding to the form	31	3.12	0.9630	3.70
 géagleabhair	ˈɟeːɟlʲəuɾʲ	ˈɟeːɡl̠ʲəuɾʲ	2	83.33	0.0000	100.00
-chuán	xuɑːnˠ	ˈxuː.ɑːnˠ	3	66.67	0.0000	100.00
-feiceálach	ˈfʲɛcɑːlˠəx	ˈfʲɛcalˠax	3	72.73	0.2857	71.43
-téigh	tʲɪ	tʲəi	2	50.00	0.3333	66.67
-fheadh	ɪ	a	1	0.00	1.0000	0.00
-griandó	ˈɟˌɾʲiən̪ˠd̪ˠoː	ˈɟɾʲiən̪ˠˌd̪ˠoː	2	86.67	0.2500	75.00
-toighe	ˈt̪ˠəi	t̪ˠiə	3	50.00	0.6667	33.33
-greannmhar	ˈɟɾʲan̪ˠəwəɾˠ	ˈɟɾʲan̪ˠwəɾˠ	1	92.31	0.1250	87.50
-conamar	ˈkɔnˠəmˠəɾˠ	ˈkʊnˠəmˠəɾˠ	1	90.91	0.1429	85.71
-codlaíonn	ˈkɔd̪ˠlˠiːən̪ˠ	ˈkol̪ˠiːn̪ˠ	5	64.29	0.2857	71.43
-as cosa i dtaca	asˠ ˌkɔsˠə əˈd̪ˠakə	əsˠ ˌkɔsˠə ˈd̪ˠɑkə	3	84.21	0.2500	75.00
-gabháilte	ˈɡəuɑːlʲtʲə	ˈɡɔwɑːlʲtʲə	2	81.82	0.2857	71.43
-gníomhaíocht	ˈɟɾʲiəwiəxt̪ˠ	ˈɡɾˠiːwiəxt̪ˠ	3	76.92	0.1111	88.89
--each	ax	əx	1	50.00	0.5000	50.00
-gníomh	ɟɾʲiːw	ɟɾʲĩːw	1	83.33	0.2500	75.00
-glúin óg	ˌɡlˠuːnʲ ˈoːɡ	ə ˌɣlˠuːnʲ ˈoːɡ	3	80.00	0.1250	87.50
-ceolchoirm	ˈcoːlˠəˌxəɾʲmʲ	ˈcoːlˠˌxɞɾʲəmʲ	3	78.57	0.3333	66.67
-ar feadh	ɛɾʲˈfʲəi	ɛɾʲˈfʲa	2	75.00	0.4000	60.00
-gearach	ˈɟaɾˠəx	ˈɟaɾəx	1	85.71	0.0000	100.00
-cé na	ˈceː n̪ˠə	ˈceːnˠə	2	77.78	0.0000	100.00
-gléasann	ˈɟlʲeːsˠən̪ˠ	ˈɟlʲeːsən̪ˠ	1	91.67	0.0000	100.00
-seanbhan	ˈʃanˠəwənˠ	ˈʃanˠˌwanˠ	2	80.00	0.2857	71.43
-abhacád	ˈəukɑːd̪ˠ	ˈavˠəkɑːd̪ˠ	4	63.64	0.5000	50.00
-parasól	ˈpˠaɾˠəsˠoːl̪ˠ	ˈpˠa.ɾˠa.sˠoːl̪ˠ	3	81.25	0.1429	85.71
-cantal	ˈkan̪ˠt̪ˠəl̪ˠ	ˈkanˠtˠəl̪ˠ	2	84.62	0.0000	100.00
-gleomhar	ˈɟlʲoːwəɾˠ	ˈɟlʲoːvˠəɾˠ	2	81.82	0.1667	83.33
-bhfeicfinn	ˈvʲɛcfʲən̠ʲ	ˈvʲɛcɪn̠ʲ	3	72.73	0.3333	66.67
-gleannta	ˈɟlʲan̪ˠt̪ˠə	ˈɟlʲaːn̪ˠt̪ˠə	1	92.31	0.0000	100.00
-gaiscígh	ˈɡaʃcɪ	ˈɡaʃciː	2	71.43	0.0000	100.00
-gabhlóg	ˈɡəulˠoːɡ	ˈɡɑulˠoːɡ	1	88.89	0.1667	83.33
-giucs	ɟʊksˠ	ɟɯksˠ	1	80.00	0.2500	75.00
-iógart	ˈioːɡəɾˠt̪ˠ	ˈjoː.ɡˠʊɾˠt̪ˠ	4	69.23	0.3333	66.67
-foghar	ˈfˠaiəɾˠ	fˠauɾˠ	3	62.50	0.4000	60.00
-bíchearb	ˈbʲiːçəɾˠbˠ	ˈbʲiːçəɾˠəbˠ	1	91.67	0.1429	85.71
-ghním	jnʲiːmʲ	n̠ʲiːmʲ	2	71.43	0.2500	75.00
-Aodh	ə	eː	2	0.00	1.0000	0.00
-scar	ˈsˠkaɾˠ	ˈskaɾˠ	1	85.71	0.0000	100.00
-gearrfar	ˈɟaɾˠfˠəɾˠ	ˈɟɑːɾˠfˠəɾˠ	2	81.82	0.1667	83.33
-thángthas	ˈhaːn̪ˠhəsˠ	ˈhaːnəkəs	4	63.64	0.2857	71.43
-insíonn	ˈɪn̠ʲʃiːn̪ˠ	ˈiːnʲʃiːn̪ˠ	3	72.73	0.0000	100.00
-gcéadta	ˈɟeːd̪ˠt̪ˠə	ˈɟeːt̪ˠə	3	72.73	0.2000	80.00
-goilliúnach	ˈɡɛl̠ʲuːnˠəx	ˈɡɔl̠ʲuːnˠəx	1	91.67	0.1429	85.71
-gcomhluadar	ˈɡəulˠuəd̪ˠəɾˠ	ˈɡoːlˠuəd̪ˠəɾˠ	2	85.71	0.2222	77.78
-beireas	ˈbʲɛɾʲəsˠ	ˈbʲɛɾʲəs̪ˠ	1	90.00	0.0000	100.00
-naíonda	ˈn̪ˠiːɔn̪ˠd̪ˠə	ˈn̪ˠiːn̪ˠd̪ˠə	1	92.86	0.1667	83.33
-anuas	əˈnˠuəsˠ	əˈn̪ˠuəsˠ	1	88.89	0.0000	100.00
-dúrabhair	ˈd̪ˠuːɾˠəuɾʲ	ˈd̪ˠuːɾˠəwəɾʲ	2	84.62	0.2857	71.43
-laidhre	ˈl̪ˠɑːjɾʲə	ˈl̪ˠəiɾʲə	3	70.00	0.4000	60.00
-Dhaidí na Nollag	ˌɣadʲiː n̪ˠə ˈn̪ˠoːl̪ˠəɡ	ˌɣadʲiː n̪ˠə ˈnˠɔl̪ˠəɡ	3	87.50	0.0000	100.00
-bhfeadh	vʲɪ	vʲa	1	66.67	0.5000	50.00
-atuirseach	ˈat̪ˠəɾˠʃəx	ˈaˌt̪ˠʊɾˠʃəx	2	83.33	0.2500	75.00
-garmhac	ˈɡaɾˠəwək	ˈɡaɾˠˌwak	2	77.78	0.2857	71.43
-gamhain	ˈɡəunʲ	ˈɡãuənʲ	2	71.43	0.4000	60.00
+tóraíocht	ˈt̪ˠoːɾˠiəxt̪ˠ	ˈt̪ˠoːɾˠiːəxt̪ˠ	1	93.33	0.0000	100.00
+tóin in airde	ˌt̪ˠoːnʲ ɪnʲ ˈɑːɾˠdʲə	ˌt̪ˠuːnʲ əˈn̪ˠɑːɾˠdʲə	6	71.43	0.2000	80.00
+tirim	ˈtʲɪɾʲəmʲ	ˈtʲeɾʲəmʲ	1	88.89	0.2000	80.00
+Meán Fómhair	ˌmʲɑːnˠ ˈfˠoːwəɾʲ	ˌmʲɑːn̪ˠ ˈfoːwəɾʲ	2	88.24	0.0000	100.00
 codlatach	ˈkɔd̪ˠlˠət̪ˠəx	ˈkɔl̪ˠət̪ˠəx	3	78.57	0.1250	87.50
-uafásach	ˈuəfˠɑːsˠəx	ˈuːhɑːsˠəx	3	72.73	0.2857	71.43
-raon	ˈɾˠiːn̪ˠ	ˈɾˠiːnˠ	1	87.50	0.0000	100.00
-Cadhla	ˈkailˠə	ˈkəi̯lˠə	2	75.00	0.3333	66.67
-caisearbhán	ˈkaʃəɾˠwaːnˠ	ˈkaʃl̠ʲəwaːnˠ	4	69.23	0.2500	75.00
-castóir	ˈkasˠt̪ˠoːɾʲ	ˈkˠasˠ.tˠoɾʲ	4	66.67	0.0000	100.00
-saile	ˈsˠalʲə	ˈsalʲə	1	85.71	0.0000	100.00
-Vín	viːnʲ	vʲiːnʲ	1	83.33	0.0000	100.00
-gabhar	ˈɡəuɾˠ	ˈɡɑuəɾˠ	2	71.43	0.4000	60.00
-gabhal	ˈɡəulˠ	ˈɡɑuəlˠ	2	71.43	0.4000	60.00
-barda	ˈbˠɑːɾˠd̪ˠə	ˈbˠɑːɾˠdˠə	1	90.91	0.0000	100.00
-ionad	ˈɪnˠəd̪ˠ	ˈinˠəd̪ˠ	1	87.50	0.0000	100.00
-caisleán	ˈkɪʃl̠ʲɑːnˠ	ˈkiʃlʲɑːnˠ	2	81.82	0.0000	100.00
-raiméis	ˈɾˠamʲeːʃ	ˈɾˠɑːmʲeːʃ	2	80.00	0.2000	80.00
-eochair	ˈoːxəɾʲ	ˈɔxəɾʲ	2	71.43	0.0000	100.00
-tá a fhios ag	t̪ˠɑː əˈɪsˠ əɡ	t̪ˠɑːsˠ eɟ	6	57.14	0.4286	57.14
-aonad	ˈiːnˠəd̪ˠ	ˈeːnˠəd̪ˠ	1	88.89	0.2500	75.00
-crúbchrois	ˈkɾˠuːbˠxɾˠəʃ	ˈkɾˠuːbˠˌxɾˠʌʃ	2	85.71	0.2222	77.78
-sligeán	ˈʃl̠ʲɪɟɑːnˠ	ˈʃl̠ʲiɟaːnˠ	2	81.82	0.1667	83.33
-fuála	ˈfˠuɑːlˠə	ˈfˠuːaːlˠə	2	80.00	0.2000	80.00
-fuáil	ˈfˠuɑːlʲ	ˈfˠuːɑːlʲ	1	88.89	0.0000	100.00
-colbha	ˈkɔlˠəwə	ˈkɔlˠəvˠ	2	75.00	0.3333	66.67
-fuinneoige	ˈfˠin̠ʲoːɟɪ	ˈfiɲoːɡʲə	7	36.36	0.1667	83.33
-bearrtha	ˈbʲaɾˠhə	ˈbʲɑːɾˠhə	2	77.78	0.2000	80.00
-gairmiúlaigh	ˈɡaɾʲəmʲuːlˠiː	ɡaɾʲmʲuːl̪ˠiː	3	78.57	0.1250	87.50
-freastalaím	ˈfʲɾʲasˠt̪ˠəlˠəmʲ	ˈfʲɾʲasˠt̪ˠəlˠiːmʲ	2	88.89	0.1111	88.89
--imid	ɪmʲədʲ	əmʲɪdʲ	2	66.67	0.5000	50.00
-cad is ainm duit	kad̪ˠ sˠ anʲəmʲ ˈd̪ˠɪtʲ	kad̪ˠ əs ˈanʲəmʲ d̪ˠɪtʲ	4	82.61	0.0833	91.67
-freagra	ˈfʲɾʲaɡɾˠə	ˈfʲɾʲɑːɡɾˠə	2	81.82	0.1667	83.33
-sheol	çoːlˠ	çɔːlˠ	1	80.00	0.0000	100.00
-gliogaire	ˈɟlʲɪɡəɾʲə	ˈɟlʲɯɡəɾʲə	1	90.00	0.1429	85.71
-Ocsatánais	ˈɔksˠət̪ˠaːnˠəʃ	ˈɔksətˠaːnˠɪʃ	3	80.00	0.1111	88.89
-bansár	ˈbˠan̪ˠsˠɑːɾˠ	ˈbˠanˠˌsˠɑːɾˠ	2	84.62	0.1429	85.71
-fadhbanna	ˈfˠaibˠən̪ˠə	ˈfˠəibˠən̪ˠə	1	91.67	0.1429	85.71
-cuán	kuɑːnˠ	ˈkuː.ɑːnˠ	3	66.67	0.0000	100.00
-sagart	ˈsˠaɡəɾˠt̪ˠ	ˈsˠaːɡəɾˠt̪ˠ	1	91.67	0.0000	100.00
-feadha	ˈfʲəiə	fʲɑː	4	33.33	0.7500	25.00
-i mbliana	əmʲəˈlʲiənˠə	ə ˈmʲlʲiənˠə	4	66.67	0.1250	87.50
-Albain Nua	ˌalˠəbˠənʲ ˈn̪ˠuə	ˈalˠəbˠə ˈn̪ˠuə	3	82.35	0.2000	80.00
-banc fola	bˠaŋk ˈfˠɔlˠə	bˠɑŋk fˠɔl̪ˠə	3	76.92	0.1250	87.50
-airbheartaigh	ˈaɾʲəvʲəɾˠt̪ˠiː	aɾʲˈvʲaɾˠt̪ˠiː	3	80.00	0.2500	75.00
-go raibh maith agaibh	ɡəɾˠavʲ ˈmˠah əɡiː	ɡərəˈmˠahəɡəvʲ	10	44.44	0.3636	63.64
-diosfaige	ˌdʲɪsˠfˠəˈɟɪ	ˌdʲəsˈfɑɟə	6	50.00	0.3750	62.50
-fairsing	ˈfˠaɾˠʃəɲ	ˈfˠaɾˠʃən̠ʲ	3	72.73	0.0000	100.00
-faighteá	ˈfˠəitʲɑː	ˈfˠɑtʲɑː	2	77.78	0.4000	60.00
-rabhamar	ˈɾˠauəmˠəɾˠ	ˈɾˠawəmˠəɾˠ	1	90.91	0.1429	85.71
-Malaeis	ˈmˠalˠeːʃ	ˈmˠalˠeːɪʃ	1	90.00	0.1667	83.33
-déanann	ˈdʲeːnˠən̪ˠ	ˈdʲaːnˠən̪ˠ	1	90.91	0.2000	80.00
-deartháir	ˈdʲaɾˠhɑːɾʲ	ˈdʲaɾˠhaɾʲ	2	81.82	0.1667	83.33
-glaodh	ɡlˠə	ɡlˠiː	2	60.00	0.3333	66.67
-eitpheil	ˈɛtʲfʲəlʲ	ˈɛtʲfʲɛlʲ	1	88.89	0.2000	80.00
-imithe	ˈɪmʲəhə	əˈmʲiçə	4	42.86	0.6000	40.00
-fiafheoil	ˈfʲiˌəoːlʲ	ˈfʲiəˌoːlʲ	2	80.00	0.3333	66.67
-deighilt	dʲɪəlʲtʲ	dʲəilʲtʲ	2	75.00	0.4000	60.00
-Rián	ɾˠiɑːnˠ	ˈɾˠiː.ɑːnˠ	3	70.00	0.0000	100.00
-dúnfad	ˈd̪ˠuːn̪ˠhəd̪ˠ	ˈd̪ˠuːnˠhəd̪ˠ	1	92.86	0.0000	100.00
--áil	ɑːlʲ	aːlʲ	1	75.00	0.5000	50.00
-dúinte	ˈd̪ˠuːn̠ʲtʲə	ˈd̪uːn̠ʲtʲə	1	91.67	0.0000	100.00
-dúidín	ˈd̪ˠuːdʲiːnʲ	ˈdˠuːdʲiːnʲ	1	91.67	0.0000	100.00
-nglacfá	ˈŋlˠakɑː	ŋlɑkˈfɑː	5	37.50	0.3333	66.67
-díomhnas	ˈdʲiːvˠn̪ˠəsˠ	ˈdʲiũːnʲəs	6	53.85	0.1667	83.33
-crích	cɾʲiː	cɾʲiːç	1	83.33	0.2500	75.00
-cíor thuathail	ciːɾˠ ˈhuəhəlʲ	cɪəɾˠ hʊəhɪlʲ	5	64.29	0.2000	80.00
-mhart	waɾˠt̪ˠ	waɾˠtˠ	1	85.71	0.0000	100.00
-suarach	ˈsˠuəɾˠəx	ˈsˠuˑəɾˠəx	1	90.00	0.1429	85.71
-bhuel	wuɪlʲ	wɛlʲ	2	60.00	0.5000	50.00
-dáréag	ˈd̪ˠɑːɾʲeːɡ	d̪ˠɑːˈɾˠeːɡ	3	72.73	0.0000	100.00
-duán	d̪ˠuɑːnˠ	ˈd̪ˠuːɑːnˠ	2	80.00	0.0000	100.00
-bhíteá	ˈvʲiːtʲɑː	ˈvʲiːtʲaː	1	88.89	0.2500	75.00
-Eastóinis	ˈasˠt̪ˠoːnʲɪʃ	ˈasˠtˠoːnʲɪʃ	1	92.31	0.0000	100.00
-dubhach	ˈd̪ˠəux	ˈd̪ˠʊwəx	3	62.50	0.6000	40.00
-díghalraigh	ˈdʲiːɣəl̪ˠɾˠiː	dʲiˈɣɑl̪ˠˌɾˠiː	4	71.43	0.2500	75.00
-nílimid	ˈn̠ʲiːlʲəmʲədʲ	ˈnʲiːlʲɪmʲiːdʲ	4	71.43	0.2857	71.43
-fomhórach	ˈfˠəuoːɾˠəx	fˠɔˈvˠoːɾˠəx	5	58.33	0.2857	71.43
-tuarastal	ˈt̪ˠuəɾˠəsˠt̪ˠəlˠ	ˈt̪uəɾˠəsˠt̪əlˠ	2	88.24	0.0000	100.00
-dromán	ˈd̪ˠɾˠɔmˠɑːnˠ	ˈd̪ˠɾʊmˠɑːnˠ	2	84.62	0.1667	83.33
-fréamhshamhaltaigh	ˈfʲɾʲeːvˠhəul̪ˠt̪ˠiː	ˈfʲɾʲeːvˠ.hawəl̪ˠt̪ˠiː	4	81.82	0.2727	72.73
-bacach	ˈbˠakəx	ˈbˠaːkəx	1	87.50	0.0000	100.00
-feoigh	fʲɪ	fʲɔːj	3	40.00	0.6667	33.33
-altar	ˈal̪ˠt̪ˠəɾˠ	ˈal̪ˠ.t̪ˠəɾˠ	1	91.67	0.0000	100.00
-Raeta-Rómáinsis	ˈɾˠeːt̪ˠəˌɾˠoːmˠɑːn̠ʲʃɪʃ	ˈɾˠeːtˠəroːˌmˠaːnʲʃɪʃ	7	70.83	0.2308	76.92
-donna	d̪ˠʊn̪ˠə	ˈd̪ˠʊn̪ˠə	1	88.89	0.0000	100.00
-bogha báistí	ˌbˠaiə ˈbˠɑːʃtʲiː	ˈbˠau ˈbˠaːʃtʲiː	4	76.47	0.4000	60.00
-ciumhaise	ˈcəuʃə	ˈcuːʃə	2	66.67	0.2000	80.00
-maslú	ˈmˠasˠl̪ˠuː	ˈmˠaːsˠl̪ˠuː	1	91.67	0.0000	100.00
-acastóir	ˈaˌkəsˠt̪ˠoːɾʲ	ˈaˌkasˠt̪ˠoːɾʲ	1	92.86	0.1250	87.50
-diomaite	ˈdʲʊmˠətʲə	ˈdʲɪmˠɪtʲə	2	80.00	0.3333	66.67
-dianghlasáil	ˈdʲiən̪ˠɣlˠəsˠɑːlʲ	dʲiənˠˈɣlˠa.sˠɑːlʲ	5	72.22	0.1000	90.00
-diagaire	ˈdʲiəɡəɾʲə	ˈdʲiəɡiɾʲə	1	90.00	0.1429	85.71
-cuidhil	ˈkijəlʲ	kiəlʲ	2	71.43	0.2000	80.00
-cuirtear	ˈkʊɾˠtʲəɾˠ	ˈkɪɾˠtʲəɾˠ	1	90.00	0.1667	83.33
-dúirt	d̪ˠuːɾˠtʲ	d̪ˠuːɾʲtʲ	1	88.89	0.0000	100.00
+ceaptha	ˈcapˠə	ˈcapˠiː	2	71.43	0.2500	75.00
+poblacht	ˈpˠɔbˠlˠəxt̪ˠ	ˈpˠɔbˠlaxt̪ˠ	2	84.62	0.1429	85.71
+tráigh	t̪ˠɾˠə	t̪ˠɾˠɑː	2	71.43	0.3333	66.67
+Oíche Inide	ˌiːçə ˈɪnʲədʲə	ˈiːç ˈɪnʲədʲə	2	85.71	0.2222	77.78
+tálaim	ˈt̪ˠɑːlˠɪmʲ	t̪ˠɑːl̪ˠɪmʲ	2	81.82	0.0000	100.00
 coisíocht	ˈkɔʃiəxt̪ˠ	ˈkɔʃiəxt	2	80.00	0.0000	100.00
-Airméinis	ˈaɾʲəmʲeːnʲɪʃ	ˈaɾʲəmʲeːnʲəʃ	1	92.31	0.1250	87.50
-deirimis	ˈdʲɛɾʲɪmʲɪʃ	ˈdʲɛɾʲəmʲəʃ	2	81.82	0.2857	71.43
-deirfiúracha	ˈdʲɛɾʲəfʲuːɾˠəxə	ˈdʲeɾʲəfʲəɾˠəxə	3	81.25	0.1000	90.00
-deirfiúr	ˈdʲɛɾʲəfʲuːɾˠ	ˈdʲɛɾʲəfʲəɾˠ	2	84.62	0.1429	85.71
-Claíomh Solais	ˌklˠiːəu ˈsˠɔlˠəʃ	klˠiːvˠ ˈsˠɔl̪ˠəʃ	4	76.47	0.2727	72.73
-de dheoin	dʲəˈjoːnʲ	d̪ˠəˈjoːnʲ	2	80.00	0.0000	100.00
-daidithe	ˈd̪ˠadʲəhə	ˈdˠadʲɪhə	2	80.00	0.1667	83.33
-ar dtúis	ɛɾʲˈd̪ˠuːʃ	ɛɾˠˈd̪ˠuːʃ	1	90.00	0.0000	100.00
-gairmeach	ˈɡaɾʲəˌmʲəx	ɡaɾʲˌmʲəx	2	81.82	0.1250	87.50
-aiseag	ˈæʃəɡ	ˈæʃək	1	80.00	0.2500	75.00
-cailceanna	ˈkal̠ʲcən̪ˠə	ˈkalʲkʲənə	5	58.33	0.0000	100.00
-cangail	ˈkɪŋəlʲ	ˈkaŋɡəlʲ	2	75.00	0.3333	66.67
-cé nach	ceːˈn̪ˠax	ˈceː n̪ˠax	2	80.00	0.0000	100.00
-asaibhse	ˈasˠəvʲʃə	ˈasˠiːʃə	3	66.67	0.3333	66.67
-cárbh	kɑːɾˠw	kaːɾˠvˠ	3	57.14	0.5000	50.00
-shrathnaigh	ˈhɾˠahn̪ˠə	ˈhɾˠʌhn̪ˠə	1	90.00	0.0000	100.00
-ealaín	ˈalˠənʲ	ˈɑːlˠiːnʲ	4	55.56	0.5000	50.00
-críochnaím	ˈcɾʲiəxɾˠəmʲ	ˈcɾʲiəxn̪ˠiːmʲ	4	71.43	0.2500	75.00
-críochnaithe	ˈcɾʲiːxɾˠɪhə	ˈcɾʲiːxn̪ˠɪhɪ	3	76.92	0.2500	75.00
-caithfidh	ˈkahə	ˈkɑihə	2	66.67	0.4000	60.00
-mar sin féin	mˠəɾˠ ʃɪnʲ ˈfʲeːnʲ	mˠaɾˠ ʃɪnʲ ˈheːnʲ	3	83.33	0.2222	77.78
-rinneabhair	ˈɾˠɪn̠ʲəuɾʲ	ˈɾˠɪnʲəwəɾʲ	3	72.73	0.2857	71.43
-cruitchláraí	ˈkɾˠʊt̪ˠxlˠɑːɾˠiː	ˈkɾˠɪtʲxlˠɑːɾˠiː	3	82.35	0.1111	88.89
-aonraic	ˈiːn̪ˠɾˠɪc	ˈeːn̪ˠɾˠɪc	1	90.00	0.2000	80.00
-creidmheas	ˈcɾʲɛdʲvʲəsˠ	ˈcɾʲɛdʲˌvʲasˠ	2	84.62	0.2500	75.00
-bleidhmhíol	ˈbʲlʲəivʲiːl̪ˠ	ˈbʲlʲɛjvʲiːl̪ˠ	2	85.71	0.2857	71.43
-coróinvíreas	ˈkɔɾˠoːnʲviːɾʲəsˠ	ˈkɔɾˠuːnʲ.vʲiːɾʲəsˠ	3	84.21	0.1000	90.00
-aon duine	iːnˠ ˈd̪ˠɪnʲə	eːn̪ˠˈd̪ˠɪnʲə	3	76.92	0.1667	83.33
-leis-sean	ˈl̠ʲɛʃˌʃənˠ	ˈlʲɛʃənˠ	3	72.73	0.2857	71.43
-colm	ˈkɔlˠəmˠ	ˈkol̪ˠəmˠ	2	77.78	0.0000	100.00
-collaíocht	ˈkɔl̪ˠiəxt̪ˠ	ˈkɔl̪ˠiəxt	2	83.33	0.0000	100.00
-colg	ˈkɔlˠəɡ	ˈkolˠəɡ	1	85.71	0.0000	100.00
-Cholm Cille	ˌxɔlˠəmˠ ˈcɪl̠ʲə	ˌxɔlˠəmˈcɪl̠ʲə	2	87.50	0.0000	100.00
-airgeadúla	ˈɪɾʲəɟəd̪ˠuːlˠə	ˈaɾʲɪɟəd̪ˠuːlˠə	2	86.67	0.2222	77.78
-clos	kl̪ˠɔsˠ	kl̪ˠosˠ	1	85.71	0.0000	100.00
-ciumhaiseanna	ˈcəuʃən̪ˠə	ˈcuːʃən̪ˠə	2	80.00	0.1429	85.71
-doirtear	ˈd̪ˠɔɾˠtʲəɾˠ	ˈd̪ˠɨ̞ɾˠtʲəɾˠ	2	84.62	0.2857	71.43
-aiges	ˈaɟɪʃ	ˈɛɟɪsˠ	3	50.00	0.2500	75.00
-tibhe	ˈtʲəiə	ˈtʲɪvʲə	3	57.14	0.5000	50.00
-foshruth	ˈfˠɔhɾˠə	ˈfˠɔhrˠʊ	2	75.00	0.2000	80.00
-cinnigí	ˈcɪn̠ʲɪɟiː	ˈcɪn̠ɪɟiː	1	90.00	0.0000	100.00
-cineál	ˈcɪnʲɑːlˠ	ˈcɪnˠɑːlˠ	1	88.89	0.0000	100.00
-carbán	ˈkaɾˠəbˠɑːnˠ	ˈkarˠbˠɑːnˠ	2	83.33	0.1429	85.71
-comhairle	ˈkoːəːɾʲlʲə	ˈkuːɾʲlʲə	3	72.73	0.4286	57.14
-bréagfholt	ˈbʲɾʲeːˌɡəl̪ˠt̪ˠ	ˈbʲɾʲeːɡˌɔl̪ˠt̪ˠ	3	81.25	0.3750	62.50
-chomhair	ˈxəuɾʲ	xoːɾʲ	3	50.00	0.5000	50.00
-chapaill	ˈxapˠəl̠ʲ	ˈxapˠəl̪ʲ	1	88.89	0.0000	100.00
-chiumhais	ˈçəuʃ	çuːʃ	3	40.00	0.2500	75.00
-Colm Cille	ˌkɔlˠəmˠ ˈcɪl̠ʲə	ˌkɔlˠəmˈcɪl̠ʲə	2	87.50	0.0000	100.00
-lig do scíth	l̠ʲɪɟ ɡə ˈʃciː	ˌl̠ʲɪɟ də ˈʃciː	2	86.67	0.2222	77.78
-bláthmhar	ˈbˠlˠɑːhwəɾˠ	ˈbˠlˠɑːfˠəɾˠ	2	83.33	0.2857	71.43
-ceathair déag	ˌcahəɾʲ dʲeːɡ	ˈcahəɾʲ jeːɡ	3	76.92	0.2222	77.78
-domlas	ˈd̪ˠɔmˠlˠəsˠ	ˈd̪ˠumˠlˠəsˠ	1	91.67	0.1667	83.33
-eascracha	ˈasˠkɾˠəxə	ˈaskrəxə	3	70.00	0.0000	100.00
-ar aon chaoi	ɛɾʲiːnˠ ˈxiː	ɛɾʲ eː ˈxiː	4	66.67	0.3333	66.67
-cion	cjunˠ	cunˠ	1	80.00	0.2500	75.00
-d'éirigh	ˈdʲeːɾʲə	ˈdʲəiɾʲə	2	75.00	0.4000	60.00
-sonraíoch	ˈsˠɔn̪ˠɾˠiːəx	ˈsˠɔn̪ˠɾˠiəx	1	92.31	0.0000	100.00
-Risteard	ˈɾˠɪˌʃtʲəɾˠd̪ˠ	ˈɾˠɪʃˌtʲɑːɾˠd̪ˠ	4	73.33	0.3750	62.50
-sceamhaíl	ˈʃcəulʲ	ˈʃcawiːlʲ	4	55.56	0.5000	50.00
-réidhleán	ˈɾˠeːjlʲɑːn̪ˠ	ˈɾˠeːlʲɑːn̪ˠ	1	92.31	0.1667	83.33
-soicind	ˈsˠɛcɪn̠ʲdʲ	ˈsˠɛcənʲdʲ	2	81.82	0.1667	83.33
-mill	mʲɪl̠ʲ	mʲɪlʲ	1	83.33	0.0000	100.00
-Luan Cásca	ˌl̪ˠuənˠ ˈkɑːsˠkə	ˌl̪ˠuən̪ˠ ˈkɑːsˠkə	1	94.44	0.0000	100.00
-braichlis	ˈbˠɾˠaçlʲɪʃ	ˈbˠɾˠaiç.lʲɪʃ	2	84.62	0.1250	87.50
+poiblí	ˈpˠɛbʲlʲiː	ˈpˠəibʲlʲiː	2	81.82	0.3333	66.67
+leon	l̠ʲoːnˠ	l̠ʲuːnˠ	1	85.71	0.3333	66.67
+bean sí	ˈbʲanˠ ˈʃiː	bʲanˠ ʃiː	2	81.82	0.0000	100.00
+Idirlíon	ˈɪdʲəːɾʲlʲiːn̪ˠ	ˈɪdʲəɾʲˌl̠ʲiːn̪ˠ	3	81.25	0.2500	75.00
+tá grá agam ort	t̪ˠɑː ɡɾˠɑː ˈuɡəmˠ ˈəɾˠt̪ˠ	t̪ˠɑː ˈɡɾˠɑː aɡəmˠ ɔɾˠt̪ˠ	5	80.77	0.1667	83.33
+turaireacht	ˈt̪ˠʊɾˠəɾʲəxt̪ˠ	t̪ˠʊɾˠɪɾʲɑxt̪ˠ	3	80.00	0.2500	75.00
+cadhnra	ˈkain̪ˠɾˠə	ˈkəinˠɾˠə	2	80.00	0.1667	83.33
+ar aghaidh	ɛɾʲˈaiə	ɛɾʲ ˈəi	3	57.14	0.4000	60.00
+otharlann	ˈɔhəːɾˠl̪ˠən̪ˠ	ˈɔhəɾˠl̪ˠənˠ	2	85.71	0.1250	87.50
+tiocfair	ˈtʲʊkfˠəɾʲ	ˈtʲʊkəɾʲ	2	80.00	0.1667	83.33
+tugann	ˈt̪ˠʊɡən̪ˠ	ˈtˠʊɡən̪ˠ	1	90.00	0.0000	100.00
+tobac	ˈt̪ˠɔbˠək	t̪ˠəˈbˠak	4	55.56	0.4000	60.00
+tuarastal	ˈt̪ˠuəɾˠəsˠt̪ˠəlˠ	ˈt̪uəɾˠəsˠt̪əlˠ	2	88.24	0.0000	100.00
+ghleanna	ˈjlʲan̪ˠə	ˈjlʲaːn̪ˠə	1	90.00	0.0000	100.00
+céilíoch	ˈceːlʲiːx	ˈceːlʲiːəx	1	90.00	0.1667	83.33
+anagheairid	ˈanˠəaɾʲədʲ	ɑnɑˈjaɾʲədʲ	5	54.55	0.3750	62.50
+isteach	ˈɪʃtʲəx	əʃˈtʲax	4	42.86	0.4000	60.00
+Mumhan	ˈmˠəunˠ	mˠuːnˠ	3	57.14	0.2500	75.00
+fhios	iɔsˠ	ɪsˠ	2	50.00	0.3333	66.67
+trína	tʲɾʲiːnˠə	ˈtʲɾʲiːnˠə	1	90.00	0.0000	100.00
+dubhach	ˈd̪ˠəux	ˈd̪ˠʊwəx	3	62.50	0.6000	40.00
+lastoir	ˈl̪ˠasˠt̪ˠəɾʲ	l̪ˠasˠˈt̪ˠɛɾʲ	3	76.92	0.1667	83.33
+-imid	ɪmʲədʲ	əmʲɪdʲ	2	66.67	0.5000	50.00
+barr-	bˠaːɾˠ	bˠɑːɾˠ	1	83.33	0.3333	66.67
+bacach	ˈbˠakəx	ˈbˠaːkəx	1	87.50	0.0000	100.00
+araon	əˈɾˠiːn̪ˠ	əˈɾˠeːn̪ˠ	1	88.89	0.2500	75.00
+tráthchlár	ˈt̪ˠɾˠɑːhxlˠɑːɾˠ	ˈt̪ˠɾˠɑːˌxl̪ˠɑːɾˠ	2	88.24	0.1250	87.50
+tráthanna	ˈt̪ˠɾˠɑːhən̪ˠə	ˈt̪ˠɾˠɑːn̪ˠə	2	85.71	0.2857	71.43
+Múscraí	ˈmˠuːsˠkɾˠiː	mˠuːz̪ˠˈɡɾˠiː	5	61.54	0.3333	66.67
+oileadh	ˈɛlʲə	ˈɛlʲətʲ	2	71.43	0.2500	75.00
+féarach	ˈfʲeːɾˠəx	ˈfʲeːrəx	2	77.78	0.0000	100.00
+báthair	ˈbˠɑːhəɾʲ	ˈbɑːhəɾʲ	1	88.89	0.0000	100.00
+tráill	t̪ˠɾˠɑːl̠ʲ	t̪ˠɾˠɑːlʲ	1	90.00	0.0000	100.00
+aidhmeannas	ˈɑːjmʲən̪ˠəsˠ	ˈəimʲən̪ˠəsˠ	3	76.92	0.2857	71.43
+bolcán	ˈbˠɔlˠkɑːnˠ	ˈbɔlˠkɑːnˠ	1	90.91	0.0000	100.00
+siadsan	ˈʃiəd̪ˠsˠənˠ	ˈʃiəd̪ˠsənˠ	1	91.67	0.0000	100.00
+dearthár	ˈdʲaɾˠhɑːɾˠ	ˈdʲaɾˠhaɾˠ	2	81.82	0.1667	83.33
+truaill	t̪ˠɾˠuəlʲ	t̪ˠɾˠuəl̠ʲ	1	90.00	0.0000	100.00
+sothuigthe	ˈsˠɔhəcə	ˈsˠɔˌhɪcɪ	3	66.67	0.4286	57.14
+dea-bhéasach	ˈdʲaˌvʲeːsˠəx	dʲaˈvʲeːsˠəx	2	84.62	0.1250	87.50
+triomú	ˈtʲɾʲʊmˠuː	ˈtʲɾʲumˠuː	1	90.00	0.0000	100.00
+triomach	ˈtʲɾʲʊmˠəx	ˈtʲɾʲɪməx	2	80.00	0.1667	83.33
+fuáil	ˈfˠuɑːlʲ	ˈfˠuːɑːlʲ	1	88.89	0.0000	100.00
 stairiúil	ˈsˠt̪ˠaɾʲuːlʲ	ˈsˠtˠaɾʲuːlʲ	1	92.31	0.0000	100.00
-eadhon	ˈəiənˠ	aːən	4	33.33	0.5000	50.00
-cnoga	ˈkɾˠɔɡə	ˈknˠuɡə	2	71.43	0.4000	60.00
-rud beag	ɾˠʊd̪ˠ ˈbʲaɡ	ˈɾˠʊd̪ˠ ˈbʲɔɡ	2	84.62	0.1667	83.33
-ainseabhaí	ˈan̠ʲʃəuiː	ˈanʲʃəwiː	2	80.00	0.1667	83.33
-beachlann	ˈbʲaxlˠən̪ˠ	ˈbʲaxlən̪ˠ	1	90.91	0.0000	100.00
-do-ranna	ˈd̪ˠɔˌɾˠən̪ˠə	ˈd̪ˠɔˌɾˠan̪ˠə	1	92.31	0.1429	85.71
-coinín	ˈkɪnʲiːnʲ	ˈkɪnʲinʲ	1	88.89	0.0000	100.00
+tá brón orm	t̪ˠɑː ˈbˠɾˠoːnˠ əɾˠəmˠ	t̪ˠɑː ˈbˠɾˠoːnˠ ɔɾˠəmˠ	1	95.45	0.1000	90.00
+bheidh	vʲɪ	vʲɛj	2	50.00	0.6667	33.33
+comhlach	ˈkoːlˠəx	ˈkuːlˠəx	1	87.50	0.2000	80.00
+Cabúl	ˈkabˠuːlˠ	kaˈbˠuːlˠ	2	77.78	0.0000	100.00
+caisleán	ˈkɪʃl̠ʲɑːnˠ	ˈkiʃlʲɑːnˠ	2	81.82	0.0000	100.00
+slaghdán	ˈsˠl̪ˠaid̪ˠɑːnˠ	ˈsˠl̪ˠəid̪ˠɑːnˠ	1	93.33	0.1429	85.71
+Eibhlín	ˈɛvʲlʲiːnʲ	ˈɛvʲəlʲiːnʲ	1	90.91	0.1667	83.33
+fheabhas	ˈauəsˠ	əusˠ	3	50.00	0.5000	50.00
+háidí	ˈhɑːdʲiː	ˈhɑːdiː	1	87.50	0.0000	100.00
+frisnéiseach	ˈfʲɾʲɪʃn̠ʲeːʃəx	ˈfʲɾʲɪʃn̠ʲæʃax	3	80.00	0.2222	77.78
+sceamhaíl	ˈʃcəulʲ	ˈʃcawiːlʲ	4	55.56	0.5000	50.00
+aisling	ˈaʃl̠ʲəɲ	ˈaʃl̠ʲən̠ʲ	3	70.00	0.0000	100.00
+toirneach	ˈt̪ˠoːɾˠn̠ʲəx	ˈt̪ˠauɾˠn̠ʲəx	2	84.62	0.2857	71.43
+beirbhiughadh	ˈbʲɛɾʲəvʲəə	ˈbʲɛɾʲuː	5	54.55	0.5714	42.86
+fionn	fʲɪoːn̪ˠ	fʲuːn̪ˠ	2	75.00	0.5000	50.00
+toighe	ˈt̪ˠəi	t̪ˠiə	3	50.00	0.6667	33.33
+colg	ˈkɔlˠəɡ	ˈkolˠəɡ	1	85.71	0.0000	100.00
+braichlis	ˈbˠɾˠaçlʲɪʃ	ˈbˠɾˠaiç.lʲɪʃ	2	84.62	0.1250	87.50
 Tiobraid Árann	ˌtʲɪbˠɾˠədʲ ˈɑːɾˠən̪ˠ	ˌtʲʊbˠɾˠədʲ ˈɑːɾˠən̪ˠ	1	95.24	0.0909	90.91
-Fhionlainn	ˈɪn̪ˠlˠən̠ʲ	ˈɪnlˠən̠ʲ	2	81.82	0.0000	100.00
-cumha	ˈkəu	kuə	3	25.00	0.6667	33.33
+giolla	ˈɟɪl̪ˠə	ˈɟul̪ˠə	1	85.71	0.2500	75.00
+culaith	ˈkʊlˠə	ˈkolˠiː	3	57.14	0.5000	50.00
+aonmhac	ˈiːnˠəwək	ˈeːnˠˌwak	3	66.67	0.5000	50.00
+foshruth	ˈfˠɔhɾˠə	ˈfˠɔhrˠʊ	2	75.00	0.2000	80.00
+tiuf-teaf	ˈtʲɪfʲˌtʲəfˠ	ˈtʲufˠˌtʲafˠ	3	75.00	0.2857	71.43
+cloisint	ˈklˠɔʃən̠ʲtʲ	ˈkl̪ˠoʃənʲtʲ	3	75.00	0.0000	100.00
+bhfeadh	vʲɪ	vʲa	1	66.67	0.5000	50.00
+meaisín	ˈmʲaʃiːnʲ	mʲəˈʃiːnʲ	3	66.67	0.2000	80.00
+tiocfar	ˈtʲʊkfˠəɾˠ	ˈtʲʊkfəɾˠ	1	90.00	0.0000	100.00
+tiocfaid	ˈtʲʊkfˠədʲ	ˈtʲʊkədʲ	2	80.00	0.1667	83.33
+cloigín	ˈklˠɛɟiːnʲ	ˈklˠoɡiːnʲ	2	80.00	0.1667	83.33
+atuirseach	ˈat̪ˠəɾˠʃəx	ˈaˌt̪ˠʊɾˠʃəx	2	83.33	0.2500	75.00
+timpistí	ˈtʲɪmʲpʲəʃtʲiː	ˈtʲɪmˠpˠəʃtʲiː	2	85.71	0.0000	100.00
+timpiste	ˈtʲɪmʲpʲəʃtʲə	ˈtʲɪmˠpˠəʃtʲə	2	84.62	0.0000	100.00
+bolcáin	ˈbˠɔlˠkɑːnʲ	ˈbɔlˠkɑːnʲ	1	90.91	0.0000	100.00
+luathcha	ˈl̪ˠuəhxə	ˈl̪ˠuəxə	1	88.89	0.1667	83.33
+freastalta	ˈfʲɾʲasˠt̪ˠəl̪ˠt̪ˠə	ˈfʲɾʲasˠt̪ˠəl̪ˠt̪ə	1	94.74	0.0000	100.00
+théigh	hɪ	heːj	3	25.00	0.6667	33.33
+Odhrán	ˈuːɾˠɑːnˠ	ˈoːɾˠɑːnˠ	1	88.89	0.2500	75.00
+thángthas	ˈhaːn̪ˠhəsˠ	ˈhaːnəkəs	4	63.64	0.2857	71.43
+scaifte	ˈsˠkafʲtʲə	ˈskafʲtʲə	1	90.00	0.0000	100.00
+airsean	ˈaɾˠʃənˠ	ˈɛɾʲʃənˠ	2	75.00	0.2000	80.00
+Bolcán	ˈbˠɔlˠkɑːnˠ	ˈbɔlˠkɑːnˠ	1	90.91	0.0000	100.00
+gairmiúlacht	ˈɡaɾʲəmʲuːlˠəxt̪ˠ	ɡaɾʲˈmʲuːl̪ˠəxt̪ˠ	3	82.35	0.1000	90.00
+céadta	ˈceːd̪ˠt̪ˠə	ˈceːt̪ˠə	3	72.73	0.2000	80.00
+cibé	ˈcɪbʲeː	cɪˈbʲeː	2	71.43	0.0000	100.00
+in aghaidh	ɪnʲ ˈaiə	əˈn̪ˠəi	7	12.50	0.6000	40.00
+bród	bˠɾˠoːd̪ˠ	ˈbˠɾˠoːd̪ˠ	1	90.00	0.0000	100.00
+thráigh	hɾˠə	hɾˠɑː	2	60.00	0.3333	66.67
+Veinéiseach	vˈɛnʲeːʃəx	ˈvʲɛnʲeːʃəx	2	81.82	0.0000	100.00
+gabhála	ˈɡəuɑːlˠə	ˈɡawɑːlˠə	2	77.78	0.3333	66.67
+Baváir	bˠavɑːɾʲ	ˈbˠawɑːɾʲ	2	77.78	0.2000	80.00
+lá breithe maith agat	l̪ˠɑː bʲɾʲɛhə ˈmˠah ˈuɡəd̪ˠ	l̪ˠɑː bʲɾʲɛhə mˠa ˈaɡət̪ˠ	4	85.19	0.2143	78.57
+scadán	ˈsˠkad̪ˠɑːnˠ	ˈsˠkʊd̪ˠɑːnˠ	1	91.67	0.1667	83.33
+soicind	ˈsˠɛcɪn̠ʲdʲ	ˈsˠɛcənʲdʲ	2	81.82	0.1667	83.33
+scrábán	ˈsˠkɾˠɑːbˠɑːnˠ	ˈsˠkɾˠɑːbɑːnˠ	1	92.86	0.0000	100.00
+thiocfá	ˈhʊkɑː	ˈhʊkfˠɑː	2	75.00	0.2000	80.00
+Catalóinis	ˈkat̪ˠəlˠoːnʲɪʃ	ˈkatˠəl̪ˠoːnʲəʃ	3	80.00	0.1111	88.89
+thiocfainn	ˈhʊkfˠən̠ʲ	hʊkən̠ʲ	3	70.00	0.1667	83.33
+Lá Fhéile Pádraig	l̪ˠɑː eːlʲə ˈpˠɑːd̪ˠɾˠɪc	ˌl̪ˠɑː ˌeːlʲə ˈpˠɑːɾˠɪc	5	79.17	0.2500	75.00
+gcéadta	ˈɟeːd̪ˠt̪ˠə	ˈɟeːt̪ˠə	3	72.73	0.2000	80.00
+go dtí gur	ɡədʲiː ˈɡʊɾˠ	ɡə ˈdʲiː ɡəɾˠ	4	69.23	0.1429	85.71
+coróinvíreas	ˈkɔɾˠoːnʲviːɾʲəsˠ	ˈkɔɾˠuːnʲ.vʲiːɾʲəsˠ	3	84.21	0.1000	90.00
+milse	ˈmʲɪlʲʃə	ˈmʲɪl̠ʲʃə	1	88.89	0.0000	100.00
+sióg	ˈʃioːɡ	ˈʃiːoːɡ	1	85.71	0.0000	100.00
+naíonta	ˈn̪ˠiːɔn̪ˠt̪ˠə	ˈn̪ˠiːn̪ˠt̪ˠə	1	92.86	0.1667	83.33
+as cosa i dtaca	asˠ ˌkɔsˠə əˈd̪ˠakə	əsˠ ˌkɔsˠə ˈd̪ˠɑkə	3	84.21	0.2500	75.00
+foirmiúlacht	ˈfˠɛɾʲəmʲuːlˠəxt̪ˠ	ˈfˠɔɾˠmʲuːlˠəxt̪ˠ	3	83.33	0.2000	80.00
+Luimneach	ˈl̪ˠɪmʲnʲəx	ˈl̪ˠɪmʲənʲəx	1	91.67	0.1429	85.71
+teideal	ˈtʲɛdʲəlˠ	ˈtʲɛdʲəl	1	88.89	0.0000	100.00
+abhac	ˈauək	auk	2	60.00	0.2500	75.00
+te	tʲɛ	tʲe	1	66.67	0.0000	100.00
+sabhdán	ˈsˠəud̪ˠɑːnˠ	ˈsˠaud̪ˠɑːnˠ	1	91.67	0.1667	83.33
+Catalóin	ˈkat̪ˠəlˠoːnʲ	ˈkatˠəl̪ˠoːnʲ	2	84.62	0.0000	100.00
+tchíthear	ˈtʲiːhəɾˠ	ˈtʲihəɾˠ	1	88.89	0.0000	100.00
+taspáin	ˈt̪ˠasˠpˠɑːnʲ	t̪əˈspˠɑːnʲ	4	69.23	0.1667	83.33
+tarrang	ˈt̪ˠaɾˠəŋ	ˈt̪ˠɑɾˠək	2	77.78	0.4000	60.00
+seandaoine	ˈʃan̪ˠd̪ˠiːnʲə	ˈʃanˌdiːnə	5	64.29	0.1250	87.50
+Mumhain	ˈmˠəunʲ	mˠuːnʲ	3	57.14	0.2500	75.00
+os cionn	əsˠ ˈcɪoːn̪ˠ	oːsˠˈciən̪ˠ	6	50.00	0.3333	66.67
+veigeatóir	vˈɛɟət̪ˠoːɾʲ	ˈvʲɛɟɪt̪ˠoːɾʲ	3	76.92	0.1429	85.71
+staighre	ˈsˠt̪ˠəiɾʲə	ˈsˠt̪ˠaiɾʲə	1	90.91	0.1667	83.33
+taidhleoir	ˈt̪ˠɑːjlʲoːɾʲ	ˈt̪ˠailʲoːɾʲ	3	76.92	0.3333	66.67
+libh	lʲəi	lʲɪbʲ	3	40.00	0.6667	33.33
+tagtar	ˈt̪ˠakt̪ˠəɾˠ	ˈt̪ˠaɡt̪ˠəɾˠ	1	91.67	0.1667	83.33
+laisteas	ˈl̪ˠaʃtʲəsˠ	l̪ˠaʃˈtʲasˠ	3	72.73	0.1667	83.33
+tabhartanas	ˈt̪ˠəuɾˠt̪ˠənˠəsˠ	ˈt̪ˠoːɾˠt̪ˠənˠəsˠ	2	88.24	0.2222	77.78
+tabhair	ˈt̪ˠəuɾʲ	ˈt̪ˠoːɾʲ	2	75.00	0.5000	50.00
+anduine	ˈan̪ˠd̪ˠənʲə	ˈan̪ˠɪnʲə	4	66.67	0.3333	66.67
+dordéan	ˈd̪ˠoːɾˠdʲeːnˠ	ˈd̪ˠoːɾˠd̪ˠˌeːnˠ	3	81.25	0.1429	85.71
+freastalaíonn	ˈfʲɾʲasˠt̪ˠəlˠiːən̪ˠ	ˈfʲɾʲasˠt̪ˠəlˠiːn̪ˠ	1	95.00	0.1000	90.00
+dúigh	d̪ˠuː	d̪ˠuːj	1	83.33	0.3333	66.67
+súil ribe	ˌsˠuːlʲ ˈɾʲɪbʲə	ˈsˠuːlʲ ˈɾˠɪbʲə	2	86.67	0.1250	87.50
+súiche	ˈsˠuːçə	ˈsˠuːçɪ	1	85.71	0.2500	75.00
+cinnigí	ˈcɪn̠ʲɪɟiː	ˈcɪn̠ɪɟiː	1	90.00	0.0000	100.00
+comhairle	ˈkoːəːɾʲlʲə	ˈkuːɾʲlʲə	3	72.73	0.4286	57.14
+ospidéal	ˈɪʃpʲədʲeːlˠ	ˈɔsˠpʲədʲeːlˠ	3	76.92	0.1429	85.71
+déanamh	ˈdʲeːnˠəu	ˈdʲaːnˠuː	3	66.67	0.4000	60.00
+síocháin	ˈʃiəxɑːnʲ	ˈʃiə.xɑːnʲ	1	90.00	0.0000	100.00
+dhéanfaí	ˈjeːn̪ˠfˠiː	ˈjiːnfˠiː	3	72.73	0.2000	80.00
+nuaghinte	ˈn̪ˠuəjənʲtʲə	ˈn̪ˠʊʝɪnʲtʲə	4	69.23	0.3750	62.50
+réidhleán	ˈɾˠeːjlʲɑːn̪ˠ	ˈɾˠeːlʲɑːn̪ˠ	1	92.31	0.1667	83.33
+comhrialtas	ˈkɪɾʲiəl̪ˠt̪ˠəsˠ	ˈkoːɾˠiəl̪ˠt̪ˠəsˠ	3	82.35	0.1111	88.89
+Bhrasaíl	ˈvˠɾˠasˠiːlʲ	vˠɾˠaˈsˠiːlʲ	2	83.33	0.0000	100.00
+mhaithe	ˈwahə	ˈwãhə	1	80.00	0.2500	75.00
+anocht	əˈnˠɔxt̪ˠ	əˈn̪ˠɔxt̪ˠ	1	90.00	0.0000	100.00
+fheadha	ˈəiə	ɑː	4	0.00	1.0000	0.00
+dúidín	ˈd̪ˠuːdʲiːnʲ	ˈdˠuːdʲiːnʲ	1	91.67	0.0000	100.00
+fiánta	ˈfʲiɑːn̪ˠt̪ˠə	ˈfʲiː.ɑːn̪ˠt̪ˠə	2	86.67	0.0000	100.00
+bhíteá	ˈvʲiːtʲɑː	ˈvʲiːtʲaː	1	88.89	0.2500	75.00
+bhFrainc	wɾˠaɲc	vˠɾˠaɲc	2	71.43	0.2000	80.00
+taifead	ˈt̪ˠahəd̪ˠ	ˈt̪ˠafʲəd̪ˠ	2	81.82	0.2000	80.00
+amháin	ˈəuɑːnʲ	əˈwɑːnʲ	3	57.14	0.2500	75.00
+stadta	ˈsˠt̪ˠad̪ˠt̪ˠə	ˈsˠt̪ˠat̪ˠə	3	78.57	0.1667	83.33
+Sorcha	ˈsˠɔɾˠəxə	ˈsɔɾˠəxə	1	88.89	0.0000	100.00
+sráide	ˈsˠɾˠɑːdʲə	sˠɾˠaːdʲə	2	80.00	0.2000	80.00
+sráidbhaile	ˈsˠɾˠɑːd̪ˠwəlʲə	ˈsˠɾˠɑːdʲwalʲə	3	80.00	0.1250	87.50
+sreang	ʃɾʲaŋ	sˠɾˠɑːŋ	5	28.57	0.2500	75.00
+spréigh	sˠpʲɾʲɪ	sˠpʲɾʲeːj	3	66.67	0.4000	60.00
+carraig	ˈkaɾˠɪc	ˈkaːɾˠɪɟ	2	75.00	0.2000	80.00
+splanc	sˠpˠlˠaŋk	sˠpˠl̪ˠaːŋk	2	81.82	0.0000	100.00
+spiorad	ˈsˠpʲɪɾˠəd̪ˠ	ˈsˠpʲiɾˠədʲ	3	75.00	0.0000	100.00
+fréamhshamhaltaigh	ˈfʲɾʲeːvˠhəul̪ˠt̪ˠiː	ˈfʲɾʲeːvˠ.hawəl̪ˠt̪ˠiː	4	81.82	0.2727	72.73
+Baile Brigín	ˌbˠalʲə ˈbʲɾʲɪɟiːnʲ	ˌbˠalə ˈbʲɾʲɪɟiːnʲ	1	94.74	0.0000	100.00
+aineolaí	ˈanʲoːlˠiː	ˈaːn̪ˠoːl̪ˠiː	4	69.23	0.0000	100.00
+sonraíoch	ˈsˠɔn̪ˠɾˠiːəx	ˈsˠɔn̪ˠɾˠiəx	1	92.31	0.0000	100.00
+soilse	ˈsˠɛl̠ʲʃə	ˈsˠəil̠ʲʃə	2	80.00	0.3333	66.67
+d'oil	d̪ˠɛlʲ	ˈd̪ˠɛlʲ	1	85.71	0.0000	100.00
+sol má	sˠɔlˠ ˈmˠɑː	ˈsˠɔlˠmˠɑː	3	72.73	0.0000	100.00
+soitheach	ˈsˠɛhəx	ˈsˠeçəx	2	71.43	0.2000	80.00
+sochreidte	ˈsˠɔhɾʲədʲtʲə	ˈsˠɔˌçɾʲɛtʲə	5	61.54	0.5000	50.00
+-san	sˠanˠ	sˠənˠ	1	80.00	0.3333	66.67
+nochtach	ˈn̪ˠɔxt̪ˠəx	ˈnɔxt̪ˠəx	2	81.82	0.0000	100.00
+lenarb	ˈl̠ʲɛnˠəɾˠbˠ	ˈlʲɛnˠəɾˠbˠ	1	91.67	0.0000	100.00
+mhart	waɾˠt̪ˠ	waɾˠtˠ	1	85.71	0.0000	100.00
+snagcheol	ˈsˠn̪ˠaɟçoːlˠ	ˈsˠn̪ˠaɡˌçoːlˠ	2	85.71	0.1250	87.50
+Droichead Nua	ˌd̪ˠɾˠɛçəd̪ˠ ˈn̪ˠuə	ˌd̪ˠɾˠeːd̪ˠ ˈn̪ˠuː	4	78.95	0.3000	70.00
+aréir	əˈɾʲeːɾʲ	əˈɾˠeːɾʲ	1	87.50	0.0000	100.00
+cosán	ˈkɔsˠɑːnˠ	ˈkəsˠɑːnˠ	1	88.89	0.2000	80.00
+gabhaidh	ˈɡəu	ˈɡohiː	4	33.33	0.7500	25.00
+bhoicht	wɛçtʲ	wɔxtʲ	2	60.00	0.2500	75.00
+slabaí	ˈsˠl̪ˠabˠiː	ˈsˠɫ̪abˠiː	2	81.82	0.2000	80.00
+caidhp bháis	kɑːjpʲ ˈwɑːʃ	ˌkaipʲ ˈwɑːʃ	4	66.67	0.3750	62.50
+cruitchláraí	ˈkɾˠʊt̪ˠxlˠɑːɾˠiː	ˈkɾˠɪtʲxlˠɑːɾˠiː	3	82.35	0.1111	88.89
+sléibhte	ˈʃl̠ʲeːvʲtʲə	ˈʃl̠ʲeːfʲtʲə	1	91.67	0.1667	83.33
+sléibhe	ˈʃl̠ʲeːvʲə	ˈʃlʲeːvʲə	1	90.00	0.0000	100.00
+sluaite	ˈsˠl̪ˠuətʲə	ˈsˠɫ̪uətʲə	2	81.82	0.1667	83.33
+Ulaidh	ˈʊlˠə	ˈʊlˠiː	2	66.67	0.3333	66.67
+sliotar	ˈʃl̠ʲɪt̪ˠəɾˠ	ˈʃlʲɪt̪ˠəɾˠ	1	91.67	0.0000	100.00
+colbha	ˈkɔlˠəwə	ˈkɔlˠəvˠ	2	75.00	0.3333	66.67
+sligeán	ˈʃl̠ʲɪɟɑːnˠ	ˈʃl̠ʲiɟaːnˠ	2	81.82	0.1667	83.33
+mallacht	ˈmˠal̪ˠəxt̪ˠ	ˈmˠaːl̪ˠəxt̪ˠ	1	92.31	0.0000	100.00
+sleamhna	ˈʃl̠ʲəun̪ˠə	ˈʃl̠ʲãun̪ˠə	1	90.91	0.1667	83.33
+sleamhain	ˈʃl̠ʲəunʲ	ˈʃl̠ʲãuwənʲ	3	72.73	0.4286	57.14
+seanmóirí	ˈʃanˠəmˠoːɾʲiː	ˈʃanˠəmoːɾʲiː	1	92.86	0.0000	100.00
+minicí	ˈmʲɪnʲɪciː	ˈmʲɪnɪciː	1	90.00	0.0000	100.00
+fomhórach	ˈfˠəuoːɾˠəx	fˠɔˈvˠoːɾˠəx	5	58.33	0.2857	71.43
+gabháltas	ˈɡəuɑːl̪ˠt̪ˠəsˠ	ˈɡoːl̪ˠt̪ˠəsˠ	3	80.00	0.3750	62.50
+cé na	ˈceː n̪ˠə	ˈceːnˠə	2	77.78	0.0000	100.00
+sioc	ʃjuk	ʃuk	1	75.00	0.2500	75.00
+t-airgead	ˈt̪ˠaɾʲəɟəd̪ˠ	ˈt̪ˠaɾʲɪɟəd̪ˠ	1	92.31	0.1429	85.71
+toghadh	ˈt̪ˠaiə	ˈt̪ˠəu.ə	3	62.50	0.5000	50.00
+gach uile dhuine	ˌɡax ɪlʲə ˈɣɪnʲə	ˌxɪlʲə ˈɣɪnʲə	3	81.25	0.1818	81.82
+deargaim	ˈdʲaɾˠəɡəmʲ	ˈdʲaɾˠɡəmʲ	1	90.91	0.1429	85.71
+ciumhaiseanna	ˈcəuʃən̪ˠə	ˈcuːʃən̪ˠə	2	80.00	0.1429	85.71
+inneoin	ˈɪn̠ʲoːnʲ	ˈin̠ʲuːnʲ	2	77.78	0.2500	75.00
+foraois	ˈfˠɔɾˠiːʃ	ˈfɔɾˠiːʃ	1	88.89	0.0000	100.00
+diosfaige	ˌdʲɪsˠfˠəˈɟɪ	ˌdʲəsˈfɑɟə	6	50.00	0.3750	62.50
+Fearghas	ˈfʲaɾˠəsˠ	ˈfʲæːɾˠiːsˠ	4	63.64	0.2000	80.00
+siamban	ˈʃiəmˠbˠənˠ	ʃiəmʲbˠan̠ʲ	5	54.55	0.1429	85.71
+leigheas	l̠ʲɪəsˠ	l̠ʲəisˠ	2	71.43	0.5000	50.00
+Imánál	ˈɪmˠɑːnˠɑːl̪ˠ	ɪˈmˠɑːn̪ɑːl̪ˠ	3	76.92	0.0000	100.00
+aiges	ˈaɟɪʃ	ˈɛɟɪsˠ	3	50.00	0.2500	75.00
+Ocsatánais	ˈɔksˠət̪ˠaːnˠəʃ	ˈɔksətˠaːnˠɪʃ	3	80.00	0.1111	88.89
+cunlach	ˈkʊn̪ˠlˠəx	ˈkuːn̪ˠl̪ˠəx	3	75.00	0.0000	100.00
+shrathnaigh	ˈhɾˠahn̪ˠə	ˈhɾˠʌhn̪ˠə	1	90.00	0.0000	100.00
+domlas	ˈd̪ˠɔmˠlˠəsˠ	ˈd̪ˠumˠlˠəsˠ	1	91.67	0.1667	83.33
+le déanaí	lʲɛ ˈdʲeːnˠiː	lʲə ˈdʲeːn̪ˠiː	2	85.71	0.1667	83.33
+shleamhnaigh	ˈhl̠ʲəun̪ˠə	ˈhlʲãun̪ˠə	2	81.82	0.1667	83.33
+ar scáth a	ɛɾʲˈsˠkɑːh ə	ɛɾʲˈsˠkɑːə	2	83.33	0.1429	85.71
+sheol	çoːlˠ	çɔːlˠ	1	80.00	0.0000	100.00
+Fionnghall	ˈfʲɪn̪ˠɣəl̪ˠ	fʲuːnɣal	8	33.33	0.3333	66.67
+cónaí	ˈkuːn̪ˠiː	ˈkuːnˠiː	1	88.89	0.0000	100.00
+aon duine	iːnˠ ˈd̪ˠɪnʲə	eːn̪ˠˈd̪ˠɪnʲə	3	76.92	0.1667	83.33
+spealas	ˈsˠpʲalˠəsˠ	ˈsˠpʲalˠəs	1	90.91	0.0000	100.00
+seod	ʃoːd̪ˠ	ʃoːd̪	1	83.33	0.0000	100.00
+seo chugainn	ˈʃɔ xəɡən̠ʲ	ʃɔ ˈxʊɡən̠ʲ	3	72.73	0.1429	85.71
+cathú	ˈkahuː	ˈkaːuː	1	83.33	0.2500	75.00
+bíonn cluasa ar an gcoill	bʲiːn̪ˠ klˠuəsˠə ɛɾʲ ənˠ ˈɡɛl̠ʲ	bʲiːən̪ˠ kl̪ˠuəsˠə ɛɾˠ ən̪ˠ ɡəlʲ	7	78.12	0.1176	88.24
+searbh	ˈʃaɾˠuː	ˈʃarˠuː	1	85.71	0.0000	100.00
+gearrfar	ˈɟaɾˠfˠəɾˠ	ˈɟɑːɾˠfˠəɾˠ	2	81.82	0.1667	83.33
+seanmóir	ˈʃanˠəmˠoːɾʲ	ˈʃanˠəmˠəɾʲ	2	83.33	0.1429	85.71
+seanmhná	ˈʃanˠəvˠn̪ˠɑː	ˈʃanˠˌvˠnˠɑː	2	84.62	0.1429	85.71
+seanfhocal	ˈʃanˠəkəlˠ	ˈʃanˠɔkəlˠ	1	90.00	0.1429	85.71
+mar	mˠəɾˠ	ˈmˠəɾˠ	1	83.33	0.0000	100.00
+seanduine	ˈʃan̪ˠd̪ˠənʲə	ˈʃan̪ˠinʲə	4	69.23	0.2857	71.43
+seanbhean	ˈʃanʲəvʲənˠ	ˈʃæːn̪ˠˌvʲæːn̪ˠ	8	46.67	0.2857	71.43
+Iodáilis	ˈɪd̪ˠaːlʲɪʃ	ˈɪdˠaːlʲɪʃ	1	90.91	0.0000	100.00
+seanbhan	ˈʃanˠəwənˠ	ˈʃanˠˌwanˠ	2	80.00	0.2857	71.43
+seanathair	ˈʃanˠəhəɾʲ	ˈʃanˠahəɾʲ	1	90.00	0.1429	85.71
+duille	d̪ˠəlʲə	d̪ˠɪlʲə	1	85.71	0.2500	75.00
+oirthear	ˈɛɾʲhəɾˠ	ˈeɾʲhəɾˠ	1	87.50	0.0000	100.00
+chomh luath is	xəu ˈl̪ˠuəh sˠ	xəˈl̪ˠuəsˠ	4	71.43	0.2500	75.00
+ná tráchtaigí air	n̪ˠɑː t̪ˠɾˠɑːxt̪ˠəɟiː ˈaɾʲ	n̪ˠɑː ˈt̪ˠɾˠɑːxt̪ˠɪɟiː ɛɾʲ	4	84.62	0.1667	83.33
+gabha	ˈɡəu	ˈɡəuə	1	80.00	0.2500	75.00
+troscadh	ˈt̪ˠɾˠɔsˠkuː	ˈt̪ˠɾˠosˠkuː	1	91.67	0.0000	100.00
+seabhac	ˈʃauək	ʃauk	2	66.67	0.2000	80.00
+rac-cheol	ˈɾˠacˌçoːlˠ	ˈɾˠakˌçoːlˠ	1	90.91	0.0000	100.00
+d'éirigh	ˈdʲeːɾʲə	ˈdʲəiɾʲə	2	75.00	0.4000	60.00
+cú dobhráin	kuː ˈd̪ˠəuɾˠɑːnʲ	kuː ˈd̪ˠoʊ.ɾaːnʲ	5	68.75	0.2500	75.00
+pingine	ˈpʲɪɲənʲə	pʲiːn̠ʲə	5	44.44	0.3333	66.67
+donnrua	ˈd̪ˠʊn̪ˠɾˠuə	ˈd̪ˠɔn̪ˠˌɾˠuə	2	84.62	0.2857	71.43
+scráib	sˠkɾˠaːbʲ	sˠkɾˠaːbˠ	1	88.89	0.0000	100.00
+arraing	ˈaɾˠəŋ	ˈaɾˠən̠ʲ	3	62.50	0.0000	100.00
+tseanbhean	ˈtʲanʲəvʲənˠ	ˈtʲanˠˌvʲanˠ	3	75.00	0.2857	71.43
+iontas	ˈɪn̪ˠt̪ˠəsˠ	ˈiːn̪ˠt̪ˠəsˠ	2	83.33	0.0000	100.00
+tá ocras orm	t̪ˠɑː ˈɔkɾˠəsˠ əɾˠəmˠ	ˈt̪ˠɔkɾˠəsˠ ɔɾˠəmˠ	6	71.43	0.1818	81.82
+altar	ˈal̪ˠt̪ˠəɾˠ	ˈal̪ˠ.t̪ˠəɾˠ	1	91.67	0.0000	100.00
+scamhóga	ˈsˠkəuoːɡə	ˈsˠkawoːɡiː	4	63.64	0.4286	57.14
+chomh maith	xəu ˈmˠa	xə mˠa	2	75.00	0.2000	80.00
+iógart	ˈioːɡəɾˠt̪ˠ	ˈjoː.ɡˠʊɾˠt̪ˠ	4	69.23	0.3333	66.67
+ata	əˈt̪ˠa	ˈat̪ˠə	3	50.00	0.6667	33.33
+scafa	sˠkafˠə	sˠkɑfˠə	1	85.71	0.2000	80.00
+Dún Dealgan	ˌd̪ˠuːnˠ ˈdʲalˠəɡənˠ	ˌd̪ˠuːn̪ˠ ˈdʲal̪ˠəɡən̪ˠ	3	86.96	0.0000	100.00
+'spáin	sˠpˠɑːnʲ	spˠɑːnʲ	1	87.50	0.0000	100.00
+féinchúis	ˈfʲeːn̪ˠxuːʃ	ˈfʲeːnʲˌxuːʃ	2	83.33	0.1429	85.71
+Dún Laoghaire	d̪ˠuːnˠ ˈl̪ˠiːəɾʲə	d̪ˠuːn̪ˠ ˈl̪ˠiːɾʲə	2	88.89	0.1250	87.50
+salach	ˈsˠalˠəx	ˈsˠaːl̪ˠəx	2	80.00	0.0000	100.00
+saighead	sˠəəd̪ˠ	sˠəid̪ˠ	1	85.71	0.2500	75.00
+saghas	ˈsˠaiəsˠ	sˠəisˠ	3	62.50	0.4000	60.00
+sagart	ˈsˠaɡəɾˠt̪ˠ	ˈsˠaːɡəɾˠt̪ˠ	1	91.67	0.0000	100.00
+sa gcaoi go	sˠə ˈɡiː ɡə	sə ˈɡiː ɡə	1	90.91	0.0000	100.00
+snoíodóireacht	ˈsˠn̪ˠiːəd̪ˠoːɾʲəxt̪ˠ	ˈsˠn̪ˠiːd̪ˠoːɾʲəxt̪ˠ	1	95.24	0.1000	90.00
+cén chaoi a bhfuil tú	ceːnʲxiː əwɪlʲ ˈt̪ˠuː	ceːnˠxiː ˈwɪlʲ t̪ˠuː	3	85.71	0.0909	90.91
+Vín	viːnʲ	vʲiːnʲ	1	83.33	0.0000	100.00
+róghoilliúnach	ˈɾˠoːɣəl̠ʲuːnˠəx	ɾˠoːˈɣɔl̠ʲuːnˠəx	3	81.25	0.1111	88.89
+ar dtús	ɛɾʲˈd̪ˠuːsˠ	əɾˠˈd̪ˠuːsˠ	2	81.82	0.2000	80.00
+adhlacóir	ˈailˠəkoːɾʲ	ˈəil̪ˠəkoːɾʲ	2	83.33	0.1429	85.71
+inseoidh	ˈin̠ʲʃə	ˈinʲʃoː	3	57.14	0.2500	75.00
+ríomhaire	ˈɾˠiːwəɾʲə	ˈɾˠiːvˠəɾʲə	2	81.82	0.1667	83.33
+ghoirid	ˈɣɛɾʲədʲ	ˈɣʌɾʲədʲ	1	87.50	0.2000	80.00
+gearach	ˈɟaɾˠəx	ˈɟaɾəx	1	85.71	0.0000	100.00
+ailm	ˈalʲəmʲ	ˈa.lʲəmʲ	1	87.50	0.0000	100.00
+fuiltear	ˈfˠɪl̠ʲtʲəɾˠ	ˈfˠɪl̠ʲtʲəɾʲ	1	91.67	0.0000	100.00
+Fionlainnise	ˈfʲɪn̪ˠlˠən̠ʲəʃə	ˈfʲɪn̪ˠl̪ˠən̠ʲɪʃə	2	88.24	0.1111	88.89
+laidhre	ˈl̪ˠɑːjɾʲə	ˈl̪ˠəiɾʲə	3	70.00	0.4000	60.00
+aonraic	ˈiːn̪ˠɾˠɪc	ˈeːn̪ˠɾˠɪc	1	90.00	0.2000	80.00
+Albain Nua	ˌalˠəbˠənʲ ˈn̪ˠuə	ˈalˠəbˠə ˈn̪ˠuə	3	82.35	0.2000	80.00
+giucs	ɟʊksˠ	ɟɯksˠ	1	80.00	0.2500	75.00
+faighfeá	ˈfˠəifʲɑː	ˈfˠaiɑː	3	66.67	0.4000	60.00
+chulaith	ˈxʊlˠə	ˈxolˠiː	3	57.14	0.5000	50.00
+ruóg	ˈɾˠuoːɡ	ˈɾˠuːoːɡ	1	87.50	0.0000	100.00
+Meicsiceo	ˈmʲɛcʃɪcoː	ˈmʲɛc.ʃɪ.coː	2	83.33	0.0000	100.00
+ruán	ˈɾˠuɑːnˠ	ˈɾˠuː.ɑːnˠ	2	80.00	0.0000	100.00
+Bolcáin	ˈbˠɔlˠkɑːnʲ	ˈbɔlˠkɑːnʲ	1	90.91	0.0000	100.00
+n-oilfeadh	ˈn̪ˠɛl̠ʲhu	ˈn̪ˠɛlʲhu	1	90.00	0.0000	100.00
+Ollainnis	ˈɔl̪ˠən̠ʲɪʃ	ˈɔl̪ˠən̠ʲəʃ	1	90.91	0.1667	83.33
+rugabhair	ˈɾˠʊɡəuɾʲ	ˈɾˠʊɡəwəɾʲ	2	80.00	0.2857	71.43
+Latharna	ˈl̪ˠahəːɾˠn̪ˠə	ˈl̪ˠahəɾˠn̪ˠə	1	92.86	0.1250	87.50
+rud beag	ɾˠʊd̪ˠ ˈbʲaɡ	ˈɾˠʊd̪ˠ ˈbʲɔɡ	2	84.62	0.1667	83.33
+cliste	ˈclʲɪʃtʲə	ˈcʲlʲɪʃtʲə	1	90.00	0.0000	100.00
+abhacád	ˈəukɑːd̪ˠ	ˈavˠəkɑːd̪ˠ	4	63.64	0.5000	50.00
+ruamann na gcoinneal	ˌɾˠuəmˠaːn̪ˠ n̪ˠə ˈɡɪn̠ʲəlˠ	ˈɾˠuəmˠən̪ˠə ˈɡɪn̠ʲəlˠ	7	74.07	0.2143	78.57
+aerga	ˈeːɾˠəɡə	ˈeːɾˠɡə	1	87.50	0.2000	80.00
+dein	dʲɪnʲ	ˈdʲɪnʲ	1	83.33	0.0000	100.00
+mharbh	ˈwaɾˠuː	ˈwarˠuː	1	85.71	0.0000	100.00
+meán oíche	ˌmʲɑːnˠ ˈiːçə	mʲɑːnˠ ˈiːhə	2	84.62	0.2857	71.43
+seanscéal	ˈʃan̠ʲʃceːlˠ	ˈʃanˠʃceːlˠ	2	83.33	0.0000	100.00
+rinneadh	ˈɾˠɪn̠ʲuː	ˈɾˠɪnʲuː	1	88.89	0.0000	100.00
+rinneabhair	ˈɾˠɪn̠ʲəuɾʲ	ˈɾˠɪnʲəwəɾʲ	3	72.73	0.2857	71.43
+bearna mhíl	ˌbʲɑːɾˠn̪ˠə ˈvʲiːlʲ	ˈbʲaːɾˠn̪ˠə ˈvʲiːlʲ	2	89.47	0.2222	77.78
+orm	ɔɾˠəmˠ	əɾˠmˠ	2	66.67	0.5000	50.00
+comhionann	ˈkɪiənˠən̪ˠ	ˈkuːˈaːn̪ˠən̪ˠ	6	57.14	0.4286	57.14
+uigneacha	ˈɪɟn̠ʲəxə	ˈɪɟn̠ʲaxə	1	88.89	0.1667	83.33
+gníomh	ɟɾʲiːw	ɟɾʲĩːw	1	83.33	0.2500	75.00
+leoraís	ˈl̠ʲoːɾˠiːʃ	lʲɔɾˠiːsˠ	6	45.45	0.0000	100.00
+ramhar	ˈɾˠauəɾˠ	ɾˠauɾˠ	2	75.00	0.2000	80.00
+ramhair	ˈɾˠəuɾʲ	ɾˠəurʲ	2	71.43	0.0000	100.00
+raiméis	ˈɾˠamʲeːʃ	ˈɾˠɑːmʲeːʃ	2	80.00	0.2000	80.00
+radhairc	ˈɾˠaiəɾʲc	ɾˠəiɾʲc	3	66.67	0.3333	66.67
+rabhais	ˈɾˠauəʃ	ɾˠauʃ	2	71.43	0.2000	80.00
+cnámha	ˈkɾˠɑːwə	kɾˠɑːwə	1	87.50	0.0000	100.00
+aighneas	ˈəinʲəsˠ	ˈai.nʲəsˠ	2	77.78	0.2000	80.00
+Deireadh Fómhair	ˌdʲɛɾʲɪ ˈfˠoːwəɾʲ	dʲeɾʲə fuːwəɾʲ	6	64.71	0.3000	70.00
+póg mo thóin	pˠoːɡ ˈmˠə ˈhoːnʲ	pˠoːɡʲ mˠə huːnʲ	4	76.47	0.1250	87.50
+braistint	ˈbˠɾˠaʃtʲən̠ʲtʲ	ˈbˠɾˠɑʃtʲənʲtʲ	2	86.67	0.1250	87.50
+carraige	ˈkaɾˠəɟɪ	ˈkaːɾˠiɟə	3	66.67	0.3333	66.67
+cérbh	ceːɾʲvʲ	ceːɾˠvˠ	2	71.43	0.0000	100.00
+páí	ˈpˠɑːiː	ˈpˠɑː.iː	1	87.50	0.0000	100.00
+punta	ˈpˠʊn̪ˠt̪ˠə	ˈpˠʌn̪ˠt̪ˠə	1	90.91	0.2000	80.00
+puimcín	ˈpˠɪmʲciːnʲ	ˈpˠɪmʲciːn	1	90.91	0.0000	100.00
+proifisiúntacht	ˈpˠɾˠɛfʲəʃuːn̪ˠt̪ˠəxt̪ˠ	pˠɾˠɔfʲɪˈʃuːn̪ˠt̪ˠəxt̪ˠ	4	82.61	0.1667	83.33
+gainimh	ˈɡanʲəi	ˈɡɑnʲəvʲ	3	62.50	0.4000	60.00
+imeoidh	ˈɪmʲə	ˈimʲoə	2	66.67	0.2500	75.00
+naíonda	ˈn̪ˠiːɔn̪ˠd̪ˠə	ˈn̪ˠiːn̪ˠd̪ˠə	1	92.86	0.1667	83.33
+fathach	ˈfˠahəx	ˈfˠax	2	71.43	0.4000	60.00
+céad míle fáilte	ceːd̪ˠ mʲiːlʲə ˈfˠɑːl̠ʲtʲə	ceːd̪ˠ ˈmʲiːlʲə ˈfˠaːlʲtʲə	3	88.46	0.0833	91.67
+go raibh maith agat	ɡəɾˠavʲ ˈmˠah ˈuɡəd̪ˠ	ɡəɾˠəˈmˠahəɡət̪ˠ	8	61.90	0.3333	66.67
+buntús	ˈbˠʊn̪ˠt̪ˠuːsˠ	ˈbˠunˠ.ˈtˠuːsˠ	5	64.29	0.0000	100.00
+leis	lʲɛʃ	l̠ʲɛʃ	1	80.00	0.0000	100.00
+comhréireach	ˈkɪɾʲeːɾʲəx	ˈkˠoːɾˠeːɾʲəxˠ	5	64.29	0.1429	85.71
+piocóid	ˈpʲɪkoːdʲ	ˈpʲʊkoːdʲ	1	88.89	0.2000	80.00
+piachán	ˈpʲiəxɑːnˠ	ˈpʲiəxːɑːn	2	80.00	0.1429	85.71
+pinginí	ˈpʲɪɲənʲiː	ˈpʲiːn̠ʲiː	4	60.00	0.3333	66.67
+pingin	ˈpʲɪɲənʲ	pʲiːn̠ʲ	5	37.50	0.4000	60.00
+ní móide	n̠ʲiːˈmˠoːdʲə	n̠ʲiː ˈmˠuːdʲə	2	85.71	0.1667	83.33
+pillín	ˈpʲɪlʲiːnʲ	ˈpiliːn	4	60.00	0.0000	100.00
+goidtear	ˈɡɛdʲtʲəɾˠ	ˈɡɞtʲəɾˠ	3	70.00	0.3333	66.67
+pianó	ˈpʲiənˠoː	pʲiˈanˠoː	3	66.67	0.2000	80.00
+Baile Meánach	ˌbˠalʲə ˈmʲɑːnˠəx	ˌbˠalʲə ˈmʲɑːn̪ˠəx	1	94.44	0.0000	100.00
+airleacan	ˈaːɾʲlʲəkənˠ	ˈɑːɾˠl̠ʲəkənˠ	3	76.92	0.1429	85.71
+cóngarach	ˈkoːŋəɾˠəx	ˈkoːŋɡəɾˠəx	1	90.91	0.1250	87.50
+adhlaic	ˈailˠɪc	ˈəil̪ˠəc	3	62.50	0.4000	60.00
+beir bua agus beannacht	bʲɛɾʲ bˠuə aɡəsˠ ˈbʲan̪ˠəxt̪ˠ	bʲɛɾʲ bˠuə ɑɡəsˠ ˈbʲan̪ˠəxt̪ˠ	1	96.55	0.0625	93.75
+banana	ˈbˠanˠənˠə	bˠəˈn̪ˠan̪ˠə	6	50.00	0.3333	66.67
+jé	jeː	d͡ʒeː	3	40.00	0.7500	25.00
+nimhe	ˈn̠ʲəiə	ˈn̠ʲivʲə	3	62.50	0.5000	50.00
+laethanta na riabhaí	ˌl̪ˠeːhən̪ˠt̪ˠə n̪ˠə ˈɾʲiəwiː	ˈl̪ˠeːhən̪ˠt̪ˠə n̪ˠə ˈɾˠiəwiː	2	93.10	0.0667	93.33
+ghliocais	ˈjlʲɪkəʃ	ˈjlʊkəʃ	2	75.00	0.1667	83.33
+raidió	ˈɾˠadʲioː	ˈɾˠadʲiːoː	1	90.00	0.0000	100.00
+strainséir	ˈsˠt̪ˠɾˠan̠ʲʃeːɾʲ	ˈsˠt̪ˠɾˠan̠ʲʃeːɾˠə	2	88.89	0.1111	88.89
+bacán	ˈbˠakɑːnˠ	ˈbˠukɑːnˠ	1	88.89	0.2000	80.00
+tulach	ˈt̪ˠʊlˠəx	ˈt̪ˠol̪ˠəx	2	80.00	0.2000	80.00
+ospidéil	ˈɪʃpʲədʲeːlʲ	ˈɔspʲədʲeːlʲ	2	83.33	0.1429	85.71
+ghaiscígh	ˈɣaʃcɪ	ˈɣaʃciː	2	71.43	0.0000	100.00
+os comhair	əsˠ ˈkəuɾʲ	əsˠˈkuːɾʲ	3	70.00	0.1667	83.33
+tairbh	ˈt̪ˠaɾʲəvʲ	ˈt̪ˠɑɾʲəvʲ	1	90.00	0.2000	80.00
+oráistí	ˈɔɾˠɑːʃtʲiː	ˈorɑːʃtʲiː	3	72.73	0.0000	100.00
+aisig	ˈaʃɪɟ	ˈaʃɪc	1	80.00	0.2500	75.00
+Vicipéid	vˈɪcɪpʲeːdʲ	vʲɪcɪpʲeːdʲ	1	90.91	0.0000	100.00
+neosainn	ˈn̠ʲoːsˠən̠ʲ	ˈnʲoːsˠənʲ	2	83.33	0.0000	100.00
+laistiar	ˈl̪ˠaʃtʲiəɾˠ	l̪ˠaʃˈtʲiəɾˠ	2	83.33	0.0000	100.00
+ollscoil	ˈɔl̪ˠsˠkəlʲ	ˈɔl̪ˠˌsˠkɔlʲ	2	83.33	0.2857	71.43
+fhuáil	ˈuɑːlʲ	ˈuːaːlʲ	2	71.43	0.3333	66.67
+bearrtha	ˈbʲaɾˠhə	ˈbʲɑːɾˠhə	2	77.78	0.2000	80.00
+oinniún	ˈɪn̠ʲuːnˠ	ˈin̠ʲuːnˠ	1	88.89	0.0000	100.00
+oighear	ɛəɾˠ	əiɾˠ	2	50.00	0.6667	33.33
+cé nach	ceːˈn̪ˠax	ˈceː n̪ˠax	2	80.00	0.0000	100.00
+stotha	ˈsˠt̪ˠɔhə	ˈst̪ˠɔhə	1	88.89	0.0000	100.00
+ochón	ˈɔxoːnˠ	ɔˈxoːn	3	57.14	0.0000	100.00
+rabhadar	ˈɾˠauəd̪ˠəɾˠ	ˈɾˠawəd̪ˠəɾˠ	1	91.67	0.1429	85.71
+nótaire	ˈn̪ˠoːt̪ˠəɾʲə	ˈn̪ˠoːtəɾʲə	2	84.62	0.0000	100.00
+-sean	ʃanˠ	ʃənˠ	1	75.00	0.3333	66.67
+bailíonn brobh beart	ˌbˠalʲiːn̪ˠ bˠɾˠəu ˈbʲaɾˠt̪ˠ	ˈbˠalʲiːn̪ˠ ˈbˠɾˠow ˈbʲaɾˠtʲ	6	78.57	0.2143	78.57
+feoigh	fʲɪ	fʲɔːj	3	40.00	0.6667	33.33
+eitpheil	ˈɛtʲfʲəlʲ	ˈɛtʲfʲɛlʲ	1	88.89	0.2000	80.00
+Carghas	ˈkaɾˠəsˠ	ˈkaɾˠiːsˠ	2	77.78	0.2000	80.00
+Uíbh Fhailí	iːvʲ ˈalʲiː	ˌiːvʲ ˈalʲiː	1	91.67	0.1667	83.33
+i ngéibheann	əˈɲeːvʲaːn̪ˠ	əˈɲeːvʲən̪ˠ	2	83.33	0.1667	83.33
+fianaise	ˈfʲiənˠəʃə	ˈfʲiːnˠɪʃə	2	80.00	0.2857	71.43
+is éigean	sˠ ˈeːɟənˠ	ˈʃeːɟənˠ	4	60.00	0.0000	100.00
+ná trácht air	n̪ˠɑː t̪ˠɾˠɑːxt̪ˠ ˈaɾʲ	n̪ˠɑː ˈt̪ˠɾˠɑːxt̪ˠ ɛɾʲ	3	86.36	0.1111	88.89
+Eochaidh	ˈoːxə	ˈɔxiː	4	20.00	0.3333	66.67
+nuaíocht	ˈn̪ˠuəiəxt̪ˠ	ˈn̪ˠuːiəxt̪ˠ	1	91.67	0.1429	85.71
+nuachtán	ˈn̪ˠuəxt̪ˠaːnˠ	nˠuˑəxt̪ˠaːnˠ	3	78.57	0.1250	87.50
+nuacht	n̪ˠuəxt̪ˠ	nˠuˑəxt̪ˠ	2	77.78	0.1667	83.33
+fiodh	fʲiuː	fʲɪ	3	40.00	0.3333	66.67
+nochtacht	ˈn̪ˠɔxt̪ˠəxt̪ˠ	ˈnɔxt̪ˠəxt̪ˠ	2	85.71	0.0000	100.00
+nití	ˈn̠ʲɪtʲiː	ˈnʲɨ̞tʲi	4	55.56	0.4000	60.00
+deartháireacha	ˈdʲaɾˠhɑːɾʲəxə	ˈdʲaɾˠhaɾʲəxə	2	85.71	0.1111	88.89
+comhair	ˈkoːəɾʲ	kuːɾʲ	3	57.14	0.5000	50.00
+nighe	ˈn̠ʲəiə	n̠ʲiː	3	57.14	0.5000	50.00
+cuisle	ˈkiʃl̠ʲə	ˈkiʃlʲə	1	87.50	0.0000	100.00
+cúntóir	ˈkuːn̪ˠt̪ˠoːɾʲ	ˈkuːnˠt̪ˠoːɾʲ	1	92.86	0.0000	100.00
+stopallán	ˈsˠt̪ˠɔpˠəl̪ˠɑːnˠ	ˈsˠt̪ˠɔpəl̪ˠɑːnˠ	1	94.12	0.0000	100.00
+creidmheas	ˈcɾʲɛdʲvʲəsˠ	ˈcɾʲɛdʲˌvʲasˠ	2	84.62	0.2500	75.00
+tuarastail	ˈt̪ˠuəɾˠəsˠt̪ˠəlʲ	ˈt̪uəɾˠəsˠt̪əlʲ	2	88.24	0.0000	100.00
+Colm Cille	ˌkɔlˠəmˠ ˈcɪl̠ʲə	ˌkɔlˠəmˈcɪl̠ʲə	2	87.50	0.0000	100.00
+collach	ˈkɔl̪ˠəx	ˈkol̪ˠəx	1	87.50	0.0000	100.00
+iarnbhreac	ˈiəɾˠn̠ʲvʲɾʲək	ˈiəɾˠn̪ˠˌvʲɾʲak	4	73.33	0.2222	77.78
+seobh	ʃoːw	ʃɔw	2	50.00	0.0000	100.00
+gamhain	ˈɡəunʲ	ˈɡãuənʲ	2	71.43	0.4000	60.00
+buail an t-iarann te	ˌbˠuəlʲ ənˠ tʲiəɾˠaːn̪ˠ ˈtʲɛ	bˠuəlʲ ə tʲiəɾˠən̪ˠ tʲɛ	6	78.57	0.2000	80.00
+nbhur	n̪ˠwʊɾˠ	nˠə	5	28.57	0.7500	25.00
+naíon	ˈn̪ˠiːɔnˠ	ˈn̪ˠiːnˠ	1	88.89	0.2500	75.00
+cairr	kaɾˠ	kaːɾˠ	1	80.00	0.0000	100.00
+grá mo chroí	ɡɾˠɑː ˈmˠə ˈxɾˠiː	ɡɾˠaː mˠə xɾˠiː	3	82.35	0.1250	87.50
+iníon	ˈɪnʲiːnˠ	nʲiːnˠ	2	75.00	0.2500	75.00
+bóthair	ˈbˠoːhəɾʲ	ˈboːhəɾʲ	1	88.89	0.0000	100.00
+Bhaile Átha Cliath	ˌwalʲə ɑːhə ˈclʲiə	ˌvʲlʲɑː ˈclʲiə	6	66.67	0.4167	58.33
+in aice le	ɪnʲ ˈacɪ lʲɛ	əˈn̪ˠacɪlʲə	7	41.67	0.2857	71.43
+n-éirí	ˈn̠ʲeːɾʲiː	ˈn̠ʲaiɾʲiː	2	80.00	0.4000	60.00
+ceannachán	ˈcan̪ˠəxaːnˠ	canəxaːn	4	66.67	0.0000	100.00
+Sinn Féin	ʃɪn̠ʲ ˈfʲeːnʲ	ʃɪnʲ fʲeːnʲ	2	84.62	0.0000	100.00
+móire	ˈmˠoːɾʲə	ˈmoːɾʲə	1	87.50	0.0000	100.00
+crosta	ˈkɾˠɔsˠt̪ˠə	ˈkrˠɔs̪ˠt̪ˠə	2	83.33	0.0000	100.00
+bunábhar	ˈbˠʊnˠɑːwəɾˠ	ˈbˠʊnˠˌɑːwəɾˠ	1	92.31	0.1250	87.50
+míorúilteach	ˈmʲiːɾˠuːl̠ʲtʲəx	ˈmʲiːɾˠuːl̪ˠt̪ˠəx	4	76.47	0.0000	100.00
+spáin	sˠpˠɑːnʲ	spˠɑːnʲ	1	87.50	0.0000	100.00
+Volaifis	vˈɔlˠəfʲɪʃ	wɔl̪ˠəfʲɪʃ	3	70.00	0.1429	85.71
+hairdí	ˈhɑːɾˠdʲiː	ˈhaːɾˠdʲiː	1	90.00	0.2000	80.00
+castóir	ˈkasˠt̪ˠoːɾʲ	ˈkˠasˠ.tˠoɾʲ	4	66.67	0.0000	100.00
+Bablóinia	bˠaˈbˠlˠoːnʲiə	bˠabˠˈlˠoːnʲiə	2	85.71	0.0000	100.00
+grianghraf	ˈɟɾʲiən̪ˠɣɾˠəfˠ	ˈɟɾʲiənˠˌɣɾˠafˠ	3	80.00	0.2000	80.00
+máithreacha	ˈmˠaːhɾʲəxə	ˈmˠaːɾʲhəxiː	4	66.67	0.4286	57.14
+murlán	ˈmˠuːɾˠl̪ˠɑːnˠ	ˈmˠʊɾˠl̪ˠɑːn	3	78.57	0.0000	100.00
+mungarlach	ˈmˠʊŋəːɾˠl̪ˠəx	ˈmˠʊŋɡəɾˠl̪ˠəx	2	85.71	0.2222	77.78
+-ófar	ohəɾˠ	oˠhəɾˠ	1	83.33	0.0000	100.00
+muinchille	ˈmˠɪnʲəçəl̠ʲə	ˈmˠɪnʲəl̠ʲə	2	84.62	0.2500	75.00
+parasól	ˈpˠaɾˠəsˠoːl̪ˠ	ˈpˠa.ɾˠa.sˠoːl̪ˠ	3	81.25	0.1429	85.71
+mucár	ˈmˠʊˌkɑːɾˠ	ˈmˠʊkˌɑːɾˠ	2	80.00	0.3333	66.67
+monarcacht	ˈmˠɔnˠəɾˠkəxt̪ˠ	ˈmˠɔnəɾˠkəxt̪ˠ	1	93.33	0.0000	100.00
+Ungáiris	ˈʊŋɑːɾʲɪʃ	ˈʊŋˠɡaːrʲɪʃ	4	63.64	0.2857	71.43
+mo ghrá thú	ˈmˠə ɣɾˠɑː ˈhuː	mˠə ɣɾˠɑː huː	2	86.67	0.0000	100.00
+Tír Bhascach	tʲiːɾʲ ˈwasˠkəx	tʲiːɾʲ ˈvˠaskəx	3	80.00	0.1111	88.89
+gaothrán	ˈɡiːhɾˠɑːn̪ˠ	ˈɡiːɾ̥ˠɑːn̪ˠ	2	83.33	0.3333	66.67
+diabhal	ˈdʲiəwəlˠ	ˈdʲauəlˠ	3	66.67	0.5000	50.00
+miongháire	ˈmʲɪn̪ˠɣaːɾʲə	mʲɪnˠɣaːɾʲə	2	84.62	0.0000	100.00
+mill	mʲɪl̠ʲ	mʲɪlʲ	1	83.33	0.0000	100.00
+mháighistreása	ˈwɑːjəʃtʲɾʲɑːsˠə	ˈwɑːʃtʲɾʲɑːsˠə	2	87.50	0.2000	80.00
+Deirdre	ˈdʲɛːɾˠdʲɾʲə	ˈdʲɛɾˠdʲɾʲə	1	91.67	0.0000	100.00
+clos	kl̪ˠɔsˠ	kl̪ˠosˠ	1	85.71	0.0000	100.00
+oilfeadh	ˈɛl̠ʲhu	ˈɛlʲhu	1	85.71	0.0000	100.00
+aghaidh	ˈaiə	ai	2	50.00	0.3333	66.67
+meall	mʲaːl̪ˠ	mʲɑːl̪ˠ	1	85.71	0.3333	66.67
+meaingeal	ˈmʲaɲəlˠ	ˈmæɲɟəl	4	50.00	0.1667	83.33
+is cuma	sˠ ˈkʊmˠə	əsˠ ˈkʊmˠə	1	90.00	0.1667	83.33
+ar an ásc san	ɛɾʲ ənˠ ˈɑːsˠk ˈsˠən̪ˠ	ɛɾʲ ənˠ ˈɑːsk sˠən̪ˠ	2	90.91	0.0000	100.00
+mboicht	mˠɛçtʲ	mˠɔxtʲ	2	66.67	0.2500	75.00
+anglaise	ˈɪŋlˠəʃə	ˈaŋɡləʃə	3	62.50	0.2857	71.43
+do-ranna	ˈd̪ˠɔˌɾˠən̪ˠə	ˈd̪ˠɔˌɾˠan̪ˠə	1	92.31	0.1429	85.71
+VEID	vɛdʲ	vʲɛdʲ	1	80.00	0.0000	100.00
+cáilíocht	ˈkɑːlʲiəxt̪ˠ	ˈkˠɑːlʲiəxtˠ	2	83.33	0.0000	100.00
+mbaile	ˈmˠalʲə	ˈmˠɑːlʲə	2	75.00	0.2500	75.00
+Éadaoin	ˈeːd̪ˠiːnʲ	ˈeːdʲiːnʲ	2	80.00	0.0000	100.00
+fothragadh	ˈfˠɔhɾˠəɡə	ˈfˠoɾˠəkə	3	70.00	0.2857	71.43
+maslú	ˈmˠasˠl̪ˠuː	ˈmˠaːsˠl̪ˠuː	1	91.67	0.0000	100.00
+-idís	ɪdʲiːʃ	ədʲiːʃ	1	83.33	0.2500	75.00
+mart	mˠaɾˠt̪ˠ	mˠaɾˠtˠ	1	87.50	0.0000	100.00
+bogha	ˈbˠaiə	bˠau	3	50.00	0.5000	50.00
+grán buí	ˈɡɾˠɑːnˠ ˈbˠiː	ˈɡɾˠɑːnˠ bˠiː	1	92.86	0.0000	100.00
+luaidhe	ˈl̪ˠuəjə	ˈl̪ˠuː.iː	4	55.56	0.6000	40.00
+mar sin	mˠəɾˠ ˈʃɪnʲ	mˠaɾˠˈʃɪnʲ	2	81.82	0.1667	83.33
+mar gheall ar go	mˠəɾˠ ˈjal̪ˠ ɛɾʲ ɡə	mˠaɾˠ jal̪ˠ ɛrʲ ɡə	3	84.21	0.1000	90.00
+is fearr	sˠ ˈfʲaːɾˠ	sˠˈfʲɑːɾˠ	2	80.00	0.2500	75.00
+maorga	ˈmˠiːɾˠəɡə	ˈmˠiːɾˠɡə	1	90.00	0.1667	83.33
+amach is amach	ˌamˠəx sˠ ˈamˠəx	əˈmˠax əsˠ əˈmˠax	7	58.82	0.6000	40.00
+amhráin	ˈəuɾˠɑːnʲ	ˈoːɾˠɑːnʲ	2	77.78	0.4000	60.00
+caithfidh	ˈkahə	ˈkɑihə	2	66.67	0.4000	60.00
+manglam	ˈmˠɪŋlˠəmˠ	mˠɑŋl̪ˠəmˠ	3	70.00	0.1667	83.33
+oscailte	ˈɔsˠkəlʲtʲə	ˈɔsˠkɪlʲtʲɪ	2	81.82	0.2857	71.43
+coileán	ˈkɛlʲɑːnˠ	ˈkilʲɑːnˠ	1	88.89	0.2000	80.00
+maighdean	ˈmˠəidʲənˠ	ˈmˠəɪdʲənˠ	1	90.00	0.0000	100.00
+beagnach	ˈbʲaɡn̪ˠəx	ˈbʲɔɡnˠəx	2	80.00	0.1667	83.33
+cúig déag	ˌkuːɟ dʲeːɡ	kuːɟ dʲeːɡ	1	90.91	0.1429	85.71
+cineálta	ˈcɪnʲɑːl̪ˠt̪ˠə	ˈcɪnˠɑːl̪ˠt̪ˠə	1	92.86	0.0000	100.00
+dólámhach	ˈd̪ˠoːlˠɑːwəx	ˈd̪ˠoːˌl̪ˠɑːwəx	2	86.67	0.1250	87.50
+diagaire	ˈdʲiəɡəɾʲə	ˈdʲiəɡiɾʲə	1	90.00	0.1429	85.71
+macalla	ˈmˠakəl̪ˠə	mˠaˈkal̪ˠə	3	70.00	0.1667	83.33
+crosaire	ˈkɾˠɔsˠəɾʲə	ˈkɾˠɔsəɾʲə	1	90.91	0.0000	100.00
+shléibhe	ˈhl̠ʲeːvʲə	ˈhlʲeːvʲə	1	90.00	0.0000	100.00
+lúthchleasaí	ˈl̪ˠuːhçlʲəsˠiː	ˈl̪ˠuːçlʲasˠiː	2	86.67	0.2500	75.00
+lúthchleas	ˈl̪ˠuːhçlʲəsˠ	ˈl̪ˠuːçlʲasˠ	2	84.62	0.2857	71.43
+gluaisrothar	ˈɡlˠuəsˠɾˠəhəɾˠ	ɡlˠuəʃˈɾˠɔhəɾˠ	4	73.33	0.1000	90.00
+olldord	ˈɔl̪ˠd̪ˠəːɾˠd̪ˠ	ˈɔl̪ˠˌd̪ˠoːɾˠd̪ˠ	2	87.50	0.4286	57.14
+coireanna	ˈkɛɾʲən̪ˠə	ˈkɛɾʲənˠə	1	90.00	0.0000	100.00
+t-arán	ˈt̪ˠaɾˠɑːnˠ	ˈt̪ˠɾˠɑːnˠ	1	90.91	0.2000	80.00
+aonaid	ˈiːnˠədʲ	ˈeːnˠədʲ	1	87.50	0.2500	75.00
+Baile Átha Cliath	ˌbˠalʲə ɑːhə ˈclʲiə	ˌbʲlʲɑː ˈclʲiə	6	68.42	0.3333	66.67
+lárthosaí	ˈl̪ˠɑːɾˠhəsˠiː	ˈl̪ˠɑːɾˠˌhɔsˠiː	2	86.67	0.2500	75.00
+geimhreadh	ˈɟɛvʲɾʲuː	ˈɟivʲɾʲuː	1	88.89	0.2000	80.00
+Éadbhard	ˈeːd̪ˠwəːɾˠd̪ˠ	ˈeːd̪ˠwəɾˠd̪ˠ	1	92.86	0.1429	85.71
+teachín	ˈtʲaçiːnʲ	ˈtʲaxiːnʲ	1	88.89	0.0000	100.00
+lug	l̪ˠʊɡ	l̪ˠʌɡ	1	80.00	0.3333	66.67
+praghas	ˈpˠɾˠaiəsˠ	pɾˠəisˠ	4	60.00	0.3333	66.67
+maghar	ˈmˠaiəɾˠ	mˠəiɾˠ	3	62.50	0.4000	60.00
+deirimis	ˈdʲɛɾʲɪmʲɪʃ	ˈdʲɛɾʲəmʲəʃ	2	81.82	0.2857	71.43
+Gaeilge na hAlban	ˌɡeːlʲəɟɪ n̪ˠə ˈhalˠəbˠənˠ	ˈɡeːlʲɟɪ nˠə ˈhalˠəbˠənˠ	3	88.46	0.1250	87.50
+lonta	ˈl̪ˠɔn̪ˠt̪ˠə	ˈl̪ˠʊn̪ˠt̪ˠə	1	91.67	0.2000	80.00
+ceolmhar	ˈcoːlˠəwəɾˠ	ˈcoːl̪ˠwəɾˠ	2	81.82	0.1429	85.71
+lonnaithe	ˈl̪ˠʊn̪ˠɪhə	ˈl̪ˠɔn̪ˠiː	4	63.64	0.5000	50.00
+long	l̪ˠʊŋ	l̪ˠɔŋ	1	80.00	0.3333	66.67
+lom láithreach	ˌl̪ˠɔmˠ ˈl̪ˠɑːhɾʲəx	ˌlˠɔmˠ ˈl̪ˠɑːɾʲəx	2	89.47	0.1000	90.00
+loiteach	ˈl̪ˠɪtʲəx	ˈl̪ˠɛtʲəx	1	88.89	0.2000	80.00
+fhiáin	iɑːnʲ	ˈiːɑːnʲ	2	71.43	0.0000	100.00
+lenar	ˈl̠ʲɛnˠəɾˠ	ˈlʲɛnˠəɾˠ	1	90.00	0.0000	100.00
+n-airdí	ˈn̪ˠɑːɾˠdʲiː	ˈn̪ˠaːɾˠdʲiː	1	91.67	0.2000	80.00
+bunú	ˈbˠʊnˠuː	bˠʊn̪uː	2	75.00	0.0000	100.00
+istigh	ˈɪʃtʲiː	əʃˈtʲiː	3	57.14	0.2500	75.00
+let	l̠ʲɪtʲ	lʲɛt̪ˠ	4	33.33	0.3333	66.67
+leoraí	ˈlʲoːɾˠiː	ˈlʲɔɾˠiː	2	77.78	0.0000	100.00
+go raibh maith agaibh	ɡəɾˠavʲ ˈmˠah əɡiː	ɡərəˈmˠahəɡəvʲ	10	44.44	0.3636	63.64
+leomh	l̠ʲoːw	l̠ʲow	1	83.33	0.0000	100.00
+ar chor ar bith	ɛɾʲxɔɾˠ ɛɾʲˈbʲɪ	ə ˌxɔɾˠ əˈbʲɪ	6	60.00	0.4444	55.56
+leithscéal	ˈl̠ʲɛhʃceːlˠ	ˈl̠ʲeʃceːlˠ	2	83.33	0.1429	85.71
+foighid	fˠɛədʲ	fˠaidʲ	2	66.67	0.5000	50.00
+leis-sean	ˈl̠ʲɛʃˌʃənˠ	ˈlʲɛʃənˠ	3	72.73	0.2857	71.43
+daonra	ˈd̪ˠiːn̪ˠɾˠə	ˈdˠiːn̪ˠɾˠə	1	91.67	0.0000	100.00
+codlaím	ˈkɔd̪ˠlˠiːmʲ	ˈkol̪ˠiːmʲ	4	66.67	0.1667	83.33
+ríomhleabhar	ˈɾˠiːvʲlʲəuɾˠ	ˈɾʲiːwˌlʲəuɾˠ	3	76.92	0.2500	75.00
+duabhair	ˈd̪ˠuəwəɾʲ	ˈd̪ˠuəvˠəɾʲ	2	81.82	0.1667	83.33
+leathré	ˈl̠ʲahɾʲeː	ˈlʲahˌɾʲeː	2	80.00	0.1667	83.33
+Parthalán	ˈpˠaɾˠhəlˠɑːnˠ	ˈpˠɑɾˠhəlˠɑːnˠ	1	92.86	0.1250	87.50
+cúcamar	ˈkuːkəmˠəɾˠ	kuːkəmˠərˠ	2	81.82	0.0000	100.00
+leabharlann	ˈl̠ʲəuəːɾˠl̪ˠən̪ˠ	ˈl̠ʲəuɾˠl̪ˠən̪ˠ	2	88.24	0.2222	77.78
+le haghaidh	lʲɛ ˈhaiə	lʲəi̯	6	33.33	0.6667	33.33
+lastuas	l̪ˠaˈsˠt̪ˠuəsˠ	l̪ˠasˠˈt̪ˠuəsˠ	2	85.71	0.0000	100.00
+gallta	ˈɡal̪ˠt̪ˠə	ˈɡaːl̪ˠt̪ˠə	1	90.91	0.0000	100.00
+imithe	ˈɪmʲəhə	əˈmʲiçə	4	42.86	0.6000	40.00
+bhfuáil	wuɑːlʲ	ˈwuːaːlʲ	3	62.50	0.2500	75.00
+-íteá	iːtʲɑː	iːtʲaː	1	83.33	0.3333	66.67
+collaíocht	ˈkɔl̪ˠiəxt̪ˠ	ˈkɔl̪ˠiəxt	2	83.33	0.0000	100.00
+Aodhagán	ˈiːəɡɑːnˠ	ˈiːɡɑːnˠ	1	88.89	0.2000	80.00
+donna	d̪ˠʊn̪ˠə	ˈd̪ˠʊn̪ˠə	1	88.89	0.0000	100.00
+mar ea	mˠəɾˠ ˈa	mˠaɾˠ ˈja	2	77.78	0.4000	60.00
+ionaidh	ˈɪnˠə	ˈiːnˠiː	4	42.86	0.3333	66.67
+iománaíocht	ˈʊmˠɑːnˠiəxt̪ˠ	əˈmˠɑːn̪ˠiəxt̪ˠ	3	80.00	0.1250	87.50
+iníona	ˈinʲiːnˠə	ˈinʲiːnˠiː	2	80.00	0.2000	80.00
+inár gcoinne	ˌɪnˠɑːɾˠ ˈɡɪn̠ʲə	ən̪ˠɑːɾˠ ˈɡɪn̠ʲə	3	81.25	0.2222	77.78
+ins	ɪn̠ʲʃ	ɪnˠsˠ	3	40.00	0.0000	100.00
+ina dhiaidh sin	ˌɪnˠə jiə ˈʃɪnʲ	ɪnˠə ˈjiə ʃinʲ	4	73.33	0.1000	90.00
+vása	vˈɑːsˠə	ˈwɑːsˠə	2	71.43	0.2500	75.00
+in ainneoin	ɪnʲ ˈan̠ʲoːnʲ	əˈn̪ˠan̠ʲoːnʲ	5	61.54	0.1667	83.33
+cuirtear	ˈkʊɾˠtʲəɾˠ	ˈkɪɾˠtʲəɾˠ	1	90.00	0.1667	83.33
+dtitfinn	ˈdʲɪtʲfʲən̠ʲ	ˈdʲɪtʲən̠ʲ	2	83.33	0.1667	83.33
+éagrábhadh	ˈeːɡɾˠɑːwə	ˈeːkɾˠɑːvˠ	3	70.00	0.5000	50.00
+Eastóinis	ˈasˠt̪ˠoːnʲɪʃ	ˈasˠtˠoːnʲɪʃ	1	92.31	0.0000	100.00
+cangail	ˈkɪŋəlʲ	ˈkaŋɡəlʲ	2	75.00	0.3333	66.67
+potaisiam	ˈpˠɔt̪ˠəʃiəmˠ	pˠɔˈt̪ˠaʃiəmˠ	3	76.92	0.1250	87.50
+gleanna	ˈɟlʲan̪ˠə	ˈɟlʲaːn̪ˠə	1	90.00	0.0000	100.00
+dochreidte	ˈd̪ˠɔhɾʲədʲtʲə	d̪ˠɔˈçɾʲɛtʲə	6	57.14	0.3750	62.50
+idirghuí	ˈɪdʲəɾˠɣiː	ˈɪdʲərʲˌɣiː	3	72.73	0.1429	85.71
+id	ɪdʲ	ɪd̪ˠ	2	50.00	0.0000	100.00
+cé gur	ceːˈɡʊɾˠ	ˈceːɡəɾˠ	3	62.50	0.2000	80.00
+cailceanna	ˈkal̠ʲcən̪ˠə	ˈkalʲkʲənə	5	58.33	0.0000	100.00
+bharr	waːɾˠ	wˠɑːɾˠ	2	66.67	0.3333	66.67
+griandó	ˈɟˌɾʲiən̪ˠd̪ˠoː	ˈɟɾʲiən̪ˠˌd̪ˠoː	2	86.67	0.2500	75.00
+Ciribeas	ˈcɪɾʲəbʲəsˠ	ˈkɪɾʲəˌbas	5	54.55	0.2500	75.00
+chualabhair	ˈxuəlˠəuɾʲ	ˈxuəlˠəwəɾʲ	2	81.82	0.2500	75.00
+i mbliana	əmʲəˈlʲiənˠə	ə ˈmʲlʲiənˠə	4	66.67	0.1250	87.50
+i gcónaí	əˈɡuːnˠiː	əˈɡuːn̪ˠiː	1	90.00	0.0000	100.00
+shlíoc	hl̠ʲiːk	hlʲiːk	1	85.71	0.0000	100.00
+trombón	ˈt̪ˠɾˠɔmˠəbˠoːnˠ	ˈt̪ˠɾˠɔmˠbˠoːnˠ	1	93.75	0.1250	87.50
+cealg	ˈcalˠəɡ	ˈcal̪ˠəɡ	1	87.50	0.0000	100.00
+hidrigin	ˈhɪdʲɾʲəɟɪnʲ	hɪdʲɾʲɪɟɪnʲ	2	83.33	0.1250	87.50
+Clocha Liatha	ˌklˠɔxə ˈl̠ʲiəhə	n̪ˠə ˌklˠɔxə ˈl̠ʲiəhə	5	76.19	0.1538	84.62
+hard	hɑːɾˠd̪ˠ	haːɾˠd̪ˠ	1	87.50	0.2500	75.00
+hadharca	ˈhaiəɾˠkə	ˈhəiəɾˠkə	1	88.89	0.1429	85.71
+habhann	ˈhəun̪ˠ	haun̪ˠ	2	71.43	0.2500	75.00
+bhfeicfinn	ˈvʲɛcfʲən̠ʲ	ˈvʲɛcɪn̠ʲ	3	72.73	0.3333	66.67
+géagláidir	ˈɟeːɡlˠɑːdʲəɾʲ	ˈɟeːɡˌl̪ˠɑːdʲɪɾʲ	3	81.25	0.2222	77.78
+gabhlóg	ˈɡəulˠoːɡ	ˈɡɑulˠoːɡ	1	88.89	0.1667	83.33
+Veinéis	vˈɛnʲeːʃ	ˈvʲɛnʲeːʃ	2	77.78	0.0000	100.00
+guirme	ˈɡɪɾʲəmʲə	ˈɡɪɾʲmʲə	1	88.89	0.1667	83.33
+gairm	ˈɡaɾʲəmʲ	ˈɡeɾʲəmʲ	1	87.50	0.2000	80.00
+gníomhaí	ˈɟɾʲiːwiː	ˈɡnʲiːwiː	2	77.78	0.2000	80.00
+lem	l̠ʲɪmʲ	lʲɛmˠ	3	50.00	0.3333	66.67
+ro-	ɾˠɔ	ɾˠə	1	66.67	0.5000	50.00
+gréasán	ˈɟɾʲeːsˠɑːnˠ	ˈɟɾeːsˠɑːnˠ	1	91.67	0.0000	100.00
+dem	dʲɪmʲ	dʲɛmˠ	2	60.00	0.3333	66.67
+gréasáin	ˈɟɾʲeːsˠɑːnʲ	ˈɟɾeːsˠɑːnʲ	1	91.67	0.0000	100.00
+mar sin féin	mˠəɾˠ ʃɪnʲ ˈfʲeːnʲ	mˠaɾˠ ʃɪnʲ ˈheːnʲ	3	83.33	0.2222	77.78
+gruth	ɡɾˠʊ	ɡɾˠɞ	1	75.00	0.3333	66.67
+Haváis	ˈhavaːʃ	ˈhawaːɪʃ	2	75.00	0.3333	66.67
+greannmhar	ˈɟɾʲan̪ˠəwəɾˠ	ˈɟɾʲan̪ˠwəɾˠ	1	92.31	0.1250	87.50
+gliocas	ˈɟlʲɪkəsˠ	ˈɟlʊkəsˠ	2	77.78	0.1667	83.33
+sealg	ˈʃalˠəɡ	ˈʃal̪ˠəɡ	1	87.50	0.0000	100.00
+goilliúnach	ˈɡɛl̠ʲuːnˠəx	ˈɡɔl̠ʲuːnˠəx	1	91.67	0.1429	85.71
+hairde	ˈhɑːɾˠdʲə	ˈhaːɾˠdʲə	1	88.89	0.2000	80.00
+sealbha	ˈʃalˠəwə	ˈʃalˠəvˠə	2	77.78	0.1667	83.33
+gníomhaíocht	ˈɟɾʲiəwiəxt̪ˠ	ˈɡɾˠiːwiəxt̪ˠ	3	76.92	0.1111	88.89
+caisearbhán	ˈkaʃəɾˠwaːnˠ	ˈkaʃl̠ʲəwaːnˠ	4	69.23	0.2500	75.00
+glún	ɡlˠuːn̪ˠ	ɡl̪ˠuːn̪ˠ	1	88.89	0.0000	100.00
+glúin óg	ˌɡlˠuːnʲ ˈoːɡ	ə ˌɣlˠuːnʲ ˈoːɡ	3	80.00	0.1250	87.50
+inghlactha	ˈɪn̪ˠɣlˠəkə	ɪnʲˈɣlˠakə	4	63.64	0.1429	85.71
+gluaisteán	ˈɡlˠuəʃtʲɑːn̪ˠ	ˈɡl̪ˠʊəʃtʲɑːn̪ˠ	2	86.67	0.0000	100.00
+saighdiúir	ˈsˠəidʲuːɾʲ	ˈsˠaidʲuːɾʲ	1	90.91	0.1667	83.33
+i dtaca le	əˈd̪ˠakə lʲɛ	əˈd̪ˠakə lʲe	1	91.67	0.0000	100.00
+gliocais	ˈɟlʲɪkəʃ	ˈɟlʊkəʃ	2	75.00	0.1667	83.33
+dortha	ˈd̪ˠɔɾˠhə	ˈd̪ˠʌɾˠhə	1	88.89	0.2000	80.00
+ar bís	ɛɾʲˈbʲiːʃ	əɾˠˈbʲiːʃ	2	77.78	0.2000	80.00
+giuirléid	ˈɟiɪːɾʲlʲeːdʲ	ˈɟuːɾˠlʲeːdʲ	3	76.92	0.3750	62.50
+neamhspleách	ˈn̠ʲəuʃpʲlʲaːx	ˈn̠ʲəusˠpʲlʲaːx	2	86.67	0.0000	100.00
+déarfainn	ˈdʲeːɾˠfˠən̠ʲ	ˈdʲeːɾˠhən̠ʲ	2	84.62	0.1667	83.33
+cumannachas	ˈkʊmˠən̪ˠəxəsˠ	ˈkʊmˠən̪ˠəxəs	1	92.86	0.0000	100.00
+án	ɑːnˠ	ˈɑːnˠ	1	80.00	0.0000	100.00
+bpingin	ˈbʲɪɲənʲ	bʲiːn̠ʲ	5	37.50	0.4000	60.00
+ghním	jnʲiːmʲ	n̠ʲiːmʲ	2	71.43	0.2500	75.00
+tuairisceoir	ˈt̪ˠuəɾʲɪʃcoːɾʲ	t̪ˠuˑəɾʲɪʃcoːɾʲ	2	86.67	0.1000	90.00
+aire	ˈaɾʲə	ˈaːɾʲə	1	83.33	0.0000	100.00
+cluich	klˠʊx	klˠɪç	2	60.00	0.2500	75.00
+ceathair déag	ˌcahəɾʲ dʲeːɡ	ˈcahəɾʲ jeːɡ	3	76.92	0.2222	77.78
+geimhriúchán	ˈɟɛvʲɾʲuːxɑːn̪ˠ	ˈɟiːvɾʲuˌxɑːn̪ˠ	4	73.33	0.2222	77.78
+chineál	ˈçɪnʲɑːlˠ	ˈçɪnˠɑːlˠ	1	88.89	0.0000	100.00
+gearraim	ˈɟaɾˠəmʲ	ˈɟaːɾˠəmʲ	1	88.89	0.0000	100.00
+Siobhán	ˈʃʊɑːn̪ˠ	ˈʃʊwaːn̪ˠ	2	77.78	0.4000	60.00
+geallaim	ˈɟal̪ˠəmʲ	ˈɟaːl̪ˠəmʲ	1	90.00	0.0000	100.00
+suarach	ˈsˠuəɾˠəx	ˈsˠuˑəɾˠəx	1	90.00	0.1429	85.71
+gaimbín	ˈɡamʲəbʲiːnʲ	ˈɡamʲbʲiːnʲ	1	91.67	0.1429	85.71
+aníos	əˈnʲiːsˠ	əˈn̠ʲiːsˠ	1	88.89	0.0000	100.00
+déan as	ˈdʲeːnˠ asˠ	ˈdʲiːnˠ æsˠ	2	81.82	0.2000	80.00
+thiocfas	ˈhʊkəsˠ	ˈçukəsˠ	2	71.43	0.2000	80.00
+níl a bhuíochas ort	n̠ʲiːlʲ əwiəxəsˠ ˈəɾˠt̪ˠ	ˈn̠ʲiːlʲ ə ˈwiəxəsˠ ɔɾˠt̪ˠ	5	80.77	0.0769	92.31
+garmhac	ˈɡaɾˠəwək	ˈɡaɾˠˌwak	2	77.78	0.2857	71.43
+gariníon	ˈɡaɾʲənʲiːnˠ	ˈɡaɾʲˌɪnʲiːnˠ	2	84.62	0.2500	75.00
+neascóid	ˈn̠ʲasˠkoːdʲ	ˈn̠ʲɪsˠkoːdʲ	1	91.67	0.1667	83.33
+lastuaidh	l̪ˠaˈsˠt̪ˠuə	l̪ˠasˠˈt̪ˠuə	2	83.33	0.0000	100.00
+diamant	ˈdʲiəmˠən̪ˠt̪ˠ	ˈdʲiˑəmˠən̪ˠt̪ˠ	1	93.33	0.1250	87.50
+gaiscígh	ˈɡaʃcɪ	ˈɡaʃciː	2	71.43	0.0000	100.00
+gairmiúlaigh	ˈɡaɾʲəmʲuːlˠiː	ɡaɾʲmʲuːl̪ˠiː	3	78.57	0.1250	87.50
+gairmiúil	ˈɡaɾʲəmʲuːlʲ	ɡaɾʲmʲuːlʲ	2	83.33	0.1429	85.71
+gairmeach	ˈɡaɾʲəˌmʲəx	ɡaɾʲˌmʲəx	2	81.82	0.1250	87.50
+guidte	ˈɡɪdʲtʲə	ˈɡɪtʲə	2	75.00	0.2000	80.00
+gairleog	ˈɡaːɾʲlʲoːɡ	ˈɡaɾʲlʲoːɡ	1	90.91	0.0000	100.00
+almanag	ˈalˠəmˠənˠəɡ	ˈalˠəmənək	3	75.00	0.1250	87.50
+gach aon duine	ɡax iːnˠ ˈd̪ˠɪnʲə	ɡax eːn̪ˠˈd̪ˠɪnʲə	3	82.35	0.1111	88.89
+gabháilte	ˈɡəuɑːlʲtʲə	ˈɡɔwɑːlʲtʲə	2	81.82	0.2857	71.43
+gabhal	ˈɡəulˠ	ˈɡɑuəlˠ	2	71.43	0.4000	60.00
+shleamhain	ˈhl̠ʲəunʲ	ˈhlʲãuwənʲ	4	60.00	0.4286	57.14
+amharc	ˈəuɾˠk	ˈaːfˠɾˠək	5	44.44	0.6000	40.00
+Toirdhealbhach	ˈt̪ˠɛɾʲjəl̪ˠwəx	ˈtʲɾʲɛl̪ˠax	7	53.33	0.5556	44.44
+fíonghort	ˈfʲiːn̪ˠɣəɾˠt̪ˠ	ˈfʲiːnˠˌɣɔɾˠtˠ	4	73.33	0.2500	75.00
+bogearraí	ˈbˠɪɟəɾˠiː	ˈbˠoɟəɾˠiː	1	90.00	0.1667	83.33
+eicínt	ˈɛciːn̠ʲtʲ	əˈciːn̠ʲtʲ	2	80.00	0.2000	80.00
+féinphic	ˈfʲeːn̠ʲfʲɪc	ˈfʲeːnʲˌfʲɪc	2	83.33	0.1429	85.71
+críochnaigh	ˈcɾʲiəxɾˠə	ˈcɾʲiəxn̪ˠə	2	81.82	0.1429	85.71
+fáidh	fˠə	fˠɑːj	3	40.00	0.6667	33.33
+díogacha	ˈdʲiːɡəxə	ˈdʲiɡəxə	1	88.89	0.0000	100.00
+fungasach	ˈfˠʊŋəsˠəx	ˈfˠʊŋɡəsˠəx	1	90.91	0.1250	87.50
+bhuntáiste	ˈwʊn̪ˠt̪ˠɑːʃtʲə	ˈwˠʊn̪ˠt̪ˠɑːʃtʲə	1	93.75	0.0000	100.00
+gríos	ɟɾʲiːsˠ	ɡɾʲɪsˠ	3	57.14	0.0000	100.00
+libhse	ˈl̠ʲəiʃə	ˈlʲɪvʲʃə	4	50.00	0.4000	60.00
+sibhse	ˈʃəiʃə	ʃɪvʲʃə	4	33.33	0.4000	60.00
+teoiric chinnteoireachta	ˌtʲoːɾʲɪc ˈçɪn̠ʲtʲoːɾʲəxt̪ˠə	ˌtʲoːɾʲəc ˈçɪn̠ʲtʲoːɾʲəxt̪ˠ	2	92.86	0.1250	87.50
+focla	ˈfˠɔklˠə	ˈfˠɔkl̪ə	1	87.50	0.0000	100.00
+adhnaic	ˈain̪ˠɪc	ˈəin̪ˠəc	2	75.00	0.4000	60.00
+fairsing	ˈfˠaɾˠʃəɲ	ˈfˠaɾˠʃən̠ʲ	3	72.73	0.0000	100.00
+ghníomhaíocht	ˈjnʲiəwiəxt̪ˠ	ˈɣɾˠiːwiəxt̪ˠ	4	69.23	0.3333	66.67
+triail	tʲɾʲiəlʲ	tʲɾʲiːɑːlʲ	3	70.00	0.2000	80.00
+Dé Sathairn	dʲeː ˈsˠahəːɾˠnʲ	dʲeː ˈsˠahəɾˠnʲ	1	93.75	0.1111	88.89
+Airméinis	ˈaɾʲəmʲeːnʲɪʃ	ˈaɾʲəmʲeːnʲəʃ	1	92.31	0.1250	87.50
+cuir i gcás	kɪɾʲ əˈɡɑːsˠ	ˌkɪɾʲ ə ˈɡɑːsˠ	2	85.71	0.1250	87.50
+ollbhasún	ˈɔl̪ˠəwəsˠuːnˠ	ˈɔl̪ˠwaˌsˠuːnˠ	3	78.57	0.3750	62.50
+carria	ˈkaɾˠiə	ˈkaɾˠiː	1	85.71	0.2000	80.00
+fíormhaith	ˈfʲiːɾˠwə	ˈfʲiːɾʲˌwãiç	5	58.33	0.5000	50.00
+'un	ʊnˠ	ənˠ	1	66.67	0.5000	50.00
+suaimhneach	ˈsˠuəvʲnʲəx	ˈsˠiːmʲɾʲəx	4	63.64	0.5714	42.86
+feighil	fʲɪəlʲ	fʲəilʲ	2	66.67	0.5000	50.00
+feiceálach	ˈfʲɛcɑːlˠəx	ˈfʲɛcalˠax	3	72.73	0.2857	71.43
+fear sneachta	fʲaɾˠ ˈʃnʲaxt̪ˠə	fʲaɾˠ ˈʃn̠ʲaxt̪ˠə	1	94.12	0.0000	100.00
+ghníomh	jnʲiːvʲ	jɾʲiːvˠ	2	71.43	0.2500	75.00
+feabhas	ˈfʲauəsˠ	fʲausˠ	2	75.00	0.2000	80.00
+dromchla	ˈd̪ˠɾˠɔmˠəxlˠə	ˈd̪ˠɾˠɔmˠxlˠə	1	92.86	0.1250	87.50
+déanadh	ˈdʲeːnˠə	ˈdʲeːnˠəx	1	88.89	0.2000	80.00
+gcodlaíonn	ˈɡɔd̪ˠlˠiːən̪ˠ	ˈɡol̪ˠiːn̪ˠ	5	64.29	0.2857	71.43
+faighteá	ˈfˠəitʲɑː	ˈfˠɑtʲɑː	2	77.78	0.4000	60.00
+Dia's Muire duit	ˌdʲiəsˠ mˠɪɾʲə ˈd̪ˠɪtʲ	ˌdʲiəs ˈmˠɪɾʲə ˈd̪ˠɪtʲ	2	90.91	0.0000	100.00
+facabhair	ˈfˠakəuɾʲ	ˈfˠakəwəɾˠ	3	70.00	0.2857	71.43
+eitre	ˈɛtʲɾʲə	ˈɛtʲəɾʲə	1	87.50	0.2000	80.00
+easóg	ˈasˠoːɡ	ˈaːsˠoːɡ	1	87.50	0.0000	100.00
+ardrí	ˌɑːɾˠˈdʲɾʲiː	ˌɑːɾˠd̪ˠˈɾˠiː	5	61.54	0.0000	100.00
+seilg	ˈʃɛlʲəc	ˈʃɛlʲɪɟ	2	71.43	0.4000	60.00
+teilg	ˈtʲɛlʲəc	ˈtʲɛlʲɪɟ	2	75.00	0.4000	60.00
+iontach	ˈɪn̪ˠt̪ˠəx	ˈiən̪ˠt̪ˠəx	2	81.82	0.1667	83.33
+caomhnú	ˈkiːvˠn̪ˠuː	ˈkˠiːnˠuː	4	63.64	0.2000	80.00
+ceilg	ˈcɛlʲəc	ˈcɛlʲɪɟ	2	71.43	0.4000	60.00
+carr patróil	kaɾˠ ˈpˠat̪ˠɾˠoːlʲ	ˌkɑːɾˠ ˈpat̪ˠɾˠoːl̠ʲ	5	75.00	0.2000	80.00
+Ard-Fheis	ˈɑːɾˠdʲəʃ	ˈɑːɾˠd̪ˠ ˈɛɕ	6	50.00	0.4000	60.00
+haonaid	ˈhiːnˠədʲ	ˈheːnˠədʲ	1	88.89	0.2000	80.00
+díthairbheach	ˈdʲiːhəɾʲvʲəx	ˈdʲiːˌhæɾʲəvʲəx	3	80.00	0.3000	70.00
+oifig	ˈɛfʲɪɟ	ˈɛfʲɪc	1	83.33	0.2500	75.00
+díon as	ˈdʲiːnˠ asˠ	ˈdʲiːnˠ æsˠ	1	90.91	0.0000	100.00
+díchiall	ˈdʲiːçiəl̪ˠ	ˈdʲiːˌçeːl̠ʲə	6	53.85	0.5714	42.86
+Nollaig	ˈn̪ˠɔl̪ˠɪc	ˈn̪ˠol̪ˠəc	2	80.00	0.2000	80.00
+déanann	ˈdʲeːnˠən̪ˠ	ˈdʲaːnˠən̪ˠ	1	90.91	0.2000	80.00
+cheana	ˈçanˠə	ˈhanˠə	1	83.33	0.2500	75.00
+mheabhair	ˈvʲauəɾʲ	vʲəuɾʲ	3	62.50	0.4000	60.00
+dá bhrí sin	d̪ˠɑː vʲɾʲiː ˈʃɪnʲ	d̪ˠɑː ˈvʲɾʲiː ʃɪnʲ	2	88.89	0.0000	100.00
+tráthnóna	ˈt̪ˠɾˠɑːhn̪ˠoːnˠə	t̪ˠɾˠəˈhnˠuːnˠə	5	70.59	0.2500	75.00
+ded	dʲɪdʲ	dʲɛd̪ˠ	3	50.00	0.3333	66.67
+ciumhaise	ˈcəuʃə	ˈcuːʃə	2	66.67	0.2000	80.00
+Aodh	ə	eː	2	0.00	1.0000	0.00
+stoptha	ˈsˠt̪ˠɔpˠə	sˈˠt̪ˠɔpˠə	2	80.00	0.0000	100.00
+fomhuireán	ˈfˠəuɾʲɑːnˠ	ˈfɔwərʲɑːnˠ	4	63.64	0.4286	57.14
+led	l̠ʲɪdʲ	lʲɛd̪ˠ	4	33.33	0.3333	66.67
+caorán	ˈkiːɾˠɑːnˠ	ˈkiːɾˠanˠ	2	80.00	0.2000	80.00
+druideacha	d̪ˠɾˠədʲəxə	d̪ˠɾˠɪdʲəxə	1	90.91	0.1429	85.71
+dromán	ˈd̪ˠɾˠɔmˠɑːnˠ	ˈd̪ˠɾʊmˠɑːnˠ	2	84.62	0.1667	83.33
+draíodóir	ˈd̪ˠɾˠiːɔd̪ˠoːɾʲ	ˈd̪ˠɾˠiəd̪ˠoːɾʲ	2	87.50	0.1429	85.71
+dorú	ˈd̪ˠɔɾˠuː	ˈd̪ˠaɾˠuː	1	88.89	0.2500	75.00
+bunús	ˈbˠʊnˠuːsˠ	ˈbʊnˠuːsˠ	1	90.00	0.0000	100.00
+sheabhac	ˈhauək	hauk	2	66.67	0.2000	80.00
+diomaite	ˈdʲʊmˠətʲə	ˈdʲɪmˠɪtʲə	2	80.00	0.3333	66.67
+foghlaim	ˈfˠailˠəmʲ	ˈfˠoːlˠəmʲ	2	80.00	0.3333	66.67
+codlaíonn	ˈkɔd̪ˠlˠiːən̪ˠ	ˈkol̪ˠiːn̪ˠ	5	64.29	0.2857	71.43
+det	dʲɪtʲ	dʲɛt̪ˠ	3	50.00	0.3333	66.67
+deirteá	ˈdʲɛɾˠtʲɑː	ˈdʲɛɾʲtʲɑː	1	90.00	0.0000	100.00
+liopard	ˈlʲipˠəɾˠd̪ˠ	ˈlʲi.pˠəɾˠdˠ	2	83.33	0.0000	100.00
+coisrig	ˈkɔʃɾʲɪɟ	ˈkɔʃɾʲɪc	1	87.50	0.1667	83.33
+cárbh	kɑːɾˠw	kaːɾˠvˠ	3	57.14	0.5000	50.00
+Laoghaire	ˈl̪ˠiːəɾʲə	ˈl̪ˠiːɾʲə	1	90.00	0.2000	80.00
+is fuath le	sˠ ˈfˠuəh lʲɛ	sˠfˠuə lʲə	4	69.23	0.2857	71.43
+féinspéis	ˈfʲeːn̠ʲʃpʲeːʃ	ˈfʲeːnʲsˠpʲeːʃ	3	78.57	0.0000	100.00
+dearnadh	ˈdʲɑːɾˠn̪ˠuː	ˈdʲaːɾˠn̪ˠuː	1	91.67	0.2000	80.00
+gcomhluadar	ˈɡəulˠuəd̪ˠəɾˠ	ˈɡoːlˠuəd̪ˠəɾˠ	2	85.71	0.2222	77.78
+dearmadacha	ˈdʲaɾˠəmˠəd̪ˠəxə	ˈdʲaɾˠmˠəd̪ˠəx	2	87.50	0.2000	80.00
+ceird	cɛːɾˠdʲ	ceɾˠdʲ	2	71.43	0.0000	100.00
+de dheoin	dʲəˈjoːnʲ	d̪ˠəˈjoːnʲ	2	80.00	0.0000	100.00
+anuas	əˈnˠuəsˠ	əˈn̪ˠuəsˠ	1	88.89	0.0000	100.00
 Fraince	ˈfˠɾˠaɲcɪ	ˈfˠɾˠæɲcɪ	1	88.89	0.0000	100.00
+d'oilfeadh	ˈd̪ˠɛl̠ʲhu	ˈd̪ˠɛlʲhu	1	90.00	0.0000	100.00
+d'fhití	ˈdʲɪtʲiː	ˈdʲitʲiː	1	87.50	0.0000	100.00
+carraigreacha	ˈkaɾˠəɟɾʲəxə	ˈkaɾˠɪɟɾʲəxiː	3	76.92	0.2222	77.78
+fréamhshamhail	ˈfʲɾʲeːvˠhəulʲ	ˈfʲɾʲeːvˠ.hawəlʲ	4	75.00	0.3333	66.67
+cúb	kuːbˠ	kuːb	1	80.00	0.0000	100.00
+damhán	ˈd̪ˠəuɑːnˠ	ˈd̪ˠawɑːnˠ	2	80.00	0.4000	60.00
+fíoraíocht	ˈfʲiəɾˠiəxt̪ˠ	ˈfʲiːɾˠiəxt̪ˠ	1	92.31	0.1250	87.50
+oirnis	ˈoːɾˠn̠ʲɪʃ	ˈəuɾʲn̠ʲəʃ	4	60.00	0.5000	50.00
+cén uair	ceːnʲˈuəɾʲ	ceːˈn̪ˠuəɾʲ	3	72.73	0.0000	100.00
+righin	ˈɾˠəiənʲ	ɾˠəinʲ	2	75.00	0.2000	80.00
+-sa	sˠa	sˠə	1	66.67	0.5000	50.00
+banna	ˈbˠan̪ˠə	ˈbˠanˠə	1	87.50	0.0000	100.00
+bodhrán	ˈbˠuːɾˠɑːn̪ˠ	ˈbˠəuɾˠɑːn̪ˠ	2	83.33	0.1667	83.33
+sna	sˠn̪ˠa	sˠnˠə	2	66.67	0.3333	66.67
+-áil	ɑːlʲ	aːlʲ	1	75.00	0.5000	50.00
+cuidhil	ˈkijəlʲ	kiəlʲ	2	71.43	0.2000	80.00
+aonbheannach	ˈiːnʲəvʲən̪ˠəx	ˈeːnˠ.ˈvʲa.nˠəx	7	53.33	0.3750	62.50
+cruimhe	ˈkɾˠɪvʲə	ˈkɾˠevʲə	1	87.50	0.2000	80.00
+nimhneach	ˈn̠ʲəinʲəx	ˈn̠ʲivʲnʲəx	3	72.73	0.3333	66.67
+bod gaoithe	bˠɔd̪ˠ ˈɡiːhə	ˈbˠɔd̪ˠ ˈɡiːhə	1	92.86	0.0000	100.00
+crúbchrois	ˈkɾˠuːbˠxɾˠəʃ	ˈkɾˠuːbˠˌxɾˠʌʃ	2	85.71	0.2222	77.78
+-aíonn	iːoːn̪ˠ	iːən̪ˠ	2	71.43	0.3333	66.67
+coraíocht	ˈkɔɾˠiəxt̪ˠ	ˈkɑɾˠiəxt̪ˠ	1	90.91	0.1429	85.71
+comharsa	ˈkoːəɾˠsˠə	ˈkuːɾˠsˠə	2	80.00	0.3333	66.67
+colm	ˈkɔlˠəmˠ	ˈkol̪ˠəmˠ	2	77.78	0.0000	100.00
+deifreach	ˈdʲɛfʲɾʲəx	ˈdʲɛfʲəɾʲəx	1	90.91	0.1429	85.71
+Corn na Breataine	koːɾˠn̪ˠ n̪ˠə ˈbʲɾʲat̪ˠənʲə	kɔrˠnˠ nˠə ˈbʲrʲatˠənʲə	7	74.07	0.0000	100.00
+bogha báistí	ˌbˠaiə ˈbˠɑːʃtʲiː	ˈbˠau ˈbˠaːʃtʲiː	4	76.47	0.4000	60.00
+ar feadh	ɛɾʲˈfʲəi	ɛɾʲˈfʲa	2	75.00	0.4000	60.00
+capaill	ˈkapˠəl̠ʲ	ˈkapˠəl̪ʲ	1	88.89	0.0000	100.00
+cnuimh	kɾˠɪvʲ	knˠevʲ	2	66.67	0.5000	50.00
+cluichí	ˈklˠɪçiː	ˈklˠifʲiː	3	66.67	0.2000	80.00
+claonadh	ˈklˠiːnˠə	ˈklˠɤːnˠətʲ	3	72.73	0.4286	57.14
+clamhsán	ˈklˠəusˠɑːnˠ	ˈklˠausˠɑːnˠ	1	91.67	0.1429	85.71
+claidh	klˠə	kl̪ˠəi	2	66.67	0.2500	75.00
+clabhtaí	ˈklˠəut̪ˠiː	ˈklˠaut̪ˠiː	1	90.91	0.1667	83.33
+cinneadhtheoiric	ˈcɪn̠ʲəhoːɾʲɪc	ˈcɪn̠ʲəˌhoːɾʲəc	2	86.67	0.2000	80.00
+bronntanas	ˈbˠɾˠʊn̪ˠt̪ˠənˠəsˠ	ˈbˠɾˠuːn̪ˠt̪ˠənˠəsˠ	2	89.47	0.0000	100.00
+ráinig	ˈɾˠɑːnʲɪɟ	ˈɾˠɑːnʲɪc	1	88.89	0.2000	80.00
+Dún Éideann	d̪ˠuːnˠ ˈeːdʲən̪ˠ	ˈd̪ˠuːnˠ ˈeːdʲən̪ˠ	1	94.44	0.0000	100.00
+bogaigh	ˈbˠɔɡiː	ˈbɔɡiː	1	85.71	0.0000	100.00
+chughamsa	ˈxaiəmˠsˠə	ˈxuːmˠsˠə	3	70.00	0.4286	57.14
+asaibhse	ˈasˠəvʲʃə	ˈasˠiːʃə	3	66.67	0.3333	66.67
+chomhair	ˈxəuɾʲ	xoːɾʲ	3	50.00	0.5000	50.00
+chodlata	ˈxɔd̪ˠlˠət̪ˠə	ˈkɔl̪ˠət̪ˠə	4	69.23	0.2857	71.43
+magairle	ˈmˠaɡəːɾʲlʲə	ˈmˠaɡəɾˠl̠ʲə	3	75.00	0.1250	87.50
+treascair	ˈtʲrʲasˠkərʲ	ˈtʲrʲasˠkəɾʲ	1	91.67	0.0000	100.00
+gleomhar	ˈɟlʲoːwəɾˠ	ˈɟlʲoːvˠəɾˠ	2	81.82	0.1667	83.33
+-ímis	iːmʲɪʃ	iːmʲəʃ	1	83.33	0.2500	75.00
+cearc ghoir	caɾˠk ˈɣɛɾʲ	ˈcaɾˠk ˈɣɪɾʲ	2	83.33	0.1429	85.71
+briota	ˈbʲɾʲɪt̪ˠə	ˈbʲɾʲɨ̞t̪ˠə	2	81.82	0.3333	66.67
+smiolgadán	ˈsˠmʲɪl̪ˠɡəd̪ˠɑːn̪ˠ	ˈsˠmʲɪl̪ˠəɡəd̪ˠɑːn̪ˠ	1	95.00	0.1000	90.00
+liopa	lʲiɔpˠə	lʲɪpˠə	2	71.43	0.2000	80.00
+dóiche	ˈd̪ˠoːçə	ˈd̪ˠɔːiçɪ	3	66.67	0.4000	60.00
+banc fola	bˠaŋk ˈfˠɔlˠə	bˠɑŋk fˠɔl̪ˠə	3	76.92	0.1250	87.50
+deochanna	ˈdʲoːxən̪ˠə	ˈdʲɔxən̪ˠə	2	81.82	0.0000	100.00
+mairstean	ˈmˠaɾˠʃtʲənˠ	ˈmˠaɾˠsˠtʲənˠ	2	84.62	0.0000	100.00
+d'fhás	d̪ˠɑːsˠ	dˠɑːsˠ	1	85.71	0.0000	100.00
+cairdeach	ˈkɑːɾˠdʲəx	ˈkɑːrdʲəx	2	80.00	0.0000	100.00
+caibléara	ˈkabʲlʲeːɾˠə	ˈkabʲəlʲeːɾˠə	1	92.31	0.1250	87.50
+cad é	kad̪ˠ ˈeː	kəd̪ˠˈeː	2	77.78	0.2500	75.00
+ibh	əi	ɪvʲ	3	0.00	1.0000	0.00
+dar le	ˈd̪ˠaɾˠ lʲɛ	d̪ˠaɾˠ lʲɛ	1	90.91	0.0000	100.00
+bunúsach	ˈbˠʊnˠuːsˠəx	ˈbʊn̪ˠuːsˠəx	2	83.33	0.0000	100.00
+buile	ˈbˠilʲə	ˈbˠɪlʲə	1	85.71	0.0000	100.00
+Gaeilge na hÉireann	ˌɡeːlʲəɟɪ n̪ˠə ˈheːɾʲaːn̪ˠ	ˈɡeːlʲɟɪ n̪ˠə ˈheːɾʲən̪ˠ	4	84.62	0.2143	78.57
+bráithre	ˈbˠɾˠɑːhɾʲə	ˈbˠɾˠɑːɾʲə	1	90.91	0.1667	83.33
+eadhon	ˈəiənˠ	aːən	4	33.33	0.5000	50.00
+coisreacaim	ˈkɔʃɾʲəkəmʲ	ˈkʌʃtʲɾʲakəmʲ	4	69.23	0.3333	66.67
+ardfhear	ˈɑːɾˠdʲəɾˠ	ˈɑːɾˠd̪ˠˌaɾˠ	4	66.67	0.3333	66.67
+bádóireacht	ˈbˠɑːd̪ˠoːɾʲəxt̪ˠ	ˈbˠɑːdoːɾʲəxt̪ˠ	2	88.24	0.0000	100.00
+duibheagán	ˈd̪ˠɪvʲəɡɑːn̪ˠ	ˈd̪ˠivʲəɡɑːn̪ˠ	1	92.86	0.0000	100.00
+pósfadsa	ˈpˠoːsˠəd̪ˠsˠə	ˈpˠoːsˠəd̪ˠsˠ	1	92.86	0.1429	85.71
+fulaing	ˈfˠʊlˠəŋ	ˈfˠʊlˠən̠ʲ	3	70.00	0.0000	100.00
+Rián	ɾˠiɑːnˠ	ˈɾˠiː.ɑːnˠ	3	70.00	0.0000	100.00
+láithreach baill	ˌl̪ˠɑːhɾʲəx ˈbˠal̠ʲ	ˌl̪ˠɑːɾʲəx ˈbˠɑl̠ʲ	2	89.47	0.2000	80.00
+bhfeighil	vʲɪəlʲ	vʲəilʲ	2	66.67	0.5000	50.00
+dúrabhair	ˈd̪ˠuːɾˠəuɾʲ	ˈd̪ˠuːɾˠəwəɾʲ	2	84.62	0.2857	71.43
+bheireas	ˈvʲɛɾʲəsˠ	ˈvʲɛɾʲəs̪ˠ	1	90.00	0.0000	100.00
+fiáin	fʲiɑːnʲ	ˈfʲiːɑːnʲ	2	77.78	0.0000	100.00
+barriall	ˈbˠaɾˠiəl̪ˠ	ˈbˠɑːɾˠiəl̪ˠ	2	83.33	0.1667	83.33
+geansaí	ˈɟan̪ˠsˠiː	ˈɟanˠsˠiː	1	90.00	0.0000	100.00
+athair	ˈæhəɾʲ	ˈæhæɾʲ	1	83.33	0.2500	75.00
+almóinn	ˈalˠəmˠoːn̠ʲ	ˈal̪ˠmˠoːn̠ʲ	2	83.33	0.1667	83.33
+Róimh	ɾˠoːvʲ	ˈɾˠõːvʲ	2	71.43	0.3333	66.67
+ar oscailt	ɛɾʲˈɔsˠkəl̠ʲtʲ	ɛɾʲ ˈɔsˠkɪlʲtʲ	3	78.57	0.1250	87.50
+anrud	ˈan̪ˠɾˠəd̪ˠ	ˈan̪ˠɾˠʌd̪ˠ	1	90.91	0.2000	80.00
+bheirtear	ˈvʲɛɾˠtʲəɾˠ	ˈvʲɛɾʲhəɾˠ	3	72.73	0.1667	83.33
+anglais	ˈɪŋlˠəʃ	ˈaŋɡlˠəʃ	2	75.00	0.3333	66.67
+amhrán	ˈəuɾˠɑːnˠ	ˈɑːɾˠɑːnˠ	2	77.78	0.4000	60.00
+scannán	ˈsˠkan̪ˠaːnˠ	sˠkəˈn̪ˠaːn̪ˠ	4	69.23	0.1667	83.33
+abhaile	ˈəulʲə	əˈwalʲə	3	57.14	0.4000	60.00
+laethe	ˈl̪ˠeːhə	ˈl̪ˠeːhɪ	1	87.50	0.2500	75.00
+bean rialta	bʲanˠ ˈɾʲiəl̪ˠt̪ˠə	ˌbʲanˠ ˈɾˠiəl̪ˠt̪ˠə	2	89.47	0.1000	90.00
