@@ -170,6 +170,32 @@ return {
         goto next_seg
       end
 
+      -- Unstressed a- prefix adverbs/verb forms: stress falls on the SECOND
+      -- syllable; initial a reduces to ə (Hickey II.3: adverbs of place/time
+      -- with the deictic a- prefix — arís, amach, anocht, anois, atá...).
+      local A_PREFIX_SECOND_STRESS = {
+        ["aris"]=true, ["arist"]=true, ["amach"]=true, ["amu"]=true,
+        ["anocht"]=true, ["abu"]=true, ["araon"]=true, ["acustaic"]=true,
+        ["aneas"]=true, ["aduaidh"]=true, ["anios"]=true, ["ata"]=true,
+        ["anois"]=true, ["anuas"]=true, ["ataimid"]=true, ["anoir"]=true,
+        ["atathar"]=true, ["ataim"]=true, ["areir"]=true, ["aniar"]=true,
+        ["anonn"]=true, ["anall"]=true, ["amarach"]=true, ["anseo"]=true,
+        ["ansin"]=true, ["ansiud"]=true, ["amuigh"]=true, ["astigh"]=true,
+      }
+      if #segments == 1 and A_PREFIX_SECOND_STRESS[S.strip_fadas(ortho:lower())] then
+        local vcount = 0
+        for _, t in ipairs(seg) do
+          if t.type == "vowel" then
+            vcount = vcount + 1
+            if vcount == 2 then
+              t.stress = true
+              break
+            end
+          end
+        end
+        goto next_seg
+      end
+
       -- Prefix check for this segment
       -- Hickey II.3: prefixes do not attract stress; root-initial stress dominates
       local has_prefix = false

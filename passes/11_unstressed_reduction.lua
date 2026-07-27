@@ -85,12 +85,19 @@ return {
       if next_token and next_token.type == "vowel" then goto continue end
 
       -- For 2-vowel words: short vowels in non-final syllable keep full quality
+      -- — EXCEPT when a LATER vowel carries the stress (a-prefix adverbs like
+      -- arís/amach/anocht where pass 02 put stress on syllable 2; the pretonic
+      -- initial vowel reduces: əˈɾʲiːʃ). Hickey II.1.9.6.
       if context.vowel_count == 2 and SHORT_VOWELS[phon] then
         local has_later_vowel = false
+        local later_stressed = false
         for j = i + 1, #tokens do
-          if tokens[j].type == "vowel" then has_later_vowel = true; break end
+          if tokens[j].type == "vowel" then
+            has_later_vowel = true
+            if tokens[j].stress then later_stressed = true end
+          end
         end
-        if has_later_vowel then goto continue end
+        if has_later_vowel and not later_stressed then goto continue end
       end
 
       -- Don't reduce ɪ after palatal c/ɟ (preserves Irish slender vowel quality).
