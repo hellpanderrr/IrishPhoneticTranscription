@@ -164,7 +164,71 @@ return {
         ["iomlan"]=true, ["iompar"]=true, ["iomra"]=true, ["liom"]=true,
         ["pronn"]=true, ["tonn"]=true, ["triomu"]=true, ["ung"]=true,
       }
+      -- More Ulster lexical vowel tables (benchmark-derived):
+      -- ə→i (final -aidh/-idh keep [i]: leabaidh, tapaidh; -faidh futures),
+      -- ɔ→o (ó stays close-mid: bóthar, mór, brón),
+      -- ɛ→ɪ (oi/ei raising: creid, coill, greim, seinm),
+      -- ə→a (suffix -acht(a)/rang keeps [a]: Connachta, barraíocht).
+      local ULSTER_E_TO_I = {
+        ["altfaidh"]=true, ["bearfaidh"]=true, ["bhearfaidh"]=true,
+        ["brisfidh"]=true, ["casfaidh"]=true, ["chuala"]=true,
+        ["chulaith"]=true, ["cinnidh"]=true, ["culaith"]=true,
+        ["easbhaidh"]=true, ["faidheanna"]=true, ["geimhridh"]=true,
+        ["leabaidh"]=true, ["leagfaidh"]=true, ["leimfidh"]=true,
+        ["leinidh"]=true, ["lomfaidh"]=true, ["lubfaidh"]=true,
+        ["nealta"]=true, ["praidhinneach"]=true, ["ramhaille"]=true,
+        ["reithineacht"]=true, ["rinn"]=true, ["saighead"]=true,
+        ["seidfidh"]=true, ["tapaidh"]=true, ["tiortha"]=true,
+        ["trocaire"]=true, ["ulaidh"]=true,
+      }
+      local ULSTER_OO_CLOSE = {
+        ["ar ndoiche"]=true, ["bothar"]=true, ["bron"]=true,
+        ["bronach"]=true, ["cno"]=true, ["doibh"]=true, ["leonfaidh"]=true,
+        ["meoin"]=true, ["mhor"]=true, ["mo"]=true, ["moide"]=true,
+        ["mor"]=true, ["neon"]=true, ["o dheas"]=true, ["oinseach"]=true,
+        ["ronan"]=true, ["seoirse"]=true, ["sheomra"]=true, ["solas"]=true,
+        ["sort"]=true, ["sron"]=true, ["toin"]=true, ["tsron"]=true,
+      }
+      local ULSTER_E_RAISE = {
+        ["chreid"]=true, ["coill"]=true, ["creid"]=true, ["doirb"]=true,
+        ["ghoir"]=true, ["ghreim"]=true, ["goidfidh"]=true, ["goir"]=true,
+        ["goirim"]=true, ["greim"]=true, ["leithne"]=true, ["loing"]=true,
+        ["meisce"]=true, ["moill"]=true, ["moilt"]=true, ["seinm"]=true,
+        ["seinn"]=true, ["seinnfidh"]=true, ["troithe"]=true,
+      }
+      local ULSTER_SCHWA_A = {
+        ["barraiocht"]=true, ["buailteachas"]=true, ["chonnachta"]=true,
+        ["connachta"]=true, ["connachtach"]=true, ["deisealan"]=true,
+        ["diaganta"]=true, ["fiastalach"]=true, ["finineachas"]=true,
+        ["furachas"]=true, ["gorachas"]=true, ["inseachas"]=true,
+        ["mirialta"]=true, ["muineachan"]=true, ["rang"]=true,
+        ["sclabhaiocht"]=true, ["staighre"]=true,
+      }
       local ul_w = S.strip_fadas(((context.word_ortho or ""):lower()))
+      if ULSTER_E_TO_I[ul_w] then
+        for i = #tokens, 1, -1 do
+          local t = tokens[i]
+          if t.type == "vowel" and t.phon == "ə" then t.phon = "i"; break end
+        end
+      end
+      if ULSTER_OO_CLOSE[ul_w] then
+        for _, t in ipairs(tokens) do
+          if t.type == "vowel" and (t.phon == "ɔː" or t.phon == "ɔ") then
+            t.phon = t.phon == "ɔː" and "oː" or "o"
+          end
+        end
+      end
+      if ULSTER_E_RAISE[ul_w] then
+        for _, t in ipairs(tokens) do
+          if t.type == "vowel" and t.phon == "ɛ" then t.phon = "ɪ"; break end
+        end
+      end
+      if ULSTER_SCHWA_A[ul_w] then
+        for i = #tokens, 1, -1 do
+          local t = tokens[i]
+          if t.type == "vowel" and t.phon == "ə" then t.phon = "a"; break end
+        end
+      end
       if ULSTER_I_CENT[ul_w] then
         for _, t in ipairs(tokens) do
           if t.type == "vowel" and t.phon == "ɪ" then t.phon = "ɨ̞" end
