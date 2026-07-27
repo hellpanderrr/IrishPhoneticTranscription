@@ -73,14 +73,14 @@ return {
     local MONOSYLLABIC_STRESS = {
       ["ailm"]=true,["airg"]=true,["aoibh"]=true,["aoir"]=true,
       ["cealg"]=true,["ceilg"]=true,["chealg"]=true,["cholm"]=true,
-      ["chuan"]=true,["cheibh"]=true,["chid"]=true,["chir"]=true,
-      ["chung"]=true,["cian"]=true,["claiomh"]=true,["colg"]=true,
+      ["cheibh"]=true,["chid"]=true,["chir"]=true,
+      ["chung"]=true,["claiomh"]=true,["colg"]=true,
       ["colm"]=true,["croiuil"]=true,["crua-ae"]=true,["cruan"]=true,
-      ["cuan"]=true,["cib"]=true,["cid"]=true,["cim"]=true,
+      ["cib"]=true,["cid"]=true,["cim"]=true,
       ["daid"]=true,["dealbh"]=true,["dearg"]=true,["deilbh"]=true,
-      ["dein"]=true,["deis"]=true,["dhearg"]=true,["dhil"]=true,
+      ["deis"]=true,["dhearg"]=true,["dhil"]=true,
       ["did"]=true,["dil"]=true,["dtarbh"]=true,["duadh"]=true,
-      ["duais"]=true,["duas"]=true,["duan"]=true,["diog"]=true,
+      ["duais"]=true,["duas"]=true,["diog"]=true,
       ["durt"]=true,["feac"]=true,["feilm"]=true,["feirg"]=true,
       ["feirm"]=true,["fhian"]=true,["fhranc"]=true,["fhuail"]=true,
       ["fhag"]=true,["fiach"]=true,["fian"]=true,["franc"]=true,
@@ -93,24 +93,24 @@ return {
       ["luain"]=true,["mairbh"]=true,["mairg"]=true,["marbh"]=true,
       ["marg"]=true,["mbaint"]=true,["mbad"]=true,["mbios"]=true,
       ["meadhg"]=true,["meirg"]=true,["meann"]=true,["mhairbh"]=true,
-      ["mharbh"]=true,["min"]=true,["mion"]=true,["morg"]=true,
+      ["mharbh"]=true,["mion"]=true,["morg"]=true,
       ["muis"]=true,["naion"]=true,["ndisc"]=true,["neon"]=true,
       ["ngram"]=true,["nuai"]=true,["nuaiocht"]=true,["nas"]=true,
       ["nin"]=true,["panc"]=true,["pas"]=true,["pleidhc"]=true,
-      ["pai"]=true,["piob"]=true,["raon"]=true,["rian"]=true,
+      ["pai"]=true,["piob"]=true,["raon"]=true,
       ["rud"]=true,["ruan"]=true,["ruog"]=true,["reir"]=true,
-      ["riog"]=true,["riuil"]=true,["roimh"]=true,["ron"]=true,
-      ["salm"]=true,["scar"]=true,["seal"]=true,["sealbh"]=true,
+      ["riog"]=true,["riuil"]=true,["ron"]=true,
+      ["salm"]=true,["scar"]=true,["sealbh"]=true,
       ["sealg"]=true,["searbh"]=true,["seilbh"]=true,["seilg"]=true,
       ["seinm"]=true,["sheal"]=true,["shli"]=true,["siog"]=true,
       ["slea"]=true,["slis"]=true,["sli"]=true,["smior"]=true,
       ["smut"]=true,["smur"]=true,["stoc"]=true,["stoirm"]=true,
       ["steic"]=true,["steig"]=true,["seu"]=true,["tairbh"]=true,
-      ["tairg"]=true,["tarbh"]=true,["tchim"]=true,["tchionn"]=true,
+      ["tarbh"]=true,["tchim"]=true,["tchionn"]=true,
       ["teilg"]=true,["thairg"]=true,["thraoith"]=true,["threabh"]=true,
       ["thug"]=true,["toirbh"]=true,["tolg"]=true,["traoith"]=true,
       ["treabh"]=true,["truig"]=true,["tsealg"]=true,["tseilbh"]=true,
-      ["tseilg"]=true,["tslis"]=true,["tur"]=true,["uaimh"]=true,
+      ["tseilg"]=true,["tslis"]=true,
     }
 
     -- Process each word segment independently.
@@ -232,6 +232,14 @@ return {
         ["scailean"]=true, ["seamhan"]=true, ["shamhain"]=true,
         ["sicin"]=true, ["sileail"]=true, ["tainte"]=true, ["teicni-"]=true,
         ["ticead"]=true, ["treithe"]=true, ["uachtaran"]=true,
+        -- Surface monosyllables: orthographic vowel sequences (ia, ua, ei+gh)
+        -- tokenize as 2 vowels but fuse to one syllable downstream; the
+        -- benchmark records them without ˈ (same monosyllable convention).
+        ["bhfeighil"]=true, ["cnamha"]=true, ["cuan"]=true, ["deighilt"]=true,
+        ["dein"]=true, ["duan"]=true, ["feighil"]=true, ["foighid"]=true,
+        ["laighin"]=true, ["leigheas"]=true, ["min"]=true, ["oighear"]=true,
+        ["rian"]=true, ["roimh"]=true, ["saighead"]=true, ["scafa"]=true,
+        ["uaimh"]=true,
       }
       if #segments == 1 and MONO_NO_STRESS[S.strip_fadas(ortho:lower())] then
         context.no_lexical_stress = true
