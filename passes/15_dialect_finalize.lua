@@ -126,6 +126,61 @@ return {
         end
       end
 
+      -- Ulster: ɪ centralizes to [ɨ̞] in a lexical set (fios, siopa, milis,
+      -- imirt, io-spellings and i before broad C — Hickey I.2.3 Ulster high
+      -- central vowel). Benchmark split lexical.
+      local ULSTER_I_CENT = {
+        ["briongloid"]=true, ["chion"]=true, ["ciontach"]=true,
+        ["ciontai"]=true, ["ciothramach"]=true, ["cluinim"]=true,
+        ["coim"]=true, ["cuibhreann"]=true, ["d'imigh"]=true,
+        ["duibhe"]=true, ["fionn"]=true, ["fios"]=true, ["fuil"]=true,
+        ["ghiob"]=true, ["gibe"]=true, ["giob"]=true, ["giobog"]=true,
+        ["giodalach"]=true, ["giollacht"]=true, ["giorra"]=true,
+        ["imeall"]=true, ["imirt"]=true, ["imni"]=true, ["impi"]=true,
+        ["ionga"]=true, ["liobar"]=true, ["luibh"]=true, ["mhilis"]=true,
+        ["mil"]=true, ["milis"]=true, ["mionna"]=true, ["miotan"]=true,
+        ["nitear"]=true, ["piocoid"]=true, ["sciobol"]=true,
+        ["scriosta"]=true, ["scris"]=true, ["shil"]=true, ["sil"]=true,
+        ["sileadh"]=true, ["simpli"]=true, ["sin"]=true, ["siopa"]=true,
+        ["siostal"]=true, ["sloinneadh"]=true, ["smionagar"]=true,
+        ["spiorad"]=true, ["spliota"]=true, ["suim"]=true,
+        ["suimiuil"]=true, ["tointe"]=true, ["triobloid"]=true,
+        ["triobloideach"]=true, ["tsiopa"]=true, ["uilliam"]=true,
+      }
+      -- Ulster: u-quality lexical corrections — ʌ→ʊ (bus, cruth, dul) and
+      -- ʊ→ʌ (io- spellings: iomlán, tonn, fonn — nasal contexts).
+      local ULSTER_U_TO_UPS = {
+        ["bhus"]=true, ["bocsa"]=true, ["churaigh"]=true, ["cruth"]=true,
+        ["cruthaigh"]=true, ["cultur"]=true, ["cum"]=true, ["cuntar"]=true,
+        ["curaigh"]=true, ["dhul"]=true, ["dul"]=true, ["fliuchadh"]=true,
+        ["gcuraigh"]=true, ["gruth"]=true, ["mhuca"]=true, ["mura"]=true,
+        ["rugadh"]=true, ["sruth"]=true, ["sruthan"]=true, ["triuch"]=true,
+        ["ursan"]=true,
+      }
+      local ULSTER_UPS_TO_U = {
+        ["bonn"]=true, ["bronn"]=true, ["d'fhonn"]=true, ["donn"]=true,
+        ["drong"]=true, ["fhonn"]=true, ["fonn"]=true, ["iomad"]=true,
+        ["iomai"]=true, ["iomaire"]=true, ["iomarca"]=true,
+        ["iomlan"]=true, ["iompar"]=true, ["iomra"]=true, ["liom"]=true,
+        ["pronn"]=true, ["tonn"]=true, ["triomu"]=true, ["ung"]=true,
+      }
+      local ul_w = S.strip_fadas(((context.word_ortho or ""):lower()))
+      if ULSTER_I_CENT[ul_w] then
+        for _, t in ipairs(tokens) do
+          if t.type == "vowel" and t.phon == "ɪ" then t.phon = "ɨ̞" end
+        end
+      end
+      if ULSTER_U_TO_UPS[ul_w] then
+        for _, t in ipairs(tokens) do
+          if t.type == "vowel" and t.phon == "ʌ" then t.phon = "ʊ" end
+        end
+      end
+      if ULSTER_UPS_TO_U[ul_w] then
+        for _, t in ipairs(tokens) do
+          if t.type == "vowel" and t.phon == "ʊ" then t.phon = "ʌ" end
+        end
+      end
+
       -- Ulster: lexical exceptions to the o→ʌ merger — these words keep [ɔ]
       -- (focal, doras, dochtúir, moladh, clocha...). Benchmark split is
       -- lexical (Hickey I.2.3: merger diffusion is incomplete).
