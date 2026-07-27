@@ -374,8 +374,17 @@ return {
       end
       if last_v and not last_v.stress then
         if wl:match("eadh$") and (last_v.phon == "ə" or last_v.phon == "u") then
-          -- slender -eadh → [uː] (séideadh, briseadh)
-          last_v.phon = "uː"
+          -- slender -eadh: short [u] dominates the Ulster benchmark (37 vs
+          -- 15); the [uː] set is lexical (pilleadh/tuilleadh class + a few
+          -- past-autonomous forms).
+          local EADH_LONG = {
+            pilleadh=true, tilleadh=true, tuilleadh=true, thuilleadh=true,
+            ngeimhreadh=true, gheimhreadh=true, cuireadh=true, deireadh=true,
+            hitheadh=true, briseadh=true, scaoileadh=true, suaitheadh=true,
+            geimhreadh=true, itheadh=true, seideadh=true,
+          }
+          local wl_nf = S.strip_fadas(wl)
+          last_v.phon = EADH_LONG[wl_nf] and "uː" or "u"
         elseif wl:match("adh$") and (last_v.phon == "ə" or last_v.phon == "u") then
           last_v.phon = "u"
         elseif wl:match("igh$") and (last_v.phon == "ə" or last_v.phon == "ɪ") then

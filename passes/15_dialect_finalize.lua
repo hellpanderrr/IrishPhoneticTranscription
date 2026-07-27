@@ -47,6 +47,35 @@ return {
         end
       end
 
+      -- Ulster: word-final -ach weakens [x]→[h] in a lexical set (~77 of 420
+      -- -ach words; Hickey I.2.3 notes Ulster ch-weakening is variable).
+      -- Keys strip_fadas'd.
+      local ACH_TO_H = {
+        aoibheallach=true, baisteach=true, balsamach=true, bandach=true,
+        barulach=true, bhacach=true, bhealach=true, biseach=true, bodach=true,
+        bogach=true, boireannach=true, bradach=true, bratach=true,
+        breagach=true, cantalach=true, canunach=true, carbonach=true,
+        ceallach=true, ceannach=true, ceannasach=true, ciotach=true,
+        curamach=true, daltach=true, deireanach=true, direach=true,
+        donasach=true, dtosach=true, eireannach=true, finiunach=true,
+        firinneach=true, francach=true, galach=true, geagach=true,
+        greannach=true, ["i dtosach"]=true, lachtach=true, leathanach=true,
+        mbealach=true, naoscach=true, ngealach=true, ostach=true,
+        protastunach=true, reiteach=true, ruifineach=true,
+        ["t-eadach"]=true, tosach=true, tiomanach=true,
+      }
+      local w_ach = (context.word_ortho or ""):lower()
+      local w_ach_nf = w_ach:gsub("[áéíóú]", { ["á"]="a", ["é"]="e", ["í"]="i", ["ó"]="o", ["ú"]="u" })
+      if ACH_TO_H[w_ach_nf] then
+        for i = #tokens, 1, -1 do
+          local t = tokens[i]
+          if t.type == "cons" and t.ortho == "ch" and t.phon == "x" then
+            t.phon = "h"
+            break
+          end
+        end
+      end
+
       -- Ulster: əu diphthong is [au] (amhras→auɾˠəsˠ, slabhradh→t̪ˠlˠauɾˠu).
       -- Hickey I.2.3: Ulster keeps an open first element in the bh/mh
       -- vocalization diphthong.
