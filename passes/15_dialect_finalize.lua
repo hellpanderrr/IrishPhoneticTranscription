@@ -22,6 +22,38 @@ return {
     end
 
     if context.dialect == "ulster" then
+      -- Ulster: the -ach/-acht suffix vowel resists schwa reduction — it
+      -- surfaces as full [a] (Hickey I.2.3: Ulster unstressed vowels keep
+      -- quality in the -ach class: salach→sˠalˠax, Gaeltacht→ɡeːl̪ˠt̪ˠaxt̪ˠ).
+      -- Target: ə immediately before a word-final x (or x+t̪ˠ) whose ortho is
+      -- a/ea (the -ach suffix), not other schwas.
+      for i, t in ipairs(tokens) do
+        if t.type == "vowel" and t.phon == "ə" and
+           (t.ortho == "a" or t.ortho == "ea") then
+          local c1 = tokens[i + 1]
+          if c1 and c1.type == "cons" and c1.ortho == "ch" and c1.phon == "x" then
+            -- word-final x, or x followed only by final t (acht)
+            local c2 = tokens[i + 2]
+            local final_x = (c2 == nil) or (c2.type == "boundary")
+            local final_xt = c2 and c2.type == "cons" and c2.ortho == "t" and
+              (tokens[i + 3] == nil or tokens[i + 3].type == "boundary")
+            -- -acha/-eacha plural: x + final a also keeps [a]
+            local final_xa = c2 and c2.type == "vowel" and
+              (tokens[i + 3] == nil or tokens[i + 3].type == "boundary")
+            if final_x or final_xt or final_xa then
+              t.phon = "a"
+            end
+          end
+        end
+      end
+
+      -- Ulster: əu diphthong is [au] (amhras→auɾˠəsˠ, slabhradh→t̪ˠlˠauɾˠu).
+      -- Hickey I.2.3: Ulster keeps an open first element in the bh/mh
+      -- vocalization diphthong.
+      for _, t in ipairs(tokens) do
+        if t.type == "vowel" and t.phon == "əu" then t.phon = "au" end
+      end
+
       -- Ulster -íocht is [iaxt̪ˠ], not Connacht [iəxt̪ˠ] (barraíocht,
       -- coisíocht — benchmark Ulster rows use a full [a]).
       local w = (context.word_ortho or ""):lower()
