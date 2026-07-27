@@ -32,6 +32,12 @@ local FINAL_E_C_G_EXCEPTIONS = {
 local AFTER_C_G_GUARD_EXCEPTIONS = {
   ["airgid"] = true, ["eiscir"] = true,
 	  ["feicim"] = true, ["fáiscim"] = true,
+  -- Words where unstressed ɪ after c/ɟ should reduce to ə (benchmark expects ə).
+  -- Many are genitive/plural forms ending in -ige/-oige/-acha.
+  ["fuinneoige"]=true, ["carraige"]=true, ["indiacha"]=true,
+  ["cearnóige"]=true, ["cad chuige"]=true, ["diosfaige"]=true,
+  ["nollaig"]=true, ["uair an chloig"]=true, ["danmhairge"]=true,
+  ["gaedhilge"]=true,
 }
 
 local SHORT_VOWELS = { ["a"] = true, ["e"] = true, ["i"] = true, ["o"] = true, ["u"] = true,
@@ -84,6 +90,37 @@ return {
       local next_token = tokens[i + 1]
       if next_token and next_token.type == "vowel" then goto continue end
 
+      -- Munster: pretonic short vowels keep full quality when stress has been
+      -- attracted rightward (pacáil [pˠaˈkɑːlʲ], bruitíneach [bˠɾˠɪˈtʲiːnʲəx]).
+      -- FG Ch.5/Ó Sé: pretonic reduction is much weaker than post-tonic.
+      -- Only a/ɑ/ɪ in the FIRST syllable resist pretonic reduction
+      -- (cailín [kɑˈlʲiːnʲ], bruitíneach [bˠɾˠɪˈtʲiːnʲəx]); non-initial
+      -- pretonic vowels and ɔ/ʊ/ɛ reduce (portach [pˠəɾˠˈt̪ˠax], buachalán).
+      if context.dialect == "munster" then
+        local pretonic = false
+        for j = i + 1, #tokens do
+          if tokens[j].type == "boundary" then break end
+          if tokens[j].type == "vowel" and tokens[j].stress then pretonic = true; break end
+        end
+        if pretonic then
+          if phon == "a" or phon == "ɑ" or phon == "ɪ" then
+            local is_first_vowel = true
+            for j = i - 1, 1, -1 do
+              if tokens[j].type == "vowel" then is_first_vowel = false; break end
+              if tokens[j].type == "boundary" then break end
+            end
+            if is_first_vowel then goto continue end
+          end
+          -- Other pretonic short vowels reduce even in 2-vowel words —
+          -- attracted stress leaves a reduced pretonic syllable
+          -- (cosán [kəˈsˠɑːn̪ˠ], portach [pˠəɾˠˈt̪ˠax]).
+          if SHORT_VOWELS[phon] then
+            token.phon = "ə"
+            goto continue
+          end
+        end
+      end
+
       -- For 2-vowel words: short vowels in non-final syllable keep full quality
       -- — EXCEPT when a LATER vowel carries the stress (a-prefix adverbs like
       -- arís/amach/anocht where pass 02 put stress on syllable 2; the pretonic
@@ -126,13 +163,13 @@ return {
           -- strip trailing ʲ (slender sonorants render as base+ʲ, e.g. lʲ nʲ mʲ)
           local p = nxt.phon:gsub("\xca\xb2$", "")
           if p == "t" or p == "p" or p == "c" then
-            -- Lexical exceptions: words where ɪ should still reduce to ə
+            -- Lexical exceptions: words where ɪ should still reduce to ə.
             -- uiliteoir: second vowel ɪ before slender t should be ə
             -- Meiriceá: unstressed ɪ before slender c should be ə (Hickey §3.4)
             local exc = false
             if context.word_ortho then
               local lower = context.word_ortho:lower()
-              if lower == "uiliteoir" or lower == "meiriceá" then exc = true end
+              if lower == "uiliteoir" or lower == "meirice\xc3\xa1" then exc = true end
             end
             if not exc then goto continue end
           end
@@ -185,11 +222,182 @@ return {
         end
       end
 
+      -- Keep ɪ before word-final c or ɟ (palatal stops). The after-c/ɟ guard
+      -- protects ɪ *after* c/ɟ, but ɪ *before* c/ɟ (mairg -> mˠaɾʲɪɟ, leirg
+      -- -> l̠ʲɛɾʲɪɟ, etc.) needs the same protection. Check that the ɪ is
+      -- followed by c/ɟ with nothing but boundary (or silenced tokens) after it.
+      -- Hickey II.1.9.6: slender offglide ɪ survives before palatal stops.
+      if phon == "ɪ" then
+        local after_cg = false
+        for j = i + 1, #tokens do
+          local t2 = tokens[j]
+          if t2.type == "boundary" then
+            after_cg = true; break  -- c/ɟ found earlier + boundary = word-final
+          end
+          if t2.type == "vowel" then break end  -- another vowel = not word-final
+          if t2.type == "cons" and t2.phon and t2.phon ~= "" then
+            local p = t2.phon:gsub("\xca\xb2$", "")
+            if p == "c" or p == "ɟ" then
+              -- Found c/ɟ; now check if anything non-boundary follows
+              local all_done = true
+              for k = j + 1, #tokens do
+                local tk = tokens[k]
+                if tk.type == "boundary" then break end
+                if tk.type == "vowel" then all_done = false; break end
+                if tk.type == "cons" and tk.phon and tk.phon ~= "" then
+                  all_done = false; break
+                end
+              end
+              if all_done then after_cg = true end
+              break
+            else
+              break  -- non-c/ɟ consonant = not our pattern
+            end
+          end
+        end
+        if after_cg then goto continue end
+      end
+
+      -- Keep word-final ɪ after h/ç (-the/-che/-ghe endings).
+      -- The historical verbal noun suffix retains final ɪ in Connacht.
+      -- Hickey II.1.9.6: slender verb-noun suffix carries ɪ before the h.
+      if phon == "ɪ" then
+        local nxt = tokens[i + 1]
+        local word_final = (nxt == nil) or (nxt.type == "boundary")
+        if word_final then
+          local prev_t = tokens[i - 1]
+          if prev_t and prev_t.type == "cons" then
+            local p = prev_t.phon:gsub("\xca\xb2$", "")
+            if p == "h" or p == "ç" then
+              goto continue
+            end
+          end
+        end
+      end
+
       if SHORT_VOWELS[phon] then
         token.phon = "ə"
       end
       ::continue::
     end
+
+    -- Connacht: final -adh is [uː]/[u] in past-autonomous verb forms and a
+    -- set of nouns (rinneadh [ˈɾˠɪnʲuː], boladh [ˈbˠɔlˠu]), but [ə] in verbal
+    -- nouns (bualadh). Grammatically conditioned — FG Ch.7 schwa rule
+    -- explicitly excludes past forms — so lexically listed.
+    if context.dialect == "connacht" then
+      local ADH_FINAL = {
+        ["rinneadh"] = "uː", ["dearnadh"] = "uː", ["cailleadh"] = "uː",
+        ["bunadh"] = "uː", ["baladh"] = "uː", ["troscadh"] = "uː",
+        ["geimhreadh"] = "uː",
+        ["boladh"] = "u", ["d'oileadh"] = "u", ["n-oileadh"] = "u",
+        ["oilfeadh"] = "u", ["d'oilfeadh"] = "u", ["n-oilfeadh"] = "u",
+      }
+      local wl = (context.word_ortho or ""):lower()
+      if ADH_FINAL[wl] then
+        for j = #tokens, 1, -1 do
+          local t = tokens[j]
+          if t.type == "vowel" and t.phon and t.phon ~= "" then
+            t.phon = ADH_FINAL[wl]
+            break
+          end
+        end
+      end
+    end
+
+    -- =======================================================================
+    -- Ulster vowel adjustments (Hickey II.3, I.2.3: Northern dialect)
+    -- =======================================================================
+    if context.dialect == "ulster" then
+      -- (0) Short-o exceptions to the ʌ-merger (Hickey I.2.3):
+      -- ɔ preserved before liquids (lorg [l̪ˠɔɾˠəɡ], bolg, corr);
+      -- before geminate nn the vowel is plain [ʌ] (tonn, fonn, donn) —
+      -- no Connacht-style nasal raising.
+      for i2, t in ipairs(tokens) do
+        if t.type == "vowel" and t.ortho == "o" then
+          local n1, n2 = tokens[i2 + 1], tokens[i2 + 2]
+          local c1 = n1 and n1.type == "cons" and n1.ortho or nil
+          -- ɔ only before CODA liquids: liquid must be followed by a
+          -- consonant or word end (lorg, bolg, corr); intervocalic liquids
+          -- take plain ʌ (molann, colún, torann).
+          local liquid_coda = (c1 == "l" or c1 == "r") and
+            (n2 == nil or n2.type == "boundary" or n2.type == "cons")
+          -- intervocalic geminate ll/rr (olla, stollaire) is not a coda
+          if liquid_coda and n2 and n2.type == "cons" and n2.ortho == c1 then
+            local n3 = tokens[i2 + 3]
+            if n3 and n3.type == "vowel" then liquid_coda = false end
+          end
+          if (t.phon == "ʌ") and liquid_coda then
+            t.phon = "ɔ"
+          elseif c1 == "n" and n2 and n2.type == "cons" and n2.ortho == "n" and
+                 (t.phon == "ʊ" or t.phon == "ɔ" or t.phon == "u" or t.phon == "uː") then
+            t.phon = "ʌ"
+          end
+        end
+      end
+
+      -- (0b) Ulster á is front [aː] in all spellings, including ái digraphs
+      -- (gáire, Máire, cáithnín) — Hickey I.2.3 northern fronting.
+      for _, t in ipairs(tokens) do
+        if t.type == "vowel" and t.phon == "ɑː" then t.phon = "aː" end
+      end
+
+      -- (1) Post-tonic long-vowel shortening — the signature Ulster feature:
+      -- long vowels in non-initial syllables shorten (scadán [ˈsˠkad̪ˠənˠ],
+      -- maoilín [ˈmˠiːlʲinʲ], dochtúir, Sabóid, seachrán).
+      local ULSTER_SHORTEN = {
+        ["iː"] = "i", ["uː"] = "u", ["oː"] = "ɔ", ["ɔː"] = "ɔ",
+        ["ɑː"] = "a", ["aː"] = "a",
+      }
+      local seen_vowel = false
+      for _, t in ipairs(tokens) do
+        if t.type == "boundary" then seen_vowel = false end
+        if t.type == "vowel" then
+          if seen_vowel and not t.stress and t.phon and ULSTER_SHORTEN[t.phon] then
+            t.phon = ULSTER_SHORTEN[t.phon]
+          end
+          seen_vowel = true
+        end
+      end
+
+      -- (2) Word-final unstressed suffix realizations:
+      --   -adh → [u]  (ghearradh, rugadh, canadh)
+      --   -igh/-aigh → [i]  (bealaigh, ceannaigh)
+      --   -ach keeps [a] (benchmark Ulster: -ach = a/ah/ax), no schwa
+      local wl = (context.word_ortho or ""):lower()
+      local last_v = nil
+      for j = #tokens, 1, -1 do
+        if tokens[j].type == "vowel" and tokens[j].phon and tokens[j].phon ~= "" then
+          last_v = tokens[j]; break
+        end
+        if tokens[j].type == "boundary" then break end
+      end
+      if last_v and not last_v.stress then
+        if wl:match("eadh$") and (last_v.phon == "ə" or last_v.phon == "u") then
+          -- slender -eadh → [uː] (séideadh, briseadh)
+          last_v.phon = "uː"
+        elseif wl:match("adh$") and (last_v.phon == "ə" or last_v.phon == "u") then
+          last_v.phon = "u"
+        elseif wl:match("igh$") and (last_v.phon == "ə" or last_v.phon == "ɪ") then
+          last_v.phon = "i"
+        elseif (wl:match("ach$") or wl:match("each$")) and last_v.phon == "ə" then
+          last_v.phon = "a"
+        end
+      end
+
+      -- (3) Final verbal -im is broad [mˠ] in Ulster (éistim [ˈeːʃtʲəmˠ])
+      if wl:match("im$") and context.vowel_count and context.vowel_count > 1 then
+        for j = #tokens, 1, -1 do
+          local t = tokens[j]
+          if t.type == "cons" and t.phon and t.phon ~= "" then
+            if t.ortho == "m" then t.phon = "mˠ"; t.palatal = false end
+            break
+          end
+          if t.type == "vowel" or t.type == "boundary" then break end
+        end
+      end
+    end
+
     return tokens
   end,
 }

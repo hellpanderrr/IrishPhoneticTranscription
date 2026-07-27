@@ -446,6 +446,8 @@ return {
           if E_PLUS_AA_TO_A[w] then
             nxt.phon = "aː"
           else
+            -- NOTE: a Munster eá→aː fronting was tried here (2026-07-18) and
+            -- reverted: -5 exact (the Munster rows split aː/ɑː per word).
             nxt.phon = "ɑː"
           end
         -- "u"+"í" or "u"+"ío": uí → iː, silent u.
@@ -731,6 +733,9 @@ return {
       -- Use simple lowercased lookup (normalize_ortho strips accents)
       local lookup_word = ustring.lower(seg_ortho)
       local fw_ipa = S.FUNCTION_WORDS_OVERRIDE[lookup_word]
+      -- NOTE: these are Connacht transcriptions, but gating them to Connacht
+      -- was tried (2026-07-18) and REVERTED: Munster -13, Ulster -14 exact.
+      -- Function words are largely pan-dialectal in the benchmark source.
       if fw_ipa then
         local override_idx = 1
         for _, t in ipairs(seg) do
@@ -958,32 +963,102 @@ return {
       end
     end
 
-    -- Step 11: Lexical stress repositioning for single words.
-    -- Hickey II.3: loanwords and fossilized compounds carry non-initial
-    -- primary stress (fadó, giotár, basún, dáiríre); transparent compounds
-    -- carry secondary stress on the second root (úrscéal, saorstát).
-    -- Value = vowel index (1-based, counted over non-epenthetic vowel tokens
-    -- with non-empty phon) that receives the mark.
+    -- Step 11: Compound secondary stress (general rules, not a full lexical table).
+    -- Hickey II.3.3: compounds retain primary on the first element and develop
+    -- secondary on the second. Three productive patterns:
+    --   1. Hyphen in orthography: morpheme boundary, secondary on vowel after hyphen
+    --   2. Known prefix: secondary on first vowel after the prefix end
+    --   3. Reverse stress: primary shifts to last vowel (opaque lexical entries)
+    -- Only truly opaque 2-vowel compounds need lexical entries.
+    if #fw_segments <= 1 then
+      local word_lookup = S.strip_fadas(ustring.lower(context.word_ortho or ""))
+      if word_lookup and word_lookup ~= "" then
+        -- Opaque 2-vowel compounds with no productive prefix (lexical).
+        local COMPOUND_LEXICAL = {
+          ["aischuir"]=true,["breagfholt"]=true,["ceolchoirm"]=true,
+          ["creidmheas"]=true,["cruitchlar"]=true,["feinchuis"]=true,
+          ["feinphic"]=true,["fionghort"]=true,["fiormhaith"]=true,
+          ["gairmeach"]=true,["leafaos"]=true,["mucar"]=true,
+          ["ogfhear"]=true,["taoschno"]=true,["teadchlar"]=true,
+          ["trathchlar"]=true,["ursceal"]=true,["risteard"]=true,
+        }
+        local COMPOUND_REVERSE = {
+          ["deardaoin"]=true,["iarmhi"]=true,["hiarmhi"]=true,
+          ["ardri"]=true,["diosfaige"]=true,
+        }
+
+        -- Find hyphen position in the raw orthography
+        local hyphen_pos = nil
+        if context.word_ortho then
+          hyphen_pos = context.word_ortho:find("-")
+        end
+
+        if hyphen_pos then
+          -- Rule 1: hyphen marks morpheme boundary
+          -- Count tokens, find the first vowel token at or after hyphen_pos
+          local past_hyphen = false
+          for _, t in ipairs(tokens) do
+            if t.ortho == "-" then
+              past_hyphen = true
+            elseif past_hyphen and t.type == "vowel" then
+              if not t.stress then t.secondary = true end
+              break
+            end
+          end
+        elseif COMPOUND_REVERSE[word_lookup] then
+          -- Rule 2: reverse-stress compounds
+          local vowels = {}
+          for _, t in ipairs(tokens) do
+            if t.type == "vowel" and not t.is_epenthetic then
+              table.insert(vowels, t)
+            end
+          end
+          if #vowels >= 2 then
+            if vowels[1].stress then
+              vowels[1].stress = false
+              vowels[1].secondary = true
+            end
+            if not vowels[#vowels].stress then
+              vowels[#vowels].stress = true
+            end
+          end
+        elseif COMPOUND_LEXICAL[word_lookup] then
+          -- Rule 3: opaque lexical compounds — secondary on vowel 2
+          local vcount = 0
+          for _, t in ipairs(tokens) do
+            if t.type == "vowel" and not t.is_epenthetic then
+              vcount = vcount + 1
+              if vcount == 2 then
+                if not t.stress then t.secondary = true end
+                break
+              end
+            end
+          end
+        end
+      end
+    end
+
+    -- Step 11b: Lexical stress repositioning with explicit onset lengths.
+    -- Hickey II.3: loanwords/adverbs with non-initial primary stress (fadó,
+    -- giotár, basún, dáiríre) and compounds whose secondary-stress onset the
+    -- default onset walk mis-segments (úrscéal = uːɾˠ|ˌʃceːlˠ). The {v,onset}
+    -- spec pins the mark exactly; token.stress_no_walk stops render_output
+    -- from re-walking it.
     if context.word_ortho and not context.word_ortho:find(" ") then
       local w_lookup = S.strip_fadas(S.normalize_ortho(context.word_ortho))
       local PRIMARY_ON_N = {
-        -- loanword/adverb non-initial primary stress
         ["fado"]=2, ["giotar"]=2, ["basun"]=2, ["abuise"]=2,
         ["dairire"]=2, ["dhairire"]=2, ["babloinia"]=2,
         ["lastuas"]=2, ["lastuaidh"]=2,
-        ["drochshuil"]=2, ["drochmhuinte"]=2, ["dea-bheasach"]=2,
+        ["drochshuil"]=2, ["drochmhuinte"]=2,
         ["eadrocaireach"]=2,
       }
-      -- Spec {v=N, onset=K}: mark goes before the K consonant tokens
-      -- preceding the N-th vowel (K = onset length of the second root —
-      -- the default render onset-walk over-reaches across the first root's
-      -- coda in compounds: úrscéal is uːɾˠ|ʃceːlˠ, not uː|ɾˠʃceːlˠ).
       local SECONDARY_ON_N = {
         ["ursceal"]={v=2, onset=2}, ["saorstat"]={v=2, onset=2},
         ["taoschno"]={v=2, onset=2}, ["dicheilli"]={v=2, onset=1},
         ["griando"]={v=2, onset=1}, ["fionnuar"]={v=2, onset=0},
         ["fiafheoil"]={v=2, onset=0}, ["athfhas"]={v=2, onset=1},
-        ["mucar"]={v=2, onset=1}, ["broc-chu"]={v=2, onset=1},
+        ["mucar"]={v=2, onset=1},
         ["ardchlar"]={v=2, onset=2}, ["teadchlar"]={v=2, onset=2},
         ["ardghlorach"]={v=2, onset=2}, ["geaglaidre"]={v=2, onset=1},
         ["mimhuinte"]={v=2, onset=1}, ["aerostach"]={v=2, onset=0},
@@ -993,14 +1068,12 @@ return {
       local prim_n = PRIMARY_ON_N[w_lookup]
       local sec_spec = SECONDARY_ON_N[w_lookup]
       if prim_n or sec_spec or w_lookup == "deardaoin" then
-        -- Collect real vowel tokens with their positions (skip silent phons)
         local vowels = {}
         for idx, t in ipairs(tokens) do
           if t.type == "vowel" and t.phon and t.phon ~= "" then
             table.insert(vowels, { tok = t, pos = idx })
           end
         end
-        -- Find the mark-carrier token: walk back `onset` consonant tokens
         local function mark_target(spec)
           local v = vowels[spec.v]
           if not v then return nil end
