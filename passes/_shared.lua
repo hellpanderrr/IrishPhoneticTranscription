@@ -68,7 +68,10 @@ _shared.DIALECTS = {
         },
     },
     munster  = {
-        ao = "eː", ai = "ai", ea = "a", eo = "oː", ["ío"] = "iː",
+        -- ai → [a]: Munster ai digraph is a plain front vowel (benchmark:
+        -- 413 words with [a]/[ɑ] vs 12 keeping [ai] — baile, airigh, caint);
+        -- pass-10 backing may then produce [ɑ] after broad onsets.
+        ao = "eː", ai = "a", ea = "a", eo = "oː", ["ío"] = "iː",
         oi = "ɔi", ui = "ʊi", ua = "uə", ia = "iə", ["éi"] = "eː",
         short = { a = "a", o = "ɔ", u = "ʊ", i = "ɪ", e = "ɛ" },
         long  = { a = "ɑː", o = "oː", u = "uː", i = "iː", e = "eː" },
