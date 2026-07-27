@@ -87,7 +87,8 @@ local function render_output(tokens)
   -- (e.g. silenced final fricatives) but stops at boundary tokens so function
   -- words' codas are not adopted as content words' onsets.
   for i = #tokens, 1, -1 do
-    if tokens[i].type == "vowel" and (tokens[i].stress or tokens[i].secondary) then
+    if tokens[i].type == "vowel" and (tokens[i].stress or tokens[i].secondary)
+       and not tokens[i].stress_no_walk then
       local onset_start = i
       for j = i - 1, 1, -1 do
         local t = tokens[j]
@@ -133,7 +134,10 @@ local function render_output(tokens)
         if token.phon == "-" or token.ortho == "-" then
           goto render_continue
         end
-      if token.stress and token.type == "cons" then
+      if token.stress and token.type == "cons" and token.stress_no_walk then
+        -- Lexically positioned mark (pass 14 Step 11): emit exactly here.
+        table.insert(parts, S.STRESS_MARK)
+      elseif token.stress and token.type == "cons" then
         -- IPA convention: ˈCV not CˈV — stress mark goes before entire onset.
         -- Check if an earlier consonant is also part of this onset cluster.
         local onset_start = i
@@ -155,6 +159,9 @@ local function render_output(tokens)
         end
       elseif token.stress then
         table.insert(parts, S.STRESS_MARK)
+      elseif token.secondary and token.type == "cons" and token.stress_no_walk then
+        -- Lexically positioned mark (pass 14 Step 11): emit exactly here.
+        table.insert(parts, S.SECONDARY_STRESS_MARK)
       elseif token.secondary and token.type == "cons" then
         -- Secondary stress: mirror the onset-start logic.
         local onset_start = i
