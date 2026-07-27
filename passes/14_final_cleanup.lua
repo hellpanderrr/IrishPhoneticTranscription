@@ -728,6 +728,23 @@ return {
       ["cen"] = true, ["ca"] = true, ["ce"] = true,             -- (unaccented fallback)
       ["ní"] = true, ["ni"] = true,                             -- "ní"
     }
+    -- Phrase-level overrides for cliticization (benchmark-verified):
+    -- FORCE_SPACE — proclitic phrase but the benchmark keeps the space;
+    -- FORCE_JOIN — non-proclitic first word but the benchmark fuses.
+    -- Keys: full phrase, strip_fadas + lower.
+    local CLITIC_FORCE_SPACE = {
+      ["ar cuaird"]=true, ["a chairde"]=true, ["ar maidin"]=true,
+      ["ar bord"]=true, ["i bhfolach"]=true, ["ar siul"]=true,
+      ["go dti go"]=true, ["a chara"]=true, ["faoi dho"]=true,
+      ["go deo"]=true, ["i gceist"]=true, ["ar bun"]=true,
+      ["i dtosach"]=true, ["as a cheile"]=true,
+    }
+    local CLITIC_FORCE_JOIN = {
+      ["ce go"]=true, ["le fail"]=true, ["thar lear"]=true,
+      ["os coinne"]=true, ["ar leith"]=true, ["de luain"]=true,
+      ["o dheas"]=true,
+    }
+    local phrase_key = S.strip_fadas(S.normalize_ortho(context.word_ortho or ""))
     if #fw_segments >= 2 then
       for si = 1, #fw_segments - 1 do
         local seg = fw_segments[si]
@@ -736,15 +753,19 @@ return {
           if t.ortho then seg_ortho = seg_ortho .. t.ortho end
         end
         local lookup = ustring.lower(seg_ortho)
-        if PROCLITICS[lookup] then
-          -- Check that the next segment is a content word (not a function word).
+        local is_proclitic = PROCLITICS[lookup]
+        if CLITIC_FORCE_SPACE[phrase_key] then is_proclitic = false end
+        if CLITIC_FORCE_JOIN[phrase_key] and si == 1 then is_proclitic = true end
+        if is_proclitic then
+          -- Check that the next segment is a content word (not a function word)
+          -- unless the phrase is force-joined.
           local next_seg = fw_segments[si + 1]
           local next_ortho = ""
           for _, t in ipairs(next_seg) do
             if t.ortho then next_ortho = next_ortho .. t.ortho end
           end
           local next_lookup = ustring.lower(next_ortho)
-          if not S.FUNCTION_WORDS_OVERRIDE[next_lookup] then
+          if CLITIC_FORCE_JOIN[phrase_key] or not S.FUNCTION_WORDS_OVERRIDE[next_lookup] then
             local range = seg_ranges[si]
             if range and range.boundary then
               -- Blank the boundary's phon (suppress space) but keep the token
