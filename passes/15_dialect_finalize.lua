@@ -37,6 +37,76 @@ return {
     end
 
     if context.dialect == "munster" then
+      -- Munster word-final -igh/-aigh/-aidh/-idh keeps a real palatal stop:
+      -- [ɪɟ] after a consonant (bealaigh→bʲal̪ˠɪɟ, doiligh→d̪ˠɪlʲɪɟ), bare [ɟ]
+      -- after a long vowel or diphthong (dóigh→d̪ˠoːɟ, luaigh→l̪ˠuəɟ).
+      -- Hickey I.2.2/III.2: Munster retains final /ɟ/ where Connacht
+      -- vocalizes or deletes. Future -f- forms excluded (molfaidh→mˠɔl̪ˠhə
+      -- keeps the Connacht-style h-suffix path; benchmark is split there).
+      local w = (context.word_ortho or ""):lower()
+      local is_igh = w:match("[aeiíáéó]igh$") or w:match("igh$")
+        or w:match("aidh$") or w:match("idh$")
+      local is_future_f = w:match("f[ae]?aidh$") or w:match("f[ei]?idh$")
+      if is_igh and not is_future_f and not w:find(" ") then
+        -- Find last vowel with non-empty phon and the trailing gh/dh token.
+        local last_v, gh_tok = nil, nil
+        for i = #tokens, 1, -1 do
+          local t = tokens[i]
+          if not gh_tok and t.type == "cons" and (t.ortho == "gh" or t.ortho == "dh") then
+            gh_tok = t
+          elseif t.type == "vowel" and t.phon and t.phon ~= "" then
+            last_v = t
+            break
+          end
+        end
+        if last_v and gh_tok then
+          local p = last_v.phon
+          local is_long = p:find("ː", 1, true) ~= nil or p == "uə" or p == "iə" or p == "ai" or p == "əi"
+          if is_long and (p == "iː") then
+            -- iː from IGH_RESTORE is the suffix vowel itself → ɪɟ
+            last_v.phon = "ɪ"
+            gh_tok.phon = "ɟ"
+          elseif is_long then
+            -- root long vowel/diphthong: keep it, add final ɟ
+            gh_tok.phon = "ɟ"
+          elseif p == "ə" or p == "ɪ" or p == "i" then
+            last_v.phon = "ɪ"
+            gh_tok.phon = "ɟ"
+          end
+        end
+      end
+
+      -- Munster éa-breaking: long éa [eː] breaks to [iːa̯] under stress and
+      -- [ia̯] pretonic (Hickey I.2.2: Munster ia-diphthongization of éa —
+      -- méar→mʲiːa̯ɾˠ, bréag→bʲɾʲiːa̯ɡ, éadóchasach→ia̯ˈd̪ˠoː...).
+      -- Only orthographic éa (not ao/aou/é alone) breaks.
+      -- Length: [iːa̯] when the éa syllable itself is prominent, [ia̯] when a
+      -- LATER syllable carries the stress (pretonic shortening:
+      -- éadóchasach→ia̯ˈd̪ˠoː...). Only FIRST-SYLLABLE éa breaks — loanwords
+      -- with éa in later syllables (piléar, páipéar, buidéal, coirnéal)
+      -- keep [eː] (Hickey I.2.2: breaking is confined to root syllables).
+      for i, t in ipairs(tokens) do
+        if t.type == "vowel" and t.phon == "eː" and t.ortho == "éa" then
+          local earlier_vowel = false
+          for j = 1, i - 1 do
+            local u = tokens[j]
+            if u.type == "boundary" then earlier_vowel = false
+            elseif u.type == "vowel" and u.phon and u.phon ~= "" then earlier_vowel = true end
+          end
+          if not earlier_vowel then
+            local later_stress = false
+            for j = i + 1, #tokens do
+              local u = tokens[j]
+              if u.type == "vowel" and (u.stress or u.secondary) then
+                later_stress = true
+                break
+              end
+            end
+            t.phon = later_stress and "ia̯" or "iːa̯"
+          end
+        end
+      end
+
       -- Munster sonorant notation normalization (moved here from the end of
       -- pass 13 so pass-14-created sonorants are covered too): broad l/n are
       -- dental, slender l/n are plain palatal (benchmark Munster convention;
