@@ -781,7 +781,15 @@ return {
 	  ["duine fásta"] = true, ["portaireacht bhéil"] = true,
 	  ["tuaisceart éireann"] = true, ["oide faoistine"] = true,
 	  ["pocaire gaoithe"] = true, ["imeartas focal"] = true,
+	  -- Benchmark gives BOTH content words primary ˈ (not ˌ...ˈ):
+	  ["garda síochána"] = true, ["madra alla"] = true,
+	  ["inneall dóiteáin"] = true, ["laethanta na riabhaí"] = true,
+	  -- Benchmark stresses FIRST word only (ˈ first, none on last):
+	  ["grán buí"] = true, ["bean sí"] = true,
 	}
+	-- These phrases put primary ˈ on BOTH content words (Garda Síochána →
+	-- ˈɡɑːɾˠd̪ˠə ˈʃiːxɑːnˠə). Handled via STRESS_OVERRIDE table above keeping
+	-- pass 02 defaults (each word already got ˈ from pass 02).
 	
       -- Collect content-word segments (those not overridden as function words).
       local content_segs = {}
