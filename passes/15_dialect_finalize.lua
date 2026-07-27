@@ -126,6 +126,39 @@ return {
         end
       end
 
+      -- Ulster: lexical exceptions to the o→ʌ merger — these words keep [ɔ]
+      -- (focal, doras, dochtúir, moladh, clocha...). Benchmark split is
+      -- lexical (Hickey I.2.3: merger diffusion is incomplete).
+      local ULSTER_O_KEEP = {
+        ["bhocht"]=true, ["bhod"]=true, ["bholg"]=true,
+        ["bobaireacht"]=true, ["bochtaineacht"]=true, ["boscai"]=true,
+        ["both"]=true, ["bothan"]=true, ["bothog"]=true, ["broslu"]=true,
+        ["chodail"]=true, ["chorraigh"]=true, ["clocasach"]=true,
+        ["clocha"]=true, ["codail"]=true, ["colainn"]=true, ["colg"]=true,
+        ["colur"]=true, ["comach"]=true, ["copog"]=true, ["coradh"]=true,
+        ["corr"]=true, ["corradh"]=true, ["corraigh"]=true,
+        ["corran"]=true, ["cothaigh"]=true, ["cothu"]=true,
+        ["crochadh"]=true, ["crosach"]=true, ["crosail"]=true,
+        ["crosan"]=true, ["cupan"]=true, ["dhochtuir"]=true,
+        ["dhochtuiri"]=true, ["dhorn"]=true, ["dochartach"]=true,
+        ["dochtuiri"]=true, ["dochtura"]=true, ["doras"]=true,
+        ["dorn"]=true, ["focal"]=true, ["ghobadh"]=true, ["gonan"]=true,
+        ["gorm"]=true, ["gort"]=true, ["locadh"]=true,
+        ["loch neathach"]=true, ["lofa"]=true, ["lorg"]=true,
+        ["mholadh"]=true, ["mholainn"]=true, ["moladh"]=true,
+        ["molt"]=true, ["monarcai"]=true, ["ndochtuiri"]=true,
+        ["ndorn"]=true, ["nochtaim"]=true, ["oblatach"]=true,
+        ["ocrach"]=true, ["ocras"]=true, ["ofrala"]=true,
+        ["ofralacha"]=true, ["olann"]=true, ["optach"]=true, ["ord"]=true,
+        ["sholas"]=true, ["sochai"]=true, ["sochraid"]=true,
+        ["soladach"]=true, ["tomas"]=true,
+      }
+      if ULSTER_O_KEEP[S.strip_fadas(((context.word_ortho or ""):lower()))] then
+        for _, t in ipairs(tokens) do
+          if t.type == "vowel" and t.phon == "ʌ" then t.phon = "ɔ" end
+        end
+      end
+
       -- Ulster: əu diphthong is [au] (amhras→auɾˠəsˠ, slabhradh→t̪ˠlˠauɾˠu).
       -- Hickey I.2.3: Ulster keeps an open first element in the bh/mh
       -- vocalization diphthong.
