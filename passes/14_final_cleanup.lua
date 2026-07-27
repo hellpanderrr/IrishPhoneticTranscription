@@ -654,6 +654,26 @@ return {
         end
       end
     end
+    -- Step 8d2: aigh/eigh/oigh → əi diphthong. When a short front vowel
+    -- (a/ɛ/ɔ) precedes a medial [j] (slender dh/gh), the sequence fuses to
+    -- the [əi] diphthong and absorbs a following unstressed schwa.
+    -- Hickey II.1.9.9.1: aigh/eigh vocalize to /əi/ in Connacht
+    -- (taighde→t̪ˠəidʲə, feidhme→fʲəimʲə, saighead→sˠəid̪ˠ, oighear→əiɾˠ).
+    for i = 1, #tokens - 1 do
+      local v = tokens[i]
+      local c = tokens[i + 1]
+      if v.type == "vowel" and (v.phon == "a" or v.phon == "ɛ" or v.phon == "ɔ") and
+         c.type == "cons" and c.phon == "j" and
+         (c.ortho == "dh" or c.ortho == "gh") then
+        v.phon = "əi"
+        c.phon = ""
+        -- absorb a following unstressed schwa (saighead: a+j+ə → əi)
+        local nxt = tokens[i + 2]
+        if nxt and nxt.type == "vowel" and nxt.phon == "ə" and not nxt.stress then
+          nxt.phon = ""
+        end
+      end
+    end
     -- Step 8e: Word-final broad bh/mh → vˠ (mirror of 8d). Hickey II.1.7.2:
     -- broad lenited labials retain fricative [vˠ] word-finally in these
     -- lexical items instead of weakening to [w] (naomh, snámh, Cóbh, dealbh,
