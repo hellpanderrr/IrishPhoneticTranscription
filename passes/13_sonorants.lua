@@ -245,10 +245,26 @@ return {
         elseif next_t and not followed_by_cons and not token.from_dl and token.ortho == "n" then
           -- Intervocalic n (followed by a vowel, not word-final): lenis nˠ
           -- Word-final n handled by Phase 1b with more nuanced rules.
-          -- Hickey II.1.8: intervocalic broad n weakens to lenis [nˠ]
+          -- Hickey II.1.8: intervocalic broad n weakens to lenis [nˠ].
+          -- Lexical exceptions: specific native words retain fortis n̪ˠ
+          -- medially after a long vowel (déanaí, gcónaí, séanas, meánach...).
+          -- A blanket long-vowel rule regressed 58 words (cána, Úna, rúnaí);
+          -- the benchmark is split ~30/58, so per-word listing is required.
+          local N_MEDIAL_DENTAL = {
+            -- Keys strip_fadas'd (no bare fadas in Lua table brackets)
+            deanai=true, gconai=true, conai=true, carbonach=true,
+            seanas=true, dunaim=true, meanach=true, lunasa=true,
+            maithiunas=true, bleanach=true, deanach=true, munaid=true,
+            fana=true, deaganach=true, protastunach=true, eanair=true,
+            cisteanach=true, deireanach=true, dhona=true, dona=true,
+            meana=true, bliana=true, leanaim=true, seana=true,
+          }
           local prev_t = tokens[i - 1]
           if prev_t and prev_t.type == "vowel" then
-            token.phon = S.palatal_consonant(token, "nʲ", "nˠ")
+            local lookup = S.strip_fadas(S.normalize_ortho(context.word_ortho or ""))
+            if not N_MEDIAL_DENTAL[lookup] then
+              token.phon = S.palatal_consonant(token, "nʲ", "nˠ")
+            end
           end
         end
       else
@@ -261,8 +277,11 @@ return {
             if not is_exempt then
               token.phon = insert_combining(token.phon, POSTALVEOLAR)
             end
-          elseif word_initial then
-            -- Hickey II.1.8: initial slender l/n are tensor/alveolar l̠ʲ/n̠ʲ
+          elseif word_initial or (preceded_by_s and token.ortho == "l") then
+            -- Hickey II.1.8: initial slender l/n are tensor/alveolar l̠ʲ/n̠ʲ.
+            -- Same for slender l after s/sh (ʃ): ʃl- onsets (sleán, Sligeach)
+            -- and medial -ʃl- (ísle, dísle, uaisle) keep the tense postalveolar
+            -- articulation — mirror of the broad s+l dental rule above.
             -- Skip grammatical words (prepositional pronouns, particles, etc.)
             -- also non-tensor sonorants (loanwords, etc.)
             local raw_word = context.word_ortho or ""
