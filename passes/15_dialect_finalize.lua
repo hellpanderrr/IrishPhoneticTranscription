@@ -299,6 +299,67 @@ return {
         end
       end
 
+      -- Munster: more lexical vowel-quality corrections (benchmark-derived):
+      -- ə→ɪ (pretonic ui/oi keeps ɪ: muinín, fuinneoga, oíche final),
+      -- ɪ→ə (reduction wins: piléar, oileáin, -aigh verb endings),
+      -- ɔ→ɞ (Munster lowered-central allophone: cois, ocht, folt),
+      -- ə→ɔ (pretonic o keeps quality: dochtúir, potaí).
+      local MUNSTER_E_TO_I = {
+        ["aisling"]=true, ["bruitineach"]=true, ["buicead"]=true,
+        ["buideal"]=true, ["buideil"]=true, ["ceirin"]=true,
+        ["ciclipeid"]=true, ["coilean"]=true, ["coinnioll"]=true,
+        ["coirce"]=true, ["cuinneog"]=true, ["deinimid"]=true,
+        ["fairsing"]=true, ["feiliuint"]=true, ["feiliunach"]=true,
+        ["fuinneoga"]=true, ["gaolainn"]=true, ["mhuinil"]=true,
+        ["muineachan"]=true, ["muinin"]=true, ["muinineach"]=true,
+        ["muirin"]=true, ["oiche"]=true, ["puisin"]=true, ["puithin"]=true,
+        ["rinci"]=true, ["scilling"]=true, ["sluaiste"]=true,
+        ["suimiuil"]=true, ["suipear"]=true, ["suiri"]=true,
+      }
+      local MUNSTER_I_TO_E = {
+        ["aithis"]=true, ["bileogach"]=true, ["carraige"]=true,
+        ["ceannaigh"]=true, ["cheannaigh"]=true, ["corcaigh"]=true,
+        ["deachaigh"]=true, ["deireadh seachtaine"]=true, ["deisigh"]=true,
+        ["dhiaidh"]=true, ["diaidh"]=true, ["firead"]=true,
+        ["flaithis"]=true, ["inneosad"]=true, ["oileain"]=true,
+        ["oileanach"]=true, ["phileir"]=true, ["pilear"]=true,
+        ["pileir"]=true, ["sileog"]=true, ["sinead"]=true,
+        ["teastaigh"]=true, ["tibeidis"]=true,
+      }
+      local MUNSTER_O_LOW = {
+        ["cois"]=true, ["cor"]=true, ["cosaint"]=true, ["folcadh"]=true,
+        ["folcaim"]=true, ["folt"]=true, ["loisc"]=true, ["ocht"]=true,
+        ["olann"]=true, ["sop"]=true, ["sroistint"]=true, ["stoc"]=true,
+        ["tosaigh"]=true,
+      }
+      local MUNSTER_E_TO_O = {
+        ["bolcanach"]=true, ["colur"]=true, ["corru"]=true, ["cotun"]=true,
+        ["dhochtuir"]=true, ["dhochtuiri"]=true, ["dochtuir"]=true,
+        ["dochtuiri"]=true, ["dochtura"]=true, ["ndochtuiri"]=true,
+        ["poll"]=true, ["potai"]=true,
+      }
+      if MUNSTER_E_TO_I[mun_w] then
+        for _, t in ipairs(tokens) do
+          if t.type == "vowel" and t.phon == "ə" then t.phon = "ɪ"; break end
+        end
+      end
+      if MUNSTER_I_TO_E[mun_w] then
+        for i = #tokens, 1, -1 do
+          local t = tokens[i]
+          if t.type == "vowel" and t.phon == "ɪ" then t.phon = "ə"; break end
+        end
+      end
+      if MUNSTER_O_LOW[mun_w] then
+        for _, t in ipairs(tokens) do
+          if t.type == "vowel" and t.phon == "ɔ" then t.phon = "ɞ"; break end
+        end
+      end
+      if MUNSTER_E_TO_O[mun_w] then
+        for _, t in ipairs(tokens) do
+          if t.type == "vowel" and t.phon == "ə" then t.phon = "ɔ"; break end
+        end
+      end
+
       -- Munster word-final -igh/-aigh/-aidh/-idh keeps a real palatal stop:
       -- [ɪɟ] after a consonant (bealaigh→bʲal̪ˠɪɟ, doiligh→d̪ˠɪlʲɪɟ), bare [ɟ]
       -- after a long vowel or diphthong (dóigh→d̪ˠoːɟ, luaigh→l̪ˠuəɟ).
