@@ -654,6 +654,24 @@ return {
         end
       end
     end
+    -- Step 8e: Word-final broad bh/mh → vˠ (mirror of 8d). Hickey II.1.7.2:
+    -- broad lenited labials retain fricative [vˠ] word-finally in these
+    -- lexical items instead of weakening to [w] (naomh, snámh, Cóbh, dealbh,
+    -- and the -arbh copula forms faoinarbh/inarbh/trínarbh...).
+    local FINAL_BH_W_TO_V = {
+      caomh=true, ciabh=true, cobh=true, dealbh=true, faoinarbh=true,
+      inarbh=true, lamh=true, murarbh=true, naomh=true, onarbh=true,
+      sealbh=true, shnamh=true, snamh=true, trinarbh=true, tsnamh=true,
+    }
+    if FINAL_BH_W_TO_V[lookup] then
+      for i = #tokens, 1, -1 do
+        local t = tokens[i]
+        if t.type == "cons" and (t.ortho == "bh" or t.ortho == "mh") and t.phon == "w" then
+          t.phon = "vˠ"
+          break
+        end
+      end
+    end
     -- Step 9: Function word overridess — replace ALL phonemes with hardcoded IPA.
     -- Must be the very last step so no further rules touch these tokens.
     -- Hickey II.3: grammatical words (proclitics, prepositions, particles)
