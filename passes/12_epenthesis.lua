@@ -94,7 +94,12 @@ return {
           end
           if context.word_ortho and epenthetic.ortho == "i" then
             local w = context.word_ortho:lower()
-            if w == "feirge" or w == "deirge" or w == "gairge" then
+            -- Slender r+g epenthesis takes ɪ, not ə, in -irg(e) words
+            -- (Hickey II.2.8: svarabhakti vowel copies frontness of the
+            -- flanking slender context). This also blocks final devoicing
+            -- ɟ→c in pass 14 Step 4, which requires preceding ə.
+            if w == "feirge" or w == "deirge" or w == "gairge" or
+               w:match("airg$") or w:match("eirg$") then
               epenthetic.phon = "\xc9\xaa"  -- ɪ
             end
           end
