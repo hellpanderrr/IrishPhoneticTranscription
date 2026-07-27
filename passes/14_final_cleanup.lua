@@ -994,15 +994,22 @@ return {
         end
 
         if hyphen_pos then
-          -- Rule 1: hyphen marks morpheme boundary
-          -- Count tokens, find the first vowel token at or after hyphen_pos
-          local past_hyphen = false
-          for _, t in ipairs(tokens) do
-            if t.ortho == "-" then
-              past_hyphen = true
-            elseif past_hyphen and t.type == "vowel" then
-              if not t.stress then t.secondary = true end
-              break
+          -- Rule 1: hyphen marks morpheme boundary — but only in true
+          -- compounds. Skip: leading-hyphen suffix entries (-úint, -ígí),
+          -- trailing-hyphen prefixes (teicni-), and mutation prefixes
+          -- t-/n-/h- (t-aos, n-éidí) where the hyphen is grammar, not
+          -- morphology.
+          local wo = context.word_ortho or ""
+          local is_mutation_prefix = wo:match("^[tnh]%-") ~= nil
+          if hyphen_pos > 1 and not wo:match("%-$") and not is_mutation_prefix then
+            local past_hyphen = false
+            for _, t in ipairs(tokens) do
+              if t.ortho == "-" then
+                past_hyphen = true
+              elseif past_hyphen and t.type == "vowel" then
+                if not t.stress then t.secondary = true end
+                break
+              end
             end
           end
         elseif COMPOUND_REVERSE[word_lookup] then
