@@ -34,6 +34,15 @@ return {
       local is_slender = vowel.ortho == "e" or vowel.ortho == "i" or vowel.ortho == "ea"
       local was_vocalized = false
 
+      -- Munster: unstressed V+bh/mh keeps consonantal [vˠ] — no vocalization
+      -- (talamh [t̪ˠɑləvˠ], breitheamh [ˈbʲɾʲɪhəvˠ], amháin [əˈvˠɑːnʲ]).
+      -- Hickey II.1.7.2: the South retains labiodental friction; vocalization
+      -- of unstressed -amh/-eamh is a Connacht/Ulster development.
+      if context.dialect == "munster" and not vowel.stress and
+         (fricative.ortho == "bh" or fricative.ortho == "mh") then
+        goto continue
+      end
+
       -- Hickey II.1.9.9.1: V+bh/mh → /əu əi/ — historical /v/ absorbed into vowel
       --   (leabhar→[lʲauɾˠ], samhradh→[sˠauɾˠə])
       if vowel.ortho == "ea" and (fricative.ortho == "bh" or fricative.ortho == "mh") then

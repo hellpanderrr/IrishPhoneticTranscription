@@ -523,10 +523,34 @@ return {
         mall=true, mhall=true, ngeall=true, gheall=true, breall=true,
         ["i ngeall ar"]=true, ["mar gheall ar go"]=true,
       }
-      if context.is_monosyllabic then
+      -- Ulster keeps the short vowel before historical geminates
+      -- (Hickey II.1.8.6: am [amˠ], ceann [can̪ˠ], donn [d̪ˠʌn̪ˠ])
+      if context.is_monosyllabic and context.dialect ~= "ulster" then
         local pv = tokens[i - 1]
         if pv and pv.type == "vowel" then
           local ortho = pv.ortho
+          -- Munster (Hickey II.1.8.6): compensation is DIPHTHONGIZATION, not
+          -- plain lengthening: ceann [cɑun̪ˠ], poll [pˠəul̪ˠ], am [aumˠ].
+          if context.dialect == "munster" then
+            local lookup = context.word_ortho or ""
+            if not LENGTHEN_EXCEPTIONS[lookup] then
+              if ortho == "ea" or ortho == "a" then
+                pv.phon = "au"
+                pv.source = "sonorant_lengthening"
+              elseif ortho == "o" then
+                pv.phon = "əu"
+                pv.source = "sonorant_lengthening"
+              elseif ortho == "u" then
+                pv.phon = "uː"
+                pv.source = "sonorant_lengthening"
+              elseif ortho == "i" then
+                -- Hickey II.1.9: ill → South [iːlʲ] (cill [ciːlʲ])
+                pv.phon = "iː"
+                pv.source = "sonorant_lengthening"
+              end
+            end
+            goto munster_geminate_done
+          end
           if ortho == "ea" or ortho == "a" then
             -- Skip lengthening for lexical exceptions
             local lookup = context.word_ortho or ""
@@ -547,6 +571,7 @@ return {
             pv.phon = "uː"
             pv.source = "sonorant_lengthening"
           end
+          ::munster_geminate_done::
         end
       end
 
@@ -625,6 +650,38 @@ return {
 
       ::next_len::
     end
+
+    -- Munster ɪ-lengthening before heavy nasal/lateral clusters (Hickey
+    -- II.1.9: high front vowels lengthen before tense sonorants in the South
+    -- even outside monosyllables): suim [sˠiːmʲ], tinte [tʲiːnʲtʲə],
+    -- inse [ˈiːnʲʃə], fillfidh.
+    if context.dialect == "munster" then
+      for i, t in ipairs(tokens) do
+        if t.type == "vowel" and t.phon == "ɪ" then
+          -- collect following consonant orthos up to next vowel/boundary
+          local seq = {}
+          local j = i + 1
+          while tokens[j] and tokens[j].type == "cons" and #seq < 3 do
+            table.insert(seq, tokens[j].ortho or "")
+            j = j + 1
+          end
+          local after = tokens[j]  -- vowel, boundary, or nil
+          local word_final = (after == nil) or (after.type == "boundary")
+          if #seq == 1 and seq[1] == "m" and word_final then
+            t.phon = "iː"
+          elseif #seq >= 2 and seq[1] == "n" and (seq[2] == "t" or seq[2] == "s") then
+            t.phon = "iː"
+          elseif #seq >= 3 and seq[1] == "n" and seq[2] == "n" and seq[3] == "s" then
+            t.phon = "iː"
+          elseif #seq >= 3 and seq[1] == "l" and seq[2] == "l" then
+            t.phon = "iː"
+          end
+        end
+      end
+    end
+
+    -- (Munster sonorant notation normalization moved to pass 15
+    -- dialect_finalize so pass-14-created sonorants are covered.)
 
     return tokens
   end,

@@ -10,6 +10,10 @@ return {
   writes_context = false,
 
   run = function(tokens, context)
+    -- Hickey II.1.7.2 / Ch.I 2.3: broad bh/mh weakening to [w] is a
+    -- Connacht/Ulster feature; Munster retains labiodental friction [vˠ]
+    -- (bhog: N/W [wʌɡ] vs S [vʌɡ]).
+    local WEAK_BH = (context.dialect == "munster") and "vˠ" or "w"
     for i, token in ipairs(tokens) do
       if token.type ~= "cons" then goto continue end
       -- Skip tokens already silenced or vocalized by earlier passes
@@ -40,10 +44,10 @@ return {
                  vowel_after.ortho == "a" then
                 token.phon = "vˠ"
               else
-                token.phon = "w"
+                token.phon = WEAK_BH
               end
             else
-              token.phon = "w"
+              token.phon = WEAK_BH
             end
           else
             -- Hickey II.1.7.2: non-initial broad mh/bh retained as [v] before
@@ -60,7 +64,7 @@ return {
                and not W_BEFORE_C[word_ortho] then
               token.phon = "vˠ"  -- before consonant = coda (retained)
             else
-              token.phon = "w"    -- before vowel or word-final -> weakened
+              token.phon = WEAK_BH    -- before vowel or word-final -> weakened
             end
           end
         else
@@ -71,7 +75,11 @@ return {
           -- Hickey II.1.7.2: slender ch → [ç] after front V, [c] word-initially;
           -- after back V/without front context → [h]. Broad ch → [x].
           local prev_v = tokens[i - 1]
-          if prev_v and prev_v.type == "vowel" then
+          -- Munster: slender ch weakens to [h] after a vowel (fiche [ˈfʲɪhə],
+          -- dícheall [ˈdʲiːhəl̪ˠ]) — FG Ch.5: intervocalic lenition of xʲ.
+          if context.dialect == "munster" and prev_v and prev_v.type == "vowel" then
+            token.phon = "h"
+          elseif prev_v and prev_v.type == "vowel" then
             -- Check ortho for front vowel: simple i/e/í/é or digraphs
             -- ending in i (ai/aoi/ei/oi/ui etc. - palatal offglide = front context)
             local b1 = (prev_v.ortho:byte(1) or 0)
@@ -163,7 +171,7 @@ return {
             elseif not nxt then
               token.phon = "vˠ"  -- word-final = coda
             else
-              token.phon = "w"    -- before vowel = onset -> weakened
+              token.phon = WEAK_BH    -- before vowel = onset -> weakened
             end
       -- Hickey II.1.7.2: s does NOT palatalize before labials (sméar→[sˠmʲeːɾˠ], not *[ʃmʲeːɾˠ])
       elseif token.ortho == "s" then

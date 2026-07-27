@@ -40,7 +40,12 @@ return {
       ["-eáil"]=true,["-ail"]=true,["-eal"]=true,["-ógra"]=true,["-úint"]=true,
       ["-aint"]=true,["-im"]=true,["-inn"]=true,["-mid"]=true,["-ne"]=true,
       ["-se"]=true,["-tar"]=true,["-fimid"]=true,["-fimis"]=true,["-finn"]=true,
-      ["-ófá"]=true,["-ófar"]=true,["-igí"]=true,["-imis"]=true,a=true,["a'"]=true,["a-"]=true,["ab"]=true,ach=true,["ad"]=true,
+      ["-ófá"]=true,["-ófar"]=true,["-igí"]=true,["-imis"]=true,
+      -- Suffix forms that lack lexical stress — must match with fadas intact
+      ["-íteá"]=true,["-ítear"]=true,["-óimis"]=true,["-óimid"]=true,
+      ["-fidís"]=true,["-óidís"]=true,["-imid"]=true,["-ímid"]=true,
+      ["-ófaí"]=true,["-ítí"]=true,["-ígí"]=true,["-ídís"]=true,["-ímis"]=true,
+      a=true,["a'"]=true,["a-"]=true,["ab"]=true,ach=true,["ad"]=true,
       ["ag"]=true,["an"]=true,["ar"]=true,["as"]=true,["ba"]=true,["bh"]=true,["bhf"]=true,
       ["am"]=true,["ch"]=true,de=true,["do"]=true,["dh"]=true,["dh'"]=true,["go"]=true,["gh"]=true,
       ["i"]=true,["is"]=true,["le"]=true,["mar"]=true,["mh"]=true,["ní"]=true,
@@ -59,6 +64,53 @@ return {
       -- these are grammatical/verbal function words without lexical stress.
       ["d'ith"]=true,["d'fhág"]=true,["d'fhás"]=true,["d'alt"]=true,
       ["d'iarr"]=true,["d'fhuaigh"]=true,["b'fhearr"]=true,
+    }
+
+    -- Monosyllabic content words that need primary stress (benchmark expected).
+    -- Many are 1-vowel content words (nouns, verbs) that pass 02 skips by
+    -- default because the blanket seg_vc <= 1 rule caused ~1400 regressions.
+    -- Hickey II.3: monosyllabic content words carry lexical stress on the only vowel.
+    local MONOSYLLABIC_STRESS = {
+      ["ailm"]=true,["airg"]=true,["aoibh"]=true,["aoir"]=true,
+      ["cealg"]=true,["ceilg"]=true,["chealg"]=true,["cholm"]=true,
+      ["chuan"]=true,["cheibh"]=true,["chid"]=true,["chir"]=true,
+      ["chung"]=true,["cian"]=true,["claiomh"]=true,["colg"]=true,
+      ["colm"]=true,["croiuil"]=true,["crua-ae"]=true,["cruan"]=true,
+      ["cuan"]=true,["cib"]=true,["cid"]=true,["cim"]=true,
+      ["daid"]=true,["dealbh"]=true,["dearg"]=true,["deilbh"]=true,
+      ["dein"]=true,["deis"]=true,["dhearg"]=true,["dhil"]=true,
+      ["did"]=true,["dil"]=true,["dtarbh"]=true,["duadh"]=true,
+      ["duais"]=true,["duas"]=true,["duan"]=true,["diog"]=true,
+      ["durt"]=true,["feac"]=true,["feilm"]=true,["feirg"]=true,
+      ["feirm"]=true,["fhian"]=true,["fhranc"]=true,["fhuail"]=true,
+      ["fhag"]=true,["fiach"]=true,["fian"]=true,["franc"]=true,
+      ["fuail"]=true,["faisc"]=true,["gairm"]=true,["garg"]=true,
+      ["gceibh"]=true,["gearb"]=true,["gearg"]=true,["ghoir"]=true,
+      ["gin"]=true,["glinn"]=true,["gorm"]=true,["gram"]=true,
+      ["grua"]=true,["grast"]=true,["griobh"]=true,["groig"]=true,
+      ["harm"]=true,["havais"]=true,["iur"]=true,["leamh"]=true,
+      ["leirg"]=true,["lig"]=true,["linbh"]=true,["lorg"]=true,
+      ["luain"]=true,["mairbh"]=true,["mairg"]=true,["marbh"]=true,
+      ["marg"]=true,["mbaint"]=true,["mbad"]=true,["mbios"]=true,
+      ["meadhg"]=true,["meirg"]=true,["meann"]=true,["mhairbh"]=true,
+      ["mharbh"]=true,["min"]=true,["mion"]=true,["morg"]=true,
+      ["muis"]=true,["naion"]=true,["ndisc"]=true,["neon"]=true,
+      ["ngram"]=true,["nuai"]=true,["nuaiocht"]=true,["nas"]=true,
+      ["nin"]=true,["panc"]=true,["pas"]=true,["pleidhc"]=true,
+      ["pai"]=true,["piob"]=true,["raon"]=true,["rian"]=true,
+      ["rud"]=true,["ruan"]=true,["ruog"]=true,["reir"]=true,
+      ["riog"]=true,["riuil"]=true,["roimh"]=true,["ron"]=true,
+      ["salm"]=true,["scar"]=true,["seal"]=true,["sealbh"]=true,
+      ["sealg"]=true,["searbh"]=true,["seilbh"]=true,["seilg"]=true,
+      ["seinm"]=true,["sheal"]=true,["shli"]=true,["siog"]=true,
+      ["slea"]=true,["slis"]=true,["sli"]=true,["smior"]=true,
+      ["smut"]=true,["smur"]=true,["stoc"]=true,["stoirm"]=true,
+      ["steic"]=true,["steig"]=true,["seu"]=true,["tairbh"]=true,
+      ["tairg"]=true,["tarbh"]=true,["tchim"]=true,["tchionn"]=true,
+      ["teilg"]=true,["thairg"]=true,["thraoith"]=true,["threabh"]=true,
+      ["thug"]=true,["toirbh"]=true,["tolg"]=true,["traoith"]=true,
+      ["treabh"]=true,["truig"]=true,["tsealg"]=true,["tseilbh"]=true,
+      ["tseilg"]=true,["tslis"]=true,["tur"]=true,["uaimh"]=true,
     }
 
     -- Process each word segment independently.
@@ -143,6 +195,22 @@ return {
           end
         end
         if #segments == 1 then seg_is_monosyllabic = true end
+        -- Lexical override: some monosyllabic content words need primary stress
+        -- even though they have only one vowel (the skip-eifs loop aboves
+        -- doesn't set stress for single-segment words with seg_vc = 1).
+        -- Hickey II.3: lexical stress falls on the first syllable — for
+        -- monosyllabic content words this means the only vowel.
+        if #segments == 1 and seg_vc <= 1 then
+          local lookup = S.strip_fadas(ortho:lower())
+          if MONOSYLLABIC_STRESS[lookup] then
+            for _, t in ipairs(seg) do
+              if t.type == "vowel" then
+                t.stress = true
+                break
+              end
+            end
+          end
+        end
         goto next_seg
       end
 
@@ -210,6 +278,56 @@ return {
       -- Connacht/Ulster (Munster differs — stress attracted to long vowels)
       local stress_index = S.vowel_token_index(seg)
       if not stress_index then goto next_seg end
+
+      -- Munster stress attraction (Hickey II.3, FG Ch.5):
+      --   1. Long vowel/diphthong in σ2 attracts stress (cailín [kaˈlʲiːnʲ]);
+      --      when σ1 and σ2 are both long, stress still falls on σ2
+      --      (crúibín [kɾˠuːˈbʲiːnʲ], ordú [oːɾˠˈd̪ˠuː] — Ó Sé/benchmark).
+      --   2. σ1..σ2 short + long σ3 → stress σ3 (ceannasaí [canˠəˈsˠiː]).
+      --   3. Short σ1 + -(e)ach(t) in σ2 attracts stress unless the σ2 onset
+      --      is a sonorant r/l/n/h (portach [pəɾˠˈt̪ˠɑx] vs ocrach [ˈɔkɾˠəx]).
+      if context.dialect == "munster" and seg_vc >= 2 then
+        local nuclei = {}
+        for i, t in ipairs(seg) do
+          if t.type == "vowel" then table.insert(nuclei, i) end
+        end
+        local LONG_DIGRAPHS = { ao=true, aoi=true, ae=true, eo=true, eoi=true,
+                                ia=true, iai=true, ua=true, uai=true }
+        local function is_long(k)
+          local t = seg[nuclei[k]]
+          if not t then return false end
+          local ol = (t.ortho or ""):lower()
+          -- any fada vowel marks length; otherwise known long digraphs
+          if S.strip_fadas(ol) ~= ol then return true end
+          return LONG_DIGRAPHS[ol] or false
+        end
+        local target = nil
+        if #nuclei >= 2 and is_long(2) then
+          target = 2
+        elseif #nuclei >= 3 and not is_long(1) and not is_long(2) and is_long(3) then
+          target = 3
+        elseif #nuclei >= 2 and not is_long(1) then
+          local ol = ortho:lower()
+          if seg_vc == 2 and (ol:match("acht?$") or ol:match("eacht?$")) then
+            local onset = seg[nuclei[2] - 1]
+            local oc = (onset and onset.type == "cons") and onset.ortho:lower() or ""
+            if oc ~= "r" and oc ~= "l" and oc ~= "n" and oc ~= "h" and oc ~= "" then
+              target = 2
+            end
+          end
+        end
+        -- Verbal inflection endings resist attraction (Ó Sé): synthetic
+        -- person/autonomous suffixes keep root-initial stress even with a
+        -- long vowel (freastalaím [ˈfʲɾʲasˠt̪ˠəlˠiːmʲ], d'fhágfaí, gabhaidís).
+        if target then
+          local ol2 = ortho:lower()
+          if ol2:match("ím$") or ol2:match("faí$") or ol2:match("fí$") or
+             ol2:match("idís$") or ol2:match("imís$") then
+            target = nil
+          end
+        end
+        if target then stress_index = nuclei[target] end
+      end
 
       -- Stress stays on the vowel. render_output moves the stress mark to the
       -- onset consonant for IPA rendering. Shifting to consonant here

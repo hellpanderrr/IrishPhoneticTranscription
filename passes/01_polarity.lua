@@ -11,8 +11,11 @@ return {
 
   run = function(tokens, context)
     -- Simplify initial clusters (cn→cr, gn→gr, etc.) before polarity assignment
-    -- Hickey II.2.2: cluster simplification — /kn/, /ɡn/, /tn/, /mn/ reduced
-    if #tokens >= 2 and tokens[1].type == "cons" and tokens[2].type == "cons" then
+    -- Hickey II.2.2/2.3: the sonorant shift n→r in stop+n onsets is a
+    -- Western/Northern feature; Munster keeps [kn-], [ɡn-], [mn-]
+    -- (mná: W [mˠɾˠaː] vs S [mˠnˠɑː]).
+    if context.dialect ~= "munster" and
+       #tokens >= 2 and tokens[1].type == "cons" and tokens[2].type == "cons" then
       local shift = S.INITIAL_CLUSTER_SHIFTS[tokens[1].ortho .. tokens[2].ortho]
       if shift then
         tokens[1].ortho = shift[1]

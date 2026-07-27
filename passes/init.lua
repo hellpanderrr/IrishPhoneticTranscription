@@ -19,9 +19,10 @@ passes[13] = require("passes.11_unstressed_reduction")
 passes[14] = require("passes.12_epenthesis")
 passes[15] = require("passes.13_sonorants")
 passes[16] = require("passes.14_final_cleanup")
+passes[17] = require("passes.15_dialect_finalize")
 
 local function run_all(tokens, context)
-  for i = 1, 16 do
+  for i = 1, #passes do
     tokens = passes[i].run(tokens, context)
   end
   return tokens
