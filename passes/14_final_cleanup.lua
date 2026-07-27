@@ -898,6 +898,92 @@ return {
       end
       end
     end
+
+    -- Step 11: Lexical stress repositioning for single words.
+    -- Hickey II.3: loanwords and fossilized compounds carry non-initial
+    -- primary stress (fadó, giotár, basún, dáiríre); transparent compounds
+    -- carry secondary stress on the second root (úrscéal, saorstát).
+    -- Value = vowel index (1-based, counted over non-epenthetic vowel tokens
+    -- with non-empty phon) that receives the mark.
+    if context.word_ortho and not context.word_ortho:find(" ") then
+      local w_lookup = S.strip_fadas(S.normalize_ortho(context.word_ortho))
+      local PRIMARY_ON_N = {
+        -- loanword/adverb non-initial primary stress
+        ["fado"]=2, ["giotar"]=2, ["basun"]=2, ["abuise"]=2,
+        ["dairire"]=2, ["dhairire"]=2, ["babloinia"]=2,
+        ["lastuas"]=2, ["lastuaidh"]=2,
+        ["drochshuil"]=2, ["drochmhuinte"]=2, ["dea-bheasach"]=2,
+        ["eadrocaireach"]=2,
+      }
+      -- Spec {v=N, onset=K}: mark goes before the K consonant tokens
+      -- preceding the N-th vowel (K = onset length of the second root —
+      -- the default render onset-walk over-reaches across the first root's
+      -- coda in compounds: úrscéal is uːɾˠ|ʃceːlˠ, not uː|ɾˠʃceːlˠ).
+      local SECONDARY_ON_N = {
+        ["ursceal"]={v=2, onset=2}, ["saorstat"]={v=2, onset=2},
+        ["taoschno"]={v=2, onset=2}, ["dicheilli"]={v=2, onset=1},
+        ["griando"]={v=2, onset=1}, ["fionnuar"]={v=2, onset=0},
+        ["fiafheoil"]={v=2, onset=0}, ["athfhas"]={v=2, onset=1},
+        ["mucar"]={v=2, onset=1}, ["broc-chu"]={v=2, onset=1},
+        ["ardchlar"]={v=2, onset=2}, ["teadchlar"]={v=2, onset=2},
+        ["ardghlorach"]={v=2, onset=2}, ["geaglaidre"]={v=2, onset=1},
+        ["mimhuinte"]={v=2, onset=1}, ["aerostach"]={v=2, onset=0},
+        ["acastoir"]={v=2, onset=1}, ["cocarail"]={v=3, onset=1},
+        ["caithirin"]={v=3, onset=1},
+      }
+      local prim_n = PRIMARY_ON_N[w_lookup]
+      local sec_spec = SECONDARY_ON_N[w_lookup]
+      if prim_n or sec_spec or w_lookup == "deardaoin" then
+        -- Collect real vowel tokens with their positions (skip silent phons)
+        local vowels = {}
+        for idx, t in ipairs(tokens) do
+          if t.type == "vowel" and t.phon and t.phon ~= "" then
+            table.insert(vowels, { tok = t, pos = idx })
+          end
+        end
+        -- Find the mark-carrier token: walk back `onset` consonant tokens
+        local function mark_target(spec)
+          local v = vowels[spec.v]
+          if not v then return nil end
+          local target = v.tok
+          local remaining = spec.onset
+          local j = v.pos - 1
+          while remaining > 0 and j >= 1 do
+            local t = tokens[j]
+            if t.type == "cons" and t.phon and t.phon ~= "" then
+              target = t
+              remaining = remaining - 1
+            elseif t.type == "boundary" then
+              break
+            end
+            j = j - 1
+          end
+          return target
+        end
+        if prim_n and vowels[prim_n] then
+          for _, t in ipairs(tokens) do t.stress = false end
+          vowels[prim_n].tok.stress = true
+        end
+        if sec_spec then
+          local target = mark_target(sec_spec)
+          if target then
+            target.secondary = true
+            target.stress_no_walk = true
+          end
+        end
+        -- Déardaoin: ˌ on first syllable, ˈ on second (dʲeːɾˠ|d̪ˠiːnʲ)
+        if w_lookup == "deardaoin" and vowels[1] and vowels[2] then
+          for _, t in ipairs(tokens) do t.stress = false; t.secondary = false; t.stress_no_walk = nil end
+          vowels[1].tok.secondary = true
+          local target = mark_target({v=2, onset=1})
+          if target then
+            target.stress = true
+            target.stress_no_walk = true
+          end
+        end
+      end
+    end
+
     return tokens
   end,
 }
