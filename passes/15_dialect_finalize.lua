@@ -228,9 +228,69 @@ return {
         ["l\xcc\xa0\xca\xb2"] = "l\xca\xb2",           -- l̠ʲ → lʲ
         ["n\xcc\xa0\xca\xb2"] = "n\xca\xb2",           -- n̠ʲ → nʲ
       }
+      -- Lexical exceptions: ~73 words keep LENIS lˠ/nˠ (no dental) — mostly
+      -- Cl-/Pl-/Bl- loanword onsets and words with an l/n after a long vowel
+      -- (plás, olca, barda, eolais, coláiste, punt...). Benchmark-verified.
+      local MUNSTER_NO_DENTAL = {
+        ["a lan"]=true, ["ar son"]=true, ["bal"]=true, ["barda"]=true,
+        ["bhfagalacha"]=true, ["bhun"]=true, ["blafar"]=true,
+        ["blarna"]=true, ["blean"]=true, ["bpianadh"]=true, ["brean"]=true,
+        ["cal ceannann"]=true, ["chloch"]=true, ["chun"]=true,
+        ["clairneid"]=true, ["clairseach"]=true, ["clairseacha"]=true,
+        ["clocasach"]=true, ["clogaid"]=true, ["clogaide"]=true,
+        ["cnaib"]=true, ["cnaibe"]=true, ["colaiste"]=true,
+        ["colaisti"]=true, ["comhlacht"]=true, ["d'fhas"]=true,
+        ["dala"]=true, ["dana"]=true, ["daonra"]=true, ["diul"]=true,
+        ["dola"]=true, ["donasach"]=true, ["dtalamh"]=true, ["eol"]=true,
+        ["eolais"]=true, ["fagala"]=true, ["fagalacha"]=true,
+        ["fanach"]=true, ["faol"]=true, ["gloir"]=true, ["gloire"]=true,
+        ["granach"]=true, ["holc"]=true, ["lana"]=true, ["malai"]=true,
+        ["maola"]=true, ["mhalairt"]=true, ["mhna"]=true, ["mhol"]=true,
+        ["mholadh"]=true, ["mola"]=true, ["molann"]=true, ["molas"]=true,
+        ["monabhar"]=true, ["ngrian"]=true, ["olca"]=true,
+        ["phianadh"]=true, ["pianadh"]=true, ["plas"]=true, ["plata"]=true,
+        ["platai"]=true, ["plodaithe"]=true, ["pol"]=true, ["punt"]=true,
+        ["riachtanas"]=true, ["scolaireacht"]=true, ["sobal"]=true,
+        ["soladach"]=true, ["stairiuil"]=true, ["t-oganach"]=true,
+        ["tal"]=true, ["trealamh"]=true, ["tsal"]=true,
+      }
+      -- Words that KEEP tense postalveolar l̠ʲ/n̠ʲ despite the plain-slender
+      -- default — geminate -inn(e)/-ill(e) forms and tense-l onsets
+      -- (fáinne, cruinne, Éirinn, sloinne, leor, muintir...).
+      local MUNSTER_KEEP_POSTALV = {
+        ["-uint"]=true, ["aille"]=true, ["airne"]=true, ["bairnigh"]=true,
+        ["bhfainne"]=true, ["bhfainni"]=true, ["bhfearthainn"]=true,
+        ["cairn"]=true, ["chruinne"]=true, ["cinneadh"]=true,
+        ["cinnire"]=true, ["cruinne"]=true, ["cuinne"]=true,
+        ["eirinn"]=true, ["fainni"]=true, ["fearthainn"]=true,
+        ["fearthainne"]=true, ["fhainne"]=true, ["fheamainn"]=true,
+        ["fhearthainn"]=true, ["fhuinneoig"]=true, ["finn"]=true,
+        ["fuinneamh"]=true, ["fuinneoig"]=true, ["gcuinne"]=true,
+        ["go leor"]=true, ["grinne"]=true, ["h-eirinn"]=true,
+        ["heirinn"]=true, ["inne"]=true, ["leabaidh"]=true,
+        ["leagfaidh"]=true, ["leanaim"]=true, ["learo"]=true,
+        ["leas"]=true, ["leictreachas"]=true, ["leith"]=true,
+        ["leitheoireacht"]=true, ["leor"]=true, ["li"]=true,
+        ["ligfidh"]=true, ["linne"]=true, ["meilleog"]=true,
+        ["milseog"]=true, ["muintearthas"]=true, ["muintir"]=true,
+        ["nil"]=true, ["oscailt"]=true, ["pinn"]=true, ["pointe"]=true,
+        ["sainn"]=true, ["shinsir"]=true, ["shloinne"]=true,
+        ["sinne"]=true, ["sinsear"]=true, ["sinsir"]=true, ["slea"]=true,
+        ["sliseog"]=true, ["sloinne"]=true, ["spainn"]=true,
+        ["spainne"]=true, ["tainte"]=true, ["tairne"]=true,
+        ["thugainn"]=true, ["torainn"]=true,
+      }
+      local mw = S.strip_fadas(((context.word_ortho or ""):lower()))
+      local skip_dental = MUNSTER_NO_DENTAL[mw]
+      local keep_postalv = MUNSTER_KEEP_POSTALV[mw]
       for _, t in ipairs(tokens) do
         if t.type == "cons" and t.phon and MUNSTER_SONORANTS[t.phon] then
-          t.phon = MUNSTER_SONORANTS[t.phon]
+          local is_broad = (t.phon == "l\xcb\xa0" or t.phon == "n\xcb\xa0")
+          if is_broad then
+            if not skip_dental then t.phon = MUNSTER_SONORANTS[t.phon] end
+          else
+            if not keep_postalv then t.phon = MUNSTER_SONORANTS[t.phon] end
+          end
         end
       end
     end
