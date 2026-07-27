@@ -612,9 +612,14 @@ return {
           local prev_broad = prv and prv.type == "cons" and prv.palatal == false
           local no_prev_cons = not (prv and prv.type == "cons")
           local next_broad = not (nxt and nxt.type == "cons" and nxt.palatal == true)
+          -- Pretonic (unstressed first-syllable) a before a PALATAL coda
+          -- keeps front [a] (bairéad [bˠaˈɾʲeːd̪ˠ], cathú [kaˈhuː] via th);
+          -- benchmark bucket ɑ»a = 71 errors from backing these.
+          local pretonic_slender = (not token.stress) and (not context.is_monosyllabic)
+            and nxt and nxt.type == "cons" and (nxt.palatal == true or nxt.ortho == "th")
           -- broad onset backs unconditionally (cailín [kɑˈlʲiːnʲ]);
           -- onsetless a backs only before a broad coda (easna vs aistriú)
-          if prev_broad or (no_prev_cons and next_broad) then
+          if (prev_broad or (no_prev_cons and next_broad)) and not pretonic_slender then
             token.phon = "ɑ"
           end
         end
