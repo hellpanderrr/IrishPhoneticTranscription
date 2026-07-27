@@ -394,6 +394,16 @@ return {
         end
       end
     end
+    -- Step 4f2: aí digraph must stay long [iː] — pass 11 sometimes reduces
+    -- it when the token lost its length mark (greamaím→ɟɾʲamˠiːmʲ,
+    -- feadaíl→fʲad̪ˠiːlʲ, Carghas class). The aí/ai+fada digraph is
+    -- inherently long (Hickey II.1.9); restore any ə whose ortho is aí/í.
+    for _, token in ipairs(tokens) do
+      if token.type == "vowel" and token.phon == "ə" and
+         (token.ortho == "aí" or token.ortho == "í") then
+        token.phon = "iː"
+      end
+    end
     -- Step 4o: Add missing -igh entries to IGH_RESTORE that end up as ɪ not ə.
     -- These were added because the original check only caught phon == "ə", but
     -- many -igh words end up with ɪ (short i) instead of ə (schwa).

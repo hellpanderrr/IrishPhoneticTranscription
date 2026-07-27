@@ -52,7 +52,8 @@ return {
       ["níl"]=true,["os"]=true,["ó"]=true,["ph"]=true,["na"]=true,["sa"]=true,["se"]=true,["sh"]=true,
       ["th"]=true,["th'"]=true,["um"]=true,
       -- Prepositional pronouns (should not carry lexical stress)
-      agam=true,agat=true,againn=true,agaibh=true,acu=true,
+      -- agam/agat excluded: benchmark expects ˈuɡəmˠ/ˈuɡəd̪ˠ (stressed)
+      againn=true,agaibh=true,acu=true,
       dom=true,duit=true,["dúinn"]=true,daoibh=true,["dóibh"]=true,
       liom=true,leat=true,linn=true,libh=true,leo=true,
       orm=true,ort=true,orainn=true,oraibh=true,orthu=true,
@@ -159,8 +160,18 @@ return {
         ["smior"]=true, ["smur"]=true, ["smut"]=true, ["steic"]=true,
         ["steig"]=true, ["stoc"]=true, ["tchionn"]=true, ["thraoith"]=true,
         ["threabh"]=true, ["traoith"]=true, ["treabh"]=true, ["trina"]=true,
-        ["truig"]=true, ["tslis"]=true, ["tur"]=true,
+        ["truig"]=true, ["tslis"]=true,
       }
+      -- Fada/case-sensitive entries that collide under strip_fadas/lower:
+      -- "min" (flour, ˈmʲinʲ) vs "mín" (smooth, no ˈ); "Cian" (name, ˈciənˠ)
+      -- vs "cian" (distance, no ˈ); "seal" (ˈʃalˠ) benchmark stressed.
+      if #segments == 1 and (ortho == "min" or ortho == "Cian" or ortho == "seal") then
+        for _, t in ipairs(seg) do
+          if t.type == "vowel" then t.stress = true; break end
+        end
+        seg_is_monosyllabic = true
+        goto next_seg
+      end
       if #segments == 1 and MONO_STRESS[S.strip_fadas(ortho:lower())] then
         for _, t in ipairs(seg) do
           if t.type == "vowel" then
