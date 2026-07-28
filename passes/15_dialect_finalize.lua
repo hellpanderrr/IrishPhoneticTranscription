@@ -134,6 +134,28 @@ return {
         end
       end
 
+      -- Ulster: pre-consonantal ch in -cht weakens to [h] in a lexical set
+      -- (Oireachtas→eɾʲaht̪ˠəsˠ, eisceacht, dorchacht — 12 vs 121 keeping
+      -- [xt]). Hickey I.2.3 describes Northern coda-ch weakening (his [rt]
+      -- reflex for W. Ulster; the benchmark's Donegal variety has [ht]).
+      local CHT_TO_H = {
+        ["aidiacht"]=true, ["bearloireacht"]=true, ["bhreoiteacht"]=true,
+        ["breoiteacht"]=true, ["comhlacht"]=true, ["dorchacht"]=true,
+        ["duiseacht"]=true, ["eisceacht"]=true, ["ghniomhaiocht"]=true,
+        ["gniomhaiocht"]=true, ["oireachtas"]=true, ["scolaireacht"]=true,
+      }
+      if CHT_TO_H[w_ach_nf] then
+        for i = 1, #tokens - 1 do
+          local t = tokens[i]
+          local nxt = tokens[i + 1]
+          if t.type == "cons" and t.ortho == "ch" and t.phon == "x" and
+             nxt and nxt.type == "cons" and nxt.ortho == "t" then
+            t.phon = "h"
+            break
+          end
+        end
+      end
+
       -- Ulster: ɪ centralizes to [ɨ̞] in a lexical set (fios, siopa, milis,
       -- imirt, io-spellings and i before broad C — Hickey I.2.3 Ulster high
       -- central vowel). Benchmark split lexical.
