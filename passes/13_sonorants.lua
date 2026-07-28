@@ -525,15 +525,37 @@ return {
       }
       -- Ulster keeps the short vowel before historical geminates
       -- (Hickey II.1.8.6: am [amˠ], ceann [can̪ˠ], donn [d̪ˠʌn̪ˠ])
-      if context.is_monosyllabic and context.dialect ~= "ulster" then
+      -- Munster diphthongizes in POLYSYLLABLES too (gheallta [jaul̪ˠt̪ˠə],
+      -- meallfaidh [mʲaul̪ˠhə]); Connacht/Ulster lengthening stays
+      -- monosyllable-only. LENGTHEN_EXCEPTIONS encodes the Connacht short-
+      -- vowel words (mall, gheall) — Munster diphthongizes those as well.
+      -- Munster conditions: only the CLOSED-syllable geminate diphthongizes
+      -- (word-final or pre-consonant). Intervocalic geminates keep the
+      -- short vowel (mallaigh [mˠɑl̪ˠɪɟ], bearradh [bʲaɾˠə]); rr lengthens
+      -- to [ɑː] instead of breaking (barr [bˠɑːɾˠ], gearr [ɟɑːɾˠ]).
+      local mun_closed = context.dialect == "munster" and
+        not (after_pair and after_pair.type == "vowel" and
+             after_pair.phon and after_pair.phon ~= "")
+      if (context.is_monosyllabic or (context.dialect == "munster" and mun_closed))
+         and context.dialect ~= "ulster" then
         local pv = tokens[i - 1]
         if pv and pv.type == "vowel" then
           local ortho = pv.ortho
           -- Munster (Hickey II.1.8.6): compensation is DIPHTHONGIZATION, not
           -- plain lengthening: ceann [cɑun̪ˠ], poll [pˠəul̪ˠ], am [aumˠ].
           if context.dialect == "munster" then
-            local lookup = context.word_ortho or ""
-            if not LENGTHEN_EXCEPTIONS[lookup] then
+            -- Only stressed vowels diphthongize in polysyllables
+            -- (casann [ˈkɑsˠən̪ˠ] final nn after unstressed ə stays short).
+            -- rr: long vowel, not diphthong (barr → bˠɑːɾˠ).
+            if first.ortho == "r" then
+              if (pv.stress or context.is_monosyllabic) and
+                 (ortho == "a" or ortho == "ea") then
+                pv.phon = "ɑː"
+                pv.source = "sonorant_lengthening"
+              end
+              goto munster_geminate_done
+            end
+            if pv.stress or context.is_monosyllabic then
               if ortho == "ea" or ortho == "a" then
                 pv.phon = "au"
                 pv.source = "sonorant_lengthening"
