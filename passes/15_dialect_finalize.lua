@@ -9,6 +9,14 @@
 
 local S = require("passes._shared")
 
+-- First UTF-8 character of a phon string (byte-length aware)
+local function usub_first(s)
+  local b = s:byte(1)
+  if not b then return "" end
+  local n = (b >= 240 and 4) or (b >= 224 and 3) or (b >= 192 and 2) or 1
+  return s:sub(1, n)
+end
+
 return {
   name = "dialect_finalize",
   writes_context = false,
@@ -146,6 +154,10 @@ return {
         ["spiorad"]=true, ["spliota"]=true, ["suim"]=true,
         ["suimiuil"]=true, ["tointe"]=true, ["triobloid"]=true,
         ["triobloideach"]=true, ["tsiopa"]=true, ["uilliam"]=true,
+        -- nasal-mh words: vowel is centralized AND nasalized
+        ["cluimhri"]=true, ["chluimhri"]=true, ["cluimhreach"]=true,
+        ["nimhe"]=true, ["nimhneach"]=true, ["eadoimhne"]=true,
+        ["coimhthioch"]=true,
       }
       -- Ulster: u-quality lexical corrections — ʌ→ʊ (bus, cruth, dul) and
       -- ʊ→ʌ (io- spellings: iomlán, tonn, fonn — nasal contexts).
@@ -283,6 +295,40 @@ return {
       -- vocalization diphthong.
       for _, t in ipairs(tokens) do
         if t.type == "vowel" and t.phon == "əu" then t.phon = "au" end
+      end
+
+      -- Ulster: vowel nasalization before SURVIVING mh [vʲ/w/v] (nimhe→
+      -- n̠ʲɨ̃vʲə, cluimhrí→klˠɨ̞̃vʲɾʲi, crumhóg→kɾˠʊ̃wɔɡ). Hickey I.2.3: Ulster
+      -- retains phonetic nasalization from the historical nasal fricative.
+      -- Only when mh keeps a consonantal reflex — vocalized/silent mh
+      -- (samhnas→əu, téamh→uː) does not nasalize. Lexical set (13 vs 323
+      -- with mh overall), but the conditioning is real: check next token.
+      do
+        local NASAL_MH = {
+          ["coimhthioch"]=true, ["chluimhri"]=true, ["comhra"]=true,
+          ["deimheas"]=true, ["cluimhri"]=true, ["cluimhreach"]=true,
+          ["domh"]=true, ["crumhog"]=true, ["iomhaigheanna"]=true,
+          ["eadoimhne"]=true, ["nimhe"]=true, ["nimhneach"]=true,
+          ["roimh re"]=true,
+        }
+        if NASAL_MH[S.strip_fadas(((context.word_ortho or ""):lower()))] then
+          for i, t in ipairs(tokens) do
+            local nxt = tokens[i + 1]
+            if t.type == "vowel" and t.phon and t.phon ~= "" and nxt and
+               nxt.type == "cons" and nxt.ortho == "mh" then
+              -- Combining tilde U+0303 goes after the base char + any
+              -- combining diacritics (ɨ̞ → ɨ̞̃) but BEFORE the length mark
+              -- (õː not oː̃).
+              local p = t.phon
+              local ci = p:find("\xcb\x90", 1, true)  -- ː
+              if ci then
+                t.phon = p:sub(1, ci - 1) .. "\xcc\x83" .. p:sub(ci)
+              else
+                t.phon = p .. "\xcc\x83"
+              end
+            end
+          end
+        end
       end
 
       -- Ulster: word-final gh/dh after a long vowel or ua/əi diphthong
@@ -445,6 +491,66 @@ return {
       if MUNSTER_E_TO_O[mun_w] then
         for _, t in ipairs(tokens) do
           if t.type == "vowel" and t.phon == "ə" then t.phon = "ɔ"; break end
+        end
+      end
+
+      -- Munster: post-tonic epenthesis in obstruent+sonorant clusters
+      -- (ocrach→ɔkəɾˠəx, eagla→aɡəl̪ˠə, feamnach→fʲamˠən̪ˠəx, admháil,
+      -- dearbhú, argóint). Ó Sé/FG Ch.5: Munster svarabhakti extends to
+      -- obstruent+liquid/nasal clusters after the stressed syllable —
+      -- unlike Connacht where only sonorant+obstruent triggers (pass 12).
+      -- No epenthesis when stress follows the cluster (abrán→əˈbˠɾˠɑːn̪ˠ,
+      -- foclóirí, ceathrú). Lexical exceptions: socra, fógra, pocléim.
+      do
+        -- Cluster pairs where the benchmark epenthesizes CONSISTENTLY:
+        -- m+n (feamnach), g+l (eagla), d+r (eadrainn), th+r (cathrach),
+        -- ch+r (achrann, sochraid), d+mh (admháil). Other pairs (c+r, s+n,
+        -- b+l, bh+r) split lexically → EPEN_ALSO include table.
+        local EPEN_PAIRS = {
+          ["m|n"]=true, ["g|l"]=true, ["d|r"]=true,
+          ["th|r"]=true, ["ch|r"]=true, ["d|mh"]=true,
+        }
+        local EPEN_ALSO = {
+          ["ocrach"]=true, ["acra"]=true, ["priaclach"]=true,
+          ["cabla"]=true, ["fiabhras"]=true, ["tosnaigh"]=true,
+          ["thosnaigh"]=true, ["eaglais"]=true,
+        }
+        local w_e = S.strip_fadas(((context.word_ortho or ""):lower()))
+        local force = EPEN_ALSO[w_e]
+        if not w_e:find(" ") then
+          local function is_liq_nas(t)
+            local o = t.ortho or ""
+            return o == "r" or o == "l" or o == "n"
+          end
+          local i2 = 1
+          local seen_stress = false
+          while i2 <= #tokens do
+            local t = tokens[i2]
+            if t.type == "vowel" and t.stress then seen_stress = true end
+            local nxt = tokens[i2 + 1]
+            if seen_stress and t.type == "cons" and nxt and nxt.type == "cons"
+               and t.phon and t.phon ~= "" and nxt.phon and nxt.phon ~= ""
+               and not t.is_epenthetic then
+              local pair_ok = EPEN_PAIRS[(t.ortho or "") .. "|" .. (nxt.ortho or "")]
+              if pair_ok or force then
+                local prev = tokens[i2 - 1]
+                local after = tokens[i2 + 2]
+                if prev and prev.type == "vowel" and after and after.type == "vowel"
+                   and after.phon and after.phon ~= "" then
+                  local ep = S.clone_token(t)
+                  ep.type = "vowel"
+                  ep.phon = "ə"
+                  ep.ortho = ""
+                  ep.is_epenthetic = true
+                  ep.stress = false
+                  ep.secondary = false
+                  table.insert(tokens, i2 + 1, ep)
+                  i2 = i2 + 1
+                end
+              end
+            end
+            i2 = i2 + 1
+          end
         end
       end
 

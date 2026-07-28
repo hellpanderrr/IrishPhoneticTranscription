@@ -140,17 +140,13 @@ local function render_output(tokens)
           end
           if #cons >= 2 then
             local a, b = tokens[cons[#cons - 1]], tokens[cons[#cons]]
-            local legal_pair = (is_stop_or_f(a) and is_liquid(b)) or
-                               ((a.ortho == "s") and is_stop_or_f(b))
+            -- Benchmark syllabification: medial s+stop is HETEROsyllabic —
+            -- the s closes the previous syllable (aistriú → aʃ.ˈtʲɾʲuː,
+            -- eisceacht → əʃ.ˈcaxt̪ˠ; 61 vs 7 across the three dialects).
+            -- Only obstruent+liquid remains a legal medial onset cluster.
+            local legal_pair = (is_stop_or_f(a) and is_liquid(b))
             if legal_pair then
               onset_start = cons[#cons - 1]
-              -- s + stop + liquid: extend to 3 if legal
-              if #cons >= 3 then
-                local s0 = tokens[cons[#cons - 2]]
-                if s0.ortho == "s" and is_stop_or_f(a) and is_liquid(b) then
-                  onset_start = cons[#cons - 2]
-                end
-              end
             else
               onset_start = cons[#cons]
             end
