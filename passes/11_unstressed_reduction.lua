@@ -375,12 +375,22 @@ return {
       }
       local ul_keep = ULSTER_KEEP_LONG[S.strip_fadas((context.word_ortho or ""):lower())]
       local seen_vowel = false
-      for _, t in ipairs(tokens) do
+      for ti, t in ipairs(tokens) do
         if t.type == "boundary" then seen_vowel = false end
         if t.type == "vowel" then
           if seen_vowel and not t.stress and t.phon and ULSTER_SHORTEN[t.phon]
              and not ul_keep then
-            t.phon = ULSTER_SHORTEN[t.phon]
+            local short = ULSTER_SHORTEN[t.phon]
+            -- Post-tonic á before a SLENDER consonant fronts to [æ]
+            -- (úsáid→uːsˠædʲ, oileáin→ɛlʲænʲ, ofráil→ɔfˠɾˠælʲ; 65 vs 16).
+            -- Hickey I.2.3: Ulster á-fronting is strongest in palatal contexts.
+            if short == "a" and (t.phon == "aː" or t.phon == "ɑː") then
+              local nxt = tokens[ti + 1]
+              if nxt and nxt.type == "cons" and nxt.palatal == true then
+                short = "æ"
+              end
+            end
+            t.phon = short
           end
           seen_vowel = true
         end
