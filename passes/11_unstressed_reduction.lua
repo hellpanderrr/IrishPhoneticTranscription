@@ -409,24 +409,51 @@ return {
         if tokens[j].type == "boundary" then break end
       end
       if last_v and not last_v.stress then
-        if wl:match("eadh$") and (last_v.phon == "ə" or last_v.phon == "u") then
-          -- slender -eadh: short [u] dominates the Ulster benchmark (37 vs
-          -- 15); the [uː] set is lexical (pilleadh/tuilleadh class + a few
-          -- past-autonomous forms).
-          local EADH_LONG = {
-            pilleadh=true, tilleadh=true, tuilleadh=true, thuilleadh=true,
-            ngeimhreadh=true, gheimhreadh=true, cuireadh=true, deireadh=true,
-            hitheadh=true, briseadh=true, scaoileadh=true, suaitheadh=true,
-            geimhreadh=true, itheadh=true, seideadh=true,
-          }
-          local wl_nf = S.strip_fadas(wl)
-          last_v.phon = EADH_LONG[wl_nf] and "uː" or "u"
-        elseif wl:match("adh$") and (last_v.phon == "ə" or last_v.phon == "u") then
-          last_v.phon = "u"
-        elseif wl:match("igh$") and (last_v.phon == "ə" or last_v.phon == "ɪ") then
-          last_v.phon = "i"
+        -- Lexical set: -adh/-aigh/-ú words whose final vowel stays LONG
+        -- (33 of 160 -adh, 12 of 98 -aigh in the benchmark). Mostly
+        -- verbal nouns (glacadh, pósadh, margadh) and 2nd-conj verbs
+        -- (ceannaigh, athraigh). Keys strip_fadas'd.
+        local FINAL_LONG = {
+          ["adai"]=true, ["athraigh"]=true, ["athru"]=true,
+          ["barriall"]=true, ["bathadh"]=true,
+          ["bheannaigh"]=true, ["bhfiodoiri"]=true, ["bpogadh"]=true,
+          ["bposadh"]=true, ["bradaigh"]=true, ["bunadh"]=true,
+          ["ceannaigh"]=true, ["ceansu"]=true,
+          ["ceathru"]=true, ["cheannaigh"]=true,
+          ["d'athraigh"]=true, ["dearbhu"]=true, ["dearcadh"]=true,
+          ["eidigh"]=true, ["failli"]=true,
+          ["fiafraigh"]=true, ["fiodoiri"]=true, ["fuaimniu"]=true,
+          ["gabhadh"]=true, ["gadai"]=true, ["gealladh"]=true,
+          ["geimhrigh"]=true,
+          ["ghlactai"]=true, ["glacadh"]=true, ["madadh"]=true,
+          ["margadh"]=true, ["maslu"]=true, ["meangadh"]=true,
+          ["mhullaigh"]=true, ["mullaigh"]=true, ["ngadai"]=true,
+          ["nglacadh"]=true, ["nglacfadh"]=true,
+          ["posadh"]=true, ["scabadh"]=true, ["seiftiu"]=true,
+          ["siabadh"]=true, ["sliocadh"]=true,
+          ["tapadh"]=true, ["thuilleamai"]=true,
+          ["thusaigh"]=true, ["tuismigh"]=true, ["tusaigh"]=true,
+          -- pilleadh/tuilleadh class (formerly EADH_LONG)
+          pilleadh=true, tilleadh=true, tuilleadh=true, thuilleadh=true,
+          ngeimhreadh=true, gheimhreadh=true, cuireadh=true, deireadh=true,
+          hitheadh=true, briseadh=true, scaoileadh=true, suaitheadh=true,
+          geimhreadh=true, itheadh=true, seideadh=true,
+        }
+        local wl_nf = S.strip_fadas(wl)
+        local keep_long = FINAL_LONG[wl_nf]
+        if wl:match("e?adh$") and (last_v.phon == "ə" or last_v.phon == "u" or last_v.phon == "uː") then
+          last_v.phon = keep_long and "uː" or "u"
+        elseif wl:match("igh$") and (last_v.phon == "ə" or last_v.phon == "ɪ"
+               or last_v.phon == "i" or last_v.phon == "iː") then
+          last_v.phon = keep_long and "iː" or "i"
         elseif (wl:match("ach$") or wl:match("each$")) and last_v.phon == "ə" then
           last_v.phon = "a"
+        elseif keep_long and last_v.phon == "u" then
+          -- -ú verbal nouns kept long (athrú, ceansú, maslú)
+          last_v.phon = "uː"
+        elseif keep_long and last_v.phon == "i" then
+          -- -aí nouns kept long (gadaí, faillí)
+          last_v.phon = "iː"
         end
       end
 
