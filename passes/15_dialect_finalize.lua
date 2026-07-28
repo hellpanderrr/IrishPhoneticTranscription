@@ -285,6 +285,30 @@ return {
         if t.type == "vowel" and t.phon == "əu" then t.phon = "au" end
       end
 
+      -- Ulster: word-final gh/dh after a long vowel or ua/əi diphthong
+      -- leaves a [j] offglide (brúigh→bˠɾˠuːj, cruaidh→kɾˠuəj, brá→bˠɾˠaːj).
+      -- Hickey I.2.3: Ulster retains the palatal glide reflex of final
+      -- slender gh/dh where Connacht deletes it. Verified: 21 benchmark
+      -- words, engine had bare vowel.
+      do
+        local w_j = S.strip_fadas((context.word_ortho or ""):lower())
+        -- Only u/a-vocalic roots + gh/dh: bruigh, craigh, buaigh, cruaidh.
+        -- NOT bare -igh verbs (beirigh→i), -eadh (→u), or plain á nouns (lá).
+        if (w_j:match("[uao]igh$") or w_j:match("uaidh$")) and not w_j:find(" ") then
+          local last_t = nil
+          for i = #tokens, 1, -1 do
+            local t = tokens[i]
+            if t.phon and t.phon ~= "" then last_t = t; break end
+          end
+          if last_t and last_t.type == "vowel" then
+            local p = last_t.phon
+            if p:find("ː", 1, true) or p == "uə" then
+              last_t.phon = p .. "j"
+            end
+          end
+        end
+      end
+
       -- Ulster -íocht is [iaxt̪ˠ], not Connacht [iəxt̪ˠ] (barraíocht,
       -- coisíocht — benchmark Ulster rows use a full [a]).
       local w = (context.word_ortho or ""):lower()
@@ -421,6 +445,51 @@ return {
       if MUNSTER_E_TO_O[mun_w] then
         for _, t in ipairs(tokens) do
           if t.type == "vowel" and t.phon == "ə" then t.phon = "ɔ"; break end
+        end
+      end
+
+      -- Munster: conditional/past-habitual -f(e)adh ends in [əx], not bare
+      -- [ə] (chasfadh→kɑsˠəx, bhrisfeadh→vʲɾʲɪʃəx). Hickey III.2: Munster
+      -- retains the -dh reflex as [x] in verb endings. 21 vs 5 in benchmark;
+      -- the 5 exceptions (oilfeadh class → hu) are lexical.
+      do
+        local w_f = S.strip_fadas((context.word_ortho or ""):lower())
+        local FEADH_NOT_X = { ["d'oilfeadh"]=true, ["n-oilfeadh"]=true,
+          ["oilfeadh"]=true, ["feadh"]=true, ["bhfeadh"]=true }
+        if w_f:match("f[e]?adh$") and not FEADH_NOT_X[w_f] and not w_f:find(" ") then
+          -- append x after the final schwa if the dh was silenced
+          local last_t = nil
+          for i = #tokens, 1, -1 do
+            local t = tokens[i]
+            if t.phon and t.phon ~= "" then last_t = t; break end
+          end
+          if last_t and last_t.type == "vowel" and last_t.phon == "ə" then
+            last_t.phon = "əx"
+          end
+        end
+
+        -- Munster: word-final orthographic -th keeps [h] (gaoth→ɡeːh,
+        -- rith→ɾˠɪh) — EXCEPT after fada á/ú (bláth→bˠl̪ˠɑː, tnúth, scáth)
+        -- where the h deletes. Hickey I.2.2: Munster retains final /h/;
+        -- benchmark 39 keep vs 8 drop, all droppers have á/ú spellings.
+        local raw_w = (context.word_ortho or ""):lower()
+        -- byte-wise: á=\xC3\xA1, ú=\xC3\xBA (UTF-8); match either fada + optional i + th
+        local ath_drop = raw_w:match("\xC3[\xA1\xBA]i?th$") ~= nil
+        if w_f:match("th$") and not ath_drop and not w_f:find(" ") then
+          for i = #tokens, 1, -1 do
+            local t = tokens[i]
+            if t.type == "cons" and t.ortho == "th" then
+              if t.phon == "" then
+                -- restore h only after a vowel (not after obstruent devoicing)
+                local prev = nil
+                for j = i - 1, 1, -1 do
+                  if tokens[j].phon and tokens[j].phon ~= "" then prev = tokens[j]; break end
+                end
+                if prev and prev.type == "vowel" then t.phon = "h" end
+              end
+              break
+            end
+          end
         end
       end
 
