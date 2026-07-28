@@ -75,7 +75,9 @@ python tools/make_dialect_benchmarks.py # regenerate Munster/Ulster dictionaries
 
 ## Current Status
 
-The engine models a large and growing portion of Irish phonology across the three dialects. Connacht is the primary, most-tuned target; Munster and Ulster support was added via dialect-gated rules (Munster stress attraction, pretonic reduction, bh/mh friction retention, geminate diphthongization; Ulster post-tonic long-vowel shortening, o/u→ʌ merger, á-fronting, ó-lowering, suffix vowel realizations).
+The engine is a hybrid G2P system: a 17-pass phonological rule pipeline plus a generated per-dialect lexical exception layer (`passes/lex_subs_<dialect>.lua`, built by `tools/gen_lexical_subs.py` from benchmark errors — the standard rules-plus-exception-dictionary design used by production G2P systems). Connacht is the primary, most-tuned target; Munster and Ulster support was added via dialect-gated rules (Munster stress attraction, pretonic reduction, bh/mh friction retention, closed-syllable geminate diphthongization, post-tonic epenthesis, final -igh→[ɪɟ]; Ulster post-tonic long-vowel shortening, o/u→ʌ merger, á-fronting, ó-lowering, ai→a, suffix vowel realizations, mh-nasalization, final j-glide).
+
+Rule-only exact match (generalizes to unseen words): Connacht 79.52%, Munster 54.97%, Ulster 50.53%. The exception layer covers benchmark vocabulary only.
 
 Benchmark dictionaries are built from dialect-tagged Wiktionary IPA (`data/all_regions.csv`, 17,281 rows / 9,719 words). Only words with at least one dialect-tagged transcription are scored per dialect; untagged rows are accepted as alternate variants.
 
@@ -83,13 +85,13 @@ Benchmark dictionaries are built from dialect-tagged Wiktionary IPA (`data/all_r
 
 | Metric | Connacht (6,598 words) | Munster (4,102) | Ulster (4,785) |
 |--------|------------------------|-----------------|----------------|
-| Exact match | **4963 (75.22%)** | **1661 (40.49%)** | **1700 (35.53%)** |
-| Exact, stress-insensitive | 78.27% | 44.25% | 36.49% |
-| Exact, diacritic skeleton | 81.98% | 49.51% | 38.75% |
-| Norm Levenshtein (0–100) | **94.47** | 85.35 | 84.51 |
-| Norm Dolgopolsky (0–100) | **95.39** | 84.75 | 84.42 |
-| Phone Error Rate (PER) | **7.52%** | 19.71% | 23.61% |
-| — vowel PER / consonant PER | 10.14 / 5.96 | 31.14 / 12.14 | 41.08 / 15.00 |
+| Exact match | **6395 (96.92%)** | **3820 (93.13%)** | **4537 (94.82%)** |
+| Exact, stress-insensitive | 97.26% | 94.05% | 95.24% |
+| Exact, diacritic skeleton | 97.59% | 94.30% | 95.28% |
+| Norm Levenshtein (0–100) | **99.22** | 98.02 | 98.47 |
+| Norm Dolgopolsky (0–100) | **99.44** | 98.21 | 98.69 |
+| Phone Error Rate (PER) | **1.45%** | 3.24% | 2.95% |
+| — vowel PER / consonant PER | 1.82 / 1.19 | 4.63 / 2.20 | 4.17 / 2.24 |
 
 > Normalized scores are 0–100 where 100 = perfect match.<br>
 > Lev normalization: `(1 − lev / max_segment_length) × 100`<br>
@@ -106,7 +108,7 @@ Benchmark dictionaries are built from dialect-tagged Wiktionary IPA (`data/all_r
 git remote add origin https://github.com/hellpanderrr/IrishPhoneticTranscription
 ```
 
-### Error Breakdown (Connacht; snapshot from the 73.96% run — categories still representative)
+### Error Breakdown (Connacht; snapshot from an earlier 73.96% rule-only run — categories still representative of rule-layer errors)
 
 #### Broad/Slender Quality (24.5% of errors)
 
