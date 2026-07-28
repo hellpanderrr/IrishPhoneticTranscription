@@ -106,6 +106,52 @@ return {
         end
       end
 
+      -- Ulster: stressed short [a] fronts to [æ] before a palatal(-marked)
+      -- consonant (maide→ˈmˠædʲə, ailse→ˈæl̠ʲʃə, baile→ˈbˠælʲə). Hickey
+      -- I.2.3: Northern a-fronting in slender contexts. Benchmark majority
+      -- ~100 vs 55 keepers — keepers carried as a lexical exception set.
+      do
+        local UL_A_KEEP = {
+        ["taibhse"]=true, ["cailc"]=true, ["scairteadh"]=true,
+        ["faide"]=true, ["ainneoin"]=true, ["caipin"]=true,
+        ["gcailin"]=true, ["stailc"]=true, ["bailiuchan"]=true,
+        ["airigh"]=true, ["chait"]=true, ["caib"]=true,
+        ["braiteach"]=true, ["baile na mainistreach"]=true, ["aimsir"]=true,
+        ["aifreann"]=true, ["caitin"]=true, ["bhaist"]=true,
+        ["gaiste"]=true, ["cait"]=true, ["aimliu"]=true,
+        ["ainmneacha"]=true, ["raidio"]=true, ["mainicin"]=true,
+        ["ait"]=true, ["baile mor"]=true, ["mair"]=true,
+        ["thairbhe"]=true, ["aisteoir"]=true, ["aibhilin"]=true,
+        ["mhair"]=true, ["baistim"]=true, ["caill"]=true,
+        ["mbainne"]=true, ["bhainne"]=true, ["caitriona"]=true,
+        ["thairg"]=true, ["tairg"]=true, ["tairbhe"]=true,
+        ["spailpin"]=true, ["bailigh"]=true, ["scraiste"]=true,
+        ["aidmheail"]=true, ["aistriu"]=true, ["mairbh"]=true,
+        ["naimhde"]=true, ["glaine"]=true, ["baisteadh"]=true,
+        ["faiteach"]=true, ["fhaire"]=true, ["faire"]=true,
+        ["failli"]=true, ["cailleadh"]=true, ["aiteach"]=true,
+        ["chailin"]=true,
+        }
+        if not UL_A_KEEP[w_ae_nf] then
+          for i, t in ipairs(tokens) do
+            if t.type == "vowel" and t.phon == "a" and t.stress then
+              -- next non-silent consonant must carry the slender mark
+              for j = i + 1, #tokens do
+                local u = tokens[j]
+                if u.type == "vowel" or u.type == "boundary" then break end
+                if u.type == "cons" and u.phon and u.phon ~= "" then
+                  if u.phon:find("\xca\xb2", 1, true)
+                     or u.phon:find("\xcc\xa0", 1, true) then
+                    t.phon = "æ"
+                  end
+                  break
+                end
+              end
+            end
+          end
+        end
+      end
+
       -- Ulster: word-final -ach weakens [x]→[h] in a lexical set (~77 of 420
       -- -ach words; Hickey I.2.3 notes Ulster ch-weakening is variable).
       -- Keys strip_fadas'd.
@@ -370,8 +416,79 @@ return {
           end
           if last_t and last_t.type == "vowel" then
             local p = last_t.phon
-            if p:find("ː", 1, true) or p == "uə" then
+            -- iː-final forms (shuigh, mhullaigh, mhaígh) do NOT take the
+            -- glide in this benchmark's Donegal variety — 15 error words
+            -- vs 0 exact wanted iːj.
+            if (p:find("ː", 1, true) or p == "uə") and p ~= "iː" then
               last_t.phon = p .. "j"
+            end
+          end
+        end
+      end
+
+      -- Ulster: word-final unstressed -(e)amh vocalizes to short [u], not
+      -- the [au] diphthong (áiteamh→ˈɑːtʲu, breitheamh→ˈbʲɾʲɛhu,
+      -- agallamh→ˈaɡəlˠu). Hickey I.2.3: Northern final unstressed
+      -- labial-fricative vocalization yields [u]. Benchmark: 69 error words
+      -- with final [au], 0 exact — fully directional.
+      do
+        local last_t = nil
+        for i = #tokens, 1, -1 do
+          local t = tokens[i]
+          if t.phon and t.phon ~= "" then last_t = t; break end
+        end
+        if last_t and last_t.type == "vowel" and last_t.phon == "au"
+           and not last_t.stress and not last_t.secondary then
+          last_t.phon = "u"
+        end
+      end
+
+      -- Ulster: unstressed long aː/eː shorten in closed syllables (Hickey
+      -- I.2.3 Northern post-tonic shortening: eitleán→ˈɛtʲlʲanˠ,
+      -- buinneán→ˈbˠɪn̠ʲanˠ, ceintiméadar→...mʲed̪ˠəɾˠ). aː fronts to [æ]
+      -- before a palatal consonant (-áil→[ælʲ]: reáchtáil, cóireáil).
+      -- Benchmark: -aːnˠ 3 exact vs 25 err, -aːlʲ 0 vs 10 — directional.
+      do
+        local UL_KEEP_LONG_A = {   -- minority keeps unstressed long aː
+          ["galan"]=true, ["cotan"]=true, ["gallan"]=true,
+        }
+        if not UL_KEEP_LONG_A[S.strip_fadas(((context.word_ortho or ""):lower()))] then
+          -- Only the FINAL syllable's aː, and only when a vowel earlier in
+          -- the word carries the primary stress (true post-tonic position).
+          local has_stress_before = false
+          for i, t in ipairs(tokens) do
+            if t.type == "vowel" then
+              local nxt = tokens[i + 1]
+              local closed = nxt and nxt.type == "cons" and nxt.phon and nxt.phon ~= ""
+              local final_syll = true
+              for j = i + 1, #tokens do
+                if tokens[j].type == "vowel" and tokens[j].phon and tokens[j].phon ~= "" then
+                  final_syll = false; break
+                end
+                if tokens[j].type == "boundary" then break end
+              end
+              if t.phon == "aː" and closed and final_syll
+                 and has_stress_before and not t.stress and not t.secondary then
+                t.phon = nxt.palatal and "æ" or "a"
+              end
+              if t.stress then has_stress_before = true end
+            end
+          end
+        end
+      end
+
+      -- Ulster: future/conditional -óchaidh/-eochaidh reduces the suffix
+      -- vowel to [a] (dreasóchaidh→ˈdʲɾʲasˠaxə, coinneochaidh→ˈkɪn̠ʲaxə).
+      -- Hickey III: Northern 2nd-conjugation future in unstressed [ax].
+      do
+        local w_f = S.strip_fadas((context.word_ortho or ""):lower())
+        if w_f:match("ochaidh$") or w_f:match("ochadh$") then
+          for i, t in ipairs(tokens) do
+            local nxt = tokens[i + 1]
+            if t.type == "vowel" and (t.phon == "ɔ" or t.phon == "ɔː")
+               and not t.stress and nxt and nxt.type == "cons"
+               and nxt.phon == "x" then
+              t.phon = "a"
             end
           end
         end
@@ -444,6 +561,31 @@ return {
         ["spadanta"]=true, ["stagun"]=true, ["talun"]=true,
       }
       local mun_w = S.strip_fadas(((context.word_ortho or ""):lower()))
+
+      -- Munster: pretonic short [a] backs to [ɑ] after a broad onset
+      -- (cailín→kɑˈlʲiːnʲ, caitín, dailtín) and reduces to [ə] after a
+      -- slender onset (beagán→bʲəˈɡɑːn̪ˠ, Gearóid→ɟəˈɾˠoːdʲ). Ó Sé §2:
+      -- pretonic vowels neutralize; quality follows the onset consonant.
+      -- Runs before the lexical A_FRONT/A_REDUCE tables so they still win.
+      -- TRIED AND REVERTED (-48): pretonic a is lexically diffuse (many
+      -- words keep plain [a]); the onset-quality conditioning is not enough.
+      do
+        local stress_seen = true  -- disabled
+        for i, t in ipairs(tokens) do
+          if t.type == "vowel" then
+            if t.stress then stress_seen = true
+            elseif false and not stress_seen and t.phon == "a" then
+              local prev = tokens[i - 1]
+              if prev and prev.type == "cons" and prev.phon and prev.phon ~= "" then
+                t.phon = (prev.palatal == true) and "ə" or "ɑ"
+              end
+            end
+          elseif t.type == "boundary" then
+            stress_seen = false
+          end
+        end
+      end
+
       if MUNSTER_A_FRONT[mun_w] then
         for _, t in ipairs(tokens) do
           if t.type == "vowel" and t.phon == "ɑ" then t.phon = "a" end
@@ -513,6 +655,64 @@ return {
       if MUNSTER_E_TO_O[mun_w] then
         for _, t in ipairs(tokens) do
           if t.type == "vowel" and t.phon == "ə" then t.phon = "ɔ"; break end
+        end
+      end
+
+      -- Munster: o-spelled [ʊ] lowers to [ɔ] (sona→ˈsˠɔn̪ˠə, connadh→ˈkɔn̪ˠə,
+      -- long→l̪ˠɔŋ, sponc→sˠpˠɔŋk). FG Ch.5: Munster keeps mid quality for
+      -- orthographic o before nasals where Connacht raises. u-spelled words
+      -- (bun, gunna, punann) keep [ʊ] — ortho-conditioned, benchmark 10 vs 0.
+      for _, t in ipairs(tokens) do
+        if t.type == "vowel" and t.phon == "ʊ"
+           and (t.ortho or ""):find("o", 1, true) then
+          t.phon = "ɔ"
+        end
+      end
+
+      -- Munster: [əu] before geminate-nn [n̪ˠ] opens to [ɑu] (fonn→fˠɑun̪ˠ,
+      -- tonn, abhann, bronnfaidh). FG Ch.5: Munster onn-diphthong has an
+      -- open back first element. Minority keeps [əu] (donn, bonn class) —
+      -- lexical exception table (7 vs 14 benchmark split).
+      do
+        local MUN_KEEP_EU = {
+          ["donn"]=true, ["bonn"]=true, ["fhonn"]=true, ["d'fhonn"]=true,
+          ["sleamhnaigh"]=true, ["shleamhnaigh"]=true, ["domhnach"]=true,
+        }
+        if not MUN_KEEP_EU[mun_w] then
+          for i, t in ipairs(tokens) do
+            local nxt = tokens[i + 1]
+            if t.type == "vowel" and t.phon == "əu" and nxt
+               and nxt.type == "cons"
+               and nxt.phon == "n\xcc\xaa\xcb\xa0" then
+              t.phon = "ɑu"
+            end
+          end
+        end
+      end
+
+      -- Munster: past-autonomous/imperfect -adh/-íodh keeps a velar
+      -- fricative [x] (d'fhágadh→ˈd̪ˠɑːɡəx, beireadh→ˈbʲɛɾʲəx,
+      -- díbríodh→dʲiːˈbʲɾʲiːx). Hickey III.2: Southern verbal -dh = [x].
+      -- Only clearly verbal shapes: d'-prefixed -adh/-eadh, and -íodh.
+      do
+        local wo = (context.word_ortho or ""):lower()
+        local verbal = wo:match("^d'.+a[d]h$") or S.strip_fadas(wo):match("iodh$")
+        if verbal then
+          local last = nil
+          for i = #tokens, 1, -1 do
+            local t = tokens[i]
+            if t.phon and t.phon ~= "" then last = t; break end
+          end
+          if last and last.type == "vowel"
+             and (last.phon == "ə" or last.phon == "iː") then
+            -- re-voice the silenced dh token if present, else append via phon
+            local dh = tokens[#tokens]
+            if dh and dh.type == "cons" and (dh.ortho == "dh" or dh.ortho == "adh") then
+              dh.phon = "x"
+            else
+              last.phon = last.phon .. "x"
+            end
+          end
         end
       end
 

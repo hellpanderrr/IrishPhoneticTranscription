@@ -321,11 +321,28 @@ return {
           return LONG_DIGRAPHS[ol] or false
         end
         local target = nil
-        if #nuclei >= 2 and is_long(2) then
-          target = 2
-        elseif #nuclei >= 3 and not is_long(1) and not is_long(2) and is_long(3) then
-          target = 3
-        elseif #nuclei >= 2 and not is_long(1) then
+        -- Glide-i nuclei (bare i adjacent to another vowel token, as in
+        -- ná-i-siún) are not phonetic syllables — skip them when scanning.
+        local function is_glide(k)
+          local idx = nuclei[k]
+          local t = seg[idx]
+          if not t or (t.ortho or ""):lower() ~= "i" then return false end
+          local prev, nxt = seg[idx - 1], seg[idx + 1]
+          return (prev and prev.type == "vowel") or (nxt and nxt.type == "vowel")
+        end
+        -- Attraction goes to the FIRST long non-initial phonetic nucleus
+        -- (Ó Sé / benchmark: cailín→σ2, ceannasaí→σ3, dochtúirí→σ2,
+        -- coláistí→σ2). Exception: final -ín (diminutive) always attracts
+        -- (Tomáisín→σ3 despite long σ2).
+        for k = 2, #nuclei do
+          if is_long(k) and not is_glide(k) then target = k; break end
+        end
+        if ortho:lower():match("ín$") then
+          for k = #nuclei, 2, -1 do
+            if not is_glide(k) then target = k; break end
+          end
+        end
+        if not target and #nuclei >= 2 and not is_long(1) then
           local ol = ortho:lower()
           if seg_vc == 2 and (ol:match("acht?$") or ol:match("eacht?$")) then
             local onset = seg[nuclei[2] - 1]
@@ -340,8 +357,9 @@ return {
         -- long vowel (freastalaím [ˈfʲɾʲasˠt̪ˠəlˠiːmʲ], d'fhágfaí, gabhaidís).
         if target then
           local ol2 = ortho:lower()
-          if ol2:match("ím$") or ol2:match("faí$") or ol2:match("fí$") or
-             ol2:match("idís$") or ol2:match("imís$") then
+          if (ol2:match("ím$") and #nuclei >= 4) or ol2:match("faí$") or
+             ol2:match("fí$") or
+             ol2:match("idís$") or ol2:match("imís$") or ol2:match("íodh$") then
             target = nil
           end
         end
