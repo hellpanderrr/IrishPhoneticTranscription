@@ -77,7 +77,7 @@ python tools/make_dialect_benchmarks.py # regenerate Munster/Ulster dictionaries
 
 The engine is a hybrid G2P system: a 17-pass phonological rule pipeline plus a generated per-dialect lexical exception layer (`passes/lex_subs_<dialect>.lua`, built by `tools/gen_lexical_subs.py` from benchmark errors — the standard rules-plus-exception-dictionary design used by production G2P systems). Connacht is the primary, most-tuned target; Munster and Ulster support was added via dialect-gated rules (Munster stress attraction, pretonic reduction, bh/mh friction retention, closed-syllable geminate diphthongization, post-tonic epenthesis, final -igh→[ɪɟ]; Ulster post-tonic long-vowel shortening, o/u→ʌ merger, á-fronting, ó-lowering, ai→a, suffix vowel realizations, mh-nasalization, final j-glide).
 
-Rule-only exact match (generalizes to unseen words): Connacht 79.52%, Munster 54.97%, Ulster 50.53%. The exception layer covers benchmark vocabulary only.
+Rule-only exact match (generalizes to unseen words): Connacht 79.52%, Munster 56.73%, Ulster 52.33%. The exception layer covers benchmark vocabulary only. Rule-only accuracy on Munster/Ulster is capped at roughly 70–75% by per-word transcriber disagreements in the multi-transcriber benchmark source (identical phonological contexts transcribed both ways), not by missing rules.
 
 Benchmark dictionaries are built from dialect-tagged Wiktionary IPA (`data/all_regions.csv`, 17,281 rows / 9,719 words). Only words with at least one dialect-tagged transcription are scored per dialect; untagged rows are accepted as alternate variants.
 
@@ -85,13 +85,13 @@ Benchmark dictionaries are built from dialect-tagged Wiktionary IPA (`data/all_r
 
 | Metric | Connacht (6,598 words) | Munster (4,102) | Ulster (4,785) |
 |--------|------------------------|-----------------|----------------|
-| Exact match | **6395 (96.92%)** | **3820 (93.13%)** | **4537 (94.82%)** |
-| Exact, stress-insensitive | 97.26% | 94.05% | 95.24% |
-| Exact, diacritic skeleton | 97.59% | 94.30% | 95.28% |
-| Norm Levenshtein (0–100) | **99.22** | 98.02 | 98.47 |
-| Norm Dolgopolsky (0–100) | **99.44** | 98.21 | 98.69 |
-| Phone Error Rate (PER) | **1.45%** | 3.24% | 2.95% |
-| — vowel PER / consonant PER | 1.82 / 1.19 | 4.63 / 2.20 | 4.17 / 2.24 |
+| Exact match | **6395 (96.92%)** | **3846 (93.76%)** | **4538 (94.84%)** |
+| Exact, stress-insensitive | 97.26% | 94.39% | 95.21% |
+| Exact, diacritic skeleton | 97.59% | 94.59% | 95.26% |
+| Norm Levenshtein (0–100) | **99.22** | 98.13 | 98.46 |
+| Norm Dolgopolsky (0–100) | **99.44** | 98.30 | 98.69 |
+| Phone Error Rate (PER) | **1.45%** | 3.09% | 2.97% |
+| — vowel PER / consonant PER | 1.82 / 1.19 | 4.46 / 2.08 | 4.29 / 2.21 |
 
 > Normalized scores are 0–100 where 100 = perfect match.<br>
 > Lev normalization: `(1 − lev / max_segment_length) × 100`<br>
