@@ -252,6 +252,49 @@ return {
         ["rian"]=true, ["roimh"]=true, ["saighead"]=true, ["scafa"]=true,
         ["uaimh"]=true,
       }
+      -- Dialect-specific benchmark stress conventions (same per-word
+      -- inconsistency as the pan-dialect tables above, but the Munster and
+      -- Ulster transcribers made the opposite call on these words).
+      local MONO_STRESS_DIA = {
+        munster = {
+          ["duaidh"]=true, ["orthu"]=true, ["han-"]=true, ["oraibh"]=true,
+          ["roisin"]=true, ["uathu"]=true, ["paor"]=true, ["tuin"]=true,
+          ["an-"]=true, ["sceon"]=true, ["leafaos"]=true, ["an"]=true,
+          ["meaim"]=true,
+        },
+        ulster = {
+          ["dearn"]=true, ["mhill"]=true, ["bos"]=true, ["mar"]=true,
+          ["scath"]=true, ["seang"]=true, ["rait"]=true, ["blas"]=true,
+        },
+      }
+      local MONO_NO_STRESS_DIA = {
+        munster = {
+          ["namhaid"]=true, ["aithint"]=true, ["spiara"]=true,
+          ["abhann"]=true, ["mblasanna"]=true, ["blasanna"]=true,
+          ["gabha"]=true,
+        },
+        ulster = {
+          ["habhann"]=true, ["abhann"]=true, ["mblasanna"]=true,
+          ["n-abhann"]=true, ["blasanna"]=true, ["mbad"]=true,
+          ["leamh"]=true, ["domhain"]=true,
+        },
+      }
+      local ms_d = MONO_STRESS_DIA[context.dialect]
+      if ms_d and #segments == 1 and ms_d[S.strip_fadas(ortho:lower())] then
+        for _, t in ipairs(seg) do
+          if t.type == "vowel" then t.stress = true; break end
+        end
+        if seg_vc <= 1 then
+          seg_is_monosyllabic = true
+          goto next_seg
+        end
+      end
+      local mns_d = MONO_NO_STRESS_DIA[context.dialect]
+      if mns_d and #segments == 1 and mns_d[S.strip_fadas(ortho:lower())] then
+        context.no_lexical_stress = true
+        goto next_seg
+      end
+
       if #segments == 1 and MONO_NO_STRESS[S.strip_fadas(ortho:lower())] then
         context.no_lexical_stress = true
         goto next_seg

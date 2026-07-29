@@ -365,6 +365,41 @@ return {
         if t.type == "vowel" and t.phon == "əu" then t.phon = "au" end
       end
 
+      -- Ulster: the bh/mh vocalization diphthong [au] monophthongizes to
+      -- [oː] before r (tabhair→t̪ˠoːɾʲ, gabhair, leabhar — 22 vs 4 keepers)
+      -- and in the abhann/Domhnaigh lexical set. Hickey I.2.3: Northern
+      -- long-mid reflex of abh/omh.
+      do
+        local UL_AU_KEEP = {
+          ["slabhradh"]=true, ["tslabhradh"]=true, ["abhrasoir"]=true,
+          ["amhras"]=true,
+        }
+        local UL_AU_OO = {
+          ["abhann"]=true, ["habhann"]=true, ["n-abhann"]=true,
+          ["de domhnaigh"]=true, ["deamhan"]=true, ["domhain"]=true,
+        }
+        local w_au = S.strip_fadas(((context.word_ortho or ""):lower()))
+        local force_oo = UL_AU_OO[w_au]
+        if not UL_AU_KEEP[w_au] then
+          for i, t in ipairs(tokens) do
+            if t.type == "vowel" and (t.phon == "au" or t.phon == "əu") then
+              if force_oo then
+                t.phon = "oː"
+              else
+                for j = i + 1, #tokens do
+                  local u = tokens[j]
+                  if u.type ~= "cons" then break end
+                  if u.phon and u.phon ~= "" then
+                    if (u.ortho or "") == "r" then t.phon = "oː" end
+                    break
+                  end
+                end
+              end
+            end
+          end
+        end
+      end
+
       -- Ulster: vowel nasalization before SURVIVING mh [vʲ/w/v] (nimhe→
       -- n̠ʲɨ̃vʲə, cluimhrí→klˠɨ̞̃vʲɾʲi, crumhóg→kɾˠʊ̃wɔɡ). Hickey I.2.3: Ulster
       -- retains phonetic nasalization from the historical nasal fricative.
@@ -422,6 +457,19 @@ return {
             if (p:find("ː", 1, true) or p == "uə") and p ~= "iː" then
               last_t.phon = p .. "j"
             end
+          end
+        end
+      end
+
+      -- Ulster: slender [ʃ] depalatalizes to broad [sˠ] after broad [ɾˠ]
+      -- (tuirseach→ˈt̪ˠʌɾˠsˠax, fairsing, fuirseadh — 17 vs 3 in benchmark).
+      -- Hickey I.2.3: Northern rs-clusters level to the broad sibilant.
+      for i, t in ipairs(tokens) do
+        if t.type == "cons" and t.phon == "ʃ" then
+          local prev = tokens[i - 1]
+          if prev and prev.type == "cons" and prev.phon == "ɾˠ" then
+            t.phon = "sˠ"
+            t.palatal = false
           end
         end
       end
@@ -490,6 +538,30 @@ return {
                and nxt.phon == "x" then
               t.phon = "a"
             end
+          end
+        end
+      end
+
+      -- Ulster: re-apply post-tonic iː-shortening — pass 14's aí/-igh
+      -- iː-restores (Connacht-motivated) regenerate long iː after pass 11
+      -- already shortened it (cinnigí, damnaím, beithígh). Same leak
+      -- pattern that motivated this pass. Word-final iː is left alone
+      -- (FINAL_LONG handles -aí/-í noun finals in pass 11).
+      if not context.ulster_keep_long then
+        local seen_v = false
+        for i, t in ipairs(tokens) do
+          if t.type == "boundary" then seen_v = false end
+          if t.type == "vowel" and t.phon and t.phon ~= "" then
+            if seen_v and not t.stress and not t.secondary and t.phon == "iː" then
+              local has_later = false
+              for j = i + 1, #tokens do
+                local u = tokens[j]
+                if u.type == "boundary" then break end
+                if u.phon and u.phon ~= "" then has_later = true; break end
+              end
+              if has_later then t.phon = "i" end
+            end
+            seen_v = true
           end
         end
       end
@@ -731,6 +803,9 @@ return {
         local EPEN_PAIRS = {
           ["m|n"]=true, ["g|l"]=true, ["d|r"]=true,
           ["th|r"]=true, ["ch|r"]=true, ["d|mh"]=true,
+          -- s+r (lasrach→l̪ˠɑsˠəɾˠəx, gasra) and th+n (aithne→ˈahənʲə,
+          -- bláthnaid) — same post-tonic obstruent+sonorant epenthesis.
+          ["s|r"]=true, ["th|n"]=true,
         }
         local EPEN_ALSO = {
           ["ocrach"]=true, ["acra"]=true, ["priaclach"]=true,
