@@ -374,6 +374,7 @@ return {
         ["suiomh greasain"]=true, ["tarrthalach"]=true, ["tuiodoir"]=true,
       }
       local ul_keep = ULSTER_KEEP_LONG[S.strip_fadas((context.word_ortho or ""):lower())]
+      context.ulster_keep_long = ul_keep and true or false
       local seen_vowel = false
       for ti, t in ipairs(tokens) do
         if t.type == "boundary" then seen_vowel = false end
@@ -458,7 +459,9 @@ return {
       end
 
       -- (3) Final verbal -im is broad [mˠ] in Ulster (éistim [ˈeːʃtʲəmˠ])
-      if wl:match("im$") and context.vowel_count and context.vowel_count > 1 then
+      -- strip_fadas: -aím/-ím verbal endings (ceannaím, airím) must match
+      -- too — bare "im$" misses the fada í (22 benchmark words).
+      if S.strip_fadas(wl):match("im$") and context.vowel_count and context.vowel_count > 1 then
         for j = #tokens, 1, -1 do
           local t = tokens[j]
           if t.type == "cons" and t.phon and t.phon ~= "" then

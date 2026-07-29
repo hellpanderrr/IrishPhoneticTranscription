@@ -77,8 +77,13 @@ return {
         -- Condition: preceding vowel is stressed AND short
         -- Monosyllabic words (dearg, gorm) have context.is_monosyllabic=true
         -- but their vowel token lacks stress=true, so check both.
+        -- Munster: epenthesis also applies in UNSTRESSED syllables (Ó Sé §2.8:
+        -- svarabhakti is general in Munster — Colmán→kəl̪ˠəˈmˠɑːn̪ˠ,
+        -- purgóid→pˠəɾˠəˈɡoːdʲ, ionnarb — because stress attraction moves
+        -- primary stress off the cluster's syllable).
         if prev_vowel and S.is_short_vowel(prev_vowel) and
-           (prev_vowel.stress or context.is_monosyllabic) then
+           (prev_vowel.stress or context.is_monosyllabic
+            or context.dialect == "munster") then
           -- Insert epenthetic vowel (always ə initially)
           -- Lexical overrides: feirge/deirge expect ɪ instead.
           local epenthetic = S.clone_token(tokens[i])
