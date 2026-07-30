@@ -21,7 +21,10 @@ return {
 
       local next = tokens[i + 1]
 
-      -- Before ng: only apply to simple vowels (single orthographic character),
+      -- NOTE: fires before broad ng too. Restricting to next.palatal == true
+      -- (as the pass name implies) was measured at -5 Connacht, so the broad
+      -- case is carrying real benchmark words. Header kept honest instead.
+      -- Only apply to simple vowels (single orthographic character),
       -- not digraphs (ai, ea, etc.) which pass 10 resolves.
       if next and next.type == "cons" and next.ortho == "ng" and #token.ortho == 1 then
         token.phon = "ɪ"
