@@ -143,6 +143,8 @@ Every phonological rule in the 16 passes cites its source in comments:
 
 ### Active
 
+- **[long schwa `əː` in the output]** — pass 13 Phase 3 (lengthening before rd/rl/rn) appends `ː` to a reduced schwa, emitting `[əː]`, which is not an Irish phoneme. Seen in `idirnáisiúnta` → `ˈɪdʲəːɾˠ…`, `otharlann` → `ˈɔhəːɾˠ…`. Only 1 benchmark word is affected, so it is invisible to the score, but it is wrong on unseen `idir-`/`othar-` vocabulary. **Not fixable at pass 13 (investigated 2026-07-30):** the schwa guard at the top of Phase 3 is byte-based (`:sub(1,1)`) and never matches, but *making it correct costs -7 C / -13 M / -9 U*. Tracing shows `comhairle`, `olldord`, `daonchairdiúil` and `idirnáisiúnta`, `otharlann` all arrive at Phase 3 as a **bare 2-byte schwa** — phonologically identical. The first group must lengthen (→ `uː`/`oː`, restored by the `ɔ→oː`/`ʊ→uː` branches); the second must not. Pass 11 has already discarded the underlying vowel quality that distinguishes them, so no rule at pass 13 can tell them apart. A real fix needs the pre-reduction vowel preserved on the token (e.g. `token.pre_reduction_phon`) and Phase 3 keyed off that.
+
 - **[Connacht multiword phrases]** — 215 errors (13%); lexicalized contractions (tá a fhios ag→t̪ˠɑːsˠ eɟ). Extend FUNCTION_WORDS_OVERRIDE with top ~50 phrases from errors.csv.
 - **[Connacht w→vˠ after long vowel]** — snámh, fhómhair (~23): broad mh coda after long vowel keeps friction. Conflicts with FINAL_BH_V_TO_W table — needs careful condition.
 - **[Ulster -f(a)idh→i]** — verbal future endings, majority want short i (~38 mixed with iː).
