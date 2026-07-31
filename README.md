@@ -108,6 +108,22 @@ Benchmark dictionaries are built from dialect-tagged Wiktionary IPA (`data/all_r
 git remote add origin https://github.com/hellpanderrr/IrishPhoneticTranscription
 ```
 
+### Deployment
+
+The engine also ships in the browser IPA transcriber at
+[hellpanderrr.github.io/wiktionary_pron](https://hellpanderrr.github.io/wiktionary_pron/),
+where it runs under [wasmoon](https://github.com/ceifa/wasmoon) (Lua 5.4 compiled to WASM).
+Irish is the only language there without a Wiktionary pronunciation module behind it — the
+site's other languages call Wiktionary's Lua modules, while Irish uses this engine.
+
+The deployed files are a **manual copy** of `passes/` into
+`wiktionary_pron/lua_modules/ga-passes/`, with two mechanical renames: `passes.` →
+`ga-passes.` in every `require`, and `_shared.lua` → `shared.lua` (GitHub Pages runs Jekyll,
+which drops any file whose name starts with an underscore). There is no submodule or build
+step, so **the two copies can drift** — after changing either, reconcile both and re-run the
+benchmark here. See the Deployment section of `CLAUDE.md` for the diff recipe and the
+pitfalls that have already caused an outage.
+
 ### Error Breakdown (Connacht; snapshot from an earlier 73.96% rule-only run — categories still representative of rule-layer errors)
 
 #### Broad/Slender Quality (24.5% of errors)

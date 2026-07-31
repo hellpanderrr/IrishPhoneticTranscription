@@ -86,6 +86,13 @@ Every phonological rule in the 16 passes cites its source in comments:
 - Dental ̪ = `\xcc\xaa` (U+032A), Postalveolar ̠ = `\xcc\xa0` (U+0320)
 - Use `ustring` library: `ulen(s)`, `usub(s,i,i)` for Unicode-aware operations
 - When matching multi-byte IPA chars in byte-string context, compare the full byte sequence, not individual bytes
+- **`phon:sub(1,1) == "<multi-byte char>"` is always false** and fails *silently* — it takes one
+  byte while the literal is two or three, so the guard simply never fires. Grep for this shape
+  when a rule "should" be blocking something and isn't. Use `usub(phon,1,1)` for a first
+  *character*, or `phon == "ə"` for an exact match. **But do not assume the correction is safe:**
+  one such guard in pass 13 had been inert since it was written, and making it work cost
+  -7 C / -13 M / -9 U because downstream logic had come to depend on schwa passing through
+  (see the long-schwa bucket). Fix it, benchmark it, and keep the result only if it holds.
 - `S.strip_fadas()` uses byte-level gsub for stripping acute accents for lexical lookups (not ustring-based)
 
 ## Key Patterns
@@ -94,6 +101,16 @@ Every phonological rule in the 16 passes cites its source in comments:
 - Add theory citations (Hickey section, FG chapter) to every new phonological rule
 - Run benchmark after every change to check for regressions — this engine is sensitive to pass ordering
 - **Every commit message must report the full metric set for all three dialects** (Exact, NoStress, Skeleton, Norm Lev, Norm Dolgo, PER V/C) — run `bench_run.lua` for connacht, munster, and ulster before committing
+- **A condition that "looks wrong" is a hypothesis, not a bug.** This engine is full of guards
+  that appear incorrect in isolation but are load-bearing. Measure before changing one, and
+  bisect a multi-change port one item at a time — a batch that nets -40 can easily be one -31
+  change plus several neutral ones, and only bisection tells you which to keep. Evidence from
+  2026-07-30/31: three static-analysis "fixes" cost -31/-5/-3; a byte-vs-character comparison
+  that never matched turned out to be the only reason five words transcribe correctly.
+- **When a fix regresses, diff the error sets rather than trusting the totals.** Export
+  `data/errors.csv` before and after and list newly-broken vs newly-fixed words. A net -3 hid
+  a dedup that had deleted *both* copies of a table entry; the three broken words named the
+  cause immediately.
 
 ## Self-Updating Gotchas
 
@@ -102,6 +119,16 @@ Every phonological rule in the 16 passes cites its source in comments:
 ### Encoding / Shell
 - **Fadas vanish in inline `lua -e` scripts** — bash strips UTF-8 acute accents on the command line. Always test fada-containing words (í, ó, á, etc.) from a `.lua` file, never inline.
 - **Python on Windows** is `python`, not `python3`.
+- **Don't edit Lua source from a `python - <<'EOF'` heredoc when the patch text contains
+  `\n`, backslashes, or IPA literals.** Escapes get eaten crossing bash → heredoc → Python and
+  silently emit `unfinished string near '"'`. Write the patch to a real `.py` file
+  (e.g. under `tools/`) and run it, or use the Edit tool. Always `assert s.count(old) == 1`
+  before replacing, and re-check with `lua -e 'assert(loadfile("passes/X.lua"))'` after.
+- **A failed `print()` aborts the whole Python statement.** With cp1251 stdout, printing IPA
+  raises `UnicodeEncodeError` — and if the `print` sits after the file write in the same
+  `try`-less script, the write is fine but the *script* exits non-zero; if it sits before, the
+  write never happens and the edit is silently lost. Write files first, print ASCII-only
+  confirmations, or redirect to a file.
 - **`errors.csv` is tab-delimited** — `csv.DictReader` needs `delimiter='\t'`. The header is `word\tgot\texpected\tlev\tlev_norm\tdolgo\tdolgo_norm`.
 - **cp1251 encoding** — printing IPA chars to a Windows terminal gives `UnicodeEncodeError`. Redirect to a file or write to JSON instead.
 - **Python `\u` escape** — string literals containing `\u` (e.g. `'\u'.replace(...)`) fail before compilation. Use a raw string or escape the backslash.
@@ -132,8 +159,42 @@ Every phonological rule in the 16 passes cites its source in comments:
 - **Munster geminate rules need the closed-syllable condition** — diphthongization only word-final/pre-consonant; intervocalic geminates keep short V (mallaigh), and rr lengthens to [ɑː] instead of breaking. The unconditioned version was -42.
 - **New dialect-wide surface normalizations go in pass 15 (dialect_finalize), not mid-pipeline** — mid-pipeline rules get bypassed when later passes regenerate the target phone (that leak cost Ulster ~48 words until pass 15 existed).
 
+### Deployment: the engine has a second home (learned 2026-07-30/31)
+The engine is deployed into the browser app at `F:\projects\wiktionary_pron` (repo
+`hellpanderrr/hellpanderrr.github.io`, served from GitHub Pages) as a **copy** under
+`wiktionary_pron/lua_modules/`. There is no submodule or build step — the copy is manual.
+
+- **The copies drift, and drift is invisible.** A code review (CodeRabbit) was applied to the
+  deployed copy but never benchmarked here; ~220 lines diverged and the documented scores no
+  longer described the shipped engine. **After changing either copy, reconcile both and
+  re-run the benchmark.** Verify with a normalized diff — the deployed files are CRLF, so a
+  raw `diff` reports whole-file mismatches and hides the real delta. The transform must cover
+  the require prefix *and* the `_shared` rename, or every pass file shows a spurious 1-line diff:
+  ```sh
+  norm() { sed 's/"passes\./"ga-passes./g; s/ga-passes\._shared/ga-passes.shared/g; s/\r$//' "$1"; }
+  diff <(norm passes/X.lua) <(sed 's/\r$//' "$DEPLOY/X.lua")
+  ```
+  (`_shared.lua` itself maps to `shared.lua`; its internal `local _shared` variable is just an
+  identifier and stays as-is on both sides.)
+- **The sync is a rename, not a copy.** `passes.` → `ga-passes.` in every require, **and**
+  `_shared` → `shared` (see the Jekyll note below). Source keeps `_shared.lua`; the deployed
+  copy is `shared.lua`.
+- **GitHub Pages silently drops files whose basename starts with `_`.** The Pages build runs
+  `actions/jekyll-build-pages`, which excludes them. `_shared.lua` 404'd in production and
+  broke Irish entirely (all 17 passes require it) while every local test passed. A repo
+  `_config.yml` with an `include:` entry does **not** fix this — that action runs in safe mode
+  with GitHub's own config and ignores it (tried, deploy succeeded, still 404). `.nojekyll`
+  is also irrelevant (legacy pipeline only). **The fix is to not use a leading underscore.**
+- **Green tests ≠ working site.** Golden and e2e both run against local files and passed
+  throughout the outage. Only a request to the live URL caught it. After deploying, curl the
+  actual asset.
+- The deployed copy also carries `lex_subs_*.lua`. Regenerate them here, then copy — do not
+  edit them there.
+
 ### Git / Shell
 - **`nul` file in git status** — Windows shell leaks a file named `nul` when redirecting to `/dev/null`. `rm -f nul` before `git add` avoids "short read while indexing" errors.
+- **In the `wiktionary_pron` repo, never `git add -A`.** Its root holds many untracked non-site directories (`.idea/`, `cs/`, `latin_tagger/`, `lua-5.4.6/`, `misc/`, `lua_modules/test/`, `utils/`…). `-A` stages ~2500 files / ~21M insertions; the resulting push dies with `pack-objects died of signal 15`. Stage explicit paths and confirm with `git diff --cached --stat` before committing.
+- **Pass commit messages via `git commit -F -` with a heredoc.** Messages containing backticks or `$` get mangled by the shell and emit `command not found` noise into the commit.
 - **`-íocht` suffix** tokenizes two ways: `ío+ch+t` (ríocht) or `aí+o+ch+t` (draíocht). Both must be handled.
 - **Lua keyword bare identifiers** — Never use Lua reserved words (`do`, `in`, `so`, `end`, `for`, `if`, etc.) as bare table keys. Always bracket-quote: `["do"]=true` not `do=true`. This caused a 120-point regression when the COMPOUND_PREFIXES table turned out to be dead code for months (the entire Rule 4 section never compiled due to `do`/`in`/`so` as bare identifiers). Fixing it without removing the bad table causes mass regressions from 2-char prefix false matches.
 
