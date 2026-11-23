@@ -1,193 +1,77 @@
-# Irish G2P Engine
+# Irish G2P engine
 
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/hellpanderrr/IrishPhoneticTranscription)
+A rule-based **grapheme-to-phoneme (G2P) engine for Irish**, written in Lua. It converts Irish spelling to IPA for three
+dialects: **Connacht** (the main target), **Munster** and **Ulster**. The rules follow Raymond Hickey's *The Sound Structure
+of Modern Irish* (2014) and Brian Ó Raghallaigh's *Fuaimeanna na Gaeilge* (2013). It runs under Lua 5.4 and, through
+[wasmoon](https://github.com/ceifa/wasmoon), in the browser transcriber at
+https://hellpanderrr.github.io/wiktionary_pron/?lang=Irish (see `docs/DEPLOYMENT.md`).
 
-A rule-based, standalone **grapheme-to-phoneme (G2P) engine for Irish**, implemented in Lua. Converts standard Irish orthography to IPA phonetic representation for all three major dialects — **Connacht** (primary target), **Munster**, and **Ulster**. Academic/experimental tool based on Raymond Hickey's *The Sound Structure of Modern Irish* (2014) and Ó Raghallaigh's *Fuaimeanna na Gaeilge*.
+It is an experimental research tool, not a finished product. Read "How accurate is it?" before you rely on it.
 
-## Architecture
+## Use
 
-Modular **16-pass token-array pipeline**. The engine tokenizes orthographic input, then processes the token array sequentially through specialized passes, each handling one phonological domain:
+Requires Lua 5.4. The `ustring` library it depends on is included.
 
-| Pass | Name | Purpose |
-|------|------|---------|
-| 01 | `polarity` | Consonant broad/slender polarity |
-| 02 | `stress` | Default initial-stress + lexical exceptions |
-| 03 | `eclipsis` | Eclipsis detection and resolution |
-| 04 | `cluster_simplify` | Cluster reduction (chn→chr, cn→cr, etc.) |
-| 05 | `mutated_fricatives` | Lenited consonant resolution (bh, mh, dh, gh, etc.) |
-| 06 | `vocalization` | Fricative vocalization (agh, adh, abh, amh → vowel/diphthong) |
-| 06d | `anticipatory_raising` | Anticipatory vowel raising before velarized consonants |
-| 07 | `nasalization` | Nasal raising effects |
-| 08 | `slender_coda` | Slender coda consonant handling |
-| 09 | `consonants` | Consonant quality, devoicing, and contextual allophony |
-| 09b | `vowel_adjunct` | Additional vowel-consonant interactions |
-| 10 | `vowels` | Vowel resolution + contextual allophony |
-| 11 | `unstressed_reduction` | Unstressed vowel reduction (→ ə, ɪ) |
-| 12 | `epenthesis` | Epenthetic vowel insertion in clusters |
-| 13 | `sonorants` | Sonorant dental/postalveolar diacritics |
-| 14 | `final_cleanup` | Final IPA cleanup, artifact removal |
-
-## Repository Structure
-
-```
-├── irish_engine_new.lua      # Engine entry point: tokenizer + pass orchestrator
-├── irish.lua                 # Compatibility alias → irish_engine_new
-├── passes/                   # 18 module files (16 passes + init + shared)
-│   ├── init.lua              # Pass ordering
-│   ├── _shared.lua           # Shared definitions (VOWEL_DIGRAPHS, DIALECTS, make_token)
-│   ├── 01_polarity.lua
-│   ├── ...
-│   └── 14_final_cleanup.lua
-├── archive/                  # Previous engine versions (monolith, tokens prototype)
-│   ├── irish.lua             # Original monolith entry point
-│   ├── irish_core.lua        # Monolith phonetic data
-│   ├── irish_tokens.lua      # Token-prototype (predecessor to passes/)
-│   └── regression*.lua       # Old regression tests
-├── theory/                   # Reference materials
-│   ├── Fuaimeanna na Gaeilge — Chapter 1 Summary.txt
-│   ├── The Sound Structure of Modern Irish — Hickey Ch.1.txt
-│   └── The Sound Structure of Modern Irish — Hickey Ch.2.txt
-├── data/
-│   ├── connacht_only.csv     # Wiktionary IPA: Connacht dialect (6,593 words)
-│   └── all_regions.csv       # Wiktionary IPA: all Irish dialects
-├── ustring/                  # Unicode-aware string library for Lua 5.4
-├── bench_run.lua             # Benchmark harness
-└── summary.md                # Detailed project summary
-```
-
-## Usage
-
-### Prerequisites
-- Lua 5.4+
-- `ustring` library (included at `ustring/`)
-
-### Transcribe a word
 ```sh
 lua -e "local e=require('irish_engine_new'); print(e.transcribe('seomra','connacht'))"
-# dialect: 'connacht' | 'munster' | 'ulster'
 ```
 
-### Run benchmark
-```sh
-lua bench_run.lua "label" [dialect]     # dialect defaults to connacht
-python tools/make_dialect_benchmarks.py # regenerate Munster/Ulster dictionaries
-```
+`transcribe(word, dialect, opts)` takes one word (lower or upper case), `dialect` = `"connacht"` (default), `"munster"` or
+`"ulster"`, and returns the IPA string. A non-string word or an unknown dialect raises an error. `opts.no_lexsubs = true`
+switches the generated per-word exception layer off (rules only).
 
-## Current Status
+It is built for single words. A phrase can be passed, but behaviour across word boundaries is not specified.
 
-The engine is a hybrid G2P system: a 17-pass phonological rule pipeline plus a generated per-dialect lexical exception layer (`passes/lex_subs_<dialect>.lua`, built by `tools/gen_lexical_subs.py` from benchmark errors — the standard rules-plus-exception-dictionary design used by production G2P systems). Connacht is the primary, most-tuned target; Munster and Ulster support was added via dialect-gated rules (Munster stress attraction, pretonic reduction, bh/mh friction retention, closed-syllable geminate diphthongization, post-tonic epenthesis, final -igh→[ɪɟ]; Ulster post-tonic long-vowel shortening, o/u→ʌ merger, á-fronting, ó-lowering, ai→a, suffix vowel realizations, mh-nasalization, final j-glide).
+## How accurate is it?
 
-Rule-only exact match (generalizes to unseen words): Connacht 79.52%, Munster 56.73%, Ulster 52.33%. The exception layer covers benchmark vocabulary only. Rule-only accuracy on Munster/Ulster is capped at roughly 70–75% by per-word transcriber disagreements in the multi-transcriber benchmark source (identical phonological contexts transcribed both ways), not by missing rules.
+Exact match against Wiktionary's dialect-tagged IPA, on **words the exception layer was not built from** (a fixed 20% test
+split; method and caveats in [`docs/EVALUATION.md`](docs/EVALUATION.md)):
 
-Benchmark dictionaries are built from dialect-tagged Wiktionary IPA (`data/all_regions.csv`, 17,281 rows / 9,719 words). Only words with at least one dialect-tagged transcription are scored per dialect; untagged rows are accepted as alternate variants.
+| | Connacht | Munster | Ulster |
+|---|---|---|---|
+| Held-out exact match | **69.4%** (1,553 words) | **54.5%** (795) | **51.8%** (929) |
+| Held-out phone error rate | 10.3% | 16.0% | 19.4% |
+| All words, rules only | 71.3% (8,034) | 56.8% (4,102) | 52.4% (4,785) |
+| All words, rules + exception layer | 96.1% | 93.9% | 95.0% |
 
-### Benchmark Results
+**The last row is not a measure of quality.** The exception layer is generated from the benchmark's own errors, so it scores
+high on the words it was built from and does nothing for other words (the held-out gain is 0.0 to 0.3 points). Quote the
+held-out row. Even that row is somewhat optimistic: the pass files contain word-specific tables tuned on the whole benchmark.
+The reference transcriptions are also inconsistent between Wiktionary contributors, which caps the Munster and Ulster scores.
 
-| Metric | Connacht (6,598 words) | Munster (4,102) | Ulster (4,785) |
-|--------|------------------------|-----------------|----------------|
-| Exact match | **6395 (96.92%)** | **3846 (93.76%)** | **4538 (94.84%)** |
-| Exact, stress-insensitive | 97.26% | 94.39% | 95.21% |
-| Exact, diacritic skeleton | 97.59% | 94.59% | 95.26% |
-| Norm Levenshtein (0–100) | **99.22** | 98.13 | 98.46 |
-| Norm Dolgopolsky (0–100) | **99.44** | 98.30 | 98.69 |
-| Phone Error Rate (PER) | **1.45%** | 3.09% | 2.97% |
-| — vowel PER / consonant PER | 1.82 / 1.19 | 4.46 / 2.08 | 4.29 / 2.21 |
-
-> Normalized scores are 0–100 where 100 = perfect match.<br>
-> Lev normalization: `(1 − lev / max_segment_length) × 100`<br>
-> Dolgo normalization: `(1 − dolgo_edit_distance) × 100`<br>
-> PER: corpus-aggregated phone-token edit distance / expected phone count.
->
-> Per-word results: [data/results.csv](data/results.csv) (Connacht), `data/results_munster.csv`, `data/results_ulster.csv`; mismatches in the corresponding `errors*.csv`.
->
-> Note: the reference transcriptions come from multiple transcribers and are internally inconsistent on some conventions (sonorant diacritics, `a/ɑ` backing, stress marking on monosyllables). The stress-insensitive and skeleton rows quantify that ceiling — for Munster, ~9pp of the gap is diacritic-convention noise alone.
-
-### Remote
+## Reproduce
 
 ```sh
-git remote add origin https://github.com/hellpanderrr/IrishPhoneticTranscription
+lua tests/run_tests.lua              # golden snapshot + argument handling (about 390 checks)
+python tools/evaluate.py             # rebuilds the exception layers and prints the table above (LUA=... if needed)
+lua bench_run.lua label munster --split test --no-lexsubs   # one benchmark run
 ```
 
-### Deployment
+## Layout
 
-The engine also ships in the browser IPA transcriber at
-[hellpanderrr.github.io/wiktionary_pron](https://hellpanderrr.github.io/wiktionary_pron/),
-where it runs under [wasmoon](https://github.com/ceifa/wasmoon) (Lua 5.4 compiled to WASM).
-Irish is the only language there without a Wiktionary pronunciation module behind it — the
-site's other languages call Wiktionary's Lua modules, while Irish uses this engine.
+```
+irish_engine_new.lua       entry point: tokenizer, pass orchestration, exception layer
+passes/                    the 17 passes (01_polarity ... 15_dialect_finalize), init.lua, _shared.lua,
+                           lex_subs_<dialect>.lua = generated exception layers
+benchmarks/                generated benchmark per dialect, with a train/test split (committed)
+bench_run.lua              benchmark harness (exact match, Levenshtein, Dolgopolsky, phone error rate)
+tools/                     make_dialect_benchmarks.py, gen_lexical_subs.py, evaluate.py
+tests/                     golden snapshot and tests
+data/                      Wiktionary pronunciation lists the benchmarks come from (CC BY-SA)
+docs/                      ARCHITECTURE.md, EVALUATION.md, DEPLOYMENT.md
+ustring/                   MIT-licensed UTF-8 string library for Lua
+```
 
-The deployed files are a **manual copy** of `passes/` into
-`wiktionary_pron/lua_modules/ga-passes/`, with two mechanical renames: `passes.` →
-`ga-passes.` in every `require`, and `_shared.lua` → `shared.lua` (GitHub Pages runs Jekyll,
-which drops any file whose name starts with an underscore). There is no submodule or build
-step, so **the two copies can drift** — after changing either, reconcile both and re-run the
-benchmark here. See the Deployment section of `CLAUDE.md` for the diff recipe and the
-pitfalls that have already caused an outage.
+## Known limits
 
-### Error Breakdown (Connacht; snapshot from an earlier 73.96% rule-only run — categories still representative of rule-layer errors)
+- Phrases are not supported across word boundaries (`ar an mbord` transcribes the eclipsed `mb` wrongly).
+- Many monosyllables get no stress mark, following an inconsistent convention in the reference data.
+- Dialects are idealised: Ulster follows Donegal conventions; Munster merges Kerry, Cork and Waterford.
+- The exception layer's per-word fixes are keyed on the spelling with its fadas, so mis-spelt or unfadaed input
+  (`sean` for `séan`) does not receive the fix.
 
-#### Broad/Slender Quality (24.5% of errors)
+## Licence and citation
 
-| Count | % | Error type |
-|-------|---|------------|
-| 421 | 24.5% | Broad/slender quality mismatch (ˠ/ʲ diacritics wrong or missing) |
-| 147 | 8.6% | Missing broad velarization [ˠ] specifically |
-
-These are primarily **sonorant pass** issues (pass 13) — the engine places broad/slender diacritics imperfectly, especially on consonants in unstressed or derived environments where the polarity signal is ambiguous.
-
-#### Dental/Postalveolar Diacritics (17.3% of errors)
-
-| Count | % | Error type |
-|-------|---|------------|
-| 127 | 7.4% | Missing dental diacritic [̪] on t/d/n/l |
-| 108 | 6.3% | Extra dental diacritic [̪] (over-application) |
-| 62 | 3.6% | Missing postalveolar diacritic [̠] on n/l |
-
-The engine's dental rule fires based on onset position, cluster composition, and preceding vowel length, but doesn't fully capture per-word lexical exceptions or the full range of conditioning environments.
-
-#### Stress (29.0% of errors)
-
-| Count | % | Error type |
-|-------|---|------------|
-| 217 | 12.6% | Missing primary stress mark [ˈ] |
-| 170 | 9.9% | Extra primary stress mark [ˈ] |
-| 110 | 6.4% | Missing secondary stress mark [ˌ] |
-
-Default initial-stress with lexical exceptions but no productive secondary-stress modeling for compounds and derivational suffixes. Multi-word phrase stress reassignment (pass 14 Step 10) handles phrases but misses many compound-noun and loanword stress patterns.
-
-#### Vowel Quality
-
-| Count | % | Error type |
-|-------|---|------------|
-| ~53 net | — | Extra [ɪ] (over-produced, often where expected [ə] or [i]) |
-| ~46 net | — | Extra [ɛ] (produced where expected [e] or [ə]) |
-| ~19 net | — | Missing [ɑ] (produces [a] instead) |
-| ~18 net | — | Missing [æ] (never produced — æ-raising rule absent) |
-| ~247 net | — | Extra [ə] (over-reduction in unstressed syllables) |
-
-The vowel pass (10) and unstressed reduction pass (11) handle most cases but fail on context-dependent allophony — especially æ-raising, ɑ-backing, and ɪ/ʊ/ɛ near-close distinctions in non-initial syllables.
-
-#### Other Known Issues
-
-1. **Dialect depth**: Connacht is the most complete. Munster/Ulster rule sets cover the major systematic differences (stress, vowel quality/quantity, bh-mh, sonorants) but lack the lexical-exception layers Connacht has accumulated.
-2. **Stress**: Default initial-stress with limited lexical exceptions. Fails on loanwords (`ospidéal`, `tobac`) and derivational suffixes (`-án`, `-óir`).
-3. **Compound prosody**: No systematic secondary stress for compounds (veidhlín → ˌvʲəiˈlʲiːnʲ, not ˈvʲəilʲiːnʲ). Multi-word phrase stress (pass 14 Step 10) handles ~20 lexicalized phrases but doesn't generalize.
-4. **Lenited sh/th**: Inconsistent /h/ vs /ç/ realization depending on following vowel.
-5. **Vocalization**: Intervocalic bh/mh/dh/gh inconsistent — sometimes produces diphthongs where long vowel expected, or vice-versa.
-6. **bh/mh w-coda**: Multi-pass interaction issue prevents correct w preservation after diphthongs in some words.
-7. **Dental diacritics**: [̪]/[̠] placement sensitive to cluster composition and stress environment — doesn't fully generalize to all contexts.
-8. **Vowel allophony**: æ/ɑ/ɪ/ʊ/ɛ allophones inconsistently produced in unstressed or derived environments.
-9. **sVarabhakti epenthesis**: Over-applies in some unstressed contexts (marbh → [mˠaɾˠəvˠ] vs expected [mˠaɾˠvˠ]).
-10. **æ-raising**: No rule produces [æ]; expected in words like *leadhb* /l̠ʲæbˠ/, *feadh* /fˠæː/.
-
-### Progress
-
-Connacht has improved from **60.5%** → **75.2%** exact match through targeted phonological fixes. Munster went 23.1% → 40.5% and Ulster 16.4% → 35.5% in the initial dialect-expansion rounds. Typical methodology: analyze the dialect's `errors*.csv`, bucket by error type (Levenshtein-1 substitution patterns), fix the highest-volume pattern in the relevant pass with a theory-cited rule, verify no cross-dialect regressions, repeat.
-
-### Encoding Notes
-- Lua 5.4 strings are raw bytes. Unicode IPA characters use UTF-8 byte sequences.
-- `ustring` library provides `ulen(s)`, `usub(s,i,i)` for Unicode-aware operations.
-
-## References
-- Hickey, Raymond (2014). *The Sound Structure of Modern Irish*. De Gruyter Mouton.
-- Ó Raghallaigh, Brian (2013). *Fuaimeanna na Gaeilge*. Cois Life, Dublin.
+GPL-3.0-only (`LICENSE`). `ustring/` is MIT. The pronunciation data in `data/` and everything derived from it
+(`benchmarks/`, `passes/lex_subs_*.lua`, `tests/golden.tsv`) comes from English Wiktionary and is CC BY-SA 4.0:
+see `THIRD_PARTY_NOTICES.md`. To cite, use `CITATION.cff` (GitHub's "Cite this repository" button).
