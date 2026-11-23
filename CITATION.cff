@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+message: "If you use this engine or its benchmark, please cite it as below. Quote the held-out figures (docs/EVALUATION.md), not the in-sample ones."
+title: "Rule-based grapheme-to-phoneme engine for Irish (Connacht, Munster, Ulster)"
+type: software
+version: "0.2.0"
+date-released: "2026-11-23"
+repository-code: "https://github.com/hellpanderrr/IrishPhoneticTranscription"
+url: "https://hellpanderrr.github.io/wiktionary_pron/?lang=Irish"
+license: GPL-3.0-only
+abstract: >-
+  A Lua engine that converts Irish spelling to IPA for three dialects, as a 17-pass pipeline over a token
+  array plus a per-word exception layer. Runs under Lua 5.4 and in the browser (wasmoon). The repository
+  includes a benchmark built from English Wiktionary pronunciations with a fixed train/test split.
+keywords:
+  - Irish
+  - Gaeilge
+  - grapheme-to-phoneme
+  - IPA
+  - phonetic transcription
+authors:
+  - alias: hellpanderrr   # replace with family-names / given-names (and orcid, optional)
+references:
+  - type: book
+    title: "The Sound Structure of Modern Irish"
+    authors:
+      - family-names: Hickey
+        given-names: Raymond
+    publisher:
+      name: "De Gruyter Mouton"
+    year: 2014
+  - type: book
+    title: "Fuaimeanna na Gaeilge"
+    authors:
+      - family-names: "Ó Raghallaigh"
+        given-names: Brian
+    publisher:
+      name: "Cois Life"
+    year: 2013
+  - type: data
+    title: "English Wiktionary, Irish pronunciation entries"
+    authors:
+      - name: "Wiktionary contributors"
+    url: "https://en.wiktionary.org"
+    license: CC-BY-SA-4.0
+  - type: software
+    title: "ustring (Scribunto)"
+    authors:
+      - family-names: Jorsch
+        given-names: Brad
+    license: MIT

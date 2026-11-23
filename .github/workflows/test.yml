@@ -1,0 +1,28 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Lua 5.4
+        run: sudo apt-get update && sudo apt-get install -y lua5.4
+      - name: Unit and golden tests
+        run: lua5.4 tests/run_tests.lua
+      - name: The committed benchmarks are what the generator produces
+        run: |
+          python3 tools/make_dialect_benchmarks.py
+          git diff --exit-code -- benchmarks
+      - name: The committed exception layers are what the generator produces
+        run: |
+          LUA=lua5.4 python3 tools/evaluate.py | tee evaluation.md
+          git diff --exit-code -- passes

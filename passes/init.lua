@@ -1,4 +1,4 @@
--- Passes initializer. Loads all 16 passes in order.
+-- Passes initializer. Loads all 17 passes in order.
 
 local S = require("passes._shared")
 
